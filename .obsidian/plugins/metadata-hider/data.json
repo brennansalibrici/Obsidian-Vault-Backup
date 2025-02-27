@@ -1,0 +1,27 @@
+{
+  "autoFold": false,
+  "hideEmptyEntry": false,
+  "hideEmptyEntryInSideDock": false,
+  "propertiesVisible": "",
+  "propertyHideAll": "hideMetadata",
+  "entries": [
+    {
+      "name": "Headings",
+      "hide": {
+        "tableInactive": true,
+        "tableActive": false,
+        "fileProperties": false,
+        "allProperties": false
+      }
+    },
+    {
+      "name": "",
+      "hide": {
+        "tableInactive": true,
+        "tableActive": false,
+        "fileProperties": false,
+        "allProperties": false
+      }
+    }
+  ]
+}

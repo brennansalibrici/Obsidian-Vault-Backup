@@ -1,0 +1,4 @@
+.cm-s-obsidian .markdown-embed h1,
+.markdown-preview-view .markdown-embed h1 {
+  display: none;
+}

@@ -1,0 +1,20 @@
+{
+  "cssTheme": "Minimal",
+  "baseFontSize": 19,
+  "theme": "obsidian",
+  "translucency": false,
+  "accentColor": "",
+  "showViewHeader": true,
+  "enabledCssSnippets": [
+    "dashboard",
+    "dashboard-ReadLineLength",
+    "scrollbar",
+    "cards",
+    "supercharged-links-gen",
+    "supercharged-links-color",
+    "hideCanvasHeader",
+    "MCL Gallery Cards",
+    "MCL Wide Views",
+    "MCL Multi Column"
+  ]
+}
