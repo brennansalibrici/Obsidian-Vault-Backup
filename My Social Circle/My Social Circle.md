@@ -1,5 +1,6 @@
 ---
-tags: "view/note"
+tags:
+  - view/note
 Links: 
 Created: 2023-05-13T03:55:06
 ---

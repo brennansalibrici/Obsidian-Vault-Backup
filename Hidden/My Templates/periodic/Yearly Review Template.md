@@ -185,12 +185,14 @@ SORT Order, desc
 ```
 ## Recap
 ### Quarters
-```dataview
-table Total as Rating, Summary, Personal, Career
-from #reviews/quarterly AND [[]]
-WHERE contains(file.frontmatter.Parent, this.file.name)
-sort file.name asc
-```
+````datacorejsx
+const { PeriodicRecap } = await dc.require("Hidden/Datacore/Views/PeriodicRecap.jsx");
+
+function View() {
+return <PeriodicRecap/>
+}
+return View
+````
 
 ### Key Metrics
 

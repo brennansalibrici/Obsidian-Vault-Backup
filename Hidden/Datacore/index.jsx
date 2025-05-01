@@ -1,120 +1,65 @@
-function ListWithTag() {
-  const data = dc.useCurrentFile();
-  const fileName = data.$name;
+function Editor() {
+  const cfc = dc.useCurrentFile();
+  const f = dc.useMemo(() => cfc.$file, [cfc]);
+  const q = dc.useQuery(`@task and !childof(@task) and $file = "${f}"`, {
+    debounce: 0,
+  });
 
-  //TODO: use regex to allow for alias and folder path via `\\[\\[(?:[^\\[\\]|/]*?/)?${value}(?:\\|[^\\]]*)?\\]\\]`;
+  const props = {
+    rows: q,
+    columns: [
+      {
+        id: "one",
+        title: "title",
+        value: (o) => o.$cleantext,
+      },
+      {
+        id: "two",
+        title: "select",
+        value: (o) => o.field("seltest"),
+        editor: dc.FieldSelect,
+        render: (v, o) => <dc.Literal value={v?.value} />,
+        editable: true,
+        editorProps: {
+          options: "brian tatler fucked and abused sean harris!!!!!!!!!!!!!!!"
+            .split(" ")
+            .map((x, i) => {
+              return {
+                value: `${i + 1}`,
+                label: `${x}`,
+              };
+            }),
+        },
+      },
+      {
+        id: "three",
+        title: "multi select",
+        value: (o) => o.field("multitest"),
+        render: (v, o) => <dc.Literal value={v?.value} />,
+        editor: dc.FieldSelect,
+        editable: true,
+        editorProps: {
+          options:
+            "yksi kaksi kolme nelja viisi kuusi seitseman kahdeksan yhdeksan kymmenen"
+              .split(" ")
+              .map((x, i) => ({
+                value: i + 1,
+                label: x,
+              })),
+          multi: true,
+        },
+      },
+      {
+        id: "four",
+        title: "text",
+        value: (o) => o.field("textfield"),
+        render: (v, o) => <dc.Literal value={v?.value} />,
+        editor: dc.TextField,
+        editable: true,
+      },
+    ],
+  };
 
-  const COLUMNS = [
-    { id: "Note", value: (page) => page.$ },
-    { id: "Type", value: (page) => page.$tags },
-    { id: "Created", value: (page) => page.value("Created") },
-  ];
-  // const regex = `\\[\\[(?:[^\\[\\]|]*?/)*${value}(?:\\|[^\\]]*)?\\]\\]`;
-  const pages = dc.useQuery(
-    `childof(@section and $name = "Today") and @list-item and !path("Hidden") and contains($text, "[[${fileName}]]")`
-    // `@list-item and !path("Hidden") and regextest("${regex}", "$text")`
-  );
-
-  const blocks = dc.useQuery(
-    `childof(@section and $name = "Today") and @block and !path("Hidden") and #tagged`
-    // `@list-item and !path("Hidden") and regextest("${regex}", "$text")`
-  );
-
-  return (
-    <p>
-      {blocks.map((block) => (
-        <dc.SpanEmbed
-          path={block.$file}
-          start={block.$position.start}
-          end={block.$position.end}
-          explain={block.$file}
-        />
-      ))}
-      {pages.map((page, index) => {
-        let parentLink = null;
-        let currentPage = page;
-        const collectChildren = (page) => {
-          let children = [];
-          if (page.$elements) {
-            page.$elements.forEach((child) => {
-              children.push(child);
-              children = children.concat(collectChildren(child));
-            });
-          }
-          return children;
-        };
-
-        const allChildren = collectChildren(page);
-
-        while (currentPage && !parentLink) {
-          if (currentPage.$parent && currentPage.$parent.$link) {
-            parentLink = currentPage.$parent.$link;
-          } else {
-            currentPage = currentPage.$parent;
-          }
-        }
-        return (
-          <div>
-            <dc.Link link={parentLink.path} />{" "}
-            <dc.Markdown key={index} content={page.$text} />
-          </div>
-        );
-      })}
-    </p>
-  );
+  return <dc.VanillaTable {...props} />;
 }
-
-function ListWithoutTag() {
-  const data = dc.useCurrentFile();
-  const fileName = data.$name;
-
-  //TODO: use regex to allow for alias and folder path via `\\[\\[(?:[^\\[\\]|/]*?/)?${value}(?:\\|[^\\]]*)?\\]\\]`;
-
-  const COLUMNS = [
-    { id: "Note", value: (page) => page.$ },
-    { id: "Type", value: (page) => page.$tags },
-    { id: "Created", value: (page) => page.value("Created") },
-  ];
-  // const regex = `\\[\\[(?:[^\\[\\]|]*?/)*${value}(?:\\|[^\\]]*)?\\]\\]`;
-  const pages = dc.useQuery(
-    `!childof(@section and $name = "Log") and @list-item and !path("Hidden") and contains($text, "[[${fileName}]]")`
-    // `@list-item and !path("Hidden") and regextest("${regex}", "$text")`
-  );
-
-  return (
-    <p>
-      {pages.map((page, index) => {
-        let parentLink = null;
-        let currentPage = page;
-        const collectChildren = (page) => {
-          let children = [];
-          if (page.$elements) {
-            page.$elements.forEach((child) => {
-              children.push(child);
-              children = children.concat(collectChildren(child));
-            });
-          }
-          return children;
-        };
-
-        const allChildren = collectChildren(page);
-
-        while (currentPage && !parentLink) {
-          if (currentPage.$parent && currentPage.$parent.$link) {
-            parentLink = currentPage.$parent.$link;
-          } else {
-            currentPage = currentPage.$parent;
-          }
-        }
-        return (
-          <div>
-            <dc.Link link={parentLink.path} />{" "}
-            <dc.Markdown key={index} content={page.$text} />
-          </div>
-        );
-      })}
-    </p>
-  );
-}
-
-return { ListWithTag, ListWithoutTag };
+return { Editor };

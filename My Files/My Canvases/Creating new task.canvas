@@ -10,8 +10,8 @@
 		{"id":"4e06ea47f6cd6115","type":"text","text":"Add `#someday` tag, see later in [[My Tasks#Someday/Maybe ` someday`|someday maybe list]]","x":940,"y":140,"width":400,"height":80},
 		{"id":"3e921c0021f44db6","type":"text","text":"Delete it","x":940,"y":0,"width":400,"height":60},
 		{"id":"abd289e09162228b","type":"text","text":"Put it in a note that is retrievable when required","x":940,"y":290,"width":400,"height":90},
-		{"id":"eed6d3da4930c6af","type":"text","text":"![[Tasks Plugin#Resource Notes]]","x":450,"y":1000,"width":720,"height":440},
-		{"id":"44d6d1302a9e24ca","type":"text","text":"![[Tasks Plugin#Daily Notes]]","x":500,"y":1500,"width":670,"height":270}
+		{"id":"eed6d3da4930c6af","type":"text","text":"![[Tasks Plugin#Resource Notes]]","x":450,"y":1000,"width":720,"height":480},
+		{"id":"44d6d1302a9e24ca","type":"text","text":"![[Tasks Plugin#Daily Notes]]","x":500,"y":1500,"width":670,"height":300}
 	],
 	"edges":[
 		{"id":"83dc2c8641074f58","fromNode":"243fbf2b362ed04d","fromSide":"right","toNode":"8852e1c7bc73da6a","toSide":"left"},

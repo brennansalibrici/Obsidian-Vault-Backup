@@ -24,6 +24,8 @@ actions:
 ```
 %% Tasks Start %%
 - [ ] (Example task) Find a resource to learn from
+<% tp.file.cursor(1) %>
+<% tp.file.cursor(1) %>
 
 ## Notes
 ### Related Notes

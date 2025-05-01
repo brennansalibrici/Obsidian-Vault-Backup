@@ -11,7 +11,6 @@
 **Did you complete what you set out to do in the previous review? Are you content with the journey and the outcome?**
 - 
 
-
 **What was the completion rate of my goals and projects? Was the workload manageable or was it overwhelming?**
 - 
 ### My Wins

@@ -16,7 +16,7 @@ action QuickAdd: ⛰️ Create Area Note
 ## By File Name
 
 ```dataview
-table file.frontmatter.Group as Group
+table file.frontmatter.Group as Group, file.frontmatter.areaGroup as AreaGroup
 FROM #area and !outgoing([[]]) and !"Hidden"
-sort file.frontmatter.Group, file.name asc
+sort file.name, file.name asc
 ```

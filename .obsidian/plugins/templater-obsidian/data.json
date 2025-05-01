@@ -9,7 +9,7 @@
   ],
   "trigger_on_file_creation": true,
   "auto_jump_to_cursor": true,
-  "enable_system_commands": false,
+  "enable_system_commands": true,
   "shell_path": "",
   "user_scripts_folder": "",
   "enable_folder_templates": true,
@@ -39,10 +39,19 @@
       "template": "Hidden/My Templates/periodic/Yearly Review Template.md"
     }
   ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
   "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [],
   "startup_templates": [
     ""
   ],
+  "intellisense_render": 1,
   "enable_ribbon_icon": true
 }

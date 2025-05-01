@@ -39,13 +39,17 @@ Description: Custom organization of all your notes
 	- 📖  [[My Book Applications]]
 ### Other
 - 👤 [[My Social Circle]]
+#### Journalling
+- [[My Daily Logs]]
 ## Productivity
 - 🌟 [[My Vision Board]]
+	- [[My Wheel Of Life]]
 - 🎯 [[My Goals]]
 - 🚧 [[My Projects]]
 - 📌 [[My Kanbans]]
 - ✅ [[My Tasks]]
 - ♻️ [[My Habits]]
+	- [[My Habit Tracker]]
 - 📈 [[My Trackers]]
 ## Life Design
 - [[My Values]]

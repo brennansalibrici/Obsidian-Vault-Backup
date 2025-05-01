@@ -1,3 +1,7 @@
+- [ ] #task Test Task
+<% tp.file.cursor(1) %>
+<% tp.file.cursor(1) %>
+
 ```meta-bind-button
 label: Add New Task
 hidden: false

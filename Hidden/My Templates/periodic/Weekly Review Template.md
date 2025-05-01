@@ -1,7 +1,7 @@
 ---
 tags:
   - reviews/weekly
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: <% tp.date.now("MM-DD-YYYYTHH:mm:ss") %>
 Summary: 
 Personal: 
 Career: 
@@ -39,27 +39,34 @@ SORT deadline asc
 ```
 ## Recap
 ### Days
-```dataview
-table Rating as ⭐, Summary, Story, headings as ✍️
-from [[]] AND #reviews/daily
-WHERE contains(file.frontmatter.Parent, this.file.name)
-sort file.name asc
-```
+````datacorejsx
+const { PeriodicRecap } = await dc.require("Hidden/Datacore/Views/PeriodicRecap.jsx");
+
+function View() {
+return <PeriodicRecap/>
+}
+return View
+````
 ### Logs
 %% This is where you can set up queries to look for any inline metadata fields that you logged throughout the daily journals %%
 #### Obstacles
 ```dataview
 TABLE obstacle as Obstacles
 from ""
-WHERE date(<% moment(tp.file.title,'YYYY-[W]WW').day(1).format("YYYY-MM-DD") %>) < Created AND Created < date(<% moment(tp.file.title,'YYYY-[W]WW').add(1,'weeks').day(0).format("YYYY-MM-DD") %>) and obstacle
+WHERE date(<% moment(tp.file.title,'YYYY-[W]WW').day(1).format("MM-DD-YYYY") %>) < Created AND Created < date(<% moment(tp.file.title,'YYYY-[W]WW').add(1,'weeks').day(0).format("YYYY-MM-DD") %>) and obstacle
 SORT file.name asc
 ```
 ### New Notes
-```dataview
-TABLE file.tags as "Note Type", dateformat(Created, "yyyy-MM-dd") as "Created"
-from ""
-WHERE date(<% moment(tp.file.title,'YYYY-[W]WW').day(1).format("YYYY-MM-DD") %>) <= Created AND Created <= date(<% moment(tp.file.title,'YYYY-[W]WW').add(1,'weeks').day(1).format("YYYY-MM-DD") %>)
-SORT file.name asc
+```datacorejsx
+
+const { NotesCreatedInTimeframe } = await dc.require("Hidden/Datacore/Views/PeriodicNotes.jsx");
+
+return function View() {
+
+return <NotesCreatedInTimeframe/>;
+
+}
+
 ```
 ### Completed Tasks
 ```tasks

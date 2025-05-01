@@ -4,5 +4,8 @@
   "hide-tags-in-title": true,
   "link-date-to-daily-note": true,
   "prepend-archive-date": true,
-  "show-checkboxes": false
+  "show-checkboxes": false,
+  "date-format": "YYYY-MM-DD",
+  "date-display-format": "YYYY-MM-DD",
+  "archive-date-format": "YYYY-MM-DD HH:mm"
 }

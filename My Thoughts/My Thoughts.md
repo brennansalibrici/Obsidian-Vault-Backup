@@ -3,6 +3,13 @@ tags: view/note
 Links: "[[My Home]]"
 Created: 2023-05-07T11:51:13
 ---
+
+```button
+name QuickAdd: 💭 Create Thought Note
+type command
+action QuickAdd: 💭 Create Thought Note
+```
+
 ## Categories
 ### None
 ```dataview

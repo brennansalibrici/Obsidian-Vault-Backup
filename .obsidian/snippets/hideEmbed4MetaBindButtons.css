@@ -1,0 +1,18 @@
+/* Target embedded blocks where the first child is a metabind button */
+.markdown-embed .markdown-embed-content > .metabind-button {
+  margin-left: 0 !important;
+}
+.markdown-embed .markdown-embed-content > .metabind-button:only-child {
+  margin-left: 0 !important;
+}
+.markdown-embed .markdown-embed-content > .metabind-button:only-child::before {
+  display: none !important;
+}
+/* Hide border on embeds that contain ONLY a button */
+.markdown-embed .markdown-embed-content:has(> .metabind-button:only-child) {
+  margin-left: 0 !important;
+}
+.markdown-embed {
+  border-left: none !important;
+  padding-left: 0 !important;
+}

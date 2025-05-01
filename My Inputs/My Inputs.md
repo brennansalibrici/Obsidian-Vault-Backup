@@ -15,10 +15,10 @@ action QuickAdd: 📥 Add General Input
 ### No Status
 
 ```dataview
-table Created, Links, Source
+table Created, tags as Tag, Links, Source
 FROM  #input AND !"Hidden"
 WHERE !Status
-SORT Created desc
+SORT tags desc
 ```
 
 ### Backlog 🟥

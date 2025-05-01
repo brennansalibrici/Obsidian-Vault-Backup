@@ -13,10 +13,8 @@ function DailyLogsWithTags({ tags = ["#log"] }) {
       const parsedYear = parseInt(year);
 
       if (!period) {
-        // Yearly timeframe
         return [new Date(parsedYear, 0, 1), new Date(parsedYear + 1, 0, 0)];
       } else if (period.startsWith("Q")) {
-        // Quarterly timeframe
         const quarter = parseInt(period[1]);
         const quarterStartMonth = (quarter - 1) * 3;
         return [
@@ -24,23 +22,19 @@ function DailyLogsWithTags({ tags = ["#log"] }) {
           new Date(parsedYear, quarterStartMonth + 3, 0),
         ];
       } else if (period.startsWith("M")) {
-        // Monthly timeframe
         const month = parseInt(period.substring(1)) - 1;
         return [
           new Date(parsedYear, month, 1),
           new Date(parsedYear, month + 1, 0),
         ];
       } else if (period.startsWith("W")) {
-        // Weekly timeframe
         const week = parseInt(period.substring(1));
         const startOfYear = new Date(parsedYear, 0, 1);
         const weekStart = new Date(startOfYear);
         weekStart.setDate(startOfYear.getDate() + (week - 1) * 7);
-        // Adjust to Monday if not already
         const dayOfWeek = weekStart.getDay();
         const diff = dayOfWeek === 0 ? -6 : 1 - dayOfWeek;
         weekStart.setDate(weekStart.getDate() + diff);
-        // Set end date to next Monday
         const weekEnd = new Date(weekStart);
         weekEnd.setDate(weekStart.getDate() + 7);
         return [weekStart, weekEnd];
@@ -50,7 +44,7 @@ function DailyLogsWithTags({ tags = ["#log"] }) {
     }, [currentFile]);
 
     const listItems = dc.useQuery(
-      `${tag} and path("My Calendar") and childof(@page) and @list-item and !path("Hidden")`
+      `${tag} and @list-item and !path("Hidden")`
     );
 
     const filtered = dc.useArray(listItems, (array) =>
@@ -61,7 +55,7 @@ function DailyLogsWithTags({ tags = ["#log"] }) {
         let match = item.$file.match(/(\d{4})-(\d{2})-(\d{2})/);
         if (!match) return false;
         let year = parseInt(match[1]);
-        let month = parseInt(match[2] - 1); // month is 0-indexed
+        let month = parseInt(match[2] - 1);
         let day = parseInt(match[3]);
         let pageDate = new Date(year, month, day);
         return pageDate >= startDate && pageDate < endDate;
@@ -137,7 +131,6 @@ function DailyLogsWithTags({ tags = ["#log"] }) {
             };
 
             const allChildren = collectChildren(page);
-            // Create regex to match exact tag or nested tags (e.g., #log or #log/something but not #loggedin)
             const tagRegex = new RegExp(`${tag}(/[\\w-]+)*\\b`, "g");
 
             return (

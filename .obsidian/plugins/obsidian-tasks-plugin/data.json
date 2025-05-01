@@ -1,16 +1,17 @@
 {
   "globalQuery": "(path does not include Hidden) AND (path does not include USV Onboarding) AND (tags does not include hidden)\n\n",
-  "globalFilter": "",
+  "globalFilter": "#task",
   "removeGlobalFilter": false,
   "taskFormat": "tasksPluginEmoji",
-  "setCreatedDate": false,
+  "setCreatedDate": true,
   "setDoneDate": true,
   "setCancelledDate": true,
   "autoSuggestInEditor": true,
   "autoSuggestMinMatch": 0,
   "autoSuggestMaxItems": 12,
   "provideAccessKeys": true,
-  "useFilenameAsScheduledDate": true,
+  "useFilenameAsScheduledDate": false,
+  "filenameAsScheduledDateFormat": "",
   "filenameAsDateFolders": [],
   "recurrenceOnNextLine": false,
   "statusSettings": {
@@ -211,7 +212,8 @@
   },
   "debugSettings": {
     "ignoreSortInstructions": false,
-    "showTaskHiddenData": false
+    "showTaskHiddenData": false,
+    "recordTimings": false
   },
   "loggingOptions": {
     "minLevels": {

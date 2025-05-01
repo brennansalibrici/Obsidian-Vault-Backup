@@ -17,10 +17,10 @@ fields:
     path: ""
   - id: 8ZTA3T
     command:
-      id: insert__presetField__Status
+      id: insert__presetField__meetingStatus
       icon: list-plus
       label: Insert Status field
-    name: Status
+    name: meetingStatus
     options:
       valuesList:
         "1": 🟥

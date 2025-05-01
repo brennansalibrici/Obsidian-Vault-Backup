@@ -5,6 +5,7 @@ const { formatMetricValue } = await dc.require(
     "formatMetricValue"
   )
 );
+
 const GOALS = await dc.require(
   dc.headerLink("Hidden/Datacore/Config/My Habits Config.md", "GOALS")
 );
@@ -1081,7 +1082,9 @@ const GoalsView = ({ entries, daysInQuarter, habits }) => {
 
     // Calculate daily average based on days with actual data, or 1 if no days have data
     const daysForAverage = Math.max(daysWithData, 1);
-    const dailyAverage = Number((total / daysForAverage).toFixed(2));
+    // Calculate daily average, defaulting to 0 if daysForAverage is 0
+    const dailyAverage =
+      daysForAverage === 0 ? 0 : Number((total / daysForAverage).toFixed(2));
 
     // Project quarterly total based on daily average
     const projection = Number((dailyAverage * daysInQuarter).toFixed(2));
@@ -1306,7 +1309,9 @@ const WeeklyGoalsView = ({ entries, habits }) => {
 
     // Calculate daily average based on days with actual data, or 1 if no days have data
     const daysForAverage = Math.max(daysWithData, 0);
-    const dailyAverage = Number((total / daysForAverage).toFixed(2));
+    // Calculate daily average, defaulting to 0 if daysForAverage is 0
+    const dailyAverage =
+      daysForAverage === 0 ? 0 : Number((total / daysForAverage).toFixed(2));
 
     const projection = Number((dailyAverage * daysInWeek).toFixed(2));
     const isOnTrack = projection >= weeklyGoal;
@@ -1567,8 +1572,7 @@ function HabitTracker() {
     const missingFields = {};
     if (!habit.habitId) missingFields.HabitId = true;
     if (!habit.type) missingFields.HabitType = true;
-    if (!habit.dailyGoal && habit.type === "number")
-      missingFields.HabitDailyGoal = true;
+    // if (!habit.dailyGoal) missingFields.HabitDailyGoal = true;
     if (!habit.label) missingFields.HabitLabel = true;
     if (!habit.emoji) missingFields.HabitEmoji = true;
 

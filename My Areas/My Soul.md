@@ -1,8 +1,10 @@
 ---
-tags: "area"
+tags:
+  - area
 Links: 
 Created: 2024-01-19T09:36:58
-Group: "Health"
+Group: Example
+areaGroup: Example
 ---
 
 ## Tasks

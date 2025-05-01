@@ -25855,3 +25855,5 @@ Install and enable dataview and dataviewJS for extra Metadata Menu features
     FileClassFolderButton.removeBtn(this);
   }
 };
+
+/* nosourcemap */

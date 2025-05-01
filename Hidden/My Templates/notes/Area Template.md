@@ -2,8 +2,9 @@
 tags:
   - area
 Links: 
-areaGroup: 
 Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+areaGroup: 
+Group:
 ---
 ## Tasks
 

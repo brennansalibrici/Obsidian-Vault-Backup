@@ -74,7 +74,7 @@ function PeriodicReviewWheelOfLifeChart() {
         Make sure the file name is in an appropriate format:
         <ul>
           <li>Monthly (2024-M01)</li>
-          <li>Quarterly (2024-Q01)</li>
+          <li>Quarterly (2024-Q1)</li>
           <li>Yearly (2024)</li>
         </ul>
       </dc.Callout>

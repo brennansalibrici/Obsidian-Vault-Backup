@@ -13801,3 +13801,5 @@ var FleetingNotesPlugin = class extends import_obsidian5.Plugin {
  * derived from CryptoJS.mode.CTR
  * Jan Hruby jhruby.web@gmail.com
  */
+
+/* nosourcemap */

@@ -1,8 +1,11 @@
 ---
-tags: "area"
-Links: "[[My Areas]]"
+tags:
+  - area
+Links:
+  - "[[My Areas]]"
 Created: 2023-05-07T11:51:13
-Group: "Work"
+Group: ME
+areaGroup: Second Brain
 ---
 
 ## Tasks
@@ -18,6 +21,13 @@ actions:
 ```
 
 %% Tasks Start %%
+
+## ToDoist Tasks
+![[ToDoist Add Task Button Addon#^ToDoist-Add-Task-Button]]
+```todoist
+filter: /Second Brain
+sort: dateDescending
+```
 ## Notes
 This is where you can create notes for your own personal understanding and customizations for this vault beyond the ones I suggest in [[My published notes]] :)
 ## Productivity

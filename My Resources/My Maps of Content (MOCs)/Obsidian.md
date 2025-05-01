@@ -36,3 +36,7 @@ table Created
 from [[]] AND #thought AND !"Hidden"
 sort file.mtime desc
 ```
+## Supporting Docs
+### Plugins
+[QuickAdd](https://quickadd.obsidian.guide/docs/)
+[ToDoist](https://jamiebrynes7.github.io/obsidian-todoist-plugin/docs/overview)

@@ -1,15 +1,20 @@
 ---
 Status: 
-tags: "{{VALUE:input/articles,input/books,input/podcasts,input/tweets}}"
+tags:
+  - input
 Links: 
-Source: "{{VALUE:Source URL}}"
-Author:
-Collection:
-Finished:
-Rating:
 Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+meta-bind: true
+Source:
+  - "{{VALUE:Source URL}}"
+Author: 
+Collection: 
+Finished: 
+Rating:
 ---
 ## Summary
+#inputCollection/series 
 ## Notes
 ## Highlights
-<% tp.file.cursor(7) %>
+- <% tp.file.cursor(7) %>
+

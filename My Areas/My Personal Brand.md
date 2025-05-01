@@ -1,8 +1,10 @@
 ---
-tags: "area"
+tags:
+  - area
 Links: 
 Created: 2024-01-07T11:38:48
-Group: "Work"
+Group: Example
+areaGroup: Example
 ---
 
 ![[Example note callout]]

@@ -1,22 +1,23 @@
 ---
 tags:
   - reviews/daily
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-04-19T00:49:09
 Headings:
-  - "[[<%tp.file.title%>#Thoughts|💭]] [[<%tp.file.title%>#Improvements|💪]] [[<%tp.file.title%>#Obstacles|🚧]]"
-  - "[[<%tp.file.title%>#Accomplishments|✅]] [[<%tp.file.title%>#Gratitude|🙏]] [[<%tp.file.title%>#Content Log|📚]]"
-Parent: "[[My Calendar/My Weekly Notes/<% moment(tp.file.title,'YYYY-MM-DD').format('YYYY-[W]WW') %>|<% moment(tp.file.title,'YYYY-MM-DD').format('YYYY-[W]WW') %>]]"
+  - "[[Daily Template#Thoughts|💭]] [[Daily Template#Improvements|💪]] [[Daily Template#Obstacles|🚧]]"
+  - "[[Daily Template#Accomplishments|✅]] [[Daily Template#Gratitude|🙏]] [[Daily Template#Content Log|📚]]"
+Parent: "[[My Calendar/My Weekly Notes/Invalid date|Invalid date]]"
 MakeTweet: 
-Meditation: 
+Meditation: false
 hideMetadata: true
 ---
 
-<< [[My Calendar/My Daily Notes/<% moment(tp.file.title,'YYYY-MM-DD').add(-1,'days').format("YYYY-MM-DD") %>|<% moment(tp.file.title,'YYYY-MM-DD').add(-1,'days').format("YYYY-MM-DD") %>]] | [[My Calendar/My Weekly Notes/<% moment(tp.file.title,'YYYY-MM-DD').format("YYYY-[W]WW") %>|<% moment(tp.file.title,'YYYY-MM-DD').format("YYYY-[W]WW") %>]] | [[My Calendar/My Daily Notes/<% moment(tp.file.title,'YYYY-MM-DD').add(1,'days').format("YYYY-MM-DD") %>|<% moment(tp.file.title,'YYYY-MM-DD').add(1,'days').format("YYYY-MM-DD") %>]] >>
+[Enter Story Entry](#Accomplishments)
+
+<< [[My Calendar/My Daily Notes/Invalid date|Invalid date]] | [[My Calendar/My Weekly Notes/Invalid date|Invalid date]] | [[My Calendar/My Daily Notes/Invalid date|Invalid date]] >>
 
 ## Reminders
 
-> [!DANGER] Today's Highlight
-> %% What am I most looking forward to today? %%
+> [!Danger] Today’s Highlight
 
 **Today's Big 3**
 
@@ -24,67 +25,91 @@ hideMetadata: true
 2. 
 3. 
 
-Remember [[<% moment(tp.file.title,'YYYY-MM-DD').add(-1,'days').format("YYYY-MM-DD") %>#Improvements]]
+Remember [[Invalid date#Improvements]]
+
+---
 ### Routines
-
-Morning Routine
+#### Morning
+- `INPUT[toggle:Teeth_Deodorant]`Brush Test & Deodorant
+- `INPUT[toggle:Mindset]`[Mindset](#Mindset)
 - `INPUT[toggle:Meditation]` Meditate
+- `INPUT[toggle:Devotions]` Devotions
+- `INPUT[toggle:Prayer]` Prayer
 
-<%-* if (moment(tp.file.title, "YYYY-MM-DD").format("ddd") != "Sun" && moment(tp.file.title, "YYYY-MM-DD").format("ddd") != "Sat") { %>
-Work
-<%* } -%>
+#### Work
 
-Evening
-<%-* if (moment(tp.file.title, "YYYY-MM-DD").format("ddd") != "Sun" && moment(tp.file.title, "YYYY-MM-DD").format("ddd") != "Sat") { %>
-- `INPUT[toggle:MakeTweet]` Make a tweet
-<%* } -%>
+#### Trading
 
-Night Routine
-- [ ] Journal
-- [ ] Brush teeth and floss
-- [ ] Plan for tomorrow
+#### During The Day
+ - `INPUT[toggle:Contact_Family]` Contacted Family
+ - `INPUT[toggle:Study_Relationship]` Studied Relationships
+ - `INPUT[toggle:Read_Study]`Read/Study
+ - `INPUT[toggle:WorkOut]`Workout
+ - `INPUT[toggle:DailyPractice]`Daily Practice
+ - `INPUT[toggle:KungFu]`KungFu
+ - `INPUT[toggle:QiGong]`QiGong
+
+#### Evening
+- `INPUT[toggle:Daily_Reflection]` Complete Daily [Reflection](#Reflection)
+- `INPUT[toggle:FleetingNotes]` Process through [[My FleetingNotes#From Daily Template|My Fleeting Notes]]
+- `INPUT[toggle:MyTasks]`Process through [[My Tasks#From Daily Template|My Tasks]]
+- `INPUT[toggle:DailyTrackers]` Daily [[#Trackers|Trackers]]
+
+---
+
+```meta-bind-button
+label: Add New Task
+hidden: false
+id: ""
+style: default
+actions:
+  - type: command
+    command: quickadd:choice:6bb9f26c-69d2-4711-978e-5325f7b4f1c5
+```
 ## Tasks
-
 ```tasks
 not done
-((due on <%tp.file.title%>) OR (scheduled on <%tp.file.title%>)) OR (((scheduled before <%tp.file.title%>) OR (due before <%tp.file.title%>)) AND (tags does not include habit))
+filter by function task.file.filename !== window.moment().format("YYYY-MM-DD") + ".md"
+(due before tomorrow) OR (scheduled today)
 sort by priority
 ```
-
-## Today
-
+---
 ## Journals
 
-### Gratitude
-
-**3 things I'm grateful for in my life:**
+### Mindset
+#### Gratitude
+##### **3 things I'm grateful for in my life:**
 - 
 
-**3 things I'm grateful for about myself:**
+##### **3 things I'm grateful for about myself:**
 - 
 
-### Morning Mindset
+#### Morning Mindset
 
-**I'm excited today for:**
+##### **I'm excited today for:**
 
-**One word to describe the person I want to be today would be \_ because:**
+##### **One word to describe the person I want to be today would be \_ because:**
 
-**Someone who needs me on my a-game/needs my help today is:**
+##### **Someone who needs me on my a-game/needs my help today is:**
 
-**What's a potential obstacle/stressful situation for today and how would my best self deal with it?**
+##### **What's a potential obstacle/stressful situation for today and how would my best self deal with it?**
 
-**Someone I could surprise with a note, gift, or sign of appreciation is:**
+##### **Someone I could surprise with a note, gift, or sign of appreciation is:**
 
-**One action I could take today to demonstrate excellence or real value is:**
+##### **One action I could take today to demonstrate excellence or real value is:**
 
-**One bold action I could take today is:**
+##### **One bold action I could take today is:**
 
-**An overseeing high performance coach would tell me today that:**
+##### **An overseeing high performance coach would tell me today that:**
 
-**The big projects I should keep in mind, even if I don't work on them today, are:**
+##### **The big projects I should keep in mind, even if I don't work on them today, are:**
 
-**I know today would be successful if I did or felt this by the end:**
+##### **I know today would be successful if I did or felt this by the end:**
 
+🔙 [Back to Morning Routine](#Morning)
+
+---
+## Today
 ## Reflection
 
 ### Rating
@@ -94,61 +119,105 @@ INPUT[progressBar(minValue(1), maxValue(10)):Rating]
 ```
 
 ### Summary
+##### Overview and your general feeling of the day. What kind of day was it?
 
-`INPUT[textArea():Summary]`
 ### Story
+##### 'Highlight reel' of significant events throughout the day - emotional, insightful or significant. Why did it matter? (Separate events with bullet points)
+- 
 
-%% What was a moment today that provided immense emotion, insight, or meaning? %%
+🔙 [Back to During The Day](#Trading)
 
-`INPUT[textArea():Story]`
-
+---
 ### Accomplishments
 
-%% What did I get done today? %%
+%% What did I get done today? Tasks that have been completed today %%
 
 ```tasks
-done on <%tp.file.title%>
-group by path
-sort by priority
+filter by function task.done.moment?.isSame(moment("Daily Template"), 'day') || false
 ```
 
 ### Obstacles
 %% What was an obstacle I faced, how did I deal with it, and what can I learn from for the future? %%
-%% Any bullet list with `#log/obstacle` will show up below %%
-````datacorejsx
-const { DailyLogsWithTags } = await dc.require("Hidden/Datacore/Views/DailyLogs.jsx");
-
-const tags = ["#log/obstacle"];
-
-function View() {
-return <DailyLogsWithTags tags={tags}/>
-}
-return View
-````
-### Content Log
-%% What were some insightful inputs and sources that I could process now? %%
+%% MANUALLY ENTER below AND Any log with `obstacle:: x` will show up below %%
+- 
 
 ```dataview
-table Status, Links, Source
-FROM  #input AND !"Hidden"
-WHERE contains(dateformat(Created, "yyyy-MM-dd"), this.file.name)
-SORT Created desc
+table obstacle as "Obstacles"
+from ""
+where (obstacle != null or contains(file.tags, "#log/obstacle"))
+and date(file.mtime).day = date(this.file.name).day
+and date(file.mtime).month = date(this.file.name).month
+and date(file.mtime).year = date(this.file.name).year
+```
+### Content Log
+%% What were some insightful inputs and sources that I could process now? %%
+```button
+name QuickAdd: 📥 Add General Input
+type command
+action QuickAdd: 📥 Add General Input
+```
+```dataview
+table Status, tags as Tags, Links, Source
+FROM  (#input OR #inputCollection) AND !"Hidden"
+WHERE !Status
+and date(file.mtime).day = date(this.file.name).day
+and date(file.mtime).month = date(this.file.name).month
+and date(file.mtime).year = date(this.file.name).year
+SORT Tags desc
 ```
 ### Thoughts
 %% What ideas was I pondering on or were lingering in my mind? %%
-### Conversations
-%% Create sub-headers for any mini conversation you had or want to prepare for here, linking it to the respective `Conversations` header for the person %%
-#### Meetings
-
-```dataview
-TABLE Attendees, Summary
-FROM #meeting AND !"Hidden"
-WHERE contains(dateformat(MeetingDate, "yyyy-MM-dd"), this.file.name)
-SORT Created asc
+```button
+name QuickAdd: 💭 Create Thought Note
+type command
+action QuickAdd: 💭 Create Thought Note
 ```
+```dataview
+table Status, Links, Source
+FROM  #thought AND !"Hidden"
+WHERE !Status
+and date(file.mtime).day = date(this.file.name).day
+and date(file.mtime).month = date(this.file.name).month
+and date(file.mtime).year = date(this.file.name).year
+SORT Created desc
+```
+### Conversations
+%% Create sub-headers for any mini conversation you had or want to prepare for here (MANUALLY ENTER HERE), linking it to the respective `Conversations` header for the person %%
+- 
+```button
+name QuickAdd: 👤 Create Person Note
+type command
+action QuickAdd: 👤 Create Person Note
+```
+```dataview
+table conversation as "Conversation"
+from ""
+where (conversation != null or contains(file.tags, "#log/conversation"))
+and date(file.mtime).day = date(this.file.name).day
+and date(file.mtime).month = date(this.file.name).month
+and date(file.mtime).year = date(this.file.name).year
+```
+### Meetings
 
+```button
+name QuickAdd: 🗣 Create Meeting Note
+type command
+action QuickAdd: 🗣 Create Meeting Note
+```
+```dataview
+table Status, Links, Source
+FROM  #meeting AND !"Hidden"
+WHERE !Status
+and date(file.mtime).day = date(this.file.name).day
+and date(file.mtime).month = date(this.file.name).month
+and date(file.mtime).year = date(this.file.name).year
+SORT Created desc
+```
+🔙 [Back to Evening Routine](#Evening)
+
+---
 ### Trackers
-- [ ] Check off any habits from [[#Reminders]] for tracking purposes
+- [ ] Check off any habits from [[#Reminders]] or via the "My Habit Tracker" note for tracking purposes
 
 #### Energies
 
@@ -185,11 +254,17 @@ INPUT[progressBar(minValue(1), maxValue(10)):Spiritual]
 ### Improvements
 %% What can I do tomorrow to be 1% better? %%
 
+🔙 [Back to Evening Routine](#Evening)
 ## Today's Notes
 
-```dataview
-TABLE file.tags as "Note Type", Created
-from ""
-WHERE contains(dateformat(Created, "yyyy-MM-dd"), this.file.name)
-SORT file.name
+```datacorejsx
+
+const { NotesCreatedInTimeframe } = await dc.require("Hidden/Datacore/Views/PeriodicNotes.jsx");
+
+return function View() {
+
+return <NotesCreatedInTimeframe/>;
+
+}
+
 ```

@@ -15,14 +15,18 @@
       "enabled": false,
       "date-created": false,
       "date-created-key": "Created",
-      "force-retention-of-create-value": false,
       "date-modified": false,
       "date-modified-key": "date modified",
-      "format": "YYYY-MM-DDThh:mm:ss"
+      "format": "YYYY-MM-DDThh:mm:ss",
+      "date-created-source-of-truth": "file system",
+      "date-modified-source-of-truth": "file system",
+      "convert-to-utc": false,
+      "update-on-file-contents-updated": "never"
     },
     "yaml-title": {
       "enabled": false,
-      "title-key": "title"
+      "title-key": "title",
+      "mode": "first-h1-or-filename-if-h1-missing"
     },
     "capitalize-headings": {
       "enabled": false,
@@ -55,7 +59,8 @@
       "style": "consistent"
     },
     "no-bare-urls": {
-      "enabled": false
+      "enabled": false,
+      "no-bare-uris": false
     },
     "proper-ellipsis": {
       "enabled": false
@@ -77,7 +82,8 @@
       "style": "consistent"
     },
     "two-spaces-between-lines-with-content": {
-      "enabled": false
+      "enabled": false,
+      "line-break-indicator": "  "
     },
     "compact-yaml": {
       "enabled": true,
@@ -111,7 +117,9 @@
       "enabled": false
     },
     "space-between-chinese-japanese-or-korean-and-english-or-numbers": {
-      "enabled": false
+      "enabled": false,
+      "english-symbols-punctuation-before": "-+;:'\"°%$)]",
+      "english-symbols-punctuation-after": "-+'\"([¥$"
     },
     "trailing-spaces": {
       "enabled": false,
@@ -149,7 +157,8 @@
       "enabled": false,
       "preserve-existing-alias-section-style": true,
       "keep-alias-that-matches-the-filename": false,
-      "use-yaml-key-to-keep-track-of-old-filename-or-heading": true
+      "use-yaml-key-to-keep-track-of-old-filename-or-heading": true,
+      "alias-helper-key": "linter-yaml-title-alias"
     },
     "headings-start-line": {
       "enabled": false
@@ -160,7 +169,9 @@
     },
     "auto-correct-common-misspellings": {
       "enabled": false,
-      "ignore-words": ""
+      "ignore-words": "",
+      "skip-words-with-multiple-capitals": false,
+      "extra-auto-correct-files": []
     },
     "ordered-list-style": {
       "enabled": false,
@@ -254,6 +265,9 @@
       "enabled": false,
       "characters-to-remove-space-before": ",!?;:).’”]",
       "characters-to-remove-space-after": "¿¡‘“(["
+    },
+    "empty-line-around-horizontal-rules": {
+      "enabled": false
     }
   },
   "lintOnSave": true,
@@ -265,6 +279,7 @@
   "foldersToIgnore": [
     ""
   ],
+  "filesToIgnore": [],
   "linterLocale": "system-default",
   "logLevel": "ERROR",
   "lintCommands": [],

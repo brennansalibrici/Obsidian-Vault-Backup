@@ -5,8 +5,9 @@ tags:
 Links: 
 Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 Attendees: 
-Summary:
+Summary: 
 MeetingDate: <% tp.date.now("YYYY-MM-DD") %>
+meetingStatus:
 ---
 ## Agenda Items
 

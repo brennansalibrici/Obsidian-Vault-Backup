@@ -1,7 +1,7 @@
 ---
-Links:
-tags: "{{VALUE:thought,thought/memories,thought/reflections,thought/musings}}"
-Status:
+Status: 
+tags: "{{VALUE: thought,thought/memories,thought/reflections,thought/musings}}"
+Links: 
 Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 ## Context

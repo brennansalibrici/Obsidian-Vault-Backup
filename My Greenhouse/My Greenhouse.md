@@ -7,7 +7,14 @@ Created: 2023-05-07T11:51:13
 aliases:
   - My Evergreen Notes
 ---
-The home of my [[Evergreen Notes]]
+ The home of my [[Evergreen Notes]]
+## Fleeting Notes
+```dataview
+table date(today) - date(file.cday) as "Days Alive"
+from "FleetingNotesApp"
+sort Created desc
+```
+
 ## Seedlings 🌱
 *Notes ready for nurturing*
 ```dataview

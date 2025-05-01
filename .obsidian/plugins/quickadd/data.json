@@ -185,7 +185,7 @@
           "setFileExistsBehavior": false
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "0ffdbc95-21f3-4fc4-8b36-915cfe73a573",
@@ -230,7 +230,7 @@
           "macroId": "e9b4fb88-8700-4671-b122-49f616f50fc8"
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "3d7e0372-fc93-4bbb-87fa-ed595863fd55",
@@ -298,7 +298,7 @@
           "setFileExistsBehavior": false
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "c2449ee0-639e-4c9a-86ef-6e04c03e1b39",
@@ -433,7 +433,7 @@
           "macroId": "8800c3e7-8567-47af-a36c-0575884f3330"
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "8845603a-e807-4e40-a238-40149a141dd6",
@@ -558,7 +558,7 @@
           "fileExistsMode": "Nothing"
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "f3c86197-04ee-4f8a-9abb-3147605ae87e",
@@ -624,7 +624,8 @@
           "fileExistsMode": "Increment the file name",
           "setFileExistsBehavior": false
         }
-      ]
+      ],
+      "collapsed": true
     },
     {
       "id": "b7acb40f-0439-448a-b65c-80b20f2c482f",
@@ -638,7 +639,7 @@
           "type": "Capture",
           "command": true,
           "appendLink": false,
-          "captureTo": "",
+          "captureTo": "My Views/My Tasks.md",
           "captureToActiveFile": true,
           "createFileIfItDoesntExist": {
             "enabled": false,
@@ -647,18 +648,18 @@
           },
           "format": {
             "enabled": true,
-            "format": "<% tp.file.cursor(1) %>\\n"
+            "format": "<% tp.file.cursor(1) %>"
           },
           "insertAfter": {
             "enabled": true,
             "after": "## Tasks",
-            "insertAtEnd": true,
+            "insertAtEnd": false,
             "considerSubsections": false,
             "createIfNotFound": false,
             "createIfNotFoundLocation": "top"
           },
           "prepend": false,
-          "task": false,
+          "task": true,
           "openFileInNewTab": {
             "enabled": false,
             "direction": "vertical",
@@ -674,7 +675,8 @@
           "command": true,
           "macroId": "9deb75f1-4533-4d1b-8630-7a30e61344a0"
         }
-      ]
+      ],
+      "collapsed": true
     },
     {
       "id": "10ad93f5-80ec-44c5-8429-abc4c0acad74",
@@ -752,7 +754,59 @@
           "openFile": false,
           "openFileInMode": "default"
         }
-      ]
+      ],
+      "collapsed": true
+    },
+    {
+      "id": "26e59763-8257-450b-9afb-492b373d55e8",
+      "name": "Work",
+      "type": "Multi",
+      "command": false,
+      "choices": [
+        {
+          "id": "9c127c42-cb58-4a8c-866c-9bc443602c34",
+          "name": "🏢 Create New Customer",
+          "type": "Macro",
+          "command": true,
+          "macroId": "2fb27317-28d6-4662-8282-f37e6b930432"
+        },
+        {
+          "id": "dbfabab9-0cc4-44f7-97a6-2c8482c48807",
+          "name": "📍 Create New Site",
+          "type": "Macro",
+          "command": true,
+          "macroId": "2761f238-967e-4651-a395-efb7b6716da2"
+        },
+        {
+          "id": "e118603e-6fd5-4eb0-b11d-9ce40d262ec9",
+          "name": "⚡Create New Switchgear",
+          "type": "Macro",
+          "command": true,
+          "macroId": "824277d7-4e16-438a-8d0b-5af7d6a4ac1f"
+        },
+        {
+          "id": "4b065769-f5ba-4ecf-9dc6-32721293318e",
+          "name": "🛠 Create New Job",
+          "type": "Macro",
+          "command": true,
+          "macroId": "9d10d10f-32bc-4831-8c34-03c851b6232c"
+        },
+        {
+          "id": "e9547fac-9e99-4af7-8a6d-80e329fb4f26",
+          "name": "👤 Create New POC",
+          "type": "Macro",
+          "command": true,
+          "macroId": "22e50f7c-c2b8-44c2-914c-c42d466dffb7"
+        },
+        {
+          "id": "2d74a103-d059-4a15-993c-ce2bd1c1b616",
+          "name": "📝 Capture New Moment",
+          "type": "Macro",
+          "command": true,
+          "macroId": "dfc5a244-bd38-4231-8dc1-704e9aa39f65"
+        }
+      ],
+      "collapsed": false
     }
   ],
   "macros": [
@@ -763,7 +817,7 @@
         {
           "name": "Insert File Cursor Jump For New Task",
           "type": "Choice",
-          "id": "8d99d6ec-6e5e-4e5a-a6d3-d83288af2b54",
+          "id": "9d8879c9-045c-44fb-85e0-6f9c7269aedf",
           "choiceId": "7a0f1225-a219-4b0e-a813-aa45c5addbcd"
         },
         {
@@ -775,7 +829,7 @@
         {
           "name": "Templater: Jump to next cursor location",
           "type": "Obsidian",
-          "id": "36596077-4b5d-41a5-88ce-7c288188b1cc",
+          "id": "dc4cdfa4-adea-4c5e-8a4f-12a8904b595b",
           "commandId": "templater-obsidian:jump-to-next-cursor-location"
         },
         {
@@ -905,6 +959,300 @@
         }
       ],
       "runOnStartup": false
+    },
+    {
+      "name": "Create New Customer",
+      "id": "2fb27317-28d6-4662-8282-f37e6b930432",
+      "commands": [
+        {
+          "name": "New Customer Template Choice",
+          "type": "NestedChoice",
+          "id": "278e2f2c-3892-45db-9038-e2d762525364",
+          "choice": {
+            "id": "2f69473f-add6-4150-b9f0-cc74a90fea02",
+            "name": "New Customer Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Hidden/My Templates/work/Customer Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:Name}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "My Areas/Work/🏢 Customers"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Create New Switchgear",
+      "id": "824277d7-4e16-438a-8d0b-5af7d6a4ac1f",
+      "commands": [
+        {
+          "name": "New Switchgear Template Choice",
+          "type": "NestedChoice",
+          "id": "08a6cf97-afcc-40ad-b81c-203f6173683a",
+          "choice": {
+            "id": "f6ac015f-d5c3-4094-b4df-b7785d6ed561",
+            "name": "New Switchgear Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Hidden/My Templates/work/Switchgear Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:Name}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "My Areas/Work/⚡Electric Equipment/Switchgear"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Create New Job",
+      "id": "9d10d10f-32bc-4831-8c34-03c851b6232c",
+      "commands": [
+        {
+          "name": "New Job Template Choice",
+          "type": "NestedChoice",
+          "id": "1f2d4261-e7e9-4995-8f29-1b258661736a",
+          "choice": {
+            "id": "7840c2b3-35ab-4b71-a698-aabe2bf6feac",
+            "name": "New Job Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Hidden/My Templates/work/Job Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:Job Name}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "My Areas/Work/🛠 My Jobs"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Create New POC",
+      "id": "22e50f7c-c2b8-44c2-914c-c42d466dffb7",
+      "commands": [
+        {
+          "name": "New POC Template Choice",
+          "type": "NestedChoice",
+          "id": "cb4d3264-6b58-49e5-a553-3fba5f2817ab",
+          "choice": {
+            "id": "3decb003-9026-48a2-8aaa-be9a0e76e202",
+            "name": "New POC Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Hidden/My Templates/work/POC Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:Full Name}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "My Social Circle/👤 POCs"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Create New Captured Moment",
+      "id": "3da919ba-e8d3-4d02-a62d-72589191140d",
+      "commands": [
+        {
+          "name": "Capture New Moment Template Choice",
+          "type": "NestedChoice",
+          "id": "1adbfa28-7ebd-4833-b8be-fe95ee34faea",
+          "choice": {
+            "id": "abbdae6f-1629-4c9a-af89-643e804de02f",
+            "name": "Capture New Moment Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Hidden/My Templates/personal/Captured Moment Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:Name}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "ME/📝 Capture Moments"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": true,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Create New Site",
+      "id": "2761f238-967e-4651-a395-efb7b6716da2",
+      "commands": [
+        {
+          "name": "New Site Template Choice",
+          "type": "NestedChoice",
+          "id": "c7dd96bb-4afa-4b47-a739-03d28a4fdbca",
+          "choice": {
+            "id": "b3867591-be90-46b0-9475-5ce158b86c58",
+            "name": "New Site Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Hidden/My Templates/work/Site Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:Name}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "My Areas/Work/📍 Sites"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Create New Moment",
+      "id": "dfc5a244-bd38-4231-8dc1-704e9aa39f65",
+      "commands": [
+        {
+          "name": "New Moment Template Choice",
+          "type": "NestedChoice",
+          "id": "d621001f-602b-4628-b06a-f5673d997561",
+          "choice": {
+            "id": "cd2643f5-e0c2-4698-82f1-ad29bb19f098",
+            "name": "New Moment Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Hidden/My Templates/personal/Captured Moment Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:Name}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "ME/📝 Capture Moments"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
     }
   ],
   "inputPrompt": "single-line",
@@ -912,7 +1260,7 @@
   "templateFolderPath": "",
   "announceUpdates": true,
   "version": "1.8.1",
-  "disableOnlineFeatures": true,
+  "disableOnlineFeatures": false,
   "ai": {
     "defaultModel": "Ask me",
     "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
