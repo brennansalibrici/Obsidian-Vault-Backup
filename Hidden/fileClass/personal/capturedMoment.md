@@ -1,6 +1,4 @@
 ---
-tags:
-  - note
 mapWithTag: true
 fields:
   - name: Created
@@ -23,7 +21,10 @@ fields:
         "5": Deep Grief
         "6": Hopeful Shift
         "7": AHA Moment
-        "8": Other
+        "8": Personal Truth
+        "9": Encouragement
+        "10": Pattern Shift
+        "11": Other
     path: ""
     id: Dus9bJ
   - name: SourceDailyNote
@@ -36,7 +37,12 @@ fields:
     options: {}
     path: ""
     id: WGVUwk
-version: "2.19"
+  - name: Feeling(s)
+    type: MultiFile
+    options: {}
+    path: ""
+    id: EBdFeP
+version: "2.22"
 limit: 100
 icon: package
 tagNames: 
@@ -47,6 +53,7 @@ extends:
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - EBdFeP
   - WGVUwk
   - g1xLbM
   - Dus9bJ

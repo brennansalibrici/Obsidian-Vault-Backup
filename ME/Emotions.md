@@ -7,30 +7,43 @@ Created: 2025-04-29T18:50:36
 ---
 # Emotional Vocabulary Library (Complete)
 ## Table of Contents
-- [Sad](#sad)
-- [Depressed](#depressed)
-- [Angry](#angry)
-- [Overwhelmed](#overwhelmed)
-- [Happy](#happy)
-- [Open](#open)
-- [Alive](#alive)
-- [Good](#good)
-- [Loving](#loving)
-- [Interested](#interested)
-- [Strong](#strong)
-- [Positive](#positive)
-- [Acceptable](#acceptable)
-- [Cared-For](#cared-for)
-- [Thankful](#thankful)
-- [Smart](#smart)
-- [Caring](#caring)
-- [Relaxed](#relaxed)
-- [Attractive](#attractive)
-- [Unplaced](#unplaced)
+
+- [[#Sad]]
+- [[#Depressed]]
+- [[#Angry]]
+- [[#Overwhelmed]]
+- [[#Afraid]]
+- [[#Vulnerable]]
+- [[#Embarrassed]]
+- [[#Hurt]]
+- [[#Victimized]]
+- [[#Guilty]]
+- [[#Inadequate]]
+- [[#Alone]]
+- [[#Confused]]
+- [[#Tired]]
+- [[#Helpless]]
+- [[#Indifferent]]
+- [[#Disconnected]]
+- [[#Shocked]]
+- [[#Negative]]
+- [[#Hurtful]]
+- [[#Loving]]
+- [[#Cared-For]]
+- [[#Good]]
+- [[#Alive]]
+- [[#Strong]]
+- [[#Thankful]]
+- [[#Positive]]
+- [[#Calm]]
+- [[#Smart]]
+- [[#Connected]]
+- [[#Open]]
+- [[#Attractive]]
+- [[#Interested]]
 ## Sad
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling unhappy about something
-
 ### Tearful
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling like you are about to cry
@@ -147,6 +160,7 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling uninspired or emotionally flat
 
+	🔙 [[#Table of Contents]]
 ## Depressed
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling extremely unhappy, hopeless, or emotionally weighed down
@@ -255,6 +269,7 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling like something important has been taken from you and can't return
 
+🔙 [[#Table of Contents]]
 ## Angry
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: strongly bothered or provoked by a perceived injustice or frustration
@@ -451,6 +466,7 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: visibly steaming with irritation or rage
 
+🔙 [[#Table of Contents]]
 ## Overwhelmed
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: feeling overtaken by emotional intensity, pressure, or chaos
@@ -539,11 +555,16 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: overstimulated and tense, unable to calm down
 
+### Devastated
+- Energy-Mood:: Low Energy Unpleasant
+- A profound sense of emotional destruction or collapse, often due to loss, betrayal, or overwhelming disappointment.
+
+🔙 [[#Table of Contents]]
 ## Afraid
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: feeling threatened by danger, harm, or something unknown
 
-### Fearful
+### Fear
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: feeling scared or afraid of what may happen
 
@@ -631,7 +652,7 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: troubled about actual or potential problems
 
-### Panicked
+### Panic
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: feeling frantic and overwhelmed by fear
 
@@ -639,6 +660,7 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: unease and worry about something that might happen
 
+🔙 [[#Table of Contents]]
 ## Vulnerable
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling exposed, unguarded, or easily hurt emotionally or mentally
@@ -747,6 +769,7 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling emotionally imprisoned or unable to escape discomfort
 
+🔙 [[#Table of Contents]]
 ## Embarrassed
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: self-conscious and uncomfortable about how you think others are perceiving you
@@ -795,6 +818,7 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: feeling ridiculous or laughable in a bad way
 
+🔙 [[#Table of Contents]]
 ## Hurt
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling wounded emotionally, especially from mistreatment, rejection, or betrayal
@@ -1011,6 +1035,7 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: emotionally let down or disheartened
 
+🔙 [[#Table of Contents]]
 ## Victimized
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling harmed, controlled, or exploited by someone or something
@@ -1151,6 +1176,7 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: unjustly punished or emotionally destroyed in an extreme way
 
+🔙 [[#Table of Contents]]
 ## Guilty
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling responsible for a specific wrongdoing or moral failure
@@ -2103,6 +2129,9 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: Low Energy Pleasant
 - Definition:: open and willing to share thoughts and feelings in connection
 
+### Compassion
+- Energy-Mood:: Low Energy Pleasant
+- A deep emotional awareness of another’s suffering paired with a desire to alleviate it.
 ## Cared-For
 - Energy-Mood:: Low Energy Pleasant
 - Definition:: feeling seen, valued, and supported by others
@@ -2590,6 +2619,10 @@ Created: 2025-04-29T18:50:36
 ### Resolved
 - Energy-Mood:: Low Energy Pleasant
 - Definition:: feeling at peace after inner conflict or emotional turmoil
+
+### Anchored
+- Energy-Mood:: Low Energy Pleasant
+- Definition:: a grounded steady feeling that brings calm and clarity
 
 ## Smart
 - Energy-Mood:: High Energy Pleasant

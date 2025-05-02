@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "85aba752fcb857fe",
+        "id": "89a081ec51c93727",
         "type": "tabs",
         "children": [
           {
-            "id": "bb886dd7944be37b",
+            "id": "56d3f5d9c4668565",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -29,7 +29,7 @@
       {
         "id": "93f00f080efb3236",
         "type": "tabs",
-        "dimension": 21.17903930131004,
+        "dimension": 18.545163868904876,
         "children": [
           {
             "id": "44331de537c86284",
@@ -77,7 +77,7 @@
       {
         "id": "03195c1cb51b65ce",
         "type": "tabs",
-        "dimension": 78.82096069868996,
+        "dimension": 81.45483613109512,
         "children": [
           {
             "id": "66db21eab2fcb693",
@@ -181,7 +181,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.5110321044922
+    "width": 301.5124969482422
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -198,7 +198,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "My Areas/Work/🛠 My Jobs/HTDC IR 2025.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -208,7 +207,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for HTDC IR 2025"
+              "title": "Backlinks"
             }
           },
           {
@@ -315,11 +314,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "My Areas/Work/🛠 My Jobs/HTDC IR 2025.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for HTDC IR 2025"
+              "title": "File properties"
             }
           }
         ],
@@ -380,47 +377,48 @@
   },
   "active": "d2a414d0abc19c36",
   "lastOpenFiles": [
-    "My Areas/Work/🛠 My Jobs/T0587 GFR 2025.md",
-    "My Areas/Work/⚡Electric Equipment/Switchgear/HTDC MSB8.md",
-    "My Areas/Work/⚡Electric Equipment/Switchgear/HTDC MSB7.md",
-    "Hidden/My Templates/work/Switchgear Template.md",
-    "My Areas/Work/⚡Electric Equipment/Switchgear/HTDC MSB6.md",
-    "My Areas/Work/⚡Electric Equipment/Switchgear/HTDC MSB5.md",
-    "My Areas/Work/⚡Electric Equipment/Switchgear/HTDC MSB4.md",
-    "My Areas/Work/⚡Electric Equipment/Switchgear/HTDC MSB3.md",
-    "My Areas/Work/⚡Electric Equipment/Switchgear/HTDC MSB2.md",
-    "My Areas/Work/⚡Electric Equipment/Switchgear/HTDC MSB1.md",
-    "My Areas/Work/📍 Sites/HTDC Brookshire, TX.md",
-    "My Social Circle/👤 POCs/Jeff Ackers.md",
-    "My Social Circle/👤 POCs/Jarin Bush.md",
-    "My Social Circle/👤 POCs/Dave Wright.md",
-    "My Social Circle/👤 POCs/Dave Rosen.md",
-    "My Social Circle/👤 POCs/Chris Young.md",
-    "My Social Circle/👤 POCs/Bruce Hafer.md",
-    "My Social Circle/👤 POCs/Chris Cisneros.md",
-    "Hidden/My Templates/work/POC Template.md",
-    "Hidden/fileClass/persons/person.md",
-    "Hidden/fileClass/persons/poc.md",
-    "FleetingNotesApp/Add Dave Rosen.md",
-    "Scratch Pad 2.md",
-    "ME/Emotions.md",
-    "ME/Emotions_2.md",
-    "FleetingNotesApp/Schwab Login.md",
-    "My Social Circle/POCs",
-    "ME",
+    "ME/1_Unprocessed Captures/Holding The Door Open.md",
+    "ME/1_Unprocessed Captures/The Ones Who Still Don't Cone In.md",
+    "ME/1_Unprocessed Captures/What Lori's Really Asking For.md",
+    "ME/1_Unprocessed Captures/Emotional Fluency Breakthrough.md",
+    "ME/1_Unprocessed Captures/Might Not Be The Only One.md",
+    "ME/1_Unprocessed Captures/Unexpected Reaction.md",
+    "Hidden/My Templates/personal/Captured Moment Template.md",
+    "ME/1_Unprocessed Captures/Seeing the Silence Differently.md",
+    "ME/1_Unprocessed Captures/Encourage and a Toast.md",
+    "ME/1_Unprocessed Captures/Personal Truth.md",
+    "ME/📝 Captured Moments/Doing It Afraid.md",
+    "ME/📝 Captured Moments/📝 Captured Moments.md",
+    "ME/1_Unprocessed Captures",
+    "ME/📝 Captured Moments/Doing It Afraid1.md",
+    "ME/📝 Capture Moments/Encourage and a Toast.md",
     "ME/📝 Capture Moments",
-    "Hidden/Scripts/createCapturedMoment.js.~tmp",
-    "Hidden/Scripts/createCapturedMoment.js",
-    "Hidden/Scripts/metricTracker - Copy.js",
-    "Hidden/My Templates/personal",
-    "Hidden/fileClass/personal",
-    "My Areas/Work/Subcontractors",
-    "My Social Circle/👤 POCs",
+    "ME/Personal Truths.md",
+    "ME/📝 Captured Moments/How To Handle Intense Emotions (like Grief).md",
+    "ME/📝 Captured Moments/The Boy In The Cave.md",
+    "Hidden/My Templates/periodic/Daily Template.md",
+    "ME/Emotions.md",
+    "ME/📝 Captured Moments/Captured Moment2.md",
+    "ME/📝 Captured Moments/Captured Moment1.md",
+    "ME/📝 Captured Moments/Captured Moment - 2025-05-2.md",
+    "ME/📝 Captured Moments/Captured Moment - 2025-05-01.md",
+    "ME/📝 Captured Moments/2025-05-01.md",
+    "Hidden/fileClass/personal/capturedMoment.md",
+    "My Inputs/My Inputs.md",
+    "ME/📝 Captured Moments",
+    "ME/Obsidian-Vault-Backup_ME_Emotions.md at main · brennansalibrici_Obsidian-Vault-Backup_files/gravatar-user-420.png",
+    "ME/Obsidian-Vault-Backup_ME_Emotions.md at main · brennansalibrici_Obsidian-Vault-Backup_files/light-74231a1f3bbb.css",
+    "ME/Obsidian-Vault-Backup_ME_Emotions.md at main · brennansalibrici_Obsidian-Vault-Backup_files/dark-8a995f0bacd4.css",
+    "ME/Obsidian-Vault-Backup_ME_Emotions.md at main · brennansalibrici_Obsidian-Vault-Backup_files/app_assets_modules_github_ref-selector_ts-33e4fe6f0ce6.js.download",
+    "ME/Obsidian-Vault-Backup_ME_Emotions.md at main · brennansalibrici_Obsidian-Vault-Backup_files/repositories-95c3ec3e0cb0.js.download",
+    "ME/Obsidian-Vault-Backup_ME_Emotions.md at main · brennansalibrici_Obsidian-Vault-Backup_files/primer-react-185cf474198e.js.download",
+    "ME/Obsidian-Vault-Backup_ME_Emotions.md at main · brennansalibrici_Obsidian-Vault-Backup_files/react-core-4e880f1558ca.js.download",
+    "ME/Obsidian-Vault-Backup_ME_Emotions.md at main · brennansalibrici_Obsidian-Vault-Backup_files/code-menu-6e97961c4cb6.js.download",
+    "My Dashboards/Captured Moments Dashboard.canvas",
     "My Files/My Attachments/Pasted image 20250423201214.png",
     "My Files/My Attachments/Screenshot 2025-04-15 002323.png",
     "My Files/My Attachments/Pasted image 20250415002512.png",
     "My Files/My Attachments/Pasted image 20250415002454.png",
-    "Untitled.canvas",
     "My Files/My Canvases/My Note-Making Station Board.canvas",
     "My Files/My Canvases/My Habits Board.canvas",
     "My Files/My Canvases/Creating new task.canvas",
@@ -430,7 +428,6 @@
     "My Files/My Attachments/Pasted image 20240411192440.png",
     "My Files/My Attachments/0_kcCbWCZ4cBq3qIDw.jpg",
     "My Files/My Attachments/Weekly Progress Example.png",
-    "My Files/My Attachments/Pasted image 20230510152121.png",
     "My Canvases/Untitled.canvas"
   ]
 }

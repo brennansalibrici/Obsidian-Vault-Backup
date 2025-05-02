@@ -1233,7 +1233,7 @@
             "folder": {
               "enabled": true,
               "folders": [
-                "ME/📝 Capture Moments"
+                "ME/1_Unprocessed Captures"
               ],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,
@@ -1245,7 +1245,7 @@
               "direction": "vertical",
               "focus": true
             },
-            "openFile": false,
+            "openFile": true,
             "openFileInMode": "default",
             "fileExistsMode": "Increment the file name",
             "setFileExistsBehavior": false

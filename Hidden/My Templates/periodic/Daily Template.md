@@ -5,7 +5,7 @@ Created: 2025-04-19T00:49:09
 Headings:
   - "[[Daily Template#Thoughts|💭]] [[Daily Template#Improvements|💪]] [[Daily Template#Obstacles|🚧]]"
   - "[[Daily Template#Accomplishments|✅]] [[Daily Template#Gratitude|🙏]] [[Daily Template#Content Log|📚]]"
-Parent: "[[My Calendar/My Weekly Notes/Invalid date|Invalid date]]"
+Parent: "[[2025-W17|2025-W17]]"
 MakeTweet: 
 Meditation: false
 hideMetadata: true
@@ -13,7 +13,7 @@ hideMetadata: true
 
 [Enter Story Entry](#Accomplishments)
 
-<< [[My Calendar/My Daily Notes/Invalid date|Invalid date]] | [[My Calendar/My Weekly Notes/Invalid date|Invalid date]] | [[My Calendar/My Daily Notes/Invalid date|Invalid date]] >>
+<< [[2025-04-23|2025-04-23]] | [[2025-W17|2025-W17]] | [[2025-04-23|2025-04-23]] >>
 
 ## Reminders
 
@@ -25,7 +25,7 @@ hideMetadata: true
 2. 
 3. 
 
-Remember [[Invalid date#Improvements]]
+Remember [[2025-04-23#Improvements]]
 
 ---
 ### Routines
@@ -52,6 +52,7 @@ Remember [[Invalid date#Improvements]]
 #### Evening
 - `INPUT[toggle:Daily_Reflection]` Complete Daily [Reflection](#Reflection)
 - `INPUT[toggle:FleetingNotes]` Process through [[My FleetingNotes#From Daily Template|My Fleeting Notes]]
+- `INPUT[toggle:CapturedMoments]`Process through [[📝 Captured Moments#From Daily Template|📝 Captured Moments]]
 - `INPUT[toggle:MyTasks]`Process through [[My Tasks#From Daily Template|My Tasks]]
 - `INPUT[toggle:DailyTrackers]` Daily [[#Trackers|Trackers]]
 

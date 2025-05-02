@@ -89,6 +89,7 @@
     "Done": "text",
     "Priority": "multitext",
     "Date": "datetime",
-    "Daily_Reflection": "text"
+    "Daily_Reflection": "text",
+    "Feeling(s)": "multitext"
   }
 }

@@ -38,5 +38,6 @@
   "obsidian-meta-bind-plugin",
   "buttons",
   "quickadd",
-  "homepage"
+  "homepage",
+  "obsidian-git"
 ]

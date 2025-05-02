@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"020defe78651f889","type":"text","text":"```dataview\ntable Name\nfrom \"Captured Moments\"\n\n```\n\n","x":-600,"y":-440,"width":480,"height":240}
+	],
+	"edges":[]
+}
