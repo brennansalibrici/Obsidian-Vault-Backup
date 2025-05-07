@@ -758,6 +758,35 @@
       "collapsed": true
     },
     {
+      "id": "7176b5ab-b8f3-4755-afec-9f29dd004120",
+      "name": "🛠️ Utilities",
+      "type": "Multi",
+      "command": false,
+      "choices": []
+    },
+    {
+      "id": "0c579871-582e-4f1c-af34-02bf3222f54c",
+      "name": "ME",
+      "type": "Multi",
+      "command": false,
+      "choices": [
+        {
+          "id": "fc93eeaf-4650-4d61-9b2d-c96b8cbdb1c5",
+          "name": "👀 Create New Observation",
+          "type": "Macro",
+          "command": true,
+          "macroId": "763f0c07-5259-403e-b624-cef524fd91f4"
+        },
+        {
+          "id": "2d74a103-d059-4a15-993c-ce2bd1c1b616",
+          "name": "📝 Capture New Moment",
+          "type": "Macro",
+          "command": true,
+          "macroId": "dfc5a244-bd38-4231-8dc1-704e9aa39f65"
+        }
+      ]
+    },
+    {
       "id": "26e59763-8257-450b-9afb-492b373d55e8",
       "name": "Work",
       "type": "Multi",
@@ -797,16 +826,16 @@
           "type": "Macro",
           "command": true,
           "macroId": "22e50f7c-c2b8-44c2-914c-c42d466dffb7"
-        },
-        {
-          "id": "2d74a103-d059-4a15-993c-ce2bd1c1b616",
-          "name": "📝 Capture New Moment",
-          "type": "Macro",
-          "command": true,
-          "macroId": "dfc5a244-bd38-4231-8dc1-704e9aa39f65"
         }
       ],
-      "collapsed": false
+      "collapsed": true
+    },
+    {
+      "id": "f48a5846-0fc6-46ac-ab92-a42b0bd90b92",
+      "name": "RunConvertToggles",
+      "type": "Macro",
+      "command": true,
+      "macroId": "66b792fe-1946-4360-a6b8-027ccb9581cb"
     }
   ],
   "macros": [
@@ -1228,12 +1257,12 @@
             "templatePath": "Hidden/My Templates/personal/Captured Moment Template.md",
             "fileNameFormat": {
               "enabled": true,
-              "format": "{{VALUE:Name}}"
+              "format": "Captured Moment"
             },
             "folder": {
               "enabled": true,
               "folders": [
-                "ME/1_Unprocessed Captures"
+                "ME/Unprocessed Captures"
               ],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,
@@ -1250,6 +1279,62 @@
             "fileExistsMode": "Increment the file name",
             "setFileExistsBehavior": false
           }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Create New Observation",
+      "id": "763f0c07-5259-403e-b624-cef524fd91f4",
+      "commands": [
+        {
+          "name": "New Observation Template Choice",
+          "type": "NestedChoice",
+          "id": "c30c3574-e6ad-46d2-80bc-979592cc10e6",
+          "choice": {
+            "id": "99a58973-907f-475f-a85f-70f5c174e899",
+            "name": "New Observation Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Hidden/My Templates/personal/Observation Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:Name}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "ME/Unprocessed Observations"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": true,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "RunConvertToggles",
+      "id": "66b792fe-1946-4360-a6b8-027ccb9581cb",
+      "commands": [
+        {
+          "name": "convertToggles",
+          "type": "UserScript",
+          "id": "90657c49-64f5-434e-8f57-ab6c3b3c8457",
+          "path": "Hidden/Scripts/convertToggles.js",
+          "settings": {}
         }
       ],
       "runOnStartup": false

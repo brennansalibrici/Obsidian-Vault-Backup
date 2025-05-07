@@ -6,17 +6,17 @@
   "accentColor": "",
   "showViewHeader": true,
   "enabledCssSnippets": [
+    "supercharged-links-color",
+    "heading-indent",
+    "cards",
     "dashboard",
     "dashboard-ReadLineLength",
-    "scrollbar",
-    "cards",
-    "supercharged-links-gen",
-    "supercharged-links-color",
     "hideCanvasHeader",
-    "MCL Gallery Cards",
-    "MCL Wide Views",
-    "MCL Multi Column",
     "hideEmbed4MetaBindButtons",
-    "heading-indent"
+    "MCL Gallery Cards",
+    "MCL Multi Column",
+    "MCL Wide Views",
+    "scrollbar",
+    "supercharged-links-gen"
   ]
 }

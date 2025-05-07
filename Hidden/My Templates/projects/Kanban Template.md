@@ -1,6 +1,6 @@
 ---
 kanban-plugin: basic
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:39
 tags:
   - kanbans
 ---

@@ -4,7 +4,7 @@ tags:
   - input/books
 Links:
   - <% tp.file.cursor(3) %>
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:40
 Author: 
 Finished: 
 Rating: 
@@ -13,7 +13,7 @@ Application:
 ---
 
 > [!INFO] Application Note
-> [[<%tp.file.title%> Application]]
+> [[Book Notes Template Application]]
 
 ## Notes
 

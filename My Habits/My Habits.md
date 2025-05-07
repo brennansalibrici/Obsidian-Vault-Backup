@@ -23,7 +23,7 @@ Can create a holistic dashboard to track all your habits in [[My Habits Board.ca
 
 Can edit the templates that create each habit by visiting:
 [[Task Tracker Addon]]
-[[Hidden/My Templates/addons/Metric Tracker Addon]]
+[[Metric Tracker Addon]]
 
 ## Timeframes
 ### Daily

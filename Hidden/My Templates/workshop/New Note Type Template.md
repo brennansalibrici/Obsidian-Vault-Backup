@@ -3,7 +3,7 @@ Status:
 tags:
   - '{{VALUE: Note Type Tag (ex. person)}}'
 Links: 
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:41
 ---
 > [!TASK] Setting up the template
 >

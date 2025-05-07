@@ -3,10 +3,10 @@ Status:
 tags:
   - meeting
 Links: 
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:40
 Attendees: 
 Summary: 
-MeetingDate: <% tp.date.now("YYYY-MM-DD") %>
+MeetingDate: 2025-05-05
 meetingStatus:
 ---
 ## Agenda Items
@@ -18,5 +18,5 @@ meetingStatus:
 
 ```dataview
 task
-where file.name = "<%tp.file.title%>"
+where file.name = "Meeting Template"
 ```

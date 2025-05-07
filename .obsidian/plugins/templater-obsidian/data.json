@@ -3,6 +3,10 @@
   "templates_folder": "Hidden/My Templates",
   "templates_pairs": [
     [
+      "convertToggles",
+      ""
+    ],
+    [
       "",
       ""
     ]
@@ -11,7 +15,7 @@
   "auto_jump_to_cursor": true,
   "enable_system_commands": true,
   "shell_path": "",
-  "user_scripts_folder": "",
+  "user_scripts_folder": "Hidden/Scripts",
   "enable_folder_templates": true,
   "folder_templates": [
     {

@@ -3,7 +3,7 @@ Status:
 tags:
   - input
 Links: 
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:40
 meta-bind: true
 Source:
   - "{{VALUE:Source URL}}"

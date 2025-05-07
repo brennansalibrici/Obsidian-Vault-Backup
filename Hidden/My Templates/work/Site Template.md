@@ -1,7 +1,7 @@
 ---
 tags:
   - work/site
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:41
 Site Status:
   - "{{VALUE:🟩,🟨,🟧,🟥,⬛️}}"
 fileClass: site

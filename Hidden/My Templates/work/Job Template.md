@@ -1,7 +1,7 @@
 ---
 tags:
   - work/job
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:42
 mapWithTag: true
 fileClass: job
 Job Name: "{{VALUE:Job Name}}"

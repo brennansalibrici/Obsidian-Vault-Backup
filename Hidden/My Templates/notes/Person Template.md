@@ -1,7 +1,7 @@
 ---
 Status: 
 tags: "{{VALUE: person, person/family, person/friend, person/work, person/other}}"
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:43
 mapWithTag: true
 fileClass: person
 KeepInTouch: false

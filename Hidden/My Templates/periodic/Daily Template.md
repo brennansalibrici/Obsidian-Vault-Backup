@@ -8,7 +8,30 @@ Headings:
 Parent: "[[2025-W17|2025-W17]]"
 MakeTweet: 
 Meditation: false
-hideMetadata: true
+hideMetadata: false
+Meditate: Meditate
+Mindset: Mindset
+BrushTeethDeodarant: BrushTeethDeodarant
+Devotions: Devotions
+Prayer: Prayer
+ContactedFamily: ContactedFamily
+StudiedRelationships: StudiedRelationships
+ReadStudy: ReadStudy
+Workout: Workout
+DailyPractice: DailyPractice
+QiGong: QiGong
+CompleteDailyReflection: CompleteDailyReflection
+ProcessFleetingNotes: ProcessFleetingNotes
+ProcessCapturedMoments: ProcessCapturedMoments
+ProcessTasks: ProcessTasks
+DailyTrackers: DailyTrackers
+RatingofDay: RatingofDay
+Energies: Energies
+Physical: Physical
+Mental: Mental
+Emotional:  Emotional
+Spiritual: Spiritual
+KungFu: KungFu
 ---
 
 [Enter Story Entry](#Accomplishments)
@@ -30,9 +53,9 @@ Remember [[2025-04-23#Improvements]]
 ---
 ### Routines
 #### Morning
-- `INPUT[toggle:Teeth_Deodorant]`Brush Test & Deodorant
+- `INPUT[toggle:BrushTeethDeodarant]`Brush Teeth & Deodorant
 - `INPUT[toggle:Mindset]`[Mindset](#Mindset)
-- `INPUT[toggle:Meditation]` Meditate
+- `INPUT[toggle:Meditate]` Meditate
 - `INPUT[toggle:Devotions]` Devotions
 - `INPUT[toggle:Prayer]` Prayer
 
@@ -41,19 +64,19 @@ Remember [[2025-04-23#Improvements]]
 #### Trading
 
 #### During The Day
- - `INPUT[toggle:Contact_Family]` Contacted Family
- - `INPUT[toggle:Study_Relationship]` Studied Relationships
- - `INPUT[toggle:Read_Study]`Read/Study
- - `INPUT[toggle:WorkOut]`Workout
+ - `INPUT[toggle:ContactedFamily]` Contacted Family
+ - `INPUT[toggle:StudiedRelationships]` Studied Relationships
+ - `INPUT[toggle:ReadStudy]`Read/Study
+ - `INPUT[toggle:Workout]`Workout
  - `INPUT[toggle:DailyPractice]`Daily Practice
  - `INPUT[toggle:KungFu]`KungFu
  - `INPUT[toggle:QiGong]`QiGong
 
 #### Evening
-- `INPUT[toggle:Daily_Reflection]` Complete Daily [Reflection](#Reflection)
-- `INPUT[toggle:FleetingNotes]` Process through [[My FleetingNotes#From Daily Template|My Fleeting Notes]]
-- `INPUT[toggle:CapturedMoments]`Process through [[📝 Captured Moments#From Daily Template|📝 Captured Moments]]
-- `INPUT[toggle:MyTasks]`Process through [[My Tasks#From Daily Template|My Tasks]]
+- `INPUT[toggle:CompleteDailyReflection]` Complete Daily [Reflection](#Reflection)
+- `INPUT[toggle:ProcessFleetingNotes]` Process through [[My FleetingNotes#From Daily Template|My Fleeting Notes]]
+- `INPUT[toggle:ProcessCapturedMoments]`Process through [[📝 Captured Moments#From Daily Template|📝 Captured Moments]]
+- `INPUT[toggle:ProcessTasks]`Process through [[My Tasks#From Daily Template|My Tasks]]
 - `INPUT[toggle:DailyTrackers]` Daily [[#Trackers|Trackers]]
 
 ---
@@ -116,7 +139,7 @@ sort by priority
 ### Rating
 
 ```meta-bind
-INPUT[progressBar(minValue(1), maxValue(10)):Rating]
+INPUT[progressBar(minValue(1), maxValue(10)):RatingofDay]
 ```
 
 ### Summary
@@ -221,11 +244,11 @@ SORT Created desc
 - [ ] Check off any habits from [[#Reminders]] or via the "My Habit Tracker" note for tracking purposes
 
 #### Energies
-
-> Rate from 1-10
+```meta-bind
+INPUT[progressBar(minValue(1), maxValue(10)):Energies]
+```
 
 **What did I do to re-energize? How did it go?**
-
 - 
 
 ##### Physical

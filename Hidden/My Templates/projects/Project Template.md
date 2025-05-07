@@ -1,7 +1,7 @@
 ---
 Status: 
 tags: project
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:44
 Area: 
 Goal: 
 Deadline: 

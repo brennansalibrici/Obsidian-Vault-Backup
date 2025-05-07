@@ -1,11 +1,11 @@
 ---
 tags:
   - "reviews/monthly"
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
-Parent: "[[My Calendar/My Quarterly Notes/<% moment(tp.file.title,'YYYY-[M]MM').format('YYYY-[Q]Q') %>|<% moment(tp.file.title,'YYYY-[M]MM').format('YYYY-[Q]Q') %>]]"
+Created: 2025-05-05T12:07:44
+Parent: "[[My Calendar/My Quarterly Notes/Invalid date|Invalid date]]"
 ---
 
-[[My Calendar/My Monthly Notes/<% moment(tp.file.title, "YYYY-[M]MM").add(-1, 'months').format("YYYY-[M]MM") %>|<% moment(tp.file.title, "YYYY-[M]MM").add(-1, 'months').format("YYYY-[M]MM") %>]] ⬅️ [[My Calendar/My Quarterly Notes/<% moment(tp.file.title,'YYYY-[M]MM').format('YYYY-[Q]Q') %>|<% moment(tp.file.title,'YYYY-[M]MM').format('YYYY-[Q]Q') %>]] ➡️ [[My Calendar/My Monthly Notes/<% moment(tp.file.title, "YYYY-[M]MM").add(1, 'months').format("YYYY-[M]MM") %>|<% moment(tp.file.title, "YYYY-[M]MM").add(1, 'months').format("YYYY-[M]MM") %>]]
+[[My Calendar/My Monthly Notes/Invalid date|Invalid date]] ⬅️ [[My Calendar/My Quarterly Notes/Invalid date|Invalid date]] ➡️ [[My Calendar/My Monthly Notes/Invalid date|Invalid date]]
 
 > “Your decisions about allocating your personal time, energy, and talent ultimately shape your life’s strategy.”
 
@@ -17,7 +17,7 @@ All the unfinished tasks from last review:
 
 ```dataview
 task
-where file.name = "<% moment(tp.file.title, "YYYY-[M]MM").add(-1, 'months').format("YYYY-[M]MM") %>" AND !completed
+where file.name = "Invalid date" AND !completed
 ```
 
 ### Goals
@@ -63,8 +63,8 @@ return View
 searchType: frontmatter
 searchTarget: Physical, Mental, Emotional, Spiritual
 folder: /My Calendar/My Daily Notes
-startDate: <% moment(tp.file.title,'YYYY-[M]MM').startOf('month').format('YYYY-MM-DD') %>
-endDate: <% moment(tp.file.title,'YYYY-[M]MM').endOf('month').format('YYYY-MM-DD') %>
+startDate: Invalid date
+endDate: Invalid date
 summary:
     template: "AVERAGES\nPhysical: {{average(dataset(0))}}\nMental: {{average(dataset(1))}}\nEmotional: {{average(dataset(2))}}\nSpiritual: {{average(dataset(3))}}\n"
 ```
@@ -83,7 +83,7 @@ month:
     selectedRingColor: steelblue
     circleColorByValue: true
     showSelectedValue: true
-    initMonth: <% moment(tp.file.title, "YYYY-[M]MM").format("YYYY-MM") %>
+    initMonth: Invalid date
 ```
 
 ##### Reflection
@@ -104,15 +104,15 @@ month:
     todayRingColor: white
     selectedRingColor: steelblue
     showSelectedValue: false
-    initMonth: <% moment(tp.file.title, "YYYY-[M]MM").format("YYYY-MM") %>
+    initMonth: Invalid date
 ```
 
 ```tracker
 searchType: task.done, task.all
 searchTarget: Meditate, Meditate
 folder: /My Calendar/My Daily Notes
-startDate: <% moment(tp.file.title,'YYYY-[M]MM').startOf('month').format('YYYY-MM-DD') %>
-endDate: <% moment(tp.file.title,'YYYY-[M]MM').endOf('month').format('YYYY-MM-DD') %>
+startDate: Invalid date
+endDate: Invalid date
 summary:
     template: "Meditate - {{sum(dataset(0))/sum(dataset(1))*100}}% - {{sum(dataset(0))}}/{{sum(dataset(1))}} Days Completed"
 ```
@@ -140,4 +140,48 @@ Are you happy or surprised with the results? What can you consciously work on fo
 
 ## Reflection
 
-<%tp.file.include("[[Reflection Addon]]") %>
+> [!TODO] Make your reflection actionable!
+> Whenever something insightful comes from your reflection that you want to consider for the next period's planning, turn it into a checkbox! It will automatically be added to your `Action Items` in your next review 🤩
+
+### Summary
+`INPUT[textArea():Summary]`
+### Biggest Personal Achievement
+`INPUT[textArea():Personal]`
+### Biggest Career Achievement
+`INPUT[textArea():Career]`
+### Productivity
+**Did you complete what you set out to do in the previous review? Are you content with the journey and the outcome?**
+- 
+
+**What was the completion rate of my goals and projects? Was the workload manageable or was it overwhelming?**
+- 
+### My Wins
+I managed to...
+- 
+### Gratitude
+Some moments and things I'm grateful for are:
+- 
+### Obstacles
+I struggled with...
+- 
+
+Next time I'll overcome it by...
+- 
+### My Learnings
+**The main topics I learned about were:**
+- 
+
+**What is one valuable lesson?**
+- 
+
+**What can I improve on in the future timeframe?
+- 
+
+**What should I start doing?**
+- 
+
+**What should I stop doing?**
+- 
+
+**What should I continue doing?**
+- 

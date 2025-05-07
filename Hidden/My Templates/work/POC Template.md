@@ -1,7 +1,7 @@
 ---
 tags:
   - persons/poc
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:41
 mapWithTag: true
 fileClass: poc
 Full Name: "{{VALUE:Full Name}}"

@@ -39,5 +39,6 @@
   "buttons",
   "quickadd",
   "homepage",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-shellcommands"
 ]

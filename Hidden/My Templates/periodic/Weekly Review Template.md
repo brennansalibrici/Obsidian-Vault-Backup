@@ -1,17 +1,17 @@
 ---
 tags:
   - reviews/weekly
-Created: <% tp.date.now("MM-DD-YYYYTHH:mm:ss") %>
+Created: 05-05-2025T12:07:45
 Summary: 
 Personal: 
 Career: 
 Total: 0
-Parent: "[[My Calendar/My Monthly Notes/<% moment(tp.file.title,'YYYY-[W]WW').format('YYYY-[M]MM') %>|<% moment(tp.file.title,'YYYY-[W]WW').format('YYYY-[M]MM') %>]]"
+Parent: "[[My Calendar/My Monthly Notes/Invalid date|Invalid date]]"
 cssclasses: 
 Previous: 
 Next:
 ---
-[[My Calendar/My Weekly Notes/<% moment(tp.file.title, "YYYY-[W]WW").add(-1, 'weeks').format("YYYY-[W]WW") %>|<% moment(tp.file.title, "YYYY-[W]WW").add(-1, 'weeks').format("YYYY-[W]WW") %>]] ⬅️ [[My Calendar/My Monthly Notes/<% moment(tp.file.title,'YYYY-[W]WW').format('YYYY-[M]MM') %>|<% moment(tp.file.title,'YYYY-[W]WW').format('YYYY-[M]MM') %>]] ➡️ [[My Calendar/My Weekly Notes/<% moment(tp.file.title, "YYYY-[W]WW").add(1, 'weeks').format("YYYY-[W]WW") %>|<% moment(tp.file.title, "YYYY-[W]WW").add(1, 'weeks').format("YYYY-[W]WW") %>]]
+[[My Calendar/My Weekly Notes/Invalid date|Invalid date]] ⬅️ [[My Calendar/My Monthly Notes/Invalid date|Invalid date]] ➡️ [[My Calendar/My Weekly Notes/Invalid date|Invalid date]]
 
 > [!TIP]+ Follow my weekly review workflow
 > Visit https://publish.obsidian.md/johnmavrick/My+weekly+review+workflow for a guide on how to use this template
@@ -21,7 +21,7 @@ Next:
 All the unfinished tasks/reminders from last review:
 ```dataview
 task
-where file.name = "<% moment(tp.file.title, "YYYY-[W]WW").add(-1, 'weeks').format("YYYY-[W]WW") %>" AND !completed
+where file.name = "Invalid date" AND !completed
 ```
 ### Projects
 - [ ] Look at `My Vision Board` to remember what your vision is #hidden
@@ -31,8 +31,8 @@ where file.name = "<% moment(tp.file.title, "YYYY-[W]WW").add(-1, 'weeks').forma
 - [ ] Brainstorm the tasks/steps needed to achieve that plan under the `Tasks` header or your task management app #hidden 
 ```dataview
 TABLE
-P-<% moment(tp.file.title, "YYYY-[W]WW").format("[W]WW") %> as Plan,
-R-<% moment(tp.file.title, "YYYY-[W]WW").format("[W]WW") %> as Reflection,
+P-Invalid date as Plan,
+R-Invalid date as Reflection,
 Status, Deadline, Area
 FROM [[]] AND (#project or #output) AND !"Hidden"
 SORT deadline asc
@@ -53,7 +53,7 @@ return View
 ```dataview
 TABLE obstacle as Obstacles
 from ""
-WHERE date(<% moment(tp.file.title,'YYYY-[W]WW').day(1).format("MM-DD-YYYY") %>) < Created AND Created < date(<% moment(tp.file.title,'YYYY-[W]WW').add(1,'weeks').day(0).format("YYYY-MM-DD") %>) and obstacle
+WHERE date(Invalid date) < Created AND Created < date(Invalid date) and obstacle
 SORT file.name asc
 ```
 ### New Notes
@@ -70,7 +70,7 @@ return <NotesCreatedInTimeframe/>;
 ```
 ### Completed Tasks
 ```tasks
-due in <% moment(tp.file.title,'YYYY-[W]WW').day(1).format("YYYY-MM-DD") %> to <% moment(tp.file.title,'YYYY-[W]WW').add(1, 'weeks').day(0).format("YYYY-MM-DD") %>
+due in Invalid date to Invalid date
 group by path
 sort by due
 ```
@@ -80,8 +80,8 @@ sort by due
 searchType: frontmatter
 searchTarget: Physical, Mental, Emotional, Spiritual
 folder: /My Calendar/My Daily Notes
-startDate: <% moment(tp.file.title,'YYYY-[W]WW').day(1).format("YYYY-MM-DD") %>
-endDate: <% moment(tp.file.title,'YYYY-[W]WW').add(1,'weeks').day(0).format("YYYY-MM-DD") %>
+startDate: Invalid date
+endDate: Invalid date
 line:
     title: Energy
     yMax: 10
@@ -92,8 +92,8 @@ line:
 searchType: frontmatter
 searchTarget: Physical, Mental, Emotional, Spiritual
 folder: /My Calendar/My Daily Notes
-startDate: <% moment(tp.file.title,'YYYY-[W]WW').day(1).format("YYYY-MM-DD") %>
-endDate: <% moment(tp.file.title,'YYYY-[W]WW').add(1,'weeks').day(0).format("YYYY-MM-DD") %>
+startDate: Invalid date
+endDate: Invalid date
 summary:
     template: "AVERAGES\nPhysical: {{average(dataset(0))}}\nMental: {{average(dataset(1))}}\nEmotional: {{average(dataset(2))}}\nSpiritual: {{average(dataset(3))}}\n"
 ```

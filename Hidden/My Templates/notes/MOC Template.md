@@ -2,7 +2,7 @@
 Status: 
 tags: "moc"
 Links: 
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:42
 ---
 ## Notes
 

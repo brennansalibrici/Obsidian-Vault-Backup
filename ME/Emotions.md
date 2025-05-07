@@ -660,6 +660,10 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: High Energy Unpleasant
 - Definition:: unease and worry about something that might happen
 
+### Cautious
+- Energy-Mood:: Low Energy Unpleasant
+- Definition:: feeling wary and hesitant, trying to avoid danger, risk, or emotional harm
+
 🔙 [[#Table of Contents]]
 ## Vulnerable
 - Energy-Mood:: Low Energy Unpleasant
@@ -1525,6 +1529,10 @@ Created: 2025-04-29T18:50:36
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling uncertain or unconvinced about something
 
+### Disoriented
+- Energy-Mood:: High Energy Unpleasant
+- Definition:: feeling mentally scrambled or lost, unsure of where you are or what’s going on
+
 ## Tired
 - Energy-Mood:: Low Energy Unpleasant
 - Definition:: feeling drained, weary, or lacking the energy to keep going
@@ -2132,6 +2140,15 @@ Created: 2025-04-29T18:50:36
 ### Compassion
 - Energy-Mood:: Low Energy Pleasant
 - A deep emotional awareness of another’s suffering paired with a desire to alleviate it.
+
+### Attuned
+- **Energy-Mood::** Low Energy Pleasant
+- **Definition::** feeling deeply in sync with someone or something, aware of subtle needs or emotions
+
+### Love
+- Energy-Mood:: Low Energy Pleasant
+- Definition:: feeling deep care, connection, and affection toward someone or something that matters deeply to you
+
 ## Cared-For
 - Energy-Mood:: Low Energy Pleasant
 - Definition:: feeling seen, valued, and supported by others
@@ -2623,6 +2640,10 @@ Created: 2025-04-29T18:50:36
 ### Anchored
 - Energy-Mood:: Low Energy Pleasant
 - Definition:: a grounded steady feeling that brings calm and clarity
+
+### Grounded
+- Energy-Mood:: Low Energy Pleasant
+- Definition:: feeling steady, present, and emotionally anchored in the moment
 
 ## Smart
 - Energy-Mood:: High Energy Pleasant

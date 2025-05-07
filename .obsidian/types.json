@@ -90,6 +90,8 @@
     "Priority": "multitext",
     "Date": "datetime",
     "Daily_Reflection": "text",
-    "Feeling(s)": "multitext"
+    "Feeling(s)": "multitext",
+    "Switchgear": "multitext",
+    "Importance": "multitext"
   }
 }

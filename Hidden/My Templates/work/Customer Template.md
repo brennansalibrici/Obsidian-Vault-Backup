@@ -3,7 +3,7 @@ Status:
   - "{{VALUE: 🟩,🟨,🟧,🟥,⬛️}}"
 tags:
   - work/customer
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:39
 mapWithTag: true
 fileClass: customer
 Name: "{{VALUE:Name}}"

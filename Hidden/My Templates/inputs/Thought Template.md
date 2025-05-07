@@ -2,7 +2,7 @@
 Status: 
 tags: "{{VALUE: thought,thought/memories,thought/reflections,thought/musings}}"
 Links: 
-Created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+Created: 2025-05-05T12:07:40
 ---
 ## Context
 %% Why am I making a note on this? What happened? %%
