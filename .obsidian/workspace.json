@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2358548736c45f19",
+        "id": "e9e9d82b83cba546",
         "type": "tabs",
         "children": [
           {
-            "id": "1af9b02882f058b5",
+            "id": "2ddd094a69be020f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "My Calendar/My Daily Notes/2025-05-02.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2025-05-02"
+              "title": "New tab"
             }
           }
         ]
@@ -306,13 +302,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "My Calendar/My Daily Notes/2025-05-02.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-05-02"
+              "title": "Outline"
             }
           },
           {
@@ -383,31 +378,38 @@
       "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
-  "active": "1af9b02882f058b5",
+  "active": "2ddd094a69be020f",
   "lastOpenFiles": [
-    "My Calendar/My Daily Notes/2025-04-26.md",
+    "Hidden/My Templates/periodic/Daily Template.md",
+    "My Calendar/My Calendar.md",
+    "Hidden/My Archives/My Archives.md",
     "My Calendar/My Daily Notes/2025-05-06.md",
-    "Hidden/Scripts/convertToggles.js.~tmp",
-    "My Calendar/My Daily Notes/2025-05-02.md",
-    "My Calendar/My Daily Notes/2025-05-02 1.md",
-    "Hidden/fileClass/reviews/daily.md",
+    "My Calendar/My Daily Notes/2025-05-05.md",
+    "My Calendar/My Daily Notes/2025-05-07.md",
+    "My Areas/My Obsidian.md",
+    "My Areas/My Areas.md",
+    "Hidden/My Templates/personal/Captured Moment Template.md",
+    "Hidden/My Templates/personal/Observation Template.md",
+    "Hidden/fileClass/personal/capturedMoment.md",
+    "ME/📝 Captured Moments/Core Wounds.md",
+    "My Areas/Work/⚡Electric Equipment/Switchgear/Switchgear.md",
+    "My Areas/Work/📍 Sites/T0559 Indianapolis, IN.md",
+    "My Areas/Work/📍 Sites/T0587 Galesburg, MI.md",
+    "My Areas/Work/📍 Sites/📍 Sites.md",
     "My Calendar/My Daily Notes/2025-05-03.md",
-    "My Calendar/My Daily Notes/2025-04-14.md",
-    "My Calendar/My Daily Notes/2025-05-04.md",
-    "ME/👀 Observations/Billy.md",
+    "My Calendar/My Daily Notes/2025-03-25.md",
+    "My Calendar/My Daily Notes/2024-04-24.md",
+    "My Calendar/My Daily Notes/2024-04-19.md",
+    "Hidden/Scripts/convertOldDailyNotes.js",
+    "My Calendar/My Daily Notes/2025-05-01.md",
+    "My Calendar/My Daily Notes/2025-04-30.md",
+    "Hidden/Scripts/convertToggles.js.~tmp",
+    "My Calendar/My Daily Notes/2025-04-25.md",
+    "My Calendar/My Daily Notes/2025-05-02.md",
+    "My Calendar/My Daily Notes/2025-04-26.md",
+    "My Calendar/My Daily Notes/2025-05-02 1.md",
     "My Files/My Attachments/FA Testing .png",
     "My Files/My Attachments/FA Test 2.png",
-    "FleetingNotesApp/Tick spray  Boat title   How long do u h.md",
-    "FleetingNotesApp/FA Testing .md",
-    "FleetingNotesApp/FA Test 2.md",
-    "FleetingNotesApp/Questions.md",
-    "FleetingNotesApp/State Parks Pass.md",
-    "FleetingNotesApp/Garage Fridge.md",
-    "Scratch Pad.md",
-    "My Projects/My Projects.md",
-    "Hidden/My Templates/TestTemplate1.md",
-    "Hidden/My Templates/TestTemplate.md",
-    "Hidden/My Templates/RunConvertToggles.md",
     "Hidden/My Templates/Templater",
     "Hidden/ShellScripts/convertToggles.js",
     "Hidden/ShellScripts/convertToggles.js.~tmp",
@@ -416,14 +418,7 @@
     "Hidden/ShellScripts",
     "Hidden/New folder",
     "Hidden/Scripts/metricTracker.js",
-    "ME/Unprocessed Captures/Captured Moment.md",
-    "ME/1_Unprocessed Captures/When U Get Home.md",
-    "ME/1_Unprocessed Captures",
-    "Hidden/My Templates/periodic/Daily Template.md",
     "My Files/My Attachments/Pasted image 20250503104821.png",
-    "FleetingNotesApp/Dan.md",
-    "file-20250428093441829812.pdf.md",
-    "FleetingNotesApp/Storm Survival.md",
     "My Files/My Attachments/Test.png",
     "ME/Obsidian-Vault-Backup_ME_Emotions.md at main · brennansalibrici_Obsidian-Vault-Backup_files/gravatar-user-420.png",
     "My Dashboards/Captured Moments Dashboard.canvas",

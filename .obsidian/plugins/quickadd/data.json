@@ -764,18 +764,18 @@
       "command": false,
       "choices": [
         {
+          "id": "a9fd4745-5481-4e6c-b4bc-6fa2412e93d6",
+          "name": "Clean Old Daily Notes",
+          "type": "Macro",
+          "command": true,
+          "macroId": "3af867f5-52ae-4efd-a148-a773da743dec"
+        },
+        {
           "id": "f48a5846-0fc6-46ac-ab92-a42b0bd90b92",
           "name": "RunConvertToggles",
           "type": "Macro",
           "command": true,
           "macroId": "66b792fe-1946-4360-a6b8-027ccb9581cb"
-        },
-        {
-          "id": "dcf9da9f-ead6-4c36-b0c4-3db61d19bf9c",
-          "name": "Git_Save2Cloud",
-          "type": "Macro",
-          "command": true,
-          "macroId": "591deb6d-8352-4de6-a741-867bff249af5"
         }
       ],
       "collapsed": false
@@ -1349,20 +1349,15 @@
       "runOnStartup": false
     },
     {
-      "name": "Git_CommitAndPush",
-      "id": "591deb6d-8352-4de6-a741-867bff249af5",
+      "name": "ConvertOldDailyNotes",
+      "id": "3af867f5-52ae-4efd-a148-a773da743dec",
       "commands": [
         {
-          "name": "Git: Commit all changes",
-          "type": "Obsidian",
-          "id": "17e7a6bd-1ee1-4b4f-93b7-4db6cd881302",
-          "commandId": "obsidian-git:commit"
-        },
-        {
-          "name": "Git: Push",
-          "type": "Obsidian",
-          "id": "e642a852-b68f-4cf6-81e2-7d4c0afe4f8d",
-          "commandId": "obsidian-git:push2"
+          "name": "convertOldDailyNotes",
+          "type": "UserScript",
+          "id": "d8929da0-86b1-437d-952d-6565f812d8c8",
+          "path": "Hidden/Scripts/convertOldDailyNotes.js",
+          "settings": {}
         }
       ],
       "runOnStartup": false

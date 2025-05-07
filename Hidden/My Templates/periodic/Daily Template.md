@@ -8,7 +8,7 @@ Headings:
 Parent: "[[2025-W17|2025-W17]]"
 MakeTweet: 
 Meditation: false
-hideMetadata: false
+hideMetadata: true
 Meditate: Meditate
 Mindset: Mindset
 BrushTeethDeodarant: BrushTeethDeodarant
@@ -32,6 +32,7 @@ Mental: Mental
 Emotional:  Emotional
 Spiritual: Spiritual
 KungFu: KungFu
+Archived: false
 ---
 
 [Enter Story Entry](#Accomplishments)

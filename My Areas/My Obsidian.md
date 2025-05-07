@@ -7,7 +7,7 @@ Created: 2025-03-20T20:16:04
 areaGroup: Obsidian
 Group: Misc
 ---
-## Tasks
+- [ ] #task Reset ChatGPT memory to udpate both an emotion and a Caputred Moment in the same memory location. ➕ 2025-05-07
 
 ```meta-bind-button
 label: Add New Task
@@ -20,7 +20,10 @@ actions:
 ```
 
 %% Tasks Start %%
-
+- [ ] #task Fix tasks button? ➕ 2025-05-07
+- [ ] #task Setup Weekly recurring CleanDailyNotes task ➕ 2025-05-07
+- [ ] #task Import tasks from ToDoist ➕ 2025-05-07
+- [ ] #task Create 'Home' Page Canvas that we can navigate anywhere from ➕ 2025-05-07
 ## ToDoist Tasks
 ![[ToDoist Add Task Button Addon#^ToDoist-Add-Task-Button]]
 ```todoist

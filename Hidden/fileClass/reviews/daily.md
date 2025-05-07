@@ -9,6 +9,7 @@ extends:
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - xzTMQ2
   - ce8YDq
   - W9pgYh
   - QSTsNJ
@@ -32,7 +33,7 @@ fieldsOrder:
   - 1Ittak
   - Nzymz1
   - HWmcCG
-version: "2.41"
+version: "2.42"
 fields:
   - name: Meditate
     type: Boolean
@@ -149,5 +150,10 @@ fields:
     options: {}
     path: ""
     id: ce8YDq
+  - name: Archived
+    type: Boolean
+    options: {}
+    path: ""
+    id: xzTMQ2
 icon: package
 ---
