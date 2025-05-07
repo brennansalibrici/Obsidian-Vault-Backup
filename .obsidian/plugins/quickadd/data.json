@@ -762,7 +762,23 @@
       "name": "🛠️ Utilities",
       "type": "Multi",
       "command": false,
-      "choices": []
+      "choices": [
+        {
+          "id": "f48a5846-0fc6-46ac-ab92-a42b0bd90b92",
+          "name": "RunConvertToggles",
+          "type": "Macro",
+          "command": true,
+          "macroId": "66b792fe-1946-4360-a6b8-027ccb9581cb"
+        },
+        {
+          "id": "dcf9da9f-ead6-4c36-b0c4-3db61d19bf9c",
+          "name": "Git_Save2Cloud",
+          "type": "Macro",
+          "command": true,
+          "macroId": "591deb6d-8352-4de6-a741-867bff249af5"
+        }
+      ],
+      "collapsed": false
     },
     {
       "id": "0c579871-582e-4f1c-af34-02bf3222f54c",
@@ -829,13 +845,6 @@
         }
       ],
       "collapsed": true
-    },
-    {
-      "id": "f48a5846-0fc6-46ac-ab92-a42b0bd90b92",
-      "name": "RunConvertToggles",
-      "type": "Macro",
-      "command": true,
-      "macroId": "66b792fe-1946-4360-a6b8-027ccb9581cb"
     }
   ],
   "macros": [
@@ -1335,6 +1344,25 @@
           "id": "90657c49-64f5-434e-8f57-ab6c3b3c8457",
           "path": "Hidden/Scripts/convertToggles.js",
           "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Git_CommitAndPush",
+      "id": "591deb6d-8352-4de6-a741-867bff249af5",
+      "commands": [
+        {
+          "name": "Git: Commit all changes",
+          "type": "Obsidian",
+          "id": "17e7a6bd-1ee1-4b4f-93b7-4db6cd881302",
+          "commandId": "obsidian-git:commit"
+        },
+        {
+          "name": "Git: Push",
+          "type": "Obsidian",
+          "id": "e642a852-b68f-4cf6-81e2-7d4c0afe4f8d",
+          "commandId": "obsidian-git:push2"
         }
       ],
       "runOnStartup": false

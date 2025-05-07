@@ -244,5 +244,14 @@
       ],
       "key": "E"
     }
+  ],
+  "quickadd:choice:00247826-23b3-4ba5-9990-ddccd02b8641": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "G"
+    }
   ]
 }
