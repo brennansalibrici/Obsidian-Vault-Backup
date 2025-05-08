@@ -1,9 +1,6 @@
 ---
-tags:
-  - work/electricalequipment/equipment/switchgear
 Created: 2025-05-05T12:07:43
 fileClass: switchgear
-mapWithTag: true
 Equipment Name: "{{VALUE:Name}}"
 Site: "{{VALUE:Site}}"
 Switchgear Type: "{{VALUE:Main Breaker,Bolted Pressure Switch,Main Breaker_Remote Distribution,Main_Tie_Main}}"

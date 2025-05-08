@@ -7,7 +7,8 @@ Total: 0
 Parent: "[[My Calendar/My Monthly Notes/Invalid date|Invalid date]]"
 cssclasses: 
 Previous: 
-Next:
+Next: 
+fileClass: weeklyNote
 ---
 [[My Calendar/My Weekly Notes/Invalid date|Invalid date]] ⬅️ [[My Calendar/My Monthly Notes/Invalid date|Invalid date]] ➡️ [[My Calendar/My Weekly Notes/Invalid date|Invalid date]]
 

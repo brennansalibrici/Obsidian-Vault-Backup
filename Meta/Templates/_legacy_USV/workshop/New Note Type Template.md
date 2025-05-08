@@ -1,7 +1,5 @@
 ---
 Status: 
-tags:
-  - '{{VALUE: Note Type Tag (ex. person)}}'
 Links: 
 Created: 2025-05-05T12:07:41
 ---

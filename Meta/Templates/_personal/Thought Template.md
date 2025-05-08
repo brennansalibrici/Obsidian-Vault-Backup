@@ -1,8 +1,8 @@
 ---
 Status: 
-tags: "{{VALUE: thought,thought/memories,thought/reflections,thought/musings}}"
 Links: 
 Created: 2025-05-05T12:07:40
+fileClass: thought
 ---
 ## Context
 %% Why am I making a note on this? What happened? %%

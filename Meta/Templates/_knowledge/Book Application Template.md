@@ -1,7 +1,7 @@
 ---
-Status:
-tags: "output/bookapplications"
+Status: 
 Created: 2025-05-05T12:07:43
+fileClass: bookapplications
 ---
 ## Top 3 Quotes
 

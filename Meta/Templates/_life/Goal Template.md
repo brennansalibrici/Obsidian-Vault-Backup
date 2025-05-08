@@ -1,7 +1,5 @@
 ---
 Status: 
-tags:
-  - goal
 Created: 2025-05-05T12:07:44
 Description: 
 Why: 
@@ -12,6 +10,7 @@ Order:
 cssclasses:
   - cards
   - cards-cols-2
+fileClass: goal
 ---
 
 ## Related

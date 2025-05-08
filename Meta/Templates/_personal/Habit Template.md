@@ -1,7 +1,5 @@
 ---
 Status: 
-tags:
-  - habitNote
 Created: 2025-05-05T12:07:40
 Goal: 
 Area: 
@@ -12,7 +10,8 @@ HabitType:
 HabitUnit: 
 HabitLabel: 
 HabitEmoji: 
-HabitDailyGoal:
+HabitDailyGoal: 
+fileClass: habit
 ---
 
 > [!TIP] Workflow

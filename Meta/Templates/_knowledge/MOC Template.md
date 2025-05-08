@@ -1,8 +1,8 @@
 ---
 Status: 
-tags: "moc"
 Links: 
 Created: 2025-05-05T12:07:42
+fileClass: moc
 ---
 ## Notes
 

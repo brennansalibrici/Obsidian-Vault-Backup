@@ -1,7 +1,5 @@
 ---
 Status: 
-tags:
-  - input
 Links: 
 Created: 2025-05-05T12:07:40
 meta-bind: true
@@ -10,7 +8,8 @@ Source:
 Author: 
 Collection: 
 Finished: 
-Rating:
+Rating: 
+fileClass: input
 ---
 ## Summary
 #inputCollection/series 

@@ -1,6 +1,5 @@
 ---
 Links:
-tags: "view/note"
 ---
 
 > [!TASK] To Do's

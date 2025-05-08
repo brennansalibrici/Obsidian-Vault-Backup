@@ -12,7 +12,8 @@ GrowthGoal: "📈 "
 RomanceGoal: "💕 "
 FamilyGoal: "👨‍👩‍👧‍👦 "
 FriendsGoal: "🤝 "
-Total:
+Total: 
+fileClass: yearlyNote
 ---
 
 [[My Calendar/My Yearly Notes/Invalid date|Invalid date]] ⬅️ This Year ➡️ [[My Calendar/My Yearly Notes/Invalid date|Invalid date]]

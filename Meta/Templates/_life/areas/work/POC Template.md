@@ -1,8 +1,5 @@
 ---
-tags:
-  - persons/poc
 Created: 2025-05-05T12:07:41
-mapWithTag: true
 fileClass: poc
 Full Name: "{{VALUE:Full Name}}"
 Company: "{{VALUE:Company}}"

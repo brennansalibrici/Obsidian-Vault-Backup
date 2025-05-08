@@ -1,6 +1,7 @@
 ---
 Created: 2025-05-05T12:07:44
 Parent: "[[My Calendar/My Quarterly Notes/Invalid date|Invalid date]]"
+fileClass: monthlyNote
 ---
 
 [[My Calendar/My Monthly Notes/Invalid date|Invalid date]] ⬅️ [[My Calendar/My Quarterly Notes/Invalid date|Invalid date]] ➡️ [[My Calendar/My Monthly Notes/Invalid date|Invalid date]]

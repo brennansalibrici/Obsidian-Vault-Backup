@@ -1,13 +1,12 @@
 ---
 Status: 
-tags:
-  - inputCollection
 Links: 
 Created: 2025-05-05T12:07:43
 Author: 
 Finished: 
 Rating: 
-Source: []
+Source: 
+fileClass: inputCollection
 ---
 ## All Inputs
 ```dataview

@@ -1,10 +1,10 @@
 ---
-tags: [okr]
 Created: 2025-05-05T12:07:42
 Project: 
 KPIs: 
 RecentDays: 7
-CalculationType: default
+CalculationType:
+  - default
 TimeframeStart: 
 TimeframeEnd: 
 TimeframeStyle: recent

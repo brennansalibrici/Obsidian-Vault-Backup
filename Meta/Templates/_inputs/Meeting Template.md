@@ -1,13 +1,12 @@
 ---
 Status: 
-tags:
-  - meeting
 Links: 
 Created: 2025-05-05T12:07:40
 Attendees: 
 Summary: 
 MeetingDate: 2025-05-05
-meetingStatus:
+meetingStatus: 
+fileClass: meeting
 ---
 ## Agenda Items
 

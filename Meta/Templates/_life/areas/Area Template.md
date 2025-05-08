@@ -1,10 +1,9 @@
 ---
-tags:
-  - area
 Links: 
 Created: 2025-05-05T12:07:43
 areaGroup: 
-Group:
+Group: 
+fileClass: area
 ---
 ## Tasks
 

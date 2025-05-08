@@ -1,11 +1,8 @@
 ---
-tags:
-  - work/site
 Created: 2025-05-05T12:07:41
 Site Status:
   - "{{VALUE:🟩,🟨,🟧,🟥,⬛️}}"
 fileClass: site
-mapWithTag: true
 Customer: "{{VALUE:Customer}}"
 Site Address:
   StreetAddress: "{{VALUE:StreetAddress}}"

@@ -1,9 +1,8 @@
 ---
 Status: 
-tags:
-  - output/brainstorm
 Links: 
 Created: 2025-05-05T12:07:43
+fileClass: brainstorm
 ---
 
 > Get the right kind of music going, it's time to focus 😎
