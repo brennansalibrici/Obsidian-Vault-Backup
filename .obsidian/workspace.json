@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e9e9d82b83cba546",
+        "id": "3bea460558dce185",
         "type": "tabs",
         "children": [
           {
-            "id": "2ddd094a69be020f",
+            "id": "f6c680f1a5dd2085",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Personal/ME/Captured Moment.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Captured Moment"
             }
           }
         ]
@@ -29,7 +33,7 @@
       {
         "id": "93f00f080efb3236",
         "type": "tabs",
-        "dimension": 18.545163868904876,
+        "dimension": 19.21229586935639,
         "children": [
           {
             "id": "44331de537c86284",
@@ -40,44 +44,13 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
-          },
-          {
-            "id": "7cce1e741e13fe08",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
-            }
-          },
-          {
-            "id": "36672bc471c07353",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
-            }
-          },
-          {
-            "id": "ac87e1c50e7fe31d",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "03195c1cb51b65ce",
         "type": "tabs",
-        "dimension": 81.45483613109512,
+        "dimension": 80.78770413064362,
         "children": [
           {
             "id": "66db21eab2fcb693",
@@ -190,7 +163,7 @@
       {
         "id": "06c586803a98bedb",
         "type": "tabs",
-        "dimension": 44.0061871616396,
+        "dimension": 66.0092807424594,
         "children": [
           {
             "id": "4df392febc2841c2",
@@ -262,19 +235,6 @@
             }
           },
           {
-            "id": "c97d025e2bebb87f",
-            "type": "leaf",
-            "state": {
-              "type": "daily-note-outline",
-              "state": {
-                "activeSet": 0,
-                "activeGranularity": 0
-              },
-              "icon": "calendar-clock",
-              "title": "Daily Note Outline"
-            }
-          },
-          {
             "id": "c34506e94b5e465e",
             "type": "leaf",
             "state": {
@@ -289,12 +249,12 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
         "id": "2e275ca133c5355a",
         "type": "tabs",
-        "dimension": 22.66047950502707,
+        "dimension": 33.990719257540604,
         "children": [
           {
             "id": "50db4f4e28e80db5",
@@ -302,12 +262,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Personal/ME/Captured Moment.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Captured Moment"
             }
           },
           {
@@ -320,36 +281,6 @@
               },
               "icon": "lucide-info",
               "title": "File properties for Daily Template"
-            }
-          }
-        ]
-      },
-      {
-        "id": "e2182da6534c8d08",
-        "type": "tabs",
-        "dimension": 33.33333333333333,
-        "children": [
-          {
-            "id": "136bdc976900d0dd",
-            "type": "leaf",
-            "state": {
-              "type": "journal-calendar",
-              "state": {},
-              "icon": "calendar-days",
-              "title": "Calendar"
-            }
-          },
-          {
-            "id": "83006340ccfd950f",
-            "type": "leaf",
-            "state": {
-              "type": "daily-note-outline",
-              "state": {
-                "activeSet": 0,
-                "activeGranularity": 0
-              },
-              "icon": "calendar-clock",
-              "title": "Daily Note Outline"
             }
           }
         ]
@@ -378,59 +309,59 @@
       "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
-  "active": "2ddd094a69be020f",
+  "active": "f6c680f1a5dd2085",
   "lastOpenFiles": [
-    "Hidden/My Templates/periodic/Daily Template.md",
-    "My Calendar/My Calendar.md",
-    "Hidden/My Archives/My Archives.md",
-    "My Calendar/My Daily Notes/2025-05-06.md",
-    "My Calendar/My Daily Notes/2025-05-05.md",
-    "My Calendar/My Daily Notes/2025-05-07.md",
-    "My Areas/My Obsidian.md",
-    "My Areas/My Areas.md",
-    "Hidden/My Templates/personal/Captured Moment Template.md",
-    "Hidden/My Templates/personal/Observation Template.md",
-    "Hidden/fileClass/personal/capturedMoment.md",
-    "ME/📝 Captured Moments/Core Wounds.md",
-    "My Areas/Work/⚡Electric Equipment/Switchgear/Switchgear.md",
-    "My Areas/Work/📍 Sites/T0559 Indianapolis, IN.md",
-    "My Areas/Work/📍 Sites/T0587 Galesburg, MI.md",
-    "My Areas/Work/📍 Sites/📍 Sites.md",
-    "My Calendar/My Daily Notes/2025-05-03.md",
-    "My Calendar/My Daily Notes/2025-03-25.md",
-    "My Calendar/My Daily Notes/2024-04-24.md",
-    "My Calendar/My Daily Notes/2024-04-19.md",
-    "Hidden/Scripts/convertOldDailyNotes.js",
-    "My Calendar/My Daily Notes/2025-05-01.md",
-    "My Calendar/My Daily Notes/2025-04-30.md",
-    "Hidden/Scripts/convertToggles.js.~tmp",
-    "My Calendar/My Daily Notes/2025-04-25.md",
-    "My Calendar/My Daily Notes/2025-05-02.md",
-    "My Calendar/My Daily Notes/2025-04-26.md",
-    "My Calendar/My Daily Notes/2025-05-02 1.md",
-    "My Files/My Attachments/FA Testing .png",
-    "My Files/My Attachments/FA Test 2.png",
-    "Hidden/My Templates/Templater",
-    "Hidden/ShellScripts/convertToggles.js",
-    "Hidden/ShellScripts/convertToggles.js.~tmp",
-    "Hidden/ShellScripts/run_convertToggles.ps1",
-    "Hidden/ShellScripts/convertToggles.node.js",
-    "Hidden/ShellScripts",
-    "Hidden/New folder",
-    "Hidden/Scripts/metricTracker.js",
-    "My Files/My Attachments/Pasted image 20250503104821.png",
+    "Personal/ME/When U Get Home.md",
+    "_Meta/Templates/TestTemplate1.md",
+    "_Meta/Templates/TestTemplate.md",
+    "Meta/Attachments/Attachments.md",
+    "Files/Files.md",
+    "Trading/Trading.md",
+    "Life/Areas/My Personal Brand.md",
+    "Life/Areas/My Obsidian.md",
+    "Life/Areas/Home Maintenance.md",
+    "Life/Areas/Family.md",
+    "Life/Areas/Boating.md",
+    "Life/Areas/Boat Questions .md",
+    "Knowledge/Input Applications/Mere Christianity Application.md",
+    "Knowledge/Input Applications/Input Applications.md",
+    "Knowledge/Input Applications/Building a Second Brain Application.md",
+    "Knowledge/Input Applications/ Application.md",
+    "_Inputs/Meetings/Test Meeting.md",
+    "_Inputs/Meetings/Second Test Meeting.md",
+    "Inputs/Meetings/Example Meeting.md",
+    "_Inputs/Meetings/qweqwe.md",
+    "Archives/Staging Ground/_start_here.md",
+    "_Inputs/Meetings/Another BoringAss Meeting.md",
+    "_Inputs/Meetings/Meta/DataCore Test Meeting.md",
+    "_Files/Untitled.md",
+    "Personal/Greenhouse/Brainstorms/Brainstorms.md",
+    "Archives/Staging Ground",
+    "My Outputs/My Outputs.md",
+    "Personal/Greenhouse/Canvases/My Note-Making Station Board.canvas",
+    "Life/Planning Canvas",
+    "Systems/Dashboards/Captured Moments Dashboard.canvas",
+    "Personal/Greenhouse/Canvases",
+    "Files/Canvases/Creating new task.canvas",
+    "Systems/Dashboards/Canvases/My Canvas Vision Board.canvas",
+    "Systems/Dashboards/Canvases/My Habits Board.canvas",
+    "Systems/Dashboards/Canvases",
+    "Meta/Attachments",
+    "Trading/Reference",
+    "Trading/Screenshots",
+    "Trading/News and Macros",
+    "Trading/Daily Review",
+    "Trading/Weekly Review",
+    "_Files/My Attachments/Pasted image 20250507200343.png",
+    "Files/My Attachments/FA Testing .png",
+    "Files/My Attachments/FA Test 2.png",
+    "_Files/My Attachments/Pasted image 20250503104821.png",
     "My Files/My Attachments/Test.png",
     "ME/Obsidian-Vault-Backup_ME_Emotions.md at main · brennansalibrici_Obsidian-Vault-Backup_files/gravatar-user-420.png",
-    "My Dashboards/Captured Moments Dashboard.canvas",
-    "My Files/My Attachments/Pasted image 20250423201214.png",
-    "My Files/My Attachments/Screenshot 2025-04-15 002323.png",
-    "My Files/My Attachments/Pasted image 20250415002512.png",
-    "My Files/My Attachments/Pasted image 20250415002454.png",
-    "My Files/My Canvases/My Note-Making Station Board.canvas",
-    "My Files/My Canvases/My Habits Board.canvas",
-    "My Files/My Canvases/Creating new task.canvas",
-    "My Files/My Canvases/My Canvas Vision Board.canvas",
-    "My Files/My Attachments/Pasted image 20250328104633.png",
+    "_Files/My Attachments/Pasted image 20250423201214.png",
+    "Files/My Attachments/Screenshot 2025-04-15 002323.png",
+    "_Files/My Attachments/Pasted image 20250415002512.png",
+    "Files/My Attachments/Pasted image 20250415002454.png",
     "My Canvases/Untitled.canvas"
   ]
 }

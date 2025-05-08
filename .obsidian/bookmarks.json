@@ -6,22 +6,22 @@
       "items": [
         {
           "type": "file",
-          "path": "_start_here.md",
+          "path": "Archives/Staging Ground/_start_here.md",
           "ctime": 1683486334987
         },
         {
           "type": "file",
-          "path": "My Projects/Vault Onboarding.md",
+          "path": "Life/Projects/Vault Onboarding.md",
           "ctime": 1683486334987
         },
         {
           "type": "file",
           "ctime": 1713483722926,
-          "path": "USV/USV.md"
+          "path": "Archives/USV Legacy/USV Legacy.md"
         },
         {
           "type": "file",
-          "path": "USV/Obsidian Hotkeys.md",
+          "path": "Archives/USV Legacy/Obsidian Hotkeys.md",
           "ctime": 1683486334987
         }
       ],
@@ -29,32 +29,32 @@
     },
     {
       "type": "file",
-      "path": "My Views/My Home.md",
+      "path": "Systems/Views/Home.md",
       "ctime": 1683486334987,
       "title": "🏠 My Home"
     },
     {
       "type": "file",
       "ctime": 1712130113123,
-      "path": "My Views/My Vision Board.md",
+      "path": "Systems/Views/Vision Board.md",
       "title": "⭐️ My Vision Board"
     },
     {
       "type": "file",
       "ctime": 1694215667587,
-      "path": "My Projects/My Projects.md",
+      "path": "Life/Projects/Projects.md",
       "title": "🚧 My Projects"
     },
     {
       "type": "file",
       "ctime": 1713400626766,
-      "path": "My Greenhouse/My Greenhouse.md",
+      "path": "Personal/Greenhouse/Greenhouse.md",
       "title": "🌞 My Greenhouse"
     },
     {
       "type": "file",
       "ctime": 1697496501666,
-      "path": "My Views/My Tasks.md",
+      "path": "Systems/Views/Tasks.md",
       "title": "✅ My Tasks"
     },
     {

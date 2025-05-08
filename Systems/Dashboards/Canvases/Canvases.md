@@ -1,0 +1,1 @@
+Best for system logic, dashboards, or automation design
