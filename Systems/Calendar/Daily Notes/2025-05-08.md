@@ -1,6 +1,4 @@
 ---
-tags:
-  - reviews/daily
 Created: 2025-04-19T00:49:09
 Headings:
   - "[[Daily Template#Thoughts|💭]] [[Daily Template#Improvements|💪]] [[Daily Template#Obstacles|🚧]]"

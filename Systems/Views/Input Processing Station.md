@@ -26,7 +26,7 @@ WHERE contains(Status, "🟨")
 SORT Created DESC
 ```
 ## Evergreen Notes
-[[Greenhouse]]
+[[Personal/Greenhouse/Greenhouse]]
 ```dataview
 table Created
 from !"Hidden"

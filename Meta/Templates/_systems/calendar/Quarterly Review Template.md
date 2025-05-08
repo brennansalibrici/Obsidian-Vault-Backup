@@ -1,6 +1,4 @@
 ---
-tags:
-  - reviews/quarterly
 Created: 2025-05-05T12:07:44
 Parent: "[[My Calendar/My Yearly Notes/Invalid date|Invalid date]]"
 ---

@@ -1,10 +1,8 @@
 ---
-tags:
-  - reviews/yearly
 Created: 2025-05-05T12:07:44
-Summary:
-Personal:
-Career:
+Summary: 
+Personal: 
+Career: 
 BodyGoal: "💪 "
 MindGoal: "🧠 "
 SoulGoal: "✨ "

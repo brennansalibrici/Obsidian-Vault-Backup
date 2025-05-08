@@ -1,6 +1,4 @@
 ---
-tags:
-  - reviews/weekly
 Created: 05-05-2025T12:07:45
 Summary: 
 Personal: 

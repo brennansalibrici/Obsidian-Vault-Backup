@@ -11,10 +11,14 @@
             "id": "f6c680f1a5dd2085",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Meta/Utilities/Person Types.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Person Types"
             }
           }
         ]
@@ -54,7 +58,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "file:book",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -123,9 +127,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
+                "useHierarchy": false,
                 "showSearch": true,
-                "searchQuery": ""
+                "searchQuery": "review"
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -268,13 +272,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Archives/Staging Ground/Wheel of life migration.md",
+                "file": "Meta/Utilities/Person Types.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Wheel of life migration"
+              "title": "Outline of Person Types"
             }
           },
           {
@@ -316,49 +320,49 @@
       "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
-  "active": "d2a414d0abc19c36",
+  "active": "f6c680f1a5dd2085",
   "lastOpenFiles": [
-    "Archives/Staging Ground/what are backlinks.md",
-    "Archives/Staging Ground/ToDoist Docs.md",
-    "Archives/Staging Ground/Test Thought.md",
-    "Archives/Staging Ground/Test Meetings.md",
-    "Archives/Staging Ground/Test.md",
-    "Archives/Staging Ground/something.md",
-    "Life/Areas/My Obsidian/Docs & Links.md",
-    "Archives/Staging Ground/Scratch Pad 2.md",
-    "Archives/Staging Ground/Scratch Pad.md",
-    "Life/Areas/My Obsidian/Setup Ideas/My Habit Tracker.md",
-    "Life/Areas/My Obsidian/Setup Ideas/Setup Ideas.md",
-    "Life/Areas/My Obsidian/Setup Ideas/My Daily Logs.md",
-    "Life/Areas/My Obsidian/Setup Ideas",
-    "Archives/Staging Ground/Module - Set up the vault.md",
-    "Archives/Staging Ground/Module - Learn the vault philosophy.md",
-    "Archives/Staging Ground/Missing link callout.md",
-    "Archives/Staging Ground/Folder Note Plugin.md",
-    "Archives/Staging Ground/file-20250428093441829812.pdf.md",
-    "Archives/Staging Ground/file-20250427094052358317.pdf.md",
-    "Archives/Staging Ground/file-20250427054605644520.pdf.md",
-    "Archives/Staging Ground/file-20250427050132716886.pdf.md",
-    "Archives/Staging Ground/_start_here.md",
-    "Life/Areas/My Obsidian/My Obsidian.md",
-    "Life/Areas/My Obsidian/Troubleshooting Log.md",
-    "Life/Areas/My Obsidian/Scratch Pad.md",
-    "Life/Areas/My Obsidian/Working Examples",
-    "Life/Areas/My Obsidian/Plugin Notes",
-    "Life/Areas/My Obsidian",
-    "Systems/Views/Home.md",
-    "Personal/ME/Captured Moment.md",
-    "Inputs/Web Clipper",
-    "Archives/Staging Ground",
+    "Meta/Utilities/fn_status values.md",
+    "Meta/Utilities/Evergreen Notes Status Values.md",
+    "Meta/Utilities/Basic Status Values.md",
+    "Meta/Utilities/Advanced Status Values.md",
+    "Meta/Templates/_systems/calendar/RunConvertToggles.md",
+    "Meta/Templates/_global/Note Template.md",
+    "Meta/Templates/_life/areas",
+    "Meta/Templates/_knowledge/Book Application Template.md",
+    "Meta/Templates/_trading",
+    "Meta/Templates/_systems",
+    "Meta/Templates/_personal",
+    "Meta/Templates/_life",
+    "Meta/Templates/_legacy_USV",
+    "Meta/Templates/_knowledge",
+    "Meta/Templates/_files",
+    "Meta/Templates/_archives",
+    "Meta/Templates/_global",
+    "Meta/fileClass/knowledge/bookapplications.md",
+    "Meta/fileClass/personal/greenhouse/brainstorm.md",
+    "Meta/fileClass/personal/greenhouse/brainstorm.md",
+    "Meta/fileClass/_global/note.md",
+    "Meta/fileClass/system/view.md",
+    "Meta/fileClass/system/view.md",
+    "Meta/fileClass/knowledge/moc.md",
+    "Meta/fileClass/_global/all.md",
+    "Meta/fileClass/system/dashboard/dashboard.md",
+    "Meta/fileClass/system/dashboard/logicCanvas.md",
+    "Systems/Dashboards/Canvases/Canvases.md",
+    "Meta/fileClass/system/calendar/yearlyNote.md",
+    "Meta/fileClass/system/calendar/quarterlyNote.md",
+    "Meta/fileClass/system/calendar/monthlyNote.md",
+    "Meta/fileClass/system/calendar/weeklyNote.md",
+    "Meta/fileClass/system/calendar/dailyNote.md",
+    "Meta/fileClass/knowledge/reviews.md",
+    "Meta/fileClass/knowledge/output.md",
+    "Meta/fileClass/life/project.md",
     "Personal/Greenhouse/Canvases/My Note-Making Station Board.canvas",
-    "Life/Planning Canvas",
     "Systems/Dashboards/Captured Moments Dashboard.canvas",
-    "Personal/Greenhouse/Canvases",
     "Files/Canvases/Creating new task.canvas",
     "Systems/Dashboards/Canvases/My Canvas Vision Board.canvas",
     "Systems/Dashboards/Canvases/My Habits Board.canvas",
-    "Systems/Dashboards/Canvases",
-    "Meta/Attachments",
     "_Files/My Attachments/Pasted image 20250507200343.png",
     "Files/My Attachments/FA Testing .png",
     "Files/My Attachments/FA Test 2.png",

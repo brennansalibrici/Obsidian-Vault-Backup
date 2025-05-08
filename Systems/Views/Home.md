@@ -31,14 +31,14 @@ Description: Custom organization of all your notes
 - 💭 [[Thoughts]]
 - 🗣 [[Meetings]]
 ### Ideas
-- 🌞 [[Greenhouse]]
+- 🌞 [[Personal/Greenhouse/Greenhouse]]
 - 🗺️ [[My Maps of Content (MOCs)]]
 ### Outputs
 - 📤 [[My Outputs]]
 	- 💡 [[Brainstorms]]
 	- 📖  [[Input Applications]]
 ### Other
-- 👤 [[Social Circle]]
+- 👤 [[Personal/People/People]]
 #### Journalling
 - [[My Daily Logs]]
 ## Productivity
