@@ -42,8 +42,18 @@ sort: dateDescending
 	- sourceLink: ""            # optional, URL or file path
 	- captured:: 2025-05-08     # optional, date captured
 
-### Medium Term
+#### Features to Use/Create
+- FleetingNotes Sync
+- Obsidian Web Clipper
+- Tasks
+- ToDoist Tasks
 
+
+### Medium Term
+#### Features to Use/Create
+- Home Page
+- Dashboards
+- Bookmarks & Workspaces
 ### Long Term
 #### File Management
 - Have a set of  Internal & External Archive folders and we will write javascript and/or powershell scripts to move folders/files where they need to go whether inside or outside of the vault. 

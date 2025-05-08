@@ -11,14 +11,10 @@
             "id": "f6c680f1a5dd2085",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Personal/ME/Captured Moment.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Captured Moment"
+              "title": "New tab"
             }
           }
         ]
@@ -33,7 +29,7 @@
       {
         "id": "93f00f080efb3236",
         "type": "tabs",
-        "dimension": 19.21229586935639,
+        "dimension": 19.32367149758454,
         "children": [
           {
             "id": "44331de537c86284",
@@ -50,7 +46,7 @@
       {
         "id": "03195c1cb51b65ce",
         "type": "tabs",
-        "dimension": 80.78770413064362,
+        "dimension": 80.67632850241546,
         "children": [
           {
             "id": "66db21eab2fcb693",
@@ -247,9 +243,19 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
+          },
+          {
+            "id": "3dba87ed2dd972bb",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "2e275ca133c5355a",
@@ -262,13 +268,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Personal/ME/Captured Moment.md",
+                "file": "Archives/Staging Ground/Wheel of life migration.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Captured Moment"
+              "title": "Outline of Wheel of life migration"
             }
           },
           {
@@ -287,7 +293,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -309,35 +316,40 @@
       "obsidian-shellcommands:Shell commands: Custom variables": false
     }
   },
-  "active": "f6c680f1a5dd2085",
+  "active": "d2a414d0abc19c36",
   "lastOpenFiles": [
-    "Personal/ME/When U Get Home.md",
-    "_Meta/Templates/TestTemplate1.md",
-    "_Meta/Templates/TestTemplate.md",
-    "Meta/Attachments/Attachments.md",
-    "Files/Files.md",
-    "Trading/Trading.md",
-    "Life/Areas/My Personal Brand.md",
-    "Life/Areas/My Obsidian.md",
-    "Life/Areas/Home Maintenance.md",
-    "Life/Areas/Family.md",
-    "Life/Areas/Boating.md",
-    "Life/Areas/Boat Questions .md",
-    "Knowledge/Input Applications/Mere Christianity Application.md",
-    "Knowledge/Input Applications/Input Applications.md",
-    "Knowledge/Input Applications/Building a Second Brain Application.md",
-    "Knowledge/Input Applications/ Application.md",
-    "_Inputs/Meetings/Test Meeting.md",
-    "_Inputs/Meetings/Second Test Meeting.md",
-    "Inputs/Meetings/Example Meeting.md",
-    "_Inputs/Meetings/qweqwe.md",
+    "Archives/Staging Ground/what are backlinks.md",
+    "Archives/Staging Ground/ToDoist Docs.md",
+    "Archives/Staging Ground/Test Thought.md",
+    "Archives/Staging Ground/Test Meetings.md",
+    "Archives/Staging Ground/Test.md",
+    "Archives/Staging Ground/something.md",
+    "Life/Areas/My Obsidian/Docs & Links.md",
+    "Archives/Staging Ground/Scratch Pad 2.md",
+    "Archives/Staging Ground/Scratch Pad.md",
+    "Life/Areas/My Obsidian/Setup Ideas/My Habit Tracker.md",
+    "Life/Areas/My Obsidian/Setup Ideas/Setup Ideas.md",
+    "Life/Areas/My Obsidian/Setup Ideas/My Daily Logs.md",
+    "Life/Areas/My Obsidian/Setup Ideas",
+    "Archives/Staging Ground/Module - Set up the vault.md",
+    "Archives/Staging Ground/Module - Learn the vault philosophy.md",
+    "Archives/Staging Ground/Missing link callout.md",
+    "Archives/Staging Ground/Folder Note Plugin.md",
+    "Archives/Staging Ground/file-20250428093441829812.pdf.md",
+    "Archives/Staging Ground/file-20250427094052358317.pdf.md",
+    "Archives/Staging Ground/file-20250427054605644520.pdf.md",
+    "Archives/Staging Ground/file-20250427050132716886.pdf.md",
     "Archives/Staging Ground/_start_here.md",
-    "_Inputs/Meetings/Another BoringAss Meeting.md",
-    "_Inputs/Meetings/Meta/DataCore Test Meeting.md",
-    "_Files/Untitled.md",
-    "Personal/Greenhouse/Brainstorms/Brainstorms.md",
+    "Life/Areas/My Obsidian/My Obsidian.md",
+    "Life/Areas/My Obsidian/Troubleshooting Log.md",
+    "Life/Areas/My Obsidian/Scratch Pad.md",
+    "Life/Areas/My Obsidian/Working Examples",
+    "Life/Areas/My Obsidian/Plugin Notes",
+    "Life/Areas/My Obsidian",
+    "Systems/Views/Home.md",
+    "Personal/ME/Captured Moment.md",
+    "Inputs/Web Clipper",
     "Archives/Staging Ground",
-    "My Outputs/My Outputs.md",
     "Personal/Greenhouse/Canvases/My Note-Making Station Board.canvas",
     "Life/Planning Canvas",
     "Systems/Dashboards/Captured Moments Dashboard.canvas",
@@ -347,11 +359,6 @@
     "Systems/Dashboards/Canvases/My Habits Board.canvas",
     "Systems/Dashboards/Canvases",
     "Meta/Attachments",
-    "Trading/Reference",
-    "Trading/Screenshots",
-    "Trading/News and Macros",
-    "Trading/Daily Review",
-    "Trading/Weekly Review",
     "_Files/My Attachments/Pasted image 20250507200343.png",
     "Files/My Attachments/FA Testing .png",
     "Files/My Attachments/FA Test 2.png",
