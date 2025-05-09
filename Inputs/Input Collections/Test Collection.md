@@ -1,13 +1,12 @@
 ---
 Status: 
-tags:
-  - inputCollection/series
-Links: []
+Links: 
 Created: 2023-09-08T03:34:56
-Author:
-Finished:
+Author: 
+Finished: 
 Rating: 
-Source:
+Source: 
+fileClass: inputCollection
 ---
 ## All Inputs
 <!-- Deprecated query: #input or #inputCollection tag being removed. Replace with field:: type = "input" or "inputCollection"

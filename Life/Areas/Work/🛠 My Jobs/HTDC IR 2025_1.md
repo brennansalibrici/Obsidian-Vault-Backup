@@ -1,8 +1,5 @@
 ---
-tags:
-  - work/job
 Created: 2025-04-25T16:29:13
-mapWithTag: true
 fileClass: job
 Job Name: HTDC IR 2025
 Job Number: S00100.371

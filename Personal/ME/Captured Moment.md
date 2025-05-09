@@ -42,4 +42,4 @@ Tagline: Too hot out here. Lock it in the container. Weâ€™ll come back when itâ€
 
 ## Emotions
 ---
-[#Afraid], [#Anxious], [#Vulnerable], [#Confused], [#Determined], [#Smart], [#Strong], [#Connected], [#Calm], [#Alive], [#Good]
+[[Emotions#Afraid]],  [[Emotions#Anxious]], [[Emotions#Vulnerable]],  [[Emotions#Confused]], [[Emotions#Determined]],  [[Emotions#Smart]],  [[Emotions#Strong]],  [[Emotions#Connected]],  [[Emotions#Calm]],  [[Emotions#Alive]],  [[Emotions#Good]]

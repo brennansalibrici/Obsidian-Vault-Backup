@@ -1,7 +1,7 @@
 ---
-tags: kanbans
 Created: 2022-08-17T11:20:52
 kanban-plugin: basic
+fileClass: kanban
 ---
 
 ## Backlog

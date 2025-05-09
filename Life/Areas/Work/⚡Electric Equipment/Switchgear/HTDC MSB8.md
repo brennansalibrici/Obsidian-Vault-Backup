@@ -1,9 +1,6 @@
 ---
-tags:
-  - work/electricalequipment/equipment/switchgear
 Created: 2025-04-30T21:06:14
 fileClass: switchgear
-mapWithTag: true
 Equipment Name: HTDC MSB8
 Site: "[[HTDC Brookshire, TX]]"
 Switchgear Type: Main Breaker

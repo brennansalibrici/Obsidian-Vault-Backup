@@ -13,7 +13,7 @@ fileClass: quarterlyNote
 
 ## Plan
 
-- [ ] Revisit the higher-order review to remember your long-term goals and vision #hidden
+- [ ] Revisit the higher-order review to remember your long-term goals and vision 
 
 ### Action Items
 

@@ -23,11 +23,11 @@ task
 where file.name = "Invalid date" AND !completed
 ```
 ### Projects
-- [ ] Look at `My Vision Board` to remember what your vision is #hidden
-- [ ] Visit `My Projects` note and update the status of your desired projects in `Backlog 🟥` or `Upcoming 🟧` to `In Progress 🟨`  #hidden 
-- [ ] For each project you want to work on this week, go to the project's `## Weekly Progress` header and create a new weekly progress for the same week number as this weekly note. #hidden 
-- [ ] Fill out each `# Plan` section to specify what you want to focus on this week #hidden 
-- [ ] Brainstorm the tasks/steps needed to achieve that plan under the `Tasks` header or your task management app #hidden 
+- [ ] Look at `My Vision Board` to remember what your vision is 
+- [ ] Visit `My Projects` note and update the status of your desired projects in `Backlog 🟥` or `Upcoming 🟧` to `In Progress 🟨`  
+- [ ] For each project you want to work on this week, go to the project's `## Weekly Progress` header and create a new weekly progress for the same week number as this weekly note. 
+- [ ] Fill out each `# Plan` section to specify what you want to focus on this week 
+- [ ] Brainstorm the tasks/steps needed to achieve that plan under the `Tasks` header or your task management app 
 <!-- Deprecated query: #project tag being removed. Replace with field:: type = "project"
 ```dataview
 TABLE
@@ -197,4 +197,4 @@ Total: `VIEW[{Body} + {Mind} + {Soul} + {Mission} + {Money} + {Growth} + {Romanc
 
 **Advice for the future?**
 ## Next Steps
-- [ ] Create the next weekly note through the Calendar pane and start filling out your next plan there! #hidden 
+- [ ] Create the next weekly note through the Calendar pane and start filling out your next plan there! 

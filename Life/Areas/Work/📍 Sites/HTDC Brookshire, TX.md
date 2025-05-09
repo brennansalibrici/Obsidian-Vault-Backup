@@ -1,11 +1,8 @@
 ---
-tags:
-  - work/site
 Created: 2025-04-25T16:25:11
 Site Status:
   - 🟩
 fileClass: site
-mapWithTag: true
 Customer: "[[Ross]]"
 Site Address:
   StreetAddress: 31207 Kingsland Blvd

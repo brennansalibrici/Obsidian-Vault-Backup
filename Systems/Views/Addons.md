@@ -1,10 +1,10 @@
 ---
-Status: ""
-tags:
-  - usv/note
+Status:
+  - ""
 Links:
   - "[[Views]]"
 Created: 2023-05-07T11:51:13
+fileClass: note
 ---
 For when you want to embed something in an already existing note :)
 

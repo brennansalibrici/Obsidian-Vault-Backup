@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems/Calendar/Yearly Notes/Yearly Notes.md",
+                "file": "Systems/Views/Addons.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Yearly Notes"
+              "title": "Addons"
             }
           }
         ]
@@ -33,7 +33,7 @@
       {
         "id": "93f00f080efb3236",
         "type": "tabs",
-        "dimension": 19.32367149758454,
+        "dimension": 38.550724637681164,
         "children": [
           {
             "id": "44331de537c86284",
@@ -50,7 +50,7 @@
       {
         "id": "03195c1cb51b65ce",
         "type": "tabs",
-        "dimension": 80.67632850241546,
+        "dimension": 61.44927536231884,
         "children": [
           {
             "id": "66db21eab2fcb693",
@@ -127,9 +127,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": false,
-                "showSearch": true,
-                "searchQuery": "review"
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -150,7 +150,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -311,34 +311,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d2a414d0abc19c36",
+  "active": "d27ec8b508b004a3",
   "lastOpenFiles": [
-    "Systems/Calendar/Weekly Notes/Weekly Notes.md",
-    "Systems/Views/Views.md",
-    "Inputs/Videos/Videos.md",
-    "Personal/Thoughts/Thoughts.md",
-    "Systems/Calendar/Quarterly Notes/Quarterly Notes.md",
-    "Inputs/Podcasts/Podcasts.md",
-    "Personal/People/People.md",
-    "Knowledge/My Resources/My Resources.md",
-    "Life/Areas/My Obsidian/Setup Ideas/My Obstacles.md",
-    "Knowledge/My Resources/My Maps of Content (MOCs)/My Maps of Content (MOCs).md",
-    "Life/Areas/My Obsidian/Setup Ideas/My Daily Logs.md",
-    "Systems/Calendar/Monthly Notes/Monthly Notes.md",
-    "Life/Kanbans/Kanbans.md",
-    "Inputs/Inputs.md",
-    "Inputs/Input Collections/Input Collections.md",
-    "Knowledge/Input Applications/Input Applications.md",
-    "Systems/Views/Inbox.md",
-    "Systems/Views/Home.md",
-    "Personal/Habits/Habits.md",
-    "Personal/Greenhouse/Greenhouse.md",
-    "Systems/Calendar/Daily Notes/Daily Notes.md",
-    "Files/Canvases/Canvases.md",
-    "Systems/Calendar/Calendar.md",
-    "Personal/Greenhouse/Brainstorms/Brainstorms.md",
-    "Inputs/Books/Books.md",
-    "Inputs/Articles/Articles.md",
+    "Systems/Calendar/Weekly Notes/2024-W01.md",
+    "Life/Kanbans/Create new Obsidian video.md",
+    "Inputs/Input Collections/Test Collection.md",
+    "Personal/ME/Captured Moment.md",
+    "Systems/Calendar/Daily Notes/2024-12-02.md",
+    "Life/Projects/Learn_Customize Obsidian.md",
+    "Systems/Calendar/Daily Notes/2025-04-16.md",
+    "Personal/People/👤 POCs/Jeff Ackers.md",
+    "Personal/People/👤 POCs/Jarin Bush.md",
+    "Personal/People/👤 POCs/Dave Wright.md",
+    "Personal/People/👤 POCs/Dave Rosen.md",
+    "Personal/People/👤 POCs/Chris Young.md",
+    "Personal/People/👤 POCs/Chris Cisneros.md",
+    "Personal/People/👤 POCs/Bruce Hafer.md",
+    "Life/Areas/Work/🏢 Customers/Xcel Energy.md",
+    "Life/Areas/Work/🏢 Customers/United Health Group.md",
+    "Life/Areas/Work/🏢 Customers/UNFI.md",
+    "Life/Areas/Work/🏢 Customers/Thompson Reuters.md",
+    "Life/Areas/Work/🏢 Customers/Target.md",
+    "Life/Areas/Work/⚡Electric Equipment/Switchgear/T0587 MSB3.md",
+    "Life/Areas/Work/⚡Electric Equipment/Switchgear/T0587 MSB2.md",
+    "Life/Areas/Work/⚡Electric Equipment/Switchgear/T0587 MSB1.md",
+    "Life/Areas/Work/🛠 My Jobs/T0587 GFR 2025.md",
+    "Life/Areas/Work/📍 Sites/T0587 Galesburg, MI.md",
+    "Life/Areas/Work/📍 Sites/T0559 Indianapolis, IN.md",
+    "Life/Areas/Work/⚡Electric Equipment/Switchgear/T0551 MSB2.md",
     "Files/Canvases/Creating new task.canvas",
     "My Files/My Attachments/Pasted image 20250508203302.png",
     "My Files/My Attachments",

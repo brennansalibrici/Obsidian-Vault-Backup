@@ -40,8 +40,8 @@ actions:
 		- [ ] win
 		- [ ] ream
 - [ ] Change CSS style so subheaders are indented
-- [x] Add a button (or link) at the top of my DailyNote which takes me to today’s #Story. The intent is to have a quick and easy way to write a quick paragraph about what just happened after a certain block of time or event of thing that occurred during the day. 
-- [x] Add a button (or link) at the top of my DailyNote which takes me to today’s #Story. The intent is to have a quick and easy way to write a quick paragraph about what just happened after a certain block of time or event of thing that occurred during the day. 
+- [x] Add a button (or link) at the top of my DailyNote which takes me to today’s Story. The intent is to have a quick and easy way to write a quick paragraph about what just happened after a certain block of time or event of thing that occurred during the day. 
+- [x] Add a button (or link) at the top of my DailyNote which takes me to today’s Story. The intent is to have a quick and easy way to write a quick paragraph about what just happened after a certain block of time or event of thing that occurred during the day. 
 - [ ] Create buttons to add new things on the DailyNote so you have the choice between adding it there or querying it like we did with tasks. 
 - [ ] Finish setting up templates with a dropdown tag choice when you create it. Also include a backlink to the DailyNote & section where it came from. 
 	- [ ] All Input Types

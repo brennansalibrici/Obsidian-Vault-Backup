@@ -1,8 +1,5 @@
 ---
-tags:
-  - persons/poc
 Created: 2025-04-25T14:24:14
-mapWithTag: true
 fileClass: poc
 Full Name: Bruce Hafer
 Site: "[[T0587 Galesburg, MI]]"
