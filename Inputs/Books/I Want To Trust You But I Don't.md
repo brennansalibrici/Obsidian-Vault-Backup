@@ -1,15 +1,14 @@
 ---
-Status: 🟥
-tags:
-  - input/books
-Links:
-  - 
+Status:
+  - 🟥
+Links: 
 Created: 2025-05-02T19:01:15
 Author: 
 Finished: 
 Rating: 
 Source: 
-Application:
+Application: 
+fileClass: book
 ---
 
 > [!INFO] Application Note

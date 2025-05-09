@@ -1,8 +1,6 @@
 ---
-Status: ""
-tags:
-  - note
-  - wheeloflife
+Status:
+  - ""
 Links: 
 Created: 2024-12-27T21:07:54
 AreasFields:
@@ -38,6 +36,7 @@ AreasColors:
   - rgba(50, 251, 99, 0.3)
   - rgba(50, 28, 255, 0.3)
   - rgba(255, 255, 255, 0.3)
+fileClass: note
 ---
 
 ```meta-bind

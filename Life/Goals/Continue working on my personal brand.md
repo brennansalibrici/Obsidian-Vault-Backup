@@ -1,7 +1,6 @@
 ---
-Status: 🟨
-tags:
-  - goal
+Status:
+  - 🟨
 Created: 2024-01-16T11:25:14
 Description: Have a personal brand with branding, content creation, and digital products
 Why: I do not find the 9-5 corporate lifestyle fulfilling and want to push myself to grow by becoming a creator
@@ -12,10 +11,12 @@ Order:
 cssclasses:
   - cards
   - cards-cols-2
+fileClass: goal
 ---
 ## Related
 ### Sub-Goals
 
+<!-- Deprecated query: #goal tag being removed. Replace with field:: type = "goal"
 ```meta-bind-button
 label: Create Goal Note 🎯
 hidden: false
@@ -27,13 +28,14 @@ actions:
   - type: command
     command: quickadd:choice:0468ea18-5c37-4079-a9ef-25a64cb20934
 
-```
+``` -->
+<!-- Deprecated query: #goal tag being removed. Replace with field:: type = "goal"
 ```dataview
 table list("🎯 " + Description, "💡 " + Why) as "Details", Timeframe, Status
 FROM #goal AND !"Hidden"
 WHERE icontains(file.frontmatter.Parent, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 ### Projects
 
 ```meta-bind-button
@@ -49,12 +51,13 @@ actions:
 
 ```
 
+<!-- Deprecated query: #project tag being removed. Replace with field:: type = "project"
 ```dataview
 table list("🎯 " + Description, "💡 " + Why) as "Details", Status
 FROM #project AND !"Hidden"
 WHERE icontains(file.frontmatter.Goal, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 ## Notes
 
 ## Planning

@@ -1,7 +1,4 @@
 ---
-tags:
-  - dailyReminders
-  - view/custom
 Links:
   - "[[Home]]"
 Created: 2024-01-04T03:10:51
@@ -10,6 +7,7 @@ cssclasses:
   - table-max
   - cards-cols-2
 Description: Visualize the alignment of your daily actions with your long-term goals
+fileClass: view
 ---
 
 > [!INFO]+
@@ -35,6 +33,7 @@ return View
 ````
 ### Goals
 
+<!-- Deprecated query: #goal tag being removed. Replace with field:: type = "goal"
 ```dataview
 table Theme, list(BodyGoal, MindGoal, SoulGoal, MissionGoal, MoneyGoal, GrowthGoal, RomanceGoal, FamilyGoal, FriendsGoal) as "12-Month Celebrations"
 from #reviews
@@ -45,28 +44,31 @@ table list("🎯 " + Description, "💡 " + Why) as "Details"
 FROM #goal AND !"Hidden"
 WHERE file.frontmatter.Timeframe = dateformat(date(now), "[[yyyy]]")
 SORT Order, file.name asc
-```
+``` -->
 ## Quarter
+<!-- Deprecated query: #goal tag being removed. Replace with field:: type = "goal"
 ```dataview
 table list("🎯 " + Description, "💡 " + Why) as "Details"
 FROM #goal AND !"Hidden"
 WHERE contains(file.frontmatter.Timeframe, dateformat(date(now), "yyyy-Qq"))
 SORT Order, file.name asc
-```
+``` -->
 ## Month
+<!-- Deprecated query: #goal tag being removed. Replace with field:: type = "goal"
 ```dataview
 table list("🎯 " + Description, "💡 " + Why) as "Details"
 FROM #goal AND !"Hidden"
 WHERE contains(file.frontmatter.Timeframe, dateformat(date(now), "yyyy-'M'MM"))
 SORT Order, file.name asc
-```
+``` -->
 ## Week
+<!-- Deprecated query: #project tag being removed. Replace with field:: type = "project"
 ```dataview
 table list("🎯 " + Description, "💡 " + Why, "🚩 " + link(file.name + dateformat(date(now), "'#W'WW' Plan'"), "Weekly Plan")) as "Details"
 FROM #project AND !"Hidden"
 WHERE contains(file.outlinks, link(dateformat(date(now), "yyyy-'W'WW")))
 SORT Order, file.name asc
-```
+``` -->
 ## Daily
 ### [[Habits]]
 ### My Tasks

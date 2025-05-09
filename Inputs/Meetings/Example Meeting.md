@@ -1,7 +1,6 @@
 ---
-Status: 🟨
-tags:
-  - meeting
+Status:
+  - 🟨
 Links: 
 Created: 2023-05-13T04:16:29
 Attendees:
@@ -9,6 +8,7 @@ Attendees:
   - "[[My Dad]]"
 Summary: Talked about the birds and the bees
 MeetingDate: 2024-04-24
+fileClass: meeting
 ---
 
 ## Agenda Items

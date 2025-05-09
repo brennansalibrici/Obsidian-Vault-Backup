@@ -12,7 +12,7 @@ Rating:
 fileClass: input
 ---
 ## Summary
-#inputCollection/series 
+
 ## Notes
 ## Highlights
 - <% tp.file.cursor(7) %>

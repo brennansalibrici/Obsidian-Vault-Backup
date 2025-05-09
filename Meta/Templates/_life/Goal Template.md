@@ -29,12 +29,13 @@ actions:
 
 ```
 
+<!-- Deprecated query: #goal tag being removed. Replace with field:: type = "goal"
 ```dataview
 table Description, Why
 FROM #goal AND !"Hidden"
 WHERE icontains(file.frontmatter.Parent, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 ### Projects
 
 ```meta-bind-button
@@ -50,20 +51,22 @@ actions:
 
 ```
 
+<!-- Deprecated query: #project tag being removed. Replace with field:: type = "project"
 ```dataview
 table Description, Why
 FROM #project AND !"Hidden"
 WHERE icontains(file.frontmatter.Goal, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 ### Habits
 
+<!-- Deprecated query: #habit tag being removed. Replace with field:: type = "habit"
 ```dataview
 table Frequency, HabitGroup
 FROM #habitNote AND !"Hidden"
 WHERE icontains(file.frontmatter.Goal, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 ## Notes
 
 ## Planning

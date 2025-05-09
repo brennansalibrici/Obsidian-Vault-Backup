@@ -1,12 +1,9 @@
 ---
-tags:
-  - area
-  - "House_MN"
-  - "House_FL"
 Links: 
 Created: 2025-04-11T14:38:48
 areaGroup: Home Maintenance
 Group: Family
+fileClass: area
 ---
 ## Tasks
 
@@ -35,45 +32,50 @@ sort: dateDescending
 
 ### Goals
 
+<!-- Deprecated query: #goal tag being removed. Replace with field:: type = "goal"
 ```dataview
 table Status
 FROM #goal AND [[]] AND !"Hidden"
 WHERE icontains(file.frontmatter.Area, this.file.name)
 SORT Created asc
-```
+``` -->
 
 ### Projects
 
+<!-- Deprecated query: #project tag being removed. Replace with field:: type = "project"
 ```dataview
 table Status
 FROM #project AND [[]] AND !"Hidden"
 WHERE icontains(file.frontmatter.Area, this.file.name)
 SORT Created asc
-```
+``` -->
 
 ### Habits
 
+<!-- Deprecated query: #habit tag being removed. Replace with field:: type = "habit"
 ```dataview
 table Status, Frequency, HabitGroup, Goal
 FROM #habitNote AND [[]] AND !"Hidden"
 WHERE icontains(file.frontmatter.Area, this.file.name)
 SORT Created asc
-```
+``` -->
 
 ## Knowledge
 
 ### Inputs
 
+<!-- Deprecated query: #input tag being removed. Replace with field:: type = "input"
 ```dataview
 table Status, Author
 FROM  #input AND [[]] AND !"Hidden"
 SORT file.mtime desc
-```
+``` -->
 
 ### Other Notes
 
+<!-- Deprecated query: #project tag being removed. Replace with field:: type = "project"
 ```dataview
 table Created
 FROM [[]] AND !#project AND !#input AND !"Hidden"
 SORT file.mtime desc
-```
+``` -->

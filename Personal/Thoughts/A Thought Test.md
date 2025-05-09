@@ -1,14 +1,12 @@
 ---
-Status: 🟨
-tags:
-  - note
-  - thought/reflections
-  - log/obstacle
+Status:
+  - 🟨
 Links:
   - "[[Daily Notes]]"
 Created: 2025-03-25T19:44:34
+fileClass: note
 ---
 Testing this thoguht out
 
-- Obstacle 1 #log/obstacle 
-- Obstacle 2 #log/obstacle 
+- Obstacle 1  
+- Obstacle 2 

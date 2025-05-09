@@ -1,9 +1,8 @@
 ---
 Status: 
-tags:
-  - note
 Links: 
 Created: 2025-03-26T21:02:47
+fileClass: note
 ---
 ```dataviewjs
 const today = window.moment().format("YYYY-MM-DD");

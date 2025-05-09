@@ -1,9 +1,8 @@
 ---
 Status: 
-tags:
-  - note
 Links: 
 Created: 2025-05-01T21:44:10
+fileClass: note
 ---
 ## From Scripture
 ---

@@ -1,12 +1,12 @@
 ---
-tags:
-  - view/custom
 Links:
   - "[[Home]]"
 Created: 2023-10-15T03:02:20
 Description: Manage all your tasks
+fileClass: view
 ---
 
+<!-- Deprecated query: #evening tag being removed. Replace with field:: type = "evening"
 ```dataviewjs
 const today = window.moment().format("YYYY-MM-DD");
 const backlink = dv.current().file.inlinks
@@ -16,7 +16,7 @@ if (backlink) {
   const sectionAnchor = "#evening"; // <-- change to your actual subheader anchor
   dv.paragraph(`🔙 Back to: [[${backlink.path}${sectionAnchor}]]`);
 }
-```
+``` -->
 
 ```meta-bind-button
 label: Add New Task
@@ -82,13 +82,13 @@ limit 20
 ```
 
 ## Tasks
-- [x] #task Another TEst Task 19 ➕ 2025-04-19 🛫 2025-04-19 ⏳ 2025-04-19 📅 2025-04-19 ✅ 2025-05-07
+- [x] Another TEst Task 19 ➕ 2025-04-19 🛫 2025-04-19 ⏳ 2025-04-19 📅 2025-04-19 ✅ 2025-05-07
 
-- [x] #task Another Test Task 17 ➕ 2025-04-19 🛫 2025-04-19 ⏳ 2025-04-19 📅 2025-04-19 ✅ 2025-05-07
+- [x] Another Test Task 17 ➕ 2025-04-19 🛫 2025-04-19 ⏳ 2025-04-19 📅 2025-04-19 ✅ 2025-05-07
 
-- [ ] 
+- [x] 
 
-- [ ] 
+- [x] 
 
 %% Tasks with no due date %%
 ```tasks
@@ -96,12 +96,12 @@ not done
 (no due date) AND (no scheduled date) AND (tags does not include habit)
 sort by priority
 ```
-- [x] #task Test Task ➕ 2025-04-18 🛫 2025-04-18 ⏳ 2025-04-18 📅 2025-04-18 ✅ 2025-04-18
-- [x] #task Task 1 ➕ 2025-04-18 🛫 2025-04-18 ⏳ 2025-04-18 📅 2025-04-18 ✅ 2025-04-18
-- [x] #task Test Task 1 🔺 ➕ 2025-04-18 🛫 2025-04-18 ⏳ 2025-04-18 📅 2025-04-18 ✅ 2025-04-21
-- [x] #task Test Task 2 ⏫ ➕ 2025-04-18 🛫 2025-04-18 ⏳ 2025-04-19 📅 2025-04-21 ✅ 2025-05-07
-- [x] #task Another Task 1 ➕ 2025-04-18 🛫 2025-04-18 ⏳ 2025-04-18 📅 2025-04-18 ✅ 2025-04-22
-- [ ] 
+- [x] Test Task ➕ 2025-04-18 🛫 2025-04-18 ⏳ 2025-04-18 📅 2025-04-18 ✅ 2025-04-18
+- [x] Task 1 ➕ 2025-04-18 🛫 2025-04-18 ⏳ 2025-04-18 📅 2025-04-18 ✅ 2025-04-18
+- [x] Test Task 1 🔺 ➕ 2025-04-18 🛫 2025-04-18 ⏳ 2025-04-18 📅 2025-04-18 ✅ 2025-04-21
+- [x] Test Task 2 ⏫ ➕ 2025-04-18 🛫 2025-04-18 ⏳ 2025-04-19 📅 2025-04-21 ✅ 2025-05-07
+- [x] Another Task 1 ➕ 2025-04-18 🛫 2025-04-18 ⏳ 2025-04-18 📅 2025-04-18 ✅ 2025-04-22
+- [x] 
 
-- [ ] 
+- [x] 
 

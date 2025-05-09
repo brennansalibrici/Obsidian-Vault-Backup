@@ -1,10 +1,9 @@
 ---
-Status: ""
-tags:
-  - note
-  - wheeloflife
+Status:
+  - ""
 Links: 
 Created: 2024-12-27T21:07:54
+fileClass: note
 ---
 ## Habits
 Habits will be automatically shown on [[My Habit Tracker]] if their `Status` is set to 🟨

@@ -1,10 +1,9 @@
 ---
-tags:
-  - view/note
 Links:
   - "[[Home]]"
 Created: 2023-05-07T11:51:13
 Description: All periodic notes
+fileClass: view
 ---
 To see your focus for the relevant timeframe instead, visit [[Vision Board]]
 

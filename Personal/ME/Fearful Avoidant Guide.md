@@ -1,9 +1,8 @@
 ---
 Status: 
-tags:
-  - note
 Links: 
 Created: 2025-05-02T18:37:02
+fileClass: note
 ---
 
 [[Holding The Door Open|Holding the door open doesn't mean...]]

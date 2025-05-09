@@ -1,9 +1,10 @@
 ---
-Status: 🟨
-tags:
-  - output/bookapplications
+Status:
+  - 🟨
 Created: 2023-05-07T11:51:13
-Source: ["[[Building a Second Brain]]"]
+Source:
+  - "[[Building a Second Brain]]"
+fileClass: bookapplications
 ---
 
 ## Top 3 Quotes

@@ -7,7 +7,7 @@
 		{"id":"673aa4adf1c955cd","type":"text","text":"![[Tasks Plugin#Project Notes]]","x":340,"y":497,"width":830,"height":191},
 		{"id":"9539442f17e31612","type":"text","text":"![[Tasks Plugin#Area Notes]]","x":392,"y":758,"width":778,"height":182},
 		{"id":"1f6d30eaecd60091","type":"text","text":"Add [[Tasks Plugin#due|due]] date and other [[Tasks Plugin#tags|tags]], see when you need it in [[Tasks Plugin#Views]]","x":1440,"y":970,"width":250,"height":170},
-		{"id":"4e06ea47f6cd6115","type":"text","text":"Add `#someday` tag, see later in [[Tasks#Someday/Maybe ` someday`|someday maybe list]]","x":940,"y":140,"width":400,"height":80},
+		{"id":"4e06ea47f6cd6115","type":"text","text":"Add `someday` tag, see later in [[Tasks#Someday/Maybe ` someday`|someday maybe list]]","x":940,"y":140,"width":400,"height":80},
 		{"id":"3e921c0021f44db6","type":"text","text":"Delete it","x":940,"y":0,"width":400,"height":60},
 		{"id":"abd289e09162228b","type":"text","text":"Put it in a note that is retrievable when required","x":940,"y":290,"width":400,"height":90},
 		{"id":"eed6d3da4930c6af","type":"text","text":"![[Tasks Plugin#Resource Notes]]","x":450,"y":1000,"width":720,"height":480},

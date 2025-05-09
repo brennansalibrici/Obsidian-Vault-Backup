@@ -1,9 +1,9 @@
 ---
 Status: 
-tags: view/custom
 Links:
   - "[[Daily Notes]]"
 Created: 2024-04-22T20:18:11
+fileClass: view
 ---
 
 > [!INFO] 
@@ -13,7 +13,7 @@ Created: 2024-04-22T20:18:11
 [[My Obstacles]]
 ## All Logs
 
-````datacorejsx
+<!-- Deprecated query: #log/obstacle tag being removed. Replace with field:: type = "obstacle"````datacorejsx
 const { DailyLogsWithTags } = await dc.require("Hidden/Datacore/Views/DailyLogs.jsx");
 
 const tags = ["#log"];
@@ -22,4 +22,4 @@ function View() {
 return <DailyLogsWithTags tags={tags}/>
 }
 return View
-````
+```` -->

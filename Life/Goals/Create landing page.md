@@ -1,7 +1,6 @@
 ---
-Status: 🟨
-tags:
-  - goal
+Status:
+  - 🟨
 Created: 2024-01-07T09:26:58
 Description: A landing page that showcases the benefits, features of my product, with a checkout page
 Why: To best present my product's benefits and features I need to create one
@@ -9,6 +8,7 @@ Timeframe: "[[2024-M01]]"
 Parent: "[[Create a new digital product]]"
 Area: "[[My Personal Brand]]"
 Order: 
+fileClass: goal
 ---
 ## Related
 ### Sub-Goals
@@ -26,12 +26,13 @@ actions:
 
 ```
 
+<!-- Deprecated query: #goal tag being removed. Replace with field:: type = "goal"
 ```dataview
 table Description, Why
 FROM #goal AND !"Hidden"
 WHERE icontains(file.frontmatter.Parent, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 ### Projects
 
 ```meta-bind-button
@@ -47,12 +48,13 @@ actions:
 
 ```
 
+<!-- Deprecated query: #project tag being removed. Replace with field:: type = "project"
 ```dataview
 table Description, Why
 FROM #project AND !"Hidden"
 WHERE icontains(file.frontmatter.Goal, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 ## Planning
 ### Objective
 **What is the definition of DONE?**

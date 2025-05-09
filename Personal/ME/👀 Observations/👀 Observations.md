@@ -1,9 +1,8 @@
 ---
 Status: 
-tags:
-  - note
 Links: 
 Created: 2025-05-02T22:25:51
+fileClass: note
 ---
 
 ```button

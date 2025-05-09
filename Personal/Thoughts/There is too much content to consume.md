@@ -1,10 +1,9 @@
 ---
 Status: 
-tags:
-  - thought/reflections
 Links:
   - "[[Personal Knowledge Management]]"
 Created: 2023-05-07T11:51:13
+fileClass: thought
 ---
 ![[Example note callout]]
 

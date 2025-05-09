@@ -1,14 +1,15 @@
 ---
-Status: 🟨
-tags:
-  - input/articles
+Status:
+  - 🟨
 Links:
   - "[[Personal Knowledge Management]]"
   - "[[Productivity]]"
 Created: 2023-05-07T11:51:13
 Finished: 2022-07-24
 Rating: "8"
-Source: https://thedankoe.com/the-3-part-daily-routine-for-maximum-productivity/
+Source:
+  - https://thedankoe.com/the-3-part-daily-routine-for-maximum-productivity/
+fileClass: article
 ---
 
 ## Notes

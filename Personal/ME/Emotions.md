@@ -1,9 +1,8 @@
 ---
 Status: 
-tags:
-  - note
 Links: 
 Created: 2025-04-29T18:50:36
+fileClass: note
 ---
 # Emotional Vocabulary Library (Complete)
 ## Table of Contents

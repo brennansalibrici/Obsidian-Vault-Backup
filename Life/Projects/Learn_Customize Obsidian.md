@@ -1,12 +1,12 @@
 ---
-Status: 🟨
-tags:
-  - project
+Status:
+  - 🟨
 Created: 2025-01-04T10:49:34
 Area: 
 Goal: 
 Deadline: 
-Order:
+Order: 
+fileClass: project
 ---
 
 ## Tasks
@@ -20,9 +20,9 @@ actions:
     command: quickadd:choice:6bb9f26c-69d2-4711-978e-5325f7b4f1c5
 ```
 %% Tasks Start %%
-	- [ ] #task Continue learning obsidian 🛫 2025-04-15 ⏳ 2025-04-14 📅 2025-04-14
+	- [ ] Continue learning obsidian 🛫 2025-04-15 ⏳ 2025-04-14 📅 2025-04-14
 
-- [ ] Logs based on queries of Tags (#log) or properties (obstacle::) [[My Daily Logs]]. [[Logging Fields]]
+- [ ] Logs based on queries of Tags (log) or properties (obstacle::) [[My Daily Logs]]. [[Logging Fields]]
 	- [x] Can they be combined in the same query? 
 	- [x] Develop use case for when to use one and opposed to the other
 	- [x] Further Develop my Daily Log

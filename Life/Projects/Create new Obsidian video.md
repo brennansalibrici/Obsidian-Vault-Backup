@@ -1,12 +1,12 @@
 ---
-Status: 🟧
-tags:
-  - project
+Status:
+  - 🟧
 Created: 2024-01-21T12:42:09
 Area: "[[My Personal Brand]]"
 Goal: "[[Market the product on social media]]"
 Deadline: 
 Order: 
+fileClass: project
 ---
 
 ## Tasks

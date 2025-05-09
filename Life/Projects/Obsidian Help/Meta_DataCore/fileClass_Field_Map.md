@@ -6,36 +6,36 @@ This guide shows which properties are associated with each major note type in yo
 
 ## 👤 `fileClass: person`
 
-| Field         | Type       | Description |
-|---------------|------------|-------------|
-| `KeepInTouch` | Boolean    | Whether to stay in regular contact |
-| `LastChatted` | Date       | When you last had meaningful interaction |
-| `MBTI`        | Text       | Myers-Briggs personality type |
-| `Summary`     | TextArea   | Overview of who this person is to you |
-| `tags`        | TagList    | `#person`, `#family`, `#work`, etc. |
+| Field         | Type     | Description                              |
+| ------------- | -------- | ---------------------------------------- |
+| `KeepInTouch` | Boolean  | Whether to stay in regular contact       |
+| `LastChatted` | Date     | When you last had meaningful interaction |
+| `MBTI`        | Text     | Myers-Briggs personality type            |
+| `Summary`     | TextArea | Overview of who this person is to you    |
+
 
 ---
 
 ## 📝 `fileClass: meeting`
 
-| Field         | Type        | Description |
-|---------------|-------------|-------------|
-| `attendees`   | MultiLink   | People who attended the meeting (linked notes) |
-| `MeetingDate` | Date        | When the meeting occurred |
-| `Summary`     | TextArea    | What was discussed or decided |
-| `tags`        | TagList     | e.g., `#meeting`, `#review`, `#1on1` |
+| Field         | Type      | Description                                    |
+| ------------- | --------- | ---------------------------------------------- |
+| `attendees`   | MultiLink | People who attended the meeting (linked notes) |
+| `MeetingDate` | Date      | When the meeting occurred                      |
+| `Summary`     | TextArea  | What was discussed or decided                  |
+
 
 ---
 
 ## 📁 `fileClass: project`
 
-| Field           | Type       | Description |
-|-----------------|------------|-------------|
-| `status`        | Select     | e.g., `active`, `on hold`, `complete` |
-| `nextAction`    | Text       | Immediate next step to move the project forward |
-| `goal`          | TextArea   | Purpose or desired outcome of the project |
-| `peopleInvolved`| MultiLink  | Notes linked to people connected to the project |
-| `tags`          | TagList    | `#project`, `#priority/high`, etc. |
+| Field            | Type      | Description                                     |
+| ---------------- | --------- | ----------------------------------------------- |
+| `status`         | Select    | e.g., `active`, `on hold`, `complete`           |
+| `nextAction`     | Text      | Immediate next step to move the project forward |
+| `goal`           | TextArea  | Purpose or desired outcome of the project       |
+| `peopleInvolved` | MultiLink | Notes linked to people connected to the project |
+
 
 ---
 

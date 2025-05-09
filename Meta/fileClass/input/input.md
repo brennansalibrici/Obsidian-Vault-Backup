@@ -66,12 +66,7 @@ fields:
     options: {}
     type: Input
     path: ""
-  - id: iEMkC8
-    name: Collection
-    options:
-      dvQueryString: dv.pages("#inputCollection").filter(p => !p.file.path.includes('Hidden'))
-    type: File
-    path: ""
+  - 
   - name: Links
     type: MultiFile
     options: {}
@@ -93,3 +88,14 @@ fieldsOrder:
   - pXHABA
   - XiM2CL
 ---
+
+<!-- Deprecated query: #input or #inputCollection tag being removed. Replace with field:: type = "input" or "inputCollection"
+id: iEMkC8
+    name: Collection
+    options:
+      dvQueryString: dv.pages("#inputCollection").filter(p => !p.file.path.includes('Hidden'))
+    type: File
+    path: ""
+
+
+-->

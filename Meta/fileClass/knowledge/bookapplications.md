@@ -5,7 +5,18 @@ excludes:
 extends: output
 version: "2.11"
 fields:
-  - name: Source
+  - 
+tagNames: 
+filesPaths: 
+bookmarksGroups: 
+savedViews: []
+favoriteView: 
+fieldsOrder:
+  - 4FnBwx
+icon: package
+---
+<!-- Deprecated query: #input or #inputCollection tag being removed. Replace with field:: type = "input" or "inputCollection"
+name: Source
     type: Lookup
     options:
       autoUpdate: true
@@ -18,12 +29,5 @@ fields:
       summarizedFieldName: ""
     path: ""
     id: 4FnBwx
-tagNames: 
-filesPaths: 
-bookmarksGroups: 
-savedViews: []
-favoriteView: 
-fieldsOrder:
-  - 4FnBwx
-icon: package
----
+
+-->

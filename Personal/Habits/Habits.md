@@ -1,7 +1,6 @@
 ---
-Status: ""
-tags:
-  - view/note
+Status:
+  - ""
 Links: 
 Created: 2024-07-29T16:49:51
 cssclasses: 
@@ -12,6 +11,7 @@ HabitFields:
   - Meditate
   - MakeTweet
 PastDays: 7
+fileClass: view
 ---
 
 > [!TIP]+ Check my workflow
@@ -33,6 +33,7 @@ Can edit the templates that create each habit by visiting:
 > - Edit the `HabitFields` value to be the frontmatter property for each habit
 > - Edit the fileClass `Hidden/fileClass/reviews/daily.md` and add them as new fields with the correct type (boolean for checkbox, number for number)
 
+<!-- Deprecated query: #review tag being removed. Replace with field:: type = "review"
 ```dataviewjs
 const currentPage = dv.current()
 const habitLabels = currentPage["HabitLabels"]
@@ -53,18 +54,20 @@ dv.table(["Day", ...habitLabels],
 		p.file.link,
 		...habitFields.map(label => f(dv, p, label))
 	]))
-```
+``` -->
 ## Active
+<!-- Deprecated query: #habitNote  tag being removed. Replace with field:: type = "habitNote"
 ```dataview
 TABLE Frequency, HabitGroup, Goal, Area
 FROM #habitNote and !"Hidden"
 WHERE contains(Status, "🟨")
 SORT file.name asc
-```
+``` -->
 
 ## All
+<!-- Deprecated query: #habitNote  tag being removed. Replace with field:: type = "habitNote"
 ```dataview
 TABLE Status, Frequency, HabitGroup, Goal, Area
 FROM #habitNote and !"Hidden"
 SORT file.name asc
-```
+``` -->

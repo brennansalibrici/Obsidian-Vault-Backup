@@ -12,21 +12,7 @@ fields:
       valuesListNotePath: Hidden/Utilities/Basic Status Values.md
       valuesFromDVQuery: ""
     type: Select
-    path: ""
-  - id: QMcp8A
-    name: Area
-    options:
-      dvQueryString: |-
-        dv.pages("#area")
-        .filter(p => !p.file.path.includes('Hidden'))
-    type: File
-    path: ""
-  - name: Goal
-    type: File
-    options:
-      dvQueryString: dv.pages('#goal')
-    path: ""
-    id: CohxM8
+    path: "" 
   - name: Type
     type: Select
     options:
@@ -101,3 +87,20 @@ fieldsOrder:
 version: "2.18"
 icon: package
 ---
+<!-- Deprecated query: #goal tag (and all other #tags) being removed from the frontmatter. Replace with field:: type = "goal"
+- id: QMcp8A
+    name: Area
+    options:
+      dvQueryString: |-
+        dv.pages("#area")
+        .filter(p => !p.file.path.includes('Hidden'))
+    type: File
+    path: ""
+  - name: Goal
+    type: File
+    options:
+      dvQueryString: dv.pages('#goal')
+    path: ""
+    id: CohxM8
+
+-->

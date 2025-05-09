@@ -20,14 +20,7 @@ fields:
       valuesFromDVQuery: ""
     type: Select
     path: ""
-  - id: QMcp8A
-    name: Area
-    options:
-      dvQueryString: |-
-        dv.pages("#area")
-        .filter(p => !p.file.path.includes('Hidden'))
-    type: File
-    path: ""
+  
   - id: r8lx9h
     name: Deadline
     options:
@@ -36,12 +29,7 @@ fields:
       dateShiftInterval: 7 days
     type: Date
     path: ""
-  - name: Goal
-    type: File
-    options:
-      dvQueryString: dv.pages('#goal')
-    path: ""
-    id: CohxM8
+  
 tagNames: 
 filesPaths: 
 bookmarksGroups: 
@@ -53,3 +41,20 @@ fieldsOrder:
   - CohxM8
   - QMcp8A
 ---
+<!-- Deprecated query: #goal tag (and all other #tags) being removed from the frontmatter. Replace with field:: type = "goal"
+- id: QMcp8A
+    name: Area
+    options:
+      dvQueryString: |-
+        dv.pages("#area")
+        .filter(p => !p.file.path.includes('Hidden'))
+    type: File
+    path: ""
+- name: Goal
+    type: File
+    options:
+      dvQueryString: dv.pages('#goal')
+    path: ""
+    id: CohxM8
+
+-->

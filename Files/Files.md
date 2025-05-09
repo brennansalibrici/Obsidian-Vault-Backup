@@ -1,10 +1,9 @@
 ---
 Status: 
-tags:
-  - note
 Links:
   - "[[Home]]"
 Created: 2024-04-11T06:42:59
+fileClass: note
 ---
 Best for:
 - Canvas

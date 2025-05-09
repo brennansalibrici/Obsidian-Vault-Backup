@@ -1,7 +1,6 @@
 ---
-Status: 🟨
-tags:
-  - habitNote
+Status:
+  - 🟨
 Created: 2024-01-19T09:37:03
 Goal: 
 Area: "[[My Soul]]"
@@ -13,6 +12,7 @@ HabitType: number
 HabitDailyGoal: "10"
 HabitEmoji: 🧘
 HabitLabel: Meditation
+fileClass: habit
 ---
 > [!TIP] Workflow
 > Follow https://publish.obsidian.md/johnmavrick/My+habits+workflow

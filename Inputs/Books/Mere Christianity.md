@@ -1,14 +1,14 @@
 ---
-Status: 🟥
-tags:
-  - input/books
+Status:
+  - 🟥
 Links: 
 Created: 2025-05-02T22:44:28
 Author: C.S. Lewis
 Finished: 
 Rating: 
 Source: 
-Application:
+Application: 
+fileClass: book
 ---
 
 > [!INFO] Application Note

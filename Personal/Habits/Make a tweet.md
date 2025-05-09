@@ -1,7 +1,6 @@
 ---
-Status: 🟨
-tags:
-  - habitNote
+Status:
+  - 🟨
 Created: 2024-01-19T09:20:25
 Goal: "[[Market the product on social media]]"
 Area: "[[My Personal Brand]]"
@@ -12,6 +11,7 @@ HabitType: checkbox
 HabitLabel: Make a tweet
 HabitEmoji: 🐦
 HabitUnit: checkbox
+fileClass: habit
 ---
 ## Notes
 - Make a tweet that has a reply that links to my new product

@@ -6,18 +6,7 @@ excludes:
 extends: 
 version: "2.11"
 fields:
-  - id: QGiJjb
-    name: Timeframe
-    options:
-      dvQueryString: dv.pages("#reviews").filter(p => !p.file.path.includes('Hidden'))
-    type: File
-    path: ""
-  - id: JaPuTU
-    name: Area
-    options:
-      dvQueryString: dv.pages("#area").filter(p => !p.file.path.includes('Hidden'))
-    type: File
-    path: ""
+  
   - id: rzS9AV
     name: Order
     options: {}
@@ -46,12 +35,7 @@ fields:
       valuesFromDVQuery: ""
     type: Select
     path: ""
-  - name: Parent
-    type: File
-    options:
-      dvQueryString: dv.pages('#goal').filter(p => !p.file.path.includes('Hidden'))
-    path: ""
-    id: tT9vVU
+  
 tagNames: 
 filesPaths: 
 bookmarksGroups: 
@@ -66,3 +50,23 @@ fieldsOrder:
   - JaPuTU
   - rzS9AV
 ---
+<!-- Deprecated query: #goal tag (and all other #tags) being removed from the frontmatter. Replace with field:: type = "goal"
+- id: QGiJjb
+    name: Timeframe
+    options:
+      dvQueryString: dv.pages("#reviews").filter(p => !p.file.path.includes('Hidden'))
+    type: File
+    path: ""
+  - id: JaPuTU
+    name: Area
+    options:
+      dvQueryString: dv.pages("#area").filter(p => !p.file.path.includes('Hidden'))
+    type: File
+    path: ""
+  - - name: Parent
+    type: File
+    options:
+      dvQueryString: dv.pages('#goal').filter(p => !p.file.path.includes('Hidden'))
+    path: ""
+    id: tT9vVU
+-->

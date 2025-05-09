@@ -1,8 +1,8 @@
 ---
 Status: 
-tags: "thought/musings"
 Links: 
 Created: 2025-04-16T12:10:05
+fileClass: thought
 ---
 ## Context
 %% Why am I making a note on this? What happened? %%

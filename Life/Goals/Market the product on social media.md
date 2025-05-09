@@ -1,14 +1,13 @@
 ---
 Status: 
-tags:
-  - goal
 Created: 2024-01-18T09:30:37
 Description: 
 Why: 
 Timeframe: 
 Parent: 
 Area: 
-Order:
+Order: 
+fileClass: goal
 ---
 ## Related
 ### Sub-Goals
@@ -26,12 +25,13 @@ actions:
 
 ```
 
+<!-- Deprecated query: #goal tag being removed. Replace with field:: type = "goal"
 ```dataview
 table Description, Why
 FROM #goal AND !"Hidden"
 WHERE icontains(file.frontmatter.Parent, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 ### Projects
 
 ```meta-bind-button
@@ -47,12 +47,13 @@ actions:
 
 ```
 
+<!-- Deprecated query: #project tag being removed. Replace with field:: type = "project"
 ```dataview
 table Description, Why
 FROM #project AND !"Hidden"
 WHERE icontains(file.frontmatter.Goal, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 ### Tasks
 ### Habits
 ### Trackers

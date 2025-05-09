@@ -165,6 +165,7 @@ filter by function task.done.moment?.isSame(moment("Daily Template"), 'day') || 
 %% MANUALLY ENTER below AND Any log with `obstacle:: x` will show up below %%
 - 
 
+<!-- Deprecated query: #log/obstacle tag being removed. Replace with field:: type = "obstacle"
 ```dataview
 table obstacle as "Obstacles"
 from ""
@@ -172,9 +173,10 @@ where (obstacle != null or contains(file.tags, "#log/obstacle"))
 and date(file.mtime).day = date(this.file.name).day
 and date(file.mtime).month = date(this.file.name).month
 and date(file.mtime).year = date(this.file.name).year
-```
+``` -->
 ### Content Log
 %% What were some insightful inputs and sources that I could process now? %%
+<!-- Deprecated query: #input or #inputCollection tag being removed. Replace with field:: type = "input" or "inputCollection"
 ```button
 name QuickAdd: 📥 Add General Input
 type command
@@ -188,9 +190,10 @@ and date(file.mtime).day = date(this.file.name).day
 and date(file.mtime).month = date(this.file.name).month
 and date(file.mtime).year = date(this.file.name).year
 SORT Tags desc
-```
+``` -->
 ### Thoughts
 %% What ideas was I pondering on or were lingering in my mind? %%
+<!-- Deprecated query: #thought tag being removed. Replace with field:: type = "thought"
 ```button
 name QuickAdd: 💭 Create Thought Note
 type command
@@ -204,10 +207,11 @@ and date(file.mtime).day = date(this.file.name).day
 and date(file.mtime).month = date(this.file.name).month
 and date(file.mtime).year = date(this.file.name).year
 SORT Created desc
-```
+``` -->
 ### Conversations
 %% Create sub-headers for any mini conversation you had or want to prepare for here (MANUALLY ENTER HERE), linking it to the respective `Conversations` header for the person %%
 - 
+<!-- Deprecated query: #conversation tag being removed. Replace with field:: type = "conversation"
 ```button
 name QuickAdd: 👤 Create Person Note
 type command
@@ -220,9 +224,10 @@ where (conversation != null or contains(file.tags, "#log/conversation"))
 and date(file.mtime).day = date(this.file.name).day
 and date(file.mtime).month = date(this.file.name).month
 and date(file.mtime).year = date(this.file.name).year
-```
+``` -->
 ### Meetings
 
+<!-- Deprecated query: #meeting tag being removed. Replace with field:: type = "meeting"
 ```button
 name QuickAdd: 🗣 Create Meeting Note
 type command
@@ -236,7 +241,7 @@ and date(file.mtime).day = date(this.file.name).day
 and date(file.mtime).month = date(this.file.name).month
 and date(file.mtime).year = date(this.file.name).year
 SORT Created desc
-```
+``` -->
 🔙 [Back to Evening Routine](#Evening)
 
 ---

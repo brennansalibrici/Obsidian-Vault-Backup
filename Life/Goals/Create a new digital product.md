@@ -1,7 +1,6 @@
 ---
-Status: 🟨
-tags:
-  - goal
+Status:
+  - 🟨
 Created: 2024-01-07T09:24:26
 Description: having a product that is on sale at shop.johnmavrick.com
 Why: first step towards passive income + i still have some workflows of mine to share and clarify
@@ -10,6 +9,7 @@ Parent: "[[Continue working on my personal brand]]"
 Area: "[[My Personal Brand]]"
 Order: "2"
 HoursWorked: 41
+fileClass: goal
 ---
 
 ## Related
@@ -27,19 +27,21 @@ actions:
     command: quickadd:choice:0468ea18-5c37-4079-a9ef-25a64cb20934
 
 ```
+<!-- Deprecated query: #goal tag being removed. Replace with field:: type = "goal"
 ```dataview
 table Description, Why
 FROM #goal AND !"Hidden"
 WHERE icontains(file.frontmatter.Parent, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 ### Projects
+<!-- Deprecated query: #project tag being removed. Replace with field:: type = "project"
 ```dataview
 table Description, Why
 FROM #project AND !"Hidden"
 WHERE icontains(this.frontmatter.Goal, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 ## Planning
 ### Objective
 **What is the definition of DONE?**

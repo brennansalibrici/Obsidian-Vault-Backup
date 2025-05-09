@@ -1,8 +1,7 @@
 ---
-tags:
-  - view/custom
 Created: 2023-05-07T11:51:13
 Description: Custom organization of all your notes
+fileClass: view
 ---
 
 > [!INFO] Info

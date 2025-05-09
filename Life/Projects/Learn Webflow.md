@@ -1,8 +1,6 @@
 ---
-Status: 🟧
-tags:
-  - project
-  - hidden
+Status:
+  - 🟧
 Created: 2024-01-07T11:31:24
 Area: "[[My Personal Brand]]"
 Goal: "[[Create landing page]]"
@@ -11,6 +9,7 @@ Order:
 Description: Finish a learning resource to give me the skills to design and create a landing page
 Why: Learning new things is fun and it's actually working towards my content creation pursuits
 P-01: Find a resource
+fileClass: project
 ---
 ## Tasks
 ```meta-bind-button

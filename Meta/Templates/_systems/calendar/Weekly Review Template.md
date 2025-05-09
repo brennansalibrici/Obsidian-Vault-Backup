@@ -28,6 +28,7 @@ where file.name = "Invalid date" AND !completed
 - [ ] For each project you want to work on this week, go to the project's `## Weekly Progress` header and create a new weekly progress for the same week number as this weekly note. #hidden 
 - [ ] Fill out each `# Plan` section to specify what you want to focus on this week #hidden 
 - [ ] Brainstorm the tasks/steps needed to achieve that plan under the `Tasks` header or your task management app #hidden 
+<!-- Deprecated query: #project tag being removed. Replace with field:: type = "project"
 ```dataview
 TABLE
 P-Invalid date as Plan,
@@ -35,7 +36,7 @@ R-Invalid date as Reflection,
 Status, Deadline, Area
 FROM [[]] AND (#project or #output) AND !"Hidden"
 SORT deadline asc
-```
+``` -->
 ## Recap
 ### Days
 ````datacorejsx

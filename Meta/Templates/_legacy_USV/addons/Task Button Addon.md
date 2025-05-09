@@ -1,4 +1,4 @@
-- [ ] #task Test Task
+- [ ] Test Task
 <% tp.file.cursor(1) %>
 <% tp.file.cursor(1) %>
 

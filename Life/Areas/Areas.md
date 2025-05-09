@@ -1,7 +1,8 @@
 ---
-tags: view/note
-Links: "[[Home]]"
+Links:
+  - "[[Home]]"
 Created: 2023-05-07T11:51:16
+fileClass: view
 ---
 
 ```button

@@ -1,14 +1,15 @@
 ---
-Status: ⬛️
-tags:
-  - input/articles
+Status:
+  - ⬛️
 Links:
   - "[[Personal Knowledge Management]]"
 Created: 2023-05-07T11:51:13
 Author: Eleanor Konik
 Finished: 2022-11-20
 Rating: 8.5
-Source: https://www.obsidianroundup.org/the-konik-method-for-making-notes/
+Source:
+  - https://www.obsidianroundup.org/the-konik-method-for-making-notes/
+fileClass: article
 ---
 
 ## Summary

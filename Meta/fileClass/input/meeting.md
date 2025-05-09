@@ -7,14 +7,7 @@ excludes:
 extends: 
 version: "2.2"
 fields:
-  - id: 94vGHG
-    name: Attendees
-    options:
-      dvQueryString: |-
-        dv.pages('#person')
-        .filter(p => !p.file.path.includes('Hidden'))
-    type: MultiFile
-    path: ""
+  
   - id: 8ZTA3T
     command:
       id: insert__presetField__meetingStatus
@@ -40,3 +33,14 @@ fieldsOrder:
   - 8ZTA3T
   - 94vGHG
 ---
+<!-- Deprecated query: #person tag being removed. Replace with field:: type = "person"
+- id: 94vGHG
+    name: Attendees
+    options:
+      dvQueryString: |-
+        dv.pages('#person')
+        .filter(p => !p.file.path.includes('Hidden'))
+    type: MultiFile
+    path: ""
+
+-->

@@ -41,12 +41,13 @@ actions:
 
 ```
 
+<!-- Deprecated query: #goal tag being removed. Replace with field:: type = "goal"
 ```dataview
 table list("🎯 " + Description, "💡 " + Why) as "Details"
 FROM #goal AND !"Hidden"
 WHERE contains(file.frontmatter.Timeframe, this.file.name)
 SORT Order, file.name asc
-```
+``` -->
 
 ## Recap
 ### Months

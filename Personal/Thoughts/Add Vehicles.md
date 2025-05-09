@@ -1,10 +1,10 @@
 ---
-Status: 🌿
-tags:
-  - thought/musings
+Status:
+  - 🌿
 Links:
   - "[[My Obsidian]]"
 Created: 2025-04-04T05:35:35
+fileClass: thought
 ---
 ## Context
 %% Why am I making a note on this? What happened? %%

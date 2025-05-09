@@ -1,7 +1,6 @@
 ---
-Status: ⬛️
-tags:
-  - input/videos
+Status:
+  - ⬛️
 Links:
   - "[[Obsidian]]"
   - "[[Personal Knowledge Management]]"
@@ -9,7 +8,9 @@ Created: 2023-05-07T11:51:13
 Author: "[[Eleanor Konik]]"
 Finished: 2022-06-27
 Rating: 8
-Source: https://www.youtube.com/watch?v=nO5N_x2so0g
+Source:
+  - https://www.youtube.com/watch?v=nO5N_x2so0g
+fileClass: video
 ---
 
 ## Notes

@@ -1,7 +1,6 @@
 ---
-Status: 🟨
-tags:
-  - input/books
+Status:
+  - 🟨
 Links:
   - "[[Personal Knowledge Management]]"
   - "[[My Second Brain]]"
@@ -10,8 +9,10 @@ Author: "[[Tiago Forte]]"
 Collection: "[[Test Collection]]"
 Finished: 2022-06-29
 Rating: 8
-Source: Readwise
+Source:
+  - Readwise
 Application: "[[Building a Second Brain Application]]"
+fileClass: book
 ---
 ## Info
 > [!INFO] Application Note

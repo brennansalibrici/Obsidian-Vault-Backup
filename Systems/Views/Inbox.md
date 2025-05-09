@@ -1,9 +1,9 @@
 ---
-Status: ""
-tags:
-  - view/custom
+Status:
+  - ""
 Links:
   - "[[Home]]"
+fileClass: view
 ---
 
 ````datacorejsx

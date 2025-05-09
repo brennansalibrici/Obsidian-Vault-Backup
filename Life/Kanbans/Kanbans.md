@@ -1,9 +1,9 @@
 ---
-tags: view/note
 Links:
   - "[[Home]]"
   - "[[Projects]]"
 Created: 2023-05-07T11:51:16
+fileClass: view
 ---
 
 See [[Kanban Plugin]] for how to use!
