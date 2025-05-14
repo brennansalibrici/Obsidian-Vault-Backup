@@ -1,7 +1,7 @@
 {
   "autoFold": false,
-  "hideEmptyEntry": false,
-  "hideEmptyEntryInSideDock": false,
+  "hideEmptyEntry": true,
+  "hideEmptyEntryInSideDock": true,
   "propertiesVisible": "",
   "propertyHideAll": "hideMetadata",
   "entries": [
@@ -9,18 +9,54 @@
       "name": "Headings",
       "hide": {
         "tableInactive": true,
-        "tableActive": false,
-        "fileProperties": false,
-        "allProperties": false
+        "tableActive": true,
+        "fileProperties": true,
+        "allProperties": true
       }
     },
     {
-      "name": "",
+      "name": "aliases",
       "hide": {
         "tableInactive": true,
-        "tableActive": false,
-        "fileProperties": false,
-        "allProperties": false
+        "tableActive": true,
+        "fileProperties": true,
+        "allProperties": true
+      }
+    },
+    {
+      "name": "cssclass",
+      "hide": {
+        "tableInactive": true,
+        "tableActive": true,
+        "fileProperties": true,
+        "allProperties": true
+      }
+    },
+    {
+      "name": "tags",
+      "hide": {
+        "tableInactive": true,
+        "tableActive": true,
+        "fileProperties": true,
+        "allProperties": true
+      }
+    },
+    {
+      "name": "headings",
+      "hide": {
+        "tableInactive": true,
+        "tableActive": true,
+        "fileProperties": true,
+        "allProperties": true
+      }
+    },
+    {
+      "name": "hideMetadata",
+      "hide": {
+        "tableInactive": true,
+        "tableActive": true,
+        "fileProperties": true,
+        "allProperties": true
       }
     }
   ]

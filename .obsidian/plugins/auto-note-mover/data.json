@@ -112,6 +112,11 @@
       "folder": "My Outputs/My Brainstorms",
       "tag": "#output/brainstorm",
       "pattern": ""
+    },
+    {
+      "folder": "Meta/Templates/inputs/fleetingNoteTemplate",
+      "tag": "",
+      "pattern": ".*"
     }
   ],
   "use_regex_to_check_for_excluded_folder": true,

@@ -1,11 +1,7 @@
 {
   "command_timeout": 5,
-  "templates_folder": "Hidden/My Templates",
+  "templates_folder": "Meta/Templates",
   "templates_pairs": [
-    [
-      "convertToggles",
-      ""
-    ],
     [
       "",
       ""
@@ -13,9 +9,9 @@
   ],
   "trigger_on_file_creation": true,
   "auto_jump_to_cursor": true,
-  "enable_system_commands": true,
+  "enable_system_commands": false,
   "shell_path": "",
-  "user_scripts_folder": "Hidden/Scripts",
+  "user_scripts_folder": "Meta/Scripts",
   "enable_folder_templates": true,
   "folder_templates": [
     {
@@ -41,6 +37,10 @@
     {
       "folder": "My Calendar/My Yearly Notes",
       "template": "Hidden/My Templates/periodic/Yearly Review Template.md"
+    },
+    {
+      "folder": "Inputs/FleetingNotesApp",
+      "template": "Meta/Templates/inputs/fleetingNoteTemplate.md"
     }
   ],
   "enable_file_templates": false,
@@ -57,5 +57,10 @@
     ""
   ],
   "intellisense_render": 1,
-  "enable_ribbon_icon": true
+  "enable_ribbon_icon": true,
+
+  "trigger_user_scripts_on_file_open": true,
+  "user_script_file_open_paths": [
+    "Scripts/inputs/FleetingNotesApp/fileClass.js"
+  ]
 }

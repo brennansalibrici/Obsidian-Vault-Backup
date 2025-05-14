@@ -1,6 +1,5 @@
 ---
-Links:
-  - "[[Home]]"
+Links: ["[[Home]]"]
 Created: 2023-05-07T11:51:13
 fileClass: view
 ---

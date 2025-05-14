@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d7926c51c2d3aa9b",
+        "id": "a9004e9d99e39839",
         "type": "tabs",
         "children": [
           {
-            "id": "10f33ec0124bfc1c",
+            "id": "93340e0242fe70c1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Systems/Views/Addons.md",
+                "file": "Inputs/FleetingNotesApp/FleetingNotesApp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Addons"
+              "title": "FleetingNotesApp"
             }
           }
         ]
@@ -86,28 +86,20 @@
             "id": "64ebb0168f4ae63c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hidden/Utilities/fn_status values.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "fn_status values"
+              "title": "New tab"
             }
           },
           {
             "id": "ca1599628ac4324d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hidden/My Templates/addons/ToDoist Add Task Button Addon.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "ToDoist Add Task Button Addon"
+              "title": "New tab"
             }
           },
           {
@@ -128,7 +120,7 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
@@ -150,7 +142,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -308,49 +300,55 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "d27ec8b508b004a3",
+  "active": "93340e0242fe70c1",
   "lastOpenFiles": [
-    "Systems/Calendar/Weekly Notes/2024-W01.md",
-    "Life/Kanbans/Create new Obsidian video.md",
-    "Inputs/Input Collections/Test Collection.md",
-    "Personal/ME/Captured Moment.md",
-    "Systems/Calendar/Daily Notes/2024-12-02.md",
-    "Life/Projects/Learn_Customize Obsidian.md",
-    "Systems/Calendar/Daily Notes/2025-04-16.md",
-    "Personal/People/👤 POCs/Jeff Ackers.md",
-    "Personal/People/👤 POCs/Jarin Bush.md",
-    "Personal/People/👤 POCs/Dave Wright.md",
-    "Personal/People/👤 POCs/Dave Rosen.md",
-    "Personal/People/👤 POCs/Chris Young.md",
-    "Personal/People/👤 POCs/Chris Cisneros.md",
-    "Personal/People/👤 POCs/Bruce Hafer.md",
-    "Life/Areas/Work/🏢 Customers/Xcel Energy.md",
-    "Life/Areas/Work/🏢 Customers/United Health Group.md",
-    "Life/Areas/Work/🏢 Customers/UNFI.md",
-    "Life/Areas/Work/🏢 Customers/Thompson Reuters.md",
-    "Life/Areas/Work/🏢 Customers/Target.md",
-    "Life/Areas/Work/⚡Electric Equipment/Switchgear/T0587 MSB3.md",
-    "Life/Areas/Work/⚡Electric Equipment/Switchgear/T0587 MSB2.md",
-    "Life/Areas/Work/⚡Electric Equipment/Switchgear/T0587 MSB1.md",
-    "Life/Areas/Work/🛠 My Jobs/T0587 GFR 2025.md",
-    "Life/Areas/Work/📍 Sites/T0587 Galesburg, MI.md",
-    "Life/Areas/Work/📍 Sites/T0559 Indianapolis, IN.md",
-    "Life/Areas/Work/⚡Electric Equipment/Switchgear/T0551 MSB2.md",
+    "Meta/fileClass/input/fleetingNote.md",
+    "Meta/fileClass/_global/global.md",
+    "Meta/fileClass/_global/global type value list.md",
+    "Inputs/FleetingNotesApp/Untitled.md",
+    "Meta/Utilities/Advanced Status Values.md",
+    "Meta/Utilities/Basic Status Values.md",
+    "Meta/Utilities/Person Types.md",
+    "Meta/Utilities/fn_status values.md",
+    "Meta/Utilities/Evergreen Notes Status Values.md",
+    "Meta/Templates/inputs/fleetingNoteTemplate.md",
+    "Meta/fileClass/_global/_global.md",
+    "Life/Areas/My Obsidian/Setup Ideas/Setup Ideas.md",
+    "Inputs/FleetingNotesApp/What happens now is a different note.md",
+    "Inputs/FleetingNotesApp/Test I wonder what happens when I do thi.md",
+    "Inputs/FleetingNotesApp/New Test for Fleeting Notsz.md",
+    "Inputs/FleetingNotesApp/Target sites .md",
+    "Inputs/FleetingNotesApp/Untitled 2.md",
+    "Untitled",
+    "Meta/fileClass/input/input.md",
+    "Inputs/FleetingNotesApp/Untitled 1.md",
+    "Inputs/FleetingNotesApp/Test.md",
+    "Inputs/FleetingNotesApp/FleetingNotesApp.md",
+    "Inputs/FleetingNotesApp/Tet.md",
+    "Inputs/FleetingNotesApp/test.md",
+    "Inputs/FleetingNotesApp/Test Note.md",
+    "Inputs/FleetingNotesApp/Testing the note ahain.md",
+    "Inputs/FleetingNotesApp/Test Note 2.md",
+    "Meta/Scripts/inputs/assignFleetingNotesClass.js.~tmp",
+    "Archives/Internal Archives/convertOldDailyNotes.js",
+    "Archives/Internal Archives/convertToggles.js",
+    "Archives/Internal Archives/dataviewUtils.js",
+    "Meta/Scripts/inputs/assignFleetingNotesClass.js",
+    "Inputs/FleetingNotesApp/Untitled",
+    "Meta/Scripts/inputs/convert_FleetingNote_2_fileClass_fleetingNote.js",
+    "Meta/Scripts/inputs/FleetingNotesApp",
+    "Meta/Scripts/inputs/New folder",
+    "Files/My Attachments/file-20250510025433554989png.png",
+    "Files/My Attachments/file-20250510025427180819png.png",
+    "Files/My Attachments/file-20250510024008331105png.png",
+    "Files/My Attachments/file-20250510024003736634png.png",
+    "Files/My Attachments/Pic Test.png",
+    "Files/My Attachments/Pasted image 20250508203302.png",
     "Files/Canvases/Creating new task.canvas",
-    "My Files/My Attachments/Pasted image 20250508203302.png",
-    "My Files/My Attachments",
-    "My Files",
-    "Meta/Templates/_life/areas",
-    "Meta/Templates/_trading",
-    "Meta/Templates/_systems",
-    "Meta/Templates/_personal",
-    "Meta/Templates/_life",
-    "Meta/Templates/_legacy_USV",
-    "Meta/Templates/_knowledge",
-    "Meta/Templates/_files",
     "Personal/Greenhouse/Canvases/My Note-Making Station Board.canvas",
     "Systems/Dashboards/Captured Moments Dashboard.canvas",
     "Systems/Dashboards/Canvases/My Canvas Vision Board.canvas",
@@ -359,11 +357,6 @@
     "Files/My Attachments/FA Testing .png",
     "Files/My Attachments/FA Test 2.png",
     "_Files/My Attachments/Pasted image 20250503104821.png",
-    "My Files/My Attachments/Test.png",
-    "ME/Obsidian-Vault-Backup_ME_Emotions.md at main · brennansalibrici_Obsidian-Vault-Backup_files/gravatar-user-420.png",
-    "_Files/My Attachments/Pasted image 20250423201214.png",
-    "Files/My Attachments/Screenshot 2025-04-15 002323.png",
-    "_Files/My Attachments/Pasted image 20250415002512.png",
     "My Canvases/Untitled.canvas"
   ]
 }

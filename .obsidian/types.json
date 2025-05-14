@@ -76,7 +76,7 @@
     "poc": "multitext",
     "customer": "text",
     "elecequipment": "multitext",
-    "type": "text",
+    "type": "multitext",
     "phone": "multitext",
     "email": "multitext",
     "status": "multitext",

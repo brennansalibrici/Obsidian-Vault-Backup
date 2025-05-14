@@ -185,7 +185,7 @@
           "setFileExistsBehavior": false
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "id": "0ffdbc95-21f3-4fc4-8b36-915cfe73a573",
@@ -845,6 +845,13 @@
         }
       ],
       "collapsed": true
+    },
+    {
+      "id": "4dbc17e6-a492-4e0f-b7cb-07533c9d6149",
+      "name": "Create FleetingNote",
+      "type": "Macro",
+      "command": true,
+      "macroId": "a51b0872-ab59-4df1-90dd-12fcdbaf0cb5"
     }
   ],
   "macros": [
@@ -1361,14 +1368,57 @@
         }
       ],
       "runOnStartup": false
+    },
+    {
+      "name": "Create FleetingNote",
+      "id": "a51b0872-ab59-4df1-90dd-12fcdbaf0cb5",
+      "commands": [
+        {
+          "name": "Untitled Template Choice",
+          "type": "NestedChoice",
+          "id": "6ec9e04d-228a-4e80-ab37-ab9d8dd9e3e7",
+          "choice": {
+            "id": "6cbbc1a7-14c4-422e-bcb8-9fde4aadf8ef",
+            "name": "Untitled Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Meta/Templates/inputs/fleetingNoteTemplate.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:Name}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "Inputs/FleetingNotesApp"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": true,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
     }
   ],
   "inputPrompt": "single-line",
   "devMode": false,
   "templateFolderPath": "",
   "announceUpdates": true,
-  "version": "1.8.1",
+  "version": "1.13.2",
   "disableOnlineFeatures": false,
+  "enableRibbonIcon": false,
   "ai": {
     "defaultModel": "Ask me",
     "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",

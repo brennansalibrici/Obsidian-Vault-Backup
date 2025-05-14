@@ -1,6 +1,5 @@
 ---
-Links:
-  - "[[Home]]"
+Links: ["[[Home]]"]
 Created: 2023-10-15T03:02:20
 Description: Manage all your tasks
 fileClass: view

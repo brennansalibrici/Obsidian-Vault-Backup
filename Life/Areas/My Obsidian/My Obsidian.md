@@ -30,7 +30,7 @@ sort: dateDescending
 ```
 
 ## My 2nd Brain Plans
-### Short Term
+
 #### File Management
 - Save attachements to an external cloud based location and only store links to them in the actual Obsidian vault. The only exception are attachments that we know we will want available when reception/WIFI is unavailable or at least unreliable (jobsites, airplanes, etc)
 - Inputs will be classified as either raw or reviewed (or something along those lines). We basically want a means to show whether it is unprocessed or processed and rather than doing this via folders, we will do it with yanl frontmatter. This is a single suggestion of the important things to capture:

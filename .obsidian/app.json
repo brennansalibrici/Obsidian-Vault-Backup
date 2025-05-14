@@ -1,6 +1,6 @@
 {
   "legacyEditor": false,
-  "livePreview": true,
+  "livePreview": false,
   "promptDelete": false,
   "alwaysUpdateLinks": true,
   "spellcheck": true,
@@ -19,5 +19,6 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "USV Notes",
   "showLineNumber": false,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "autoConvertHtml": true
 }

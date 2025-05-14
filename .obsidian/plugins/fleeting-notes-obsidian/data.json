@@ -1,7 +1,7 @@
 {
   "auto_generate_title": true,
-  "fleeting_notes_folder": "FleetingNotesApp",
-  "attachments_folder": "My Files/My Attachments",
+  "fleeting_notes_folder": "Inputs/FleetingNotesApp",
+  "attachments_folder": "Files/My Attachments",
   "note_template": "---\n# Mandatory fields\nid: \"${id}\"\n# Optional fields\ntitle: \"${title}\"\ntags: ${tags}\nsource: \"${source}\"\nsource_title: \"${source_title}\"\nsource_description: \"${source_description}\"\nsource_image_url: \"${source_image_url}\"\ncreated_date: \"${created_date}\"\nmodified_date: \"${last_modified_date}\"\n---\n${content}",
   "sync_on_startup": true,
   "last_sync_time": "2025-05-03T22:57:27.282Z",
@@ -9,8 +9,11 @@
   "sync_obsidian_links": false,
   "sync_obsidian_links_title": "Links from Obsidian",
   "notes_filter": "",
+  "email": "brennansalibrici@gmail.com",
+  "password": "pound&1Puppy",
+  "supabaseId": "82c07420-d15b-4c98-b18c-80f7e846a51d",
   "encryption_key": "",
-  "sync_interval": 91,
+  "sync_interval": 12532,
   "date_format": "MM-DD-YYYYTHH:mm",
   "title_template": "${title}"
 }
