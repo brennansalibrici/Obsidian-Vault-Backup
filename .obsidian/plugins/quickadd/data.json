@@ -99,15 +99,15 @@
           "name": "👤 Create Person Note",
           "type": "Template",
           "command": true,
-          "templatePath": "Hidden/My Templates/notes/Person Template.md",
+          "templatePath": "Meta/Templates/personal/Person Template.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "{{name}}"
+            "format": "{{VALUE:Full Name}}"
           },
           "folder": {
             "enabled": true,
             "folders": [
-              "My Social Circle"
+              "Personal/People"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -117,9 +117,9 @@
           "openFileInNewTab": {
             "enabled": true,
             "direction": "vertical",
-            "focus": true
+            "focus": false
           },
-          "openFile": true,
+          "openFile": false,
           "openFileInMode": "default",
           "fileExistsMode": "Increment the file name",
           "setFileExistsBehavior": false
@@ -842,9 +842,136 @@
           "type": "Macro",
           "command": true,
           "macroId": "22e50f7c-c2b8-44c2-914c-c42d466dffb7"
+        },
+        {
+          "id": "d49c0f07-5291-4e7b-8d5a-ccb5037c9ae8",
+          "name": "👷 Create New Sub",
+          "type": "Macro",
+          "command": true,
+          "macroId": "915cfa03-3be0-444d-a658-348955995f50"
+        },
+        {
+          "id": "564448b8-36ce-42da-a8fb-555f3e59211e",
+          "name": "Create New TripUnit",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/work/Trip Unit Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "Work/⚡Electric Equipment/Trip Units"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
+        },
+        {
+          "id": "41cef0bd-68d8-4f16-985d-b0867ffc7157",
+          "name": "Create New Relay",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/work/Relay Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "Work/⚡Electric Equipment/Relays"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
+        },
+        {
+          "id": "7b28cb55-a24e-4db7-95f7-493cee451568",
+          "name": "Create New Breaker",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/work/Breaker Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "Work/⚡Electric Equipment/Breakers"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
+        },
+        {
+          "id": "c2ead97c-b969-4f43-a36a-bb8321364ea8",
+          "name": "Create New Fuse",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/work/Fuse Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "Work/⚡Electric Equipment/Fuses"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "id": "4dbc17e6-a492-4e0f-b7cb-07533c9d6149",
@@ -1018,7 +1145,7 @@
             "name": "New Customer Template Choice",
             "type": "Template",
             "command": false,
-            "templatePath": "Hidden/My Templates/work/Customer Template.md",
+            "templatePath": "Meta/Templates/work/Customer Template.md",
             "fileNameFormat": {
               "enabled": true,
               "format": "{{VALUE:Name}}"
@@ -1026,7 +1153,7 @@
             "folder": {
               "enabled": true,
               "folders": [
-                "My Areas/Work/🏢 Customers"
+                "Work/🏢 Customers"
               ],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,
@@ -1102,7 +1229,7 @@
             "name": "New Job Template Choice",
             "type": "Template",
             "command": false,
-            "templatePath": "Hidden/My Templates/work/Job Template.md",
+            "templatePath": "Meta/Templates/work/Job Template.md",
             "fileNameFormat": {
               "enabled": true,
               "format": "{{VALUE:Job Name}}"
@@ -1110,7 +1237,7 @@
             "folder": {
               "enabled": true,
               "folders": [
-                "My Areas/Work/🛠 My Jobs"
+                "Work/🛠 My Jobs"
               ],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,
@@ -1122,7 +1249,7 @@
               "direction": "vertical",
               "focus": true
             },
-            "openFile": false,
+            "openFile": true,
             "openFileInMode": "default",
             "fileExistsMode": "Increment the file name",
             "setFileExistsBehavior": false
@@ -1144,7 +1271,7 @@
             "name": "New POC Template Choice",
             "type": "Template",
             "command": false,
-            "templatePath": "Hidden/My Templates/work/POC Template.md",
+            "templatePath": "Meta/Templates/work/POC Template.md",
             "fileNameFormat": {
               "enabled": true,
               "format": "{{VALUE:Full Name}}"
@@ -1152,7 +1279,7 @@
             "folder": {
               "enabled": true,
               "folders": [
-                "My Social Circle/👤 POCs"
+                "Work/👤 POCs"
               ],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,
@@ -1228,15 +1355,15 @@
             "name": "New Site Template Choice",
             "type": "Template",
             "command": false,
-            "templatePath": "Hidden/My Templates/work/Site Template.md",
+            "templatePath": "Meta/Templates/work/Site Template.md",
             "fileNameFormat": {
               "enabled": true,
-              "format": "{{VALUE:Name}}"
+              "format": "{{VALUE:Site Name}}"
             },
             "folder": {
               "enabled": true,
               "folders": [
-                "My Areas/Work/📍 Sites"
+                "Work/📍 Sites"
               ],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,
@@ -1403,6 +1530,48 @@
               "focus": true
             },
             "openFile": true,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Create New Subcontractor",
+      "id": "915cfa03-3be0-444d-a658-348955995f50",
+      "commands": [
+        {
+          "name": "New Sub Template Choice",
+          "type": "NestedChoice",
+          "id": "f802e147-5972-45ca-b0a7-bbfca2f0be6f",
+          "choice": {
+            "id": "a2a0454c-0fc0-458e-85df-1b725aa2f0b7",
+            "name": "New Sub Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Meta/Templates/work/Subcontractor Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:Name}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "Work/👷 Subcontractors"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
             "openFileInMode": "default",
             "fileExistsMode": "Increment the file name",
             "setFileExistsBehavior": false

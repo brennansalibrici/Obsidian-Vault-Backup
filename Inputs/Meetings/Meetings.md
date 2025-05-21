@@ -1,6 +1,5 @@
 ---
-Links:
-  - "[[Home]]"
+Links: ["[[Home]]"]
 Created: 2023-05-13T04:12:50
 fileClass: note
 ---

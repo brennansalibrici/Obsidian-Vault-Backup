@@ -1,12 +1,74 @@
 ---
-Status: 
-Created: 2025-05-05T12:07:43
+# CLASS DEFINITION
 fileClass: person
-KeepInTouch: false
-LastChatted: 
-Summary:
+
+# INHERITS FROM GLOBAL TEMPLATE
+# CORE IDENTITY FIELDS:
+id: <% tp.date.now("x") %>
+created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
+last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
+title: <% tp.file.title %>
+
+# STATUS & WORKFLOW FIELDS:
+status: [🟧 in progress]
+type: []
+tags: []
+category: note
+entered: false
+archived: false
+priority: ⚪ None
+visibility: 🔒 private
+
+# CONTENT & RELATIONSHIPS:
+notes: "{{VALUE:Notes}}"
+related: []
+
+# SOURCE BLOCK:
+source:
+  - descriptor: ""
+    link: ""
+
+# MEDIA BLOCK:
+media:
+  - media type: ""
+    media link: ""
+
+# PERSON DEFINITION
+full_name: "{{VALUE:Full Name}}"
+person_type: "{{VALUE:Family,Friend,Work,Other,POC}}"
+phone:
+  - phone_label: ""
+    phone_number: ""
+email:
+  - email_label: ""
+    email_address: ""
+last_chatted: null
 ---
+
 ## Details
+---
+
+## Events
+---
+
+## Conversations
+---
+Query in here
+
+
+## Thoughts
+---
+Query in here
+
+
+## Questions To Ask
+---
+Query in here
+
+
+
+
+## Old Details
 ## Events
 ## Conversations
 %% Feel free to just make a link to this header if you had a quick conversation with someone that you logged in the `Conversations` part of your daily template %%

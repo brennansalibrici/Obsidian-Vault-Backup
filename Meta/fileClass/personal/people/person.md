@@ -2,7 +2,7 @@
 tags: 
 mapWithTag: true
 fields:
-  - name: LastChatted
+  - name: last_chatted
     type: Date
     options:
       dateShiftInterval: 1 day
@@ -11,17 +11,12 @@ fields:
       linkPath: ""
     path: ""
     id: 03eVs6
-  - name: Summary
-    type: Input
-    options: {}
-    path: ""
-    id: zj3X3F
-  - name: Full Name
+  - name: full_name
     type: Input
     options: {}
     path: ""
     id: k4woZR
-  - name: Type
+  - name: person_type
     type: Select
     options:
       sourceType: ValuesList
@@ -33,14 +28,14 @@ fields:
         "5": POC
     path: ""
     id: kUNAvn
-  - name: Phone
+  - name: phone
     type: ObjectList
     options:
       displayTemplate: ""
       itemDisplayTemplate: ""
     path: ""
     id: H91N40
-  - name: Label
+  - name: phone_label
     type: Select
     options:
       sourceType: ValuesList
@@ -52,19 +47,19 @@ fields:
         "5": other
     path: H91N40
     id: shuiGd
-  - name: Phone
+  - name: phone_number
     type: Input
     options: {}
     path: H91N40
     id: LAZlva
-  - name: Email
+  - name: email
     type: ObjectList
     options:
       displayTemplate: ""
       itemDisplayTemplate: ""
     path: ""
     id: tDtjqv
-  - name: Label
+  - name: email_label
     type: Select
     options:
       sourceType: ValuesList
@@ -74,30 +69,30 @@ fields:
         "3": other
     path: tDtjqv
     id: iISp3Y
-  - name: Email
+  - name: email_address
     type: Input
     options: {}
     path: tDtjqv
     id: 1DARUS
-version: "2.35"
+version: "2.55"
 limit: 100
-filesPaths: 
+filesPaths:
+  - Personal/People
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: _global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - k4woZR
+  - kUNAvn
   - tDtjqv
-  - 1DARUS
   - iISp3Y
+  - 1DARUS
   - H91N40
   - shuiGd
   - LAZlva
-  - kUNAvn
-  - k4woZR
   - 03eVs6
-  - zj3X3F
 type: 
 position: 
 site: 

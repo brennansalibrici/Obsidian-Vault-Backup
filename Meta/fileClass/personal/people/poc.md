@@ -1,22 +1,23 @@
 ---
 Created: 
-limit: 100
+limit: 20
 mapWithTag: false
 icon: package
 tagNames: 
-filesPaths: 
+filesPaths:
+  - Work/👤 POCs
 bookmarksGroups: 
 excludes: 
-extends: persons/person
-savedViews: 
+extends: personal/people/person
+savedViews: []
 favoriteView: 
 fieldsOrder:
   - V00YcY
   - rphsd8
   - wlkPPg
-version: "2.9"
+version: "2.16"
 fields:
-  - name: Position
+  - name: position
     type: Select
     options:
       sourceType: ValuesList
@@ -30,7 +31,7 @@ fields:
         "7": GF
     path: ""
     id: wlkPPg
-  - name: Site
+  - name: site
     type: Select
     options:
       sourceType: ValuesList
@@ -39,7 +40,7 @@ fields:
         "2": T0587
     path: ""
     id: rphsd8
-  - name: Company
+  - name: company
     type: File
     options: {}
     path: ""

@@ -1,8 +1,10 @@
 ---
+fileClass: fleetingNote
 id: <% tp.date.now("x") %>
 created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 title: <% tp.file.title %>
+entered: false
 archive: false
 fileClass: fleetingNote
 tags: 

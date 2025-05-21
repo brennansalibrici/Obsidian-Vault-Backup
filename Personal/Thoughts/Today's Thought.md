@@ -17,6 +17,6 @@ Test More than one Thought(s)
 %% Are there any actions to take? Did I learn anything?%%
 Test Future
 
-- conversation:: with [[Nate Kinney]] today was dope
+- conversation:: with [[Nate Kinney_old]] today was dope
 - 
 

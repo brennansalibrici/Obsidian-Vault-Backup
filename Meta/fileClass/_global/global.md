@@ -120,8 +120,42 @@ fields:
       valuesList: {}
     path: ""
     id: s8ymuU
-version: "2.81"
-limit: 50
+  - name: related
+    type: MultiFile
+    options: {}
+    path: ""
+    id: UnkJCH
+  - name: category
+    type: Select
+    options:
+      sourceType: ValuesListNotePath
+      valuesList: {}
+      valuesListNotePath: Meta/fileClass/_global/global category values.md
+    path: ""
+    id: SdRHic
+  - name: priority
+    type: Select
+    options:
+      sourceType: ValuesList
+      valuesList:
+        "1": 🔴 High
+        "2": 🟠 Medium
+        "3": 🟢 Low
+        "4": ⚪ None
+    path: ""
+    id: 3loPAo
+  - name: visibility
+    type: Select
+    options:
+      sourceType: ValuesList
+      valuesList:
+        "1": 🔒 private
+        "2": 👁️ internal
+        "3": 🌐 external
+    path: ""
+    id: ChIQSc
+version: "2.125"
+limit: 20
 icon: package
 tagNames: 
 filesPaths: 
@@ -138,9 +172,13 @@ fieldsOrder:
   - 4GPS9S
   - a2W2LQ
   - s8ymuU
+  - SdRHic
   - jNIT0q
   - QfM78Q
+  - 3loPAo
+  - ChIQSc
   - a9vDBu
+  - UnkJCH
   - lOArsn
   - 8BGZNn
   - r1UBS1

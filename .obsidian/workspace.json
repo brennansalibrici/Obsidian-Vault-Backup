@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a9004e9d99e39839",
+        "id": "83d48a69f37da5d9",
         "type": "tabs",
         "children": [
           {
-            "id": "93340e0242fe70c1",
+            "id": "c3b69e63ca9c9659",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Inputs/FleetingNotesApp/FleetingNotesApp.md",
+                "file": "Work/Work.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FleetingNotesApp"
+              "title": "Work"
             }
           }
         ]
@@ -146,7 +146,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 301.5124969482422
+    "width": 263.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -155,7 +155,7 @@
       {
         "id": "06c586803a98bedb",
         "type": "tabs",
-        "dimension": 66.0092807424594,
+        "dimension": 40.909090909090914,
         "children": [
           {
             "id": "4df392febc2841c2",
@@ -256,7 +256,7 @@
       {
         "id": "2e275ca133c5355a",
         "type": "tabs",
-        "dimension": 33.990719257540604,
+        "dimension": 59.09090909090909,
         "children": [
           {
             "id": "50db4f4e28e80db5",
@@ -264,13 +264,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Life/Areas/Family.md",
+                "file": "Work/Work.md",
                 "followCursor": false,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Family"
+              "title": "Outline of Work"
             }
           },
           {
@@ -304,59 +304,59 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "93340e0242fe70c1",
+  "active": "c3b69e63ca9c9659",
   "lastOpenFiles": [
-    "Meta/fileClass/input/fleetingNote.md",
-    "Meta/fileClass/_global/global.md",
-    "Meta/fileClass/_global/global type value list.md",
-    "Inputs/FleetingNotesApp/Untitled.md",
-    "Meta/Utilities/Advanced Status Values.md",
-    "Meta/Utilities/Basic Status Values.md",
-    "Meta/Utilities/Person Types.md",
-    "Meta/Utilities/fn_status values.md",
-    "Meta/Utilities/Evergreen Notes Status Values.md",
-    "Meta/Templates/inputs/fleetingNoteTemplate.md",
-    "Meta/fileClass/_global/_global.md",
-    "Life/Areas/My Obsidian/Setup Ideas/Setup Ideas.md",
-    "Inputs/FleetingNotesApp/What happens now is a different note.md",
-    "Inputs/FleetingNotesApp/Test I wonder what happens when I do thi.md",
-    "Inputs/FleetingNotesApp/New Test for Fleeting Notsz.md",
-    "Inputs/FleetingNotesApp/Target sites .md",
-    "Inputs/FleetingNotesApp/Untitled 2.md",
-    "Untitled",
-    "Meta/fileClass/input/input.md",
-    "Inputs/FleetingNotesApp/Untitled 1.md",
-    "Inputs/FleetingNotesApp/Test.md",
-    "Inputs/FleetingNotesApp/FleetingNotesApp.md",
-    "Inputs/FleetingNotesApp/Tet.md",
-    "Inputs/FleetingNotesApp/test.md",
-    "Inputs/FleetingNotesApp/Test Note.md",
-    "Inputs/FleetingNotesApp/Testing the note ahain.md",
-    "Inputs/FleetingNotesApp/Test Note 2.md",
-    "Meta/Scripts/inputs/assignFleetingNotesClass.js.~tmp",
-    "Archives/Internal Archives/convertOldDailyNotes.js",
-    "Archives/Internal Archives/convertToggles.js",
-    "Archives/Internal Archives/dataviewUtils.js",
-    "Meta/Scripts/inputs/assignFleetingNotesClass.js",
-    "Inputs/FleetingNotesApp/Untitled",
-    "Meta/Scripts/inputs/convert_FleetingNote_2_fileClass_fleetingNote.js",
-    "Meta/Scripts/inputs/FleetingNotesApp",
-    "Meta/Scripts/inputs/New folder",
+    "Work/⚡Electric Equipment/Fuses/Fuses.md",
+    "Work/⚡Electric Equipment/Fuses/GOULD AmpTrap 3000A.md",
+    "Meta/Templates/work/Fuse Template.md",
+    "Meta/fileClass/work/electricalequipment/ocpd/fuse.md",
+    "Meta/fileClass/work/electricalequipment/ocpd/fuse manufacturer list.md",
+    "Meta/Templates/work/Breaker Template.md",
+    "Work/⚡Electric Equipment/Breakers/Breakers.md",
+    "Work/⚡Electric Equipment/Fuses/Test Fuse.md",
+    "Meta/fileClass/work/electricalequipment/ocpd/breaker.md",
+    "Work/⚡Electric Equipment/Fuses",
+    "Meta/fileClass/work/electricalequipment/equipment/equipment.md",
+    "Meta/fileClass/work/electricalequipment/ocpd/breaker_manufacturer_list.md",
+    "Work/⚡Electric Equipment/Relays/Relays.md",
+    "Work/⚡Electric Equipment/Relays/BoltSwitch GFR-1.md",
+    "Work/⚡Electric Equipment/Trip Units/Trip Units.md",
+    "Work/⚡Electric Equipment/Relays/BoltSwitch PMR-480.md",
+    "Work/⚡Electric Equipment/Switchgear/HTDC MSB3.md",
+    "Work/⚡Electric Equipment/Switchgear/HTDC MSB2.md",
+    "Work/⚡Electric Equipment/Trip Units/DigiTrip 520MC.md",
+    "Work/⚡Electric Equipment/Switchgear/HTDC MSB1.md",
+    "Work/⚡Electric Equipment/Trip Units/Cubicle Bus ETU776.md",
+    "Work/⚡Electric Equipment/Trip Units/EntelliGuard MicroVersaTrip+.md",
+    "Work/⚡Electric Equipment/Trip Units/EntelliGuard MicroVersaTrip PM.md",
+    "Work/⚡Electric Equipment/Trip Units/EntelliGuard EntelliGuard+.md",
+    "Work/⚡Electric Equipment/Trip Units/EntelliGuard EntelliGuard TU.md",
+    "Work/⚡Electric Equipment/Trip Units/Ekip Touch LSIG.md",
+    "Work/⚡Electric Equipment/Trip Units/Cubicle Bus ETU745.md",
+    "FleetingNotesApp",
+    "Work/⚡Electric Equipment/Trip Units",
+    "Work/⚡Electric Equipment/Relays",
+    "Work/⚡Electric Equipment/Breakers",
+    "Personal/People",
+    "My Areas/Work/🛠 My Jobs",
+    "My Areas/Work",
+    "My Areas",
+    "My Social Circle/👤 POCs",
+    "Files/My Attachments/Screenshot 2025-04-15 002323.png",
+    "Files/My Attachments/Pic Test.png",
+    "Files/My Attachments/Pasted image 20250508203302.png",
     "Files/My Attachments/file-20250510025433554989png.png",
+    "Files/My Attachments/Pasted image 20250415002454.png",
     "Files/My Attachments/file-20250510025427180819png.png",
     "Files/My Attachments/file-20250510024008331105png.png",
     "Files/My Attachments/file-20250510024003736634png.png",
-    "Files/My Attachments/Pic Test.png",
-    "Files/My Attachments/Pasted image 20250508203302.png",
+    "Files/My Attachments/FA Testing .png",
+    "Files/My Attachments/FA Test 2.png",
     "Files/Canvases/Creating new task.canvas",
     "Personal/Greenhouse/Canvases/My Note-Making Station Board.canvas",
     "Systems/Dashboards/Captured Moments Dashboard.canvas",
     "Systems/Dashboards/Canvases/My Canvas Vision Board.canvas",
     "Systems/Dashboards/Canvases/My Habits Board.canvas",
-    "_Files/My Attachments/Pasted image 20250507200343.png",
-    "Files/My Attachments/FA Testing .png",
-    "Files/My Attachments/FA Test 2.png",
-    "_Files/My Attachments/Pasted image 20250503104821.png",
     "My Canvases/Untitled.canvas"
   ]
 }

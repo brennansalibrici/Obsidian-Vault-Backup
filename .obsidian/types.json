@@ -92,6 +92,8 @@
     "Daily_Reflection": "text",
     "Feeling(s)": "multitext",
     "Switchgear": "multitext",
-    "Importance": "multitext"
+    "Importance": "multitext",
+    "entered": "checkbox",
+    "shunt": "checkbox"
   }
 }
