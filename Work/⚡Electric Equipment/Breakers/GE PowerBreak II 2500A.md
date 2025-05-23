@@ -4,15 +4,13 @@ id: 1747828133172
 created: 2025-05-21 06:48
 last_modified: 2025-05-21 06:48
 title: GE PowerBreak II 2500A
-status:
-  - 🟩 complete
+status: [🟩 complete]
 type: 
-tags: 
+tags: []
 category: note
 entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 notes: notes
 related: 

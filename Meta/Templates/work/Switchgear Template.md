@@ -1,24 +1,40 @@
 ---
-Created: 2025-05-05T12:07:43
+# CLASS DEFINITION:
 fileClass: switchgear
-Equipment Name: "{{VALUE:Name}}"
-Site: "{{VALUE:Site}}"
-Switchgear Type: "{{VALUE:Main Breaker,Bolted Pressure Switch,Main Breaker_Remote Distribution,Main_Tie_Main}}"
-Manufacturer: "{{VALUE:Switchgear Manufacturer, AMP,ABB,Eaton,GE,Siemens,SquareD}}"
-EM Power Nearby: "{{VALUE:EM Power Nearby,True,False}}"
-OCPD Type: "{{VALUE:Breaker,Fuses}}"
-OCPD Manufacturer: "{{VALUE:OCPD Manufacturer,ABB,Eaton,GE,Siemens,SquareD}}"
-OCPD Rating: "{{VALUE:OCPD Rating}}"
-Breaker Type: "{{VALUE:Breaker Type}}"
-TripUnit: "{{VALUE:Trip Unit}}"
-TripUnit Model: "{{VALUE: TripUnit Model}}"
-GF Relay: "{{VALUE:GF Relay Present,true,false}}"
-GF Relay Manufacturer: "{{VALUE:GF Relay Manufacturer,ABB,Eaton,GE,Siemens,SquareD,N/A}}"
-PL Relay: "{{VALUE:PL Relay Present,true,false}}"
-PL Relay Manufacturer: "{{VALUE:PL Relay Manufacturer,ABB,Eaton,GE,Siemens,SquareD,N/A}}"
-Equipment Type: Switchgear
-Equipment Notes: "{{VALUE:Notes}}"
-Equipment Note Links: 
-Equipment Pics:
+
+# **INHERITS FROM GLOBAL TEMPLATE**
+# CORE IDENTITY FIELDS:
+id: <% tp.date.now("x") %>
+created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
+last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
+title: <% tp.file.title %>
+
+# STATUS & WORKFLOW FIELDS:
+status: [🟧 in progress]
+type: []
+tags: []
+category: note
+entered: false
+archived: false
+priority: [⚪ None]
+visibility: 🔒 private
+
+# SWITCHGEAR DEFINITION:
+customer: "{{VALUE:Customer}}"
+site: "{{VALUE:Site}}"
+switchgear_type: "{{VALUE:Main Breaker,Bolted Pressure Switch,Main Breaker _Remote Distribution,Main_Tie_Main}}"
+ocpd_type: "{{VALUE:Breaker,Fuses}}"
+ocpd: "{{VALUE:OCPD}}"
+trip_unit: "{{VALUE:Trip Unit}}"
+plug_size: "{{VALUE:Plug Size}}"
+relays: "{{VALUE: Relays}}"
+em_power_nearby: "{{VALUE:true,false}}"
+
+# CONTENT & RELATIONSHIPS:
+notes: notes
+related: []
+media: "{{VALUE:Pics/Folder Links}}"
+attachments: []
 ---
+
 ## Notes

@@ -4,15 +4,13 @@ id: 1747830688923
 created: 2025-05-21 07:31
 last_modified: 2025-05-21 07:31
 title: Cubicle Bus ETU776
-status:
-  - 🟩 complete
+status: [🟩 complete]
 type: 
-tags: 
+tags: []
 category: note
 entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 notes: notes
 related: 
@@ -30,5 +28,4 @@ tu_model: "ETU776"
 
 ## Notes
 ---
-
 

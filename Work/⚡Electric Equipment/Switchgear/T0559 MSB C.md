@@ -1,9 +1,9 @@
 ---
 fileClass: switchgear
-id: 1747915016252
-created: 2025-05-22 06:56
-last_modified: 2025-05-22 06:56
-title: T0587 MSB1
+id: 1747999202543
+created: 2025-05-23 06:20
+last_modified: 2025-05-23 06:20
+title: T0559 MSB C
 status: [🟩 complete]
 type: 
 tags: []
@@ -13,17 +13,17 @@ archived: false
 priority: [⚪ None]
 visibility: 🔒 private
 customer: "[[Target]]"
-site: "[[T0587 Galseburg, MI]]"
+site: "[[T0559 Indianapolis, IN]]"
 switchgear_type: Main Breaker
 ocpd_type: Breaker
 ocpd: "[[Siemens WL 2000A]]"
-trip_unit: "[[Cubicle Bus ETU776]]"
+trip_unit: "[[Cubicle Bus ETU745]]"
 plug_size: 2000A
-relays: ""
+relays: 
 em_power_nearby: "true"
 notes: notes
 related: 
-media: [https://archkeysolutions-my.sharepoint.com/:f:/g/personal/brennan_salibrici_prokey_com/EneUSdego2lHjdfCvryfhqMBfXrbFjuVsLOwpeq0khQTFg?e=3i2u8a]
+media: [https://archkeysolutions-my.sharepoint.com/:f:/g/personal/brennan_salibrici_prokey_com/ElPz5C8g5kpCmjnNv-BHzA4Bbw86XB9QncvAoNFLFbZhrw?e=KL1aaK]
 attachments:
 ---
 

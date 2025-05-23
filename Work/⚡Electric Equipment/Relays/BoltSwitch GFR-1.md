@@ -4,15 +4,13 @@ id: 1747840231783
 created: 2025-05-21 10:10
 last_modified: 2025-05-21 10:10
 title: BoltSwitch GFR-1
-status:
-  - 🟩 complete
+status: [🟩 complete]
 type: 
-tags: 
+tags: []
 category: note
 entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 notes: notes
 related: 
@@ -32,5 +30,4 @@ trip_type: "Shunt"
 
 ## Notes
 ---
-
 

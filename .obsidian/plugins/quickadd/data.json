@@ -1187,7 +1187,7 @@
             "name": "New Switchgear Template Choice",
             "type": "Template",
             "command": false,
-            "templatePath": "Hidden/My Templates/work/Switchgear Template.md",
+            "templatePath": "Meta/Templates/work/Switchgear Template.md",
             "fileNameFormat": {
               "enabled": true,
               "format": "{{VALUE:Name}}"
@@ -1195,7 +1195,7 @@
             "folder": {
               "enabled": true,
               "folders": [
-                "My Areas/Work/⚡Electric Equipment/Switchgear"
+                "Work/⚡Electric Equipment/Switchgear"
               ],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,

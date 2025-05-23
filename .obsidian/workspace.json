@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "83d48a69f37da5d9",
+        "id": "f9688e3e8830c1e4",
         "type": "tabs",
         "children": [
           {
-            "id": "c3b69e63ca9c9659",
+            "id": "3a93366c70801336",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Work/Work.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Work"
+              "title": "New tab"
             }
           }
         ]
@@ -33,7 +29,7 @@
       {
         "id": "93f00f080efb3236",
         "type": "tabs",
-        "dimension": 38.550724637681164,
+        "dimension": 20.28985507246377,
         "children": [
           {
             "id": "44331de537c86284",
@@ -50,7 +46,7 @@
       {
         "id": "03195c1cb51b65ce",
         "type": "tabs",
-        "dimension": 61.44927536231884,
+        "dimension": 79.71014492753623,
         "children": [
           {
             "id": "66db21eab2fcb693",
@@ -146,7 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263.5
+    "width": 278.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -264,13 +260,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Work/Work.md",
+                "file": "Work/⚡Electric Equipment/Switchgear/HTDC MSB1_1.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Work"
+              "title": "Outline of HTDC MSB1_1"
             }
           },
           {
@@ -304,44 +300,46 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "c3b69e63ca9c9659",
+  "active": "3a93366c70801336",
   "lastOpenFiles": [
-    "Work/⚡Electric Equipment/Fuses/Fuses.md",
-    "Work/⚡Electric Equipment/Fuses/GOULD AmpTrap 3000A.md",
+    "Meta/Templates/work/Switchgear Template.md",
+    "Meta/Templates/work/Trip Unit Template.md",
+    "Meta/Templates/work/Relay Template.md",
     "Meta/Templates/work/Fuse Template.md",
-    "Meta/fileClass/work/electricalequipment/ocpd/fuse.md",
-    "Meta/fileClass/work/electricalequipment/ocpd/fuse manufacturer list.md",
     "Meta/Templates/work/Breaker Template.md",
-    "Work/⚡Electric Equipment/Breakers/Breakers.md",
-    "Work/⚡Electric Equipment/Fuses/Test Fuse.md",
-    "Meta/fileClass/work/electricalequipment/ocpd/breaker.md",
-    "Work/⚡Electric Equipment/Fuses",
-    "Meta/fileClass/work/electricalequipment/equipment/equipment.md",
-    "Meta/fileClass/work/electricalequipment/ocpd/breaker_manufacturer_list.md",
     "Work/⚡Electric Equipment/Relays/Relays.md",
-    "Work/⚡Electric Equipment/Relays/BoltSwitch GFR-1.md",
-    "Work/⚡Electric Equipment/Trip Units/Trip Units.md",
-    "Work/⚡Electric Equipment/Relays/BoltSwitch PMR-480.md",
-    "Work/⚡Electric Equipment/Switchgear/HTDC MSB3.md",
-    "Work/⚡Electric Equipment/Switchgear/HTDC MSB2.md",
-    "Work/⚡Electric Equipment/Trip Units/DigiTrip 520MC.md",
-    "Work/⚡Electric Equipment/Switchgear/HTDC MSB1.md",
-    "Work/⚡Electric Equipment/Trip Units/Cubicle Bus ETU776.md",
-    "Work/⚡Electric Equipment/Trip Units/EntelliGuard MicroVersaTrip+.md",
-    "Work/⚡Electric Equipment/Trip Units/EntelliGuard MicroVersaTrip PM.md",
-    "Work/⚡Electric Equipment/Trip Units/EntelliGuard EntelliGuard+.md",
-    "Work/⚡Electric Equipment/Trip Units/EntelliGuard EntelliGuard TU.md",
+    "Work/⚡Electric Equipment/Relays/tEST relay.md",
+    "Work/⚡Electric Equipment/Breakers/Breakers.md",
+    "Work/⚡Electric Equipment/Breakers/Test Breaker.md",
+    "Work/⚡Electric Equipment/Breakers/ABB SACE Emax 2 3200A.md",
+    "Work/⚡Electric Equipment/Fuses/Fuses.md",
+    "Work/⚡Electric Equipment/Fuses/tEST fuse.md",
+    "Meta/Templates/_global/globalTemplate.md",
+    "Meta/fileClass/_global/global.md",
+    "Work/⚡Electric Equipment/Fuses/GOULD AmpTrap 3000A.md",
+    "Work/⚡Electric Equipment/Switchgear/Switchgear.md",
+    "Work/⚡Electric Equipment/Switchgear/T0559 MSB D.md",
+    "Work/⚡Electric Equipment/Switchgear/T0559 MSB A.md",
+    "Work/⚡Electric Equipment/Switchgear/T3804 MSB3.md",
+    "Work/⚡Electric Equipment/Switchgear/T3804 MSB2.md",
+    "Work/⚡Electric Equipment/Switchgear/T3804 MSB1.md",
     "Work/⚡Electric Equipment/Trip Units/Ekip Touch LSIG.md",
-    "Work/⚡Electric Equipment/Trip Units/Cubicle Bus ETU745.md",
+    "Work/⚡Electric Equipment/Switchgear/T0587 MSB3.md",
+    "Work/⚡Electric Equipment/Switchgear/T0587 MSB2.md",
+    "Work/⚡Electric Equipment/Switchgear/T0587 MSB1.md",
+    "Work/⚡Electric Equipment/Switchgear/T0559 MSB C.md",
+    "Files/My Attachments/IMG_1461.jpg",
+    "Files/My Attachments/IMG_1465.jpg",
+    "My Areas/Work/⚡Electric Equipment/Switchgear",
+    "My Areas/Work/⚡Electric Equipment",
+    "My Areas/Work",
+    "My Areas",
+    "Work/⚡Electric Equipment/Fuses",
     "FleetingNotesApp",
     "Work/⚡Electric Equipment/Trip Units",
     "Work/⚡Electric Equipment/Relays",
     "Work/⚡Electric Equipment/Breakers",
     "Personal/People",
-    "My Areas/Work/🛠 My Jobs",
-    "My Areas/Work",
-    "My Areas",
-    "My Social Circle/👤 POCs",
     "Files/My Attachments/Screenshot 2025-04-15 002323.png",
     "Files/My Attachments/Pic Test.png",
     "Files/My Attachments/Pasted image 20250508203302.png",
@@ -350,8 +348,6 @@
     "Files/My Attachments/file-20250510025427180819png.png",
     "Files/My Attachments/file-20250510024008331105png.png",
     "Files/My Attachments/file-20250510024003736634png.png",
-    "Files/My Attachments/FA Testing .png",
-    "Files/My Attachments/FA Test 2.png",
     "Files/Canvases/Creating new task.canvas",
     "Personal/Greenhouse/Canvases/My Note-Making Station Board.canvas",
     "Systems/Dashboards/Captured Moments Dashboard.canvas",

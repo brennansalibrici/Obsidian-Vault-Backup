@@ -55,10 +55,12 @@ hrs_worked:
     hours: 9
   - day_number: 2
     hours: 10
-  - 
-  - 
-  - day_number: ""
-    hours: ""
+  - day_number: 3
+    hours: 10
+  - day_number: 4
+    hours: 9
+  - day_number: 5
+    hours: 9
 ---
 
 ## Notes

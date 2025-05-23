@@ -4,15 +4,13 @@ id: 1747827667483
 created: 2025-05-21 06:41
 last_modified: 2025-05-21 06:41
 title: Siemens WL 2000A
-status:
-  - 🟩 complete
+status: [🟩 complete]
 type: 
-tags: 
+tags: []
 category: note
 entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 notes: notes
 related: 

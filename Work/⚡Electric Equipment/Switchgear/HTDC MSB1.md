@@ -1,25 +1,30 @@
 ---
-Created: 2025-04-30T20:51:08
 fileClass: switchgear
-Equipment Name: HTDC MSB1
-Site: "[[1_HTDC Brookshire, TX]]"
-Switchgear Type: Main Breaker
-Manufacturer: Eaton
-EM Power Nearby: "False"
-OCPD Type: Breaker
-OCPD Manufacturer: Eaton
-OCPD Rating: "4000"
-Breaker Type: Magnum SB
-TripUnit: Digitrip 520MC
-TripUnit Model: 5ARMLSIG
-GF Relay: "True"
-GF Relay Manufacturer: Eaton
-PL Relay: "False"
-PL Relay Manufacturer: N/A
-Equipment Type: Switchgear
-Equipment Notes: ""
-Equipment Note Links: 
-Equipment Pics: https://archkeysolutions-my.sharepoint.com/:f:/g/personal/brennan_salibrici_prokey_com/ElSehQFg2CBGgqeAqPGWeJ8BlDq9NXyCylx0COtHXIODhA?e=MZHzaZ
+id: 1747912482175
+created: 2025-05-22 06:14
+last_modified: 2025-05-22 06:14
+title: HTDC MSB1
+status: [🟩 complete]
+type: 
+tags: []
+category: note
+entered: true
+archived: false
+priority: [⚪ None]
+visibility: 🔒 private
+notes: notes
+related: 
+media: 
+attachments: [https://archkeysolutions-my.sharepoint.com/:f:/g/personal/brennan_salibrici_prokey_com/ElSehQFg2CBGgqeAqPGWeJ8BlDq9NXyCylx0COtHXIODhA?e=MZHzaZ]
+customer: "[[Ross]]"
+site: "[[HTDC Brookshire, TX]]"
+switchgear_type: Main Breaker
+ocpd_type: Breaker
+ocpd: "[[Eaton Magnum SB 4000A]]"
+trip_unit: "[[Digitrip 520MC]]"
+plug_size: 4000A
+relays: 
+em_power_nearby: "false"
 ---
 
 ## Notes

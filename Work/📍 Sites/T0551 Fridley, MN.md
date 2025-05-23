@@ -10,7 +10,8 @@ tags: []
 category: note
 entered: false
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 notes: ""
 related: 
@@ -28,8 +29,10 @@ siteAddress:
   city: Fridley
   state: MN
   zip: "55432"
-switchgear: ["[[T0551 MSB1]]", "[[T0551 MSB2]]"]
-jobs:
+switchgear:
+  - "[[T0551 MSB1_1]]"
+  - "[[T0551 MSB2_1]]"
+jobs: 
 ---
 
 ## Notes

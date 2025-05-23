@@ -14,19 +14,15 @@ priority: [⚪ None]
 visibility: 🔒 private
 notes: notes
 related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
-equipment_name: "ABB SACE Emax 2"
+equipment_name: ABB SACE Emax 2
 equipment_type: Breaker
-breaker_manufacturer: "ABB"
-breaker_model: "SACE Emax 2"
-frame_size: "3200A"
-current_rating: "3200A"
+breaker_manufacturer: ABB
+breaker_model: SACE Emax 2
+frame_size: 3200A
+current_rating: 3200A
 shunt: false
+media: 
+attachments: 
 ---
 
 ## Notes

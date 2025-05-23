@@ -14,11 +14,7 @@ priority:
   - ⚪ None
 visibility: 🔒 private
 notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
+related:
+media: []
+attachments: []
 ---

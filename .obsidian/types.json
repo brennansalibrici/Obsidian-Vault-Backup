@@ -94,6 +94,8 @@
     "Switchgear": "multitext",
     "Importance": "multitext",
     "entered": "checkbox",
-    "shunt": "checkbox"
+    "shunt": "checkbox",
+    "ocpdd": "multitext",
+    "media": "multitext"
   }
 }

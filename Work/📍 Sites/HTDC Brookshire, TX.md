@@ -10,7 +10,8 @@ tags: []
 category: note
 entered: false
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 notes: ""
 related: 
@@ -28,8 +29,16 @@ siteAddress:
   city: Brookshire
   state: TX
   zip: "77423"
-switchgear: ["[[HTDC MSB1]]", "[[HTDC MSB2]]", "[[HTDC MSB3]]", "[[HTDC MSB4]]", "[[HTDC MSB5]]", "[[HTDC MSB6]]", "[[HTDC MSB7]]", "[[HTDC MSB8]]"]
-jobs:
+switchgear:
+  - "[[HTDC MSB1_1]]"
+  - "[[HTDC MSB2_1]]"
+  - "[[HTDC MSB3_1]]"
+  - "[[HTDC MSB4_1]]"
+  - "[[HTDC MSB5_1]]"
+  - "[[HTDC MSB6_1]]"
+  - "[[HTDC MSB7_1]]"
+  - "[[HTDC MSB8_1]]"
+jobs: 
 ---
 
 ## Notes

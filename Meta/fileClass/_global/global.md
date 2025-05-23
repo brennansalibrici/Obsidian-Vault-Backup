@@ -51,55 +51,6 @@ fields:
         "6": ⬛️ blocked
     path: ""
     id: 4GPS9S
-  - name: source
-    type: ObjectList
-    options:
-      displayTemplate: ""
-      itemDisplayTemplate: ""
-    path: ""
-    id: lOArsn
-  - name: descriptor
-    type: Select
-    options:
-      sourceType: ValuesList
-      valuesList:
-        "1": Observed
-        "2": Website
-        "3": Email
-        "4": Cloud Drive
-    path: lOArsn
-    id: 8BGZNn
-  - name: link
-    type: File
-    options: {}
-    path: lOArsn
-    id: r1UBS1
-  - name: media
-    type: ObjectList
-    options:
-      displayTemplate: ""
-      itemDisplayTemplate: ""
-    path: ""
-    id: vWDsj1
-  - name: media type
-    type: Select
-    options:
-      sourceType: ValuesList
-      valuesList:
-        "1": picture
-        "2": video
-        "3": audio
-    path: vWDsj1
-    id: ppPovD
-  - name: media link
-    type: Media
-    options:
-      embed: false
-      folders: []
-      display: card
-      thumbnailSize: "100"
-    path: vWDsj1
-    id: Ci0lcd
   - name: type
     type: Multi
     options:
@@ -154,7 +105,23 @@ fields:
         "3": 🌐 external
     path: ""
     id: ChIQSc
-version: "2.125"
+  - name: media
+    type: Multi
+    options:
+      sourceType: ValuesList
+      valuesList: {}
+    path: ""
+    id: xQDQJf
+  - name: attachments
+    type: MultiMedia
+    options:
+      embed: false
+      folders: []
+      display: card
+      thumbnailSize: "100"
+    path: ""
+    id: 0JLUZV
+version: "2.167"
 limit: 20
 icon: package
 tagNames: 
@@ -179,11 +146,7 @@ fieldsOrder:
   - ChIQSc
   - a9vDBu
   - UnkJCH
-  - lOArsn
-  - 8BGZNn
-  - r1UBS1
-  - vWDsj1
-  - ppPovD
-  - Ci0lcd
+  - xQDQJf
+  - 0JLUZV
 mapWithTag: false
 ---
