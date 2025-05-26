@@ -12,12 +12,22 @@ extends: personal/people/person
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - 6C8LtR
   - V00YcY
-  - rphsd8
-  - wlkPPg
-version: "2.16"
+  - fsorqs
+version: "2.38"
 fields:
-  - name: position
+  - name: company
+    type: File
+    options: {}
+    path: ""
+    id: V00YcY
+  - name: sites
+    type: MultiFile
+    options: {}
+    path: ""
+    id: 6C8LtR
+  - name: role
     type: Select
     options:
       sourceType: ValuesList
@@ -25,24 +35,10 @@ fields:
         "1": OM
         "2": SSE
         "3": Journeyman
-        "4": Project Manager
-        "5": Apprentice
-        "6": Foreman
-        "7": GF
+        "4": Apprentice
+        "5": Foreman
+        "6": General Foreman
+        "7": Project Manager
     path: ""
-    id: wlkPPg
-  - name: site
-    type: Select
-    options:
-      sourceType: ValuesList
-      valuesList:
-        "1": T0551
-        "2": T0587
-    path: ""
-    id: rphsd8
-  - name: company
-    type: File
-    options: {}
-    path: ""
-    id: V00YcY
+    id: fsorqs
 ---

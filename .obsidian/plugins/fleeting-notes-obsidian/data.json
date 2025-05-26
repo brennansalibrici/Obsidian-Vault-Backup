@@ -10,7 +10,7 @@
   "sync_obsidian_links_title": "Links from Obsidian",
   "notes_filter": "",
   "encryption_key": "",
-  "sync_interval": 122,
+  "sync_interval": 352,
   "date_format": "MM-DD-YYYYTHH:mm",
   "title_template": "${title}"
 }

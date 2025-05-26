@@ -14,3 +14,9 @@ where contains(file.path, "Sub") and file.name != "👷 Subcontractors" and file
 sort file.name asc
 
 ```
+
+## Notes
+🟩 = active and in good standing
+🟨 = active, in good standing, but did not have certain contracts renewed
+🟧 = active, not in good standing
+🟥 = inactive, not in good standing

@@ -1,42 +1,33 @@
 ---
-# CLASS DEFINITION
+# CLASS DEFINITION:
 fileClass: customer
 
-# INHERITS FROM GLOBAL TEMPLATE
+# **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: 1747543887839
-created: 2025-05-17 23:51
-last_modified: 2025-05-17 23:51
+id: 1748024038213
+created: 2025-05-23 13:13
+last_modified: 2025-05-23 13:13
 title: Xcel Energy
 
-# STATUS & WORKFLOW FIELDS:
-status: [🟧 in progress]
+# STATUS & WORKFLOW FIELDS
+status: [🟩 complete]
 type: []
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority: ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 
-# CONTENT & RELATIONSHIPS:
+# CUSTOMER DEFINITION:
+name: "Xcel Energy"
+customer_status: 🟩
+site_rules: []
+
 notes: ""
 related: []
-
-# SOURCE BLOCK:
-source:
-  - descriptor: ""
-    link: ""
-
-# MEDIA BLOCK:
-media:
-  - media type: ""
-    media link: ""
-
-# CUSTOMER DEFINITION
-customer status: "🟩"
-name: "Xcel Energy"
-site Rules: []
+media: []
+attachments: []
 ---
 
 ## Notes

@@ -1,44 +1,36 @@
 ---
-# CLASS DEFINITION
+# CLASS DEFINITION:
 fileClass: customer
 
-# INHERITS FROM GLOBAL TEMPLATE
+# **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: 1747543866365
-created: 2025-05-17 23:51
-last_modified: 2025-05-17 23:51
+id: 1748023991044
+created: 2025-05-23 13:13
+last_modified: 2025-05-23 13:13
 title: United Health Group
 
-# STATUS & WORKFLOW FIELDS:
-status: [🟧 in progress]
+# STATUS & WORKFLOW FIELDS
+status: [🟩 complete]
 type: []
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority: ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 
-# CONTENT & RELATIONSHIPS:
+# CUSTOMER DEFINITION:
+name: "United Health Group"
+customer_status: ⬛️
+site_rules: []
+
 notes: ""
 related: []
-
-# SOURCE BLOCK:
-source:
-  - descriptor: ""
-    link: ""
-
-# MEDIA BLOCK:
-media:
-  - media type: ""
-    media link: ""
-
-# CUSTOMER DEFINITION
-customer status: 🟨
-name: "United Health Group"
-site Rules: []
+media: []
+attachments: []
 ---
 
 ## Notes
 ---
+
 

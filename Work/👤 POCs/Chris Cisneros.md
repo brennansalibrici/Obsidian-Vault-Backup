@@ -1,37 +1,43 @@
 ---
+# CLASS DEFINITION:
 fileClass: poc
-id: 1747691086464
-created: 2025-05-19 16:44
-last_modified: 2025-05-19 16:44
+
+# **INHERITS FROM GLOBAL TEMPLATE**
+# CORE IDENTITY FIELDS:
+id: 1748232490849
+created: 2025-05-25 23:08
+last_modified: 2025-05-25 23:08
 title: Chris Cisneros
-status: [🟧 in progress]
-type: 
+
+#STATUS & WORKFLOW FIELDS:
+status: 🟩 complete
+type: []
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
+
+# POC DEFINITION
 full_name: "Chris Cisneros"
+company: "[[Ross]]"
+sites: "[[HTDC Brookshire, TX]]"
+role: "OM"
 person_type: POC
 phone:
-  - phone_label: mobile
-    phone_number: 346-786-1652
+  - phone_label: "Mobile"
+    phone_number: "346-786-1652"
 email:
-  - email_label: work
-    email_address: christopher.cisneros@ros.com
+  - email_label: "Work"
+    email_address: "christopher.cisneros@ros.com"
 last_chatted: 
-company: "[[Ross]]"
-site: "[[HTDC Brookshire, TX]]"
-position: "OM"
+
+# CONTENT AND RELATIONSHIPS:
+notes: ""
+related: []
+media: []
+attachments: []
 ---
 
 ## Notes

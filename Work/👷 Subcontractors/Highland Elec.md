@@ -1,29 +1,25 @@
 ---
 fileClass: subcontractor
-id: 1747654708760
-created: 2025-05-19 06:38
-last_modified: 2025-05-19 06:38
+id: 1748028481779
+created: 2025-05-23 14:28
+last_modified: 2025-05-23 14:28
 title: Highland Elec
 status:
-  - 🟧 in progress
+  - 🟩 complete
 type: 
 tags: 
 category: note
-entered: false
+entered: true
 archived: false
 priority:
   - ⚪ None
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
 sub_status: 🟩
-sub: "Highland Elec"
+sub_name: "Highland Elec"
+notes: notes
+related: 
+media: 
+attachments:
 ---
 
 ## Notes

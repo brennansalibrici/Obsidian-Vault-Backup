@@ -1,38 +1,43 @@
 ---
+# CLASS DEFINITION:
 fileClass: poc
-id: 1747740613257
-created: 2025-05-20 06:30
-last_modified: 2025-05-20 06:30
+
+# **INHERITS FROM GLOBAL TEMPLATE**
+# CORE IDENTITY FIELDS:
+id: 1748232947651
+created: 2025-05-25 23:15
+last_modified: 2025-05-25 23:15
 title: Adam Lewis
-status:
-  - 🟧 in progress
-type: 
-tags: 
+
+#STATUS & WORKFLOW FIELDS:
+status: 🟩 complete
+type: []
+tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
+
+# POC DEFINITION
 full_name: "Adam Lewis"
+company: "[[Parsons]]"
+sites: "[[T0551 Fridley, MN]]"
+role: "Foreman"
 person_type: POC
 phone:
-  - phone_label: ""
+  - phone_label: "Mobile"
     phone_number: ""
 email:
-  - email_label: ""
+  - email_label: "Work"
     email_address: ""
 last_chatted: 
-company: "[[Parsons]]"
-site: "[[T0551 Fridley, MN]]"
-position: "Foreman"
+
+# CONTENT AND RELATIONSHIPS:
+notes: ""
+related: []
+media: []
+attachments: []
 ---
+
 ## Notes

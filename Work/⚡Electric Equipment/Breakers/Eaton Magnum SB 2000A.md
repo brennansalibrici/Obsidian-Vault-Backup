@@ -1,9 +1,9 @@
 ---
 fileClass: breaker
-id: 1747828520779
-created: 2025-05-21 06:55
-last_modified: 2025-05-21 06:55
-title: Eaton Magnum SB 2000A
+id: 1748061367970
+created: 2025-05-23 23:36
+last_modified: 2025-05-23 23:36
+title: Eaton Magnum SB
 status: [🟩 complete]
 type: 
 tags: []
@@ -12,21 +12,17 @@ entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
+equipment_name: Eaton Magnum SB
+equipment_type: Breaker
+breaker_manufacturer: Eaton
+breaker_model: Magnum SB
+frame_size: 2000A
+current_rating: 2000A
+shunt: false
 notes: notes
 related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
-equipment_name: "Eaton Magnum SB 2000A"
-equipment_type: Breaker
-breaker_manufacturer: "Eaton"
-breaker_model: "Magnum SB"
-frame_size: "2000A"
-current_rating: "2000A"
-shunt: false
+media: [https://archkeysolutions-my.sharepoint.com/:i:/g/personal/brennan_salibrici_prokey_com/EW9BexVlhrhBjObgHuMYY-YBvjBIKBmVY8xw-o7zCR2Tnw?e=2PMpQJ]
+attachments:
 ---
 
 ## Notes

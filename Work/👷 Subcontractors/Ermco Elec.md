@@ -1,29 +1,25 @@
 ---
 fileClass: subcontractor
-id: 1747654736253
-created: 2025-05-19 06:38
-last_modified: 2025-05-19 06:38
-title: Ermco Elec
+id: 1748028438469
+created: 2025-05-23 14:27
+last_modified: 2025-05-23 14:27
+title: ERMCO Elec
 status:
-  - 🟧 in progress
+  - 🟩 complete
 type: 
 tags: 
 category: note
-entered: false
+entered: true
 archived: false
 priority:
   - ⚪ None
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
 sub_status: 🟩
-sub: "Ermco Elec"
+sub_name: "ERMCO Elec"
+notes: notes
+related: 
+media: 
+attachments:
 ---
 
 ## Notes

@@ -1,41 +1,35 @@
 ---
-# CLASS DEFINITION
+# CLASS DEFINITION:
 fileClass: customer
 
-# INHERITS FROM GLOBAL TEMPLATE
+# **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: 1747457275803
-created: 2025-05-16 23:47
-last_modified: 2025-05-16 23:47
+id: 1748023410455
+created: 2025-05-23 13:03
+last_modified: 2025-05-23 13:03
 title: Amazon
 
-# STATUS & WORKFLOW FIELDS:
-status: [🟧 in progress]
+# STATUS & WORKFLOW FIELDS
+status: [🟩 complete]
 type: []
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority: ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 
-# CONTENT & RELATIONSHIPS:
+# CUSTOMER DEFINITION:
+name: "Amazon"
+customer_status: 🟩
+site_rules: []
+
 notes: ""
 related: []
+media: []
+attachments: []
+---
 
-# SOURCE BLOCK:
-source:
-  - descriptor: ""
-    link: ""
-
-# MEDIA BLOCK:
-media:
-  - media type: ""
-    media link: ""
-
-# CUSTOMER DEFINITION
-customer status: "🟩"
-name: "Amazon"
-site Rules: []
+## Notes
 ---
 

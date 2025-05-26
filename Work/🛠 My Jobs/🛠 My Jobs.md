@@ -1,8 +1,4 @@
 ---
-Status: 
-Links: 
-Created: 2025-04-27T08:22:20
-fileClass: note
 ---
 
 ```button
@@ -12,7 +8,7 @@ action QuickAdd: 🛠 Create New Job
 ```
 
 ```dataview
-table job_type as "Job Type", job_status as "Status"
+table scope_of_work as "Job Type", site.customer as "Customer", site_poc as "Site POC", subcontractor as "Sub", sub_poc as "Sub Contact"
 from ""
 where contains(file.path, "My Jobs") and file.name != "🛠 My Jobs" and file.name != "My Jobs Template"
 sort file.name asc

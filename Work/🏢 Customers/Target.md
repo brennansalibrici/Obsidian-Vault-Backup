@@ -1,28 +1,24 @@
 ---
 fileClass: customer
-id: 1747543649459
-created: 2025-05-17 23:47
-last_modified: 2025-05-17 23:47
+id: 1748023833675
+created: 2025-05-23 13:10
+last_modified: 2025-05-23 13:10
 title: Target
-status: [🟧 in progress]
+status: [🟩 complete]
 type: 
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
+name: Target
+customer_status: 🟨
+site_rules: ['rule: "NFPA LOTO procedures for shutdowns. "', 'rule: No Hoodies In The Building']
 notes: ""
 related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
-customer status: 🟩
-name: Target
-site rules: ['rule: "NFPA LOTO procedures for shutdowns. "', 'rule: No Hoodies In The Building']
+media: 
+attachments:
 ---
 
 ## Notes

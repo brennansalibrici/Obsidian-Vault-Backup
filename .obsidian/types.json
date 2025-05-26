@@ -96,6 +96,9 @@
     "entered": "checkbox",
     "shunt": "checkbox",
     "ocpdd": "multitext",
-    "media": "multitext"
+    "media": "multitext",
+    "pk_guys_onSite": "multitext",
+    "site_poc": "multitext",
+    "sub_poc": "multitext"
   }
 }

@@ -1,49 +1,31 @@
 ---
-# CLASS DEFINITION
 fileClass: site
-
-# INHERITS FROM GLOBAL TEMPLATE
-# CORE IDENTITY FIELDS:
-id: 1747546158774
-created: 2025-05-18 00:29
-last_modified: 2025-05-18 00:29
-title: T0559 Indianapolis, IN1
-
-# STATUS & WORKFLOW FIELDS:
-status: [🟧 in progress]
-type: []
+id: 1748025518802
+created: 2025-05-23 13:38
+last_modified: 2025-05-23 13:38
+title: T0559 Indianapolis, IN
+status: [🟩 complete]
+type: 
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority: ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-
-# CONTENT & RELATIONSHIPS:
-notes: ""
-related: []
-
-# SOURCE BLOCK:
-source:
-  - descriptor: ""
-    link: ""
-
-# MEDIA BLOCK:
-media:
-  - media type: ""
-    media link: ""
-
-# CUSTOMER DEFINITION
 customer: "[[Target]]"
-siteName: "T0559 Indianapolis, IN"
-siteStatus: "🟩"
+siteName: T0559 Indianapolis, IN
+siteStatus: 🟩
 siteAddress:
   streetAddress: 7551 West Morris St
   city: Indianapolis
   state: IN
-  zip: 46231
-switchgear: []
-jobs: []
+  zip: "46231"
+switchgear: ["[[T0559 MSB A]]", "[[T0559 MSB B]]", "[[T0559 MSB C]]", "[[T0559 MSB D]]"]
+jobs: 
+notes: notes
+related: 
+media: 
+attachments:
 ---
 
 ## Notes

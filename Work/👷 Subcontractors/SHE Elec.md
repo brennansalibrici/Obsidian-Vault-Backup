@@ -1,29 +1,25 @@
 ---
 fileClass: subcontractor
-id: 1747654813359
-created: 2025-05-19 06:40
-last_modified: 2025-05-19 06:40
+id: 1748028646650
+created: 2025-05-23 14:30
+last_modified: 2025-05-23 14:30
 title: SHE Elec
 status:
-  - 🟧 in progress
+  - 🟩 complete
 type: 
 tags: 
 category: note
-entered: false
+entered: true
 archived: false
 priority:
   - ⚪ None
 visibility: 🔒 private
-notes: ""
+sub_status: 🟨
+sub_name: "SHE Elec"
+notes: notes
 related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
-sub_status: 🟩
-sub: "SHE Elec"
+media: 
+attachments:
 ---
 
 ## Notes

@@ -13,7 +13,7 @@ archived: false
 priority: [⚪ None]
 visibility: 🔒 private
 customer: "[[Medtronic]]"
-site: "[[Medtronic - Brooklyn Park North]]"
+site: "[[BPN (Brooklyn Park North)]]"
 switchgear_type: Bolted Pressure Switch
 ocpd_type: Fuses
 ocpd: "[[GOULD AmpTrap 3000A]]"

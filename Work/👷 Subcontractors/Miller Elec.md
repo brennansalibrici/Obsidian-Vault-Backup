@@ -1,29 +1,25 @@
 ---
 fileClass: subcontractor
-id: 1747654770176
-created: 2025-05-19 06:39
-last_modified: 2025-05-19 06:39
+id: 1748028547610
+created: 2025-05-23 14:29
+last_modified: 2025-05-23 14:29
 title: Miller Elec
 status:
-  - 🟧 in progress
+  - 🟩 complete
 type: 
 tags: 
 category: note
-entered: false
+entered: true
 archived: false
 priority:
   - ⚪ None
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
 sub_status: 🟩
-sub: "Miller Elec"
+sub_name: "Miller Elec"
+notes: notes
+related: 
+media: 
+attachments:
 ---
 
 ## Notes

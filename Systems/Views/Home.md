@@ -37,7 +37,7 @@ fileClass: view
 	- 💡 [[Brainstorms]]
 	- 📖  [[Input Applications]]
 ### Other
-- 👤 [[👤 People]]
+- 👤 [[👤 Peoples]]
 #### Journalling
 - [[My Daily Logs]]
 ## Productivity

@@ -1,37 +1,43 @@
 ---
+# CLASS DEFINITION:
 fileClass: poc
-id: 1747691169192
-created: 2025-05-19 16:46
-last_modified: 2025-05-19 16:46
+
+# **INHERITS FROM GLOBAL TEMPLATE**
+# CORE IDENTITY FIELDS:
+id: 1748232541523
+created: 2025-05-25 23:09
+last_modified: 2025-05-25 23:09
 title: Chris Young
-status: [🟧 in progress]
-type: 
+
+#STATUS & WORKFLOW FIELDS:
+status: 🟩 complete
+type: []
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
+
+# POC DEFINITION
 full_name: "Chris Young"
+company: "[[Target]]"
+sites: "[[T0551 Fridley, MN]]"
+role: "OM"
 person_type: POC
 phone:
-  - phone_label: mobile
-    phone_number: 763-111-1111
+  - phone_label: "Mobile"
+    phone_number: "763-111-1111"
 email:
-  - email_label: work
-    email_address: chris.young@target.com
+  - email_label: "Work"
+    email_address: "chris.young@target.com"
 last_chatted: 
-company: "[[Target]]"
-site: "[[T0551 Fridley, MN]]"
-position: "OM"
+
+# CONTENT AND RELATIONSHIPS:
+notes: ""
+related: []
+media: []
+attachments: []
 ---
 
 ## Notes

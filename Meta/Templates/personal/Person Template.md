@@ -19,30 +19,24 @@ archived: false
 priority: ⚪ None
 visibility: 🔒 private
 
-# CONTENT & RELATIONSHIPS:
-notes: "{{VALUE:Notes}}"
-related: []
-
-# SOURCE BLOCK:
-source:
-  - descriptor: ""
-    link: ""
-
-# MEDIA BLOCK:
-media:
-  - media type: ""
-    media link: ""
-
 # PERSON DEFINITION
 full_name: "{{VALUE:Full Name}}"
 person_type: "{{VALUE:Family,Friend,Work,Other,POC}}"
 phone:
-  - phone_label: ""
-    phone_number: ""
+  - phone_label: "Mobile"
+    phone_number: "{{VALUE:Phone Number}}"
 email:
-  - email_label: ""
-    email_address: ""
+  - email_label: "Personal"
+    email_address: "{{VALUE:Email Address}}"
 last_chatted: null
+
+# CONTENT & RELATIONSHIPS:
+notes: "{{VALUE:Notes}}"
+related: []
+media: []
+attachments: []
+
+
 ---
 
 ## Details
@@ -64,27 +58,3 @@ Query in here
 ## Questions To Ask
 ---
 Query in here
-
-
-
-
-## Old Details
-## Events
-## Conversations
-%% Feel free to just make a link to this header if you had a quick conversation with someone that you logged in the `Conversations` part of your daily template %%
-<!-- Deprecated query: #conversation tag being removed. Replace with field:: type = "conversation"
-```dataview
-table file.link as "Conversation"
-from ""
-where contains(text, "Nate Kinney") and contains(text, "#Conversations")
-sort file.ctime desc
-``` -->
-## Thoughts
-<!-- Deprecated query: #thought tag being removed. Replace with field:: type = "thought"
-```dataview
-TABLE Created, tags
-FROM [[]] AND #thought AND !"Hidden"
-SORT Created desc
-``` -->
-## Questions To Ask
-%% For next time you chat with them %%:

@@ -1,32 +1,25 @@
 ---
 fileClass: subcontractor
-id: 1747654725623
-created: 2025-05-19 06:38
-last_modified: 2025-05-19 06:38
+id: 1748028503698
+created: 2025-05-23 14:28
+last_modified: 2025-05-23 14:28
 title: LaCorte Elec
-status:
-  - 🟧 in progress
+status: [🟩 complete]
 type: 
-tags: 
+tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-notes: ""
+sub_status: 🟨
+sub_name: "LaCorte Elec"
+notes: notes
 related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
-sub_status: 🟩
-sub: "LaCorte Elec"
+media: 
+attachments:
 ---
 
 ## Notes
 ---
-
 

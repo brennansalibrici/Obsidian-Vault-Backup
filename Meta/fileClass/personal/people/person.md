@@ -40,11 +40,11 @@ fields:
     options:
       sourceType: ValuesList
       valuesList:
-        "1": mobile
-        "2": work
-        "3": direct
-        "4": home
-        "5": other
+        "1": Mobile
+        "2": Work
+        "3": Direct
+        "4": Home
+        "5": Other
     path: H91N40
     id: shuiGd
   - name: phone_number
@@ -64,9 +64,9 @@ fields:
     options:
       sourceType: ValuesList
       valuesList:
-        "1": personal
-        "2": work
-        "3": other
+        "1": Personal
+        "2": Work
+        "3": Other
     path: tDtjqv
     id: iISp3Y
   - name: email_address
@@ -74,10 +74,10 @@ fields:
     options: {}
     path: tDtjqv
     id: 1DARUS
-version: "2.55"
+version: "2.61"
 limit: 100
 filesPaths:
-  - Personal/People
+  - Personal/👤 People
 bookmarksGroups: 
 excludes: 
 extends: _global/global

@@ -1,38 +1,43 @@
 ---
+# CLASS DEFINITION:
 fileClass: poc
-id: 1747691324713
-created: 2025-05-19 16:48
-last_modified: 2025-05-19 16:48
+
+# **INHERITS FROM GLOBAL TEMPLATE**
+# CORE IDENTITY FIELDS:
+id: 1748232653475
+created: 2025-05-25 23:10
+last_modified: 2025-05-25 23:10
 title: Dave Wright
-status:
-  - 🟧 in progress
-type: 
-tags: 
+
+#STATUS & WORKFLOW FIELDS:
+status: 🟩 complete
+type: []
+tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
+
+# POC DEFINITION
 full_name: "Dave Wright"
+company: "[[Moore Elec]]"
+sites: "[[T0587 Galesburg, MI]]"
+role: "Foreman"
 person_type: POC
 phone:
-  - phone_label: ""
+  - phone_label: "Mobile"
     phone_number: ""
 email:
-  - email_label: ""
+  - email_label: "Work"
     email_address: ""
 last_chatted: 
-company: "[[Moore Elec]]"
-site: "[[T0587 Galseburg, MI]]"
-position: "Foreman"
+
+# CONTENT AND RELATIONSHIPS:
+notes: ""
+related: []
+media: []
+attachments: []
 ---
+
 ## Notes

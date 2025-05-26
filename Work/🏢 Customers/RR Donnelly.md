@@ -1,44 +1,36 @@
 ---
-# CLASS DEFINITION
+# CLASS DEFINITION:
 fileClass: customer
 
-# INHERITS FROM GLOBAL TEMPLATE
+# **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: 1747543626460
-created: 2025-05-17 23:47
-last_modified: 2025-05-17 23:47
-title: RR Donelly
+id: 1748023781402
+created: 2025-05-23 13:09
+last_modified: 2025-05-23 13:09
+title: RR Donnelly
 
-# STATUS & WORKFLOW FIELDS:
-status: [🟧 in progress]
+# STATUS & WORKFLOW FIELDS
+status: [🟩 complete]
 type: []
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority: ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 
-# CONTENT & RELATIONSHIPS:
+# CUSTOMER DEFINITION:
+name: "RR Donnelly"
+customer_status: ⬛️
+site_rules: []
+
 notes: ""
 related: []
-
-# SOURCE BLOCK:
-source:
-  - descriptor: ""
-    link: ""
-
-# MEDIA BLOCK:
-media:
-  - media type: ""
-    media link: ""
-
-# CUSTOMER DEFINITION
-customer status: "🟩"
-name: "RR Donelly"
-site Rules: []
+media: []
+attachments: []
 ---
 
 ## Notes
 ---
+
 

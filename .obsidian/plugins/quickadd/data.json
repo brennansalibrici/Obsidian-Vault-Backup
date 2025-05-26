@@ -107,7 +107,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "Personal/People"
+              "Personal/👤 People"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,

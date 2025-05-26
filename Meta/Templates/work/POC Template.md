@@ -1,38 +1,43 @@
 ---
+# CLASS DEFINITION:
 fileClass: poc
+
+# **INHERITS FROM GLOBAL TEMPLATE**
+# CORE IDENTITY FIELDS:
 id: <% tp.date.now("x") %>
 created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 title: <% tp.file.title %>
-status:
-  - 🟧 in progress
-type: 
-tags: 
+
+#STATUS & WORKFLOW FIELDS:
+status: [🟨 review]
+type: []
+tags: []
 category: note
 entered: false
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-notes: "{{VALUE:Notes}}"
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
+
+# POC DEFINITION
 full_name: "{{VALUE:Full Name}}"
+company: "{{VALUE:Company}}"
+sites: "{{VALUE:Site}}"
+role: "{{VALUE:OM,SSE,Journeyman,Apprentice,Foreman,General Foreman,Project Manager}}"
 person_type: POC
 phone:
-  - phone_label: ""
-    phone_number: ""
+  - phone_label: "Mobile"
+    phone_number: "{{VALUE:Phone Number}}"
 email:
-  - email_label: ""
-    email_address: ""
+  - email_label: "Work"
+    email_address: "{{VALUE:Email Address}}"
 last_chatted: 
-company: "{{VALUE:Company}}"
-site: "{{VALUE:Site}}"
-position: "{{VALUE:OM,SSE,Journeyman,Apprentice,Foreman,GF,Project Manager}}"
+
+# CONTENT AND RELATIONSHIPS:
+notes: "{{VALUE:Notes}}"
+related: []
+media: []
+attachments: []
 ---
+
 ## Notes

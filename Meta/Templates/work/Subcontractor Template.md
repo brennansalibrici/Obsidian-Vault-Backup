@@ -5,25 +5,21 @@ created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 title: <% tp.file.title %>
 status:
-  - 🟧 in progress
+  - 🟩 complete
 type: 
 tags: 
 category: note
-entered: false
+entered: true
 archived: false
 priority:
   - ⚪ None
 visibility: 🔒 private
-notes: "{{VALUE:Notes}}"
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
 sub_status: 🟩
-sub: "{{VALUE:Name}}"
+sub_name: "{{VALUE:Name}}"
+notes: notes
+related: 
+media: 
+attachments:
 ---
 
 ## Notes

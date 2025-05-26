@@ -1,45 +1,35 @@
 ---
-# CLASS DEFINITION
+# CLASS DEFINITION:
 fileClass: customer
 
-# INHERITS FROM GLOBAL TEMPLATE
+# **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: 1747543540732
-created: 2025-05-17 23:45
-last_modified: 2025-05-17 23:45
+id: 1748023646165
+created: 2025-05-23 13:07
+last_modified: 2025-05-23 13:07
 title: Nestle
 
-# STATUS & WORKFLOW FIELDS:
-status: [🟧 in progress]
+# STATUS & WORKFLOW FIELDS
+status: [🟩 complete]
 type: []
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority: ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 
-# CONTENT & RELATIONSHIPS:
-notes: "Comissioning/Testing"
-related: []
-
-# SOURCE BLOCK:
-source:
-  - descriptor: ""
-    link: ""
-
-# MEDIA BLOCK:
-media:
-  - media type: ""
-    media link: ""
-
-# CUSTOMER DEFINITION
-customer status: "🟩"
+# CUSTOMER DEFINITION:
 name: "Nestle"
-site Rules: []
+customer_status: ⬛️
+site_rules: []
+
+notes: ""
+related: []
+media: []
+attachments: []
 ---
 
 ## Notes
 ---
-Commissioning/Testing
 

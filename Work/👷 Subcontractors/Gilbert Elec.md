@@ -1,32 +1,25 @@
 ---
 fileClass: subcontractor
-id: 1747654692629
-created: 2025-05-19 06:38
-last_modified: 2025-05-19 06:38
+id: 1748028464127
+created: 2025-05-23 14:27
+last_modified: 2025-05-23 14:27
 title: Gilbert Elec
-status:
-  - 🟧 in progress
+status: [🟩 complete]
 type: 
-tags: 
+tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-notes: ""
+sub_status: 🟨
+sub_name: "Gilbert Elec"
+notes: notes
 related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
-sub_status: 🟩
-sub: "Gilbert Elec"
+media: 
+attachments:
 ---
 
 ## Notes
 ---
-
 

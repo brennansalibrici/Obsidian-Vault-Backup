@@ -1,42 +1,33 @@
 ---
-# CLASS DEFINITION
+# CLASS DEFINITION:
 fileClass: customer
 
-# INHERITS FROM GLOBAL TEMPLATE
+# **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: 1747543847479
-created: 2025-05-17 23:50
-last_modified: 2025-05-17 23:50
+id: 1748023955577
+created: 2025-05-23 13:12
+last_modified: 2025-05-23 13:12
 title: UNFI
 
-# STATUS & WORKFLOW FIELDS:
-status: [🟧 in progress]
+# STATUS & WORKFLOW FIELDS
+status: [🟩 complete]
 type: []
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority: ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 
-# CONTENT & RELATIONSHIPS:
+# CUSTOMER DEFINITION:
+name: "UNFI"
+customer_status: 🟩
+site_rules: []
+
 notes: ""
 related: []
-
-# SOURCE BLOCK:
-source:
-  - descriptor: ""
-    link: ""
-
-# MEDIA BLOCK:
-media:
-  - media type: ""
-    media link: ""
-
-# CUSTOMER DEFINITION
-customer status: "🟩"
-name: "UNFI"
-site Rules: []
+media: []
+attachments: []
 ---
 
 ## Notes

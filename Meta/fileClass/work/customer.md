@@ -6,7 +6,7 @@ fields:
     options: {}
     path: ""
     id: XYJ7au
-  - name: customer status
+  - name: customer_status
     type: Select
     options:
       sourceType: ValuesListNotePath
@@ -19,19 +19,14 @@ fields:
       valuesListNotePath: Meta/fileClass/_global/5 point status list.md
     path: ""
     id: QibfMD
-  - name: site rules
-    type: ObjectList
+  - name: site_rules
+    type: Multi
     options:
-      displayTemplate: ""
-      itemDisplayTemplate: ""
+      sourceType: ValuesList
+      valuesList: {}
     path: ""
-    id: pZ6jMy
-  - name: rule
-    type: Input
-    options: {}
-    path: pZ6jMy
-    id: OYIRYp
-version: "2.21"
+    id: 8wGr9V
+version: "2.24"
 limit: 20
 mapWithTag: false
 icon: package
@@ -44,8 +39,7 @@ extends: _global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
-  - pZ6jMy
-  - OYIRYp
+  - 8wGr9V
   - QibfMD
   - XYJ7au
 ---

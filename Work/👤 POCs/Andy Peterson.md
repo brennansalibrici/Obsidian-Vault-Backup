@@ -1,37 +1,43 @@
 ---
+# CLASS DEFINITION:
 fileClass: poc
-id: 1747690568228
-created: 2025-05-19 16:36
-last_modified: 2025-05-19 16:36
+
+# **INHERITS FROM GLOBAL TEMPLATE**
+# CORE IDENTITY FIELDS:
+id: 1748232326553
+created: 2025-05-25 23:05
+last_modified: 2025-05-25 23:05
 title: Andy Peterson
-status: [🟧 in progress]
-type: 
+
+#STATUS & WORKFLOW FIELDS:
+status: 🟩 complete
+type: []
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
+
+# POC DEFINITION
 full_name: "Andy Peterson"
+company: "[[Medtronic]]"
+sites: "[[BPN (Brooklyn Park North)]]"
+role: "OM"
 person_type: POC
 phone:
-  - phone_label: work
-    phone_number: 763-486-8950
+  - phone_label: "Mobile"
+    phone_number: "763-486-8950"
 email:
-  - email_label: ""
+  - email_label: "Work"
     email_address: ""
 last_chatted: 
-company: "[[Medtronic]]"
-site: "[[Medtronic - Brooklyn Park North]]"
-position: "OM"
+
+# CONTENT AND RELATIONSHIPS:
+notes: ""
+related: []
+media: []
+attachments: []
 ---
 
 ## Notes

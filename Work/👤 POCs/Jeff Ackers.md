@@ -1,37 +1,43 @@
 ---
+# CLASS DEFINITION:
 fileClass: poc
-id: 1747691468270
-created: 2025-05-19 16:51
-last_modified: 2025-05-19 16:51
+
+# **INHERITS FROM GLOBAL TEMPLATE**
+# CORE IDENTITY FIELDS:
+id: 1748232758641
+created: 2025-05-25 23:12
+last_modified: 2025-05-25 23:12
 title: Jeff Ackers
-status: [🟧 in progress]
-type: 
+
+#STATUS & WORKFLOW FIELDS:
+status: 🟩 complete
+type: []
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
+
+# POC DEFINITION
 full_name: "Jeff Ackers"
+company: "[[Target]]"
+sites: "[[T0587 Galesburg, MI]]"
+role: "OM"
 person_type: POC
 phone:
-  - phone_label: ""
+  - phone_label: "Mobile"
     phone_number: ""
 email:
-  - email_label: work
-    email_address: jeff.ackers@target.com
+  - email_label: "Work"
+    email_address: "jeff.ackers@target.com"
 last_chatted: 
-company: "[[Target]]"
-site: "[[T0587 Galseburg, MI]]"
-position: "OM"
+
+# CONTENT AND RELATIONSHIPS:
+notes: ""
+related: []
+media: []
+attachments: []
 ---
 
 ## Notes

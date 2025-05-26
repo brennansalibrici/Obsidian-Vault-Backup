@@ -1,38 +1,43 @@
 ---
+# CLASS DEFINITION:
 fileClass: poc
-id: 1747742273468
-created: 2025-05-20 06:57
-last_modified: 2025-05-20 06:57
+
+# **INHERITS FROM GLOBAL TEMPLATE**
+# CORE IDENTITY FIELDS:
+id: 1748232865508
+created: 2025-05-25 23:14
+last_modified: 2025-05-25 23:14
 title: Scott Davis
-status:
-  - 🟧 in progress
-type: 
-tags: 
+
+#STATUS & WORKFLOW FIELDS:
+status: 🟩 complete
+type: []
+tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
+
+# POC DEFINITION
 full_name: "Scott Davis"
+company: "[[Parsons]]"
+sites: "[[BPN (Brooklyn Park North)]]"
+role: "Foreman"
 person_type: POC
 phone:
-  - phone_label: ""
-    phone_number: ""
+  - phone_label: "Mobile"
+    phone_number: "612-616-8621"
 email:
-  - email_label: ""
+  - email_label: "Work"
     email_address: ""
 last_chatted: 
-company: "[[Parsons]]"
-site: "[[Medtronic - Brooklyn Park North]]"
-position: "Foreman"
+
+# CONTENT AND RELATIONSHIPS:
+notes: ""
+related: []
+media: []
+attachments: []
 ---
+
 ## Notes

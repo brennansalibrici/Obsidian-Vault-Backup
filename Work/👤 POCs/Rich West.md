@@ -1,38 +1,43 @@
 ---
+# CLASS DEFINITION:
 fileClass: poc
-id: 1747741901878
-created: 2025-05-20 06:51
-last_modified: 2025-05-20 06:51
+
+# **INHERITS FROM GLOBAL TEMPLATE**
+# CORE IDENTITY FIELDS:
+id: 1748232811085
+created: 2025-05-25 23:13
+last_modified: 2025-05-25 23:13
 title: Rich West
-status:
-  - 🟧 in progress
-type: 
-tags: 
+
+#STATUS & WORKFLOW FIELDS:
+status: 🟩 complete
+type: []
+tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
+
+# POC DEFINITION
 full_name: "Rich West"
+company: "[[Setter Meuller (SME)]]"
+sites: "[[T3804 (RDC) West Jefferson, OH]]"
+role: "Foreman"
 person_type: POC
 phone:
-  - phone_label: ""
+  - phone_label: "Mobile"
     phone_number: ""
 email:
-  - email_label: ""
+  - email_label: "Work"
     email_address: ""
 last_chatted: 
-company: "[[Setter Meuller Elec (SME)]]"
-site: "[[T3804 (RDC) West Jefferson, OH]]"
-position: "Foreman"
+
+# CONTENT AND RELATIONSHIPS:
+notes: ""
+related: []
+media: []
+attachments: []
 ---
+
 ## Notes

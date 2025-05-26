@@ -1,6 +1,6 @@
 ---
 fields:
-  - name: sub name
+  - name: sub_name
     type: Input
     options: {}
     path: ""
@@ -13,7 +13,7 @@ fields:
       valuesListNotePath: Meta/fileClass/_global/5 point status list.md
     path: ""
     id: ERmxWm
-version: "2.5"
+version: "2.6"
 limit: 20
 mapWithTag: false
 icon: package

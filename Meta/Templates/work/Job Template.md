@@ -20,16 +20,10 @@ priority: ⚪ None
 visibility: 🔒 private
 
 # CONTENT & RELATIONSHIPS:
-
-# SOURCE BLOCK:
-source:
-  - descriptor: ""
-    link: ""
-
-# MEDIA BLOCK:
-media:
-  - media type: ""
-    media link: ""
+notes: notes
+related: []
+media: []
+attachments: []
 
 # JOB DEFINITION
 job_name: "{{VALUE:Job Name}}"

@@ -1,26 +1,17 @@
 ---
 fileClass: site
-id: 1747545917506
-created: 2025-05-18 00:25
-last_modified: 2025-05-18 00:25
+id: 1748025435343
+created: 2025-05-23 13:37
+last_modified: 2025-05-23 13:37
 title: T0551 Fridley, MN
-status: 🟩 complete
+status: [🟩 complete]
 type: 
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-notes: ""
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
 customer: "[[Target]]"
 siteName: T0551 Fridley, MN
 siteStatus: 🟩
@@ -29,10 +20,12 @@ siteAddress:
   city: Fridley
   state: MN
   zip: "55432"
-switchgear:
-  - "[[T0551 MSB1_1]]"
-  - "[[T0551 MSB2_1]]"
+switchgear: ["[[T0551 MSB1_1]]", "[[T0551 MSB2_1]]"]
 jobs: 
+notes: notes
+related: 
+media: 
+attachments:
 ---
 
 ## Notes
