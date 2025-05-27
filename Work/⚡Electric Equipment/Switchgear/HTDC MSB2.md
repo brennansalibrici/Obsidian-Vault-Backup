@@ -17,7 +17,7 @@ site: "[[HTDC Brookshire, TX]]"
 switchgear_type: Main Breaker
 ocpd_type: Breaker
 ocpd: "[[Eaton Magnum SB 4000A]]"
-trip_unit: "[[Digitrip 520MC]]"
+trip_unit: "[[DigiTrip 520MC]]"
 plug_size: 4000A
 relays: ""
 em_power_nearby: "false"

@@ -1,11 +1,10 @@
 ---
-Links:
-  - "[[Home]]"
+Links: ["[[Home]]"]
 Created: 2023-05-07T11:51:13
-aliases:
-  - My Evergreen Notes
+aliases: [My Evergreen Notes]
 fileClass: view
 ---
+
  The home of my [[Evergreen Notes]]
 ## Fleeting Notes
 ```dataview

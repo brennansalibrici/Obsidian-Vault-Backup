@@ -99,6 +99,9 @@
     "media": "multitext",
     "pk_guys_onSite": "multitext",
     "site_poc": "multitext",
-    "sub_poc": "multitext"
+    "sub_poc": "multitext",
+    "emotion_category": "text",
+    "triggered_by": "multitext",
+    "needs_behind_it": "multitext"
   }
 }

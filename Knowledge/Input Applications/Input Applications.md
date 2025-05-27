@@ -1,6 +1,5 @@
 ---
-Links:
-  - "[[Inputs/My Books/Books]]"
+Links: ["[[Inputs/My Books/Books]]"]
 Created: 2023-05-08T01:12:27
 fileClass: view
 ---

@@ -32,7 +32,7 @@ fields:
         "3": Shunt
     path: ""
     id: FsiqhF
-version: "2.19"
+version: "2.27"
 limit: 20
 mapWithTag: false
 icon: package
@@ -41,7 +41,7 @@ filesPaths:
   - Work/⚡Electric Equipment/Relays
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: work/electricalequipment/equipment/equipment
 savedViews: []
 favoriteView: 
 fieldsOrder:

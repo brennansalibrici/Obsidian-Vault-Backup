@@ -13,7 +13,7 @@ fields:
       valuesListNotePath: Meta/fileClass/work/electricalequipment/equipment/tripunit manufacturer list.md
     path: ""
     id: 2HOhO1
-version: "2.9"
+version: "2.10"
 limit: 20
 mapWithTag: false
 icon: package
@@ -22,7 +22,7 @@ filesPaths:
   - Work/⚡Electric Equipment/Trip Units
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: work/electricalequipment/equipment/equipment
 savedViews: []
 favoriteView: 
 fieldsOrder:

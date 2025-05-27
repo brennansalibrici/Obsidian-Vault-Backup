@@ -26,7 +26,7 @@ fields:
       valuesList: {}
     path: ""
     id: 8wGr9V
-version: "2.24"
+version: "2.25"
 limit: 20
 mapWithTag: false
 icon: package
@@ -35,7 +35,7 @@ filesPaths:
   - Work/🏢 Customers
 bookmarksGroups: 
 excludes: 
-extends: _global/global
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:

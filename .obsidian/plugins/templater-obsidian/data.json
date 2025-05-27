@@ -15,10 +15,6 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "/",
-      "template": "Hidden/My Templates/notes/Note Template.md"
-    },
-    {
       "folder": "My Calendar/My Daily Notes",
       "template": "Hidden/My Templates/periodic/Daily Template.md"
     },
@@ -58,7 +54,6 @@
   ],
   "intellisense_render": 1,
   "enable_ribbon_icon": true,
-
   "trigger_user_scripts_on_file_open": true,
   "user_script_file_open_paths": [
     "Scripts/inputs/FleetingNotesApp/fileClass.js"

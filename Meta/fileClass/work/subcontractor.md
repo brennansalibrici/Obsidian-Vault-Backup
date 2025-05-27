@@ -13,7 +13,7 @@ fields:
       valuesListNotePath: Meta/fileClass/_global/5 point status list.md
     path: ""
     id: ERmxWm
-version: "2.6"
+version: "2.7"
 limit: 20
 mapWithTag: false
 icon: package
@@ -22,7 +22,7 @@ filesPaths:
   - Work/👷 Subcontractors
 bookmarksGroups: 
 excludes: 
-extends: _global/global
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:

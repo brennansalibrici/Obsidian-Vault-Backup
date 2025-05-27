@@ -1,9 +1,9 @@
 ---
-Links:
-  - "[[Home]]"
+Links: ["[[Home]]"]
 Created: 2023-05-07T02:05:22
 fileClass: view
 ---
+
 *Create a MOC then tag it with `#resource` to show up here*
 ## Manually Organized
 %% Type them out here for your own hierarchical directory %%

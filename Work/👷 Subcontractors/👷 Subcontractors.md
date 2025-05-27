@@ -9,7 +9,7 @@ action QuickAdd: 👷 Create New Sub
 
 ```dataview
 table file.name as "Sub",sub_status as "Sub Status"
-from ""
+from "Work/👷 Subcontractors"
 where contains(file.path, "Sub") and file.name != "👷 Subcontractors" and file.name != "Subcontractor Template"
 sort file.name asc
 

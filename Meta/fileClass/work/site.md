@@ -111,7 +111,7 @@ fields:
     options: {}
     path: ""
     id: uUSYY4
-version: "2.95"
+version: "2.96"
 limit: 20
 mapWithTag: false
 icon: package
@@ -120,7 +120,7 @@ filesPaths:
   - Work/📍 Sites
 bookmarksGroups: 
 excludes: 
-extends: _global/global
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:

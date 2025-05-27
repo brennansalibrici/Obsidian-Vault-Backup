@@ -4,21 +4,81 @@
     "type": "split",
     "children": [
       {
-        "id": "14e556735ee7a631",
+        "id": "cb397f3c21c51521",
         "type": "tabs",
+        "dimension": 42.61019878997408,
         "children": [
           {
-            "id": "3e64cfcd62e89605",
+            "id": "2b347185d1c87b76",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Work/🛠 My Jobs/🛠 My Jobs.md",
+                "file": "ME/🎭 Emotions/🎭 Emotions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🛠 My Jobs"
+              "title": "🎭 Emotions"
+            }
+          },
+          {
+            "id": "4e23d819ddc637f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/fileClass/me/emotion category list.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "emotion category list"
+            }
+          },
+          {
+            "id": "a0a0b42aa49e3657",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/Templates/me/Emotion Template.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Emotion Template"
+            }
+          },
+          {
+            "id": "18f0043ecdbddc2d",
+            "type": "leaf",
+            "state": {
+              "type": "FileClassView__me/emotion",
+              "state": {},
+              "icon": "package",
+              "title": "me/emotion"
+            }
+          }
+        ]
+      },
+      {
+        "id": "b4fe2d8c8e5e7476",
+        "type": "tabs",
+        "dimension": 57.38980121002593,
+        "children": [
+          {
+            "id": "799f6d4554905a9a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ME/Emotions.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Emotions"
             }
           }
         ]
@@ -146,7 +206,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 200
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -304,46 +364,46 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "3e64cfcd62e89605",
+  "active": "799f6d4554905a9a",
   "lastOpenFiles": [
-    "Meta/fileClass/work/site.md",
-    "Work/🛠 My Jobs/🛠 My Jobs.md",
-    "Work/📍 Sites/📍 Sites.md",
-    "Meta/fileClass/work/subcontractor.md",
-    "Work/👷 Subcontractors/👷 Subcontractors.md",
-    "Meta/fileClass/work/customer.md",
-    "Work/👤 POCs/👤 POCs.md",
-    "Work/🏢 Customers/🏢 Customers.md",
-    "Meta/fileClass/work/electricalequipment/tripunit.md",
-    "Work/⚡Electric Equipment/Trip Units/Trip Units.md",
-    "Meta/fileClass/work/electricalequipment/equipment/switchgear.md",
-    "Work/⚡Electric Equipment/Switchgear/Switchgear.md",
-    "Meta/fileClass/work/electricalequipment/relay.md",
-    "Work/⚡Electric Equipment/Relays/Relays.md",
-    "Meta/fileClass/work/electricalequipment/ocpd/fuse.md",
-    "Work/⚡Electric Equipment/Fuses/Fuses.md",
-    "Meta/fileClass/work/electricalequipment/ocpd/breaker.md",
-    "Work/⚡Electric Equipment/Breakers/Breakers.md",
-    "Meta/fileClass/personal/people/person.md",
-    "Personal/👤 People/👤 People.md",
-    "Work/🛠 My Jobs/GFR - T0587 Galesburg, MI 2025.md",
-    "Work/🛠 My Jobs/GFR - T3804 West Jefferson, OH 2025.md",
-    "Work/🛠 My Jobs/T3804 West Jefferson, OH GFR 2025_1.md",
-    "Meta/Templates/work/Job Template.md",
-    "Work/🛠 My Jobs/T0587 Galesburg, MI GFR 2025_1.md",
-    "Work/🛠 My Jobs/Data Collection - BPN Medtronic 2025.md",
+    "ME/🎭 Emotions/🎭 Emotions.md",
+    "ME/🎭 Emotions/Sense of Loss.md",
+    "ME/Emotions.md",
+    "ME/🎭 Emotions/Bad.md",
+    "ME/🎭 Emotions/Sulky.md",
+    "ME/🎭 Emotions/Despair.md",
+    "ME/🎭 Emotions/Terrible.md",
+    "ME/🎭 Emotions/Abominable.md",
+    "ME/🎭 Emotions/Despicable.md",
+    "ME/🎭 Emotions/Repugnant.md",
+    "ME/🎭 Emotions/Worn Out.md",
+    "ME/🎭 Emotions/Loathsome.md",
+    "ME/🎭 Emotions/Dissatisfied.md",
+    "ME/🎭 Emotions/Guilt.md",
+    "ME/🎭 Emotions/Self-Abasing.md",
+    "ME/🎭 Emotions/Self-Destructive.md",
+    "ME/🎭 Emotions/Diminished.md",
+    "ME/🎭 Emotions/Ashamed.md",
+    "ME/🎭 Emotions/Absymal.md",
+    "ME/🎭 Emotions/Accursed.md",
+    "ME/🎭 Emotions/Suicidal.md",
+    "ME/🎭 Emotions/Morbid.md",
+    "ME/🎭 Emotions/Besieged.md",
+    "ME/🎭 Emotions/Dour.md",
+    "ME/🎭 Emotions/Morose.md",
+    "ME/🎭 Emotions/Dreary.md",
+    "Meta/Templates/me",
+    "Meta/Scripts/me",
+    "ME/🎭 Emotions",
+    "Meta/fileClass/me",
+    "ME/Maps & Patterns",
+    "ME/Anchors & Protocols",
+    "ME/From The Fire",
+    "ME/Practice Lab",
+    "ME/Journal",
+    "ME/Growth Path",
     "Files/My Attachments/IMG_1461.jpg",
     "Files/My Attachments/IMG_1465.jpg",
-    "My Areas/Work/⚡Electric Equipment/Switchgear",
-    "My Areas/Work/⚡Electric Equipment",
-    "My Areas/Work",
-    "My Areas",
-    "Work/⚡Electric Equipment/Fuses",
-    "FleetingNotesApp",
-    "Work/⚡Electric Equipment/Trip Units",
-    "Work/⚡Electric Equipment/Relays",
-    "Work/⚡Electric Equipment/Breakers",
-    "Personal/👤 People",
     "Files/My Attachments/Screenshot 2025-04-15 002323.png",
     "Files/My Attachments/Pic Test.png",
     "Files/My Attachments/Pasted image 20250508203302.png",

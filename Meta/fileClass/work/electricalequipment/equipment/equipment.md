@@ -14,7 +14,7 @@ fields:
     options: {}
     path: ""
     id: grydo9
-version: "2.30"
+version: "2.31"
 limit: 100
 mapWithTag: false
 icon: package
@@ -22,7 +22,7 @@ tagNames:
 filesPaths: 
 bookmarksGroups: 
 excludes: 
-extends: _global/global
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:

@@ -116,14 +116,14 @@ fields:
     options: {}
     path: XgK3Ol
     id: 81dsQv
-version: "2.286"
+version: "2.287"
 limit: 100
 tagNames: 
 filesPaths:
   - Work/🛠 My Jobs
 bookmarksGroups: 
 excludes: 
-extends: _global/global
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:

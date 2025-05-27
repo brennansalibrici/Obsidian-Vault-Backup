@@ -755,7 +755,7 @@
           "openFileInMode": "default"
         }
       ],
-      "collapsed": true
+      "collapsed": false
     },
     {
       "id": "7176b5ab-b8f3-4755-afec-9f29dd004120",
@@ -799,6 +799,36 @@
           "type": "Macro",
           "command": true,
           "macroId": "dfc5a244-bd38-4231-8dc1-704e9aa39f65"
+        },
+        {
+          "id": "b9ef6779-5c32-4844-870b-71adb27aac51",
+          "name": "🎭 Create New Emotion",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/me/Emotion Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ME/🎭 Emotions"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": true,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
         }
       ]
     },

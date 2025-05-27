@@ -1,31 +1,38 @@
 ---
+# CLASS DEFINITION:
 fileClass: tripunit
-id: 1747774058828
-created: 2025-05-20 15:47
-last_modified: 2025-05-20 15:47
-title: Ekip Touch
+
+# **INHERITS FROM GLOBAL TEMPLATE**
+# CORE IDENTITY FIELDS:
+id: 1748348100421
+created: 2025-05-27 07:15
+last_modified: 2025-05-27 07:15
+title: Ekip Touch LSIG
+
+# STATUS & WORKFLOW FIELDS:
 status: [🟩 complete]
-type: 
+type: []
 tags: []
 category: note
 entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
-notes: notes
-related: 
-source:
-  - descriptor: ""
-    link: ""
-media:
-  - media type: ""
-    media link: ""
-equipment_name: Ekip Touch
+
+# TRIPUNIT DEFINITION:
+equipment_name: "Ekip Touch LSIG"
 equipment_type: TripUnit
-tu_manufacturer: ABB
-tu_model: LSIG
+tu_manufacturer: "ABB"
+tu_model: "LSIG"
+
+# CONTENT & RELATIONSHIPS:
+notes: notes
+related: []
+media: ""
+attachments: []
 ---
 
 ## Notes
 ---
+
 
