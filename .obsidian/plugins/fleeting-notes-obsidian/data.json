@@ -4,8 +4,8 @@
   "attachments_folder": "Files/My Attachments",
   "note_template": "---\n# Mandatory fields\nid: \"${id}\"\n# Optional fields\ntitle: \"${title}\"\ntags: ${tags}\nsource: \"${source}\"\nsource_title: \"${source_title}\"\nsource_description: \"${source_description}\"\nsource_image_url: \"${source_image_url}\"\ncreated_date: \"${created_date}\"\nmodified_date: \"${last_modified_date}\"\n---\n${content}",
   "sync_on_startup": true,
-  "last_sync_time": "2025-05-27T10:29:44.078Z",
-  "sync_type": "realtime-one-way",
+  "last_sync_time": "2025-05-28T20:15:29.167Z",
+  "sync_type": "realtime-two-way",
   "sync_obsidian_links": false,
   "sync_obsidian_links_title": "Links from Obsidian",
   "notes_filter": "",
@@ -13,7 +13,7 @@
   "password": "pound&1Puppy",
   "supabaseId": "82c07420-d15b-4c98-b18c-80f7e846a51d",
   "encryption_key": "",
-  "sync_interval": 121,
+  "sync_interval": 1183061,
   "date_format": "MM-DD-YYYYTHH:mm",
   "title_template": "${title}"
 }

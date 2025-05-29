@@ -5,6 +5,7 @@ areaGroup: Obsidian
 Group: Misc
 fileClass: area
 ---
+
 - [ ] Reset ChatGPT memory to udpate both an emotion and a Caputred Moment in the same memory location. ➕ 2025-05-07
 
 ```meta-bind-button
@@ -46,7 +47,6 @@ sort: dateDescending
 - Tasks
 - ToDoist Tasks
 
-
 ### Medium Term
 #### Features to Use/Create
 - Home Page
@@ -55,8 +55,6 @@ sort: dateDescending
 ### Long Term
 #### File Management
 - Have a set of  Internal & External Archive folders and we will write javascript and/or powershell scripts to move folders/files where they need to go whether inside or outside of the vault. 
-
-
 
 ## Productivity
 

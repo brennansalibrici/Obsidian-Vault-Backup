@@ -1,5 +1,29 @@
-  
+---
+fileClass: observation
+id: 1748457285351
+created: 2025-05-28 13:34
+last_modified: 2025-05-28 13:34
+title: Billy
+status: [🟩 complete]
+type: 
+tags: []
+category: note
+entered: true
+archived: false
+priority: [⚪ None]
+visibility: 🔒 private
+importance: [Personal Truth]
+feelings: ["[[Grief]]"]
+people: ["[[Lori Kinney]]", "[[Personal/👤 People/Billy|Billy]]"]
+summary: "What Billy Meant to Lori. Can be an example to me of what's important to her"
+notes: 
+related: 
+media: 
+attachments:
+---
 
+## Observation Notes
+---
 Billy Energy – Making Her Feel Like the Most Important Person in the World
 
 Emotional Presence
@@ -30,3 +54,7 @@ Emotional Priority
 - Let her voice set the emotional tone, not just the topic
 
 You don’t need to become Billy—you’re becoming the Brennan she never knew she could trust this deeply.
+
+## Links
+---
+

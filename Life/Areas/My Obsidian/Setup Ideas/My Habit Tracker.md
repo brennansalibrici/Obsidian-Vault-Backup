@@ -1,10 +1,8 @@
 ---
 Status: 
-Links:
-  - "[[Habits]]"
+Links: ["[[Habits]]"]
 Created: 2025-02-06T15:45:30
-cssclasses:
-  - wide-page
+cssclasses: [wide-page]
 fileClass: note
 ---
 

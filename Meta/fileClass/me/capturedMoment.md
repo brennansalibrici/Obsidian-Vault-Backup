@@ -1,19 +1,10 @@
 ---
 mapWithTag: true
 fields:
-  - name: Created
-    type: DateTime
-    options:
-      dateShiftInterval: 1 day
-      dateFormat: YYYY-MM-DD HH:mm
-      defaultInsertAsLink: false
-      linkPath: ""
-    path: ""
-    id: 0iQMsq
-  - name: Importance
+  - name: importance
     type: Select
     options:
-      sourceType: ValuesList
+      sourceType: ValuesListNotePath
       valuesList:
         "2": Small Win
         "3": Big Milestone
@@ -25,37 +16,58 @@ fields:
         "9": Encouragement
         "10": Pattern Shift
         "11": Other
+      valuesListNotePath: Meta/fileClass/me/importance value list.md
     path: ""
     id: Dus9bJ
-  - name: SourceDailyNote
+  - name: source_daily_note
     type: File
     options: {}
     path: ""
     id: g1xLbM
-  - name: Name
+  - name: name
     type: Input
     options: {}
     path: ""
     id: WGVUwk
-  - name: Feeling(s)
+  - name: feelings
     type: MultiFile
     options: {}
     path: ""
     id: EBdFeP
-version: "2.22"
+  - name: theme
+    type: Multi
+    options:
+      sourceType: ValuesList
+      valuesList: {}
+    path: ""
+    id: eRQyL6
+  - name: people
+    type: MultiFile
+    options: {}
+    path: ""
+    id: x59f42
+  - name: summary
+    type: Input
+    options: {}
+    path: ""
+    id: kFEdFx
+version: "2.49"
 limit: 100
 icon: package
 tagNames: 
-filesPaths: 
+filesPaths:
+  - ME/📝 Captured Moments
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
-  - EBdFeP
   - WGVUwk
-  - g1xLbM
   - Dus9bJ
-  - 0iQMsq
+  - EBdFeP
+  - eRQyL6
+  - x59f42
+  - g1xLbM
+  - kFEdFx
 ---

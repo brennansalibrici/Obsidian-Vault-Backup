@@ -16,7 +16,7 @@ priority:
 visibility: 🔒 private
 name: "{{VALUE:Name}}"
 energy_mood: "{{VALUE:High Energy Pleasant,High Energy Unpleasant,Low Energy Pleasant,Low Energy Unpleasant}}"
-emotion_category: "{{VALUE:Sadness,Anger,Afraid,Ashamed,Happy}}"
+emotion_category: "{{VALUE:Sadness,Anger,Fear,Anxiety,Joy,Love,Shame,Guilt,Surprise,Disgust,Anticipation,Trust,Confusion,Peace,Awe,Spiritual}}"
 emotion_type: "{{VALUE:Core Emotion,Surface Emotion,Trigger Emotion,Regulating Emotion,Blended Emotion,Dissociated State,Social Emotion,Spiritual Emotion}}"
 definition: "{{VALUE:Definition}}"
 triggered_by: []

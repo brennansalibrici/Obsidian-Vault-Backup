@@ -7,10 +7,12 @@ type command
 action QuickAdd: 🎭 Create New Emotion
 ```
 
+possible misspellings - needs behind it - 'protection'
+
 ```dataview
 table emotion_category as "Category", emotion_type as "Type", energy_mood as "Energy/Mood"
 from "ME/🎭 Emotions"
 where file.name != "🎭 Emotions" and file.name != "🎭 Emotions"
-sort file.name asc
+sort file.name asc 
 
 ```

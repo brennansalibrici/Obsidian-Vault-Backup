@@ -829,6 +829,66 @@
           "openFileInMode": "default",
           "fileExistsMode": "Increment the file name",
           "setFileExistsBehavior": false
+        },
+        {
+          "id": "d84aa480-0a71-455f-ab99-0d26cf2bfd22",
+          "name": "🔥 Create New Forged Word",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/me/From the Fire Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ME/🔥 From The Fire"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": true,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
+        },
+        {
+          "id": "69fc34aa-a6d3-4f7e-8758-2d6fcc3966a4",
+          "name": "🛡️ Create New Emotional Need",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/me/Emotional Need Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ME/🛡️ Emotional Needs"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
         }
       ]
     },
@@ -1427,15 +1487,15 @@
             "name": "New Moment Template Choice",
             "type": "Template",
             "command": false,
-            "templatePath": "Hidden/My Templates/personal/Captured Moment Template.md",
+            "templatePath": "Meta/Templates/me/Captured Moment Template.md",
             "fileNameFormat": {
               "enabled": true,
-              "format": "Captured Moment"
+              "format": "{{VALUE:Name}}"
             },
             "folder": {
               "enabled": true,
               "folders": [
-                "ME/Unprocessed Captures"
+                "ME/📝 Captured Moments"
               ],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,
@@ -1469,7 +1529,7 @@
             "name": "New Observation Template Choice",
             "type": "Template",
             "command": false,
-            "templatePath": "Hidden/My Templates/personal/Observation Template.md",
+            "templatePath": "Meta/Templates/me/Observation Template.md",
             "fileNameFormat": {
               "enabled": true,
               "format": "{{VALUE:Name}}"
@@ -1477,7 +1537,7 @@
             "folder": {
               "enabled": true,
               "folders": [
-                "ME/Unprocessed Observations"
+                "ME/👀 Observations"
               ],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,

@@ -1,7 +1,6 @@
 ---
 Status: 
-Links:
-  - "[[My Daily Logs]]"
+Links: ["[[My Daily Logs]]"]
 Created: 2024-04-22T20:20:26
 Description: Obstacles from your daily logs
 title: 

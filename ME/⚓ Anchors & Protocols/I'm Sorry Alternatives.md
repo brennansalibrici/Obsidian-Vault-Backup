@@ -1,0 +1,13 @@
+---
+---
+
+- That was hurtful and I hate that I did that
+- That wasn't okay and I wish I could go back and do it differently
+- You didn't deserve that
+- I see how much that hurt
+- That didn't reflect how much I care. I want to do better
+- If I were in your shoes, I think I'd feel the same way
+- I can see now how much that must have hurt and I hate that I didn't see it sooner
+- It matters to me that this landed that way; I see that it did even if I didn't mean for it to
+- You've carried way too much of that pain alone and for way too long. That's not okay
+- You matter too much to me for this to keep happening

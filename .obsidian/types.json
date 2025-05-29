@@ -102,6 +102,14 @@
     "sub_poc": "multitext",
     "emotion_category": "text",
     "triggered_by": "multitext",
-    "needs_behind_it": "multitext"
+    "needs_behind_it": "multitext",
+    "feelings": "multitext",
+    "people": "multitext",
+    "related": "multitext",
+    "related_emotions": "multitext",
+    "opposite": "multitext",
+    "fulfilled_by": "multitext",
+    "need_category": "multitext",
+    "need_type": "multitext"
   }
 }

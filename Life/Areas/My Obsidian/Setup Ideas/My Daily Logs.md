@@ -1,7 +1,6 @@
 ---
 Status: 
-Links:
-  - "[[Daily Notes]]"
+Links: ["[[Daily Notes]]"]
 Created: 2024-04-22T20:18:11
 fileClass: view
 ---
