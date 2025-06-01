@@ -1,19 +1,21 @@
 {
   "version": 3,
   "ui": {
-    "calendarShelf": null
+    "calendarShelf": "Calendar"
   },
   "pendingMigrations": [],
   "dismissedNotifications": [
     "v2-commands-change"
   ],
-  "useShelves": false,
+  "useShelves": true,
   "showReloadHint": false,
   "openOnStartup": "",
   "journals": {
     "Month": {
       "name": "Month",
-      "shelves": [],
+      "shelves": [
+        "Calendar"
+      ],
       "write": {
         "type": "month"
       },
@@ -130,7 +132,9 @@
     },
     "Week": {
       "name": "Week",
-      "shelves": [],
+      "shelves": [
+        "Calendar"
+      ],
       "write": {
         "type": "week"
       },
@@ -263,7 +267,9 @@
     },
     "Quarter": {
       "name": "Quarter",
-      "shelves": [],
+      "shelves": [
+        "Calendar"
+      ],
       "write": {
         "type": "quarter"
       },
@@ -380,7 +386,9 @@
     },
     "Year": {
       "name": "Year",
-      "shelves": [],
+      "shelves": [
+        "Calendar"
+      ],
       "write": {
         "type": "year"
       },
@@ -481,7 +489,9 @@
     },
     "Day": {
       "name": "Day",
-      "shelves": [],
+      "shelves": [
+        "Calendar"
+      ],
       "write": {
         "type": "day"
       },
@@ -643,9 +653,187 @@
         "endDateField": "",
         "indexField": ""
       }
+    },
+    "Emotional Growth Journal": {
+      "name": "Emotional Growth Journal",
+      "shelves": [],
+      "write": {
+        "type": "day"
+      },
+      "confirmCreation": false,
+      "nameTemplate": "{{date}} {{time}}",
+      "dateFormat": "YYYY-MM-DD",
+      "folder": "ME/📓 Journal",
+      "templates": [
+        "Meta/Templates/me/Emotional Growth Journal/Reflection Journal Template.md",
+        "Meta/Templates/me/Emotional Growth Journal/Integration Journal Template.md"
+      ],
+      "start": "",
+      "end": {
+        "type": "never"
+      },
+      "index": {
+        "enabled": false,
+        "anchorDate": "",
+        "anchorIndex": 1,
+        "allowBefore": false,
+        "type": "increment",
+        "resetAfter": 2
+      },
+      "autoCreate": true,
+      "commands": [],
+      "decorations": [
+        {
+          "mode": "and",
+          "conditions": [
+            {
+              "type": "has-note"
+            }
+          ],
+          "styles": [
+            {
+              "type": "shape",
+              "size": 0.4,
+              "shape": "circle",
+              "color": {
+                "type": "theme",
+                "name": "interactive-accent"
+              },
+              "placement_x": "center",
+              "placement_y": "bottom"
+            }
+          ]
+        }
+      ],
+      "navBlock": {
+        "type": "create",
+        "decorateWholeBlock": false,
+        "rows": [
+          {
+            "template": "{{date:ddd}}",
+            "fontSize": 1,
+            "bold": false,
+            "italic": false,
+            "link": "none",
+            "journal": "",
+            "color": {
+              "type": "theme",
+              "name": "text-normal"
+            },
+            "background": {
+              "type": "transparent"
+            },
+            "addDecorations": false
+          },
+          {
+            "template": "{{date:D}}",
+            "fontSize": 3,
+            "bold": true,
+            "italic": false,
+            "link": "self",
+            "journal": "",
+            "color": {
+              "type": "theme",
+              "name": "text-normal"
+            },
+            "background": {
+              "type": "transparent"
+            },
+            "addDecorations": true
+          },
+          {
+            "template": "{{relative_date}}",
+            "fontSize": 0.7,
+            "bold": false,
+            "italic": false,
+            "link": "none",
+            "journal": "",
+            "color": {
+              "type": "theme",
+              "name": "text-normal"
+            },
+            "background": {
+              "type": "transparent"
+            },
+            "addDecorations": false
+          },
+          {
+            "template": "{{date:[W]w}}",
+            "fontSize": 1,
+            "bold": false,
+            "italic": false,
+            "link": "week",
+            "journal": "",
+            "color": {
+              "type": "theme",
+              "name": "text-normal"
+            },
+            "background": {
+              "type": "transparent"
+            },
+            "addDecorations": false
+          },
+          {
+            "template": "{{date:MMMM}}",
+            "fontSize": 1,
+            "bold": false,
+            "italic": false,
+            "link": "month",
+            "journal": "",
+            "color": {
+              "type": "theme",
+              "name": "text-normal"
+            },
+            "background": {
+              "type": "transparent"
+            },
+            "addDecorations": false
+          },
+          {
+            "template": "{{date:YYYY}}",
+            "fontSize": 1,
+            "bold": false,
+            "italic": false,
+            "link": "year",
+            "journal": "",
+            "color": {
+              "type": "theme",
+              "name": "text-normal"
+            },
+            "background": {
+              "type": "transparent"
+            },
+            "addDecorations": false
+          }
+        ]
+      },
+      "calendarViewBlock": {
+        "rows": [],
+        "decorateWholeBlock": false
+      },
+      "frontmatter": {
+        "dateField": "",
+        "addStartDate": false,
+        "startDateField": "",
+        "addEndDate": false,
+        "endDateField": "",
+        "indexField": ""
+      }
     }
   },
-  "shelves": {},
+  "shelves": {
+    "Calendar": {
+      "name": "Calendar",
+      "journals": [
+        "Day",
+        "Month",
+        "Quarter",
+        "Week",
+        "Year"
+      ],
+      "commands": []
+    }
+  },
   "commands": [
     {
       "name": "Open today's note",

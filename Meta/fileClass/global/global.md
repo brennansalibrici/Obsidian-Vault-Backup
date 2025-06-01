@@ -129,7 +129,7 @@ filesPaths:
 bookmarksGroups: 
 excludes: 
 extends: 
-savedViews: []
+savedViews: 
 favoriteView: 
 fieldsOrder:
   - 3HN2Ss

@@ -12,6 +12,12 @@ Brainstorms for future tweaks, plugin combos, or workflows.
 - [ ] Emotions
 - [ ] Tasks reset and re-organized
 - [ ] Web Clipper
+- [ ] Update the global.type value source list and update that variable in all data we've entered to date
+- [ ] Update all templates to populate the correct global.type value each time a new note is generated
+- [ ] Create value source list(s) for index value fields and update all current entries existing in Obsidian 
+- [ ] Buildout the 'Inputs' section
+- [ ] Buildouts DailyNotes
+- [ ] 
 
 ### Global fileClass Structre
 - status

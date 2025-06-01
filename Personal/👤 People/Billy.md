@@ -1,42 +1,30 @@
 ---
-# CLASS DEFINITION
 fileClass: person
-
-# INHERITS FROM GLOBAL TEMPLATE
-# CORE IDENTITY FIELDS:
 id: 1748456938883
 created: 2025-05-28 13:28
 last_modified: 2025-05-28 13:28
 title: Billy
-
-# STATUS & WORKFLOW FIELDS:
-status: [🟧 in progress]
-type: []
+status: [🟩 complete]
+type: 
 tags: []
 category: note
-entered: false
+entered: true
 archived: false
-priority: ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-
-# PERSON DEFINITION
-full_name: "Billy"
-person_type: "Other"
+full_name: Billy
+person_type: Other
 phone:
-  - phone_label: "Mobile"
+  - phone_label: Mobile
     phone_number: ""
 email:
-  - email_label: "Personal"
+  - email_label: Personal
     email_address: ""
-last_chatted: null
-
-# CONTENT & RELATIONSHIPS:
+last_chatted: 
 notes: "Lori's friend Billy"
-related: []
-media: []
-attachments: []
-
-
+related: 
+media: 
+attachments:
 ---
 
 ## Details
@@ -49,11 +37,9 @@ attachments: []
 ---
 Query in here
 
-
 ## Thoughts
 ---
 Query in here
-
 
 ## Questions To Ask
 ---

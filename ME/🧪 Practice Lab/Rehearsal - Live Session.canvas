@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"841f2279ce43bc19","type":"text","text":"🔍 **Scenario**\n\n","x":-580,"y":-460,"width":720,"height":160},
+		{"id":"2a0c897377ae769f","type":"text","text":"🗣️ **Your Response Box**","x":-580,"y":-240,"width":600,"height":260},
+		{"id":"9d8790e63d616869","type":"text","text":"🤖 **Feedback**","x":60,"y":-240,"width":460,"height":260},
+		{"id":"e8c2c541c9fd4463","type":"file","file":"ME/🧪 Practice Lab/🎲 Scenarios/Emotional Shutdown.md","x":-580,"y":60,"width":400,"height":400}
+	],
+	"edges":[]
+}

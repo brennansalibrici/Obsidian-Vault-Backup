@@ -1,36 +1,28 @@
 ---
-# CLASS DEFINITION:
 fileClass: capturedMoment
-
-# **INHERITS FROM GLOBAL TEMPLATE:
-# CORE IDENTITY FIELDS:
 id: 1748458497244
 created: 2025-05-28 13:54
 last_modified: 2025-05-28 13:54
 title: Doing It Afraid
-
-# STATUS & WORKFLOW FIELDS
 status: [🟨 review]
-type: []
+type: 
 tags: []
 category: note
 entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
-
-# CAPTURED MOMENT DEFINITION:
-source_daily_note: [[2025-05-28]]
-importance: "Small Win"
-feelings: ""
-people: "[[Lori Kinney]]"
-theme: ""
-summary: "Responded well to a difficult situation"
-
-notes: []
-related: []
-media: []
-attachments: []
+source_daily_note:
+  - - 2025-05-28
+importance: [Small Win]
+feelings: [""]
+people: ["[[Lori Kinney]]"]
+theme: [""]
+summary: Responded well to a difficult situation
+notes: 
+related: 
+media: 
+attachments:
 ---
 
 ## Context

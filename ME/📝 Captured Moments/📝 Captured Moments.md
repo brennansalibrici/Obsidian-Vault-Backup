@@ -9,7 +9,7 @@ action QuickAdd: 📝 Capture New Moment
 
 ### Captured Moments To Review
 ```dataview
-table created as "Date/Time"
+table id as "ID", importance as "Importance", people as "People", type as "Type", created as "Date/Time", status as "Status"
 from "ME/📝 Captured Moments"
 where contains(status, "review")
 sort file.name asc 

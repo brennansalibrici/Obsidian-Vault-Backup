@@ -110,6 +110,9 @@
     "opposite": "multitext",
     "fulfilled_by": "multitext",
     "need_category": "multitext",
-    "need_type": "multitext"
+    "need_type": "multitext",
+    "theme": "multitext",
+    "supporting_meta_skills": "multitext",
+    "steps": "multitext"
   }
 }

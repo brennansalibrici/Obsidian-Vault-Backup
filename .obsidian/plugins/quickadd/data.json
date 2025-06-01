@@ -889,6 +889,66 @@
           "openFileInMode": "default",
           "fileExistsMode": "Increment the file name",
           "setFileExistsBehavior": false
+        },
+        {
+          "id": "3dc8ce35-857d-443c-bc81-e16671ca8fc9",
+          "name": "🔁 New Integration Journal Entry",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/me/Emotional Growth Journal/Integration Journal Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "🔁 Integration Journal Entry {{DATE:YYYY-MM-DD}} @ {{DATE:HH}}{{DATE:mm}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ME/📓 Journal"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
+        },
+        {
+          "id": "4ca6c9a5-3646-4385-b9e1-900266ef5650",
+          "name": "🪞 New Reflection Journal Entry",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/me/Emotional Growth Journal/Reflection Journal Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "🪞 Reflection Journal Entry {{DATE:YYYY-MM-DD}} @ {{DATE:HH}}{{DATE:mm}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ME/📓 Journal"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
         }
       ]
     },

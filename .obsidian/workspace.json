@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "113f4fac9ae1f900",
+        "id": "a040372ac3a01249",
         "type": "tabs",
         "children": [
           {
-            "id": "fe9b5a9fc7424498",
+            "id": "5c62974dc2b9a41e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Boundary Maintenance.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Boundary Maintenance"
             }
           }
         ]
@@ -142,7 +146,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 352.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -151,7 +155,7 @@
       {
         "id": "06c586803a98bedb",
         "type": "tabs",
-        "dimension": 40.909090909090914,
+        "dimension": 35.80705009276438,
         "children": [
           {
             "id": "4df392febc2841c2",
@@ -245,14 +249,24 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "f34c689d90022992",
+            "type": "leaf",
+            "state": {
+              "type": "journal-calendar",
+              "state": {},
+              "icon": "calendar-days",
+              "title": "Calendar"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       },
       {
         "id": "2e275ca133c5355a",
         "type": "tabs",
-        "dimension": 59.09090909090909,
+        "dimension": 64.19294990723562,
         "children": [
           {
             "id": "50db4f4e28e80db5",
@@ -260,12 +274,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Boundary Maintenance.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Boundary Maintenance"
             }
           },
           {
@@ -282,7 +297,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 354.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -297,45 +312,47 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "fe9b5a9fc7424498",
+  "active": "5c62974dc2b9a41e",
   "lastOpenFiles": [
-    "ME/🛡️ Emotional Needs/🛡️ Emotional Needs.md",
-    "ME/🛡️ Emotional Needs/Safety.md",
-    "Meta/Templates/me/Emotional Need Template.md",
-    "ME/🛡️ Emotional Needs/Test Need.md",
-    "Meta/fileClass/me/emotion.md",
-    "Meta/Templates/me/Emotion Template.md",
-    "Meta/fileClass/me/emotional_need.md",
-    "ME/🎭 Emotions/Abominable.md",
-    "ME/🎭 Emotions/🎭 Emotions.md",
-    "ME/🧭 Maps & Patterns/🧭 Maps & Patterns.md",
-    "ME/🧪 Practice Lab/🧪 Practice Lab.md",
-    "ME/🛡️ Emotional Needs",
-    "ME/📓 Journal/📓 Journal.md",
-    "ME/⚓ Anchors & Protocols/⚓ Anchors & Protocols.md",
-    "ME/📖 Theology & Emotional Integration/📖 Theology & Emotional Integration.md",
-    "ME/🌱 Growth Path/🌱 Growth Path.md",
-    "ME/📖 Theology & Emotional Integration",
-    "ME/🌱 Growth Path/What I'm Not Going Back To.md",
-    "ME/🌱 Growth Path/My Values.md",
-    "Files/Files.md",
-    "Inputs/Inputs.md",
-    "The Walls & The Open Door1.md",
-    "How to Keep the Door Open.md",
-    "ME/🌱 Growth Path/Self Affirmations.md",
-    "ME/🌱 Growth Path/The Man I'm Becoming.md",
-    "ME/🔥 From The Fire/🔥 From The Fire.md",
-    "ME/🔥 From The Fire/In The Same Way I Blessed Your Financial State....md",
-    "Meta/Templates/me/From the Fire Template.md",
-    "Meta/Value Lists",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Respecting Others’ Boundaries.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Listening Without Fixing.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Masked Vulnerability.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Shame De-Escalation.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Staying With The Moment.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Emotional Containment.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Trigger Navigation.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Owning Impact.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Staying Grounded.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Boundary Maintenance.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Boundary Repair.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Naming the Unspoken.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Repairing Misattunement in Real Time.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Empathetic Listening.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Validation.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Emotional Transparency.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Conflict Repair.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Emotional Mirroring.md",
+    "Meta/fileClass/me/practice_lab/core_skill.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills",
+    "Meta/fileClass/me/practice_lab/practice_session.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Attuning to Emotional Meaning.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Partnering Instead of Defending.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Holding Discomfort.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Integrating Feedback.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Pausing Before Responding.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Sitting in Uncertainty.md",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills",
+    "Files/Canvases/Creating new task.canvas",
+    "ME/🧪 Practice Lab/🗺️ Skill Maps",
+    "ME/🧪 Practice Lab/Rehearsal - Live Session.canvas",
+    "FleetingNotesApp",
+    "Meta/Templates/me/Practice Lab",
+    "Meta/fileClass/me/practice_lab",
+    "ME/🧪 Practice Lab/🎬 Rehearsal Logs",
+    "ME/🧪 Practice Lab/🌒 Reflections",
+    "ME/🧪 Practice Lab/🎲 Scenarios",
+    "Meta/Templates/me/Emotional Growth Journal",
     "My Files/My Attachments/Pasted image 20250528150612.png",
-    "My Files/My Attachments",
-    "My Files",
-    "ME/Unprocessed Captures",
-    "Meta/Templates/me",
-    "Meta/Scripts/me",
-    "ME/🎭 Emotions",
-    "Meta/fileClass/me",
     "Files/My Attachments/IMG_1461.jpg",
     "Files/My Attachments/IMG_1465.jpg",
     "Files/My Attachments/Screenshot 2025-04-15 002323.png",
@@ -345,7 +362,6 @@
     "Files/My Attachments/Pasted image 20250415002454.png",
     "Files/My Attachments/file-20250510025427180819png.png",
     "Files/My Attachments/file-20250510024008331105png.png",
-    "Files/Canvases/Creating new task.canvas",
     "Personal/Greenhouse/Canvases/My Note-Making Station Board.canvas",
     "Systems/Dashboards/Captured Moments Dashboard.canvas",
     "Systems/Dashboards/Canvases/My Canvas Vision Board.canvas",
