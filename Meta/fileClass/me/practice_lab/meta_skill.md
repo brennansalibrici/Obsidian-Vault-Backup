@@ -3,10 +3,11 @@ limit: 20
 mapWithTag: false
 icon: package
 tagNames: 
-filesPaths: 
+filesPaths:
+  - ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
@@ -22,7 +23,7 @@ fieldsOrder:
   - AClCyP
   - fpWuEU
   - qPp2cf
-version: "2.30"
+version: "2.32"
 fields:
   - name: related_scenarios
     type: MultiFile

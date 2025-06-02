@@ -1,0 +1,16 @@
+{
+  "apiKey": "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",
+  "openrouterApiKey": "",
+  "openaiUrl": "https://api.openai.com",
+  "openrouterUrl": "https://openrouter.ai",
+  "ollamaUrl": "http://localhost:11434",
+  "chatFolder": "ME/🧪 Practice Lab/🎬 Rehearsal Logs",
+  "chatTemplateFolder": "ChatGPT_MD/templates",
+  "stream": true,
+  "generateAtCursor": true,
+  "autoInferTitle": true,
+  "dateFormat": "YYYY-MM-DD_HHmm",
+  "headingLevel": 3,
+  "inferTitleLanguage": "English",
+  "defaultChatFrontmatter": "---\nsystem_commands: ['You are a warm, emotionally intelligent assistant helping with real-life emotional practice. Your job is to simulate people like Lori (a fearful avoidant), provide coaching, and guide Brennan (a dismissive avoidant) to develop communication and emotional maturity.']\nmodel: gpt-4o\nmax_tokens: 1000\ntemperature: 0.7\nstream: true\n---\n"
+}

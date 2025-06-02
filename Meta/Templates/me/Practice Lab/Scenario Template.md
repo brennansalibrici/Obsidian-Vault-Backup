@@ -1,34 +1,33 @@
 ---
-# CLASS DEFINITION:
 fileClass: scenario
-
-# **INHERITS FROM GLOBAL TEMPLATE:
-# CORE IDENTITY FIELDS:
 id: <% tp.date.now("x") %>
 created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 title: <% tp.file.title %>
-
-# STATUS & WORKFLOW FIELDS
-type: []
-tags: []
-category: note
+tags: 
 entered: true
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
-
-# SCENARIO DEFINITION:
-importance: "{{VALUE:Small Win,Big Milestone,Breakthrough,Deep Grief,Hopeful Shift,AHA Moment,Encouragement,Personal Truth,Relationship Guide,Pattern Shift,Triggering Event,Other}}"
-category: "{{VALUE:Mirroring,Validation,Conflict Repair,Boundaries,Emotional Disclosure,Trigger Navigation,Presence Under Pressure,Vulnerability Response,Listening Without Fixing,Emotional Containment,Partnering Instead of Defending,Staying With the Moment,Shame De-escalation,Holding Space,Masked Vulnerability,Emotional Subtext Listening}}"
-people: "{{VALUE:People}}"
-related: []
+people:
+  - "{{VALUE: People}}"
+type: "{{VALUE:Mirroring,Validation,Conflict Repair,Boundaries,Emotional Disclosure,Trigger Navigation,Presence Under Pressure,Vulnerability Response,Listening Without Fixing,Emotional Containment,Partnering Instead of Defending,Staying With the Moment,Shame De-escalation,Holding Space,Masked Vulnerability,Emotional Subtext Listening}}"
 summary: "{{VALUE:Summary}}"
-
-notes: []
-related: []
-media: []
-attachments: []
+skill_level:
+meta_skills: []
+core_skills: []
+emotions_in_play: []
+triggers: []
+needs_activated: []
+emotional_wounds: []
+protective_strategies: []
+steps_targeted: []
+grade: []
+practice_log: []
+notes: 
+media: 
+attachments:
 ---
 
 ## 🔍 Situation 
@@ -36,7 +35,7 @@ attachments: []
 _(Describe the triggering event, message, or moment of emotional tension)_
 
 
-## 🧠 Why This Scenario Matters 
+## 🌐 Why This Scenario Matters 
 ---
 _(What makes this difficult or important to get right?)_
 

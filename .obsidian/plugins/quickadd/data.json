@@ -949,6 +949,96 @@
           "openFileInMode": "default",
           "fileExistsMode": "Increment the file name",
           "setFileExistsBehavior": false
+        },
+        {
+          "id": "a1af96a0-969c-4c2a-809e-1712bbbe41c9",
+          "name": "🎲 New Scenario",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/me/Practice Lab/Scenario Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ME/🧪 Practice Lab/🎲 Scenarios"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": true,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
+        },
+        {
+          "id": "42ae5755-c371-4200-8cbe-9a0ca5435fcc",
+          "name": "🎬 New Practice Session",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/me/Practice Lab/Practice Session Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ME/🧪 Practice Lab/🎬 Practice Logs"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
+        },
+        {
+          "id": "b78218bc-0dc3-41ad-8418-ff78896f1631",
+          "name": "🎙️New Rehearsal",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/me/Practice Lab/Live Rehearsal Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ME/🧪 Practice Lab/🎙️ Live Rehearsals"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": true,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
         }
       ]
     },

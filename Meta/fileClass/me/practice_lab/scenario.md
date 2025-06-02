@@ -28,11 +28,6 @@ fields:
     options: {}
     path: ""
     id: g7iAy2
-  - name: name
-    type: Input
-    options: {}
-    path: ""
-    id: 4AuoHk
   - name: skill_level
     type: Cycle
     options:
@@ -61,14 +56,7 @@ fields:
       valuesList: {}
     path: ""
     id: M12tmo
-  - name: meta_skills
-    type: Multi
-    options:
-      sourceType: ValuesList
-      valuesList: {}
-    path: ""
-    id: 1KSMLW
-  - name: linked_log
+  - name: practice_log
     type: MultiFile
     options: {}
     path: ""
@@ -80,26 +68,79 @@ fields:
       valuesList: {}
     path: ""
     id: MspyMI
-version: "2.55"
+  - name: meta_skills
+    type: MultiFile
+    options: {}
+    path: ""
+    id: GrjhW6
+  - name: core_skills
+    type: MultiFile
+    options: {}
+    path: ""
+    id: XYAOCr
+  - name: emotional_wounds
+    type: MultiFile
+    options: {}
+    path: ""
+    id: X2sOB6
+  - name: emotions_in_play
+    type: MultiFile
+    options: {}
+    path: ""
+    id: LP9krJ
+  - name: needs_activated
+    type: MultiFile
+    options: {}
+    path: ""
+    id: OCXRga
+  - name: protective_strategies
+    type: MultiFile
+    options: {}
+    path: ""
+    id: gbwEzZ
+  - name: triggers
+    type: MultiFile
+    options: {}
+    path: ""
+    id: 2O7ueo
+  - name: people
+    type: MultiFile
+    options: {}
+    path: ""
+    id: TC0EZy
+  - name: attempts
+    type: Formula
+    options:
+      autoUpdate: false
+    path: ""
+    id: ulTu5n
+version: "2.126"
 limit: 20
 mapWithTag: false
 icon: package
 tagNames: 
 filesPaths:
-  - ME/🧪 Practice Lab/Scenarios
+  - ME/🧪 Practice Lab/🎲 Scenarios
 bookmarksGroups: 
 excludes: 
 extends: 
 savedViews: []
 favoriteView: 
 fieldsOrder:
-  - 4AuoHk
+  - ulTu5n
+  - TC0EZy
   - tMAZ0d
+  - g7iAy2
   - WWJI0p
+  - GrjhW6
+  - XYAOCr
+  - LP9krJ
+  - 2O7ueo
+  - OCXRga
+  - X2sOB6
+  - gbwEzZ
   - M12tmo
   - uDNLKG
-  - g7iAy2
-  - 1KSMLW
   - 8v1Wgk
   - MspyMI
 ---
