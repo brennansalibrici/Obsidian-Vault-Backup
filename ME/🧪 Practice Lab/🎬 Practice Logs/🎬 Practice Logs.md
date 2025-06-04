@@ -7,7 +7,27 @@ type command
 action QuickAdd: 🎬 New Practice Session
 ```
 
-### Rehearsal Log
+```meta-bind-button
+label: Create New 🎬 Practice Log - Test
+icon: ""
+style: default
+class: ""
+cssStyle: ""
+backgroundImage: ""
+tooltip: ""
+id: ""
+hidden: false
+actions:
+  - type: templaterCreateNote
+    templateFile: Meta/Templates/me/Practice Lab/Modal Practice Session Template.md
+    folderPath: ME/🧪 Practice Lab/🎬 Practice Logs
+    fileName: Test Log
+    openNote: true
+    openIfAlreadyExists: false
+
+```
+
+### Practice Log
 ```dataview
 table id as "ID", scenario as "Scenario", created as "Date/Time"
 from "ME/🧪 Practice Lab/🎬 Practice Logs"

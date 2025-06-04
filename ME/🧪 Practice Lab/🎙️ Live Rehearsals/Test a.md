@@ -4,10 +4,10 @@ fileClass: live_rehearsal
 
 # **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: <% tp.date.now("x") %>
-created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-title: <% tp.file.title %>
+id: 1749056562034
+created: 2025-06-04 12:02
+last_modified: 2025-06-04 12:02
+title: Test a
 
 # STATUS & WORKFLOW FIELDS
 status: []
@@ -20,10 +20,10 @@ priority: [⚪ None]
 visibility: 🔒 private
 
 # LIVE REHEARSAL DEFINITION:
-rehearsal_type: "{{VALUE:Live Rehearsal,Coaching,Live Rehearsal & Coaching}}"
-scenario: "{{VALUE:Scenario}}"
+rehearsal_type: "Live Rehearsal"
+scenario: "test"
 practice_log: []
-people: "{{VALUE: Person}}"
+people: ""
 rehearsal_summary:
 skill_level:
 meta_skills: []
@@ -43,32 +43,25 @@ notes: []
 related: []
 media: []
 attachments: []
-
 ---
 
 ## 📝 Session Summary  
 ---  
 
-
 ## 💡 Key Miss / Growth Edge  
 ---  
-
 
 ## 🧠 Core Skills Practiced  
 ---  
 
-  
 ## 🧭 Meta Skills Engaged  
 ---  
-
 
 ## 🎯 Grade  
 ---  
 
-
 ## 📎 Linked Scenario  
 ---  
-
 
 ## 🔗 Supporting Resources  
 ---  

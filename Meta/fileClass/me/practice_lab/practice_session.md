@@ -100,7 +100,17 @@ fields:
     options: {}
     path: ""
     id: UcfA4U
-version: "2.113"
+  - name: rehearsal_mode
+    type: Select
+    options:
+      sourceType: ValuesList
+      valuesList:
+        "1": Live Rehearsal
+        "2": Coaching
+        "3": Live Rehearsal & Coaching
+    path: ""
+    id: Rg84kw
+version: "2.115"
 limit: 20
 mapWithTag: false
 icon: package
@@ -109,10 +119,11 @@ filesPaths:
   - ME/🧪 Practice Lab/🎬 Practice Logs
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - Rg84kw
   - 2ylI6B
   - 1xHO2R
   - FasC9S

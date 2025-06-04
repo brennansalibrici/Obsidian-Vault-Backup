@@ -1039,6 +1039,36 @@
           "openFileInMode": "default",
           "fileExistsMode": "Increment the file name",
           "setFileExistsBehavior": false
+        },
+        {
+          "id": "afbdf979-9fcf-4c78-8c18-921f7d15b238",
+          "name": "🧠 New Coaching Feedback",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Meta/Templates/me/Practice Lab/Coaching Template.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:Name}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "ME/🧪 Practice Lab/🧠 Coaching"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": true,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": false
         }
       ]
     },
@@ -1801,6 +1831,46 @@
               "folders": [
                 "Work/👷 Subcontractors"
               ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "🎬 Start Practice Lab Rehearsal",
+      "id": "34d39d43-02a1-4b2d-92e5-09dc1708c3b1",
+      "commands": [
+        {
+          "name": "Untitled Template Choice",
+          "type": "NestedChoice",
+          "id": "f364a2f5-d1a2-426c-b725-4d05f41022fe",
+          "choice": {
+            "id": "bed0c273-271d-4d1f-85ae-b2c98a83a9b5",
+            "name": "Untitled Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "",
+            "fileNameFormat": {
+              "enabled": false,
+              "format": ""
+            },
+            "folder": {
+              "enabled": false,
+              "folders": [],
               "chooseWhenCreatingNote": false,
               "createInSameFolderAsActiveFile": false,
               "chooseFromSubfolders": false

@@ -37,6 +37,7 @@ media: []
 attachments: []
 
 
+practice_lab: true
 ---
 
 ## Details
@@ -49,11 +50,9 @@ attachments: []
 ---
 Query in here
 
-
 ## Thoughts
 ---
 Query in here
-
 
 ## Questions To Ask
 ---

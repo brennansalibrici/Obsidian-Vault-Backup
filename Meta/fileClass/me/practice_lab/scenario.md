@@ -114,7 +114,7 @@ fields:
       autoUpdate: false
     path: ""
     id: ulTu5n
-version: "2.126"
+version: "2.127"
 limit: 20
 mapWithTag: false
 icon: package
@@ -123,7 +123,7 @@ filesPaths:
   - ME/🧪 Practice Lab/🎲 Scenarios
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:

@@ -37,6 +37,7 @@ media: []
 attachments: []
 
 
+practice_lab: true
 ---
 
 ## Details

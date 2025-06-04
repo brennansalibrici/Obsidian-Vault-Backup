@@ -12,5 +12,7 @@
   "buttons",
   "dataview",
   "obsidian-linter",
-  "journals"
+  "journals",
+  "obsidian-meta-bind-plugin",
+  "modalforms"
 ]

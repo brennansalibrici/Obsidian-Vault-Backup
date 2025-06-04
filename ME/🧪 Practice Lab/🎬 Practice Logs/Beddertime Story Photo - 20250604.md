@@ -1,13 +1,13 @@
 ---
 # CLASS DEFINITION:
-fileClass: live_rehearsal
+fileClass: practice_log
 
 # **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: <% tp.date.now("x") %>
-created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-title: <% tp.file.title %>
+id: 1749049257250
+created: 2025-06-04 10:00
+last_modified: 2025-06-04 10:00
+title: Test Log
 
 # STATUS & WORKFLOW FIELDS
 status: []
@@ -19,15 +19,11 @@ archived: false
 priority: [⚪ None]
 visibility: 🔒 private
 
-# LIVE REHEARSAL DEFINITION:
-rehearsal_type: "{{VALUE:Live Rehearsal,Coaching,Live Rehearsal & Coaching}}"
-scenario: "{{VALUE:Scenario}}"
-practice_log: []
-people: "{{VALUE: Person}}"
-rehearsal_summary:
+# PRACTICE SESSION DEFINITION:
+session_summary:
 skill_level:
-meta_skills: []
-core_skills: []
+meta_skill_focus: []
+core_skill_focus: []
 emotions_in_play: []
 triggers: []
 needs_activated: []
@@ -35,8 +31,9 @@ emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
 grade:
+linked_resources: []
+live_rehearsals: []
 key_miss: 
-rehearsal_resources: []
 export_to_inputs: false
 
 notes: []
@@ -44,32 +41,29 @@ related: []
 media: []
 attachments: []
 
+
+scenario: "[[Bedtime Story Photo]]"
+people: ["[[Lori Kinney]]"]
+rehearsal_mode: Live Rehearsal
 ---
 
 ## 📝 Session Summary  
 ---  
 
-
 ## 💡 Key Miss / Growth Edge  
 ---  
-
 
 ## 🧠 Core Skills Practiced  
 ---  
 
-  
 ## 🧭 Meta Skills Engaged  
 ---  
-
 
 ## 🎯 Grade  
 ---  
 
-
 ## 📎 Linked Scenario  
 ---  
 
-
 ## 🔗 Supporting Resources  
 ---  
-

@@ -18,7 +18,7 @@
   },
   "newFileLocation": "folder",
   "newFileFolderPath": "USV Notes",
-  "showLineNumber": false,
+  "showLineNumber": true,
   "showUnsupportedFiles": true,
   "autoConvertHtml": true
 }

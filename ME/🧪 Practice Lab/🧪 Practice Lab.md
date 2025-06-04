@@ -46,6 +46,8 @@ sort file.name asc
 
 - [x] Double Check all fileClasses and templates
 - [ ] Wire up a New Practice Session
+- [ ] Change the formula fields in the global object to multi list and update all fields and object
+- [ ] Replace object list for hours on MyJobs and replace with multilists
 - [ ] Create the Reflections journal 
 - [ ] Create the metrics and other means to track these metrics to keep tabs on your progress
 - [ ] Clean up Indexed Value Entries for all fields

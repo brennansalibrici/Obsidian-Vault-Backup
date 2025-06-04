@@ -4,10 +4,10 @@ fileClass: practice_log
 
 # **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: 1748906212269
-created: 2025-06-02 18:16
-last_modified: 2025-06-02 18:16
-title: Practice Log - Blindsided
+id: 1749052138877
+created: 2025-06-04 10:48
+last_modified: 2025-06-04 10:48
+title: Test Log
 
 # STATUS & WORKFLOW FIELDS
 status: []
@@ -20,8 +20,6 @@ priority: [⚪ None]
 visibility: 🔒 private
 
 # PRACTICE SESSION DEFINITION:
-scenario: "[[Blind by Lori After Bedtime Story Photo]]"
-people: "[[Lori Kinney]]"
 session_summary:
 skill_level:
 meta_skill_focus: []
@@ -32,9 +30,9 @@ needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
+grade:
 linked_resources: []
 live_rehearsals: []
-grade: 
 key_miss: 
 export_to_inputs: false
 
@@ -42,6 +40,11 @@ notes: []
 related: []
 media: []
 attachments: []
+
+
+scenario: "[[Bedtime Story Photo]]"
+people: ["[[Lori Kinney]]"]
+rehearsal_mode: Live Rehearsal
 ---
 
 ## 📝 Session Summary  
@@ -64,4 +67,3 @@ attachments: []
 
 ## 🔗 Supporting Resources  
 ---  
-
