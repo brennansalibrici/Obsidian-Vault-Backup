@@ -1,69 +1,69 @@
 ---
-# CLASS DEFINITION:
-fileClass: practice_log
-
-# **INHERITS FROM GLOBAL TEMPLATE:
-# CORE IDENTITY FIELDS:
-id: 1749052153430
-created: 2025-06-04 10:49
-last_modified: 2025-06-04 10:49
-title: Test Log
-
-# STATUS & WORKFLOW FIELDS
+fileClass: live_rehearsal
+id: 1749068556180
+created: 2025-06-04 15:22
+last_modified: 2025-06-04 15:22
+title: Tester Test
 status: []
 type: []
 tags: []
 category: note
 entered: true
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
-
-# PRACTICE SESSION DEFINITION:
-session_summary:
-skill_level:
-meta_skill_focus: []
-core_skill_focus: []
+rehearsal_type: 
+scenario: "[[Bedtime Story Photo]]"
+practice_log: "[[Test Log]]"
+people:
+  - "[[Nate Kinney]]"
+rehearsal_summary: 
+skill_level: 
+meta_skills: []
+core_skills: []
 emotions_in_play: []
 triggers: []
 needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
-grade:
-linked_resources: []
-live_rehearsals: []
+grade: 
 key_miss: 
+rehearsal_resources: []
 export_to_inputs: false
-
 notes: []
 related: []
 media: []
 attachments: []
-
-
-scenario: "[[Bedtime Story Photo]]"
-people: ["[[Lori Kinney]]"]
-rehearsal_mode: Live Rehearsal
+take: 1
+exmport_to_inputs: false
 ---
 
 ## 📝 Session Summary  
 ---  
 
+
 ## 💡 Key Miss / Growth Edge  
 ---  
+
 
 ## 🧠 Core Skills Practiced  
 ---  
 
+  
 ## 🧭 Meta Skills Engaged  
 ---  
+
 
 ## 🎯 Grade  
 ---  
 
+
 ## 📎 Linked Scenario  
 ---  
 
+
 ## 🔗 Supporting Resources  
 ---  
+

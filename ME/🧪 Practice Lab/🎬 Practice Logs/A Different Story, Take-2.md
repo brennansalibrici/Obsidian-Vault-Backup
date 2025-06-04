@@ -43,34 +43,27 @@ attachments: []
 
 
 scenario: "[[A Different Story]]"
-people:
-  - "[[Dan Schmoyer]]"
+people: ["[[Dan Schmoyer]]"]
 rehearsal_mode: Live Rehearsal
 ---
 
 ## 📝 Session Summary  
 ---  
 
-
 ## 💡 Key Miss / Growth Edge  
 ---  
-
 
 ## 🧠 Core Skills Practiced  
 ---  
 
-  
 ## 🧭 Meta Skills Engaged  
 ---  
-
 
 ## 🎯 Grade  
 ---  
 
-
 ## 📎 Linked Scenario  
 ---  
-
 
 ## 🔗 Supporting Resources  
 ---  

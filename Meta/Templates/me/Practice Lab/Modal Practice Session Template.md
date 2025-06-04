@@ -84,6 +84,35 @@ const takeNumber = matchingLogs + 1;
 const filename = `${scenarioName}, Take-${takeNumber}`;
 await tp.file.rename(filename)
 
+//Shared fields to pass into dependent notes
+const sharedFields = {scenario: scenarioLink, practice_log: filename, take: takeNumber};
+
+//find template file
+const liveFileName = "Tester Test";
+const liveFolderPath = "ME/🧪 Practice Lab/🎙️ Live Rehearsals";
+const fullLivePath = `${liveFolderPath}/${liveFileName}.md`;
+const lv_template = tp.file.find_tfile("Modal Live Rehearsal Template");
+await tp.file.create_new(lv_template, liveFileName, false, liveFolderPath);
+
+//Create the Live Rehearsal file (empty for now)
+//await app.vault.create(fullLivePath,"");
+
+//Get reference to the new file and switch the active pane
+const newLiveFile = app.vault.getAbstractFileByPath(fullLivePath);
+await app.workspace.getLeaf().openFile(newLiveFile);
+await app.fileManager.processFrontMatter(newLiveFile, (fm) => {
+  fm["scenario"] = scenarioLink;
+  fm["practice_log"] = `[[${tp.file.title}]]`;
+  fm["take"] = takeNumber;
+  fm["exmport_to_inputs"] = false;
+  fm["people"] = result.data.people;
+
+});
+
+
+//console.log("New File",tR);
+//console.log("New File 2:",tp);
+
 
 
 

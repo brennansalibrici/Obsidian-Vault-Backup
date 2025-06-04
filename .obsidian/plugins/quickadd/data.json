@@ -1015,7 +1015,7 @@
           "name": "🎙️New Rehearsal",
           "type": "Template",
           "command": true,
-          "templatePath": "Meta/Templates/me/Practice Lab/Live Rehearsal Template.md",
+          "templatePath": "Meta/Templates/me/Practice Lab/Modal Live Rehearsal Template.md",
           "fileNameFormat": {
             "enabled": true,
             "format": "{{VALUE:Name}}"

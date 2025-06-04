@@ -4,9 +4,9 @@ fileClass: practice_log
 
 # **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: 1749052138877
-created: 2025-06-04 10:48
-last_modified: 2025-06-04 10:48
+id: 1749068545180
+created: 2025-06-04 15:22
+last_modified: 2025-06-04 15:22
 title: Test Log
 
 # STATUS & WORKFLOW FIELDS
@@ -43,7 +43,7 @@ attachments: []
 
 
 scenario: "[[Bedtime Story Photo]]"
-people: ["[[Lori Kinney]]"]
+people: ["[[Nate Kinney]]"]
 rehearsal_mode: Live Rehearsal
 ---
 

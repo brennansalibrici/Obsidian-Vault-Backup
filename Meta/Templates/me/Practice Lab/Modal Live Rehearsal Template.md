@@ -20,10 +20,10 @@ priority: [⚪ None]
 visibility: 🔒 private
 
 # LIVE REHEARSAL DEFINITION:
-rehearsal_type: "{{VALUE:Live Rehearsal,Coaching,Live Rehearsal & Coaching}}"
-scenario: "{{VALUE:Scenario}}"
+rehearsal_type: 
+scenario:
 practice_log: []
-people: "{{VALUE: Person}}"
+people:
 rehearsal_summary:
 skill_level:
 meta_skills: []
@@ -43,6 +43,9 @@ notes: []
 related: []
 media: []
 attachments: []
+take:
+
+
 
 ---
 
