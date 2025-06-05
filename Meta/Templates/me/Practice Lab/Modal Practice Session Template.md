@@ -20,8 +20,8 @@ priority: [⚪ None]
 visibility: 🔒 private
 
 # PRACTICE SESSION DEFINITION:
-session_summary:
-skill_level:
+session_summary: []
+skill_level: []
 meta_skill_focus: []
 core_skill_focus: []
 emotions_in_play: []
@@ -30,10 +30,10 @@ needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
-grade:
+grade: []
 linked_resources: []
 live_rehearsals: []
-key_miss: 
+key_miss: []
 export_to_inputs: false
 
 notes: []
@@ -43,11 +43,9 @@ attachments: []
 
 
 <%*
+//Open the modal form and it's api
 const modalForm = app.plugins.plugins.modalforms.api;
 const result = await modalForm.openForm("Create New Practice Log");
-
-console.log("Modal values:", result);
-console.log("Is this right?",result.data.scenario);
 
 // Extract raw scenario name (as a string)
 const scenarioName = result.data.scenario || "Untitled Scenario";
@@ -58,14 +56,12 @@ const scenarioLink = `[[${scenarioName}]]`;
 //Replace original with proper wikilink in frontmatter
 result.data.scenario = scenarioLink;
 
-//Add to frontmatter
-tR += result.asFrontmatterString();
-
 //Format date
 const dateStr = tp.date.now("YYYYMMDD");
 
 //Get folder reference
-const practiceFolder = app.vault.getAbstractFileByPath("ME/🧪 Practice Lab/🎬 Practice Logs");
+const practiceFolderPath = "ME/🧪 Practice Lab/🎬 Practice Logs";
+const practiceFolder = app.vault.getAbstractFileByPath(practiceFolderPath);
 
 let matchingLogs = 0;
 
@@ -81,18 +77,27 @@ if(practiceFolder && practiceFolder.children){
 const takeNumber = matchingLogs + 1;
 
 //Compose final filename and rename
-const filename = `${scenarioName}, Take-${takeNumber}`;
+const filename = `${scenarioName}, Session-${takeNumber}`;
 await tp.file.rename(filename)
+result.data.title = filename;
 
+//Define New Rehearsal file name
+const liveRehearsalFileName = `${filename}_Live Rehearsal, Take-${takeNumber}`;
+result.data.live_rehearsals = `[[${liveRehearsalFileName}]]`;
+
+//Add to frontmatter
+tR += result.asFrontmatterString();
 //Shared fields to pass into dependent notes
 const sharedFields = {scenario: scenarioLink, practice_log: filename, take: takeNumber};
 
+//Define New Rehearsal file name
+//const liveFileName = `${filename}_Live Rehearsal, Take-${takeNumber}`;
+
 //find template file
-const liveFileName = "Tester Test";
 const liveFolderPath = "ME/🧪 Practice Lab/🎙️ Live Rehearsals";
-const fullLivePath = `${liveFolderPath}/${liveFileName}.md`;
+const fullLivePath = `${liveFolderPath}/${liveRehearsalFileName}.md`;
 const lv_template = tp.file.find_tfile("Modal Live Rehearsal Template");
-await tp.file.create_new(lv_template, liveFileName, false, liveFolderPath);
+await tp.file.create_new(lv_template, liveRehearsalFileName, false, liveFolderPath);
 
 //Create the Live Rehearsal file (empty for now)
 //await app.vault.create(fullLivePath,"");
@@ -102,13 +107,21 @@ const newLiveFile = app.vault.getAbstractFileByPath(fullLivePath);
 await app.workspace.getLeaf().openFile(newLiveFile);
 await app.fileManager.processFrontMatter(newLiveFile, (fm) => {
   fm["scenario"] = scenarioLink;
-  fm["practice_log"] = `[[${tp.file.title}]]`;
+  fm["practice_log"] = `[[${filename}]]`;
   fm["take"] = takeNumber;
-  fm["exmport_to_inputs"] = false;
+  fm["export_to_inputs"] = false;
   fm["people"] = result.data.people;
 
 });
 
+// Attach the newly created live rehearsal file to the Practice Session object
+//const practiceFile = app.vault.getAbstractFileByPath(`${fullFileName}.md`);
+//await app.workspace.getLeaf().openFile(practiceFile);
+//console.log("Reopen File", fullFileName);
+//await app.fileManager.processFrontMatter(practiceFile, (fm) => {
+  
+  //fm["live_rehearsals"] = `[[${liveRehearsalFileName}]]`;
+//});
 
 //console.log("New File",tR);
 //console.log("New File 2:",tp);

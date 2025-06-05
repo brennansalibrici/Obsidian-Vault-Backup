@@ -1,9 +1,9 @@
 ---
-fileClass: live_rehearsal
-id: 1749068556180
-created: 2025-06-04 15:22
-last_modified: 2025-06-04 15:22
-title: Tester Test
+fileClass: practice_log
+id: 1749084993052
+created: 2025-06-04 19:56
+last_modified: 2025-06-04 19:56
+title: A Different Story, Session-1
 status: []
 type: []
 tags: []
@@ -13,31 +13,31 @@ archived: false
 priority:
   - ⚪ None
 visibility: 🔒 private
-rehearsal_type: 
-scenario: "[[Bedtime Story Photo]]"
-practice_log: "[[Test Log]]"
-people:
-  - "[[Nate Kinney]]"
-rehearsal_summary: 
-skill_level: 
-meta_skills: []
-core_skills: []
+session_summary: []
+skill_level: []
+meta_skill_focus: []
+core_skill_focus: []
 emotions_in_play: []
 triggers: []
 needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
-grade: 
-key_miss: 
-rehearsal_resources: []
+grade: []
+linked_resources: []
+live_rehearsals:
+  - "[[A Different Story, Session-1_Live Rehearsal, Take-1]]"
+  - "[[A Different Story, Session-1_Live Rehearsal Take -2]]"
+key_miss: []
 export_to_inputs: false
 notes: []
 related: []
 media: []
 attachments: []
-take: 1
-exmport_to_inputs: false
+scenario: "[[A Different Story]]"
+people:
+  - "[[Dan Schmoyer]]"
+rehearsal_mode: Live Rehearsal
 ---
 
 ## 📝 Session Summary  
@@ -66,4 +66,3 @@ exmport_to_inputs: false
 
 ## 🔗 Supporting Resources  
 ---  
-

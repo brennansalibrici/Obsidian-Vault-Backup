@@ -348,6 +348,105 @@
         "createNoteCommand": true,
         "parsedTemplate": []
       }
+    },
+    {
+      "title": "New Live Rehearsal",
+      "name": "Create New Live Rehearsal",
+      "fields": [
+        {
+          "name": "practice_log",
+          "label": "Select Practice Session",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "select",
+            "source": "notes",
+            "folder": "ME/🧪 Practice Lab/🎬 Practice Logs",
+            "options": []
+          }
+        },
+        {
+          "name": "people",
+          "label": "People Involved",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "rehearsal_mode",
+          "label": "Rehearsal Mode",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Live Rehearsal",
+                "label": "Live Rehearsal"
+              },
+              {
+                "value": "Coaching",
+                "label": "Coaching"
+              },
+              {
+                "value": "Live Rehearsal & Coaching",
+                "label": "Live Rehearsal & Coaching"
+              }
+            ]
+          }
+        },
+        {
+          "name": "meta_skills",
+          "label": "Meta Skills",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "rehearsal_mode",
+            "type": "contains",
+            "value": "Coaching"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "core_skills",
+          "label": "Core Skills",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "rehearsal_mode",
+            "type": "contains",
+            "value": "Coaching"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        }
+      ],
+      "version": "1",
+      "template": {
+        "createInsertCommand": false,
+        "createNoteCommand": true,
+        "parsedTemplate": []
+      }
     }
   ]
 }

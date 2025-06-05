@@ -8,7 +8,7 @@ action QuickAdd: 🎬 New Practice Session
 ```
 
 ```meta-bind-button
-label: Create New 🎬 Practice Log - Test
+label: Create New 🎬 Practice Log
 icon: ""
 style: default
 class: ""

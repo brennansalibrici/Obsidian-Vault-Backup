@@ -10,8 +10,7 @@ tags: []
 category: note
 entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 rehearsal_type: Live Rehearsal
 scenario: "[[Bedtime Story Photo]]"
