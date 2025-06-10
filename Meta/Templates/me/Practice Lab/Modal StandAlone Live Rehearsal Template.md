@@ -13,19 +13,19 @@ title: <% tp.file.title %>
 status: []
 type: []
 tags: []
-category: note
+category: [note]
 entered: true
 archived: false
 priority: [⚪ None]
-visibility: 🔒 private
+visibility: [🔒 private]
 
 # LIVE REHEARSAL DEFINITION:
-rehearsal_type: 
+rehearsal_type: []
 scenario: []
 practice_log: []
 people: []
-rehearsal_summary:
-skill_level:
+rehearsal_summary: ""
+skill_level: []
 meta_skills: []
 core_skills: []
 emotions_in_play: []
@@ -34,21 +34,23 @@ needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
-grade: []
-key_miss:  []
+grade: ""
+key_miss:  ""
 rehearsal_resources: []
 export_to_inputs: false
 
-notes: []
+notes: ""
 related: []
 media: []
 attachments: []
-take: []
+take: ""
 
 <%*
+//LIVE REHEARSAL ONLY RELATED --------------------------------------------------------------------------------------------------------------
 //Open the modal form and it's api
 const modalForm = app.plugins.plugins.modalforms.api;
 const result = await modalForm.openForm("Create New Live Rehearsal")
+const rehearsal_mode = result.data.rehearsal_mode; 
 
 //Extract the practice session and the scenario names as strings and convert to links
 const sessionName = result.data.practice_log || "Untitled Practice Log";
@@ -108,8 +110,23 @@ if (practiceFile) {
   });
 }
 
+//-------------------------------------------------------------------------------------------------------------------------------------
+
+//IF COACHING IS INCLUDED --------------------------------------------------------------------------------------------------------------
+if (rehearsal_mode == "Live Rehearsal & Coaching") {
+
+console.log("If Test","It's both");
 
 
+
+
+
+
+
+
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------
 
 -%>
 

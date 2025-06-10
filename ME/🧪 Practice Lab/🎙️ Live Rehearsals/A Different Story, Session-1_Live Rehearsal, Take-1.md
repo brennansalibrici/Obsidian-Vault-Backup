@@ -1,23 +1,22 @@
 ---
 fileClass: live_rehearsal
-id: 1749085000483
-created: 2025-06-04 19:56
-last_modified: 2025-06-04 19:56
-title: A Different Story, Session-1_Live Rehearsal, Take-1
+id: 1749563248336
+created: 2025-06-10 08:47
+last_modified: 2025-06-10 08:47
 status: []
 type: []
 tags: []
-category: note
+category: [note]
 entered: true
 archived: false
 priority: [⚪ None]
-visibility: 🔒 private
-rehearsal_type: 
-scenario: "[[A Different Story]]"
+visibility: [🔒 private]
+rehearsal_type: []
+scenario: "[[A Different Story, Session-1]]"
 practice_log: "[[A Different Story, Session-1]]"
-people: ["[[Dan Schmoyer]]"]
-rehearsal_summary: 
-skill_level: 
+people: ["[[Dan Schmoyer]]", "[[Nate Kinney]]", "[[Lori Kinney]]"]
+rehearsal_summary: ""
+skill_level: []
 meta_skills: []
 core_skills: []
 emotions_in_play: []
@@ -26,15 +25,15 @@ needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
-grade: 
-key_miss: 
+grade: ""
+key_miss: ""
 rehearsal_resources: []
 export_to_inputs: false
-notes: []
+notes: ""
 related: []
 media: []
 attachments: []
-take: 1
+take: ""
 ---
 
 ## 📝 Session Summary  

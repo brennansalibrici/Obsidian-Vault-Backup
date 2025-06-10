@@ -4,28 +4,28 @@ fileClass: live_rehearsal
 
 # **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: 1749085306911
-created: 2025-06-04 20:01
-last_modified: 2025-06-04 20:01
-title: New Live Rehearsal
+id: 1749321191613
+created: 2025-06-07 13:33
+last_modified: 2025-06-07 13:33
+title: A Different Story, Session-1_Live Rehearsal, Take-1
 
 # STATUS & WORKFLOW FIELDS
 status: []
 type: []
 tags: []
-category: note
+category: [note]
 entered: true
 archived: false
 priority: [⚪ None]
-visibility: 🔒 private
+visibility: [🔒 private]
 
 # LIVE REHEARSAL DEFINITION:
-rehearsal_type: 
+rehearsal_type: []
 scenario: []
 practice_log: []
 people: []
-rehearsal_summary:
-skill_level:
+rehearsal_summary: ""
+skill_level: []
 meta_skills: []
 core_skills: []
 emotions_in_play: []
@@ -34,22 +34,17 @@ needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
-grade: []
-key_miss:  []
+grade: ""
+key_miss: ""
 rehearsal_resources: []
 export_to_inputs: false
-
-notes: []
+notes: ""
 related: []
 media: []
 attachments: []
-take: []
+take: ""
 
-practice_log: "[[A Different Story, Session-1]]"
-people:
-  - "[[Dan Schmoyer]]"
-rehearsal_mode: Live Rehearsal
-scenario: "[[A Different Story]]"
+
 
 ---
 

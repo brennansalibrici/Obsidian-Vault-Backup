@@ -110,7 +110,12 @@ fields:
         "3": Live Rehearsal & Coaching
     path: ""
     id: Rg84kw
-version: "2.115"
+  - name: coaching_session
+    type: MultiFile
+    options: {}
+    path: ""
+    id: RGVifY
+version: "2.117"
 limit: 20
 mapWithTag: false
 icon: package
@@ -123,6 +128,7 @@ extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - RGVifY
   - Rg84kw
   - 2ylI6B
   - 1xHO2R

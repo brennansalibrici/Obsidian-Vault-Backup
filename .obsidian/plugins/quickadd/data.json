@@ -1241,7 +1241,7 @@
           "setFileExistsBehavior": false
         }
       ],
-      "collapsed": false
+      "collapsed": true
     },
     {
       "id": "4dbc17e6-a492-4e0f-b7cb-07533c9d6149",
@@ -1888,6 +1888,12 @@
           }
         }
       ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Run JS Sandbox Test",
+      "id": "290bcaf3-e41e-49a7-8702-d57a3cf127b0",
+      "commands": [],
       "runOnStartup": false
     }
   ],

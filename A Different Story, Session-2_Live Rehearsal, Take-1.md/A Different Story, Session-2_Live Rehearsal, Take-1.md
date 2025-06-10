@@ -1,69 +1,77 @@
 ---
 # CLASS DEFINITION:
-fileClass: practice_log
+fileClass: live_rehearsal
 
 # **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
-id: 1749078195887
-created: 2025-06-04 18:03
-last_modified: 2025-06-04 18:03
-title: Test Log
+id: 1749321274396
+created: 2025-06-07 13:34
+last_modified: 2025-06-07 13:34
+title: A Different Story, Session-2_Live Rehearsal, Take-1
 
 # STATUS & WORKFLOW FIELDS
 status: []
 type: []
 tags: []
-category: note
+category: [note]
 entered: true
 archived: false
 priority: [⚪ None]
-visibility: 🔒 private
+visibility: [🔒 private]
 
-# PRACTICE SESSION DEFINITION:
-session_summary:
-skill_level:
-meta_skill_focus: []
-core_skill_focus: []
+# LIVE REHEARSAL DEFINITION:
+rehearsal_type: []
+scenario: []
+practice_log: []
+people: []
+rehearsal_summary: ""
+skill_level: []
+meta_skills: []
+core_skills: []
 emotions_in_play: []
 triggers: []
 needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
-grade:
-linked_resources: []
-live_rehearsals: []
-key_miss: 
+grade: ""
+key_miss: ""
+rehearsal_resources: []
 export_to_inputs: false
-
-notes: []
+notes: ""
 related: []
 media: []
 attachments: []
+take: ""
 
 
-scenario: "[[Bedtime Story Photo]]"
-people: ["[[Dan Schmoyer]]", "[[Lori Kinney]]"]
-rehearsal_mode: Live Rehearsal
+
 ---
 
 ## 📝 Session Summary  
 ---  
 
+
 ## 💡 Key Miss / Growth Edge  
 ---  
+
 
 ## 🧠 Core Skills Practiced  
 ---  
 
+  
 ## 🧭 Meta Skills Engaged  
 ---  
+
 
 ## 🎯 Grade  
 ---  
 
+
 ## 📎 Linked Scenario  
 ---  
 
+
 ## 🔗 Supporting Resources  
 ---  
+

@@ -3,7 +3,7 @@
   "livePreview": true,
   "promptDelete": true,
   "alwaysUpdateLinks": true,
-  "spellcheck": true,
+  "spellcheck": false,
   "attachmentFolderPath": "My Files/My Attachments",
   "rightToLeft": false,
   "foldIndent": true,
@@ -20,5 +20,6 @@
   "newFileFolderPath": "USV Notes",
   "showLineNumber": true,
   "showUnsupportedFiles": true,
-  "autoConvertHtml": true
+  "autoConvertHtml": true,
+  "autoPairMarkdown": false
 }
