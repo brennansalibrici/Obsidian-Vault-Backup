@@ -9,23 +9,25 @@ created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 title: <% tp.file.title %>
 
+
 # STATUS & WORKFLOW FIELDS
-status: []
+status: ""
 type: []
 tags: []
 category: note
 entered: true
 archived: false
-priority: [⚪ None]
-visibility: 🔒 private
+priority: "⚪ None"
+visibility: "🔒 private"
 
 # LIVE REHEARSAL DEFINITION:
-rehearsal_type: "{{VALUE:Live Rehearsal,Coaching,Live Rehearsal & Coaching}}"
-scenario: "{{VALUE:Scenario}}"
-practice_log: []
-people: "{{VALUE: Person}}"
-rehearsal_summary:
-skill_level:
+rehearsal_mode: ""
+practice_session: []
+take: ""
+scenario: []
+people: []
+rehearsal_summary: ""
+skill_level: ""
 meta_skills: []
 core_skills: []
 emotions_in_play: []
@@ -34,15 +36,18 @@ needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
-grade:
-key_miss: 
+grade: ""
+key_miss: ""
 rehearsal_resources: []
+related_links: []
 export_to_inputs: false
-
-notes: []
+notes: ""
 related: []
 media: []
 attachments: []
+
+
+
 
 ---
 

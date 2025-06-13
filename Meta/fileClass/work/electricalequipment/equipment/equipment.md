@@ -14,7 +14,12 @@ fields:
     options: {}
     path: ""
     id: grydo9
-version: "2.31"
+  - name: location
+    type: Input
+    options: {}
+    path: ""
+    id: rn7Juy
+version: "2.32"
 limit: 100
 mapWithTag: false
 icon: package

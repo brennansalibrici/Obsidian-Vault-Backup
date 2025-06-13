@@ -1,30 +1,27 @@
 ---
-# CLASS DEFINITION:
 fileClass: practice_log
-
-# **INHERITS FROM GLOBAL TEMPLATE:
-# CORE IDENTITY FIELDS:
-id: 1749563234319
-created: 2025-06-10 08:47
-last_modified: 2025-06-10 08:47
-
-
-
-# STATUS & WORKFLOW FIELDS
-status: []
+id: 1749788707468
+created: 2025-06-12 23:25
+last_modified: 2025-06-12 23:25
+title: A Different Story, Session-1
+status: ""
 type: []
 tags: []
-category: [note]
+category: note
 entered: true
 archived: false
-priority: [⚪ None]
-visibility: [🔒 private]
-
-# PRACTICE SESSION DEFINITION:
+priority: ⚪ None
+visibility: 🔒 private
+rehearsal_mode: Live Rehearsal & Coaching
+scenario: ["[[A Different Story]]"]
+session_number: ""
+people: ["[[Lori Kinney]]"]
 session_summary: ""
-skill_level: []
-meta_skill_focus: []
-core_skill_focus: []
+skill_level: ""
+live_rehearsals: ["[[A Different Story, Session-1_Live Rehearsal, Take-1]]"]
+coaching_sessions: ["[[A Different Story, Session-1_Coaching Session 1]]"]
+meta_skills: []
+core_skills: []
 emotions_in_play: []
 triggers: []
 needs_activated: []
@@ -33,23 +30,12 @@ protective_strategies: []
 steps_targeted: []
 grade: ""
 linked_resources: []
-
 key_miss: ""
 export_to_inputs: false
-coaching_session: []
 notes: ""
 related: []
 media: []
 attachments: []
-
-
-
-
-scenario: "[[A Different Story, Session-1]]"
-people: ["[[Dan Schmoyer]]", "[[Nate Kinney]]", "[[Lori Kinney]]"]
-rehearsal_mode: Live Rehearsal
-title: A Different Story, Session-1
-live_rehearsals: "[[A Different Story, Session-1_Live Rehearsal, Take-1]]"
 ---
 
 ## 📝 Session Summary  
@@ -72,3 +58,4 @@ live_rehearsals: "[[A Different Story, Session-1_Live Rehearsal, Take-1]]"
 
 ## 🔗 Supporting Resources  
 ---  
+

@@ -1,6 +1,6 @@
 ---
 fields:
-  - name: related
+  - name: related_links
     type: MultiFile
     options: {}
     path: ""
@@ -15,7 +15,7 @@ fields:
     options: {}
     path: ""
     id: aZYH2b
-  - name: practice_log
+  - name: practice_session
     type: MultiFile
     options: {}
     path: ""
@@ -69,7 +69,7 @@ fields:
       valuesList: {}
     path: ""
     id: 3lwKaT
-  - name: rehearsal_summary
+  - name: coaching_summary
     type: Input
     options: {}
     path: ""
@@ -100,7 +100,7 @@ fields:
     options: {}
     path: ""
     id: gMrNb0
-  - name: rehearsal_type
+  - name: rehearsal_mode
     type: Select
     options:
       sourceType: ValuesList
@@ -112,10 +112,12 @@ fields:
     id: jXo7mD
   - name: take
     type: Number
-    options: {}
+    options:
+      step: 1
+      min: 1
     path: ""
     id: 2y6gFH
-version: "2.133"
+version: "2.161"
 limit: 20
 mapWithTag: false
 icon: package
@@ -124,14 +126,14 @@ filesPaths:
   - ME/🧪 Practice Lab/🧠 Coaching
 bookmarksGroups: 
 excludes: 
-extends: global/global
+extends: 
 savedViews: []
 favoriteView: 
 fieldsOrder:
-  - 2y6gFH
   - jXo7mD
-  - aZYH2b
   - 3MQ2bN
+  - 2y6gFH
+  - aZYH2b
   - DqR4xl
   - ZZnfxJ
   - 8A3Sex

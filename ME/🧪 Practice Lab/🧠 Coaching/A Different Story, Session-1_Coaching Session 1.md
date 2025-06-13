@@ -1,9 +1,9 @@
 ---
-fileClass: live_rehearsal
-id: 1749788708585
+fileClass: coaching
+id: 1749788709922
 created: 2025-06-12 23:25
 last_modified: 2025-06-12 23:25
-title: A Different Story, Session-1_Live Rehearsal, Take-1
+title: A Different Story, Session-1_Coaching Session 1
 status: ""
 type: []
 tags: []
@@ -13,14 +13,14 @@ archived: false
 priority: ⚪ None
 visibility: 🔒 private
 rehearsal_mode: Live Rehearsal & Coaching
-practice_session: ['"[[A Different Story', 'Session-1]]"']
+practice_session: ["[[A Different Story, Session-1]]"]
 take: ""
 scenario: ["[[A Different Story]]"]
 people: ["[[Lori Kinney]]"]
-rehearsal_summary: ""
+coaching_summary: ""
 skill_level: ""
-meta_skills: []
-core_skills: []
+meta_skills: ["[[Attuning to Emotional Meaning]]"]
+core_skills: ["[[Boundary Maintenance]]"]
 emotions_in_play: []
 triggers: []
 needs_activated: []

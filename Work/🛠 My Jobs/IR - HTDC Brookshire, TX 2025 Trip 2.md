@@ -4,14 +4,14 @@ id: 1748883353607
 created: 2025-06-02 11:55
 last_modified: 2025-06-02 11:55
 title: IR - HTDC Brookshire, TX 2025 Trip 2
-status: [🟧 in progress]
+status: [🟩 complete]
 type: 
 tags: []
-category: note
+category: [note]
 entered: false
 archived: false
 priority: [⚪ None]
-visibility: 🔒 private
+visibility: [🔒 private]
 notes: ""
 related: 
 media: 
@@ -33,9 +33,12 @@ hrs_worked:
     hours: 10.5
   - day_number: 2
     hours: 12
-  - 
-  - 
-  - 
+  - day_number: 3
+    hours: 12
+  - day_number: 4
+    hours: 12
+  - day_number: 5
+    hours: 12
   - day_number: ""
     hours: ""
 ---

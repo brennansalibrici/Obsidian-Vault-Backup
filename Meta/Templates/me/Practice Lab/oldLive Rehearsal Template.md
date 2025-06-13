@@ -1,24 +1,31 @@
 ---
+# CLASS DEFINITION:
 fileClass: live_rehearsal
-id: 1749788708585
-created: 2025-06-12 23:25
-last_modified: 2025-06-12 23:25
-title: A Different Story, Session-1_Live Rehearsal, Take-1
-status: ""
+
+# **INHERITS FROM GLOBAL TEMPLATE:
+# CORE IDENTITY FIELDS:
+id: <% tp.date.now("x") %>
+created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
+last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
+title: <% tp.file.title %>
+
+# STATUS & WORKFLOW FIELDS
+status: []
 type: []
 tags: []
 category: note
 entered: true
 archived: false
-priority: ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-rehearsal_mode: Live Rehearsal & Coaching
-practice_session: ['"[[A Different Story', 'Session-1]]"']
-take: ""
-scenario: ["[[A Different Story]]"]
-people: ["[[Lori Kinney]]"]
-rehearsal_summary: ""
-skill_level: ""
+
+# LIVE REHEARSAL DEFINITION:
+rehearsal_type: "{{VALUE:Live Rehearsal,Coaching,Live Rehearsal & Coaching}}"
+scenario: "{{VALUE:Scenario}}"
+practice_log: []
+people: "{{VALUE: Person}}"
+rehearsal_summary:
+skill_level:
 meta_skills: []
 core_skills: []
 emotions_in_play: []
@@ -27,34 +34,41 @@ needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
-grade: ""
-key_miss: ""
+grade:
+key_miss: 
 rehearsal_resources: []
-related_links: []
 export_to_inputs: false
-notes: ""
+
+notes: []
 related: []
 media: []
 attachments: []
+
 ---
 
 ## 📝 Session Summary  
 ---  
 
+
 ## 💡 Key Miss / Growth Edge  
 ---  
+
 
 ## 🧠 Core Skills Practiced  
 ---  
 
+  
 ## 🧭 Meta Skills Engaged  
 ---  
+
 
 ## 🎯 Grade  
 ---  
 
+
 ## 📎 Linked Scenario  
 ---  
+
 
 ## 🔗 Supporting Resources  
 ---  

@@ -1,6 +1,6 @@
 ---
 fields:
-  - name: related
+  - name: related_links
     type: MultiFile
     options: {}
     path: ""
@@ -15,7 +15,7 @@ fields:
     options: {}
     path: ""
     id: aZYH2b
-  - name: practice_log
+  - name: practice_session
     type: MultiFile
     options: {}
     path: ""
@@ -100,7 +100,7 @@ fields:
     options: {}
     path: ""
     id: gMrNb0
-  - name: rehearsal_type
+  - name: rehearsal_mode
     type: Select
     options:
       sourceType: ValuesList
@@ -115,7 +115,7 @@ fields:
     options: {}
     path: ""
     id: H38t7Y
-version: "2.132"
+version: "2.140"
 limit: 20
 mapWithTag: false
 icon: package
@@ -124,14 +124,14 @@ filesPaths:
   - ME/🧪 Practice Lab/🎙️ Live Rehearsals
 bookmarksGroups: 
 excludes: 
-extends: global/global
+extends: 
 savedViews: []
 favoriteView: 
 fieldsOrder:
-  - H38t7Y
   - jXo7mD
-  - aZYH2b
   - 3MQ2bN
+  - H38t7Y
+  - aZYH2b
   - DqR4xl
   - ZZnfxJ
   - 8A3Sex

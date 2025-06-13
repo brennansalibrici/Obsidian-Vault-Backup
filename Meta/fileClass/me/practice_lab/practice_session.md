@@ -23,12 +23,12 @@ fields:
       max: 100
     path: ""
     id: 95eVO4
-  - name: meta_skill_focus
+  - name: meta_skills
     type: MultiFile
     options: {}
     path: ""
     id: Ns7vr2
-  - name: core_skill_focus
+  - name: core_skills
     type: MultiFile
     options: {}
     path: ""
@@ -110,12 +110,19 @@ fields:
         "3": Live Rehearsal & Coaching
     path: ""
     id: Rg84kw
-  - name: coaching_session
+  - name: coaching_sessions
     type: MultiFile
     options: {}
     path: ""
     id: RGVifY
-version: "2.117"
+  - name: session_number
+    type: Number
+    options:
+      step: 1
+      min: 1
+    path: ""
+    id: DOrYNh
+version: "2.166"
 limit: 20
 mapWithTag: false
 icon: package
@@ -124,17 +131,18 @@ filesPaths:
   - ME/🧪 Practice Lab/🎬 Practice Logs
 bookmarksGroups: 
 excludes: 
-extends: global/global
+extends: 
 savedViews: []
 favoriteView: 
 fieldsOrder:
-  - RGVifY
   - Rg84kw
   - 2ylI6B
+  - DOrYNh
   - 1xHO2R
   - FasC9S
-  - Hsb3Nq
   - P0I7iQ
+  - Hsb3Nq
+  - RGVifY
   - Ns7vr2
   - AzIUx0
   - 0Zu4Ra

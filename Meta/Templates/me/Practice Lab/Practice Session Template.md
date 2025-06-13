@@ -10,36 +10,39 @@ last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 title: <% tp.file.title %>
 
 # STATUS & WORKFLOW FIELDS
-status: []
+status: ""
 type: []
 tags: []
 category: note
 entered: true
 archived: false
-priority: [⚪ None]
-visibility: 🔒 private
+priority: "⚪ None"
+visibility: "🔒 private"
 
 # PRACTICE SESSION DEFINITION:
-scenario: "{{VALUE:Scenario}}"
-people: "{{VALUE: Person}}"
-session_summary:
-skill_level:
-meta_skill_focus: []
-core_skill_focus: []
+rehearsal_mode: ""
+scenario: []
+session_number: ""
+people: []
+session_summary: ""
+
+skill_level: ""
+live_rehearsals: []
+coaching_sessions: []
+meta_skills: []
+core_skills: []
 emotions_in_play: []
 triggers: []
 needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
-grade:
+grade: ""
 linked_resources: []
-live_rehearsals: []
-grade: 
-key_miss: 
+key_miss: ""
 export_to_inputs: false
 
-notes: []
+notes: ""
 related: []
 media: []
 attachments: []

@@ -27,6 +27,8 @@ class ModalFormUtils {
         this.newCreatedFileLink = "";
         this.newCreatedFile = "";
         this.newFileFullPath = "";
+        this.fileCreatingTemplate = "";
+        this.newLiveFile = "";
     }
 
     //script classes used with the CustomJS plugin do not accept constructor arguments. The init() is intended as a sort of pseudo constructor
@@ -85,6 +87,91 @@ class ModalFormUtils {
         }
         return this.newCreatedFileName;
     }
+
+    //updates the frontmatter with defined results from any modal form and inserts them into the frontmatter of any specified file
+    async updateFrontMatter(file, fieldMap = {}) {
+  try {
+    await this.app.fileManager.processFrontMatter(file, (fm) => {
+      for (const [key, value] of Object.entries(fieldMap)) {
+        if (value === undefined || value === null) continue;
+
+        const existing = fm[key];
+
+        // If the existing field is an array, merge new values
+        if (Array.isArray(existing)) {
+          // Normalize incoming value to an array
+          const incoming = Array.isArray(value) ? value : [value];
+          const unique = new Set([...existing, ...incoming]);
+          fm[key] = Array.from(unique);
+        }
+
+        // If the field exists but is not an array, convert to array (if both old & new are string-like)
+        else if (existing && typeof existing === "string") {
+          if (Array.isArray(value)) {
+            fm[key] = Array.from(new Set([existing, ...value]));
+          } else {
+            fm[key] = Array.from(new Set([existing, value]));
+          }
+        }
+
+        // If it doesn’t exist yet, assign directly
+        else {
+          fm[key] = value;
+        }
+      }
+    });
+
+    console.log("✅ Frontmatter updated successfully:", file.path);
+  } catch (err) {
+    console.error("❌ Failed to update frontmatter:", err);
+    new Notice("❌ Error updating frontmatter. Check console for details.");
+  }
+}
+
+
+    async createFileWithFrontmatter(fieldMap = {}) {
+    const file = await this.createNewFileFromTemplate();
+    if (file) {
+        await this.updateFrontMatter(file, fieldMap);
+    }
+    return file;
+    }
+
+
+    //When called, this function creates a new and seperate file (from an existing template) which is called from a modal form's logic but it completely seperate from the template and/or the fileclass calling the function.
+    async createNewFileFromTemplate() {
+    try {
+        // Find the template file
+        this.fileCreatingTemplate = this.tp.file.find_tfile(this.templateFile);
+        if (!this.fileCreatingTemplate) {
+        throw new Error(`❌ Could not find template file: ${this.templateFile}`);
+        }
+
+        // Create the new file
+        await this.tp.file.create_new(this.fileCreatingTemplate, this.newCreatedFileName, false, this.folderPath);
+
+        // Wait a bit to ensure file is created
+        await new Promise(resolve => setTimeout(resolve, 500));
+
+        // Get reference to the new file
+        this.newCreatedFile = this.app.vault.getAbstractFileByPath(this.newFileFullPath);
+        if (!this.newCreatedFile) {
+        new Notice(`❌ Could not find created file at: ${this.newFileFullPath}`);
+        throw new Error("File creation failed");
+        }
+
+        // Open the file in a new leaf
+        await this.app.workspace.getLeaf().openFile(this.newCreatedFile);
+
+        console.log("✅ File created and opened:", this.newCreatedFile.path);
+        return this.newCreatedFile;
+    } catch (err) {
+        console.error("❌ Error in createNewFileFromTemplate:", err);
+        new Notice("Error creating file from template. See console.");
+        return null;
+    }
+    }
+
 
 
     //accepts a string and returns an Obsidian link of the same string

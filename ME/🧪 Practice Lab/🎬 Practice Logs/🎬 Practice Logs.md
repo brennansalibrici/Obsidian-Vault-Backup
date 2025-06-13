@@ -1,12 +1,6 @@
 ---
 ---
 
-```button
-name QuickAdd: 🎬 New Practice Session
-type command
-action QuickAdd: 🎬 New Practice Session
-```
-
 ```meta-bind-button
 label: Create New 🎬 Practice Log
 icon: ""
@@ -18,24 +12,18 @@ tooltip: ""
 id: ""
 hidden: false
 actions:
-  - type: templaterCreateNote
+  - type: runTemplaterFile
     templateFile: Meta/Templates/me/Practice Lab/Modal Practice Session Template.md
-    folderPath: ME/🧪 Practice Lab/🎬 Practice Logs
-    fileName: Test Log
-    openNote: true
-    openIfAlreadyExists: false
 
 ```
 
-### Practice Log
 ```dataview
-table id as "ID", scenario as "Scenario", created as "Date/Time"
+table id as "ID", people as "People", created as "Date/Time"
 from "ME/🧪 Practice Lab/🎬 Practice Logs"
 where file.name != "🎬 Practice Logs"
 sort file.name asc 
 
 ```
-
 ### Work Flow
 ---
 - Begin by creating a new Practice Session

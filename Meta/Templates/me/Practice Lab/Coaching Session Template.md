@@ -1,31 +1,32 @@
 ---
-# CLASS DEFINITION:
-fileClass: live_rehearsal
+# CLASS DEFINITION
+fileClass: coaching
 
-# **INHERITS FROM GLOBAL TEMPLATE:
+# ** INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
 id: <% tp.date.now("x") %>
 created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
 last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-
+title: <% tp.file.title %>
 
 # STATUS & WORKFLOW FIELDS
-status: []
+status: ""
 type: []
 tags: []
-category: [note]
+category: note
 entered: true
 archived: false
-priority: [⚪ None]
-visibility: [🔒 private]
+priority: "⚪ None"
+visibility: "🔒 private"
 
-# LIVE REHEARSAL DEFINITION:
-rehearsal_type: []
+# COACHING SESSION DEFINITION:
+rehearsal_mode: ""
+practice_session: []
+take: ""
 scenario: []
-practice_log: []
 people: []
-rehearsal_summary: ""
-skill_level: []
+coaching_summary: ""
+skill_level: ""
 meta_skills: []
 core_skills: []
 emotions_in_play: []
@@ -37,15 +38,13 @@ steps_targeted: []
 grade: ""
 key_miss: ""
 rehearsal_resources: []
+related_links: []
 export_to_inputs: false
+
 notes: ""
 related: []
 media: []
 attachments: []
-take: ""
-
-
-
 ---
 
 ## 📝 Session Summary  

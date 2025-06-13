@@ -23,6 +23,7 @@ visibility: 🔒 private
 customer: "{{VALUE:Customer}}"
 site: "{{VALUE:Site}}"
 switchgear_type: "{{VALUE:Main Breaker,Bolted Pressure Switch,Main Breaker _Remote Distribution,Main_Tie_Main}}"
+location: "{{VALUE:Location}}"
 ocpd_type: "{{VALUE:Breaker,Fuses}}"
 ocpd: "{{VALUE:OCPD}}"
 trip_unit: "{{VALUE:Trip Unit}}"
