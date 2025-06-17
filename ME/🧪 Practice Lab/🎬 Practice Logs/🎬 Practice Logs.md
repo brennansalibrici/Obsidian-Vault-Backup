@@ -18,12 +18,13 @@ actions:
 ```
 
 ```dataview
-table id as "ID", people as "People", created as "Date/Time"
+table scenario as "Scenario", people as "People", created as "Date/Time"
 from "ME/🧪 Practice Lab/🎬 Practice Logs"
 where file.name != "🎬 Practice Logs"
 sort file.name asc 
 
 ```
+
 ### Work Flow
 ---
 - Begin by creating a new Practice Session

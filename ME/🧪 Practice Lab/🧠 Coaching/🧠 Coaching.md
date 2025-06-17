@@ -1,10 +1,20 @@
 ---
 ---
 
-```button
-name QuickAdd: 🧠 New Coaching Feedback
-type command
-action QuickAdd: 🧠 New Coaching Feedback
+```meta-bind-button
+label: Create New 🧠 Coaching Session
+icon: ""
+style: default
+class: ""
+cssStyle: ""
+backgroundImage: ""
+tooltip: ""
+id: ""
+hidden: false
+actions:
+  - type: runTemplaterFile
+    templateFile: Meta/Templates/me/Practice Lab/Modal Coaching Session Template.md
+
 ```
 
 ### Coaching Feedback

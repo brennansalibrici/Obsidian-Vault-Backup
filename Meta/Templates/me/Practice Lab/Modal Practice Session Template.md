@@ -44,6 +44,8 @@ switch(result.data.rehearsal_mode){
 	await liveRehearsal.createFileWithFrontmatter({
 	  practice_session: practiceSessionLink,
 	  scenario: practiceSession.lnkField1,
+	  status: "🟧 in progress",
+	  entered: false,
 	  export_to_inputs: false,
 	  people: Array.isArray(result.data.people) ? result.data.people : [],
 	  rehearsal_mode: result.data.rehearsal_mode
@@ -62,6 +64,8 @@ switch(result.data.rehearsal_mode){
 	await coachingSession.createFileWithFrontmatter({
 	  practice_session: practiceSessionLink,
 	  scenario: practiceSession.lnkField1,
+	  status: "🟧 in progress",
+	  entered: false,
 	  export_to_inputs: false,
 	  people: Array.isArray(result.data.people) ? result.data.people : [],
 	  meta_skills: result.data.meta_skills,
@@ -82,6 +86,8 @@ switch(result.data.rehearsal_mode){
 	await liveRehearsal.createFileWithFrontmatter({
 	  practice_session: practiceSession.newCreatedFileLink,
 	  scenario: practiceSession.lnkField1,
+	  status: "🟧 in progress",
+	  entered: false,
 	  export_to_inputs: false,
 	  people: Array.isArray(result.data.people) ? result.data.people : [],
 	  rehearsal_mode: result.data.rehearsal_mode
@@ -91,6 +97,8 @@ switch(result.data.rehearsal_mode){
 	await coachingSession.createFileWithFrontmatter({
 	  practice_session: practiceSession.newCreatedFileLink,
 	  scenario: practiceSession.lnkField1,
+	  status: "🟧 in progress",
+	  entered: false,
 	  export_to_inputs: false,
 	  people: Array.isArray(result.data.people) ? result.data.people : [],
 	  meta_skills: result.data.meta_skills,
@@ -109,15 +117,18 @@ switch(result.data.rehearsal_mode){
     break;
 }
 
+await new Promise(resolve => setTimeout(resolve, 600));
 await practiceSession.updateFrontMatter(practiceSession.newCreatedFile,{
   people: Array.isArray(result.data.people) ? result.data.people : [],
   scenario: practiceSession.lnkField1,
+  status: "🟧 in progress",
+  entered: false,
   export_to_inputs: false,
   live_rehearsals: result.data.live_rehearsals,
   coaching_sessions: result.data.coaching_session,
   rehearsal_mode: result.data.rehearsal_mode
 });
-
+console.log("✅ Update complete", "Update Complete");
 
 //tR += result.asFrontmatterString();
 

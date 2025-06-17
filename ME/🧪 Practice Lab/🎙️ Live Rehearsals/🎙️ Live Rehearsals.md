@@ -1,12 +1,6 @@
 ---
 ---
 
-```button
-name QuickAdd: 🎙️New Rehearsal
-type command
-action QuickAdd: 🎙️New Rehearsal
-```
-
 ```meta-bind-button
 label: Create New 🎙️ Live Rehearsal
 icon: ""
@@ -18,12 +12,8 @@ tooltip: ""
 id: ""
 hidden: false
 actions:
-  - type: templaterCreateNote
-    templateFile: Meta/Templates/me/Practice Lab/Modal StandAlone Live Rehearsal Template.md
-    folderPath: ME/🧪 Practice Lab/🎙️ Live Rehearsals
-    fileName: New Live Rehearsal
-    openNote: true
-    openIfAlreadyExists: false
+  - type: runTemplaterFile
+    templateFile: Meta/Templates/me/Practice Lab/Modal Live Rehearsal Template.md
 
 ```
 
