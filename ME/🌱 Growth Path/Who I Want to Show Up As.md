@@ -1,13 +1,10 @@
 ---
 name: Who I Want to Show Up As
 importance: "Personal Truth\r"
-category: 
-  - "Identity Work\r"
-  - "Becoming\r"
+category: ["Identity Work\r", "Becoming\r"]
 status: "in progress"
 entered: true
-people: 
-  - "[[Lori Kinney]]"
+people: ["[[Lori Kinney]]"]
 linked_resources: []
 summary: A living declaration of the kind of man Brennan wants to become and show up as in his marriage, parenting, inner life, and relationships. Includes anchor phrases and reflection structure to track growth and intention.
 ---

@@ -31,7 +31,7 @@ await coachingSession.createFileWithFrontmatter({
   people: Array.isArray(result.data.people) ? result.data.people : [],
   export_to_inputs: false,
   meta_skills: result.data.meta_skills,
-    core_skills: result.data.core_skills,
+  core_skills: result.data.core_skills,
   rehearsal_mode: result.data.rehearsal_mode
 });
 

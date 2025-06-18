@@ -19,7 +19,12 @@ class ModalFormUtils {
     "visibility",
     "last_modified",
     "created",
-    "export_to_inputs"
+    "export_to_inputs",
+    "driver",
+    "motive",
+    "response_alignment",
+    "event_date_time",
+    "context"
     ];
 
     //Constructor and define class properties
@@ -47,6 +52,31 @@ class ModalFormUtils {
 //#endregion
 
 //#region CLASS UTILITY FUNCTIONS
+    //defines a config object that handles the naming, folder and template resolution functions for creating new files
+    static fileTypeHandlers = {
+        "practice session": {
+            folder: "ME/🧪 Practice Lab/🎬 Practice Logs",
+            template: "Meta/Templates/me/Practice Lab/Practice Session Template",
+            naming: (baseName, count) => `${baseName}_Session-${count}`
+        },
+        "live rehearsal": {
+            folder: "ME/🧪 Practice Lab/🎙️ Live Rehearsals",
+            template: "Meta/Templates/me/Practice Lab/Live Rehearsal Template",
+            naming: (baseName, count) => `${baseName}_Live Rehearsal_Take-${count}`
+        },
+        "coaching session": {
+            folder: "ME/🧪 Practice Lab/🧠 Coaching",
+            template: "Meta/Templates/me/Practice Lab/Coaching Session Template",
+            naming: (baseName, count) => `${baseName}_Coaching Session-${count}`
+        },
+        "inner check-in": {
+            folder: "ME/🌒 Reflections/🕹️ Inner Check-Ins",
+            template: "Meta/Templates/me/Inner_CheckIn_Template",
+            naming: (context, count) => context
+        }
+    };
+
+
     //accepts a string and returns an Obsidian link of the same string
     string2Link(stringInput){
         return `[[${stringInput}]]`;
@@ -66,15 +96,28 @@ class ModalFormUtils {
 
 //#region FILE GENERATION AND MANIPULATION FUNCTIONS
     //script classes used with the CustomJS plugin do not accept constructor arguments. The init() is intended as a sort of pseudo constructor
-    init(app, tp, fileType = ModalFormUtils.filetype, folderPath, templateFileName, string2Link1="",string2Link2=""){
+    init(config = {}) {
+        const {
+            app,
+            tp,
+            fileType,
+            context1 = "",
+            context2 = "",
+            useContextAsLink = true
+        } = config;
+
+        const handler = ModalFormUtils.fileTypeHandlers[fileType];
+        if (!handler) throw new Error(`❌ Unknown fileType: ${fileType}`);
+
         this.app = app;
         this.tp = tp;
         this.fileType = fileType;
-        this.folderPath = folderPath;
+
+        this.folderPath = handler.folder;
         this.folder = app.vault.getAbstractFileByPath(this.folderPath);
-        this.templateFile = templateFileName;
-        this.strField1 = string2Link1;
-        this.lnkField1 = this.string2Link(string2Link1);
+        this.templateFile = handler.template;
+        this.strField1 = context1;
+        this.lnkField1 = useContextAsLink ? this.string2Link(context1) : context1;
 
         //loops through the specificed folder and returns the number of files that contains a specified phrase in the title
          if(this.folder && this.folder.children){
@@ -85,40 +128,34 @@ class ModalFormUtils {
             }
         }
 
-
+        //Automatically create filename, path and links
+        this.createNewFileName();
     }
 
     //switch statement provides the ability to create individualized dynamic filename templates based on the init() filetype parameter
     /*********************the loop that assigns the fileMatch value returns the number of files that match. For the new filename we need to increase that value by one.
     creates both a stringname and a link for the newly created file***********************************/
     createNewFileName(strName = ""){
-        if(strName){
-            this.strField2 = strName;
-            //this.lnkField2 = string2Link(strName);
+        if(strName) this.strField2 = strName;
+
+        const handler = ModalFormUtils.fileTypeHandlers[this.fileType];
+        if (!handler || !handler.naming) throw new Error(`❌ No naming logic for fileType: ${this.fileType}`);
+
+        //Check for exsiting filenames and increment if needed
+        const baseName = this.strField1;
+        let counter = 1;
+        let finalName = handler.naming(baseName, counter);
+
+        const existingNames = new Set(this.folder?.children?.map(file => file.name.replace(/\.md$/, "")) || []);
+        while (existingNames.has(finalName)) {
+            finalName = `${baseName}-${counter}`;
+            counter++;
         }
 
-        switch(this.fileType){
-            case "PRACTICE_SESSION":
-                this.newCreatedFileName = `${this.strField1}_Session-${this.fileMatch+1}`;
-                this.newCreatedFileLink = `[[${this.newCreatedFileName}]]`;
-                this.newFileFullPath = `${this.folderPath}/${this.newCreatedFileName}.md`;
-                break;
-            case "LIVE_REHEARSAL":
-                this.newCreatedFileName = `${this.strField1}_Live Rehearsal_Take-${this.fileMatch+1}`;
-                this.newCreatedFileLink = `[[${this.newCreatedFileName}]]`;
-                this.newFileFullPath = `${this.folderPath}/${this.newCreatedFileName}.md`;
+        this.newCreatedFileName = finalName;
+        this.newCreatedFileLink = this.string2Link(finalName);
+        this.newFileFullPath = `${this.folderPath}/${finalName}.md`;
 
-                break;
-            case "COACHING_SESSION":
-                this.newCreatedFileName = `${this.strField1}_Coaching Session-${this.fileMatch+1}`;
-                this.newCreatedFileLink = `[[${this.newCreatedFileName}]]`;
-                this.newFileFullPath = `${this.folderPath}/${this.newCreatedFileName}.md`;
-
-                break;
-            default:
-
-                break;
-        }
         return this.newCreatedFileName;
     }
 
@@ -133,6 +170,17 @@ class ModalFormUtils {
     //When called, this function creates a new and seperate file (from an existing template) which is called from a modal form's logic but it completely seperate from the template and/or the fileclass calling the function.
     async createNewFileFromTemplate() {
     try {
+
+        console.log("🧪 DEBUG: templateFile =", this.templateFile);
+        console.log("🧪 DEBUG: Available files in vault:");
+        this.app.vault.getFiles().forEach(file => {
+        console.log(" -", file.path);
+        });
+
+        console.log("🔍 Looking for template file:", this.templateFile);
+        const files = this.app.vault.getFiles().map(f => f.path);
+        console.log("📁 All available files:", files);
+
         // Find the template file
         this.fileCreatingTemplate = this.tp.file.find_tfile(this.templateFile);
         if (!this.fileCreatingTemplate) {
