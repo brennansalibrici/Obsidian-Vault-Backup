@@ -1,52 +1,44 @@
 ---
-# CLASS DEFINITION:
 fileClass: practice_log
-
-# **INHERITS FROM GLOBAL TEMPLATE:
-# CORE IDENTITY FIELDS:
 id: <% tp.date.now("x") %>
-created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
+created: ""
+last_modified: ""
 title: <% tp.file.title %>
-
-# STATUS & WORKFLOW FIELDS
-status: ""
-type: []
-tags: []
-category: note
+status: 
+type: 
+tags: 
+category:
+  - note
 entered: true
 archived: false
-priority: "⚪ None"
-visibility: "🔒 private"
-
-# PRACTICE SESSION DEFINITION:
+priority:
+  - ⚪ None
+visibility:
+  - 🔒 private
 rehearsal_mode: ""
-scenario: []
+scenario: 
 session_number: ""
-people: []
+people: 
 session_summary: ""
-
-skill_level: ""
-live_rehearsals: []
-coaching_sessions: []
-meta_skills: []
-core_skills: []
-emotions_in_play: []
-triggers: []
-needs_activated: []
-emotional_wounds: []
-protective_strategies: []
-steps_targeted: []
+skill_level: []
+live_rehearsals: 
+coaching_sessions: 
+meta_skills: 
+core_skills: 
+emotions_in_play: 
+triggers: 
+needs_activated: 
+emotional_wounds: 
+protective_strategies: 
+steps_targeted: 
 grade: ""
-linked_resources: []
+linked_resources: 
 key_miss: ""
 export_to_inputs: false
-
 notes: ""
-related: []
-media: []
-attachments: []
-
+related: 
+media: 
+attachments:
 ---
 
 ## 📝 Session Summary  

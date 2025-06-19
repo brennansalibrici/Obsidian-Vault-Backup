@@ -8,17 +8,19 @@ const innerCheckIn = window.customJS.createModalFormUtilsInstance();
 innerCheckIn.init({app, tp, fileType: "inner check-in", context1: result.data.context, useContextAsLink: false});
 
 //Determine whether to auto-generate the date/time or use the date picker
-let dateTime;
+let rawDateTime;
 if (result.data.past === true) {
   // User selected a past event, use their chosen date/time
-  dateTime = result.data.date_time;
+  rawDateTime = window.moment(result.data.date_time);
 } else {
   // Default behavior — autogenerate timestamp
-  const now = window.moment();
-  dateTime = now.format("YYYY-MM-DD HH:mm");
+  rawDateTime = window.moment();
 }
+
 await innerCheckIn.createFileWithFrontmatter({
-  event_date_time: dateTime,
+  event_date_time: innerCheckIn.formatUtils.db_formatDateTime(rawDateTime),
+  created: innerCheckIn.formatUtils.db_formatDateTime(new Date()),
+  last_modified: innerCheckIn.formatUtils.db_formatDateTime(new Date()),
   status: "🟧 in progress",
   driver: result.data.driver,
   motive: result.data.motive,

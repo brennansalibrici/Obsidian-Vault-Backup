@@ -5,8 +5,8 @@ fileClass: inner_checkin
 # **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
 id: <% tp.date.now("x") %>
-created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
+created: ""
+last_modified: ""
 title: <% tp.file.title %>
 
 # STATUS & WORKFLOW FIELDS
@@ -24,7 +24,7 @@ source_daily_note: [[<% tp.date.now("YYYY-MM-DD") %>]]
 event_date_time: ""
 driver: []
 motive: []
-response_alignment: []
+response_alignment: ""
 context: ""
 people: []
 emotions: []

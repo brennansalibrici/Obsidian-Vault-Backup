@@ -564,8 +564,7 @@
               "The Student (eager to learn, curious)",
               "The Becoming Man (integrated, values-aligned self)"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -592,8 +591,7 @@
               "Hold Emotional Ground",
               "Stay Regulated"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -629,8 +627,7 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": false,
-            "multi_select_options": []
+            "allowUnknownValues": false
           }
         },
         {
@@ -641,9 +638,8 @@
           "input": {
             "type": "multiselect",
             "source": "dataview",
-            "multi_select_options": [],
-            "allowUnknownValues": false,
-            "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name"
+            "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
+            "allowUnknownValues": false
           }
         }
       ],

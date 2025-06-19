@@ -1,9 +1,9 @@
 ---
 fileClass: inner_checkin
-id: 1750276131467
-created: 2025-06-18 14:48
-last_modified: 2025-06-18 14:48
-title: TTTT_CheckIn-1
+id: 1750292693974
+created: 2025-06-18 19:24
+last_modified: 2025-06-18 19:24
+title: Test 1
 status: 🟧 in progress
 type: []
 tags: []
@@ -14,12 +14,12 @@ priority: ⚪ None
 visibility: 🔒 private
 source_daily_note:
   - - 2025-06-18
-event_date_time: 2025-06-18 14:48
-driver: [The Pleaser]
+event_date_time: 2025-06-02 19:24
+driver: [The Boy]
 motive: [Avoid Conflict]
-response_alignment: [✅ Fully Aligned]
-context: TTTT
-people: ["[[Nate Kinney]]"]
+response_alignment: ⚠️ Right Words, Wrong Motive
+context: Test 1
+people: ["[[Dan Schmoyer]]"]
 emotions: ["[[Ashamed]]"]
 notes: []
 related: []

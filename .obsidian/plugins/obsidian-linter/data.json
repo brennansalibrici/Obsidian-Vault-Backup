@@ -236,7 +236,7 @@
       "dedupe-alias-key": true,
       "dedupe-tag-key": false,
       "dedupe-array-keys": false,
-      "ignore-keys": "title, practice_log, attr"
+      "ignore-keys": "title, practice_log, attr, id"
     },
     "sort-yaml-array-values": {
       "enabled": false,

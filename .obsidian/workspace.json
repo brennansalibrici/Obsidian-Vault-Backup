@@ -6,70 +6,29 @@
       {
         "id": "82b6a55c2802e2c3",
         "type": "tabs",
-        "dimension": 48.81057268722467,
+        "dimension": 54.59132189707366,
         "children": [
           {
-            "id": "b40d07ed355e965f",
+            "id": "9775a1bb912b7b9e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/fileClass/me/inner_checkin.md",
+                "file": "Meta/Templates/me/Practice Lab/Practice Session Template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "inner_checkin"
+              "title": "Practice Session Template"
             }
-          },
-          {
-            "id": "02c227800949c3c7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Practice Lab/Coaching Session Template.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Coaching Session Template"
-            }
-          },
-          {
-            "id": "46562d498e0cf8a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ME/🌒 Reflections/🕹️ Inner Check-Ins/Test CheckIn.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Test CheckIn"
-            }
-          },
-          {
-            "id": "1115f71183de5db3",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/emotion",
-              "state": {},
-              "icon": "package",
-              "title": "me/emotion"
-            }
-          },
-          {
-            "id": "a251d31fc820e7c1",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/inner_checkin",
-              "state": {},
-              "icon": "package",
-              "title": "me/inner_checkin"
-            }
-          },
+          }
+        ]
+      },
+      {
+        "id": "fb68bad4eaef15d0",
+        "type": "tabs",
+        "dimension": 45.40867810292634,
+        "children": [
           {
             "id": "1ea7b86d9ea36de0",
             "type": "leaf",
@@ -83,31 +42,37 @@
               "icon": "lucide-file",
               "title": "Modal Practice Session Template"
             }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "fb68bad4eaef15d0",
-        "type": "tabs",
-        "dimension": 51.18942731277533,
-        "children": [
+          },
           {
-            "id": "c3bb8d4d0f01023d",
+            "id": "087fbbe6bac67fdd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ME/🧪 Practice Lab/🧠 Coaching/🧠 Coaching.md",
+                "file": "Meta/Templates/me/Practice Lab/Modal Live Rehearsal Template.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "🧠 Coaching"
+              "title": "Modal Live Rehearsal Template"
             }
           },
           {
-            "id": "f5a99dd00cd0d081",
+            "id": "dcb85b59623fc738",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/Templates/me/Practice Lab/Modal Coaching Session Template.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Modal Coaching Session Template"
+            }
+          },
+          {
+            "id": "a0fffbeead13f864",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -119,23 +84,8 @@
               "icon": "lucide-file",
               "title": "Modal Inner CheckIn Template"
             }
-          },
-          {
-            "id": "8ae8156f50136b6b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Inner_CheckIn_Template.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Inner_CheckIn_Template"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -260,7 +210,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 210.5
+    "width": 369.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -427,34 +377,36 @@
       "modalforms:Edit forms": false
     }
   },
-  "active": "46562d498e0cf8a7",
+  "active": "d2a414d0abc19c36",
   "lastOpenFiles": [
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/🕹️ Inner Check-Ins.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Test CheckIn.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/TestIn-1.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/TestIn.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/TestIn 1.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/TTTT_CheckIn-1.md",
-    "ME/🏛️ Foundations/🎭 Emotions/Ashamed.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Testsss_CheckIn-1.md",
-    "Meta/fileClass/me/emotion.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Tests_CheckIn-1.md",
-    "Meta/Templates/me/Practice Lab/Modal Practice Session Template.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Test Check_CheckIn-1.md",
-    "Meta/Templates/me/Modal Inner CheckIn Template.md",
-    "Meta/Templates/me/Inner_CheckIn_Template.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/TEst_CheckIn-1.md",
-    "Meta/fileClass/me/inner_checkin.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Test_CheckIn-1.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Untitled 3.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Untitled 2.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Untitled 1.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Untitled.md",
-    "Meta/fileClass/me/inner_checkin_motive_valuelist.md",
-    "ME/📝 Captured Moments/📝 Captured Moments.md",
+    "ME/🧪 Practice Lab/🧠 Coaching/A Different Story_Session-3_Coaching Session-3.md",
+    "ME/🧪 Practice Lab/🎬 Practice Logs/A Different Story_Session-1.md",
+    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/A Different Story_Session-1_Live Rehearsal_Take-1.md",
+    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/A Different Story_Session-3_Live Rehearsal_Take-2.md",
     "ME/🧪 Practice Lab/🧠 Coaching/🧠 Coaching.md",
-    "Meta/fileClass/me/inner_checkin_driver_valuelist.md",
-    "Meta/Templates/me/Captured Moment Template.md",
+    "ME/🧪 Practice Lab/🧠 Coaching/A Different Story_Session-3_Coaching Session-2.md",
+    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/🎙️ Live Rehearsals.md",
+    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/A Different Story_Session-1_Live Rehearsal_Take-3.md",
+    "ME/🧪 Practice Lab/🧠 Coaching/A Different Story_Session-1_Coaching Session-1.md",
+    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/A Different Story_Session-1_Live Rehearsal_Take-2.md",
+    "ME/🧪 Practice Lab/🎬 Practice Logs/🎬 Practice Logs.md",
+    "ME/🧪 Practice Lab/🎬 Practice Logs/A Different Story_Session-3.md",
+    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/A Different Story_Session-3_Live Rehearsal_Take-1.md",
+    "ME/🧪 Practice Lab/🧠 Coaching/A Different Story_Session-3_Coaching Session-1.md",
+    "Meta/Templates/me/Inner_CheckIn_Template.md",
+    "ME/🧪 Practice Lab/🎬 Practice Logs/A Different Story_Session-2.md",
+    "ME/🧪 Practice Lab/🧠 Coaching/A Different Story_Session-2_Coaching Session-1.md",
+    "Meta/Templates/me/Practice Lab/Practice Session Template.md",
+    "Meta/Templates/me/Practice Lab/Coaching Session Template.md",
+    "Meta/Templates/me/Practice Lab/Modal Practice Session Template.md",
+    "Meta/Templates/me/Modal Inner CheckIn Template.md",
+    "Meta/Templates/me/Practice Lab/Live Rehearsal Template.md",
+    "Meta/Templates/me/Practice Lab/Modal Coaching Session Template.md",
+    "ME/🧪 Practice Lab/🎬 Practice Logs/_Session-4.md",
+    "Meta/Templates/me/Practice Lab/Modal Live Rehearsal Template.md",
+    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Test 4.md",
+    "Meta/Scripts/CustomJS_Scripts/formatUtils.js",
+    "Meta/Scripts/CustomJS_Scripts/formatUtils",
     "ME/🌒 Reflections/🕹️ Inner Check-Ins",
     "Meta/Scripts/CustomJS_Scripts/modalFormUtils.js",
     "testscript.js",
@@ -463,8 +415,6 @@
     "Meta/Scripts/CustomJS_Scripts/coolString",
     "Meta/Scripts/CustomJS_Scripts/class CoolString {.js",
     "Meta/Scripts/jsconfig.json",
-    "Meta/Scripts/CustomJS/package-lock.json",
-    "Meta/Scripts/CustomJS/node_modules/moment/ts3.1-typings/moment.d.ts",
     "My Files/My Attachments/Pasted image 20250605211151.png",
     "ME/🧪 Practice Lab/Rehearsal - Live Session.canvas",
     "My Files/My Attachments/Pasted image 20250601203819.png",

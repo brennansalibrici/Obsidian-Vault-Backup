@@ -1,5 +1,7 @@
 class ModalFormUtils {
 
+//PURPOSE: TO HANDLE ALL FUNCTIONALITY THAT GETS DATA FROM ANY MODAL FORM AND COMPLETES WHATEVER PROCESSES NECESSARY TO HAVE THAT DATA REFLECTED APPROPRIATELY IN OBSIDIAN
+
 //#region CONSTRUCTOR, ENUMS AND PROPERTY DEFINITIONS
     /*simulated enum used as an init() function parameter to identify the type of file coming in which will determine specific attributes about it, namely how to create
     the newly created file's name. The intention is that as you use this class for more and more similar types of modal form file creation, you continue adding to this enum
@@ -47,6 +49,7 @@ class ModalFormUtils {
         this.newFileFullPath = "";
         this.fileCreatingTemplate = "";
         this.newLiveFile = "";
+        this.formatUtils = window.customJS.createFormatUtilsInstance();
     }
 
 //#endregion
@@ -92,6 +95,10 @@ class ModalFormUtils {
         return null;
     }
 
+
+
+
+
 //#endregion
 
 //#region FILE GENERATION AND MANIPULATION FUNCTIONS
@@ -135,21 +142,47 @@ class ModalFormUtils {
     //switch statement provides the ability to create individualized dynamic filename templates based on the init() filetype parameter
     /*********************the loop that assigns the fileMatch value returns the number of files that match. For the new filename we need to increase that value by one.
     creates both a stringname and a link for the newly created file***********************************/
-    createNewFileName(strName = ""){
-        if(strName) this.strField2 = strName;
+    createNewFileName(strName = "") {
+        if (strName) this.strField2 = strName;
 
         const handler = ModalFormUtils.fileTypeHandlers[this.fileType];
         if (!handler || !handler.naming) throw new Error(`❌ No naming logic for fileType: ${this.fileType}`);
 
-        //Check for exsiting filenames and increment if needed
         const baseName = this.strField1;
+
+        // 🔁 Special case for count-tracking file types
+        if (["practice session", "live rehearsal", "coaching session"].includes(this.fileType)) {
+            const prefix = baseName;
+            const pattern = new RegExp(`^${prefix}.*?(\\d+)$`);
+            let maxCount = 0;
+
+            const existingNames = this.folder?.children?.map(file => file.name.replace(/\.md$/, "")) || [];
+            for (const name of existingNames) {
+            const match = name.match(pattern);
+            if (match) {
+                const count = parseInt(match[1], 10);
+                if (!isNaN(count) && count > maxCount) maxCount = count;
+            }
+            }
+
+            const nextCount = maxCount + 1;
+            const finalName = handler.naming(baseName, nextCount);
+
+            this.newCreatedFileName = finalName;
+            this.newCreatedFileLink = this.string2Link(finalName);
+            this.newFileFullPath = `${this.folderPath}/${finalName}.md`;
+
+            return this.newCreatedFileName;
+        }
+
+        // ⚙️ Default fallback for non-counted types
+        const existingNames = new Set(this.folder?.children?.map(file => file.name.replace(/\.md$/, "")) || []);
         let counter = 1;
         let finalName = handler.naming(baseName, counter);
 
-        const existingNames = new Set(this.folder?.children?.map(file => file.name.replace(/\.md$/, "")) || []);
         while (existingNames.has(finalName)) {
-            finalName = `${baseName}-${counter}`;
             counter++;
+            finalName = handler.naming(baseName, counter);
         }
 
         this.newCreatedFileName = finalName;
@@ -159,6 +192,7 @@ class ModalFormUtils {
         return this.newCreatedFileName;
     }
 
+    //combines createNewFileFromTemplate() and updateFrontMatter() into a single method
     async createFileWithFrontmatter(fieldMap = {}) {
     const file = await this.createNewFileFromTemplate();
     if (file) {
@@ -170,16 +204,6 @@ class ModalFormUtils {
     //When called, this function creates a new and seperate file (from an existing template) which is called from a modal form's logic but it completely seperate from the template and/or the fileclass calling the function.
     async createNewFileFromTemplate() {
     try {
-
-        console.log("🧪 DEBUG: templateFile =", this.templateFile);
-        console.log("🧪 DEBUG: Available files in vault:");
-        this.app.vault.getFiles().forEach(file => {
-        console.log(" -", file.path);
-        });
-
-        console.log("🔍 Looking for template file:", this.templateFile);
-        const files = this.app.vault.getFiles().map(f => f.path);
-        console.log("📁 All available files:", files);
 
         // Find the template file
         this.fileCreatingTemplate = this.tp.file.find_tfile(this.templateFile);
@@ -287,8 +311,7 @@ class ModalFormUtils {
     //accepts a 'target' file and will update the global property 'last_modified' to the current date/time
     async updateLastModified(file) {
   try {
-    const now = window.moment();
-    const formattedNow = now.format("YYYY-MM-DD HH:mm");
+       const formattedNow = this.formatUtils.db_formatDateTime(window.moment());
 
     await this.app.fileManager.processFrontMatter(file, (fm) => {
       fm["last_modified"] = formattedNow;

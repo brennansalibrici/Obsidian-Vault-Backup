@@ -113,6 +113,10 @@
     "need_type": "multitext",
     "theme": "multitext",
     "supporting_meta_skills": "multitext",
-    "steps": "multitext"
+    "steps": "multitext",
+    "id": "number",
+    "last_modified": "datetime",
+    "scenario": "multitext",
+    "source_daily_note": "text"
   }
 }

@@ -19,9 +19,9 @@ actions:
 
 ### Inner Check-Ins
 ``` dataview
-table id as "ID", importance as "Importance", people as "People", created as "Date/Time", status as "Status"
+table event_date_time as "Date/Time", people as "People", driver as "Driver", motive as "Motive", response_alignment as "Response"
 from "ME/🌒 Reflections/🕹️ Inner Check-Ins"
-where contains(status, "review")
+where file.name != "🕹️ Inner Check-Ins"
 sort file.name asc 
 
 ```

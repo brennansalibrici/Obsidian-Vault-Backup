@@ -1,9 +1,9 @@
 ---
 fileClass: inner_checkin
-id: 1750277375071
-created: 2025-06-18 15:09
-last_modified: 2025-06-18 15:09
-title: TestIn-1
+id: 1750304087505
+created: 2025-06-18 22:34
+last_modified: 2025-06-18 22:34
+title: Test 4
 status: 🟧 in progress
 type: []
 tags: []
@@ -14,13 +14,13 @@ priority: ⚪ None
 visibility: 🔒 private
 source_daily_note:
   - - 2025-06-18
-event_date_time: 2025-06-18 15:09
-driver: [The Ghost (emotionally absent)]
-motive: [Minimize Damage]
-response_alignment: [✅ Fully Aligned]
-context: TestIn
-people: ["[[Nate Kinney]]"]
-emotions: ["[[Accursed]]"]
+event_date_time: 2025-06-18 22:34
+driver: [The Pleaser]
+motive: ["Get It Right (give the 'correct' answer)"]
+response_alignment: ✅ Fully Aligned
+context: Test 4
+people: ["[[Lori Kinney]]"]
+emotions: ["[[Besieged]]"]
 notes: []
 related: []
 media: []

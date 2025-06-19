@@ -1,9 +1,9 @@
 ---
 fileClass: inner_checkin
-id: 1750277415843
-created: 2025-06-18 15:10
-last_modified: 2025-06-18 15:10
-title: Test CheckIn
+id: 1750292716455
+created: 2025-06-18 19:25
+last_modified: 2025-06-18 19:25
+title: Test 2
 status: 🟧 in progress
 type: []
 tags: []
@@ -14,18 +14,13 @@ priority: ⚪ None
 visibility: 🔒 private
 source_daily_note:
   - - 2025-06-18
-event_date_time: 2025-06-17T15:09
-driver:
-  - Court Jester
-motive:
-  - Seek Connection
-response_alignment:
-  - ✅ Fully Aligned
-context: Test CheckIn
-people:
-  - "[[Dan Schmoyer]]"
-emotions:
-  - "[[Anguish]]"
+event_date_time: 2025-06-18 19:25
+driver: [Court Jester]
+motive: [Avoid Conflict]
+response_alignment: ❌ Misaligned / Self-Abandoning
+context: Test 2
+people: ["[[Nate Kinney]]"]
+emotions: ["[[Besieged]]"]
 notes: []
 related: []
 media: []
@@ -36,16 +31,12 @@ export_to_inputs: false
 ## Context
 ---
 
-
 ## Reflection
 ---
-
 
 ## Notes 
 ---
 
-
 ## Links
 ---
-
 
