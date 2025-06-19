@@ -117,6 +117,7 @@
     "id": "number",
     "last_modified": "datetime",
     "scenario": "multitext",
-    "source_daily_note": "text"
+    "source_daily_note": "text",
+    "grade": "number"
   }
 }

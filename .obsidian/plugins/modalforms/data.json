@@ -644,6 +644,122 @@
         }
       ],
       "version": "1"
+    },
+    {
+      "title": "Create New Scenario",
+      "name": "Create New Scenario",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "description": "A brief description of the scenario that occured",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "people",
+          "label": "People",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "type",
+          "label": "Scenario Type",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Mirroring",
+                "label": "Mirroring"
+              },
+              {
+                "value": "Validation",
+                "label": "Validation"
+              },
+              {
+                "value": "Conflict Repair",
+                "label": "Conflict Repair"
+              },
+              {
+                "value": "Boundaries",
+                "label": "Boundaries"
+              },
+              {
+                "value": "Emotional Disclosure",
+                "label": "Emotional Disclosure"
+              },
+              {
+                "value": "Trigger Navigation",
+                "label": "Trigger Navigation"
+              },
+              {
+                "value": "Presence Under Pressure",
+                "label": "Presence Under Pressure"
+              },
+              {
+                "value": "Vulnerability Response",
+                "label": "Vulnerability Response"
+              },
+              {
+                "value": "Listening Without Fixing",
+                "label": "Listening Without Fixing"
+              },
+              {
+                "value": "Emotional Containment",
+                "label": "Emotional Containment"
+              },
+              {
+                "value": "Partnering Instead of Defending",
+                "label": "Partnering Instead of Defending"
+              },
+              {
+                "value": "Staying With The Moment",
+                "label": "Staying With The Moment"
+              },
+              {
+                "value": "Shame De-Escalation",
+                "label": "Shame De-Escalation"
+              },
+              {
+                "value": "Holding Space",
+                "label": "Holding Space"
+              },
+              {
+                "value": "Masked Vulnerability",
+                "label": "Masked Vulnerability"
+              },
+              {
+                "value": "Emotional Subtext Listening",
+                "label": "Emotional Subtext Listening"
+              }
+            ]
+          }
+        },
+        {
+          "name": "summary",
+          "label": "Summary",
+          "description": "What actually happened? ",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
     }
   ]
 }

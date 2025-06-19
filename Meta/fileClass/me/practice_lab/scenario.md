@@ -3,7 +3,7 @@ fields:
   - name: type
     type: Select
     options:
-      sourceType: ValuesList
+      sourceType: ValuesListNotePath
       valuesList:
         "1": Mirroring
         "2": Validation
@@ -21,6 +21,7 @@ fields:
         "14": Holding Space
         "15": Masked Vulnerability
         "16": Emotional Subtext Listening
+      valuesListNotePath: Meta/fileClass/me/practice_lab/scenario type list.md
     path: ""
     id: tMAZ0d
   - name: summary
@@ -114,7 +115,7 @@ fields:
       autoUpdate: false
     path: ""
     id: ulTu5n
-version: "2.127"
+version: "2.128"
 limit: 20
 mapWithTag: false
 icon: package

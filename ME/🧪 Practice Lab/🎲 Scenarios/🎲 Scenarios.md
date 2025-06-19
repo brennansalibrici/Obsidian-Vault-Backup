@@ -1,10 +1,20 @@
 ---
 ---
 
-```button
-name QuickAdd: 🎲 New Scenario
-type command
-action QuickAdd: 🎲 New Scenario
+```meta-bind-button
+label: Create New 🎲 Scenario
+icon: ""
+style: default
+class: ""
+cssStyle: ""
+backgroundImage: ""
+tooltip: ""
+id: ""
+hidden: false
+actions:
+  - type: runTemplaterFile
+    templateFile: Meta/Templates/me/Practice Lab/Modal Scenario Template.md
+
 ```
 
 ### Scenarios

@@ -1,9 +1,9 @@
 ---
 fileClass: scenario
-id: <% tp.date.now("x") %>
+id: 1750368784751
 created: ""
 last_modified: ""
-title: ""
+title: Untitled
 tags: 
 entered: true
 archived: false
@@ -21,7 +21,7 @@ needs_activated: []
 emotional_wounds: []
 protective_strategies: []
 steps_targeted: []
-grade:
+grade: []
 practice_log: []
 notes: 
 media: 

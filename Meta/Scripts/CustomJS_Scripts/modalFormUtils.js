@@ -11,7 +11,9 @@ class ModalFormUtils {
     static filetype = {
         PRACTICE_SESSION: "practice session",
         LIVE_REHEARSAL: "live rehearsal",
-        COACHING_SESSION: "coaching session"
+        COACHING_SESSION: "coaching session",
+        INNER_CHECKIN: "inner check-in",
+        SCENARIO: "scenario"
     };
 
     static skipLinkFields = [
@@ -26,7 +28,9 @@ class ModalFormUtils {
     "motive",
     "response_alignment",
     "event_date_time",
-    "context"
+    "context",
+    "summary",
+    "title"
     ];
 
     //Constructor and define class properties
@@ -76,9 +80,42 @@ class ModalFormUtils {
             folder: "ME/🌒 Reflections/🕹️ Inner Check-Ins",
             template: "Meta/Templates/me/Inner_CheckIn_Template",
             naming: (context, count) => context
+        },
+        "scenario": {
+            folder: "ME/🧪 Practice Lab/🎲 Scenarios",
+            template:"Meta/Templates/me/Practice Lab/Scenario Template",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName);
+            }
         }
     };
 
+    //checks to see if the filename created already exists in the folder and if so, appends '-1', '-2', etc.
+    ensureUniqueFilename(baseName) {
+        const existingNames = new Set(this.folder?.children?.map(file => file.name.replace(/\.md$/, "")) || []);
+        if (!existingNames.has(baseName)) return baseName;
+
+        let counter = 1;
+        let uniqueName = `${baseName}-${counter}`;
+        while (existingNames.has(uniqueName)) {
+            counter++;
+            uniqueName = `${baseName}-${counter}`;
+        }
+        return uniqueName;
+    }
+
+    //encapsulates the conversion between the static fileTypeHandler and other complexities between a dedicated method and instanced functions
+    getFinalFileName(baseName, count = null) {
+        const handler = ModalFormUtils.fileTypeHandlers[this.fileType];
+        if (!handler || typeof handler.naming !== "function") {
+            throw new Error(`❌ No valid naming function found for fileType: ${this.fileType}`);
+        }
+
+        // Call the naming function with the correct context (`this`) so formatUtils is available
+        return count !== null
+            ? handler.naming.call(this, baseName, count)
+            : handler.naming.call(this, baseName);
+    }
 
     //accepts a string and returns an Obsidian link of the same string
     string2Link(stringInput){
@@ -166,7 +203,7 @@ class ModalFormUtils {
             }
 
             const nextCount = maxCount + 1;
-            const finalName = handler.naming(baseName, nextCount);
+            const finalName = this.getFinalFileName(baseName, nextCount);
 
             this.newCreatedFileName = finalName;
             this.newCreatedFileLink = this.string2Link(finalName);
@@ -176,20 +213,20 @@ class ModalFormUtils {
         }
 
         // ⚙️ Default fallback for non-counted types
-        const existingNames = new Set(this.folder?.children?.map(file => file.name.replace(/\.md$/, "")) || []);
-        let counter = 1;
-        let finalName = handler.naming(baseName, counter);
+        // Use safety check to avoid overwriting existing files
+        const initialName = this.getFinalFileName(baseName);
+        const safeName = this.ensureUniqueFilename(initialName);
 
-        while (existingNames.has(finalName)) {
-            counter++;
-            finalName = handler.naming(baseName, counter);
+        if (safeName !== initialName) {
+            new Notice(`📛 Filename "${initialName}" already exists. Renamed to "${safeName}" to avoid naming conflicts.`);
         }
 
-        this.newCreatedFileName = finalName;
-        this.newCreatedFileLink = this.string2Link(finalName);
-        this.newFileFullPath = `${this.folderPath}/${finalName}.md`;
+        this.newCreatedFileName = safeName;
+        this.newCreatedFileLink = this.string2Link(safeName);
+        this.newFileFullPath = `${this.folderPath}/${safeName}.md`;
 
         return this.newCreatedFileName;
+
     }
 
     //combines createNewFileFromTemplate() and updateFrontMatter() into a single method
