@@ -13,7 +13,11 @@ class ModalFormUtils {
         LIVE_REHEARSAL: "live rehearsal",
         COACHING_SESSION: "coaching session",
         INNER_CHECKIN: "inner check-in",
-        SCENARIO: "scenario"
+        SCENARIO: "scenario",
+        CAPTURED_MOMENT: "captured moment",
+        OBSERVATION: "observation",
+        INTEGRATION_JOURNAL: "integration journal",
+        REFLECTION_JOURNAL: "reflection journal"
     };
 
     static skipLinkFields = [
@@ -30,7 +34,8 @@ class ModalFormUtils {
     "event_date_time",
     "context",
     "summary",
-    "title"
+    "title",
+    "importance"
     ];
 
     //Constructor and define class properties
@@ -53,7 +58,9 @@ class ModalFormUtils {
         this.newFileFullPath = "";
         this.fileCreatingTemplate = "";
         this.newLiveFile = "";
+        this.lnkDailyNote = "";
         this.formatUtils = window.customJS.createFormatUtilsInstance();
+
     }
 
 //#endregion
@@ -86,6 +93,40 @@ class ModalFormUtils {
             template:"Meta/Templates/me/Practice Lab/Scenario Template",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName);
+            }
+        },
+        "captured moment": {
+            folder: "ME/📝 Captured Moments",
+            template: "Meta/Templates/me/Captured Moment Template",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName);
+            }
+        },
+        "observation": {
+            folder: "ME/👀 Observations",
+            template: "Meta/Templates/me/Observation Template",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName);
+            }
+        },
+        "integration journal": {
+            folder: "ME/📓 Journal",
+            template: "Meta/Templates/me/Emotional Growth Journal/Integration Journal Template",
+            naming: function () {
+                const now = new Date();
+                const datePart = this.formatUtils.db_formatDateOnly(now); // e.g., 2025-06-19
+                const timePart = this.formatUtils.formatTimeOnly(now).replace(":", ""); // e.g., 1430
+                return `🔁 Integration Journal Entry ${datePart} @ ${timePart}`;
+            }
+        },
+        "reflection journal": {
+            folder: "ME/📓 Journal",
+            template: "Meta/Templates/me/Emotional Growth Journal/Reflection Journal Template",
+            naming: function () {
+                const now = new Date();
+                const datePart = this.formatUtils.db_formatDateOnly(now); // e.g., 2025-06-19
+                const timePart = this.formatUtils.formatTimeOnly(now).replace(":", ""); // e.g., 1430
+                return `🪞 Reflection Journal Entry ${datePart} @ ${timePart}`;
             }
         }
     };
@@ -176,7 +217,6 @@ class ModalFormUtils {
         this.createNewFileName();
     }
 
-    //switch statement provides the ability to create individualized dynamic filename templates based on the init() filetype parameter
     /*********************the loop that assigns the fileMatch value returns the number of files that match. For the new filename we need to increase that value by one.
     creates both a stringname and a link for the newly created file***********************************/
     createNewFileName(strName = "") {
@@ -273,6 +313,14 @@ class ModalFormUtils {
             return null;
         }
     }
+
+    //generate a hook that can be linked to a DailyNote
+    generateDailyNoteLink() {
+        const today = this.formatUtils.db_formatDateOnly(new Date());
+        return `[[${today}]]`;
+
+    }
+
 
 //#endregion
 

@@ -11,11 +11,12 @@ extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - qIP9fN
   - yzEQAd
   - qnIA0g
   - m0vpGY
   - gdIfkh
-version: "2.5"
+version: "2.7"
 fields:
   - name: journal_type
     type: Select
@@ -41,4 +42,9 @@ fields:
     options: {}
     path: ""
     id: yzEQAd
+  - name: emotions
+    type: MultiFile
+    options: {}
+    path: ""
+    id: qIP9fN
 ---

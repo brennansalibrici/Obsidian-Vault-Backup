@@ -1,24 +1,35 @@
 ---
 ---
 
-```button
-name QuickAdd: 🪞 New Reflection Journal Entry
-type command
-action QuickAdd: 🪞 New Reflection Journal Entry
+```meta-bind-button
+label: New Integration 🔁 Journal Entry
+icon: ""
+style: default
+class: ""
+cssStyle: ""
+backgroundImage: ""
+tooltip: ""
+id: ""
+hidden: false
+actions:
+  - type: runTemplaterFile
+    templateFile: Meta/Templates/me/Emotional Growth Journal/Modal Integration Journal Template.md
+
 ```
 
-```button
-name QuickAdd: 🔁 New Integration Journal Entry
-type command
-action QuickAdd: 🔁 New Integration Journal Entry
-```
-
-### Reflection Journal Entries
-```dataview
-table summary as "Summary", created as "Date/Time"
-from "ME/📓 Journal"
-where journal_type = "Reflection"
-sort file.name asc 
+```meta-bind-button
+label: New Reflection 🪞 Journal Entry
+icon: ""
+style: default
+class: ""
+cssStyle: ""
+backgroundImage: ""
+tooltip: ""
+id: ""
+hidden: false
+actions:
+  - type: runTemplaterFile
+    templateFile: Meta/Templates/me/Emotional Growth Journal/Modal Reflection Journal Template.md
 
 ```
 
@@ -31,3 +42,11 @@ sort file.name asc
 
 ```
 
+### Reflection Journal Entries
+```dataview
+table summary as "Summary", created as "Date/Time"
+from "ME/📓 Journal"
+where journal_type = "Reflection"
+sort file.name asc 
+
+```

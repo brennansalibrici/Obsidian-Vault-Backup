@@ -1,10 +1,20 @@
 ---
 ---
 
-```button
-name QuickAdd: 👀 Create New Observation
-type command
-action QuickAdd: 👀 Create New Observation
+```meta-bind-button
+label: Create New 👀 Observation
+icon: ""
+style: default
+class: ""
+cssStyle: ""
+backgroundImage: ""
+tooltip: ""
+id: ""
+hidden: false
+actions:
+  - type: runTemplaterFile
+    templateFile: Meta/Templates/me/Modal Observation Template.md
+
 ```
 
 ### Observations To Review

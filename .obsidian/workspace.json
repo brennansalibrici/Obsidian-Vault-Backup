@@ -4,134 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "82b6a55c2802e2c3",
+        "id": "7740685a0346e57b",
         "type": "tabs",
-        "dimension": 55.970606246172686,
         "children": [
           {
-            "id": "9775a1bb912b7b9e",
+            "id": "13e4f16d31a64224",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/fileClass/me/practice_lab/scenario.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "scenario"
-            }
-          },
-          {
-            "id": "a32da5ce98147191",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Practice Lab/Modal Scenario Template.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Modal Scenario Template"
-            }
-          },
-          {
-            "id": "879debd7d848ac68",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/practice_lab/scenario",
+              "type": "empty",
               "state": {},
-              "icon": "package",
-              "title": "me/practice_lab/scenario"
-            }
-          },
-          {
-            "id": "a0fffbeead13f864",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ME/🧪 Practice Lab/🎲 Scenarios/The Socks Episode.md",
-                "mode": "source",
-                "source": false
-              },
               "icon": "lucide-file",
-              "title": "The Socks Episode"
-            }
-          },
-          {
-            "id": "c7f5b948ae8073aa",
-            "type": "leaf",
-            "state": {
-              "type": "modal-form-manage-forms-view",
-              "state": {},
-              "icon": "documents",
-              "title": "Manage forms"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "c88fc2575cf607b5",
-        "type": "tabs",
-        "dimension": 44.029393753827314,
-        "children": [
-          {
-            "id": "1034e77e02a2cef9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ME/🧪 Practice Lab/🎲 Scenarios/🎲 Scenarios.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "🎲 Scenarios"
-            }
-          },
-          {
-            "id": "47896767af8a83e0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/fileClass/me/practice_lab/scenario type list.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "scenario type list"
-            }
-          },
-          {
-            "id": "e6cc43f9a68faf55",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Inner_CheckIn_Template.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Inner_CheckIn_Template"
-            }
-          },
-          {
-            "id": "82d2faa785be69d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Practice Lab/Scenario Template.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Scenario Template"
+              "title": "New tab"
             }
           }
         ]
@@ -259,7 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 413.5
+    "width": 309.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -387,13 +270,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ME/🌒 Reflections/🕹️ Inner Check-Ins/🕹️ Inner Check-Ins.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 🕹️ Inner Check-Ins"
+              "title": "Outline"
             }
           },
           {
@@ -426,35 +308,35 @@
       "modalforms:Edit forms": false
     }
   },
-  "active": "1034e77e02a2cef9",
+  "active": "13e4f16d31a64224",
   "lastOpenFiles": [
-    "ME/🧪 Practice Lab/🎲 Scenarios/First Try, With EMDR-1.md",
-    "ME/🧪 Practice Lab/🎲 Scenarios/🎲 Scenarios.md",
-    "ME/🧪 Practice Lab/🎲 Scenarios/First Try, With EMDR.md",
-    "ME/🧪 Practice Lab/🎲 Scenarios/The Socks Episode.md",
-    "Meta/Templates/me/Practice Lab/Scenario Template.md",
+    "Meta/Templates/me/Emotional Growth Journal/Modal Reflection Journal Template.md",
+    "ME/📓 Journal/📓 Journal.md",
+    "ME/📓 Journal/🪞 Reflection Journal Entry 2025-06-19 @ 2200.md",
+    "ME/📓 Journal/🔁 Integration Journal Entry 2025-06-19 @ 2159.md",
+    "Meta/Templates/me/Emotional Growth Journal/Modal Integration Journal Template.md",
+    "Meta/Templates/me/Modal Captured Moment Template.md",
+    "Meta/Templates/me/Modal Observation Template.md",
+    "Meta/fileClass/me/capturedMoment.md",
+    "ME/📓 Journal/🔁 Integration Journal Entry 2025-05-29 @ 1454.md",
+    "ME/📓 Journal/🪞 Reflection Journal Entry 2025-05-29 @ 1451.md",
+    "Meta/Templates/me/Emotional Growth Journal/Integration Journal Template.md",
+    "Meta/Templates/me/Emotional Growth Journal/Reflection Journal Template.md",
+    "Meta/Templates/me/Observation Template.md",
+    "Meta/fileClass/me/emotional_growth_journal.md",
+    "ME/📓 Journal/🔁 Integration Journal Entry 2025-06-19 @ 2118.md",
+    "Meta/Templates/me/Captured Moment Template.md",
+    "ME/👀 Observations/👀 Observations.md",
+    "ME/👀 Observations/New Observation.md",
     "Meta/Templates/me/Practice Lab/Modal Scenario Template.md",
-    "Meta/fileClass/me/practice_lab/scenario.md",
-    "ME/🧪 Practice Lab/🎲 Scenarios/Untitled.md",
-    "Meta/Templates/me/Inner_CheckIn_Template.md",
-    "Meta/Templates/me/Practice Lab/Modal Practice Session Template.md",
-    "I splashed water on Lori's socks cleaning the hottub, felt bad and wanted to fix it so I went into her (our) room and got her a fresh pair of socks and she thought and accused me of going through her socks/underwear drawer.md",
+    "ME/📖 Theology & Emotional Integration/📖 Theology & Emotional Integration.md",
+    "ME/🧪 Practice Lab/🎲 Scenarios/The Socks Episode.md",
+    "ME/🧪 Practice Lab/🎲 Scenarios/Bedtime Story Photo.md",
+    "ME/📝 Captured Moments/📝 Captured Moments.md",
+    "ME/📝 Captured Moments/Anot Er Test.md",
+    "ME/📝 Captured Moments/A Test.md",
+    "ME/📝 Captured Moments/Tes T.md",
     "I splashed water on Lori's socks cleaning the hottub, felt bad and wanted to fix it so I went into her (our) room and got her a fresh pair of socks and she thought and accused me of going through her socks",
-    "ME/🧪 Practice Lab/🎲 Scenarios/A Different Story.md",
-    "ME/🧪 Practice Lab/🎬 Practice Logs/🎬 Practice Logs.md",
-    "Meta/fileClass/me/practice_lab/scenario type list.md",
-    "Meta/Templates/me/Modal Inner CheckIn Template.md",
-    "ME/🌱 Growth Path/My Values.md",
-    "ME/🌱 Growth Path/🌱 Growth Path.md",
-    "ME/⚓ Anchors & Protocols/⚓ Anchors & Protocols.md",
-    "ME/🧭 Maps & Patterns/Opposites Map.md",
-    "ME/🧪 Practice Lab/🧠 Coaching/A Different Story_Session-1_Coaching Session-1.md",
-    "ME/🧪 Practice Lab/🧠 Coaching/A Different Story_Session-3_Coaching Session-3.md",
-    "ME/🧪 Practice Lab/🎬 Practice Logs/A Different Story_Session-1.md",
-    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/A Different Story_Session-1_Live Rehearsal_Take-1.md",
-    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/A Different Story_Session-3_Live Rehearsal_Take-2.md",
-    "ME/🧪 Practice Lab/🧠 Coaching/🧠 Coaching.md",
-    "ME/🧪 Practice Lab/🧠 Coaching/A Different Story_Session-3_Coaching Session-2.md",
     "Meta/Scripts/CustomJS_Scripts/formatUtils.js",
     "Meta/Scripts/CustomJS_Scripts/formatUtils",
     "ME/🌒 Reflections/🕹️ Inner Check-Ins",

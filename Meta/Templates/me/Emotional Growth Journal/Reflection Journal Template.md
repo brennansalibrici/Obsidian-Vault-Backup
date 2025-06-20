@@ -1,29 +1,25 @@
 ---
 fileClass: emotional_growth_journal
 id: <% tp.date.now("x") %>
-created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-title: " <% tp.file.title %>"
-status:
-  - 🟩 complete
-type: 
-tags: 
+created: ""
+last_modified: ""
+title: ""
+status: ""
+type: []
+tags: []
 category: note
-entered: true
+entered: false
 archived: false
-priority:
-  - ⚪ None
-visibility: 🔒 private
+priority: "⚪ None"
+visibility: "🔒 private"
 source_daily_note:
-  - - <% tp.date.now("YYYY-MM-DD") %>
-people:
-  - "{{VALUE:People}}"
+people: []
 journal_type: Reflection
-summary: "{{VALUE:Summary}}"
+summary: ""
 notes: 
-related: 
-media: 
-attachments:
+related: []
+media: []
+attachments: []
 ---
 
 ## What I Noticed

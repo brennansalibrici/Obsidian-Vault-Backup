@@ -1,10 +1,20 @@
 ---
 ---
 
-```button
-name QuickAdd: 📝 Capture New Moment
-type command
-action QuickAdd: 📝 Capture New Moment
+```meta-bind-button
+label: Capture 📝 New Moment
+icon: ""
+style: default
+class: ""
+cssStyle: ""
+backgroundImage: ""
+tooltip: ""
+id: ""
+hidden: false
+actions:
+  - type: runTemplaterFile
+    templateFile: Meta/Templates/me/Modal Captured Moment Template.md
+
 ```
 
 ### Captured Moments To Review

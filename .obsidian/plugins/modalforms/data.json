@@ -754,7 +754,319 @@
           "description": "What actually happened? ",
           "isRequired": false,
           "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Create New Captured Moment",
+      "name": "Create New Captured Moment",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "description": "A short description of the moment",
+          "isRequired": false,
+          "input": {
             "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "importance",
+          "label": "Importance",
+          "description": "What is the main 'thing' about this moment?",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Small Win",
+                "label": "Small Win"
+              },
+              {
+                "value": "Big Milestone",
+                "label": "Big Milestone"
+              },
+              {
+                "value": "Breakthrough",
+                "label": "Breakthrough"
+              },
+              {
+                "value": "Deep Grief",
+                "label": "Deep Grief"
+              },
+              {
+                "value": "Hopeful Shift",
+                "label": "Hopeful Shift"
+              },
+              {
+                "value": "AHA Moment",
+                "label": "AHA Moment"
+              },
+              {
+                "value": "Encouragement",
+                "label": "Encouragement"
+              },
+              {
+                "value": "Personal Truth",
+                "label": "Personal Truth"
+              },
+              {
+                "value": "Relationship Guide",
+                "label": "Relationship Guide"
+              },
+              {
+                "value": "Pattern Shift",
+                "label": "Pattern Shift"
+              },
+              {
+                "value": "Triggering Event",
+                "label": "Triggering Event"
+              },
+              {
+                "value": "Other",
+                "label": "Other"
+              }
+            ]
+          }
+        },
+        {
+          "name": "feelings",
+          "label": "Feelings",
+          "description": "What feelings were present during this moment?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "people",
+          "label": "People",
+          "description": "Who was involved in this moment? ",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "summary",
+          "label": "Summary",
+          "description": "Describe the moment",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Create New Observation",
+      "name": "Create New Observation",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "description": "A short description of the moment",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "importance",
+          "label": "Importance",
+          "description": "What is the main 'thing' about this moment?",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Small Win",
+                "label": "Small Win"
+              },
+              {
+                "value": "Big Milestone",
+                "label": "Big Milestone"
+              },
+              {
+                "value": "Breakthrough",
+                "label": "Breakthrough"
+              },
+              {
+                "value": "Deep Grief",
+                "label": "Deep Grief"
+              },
+              {
+                "value": "Hopeful Shift",
+                "label": "Hopeful Shift"
+              },
+              {
+                "value": "AHA Moment",
+                "label": "AHA Moment"
+              },
+              {
+                "value": "Encouragement",
+                "label": "Encouragement"
+              },
+              {
+                "value": "Personal Truth",
+                "label": "Personal Truth"
+              },
+              {
+                "value": "Relationship Guide",
+                "label": "Relationship Guide"
+              },
+              {
+                "value": "Pattern Shift",
+                "label": "Pattern Shift"
+              },
+              {
+                "value": "Triggering Event",
+                "label": "Triggering Event"
+              },
+              {
+                "value": "Other",
+                "label": "Other"
+              }
+            ]
+          }
+        },
+        {
+          "name": "feelings",
+          "label": "Feelings",
+          "description": "What feelings were present during this moment?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "people",
+          "label": "People",
+          "description": "Who was involved in this moment? ",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "summary",
+          "label": "Summary",
+          "description": "Describe the moment",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Create New Reflection Journal Entry",
+      "name": "Create New Reflection Journal Entry",
+      "fields": [
+        {
+          "name": "emotions",
+          "label": "Emotions",
+          "description": "What feelings were present during this moment?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "people",
+          "label": "People",
+          "description": "Who was involved in this moment? ",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "summary",
+          "label": "Summary",
+          "description": "Describe the moment",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Create New Integration Journal Entry",
+      "name": "Create New Integration Journal Entry",
+      "fields": [
+        {
+          "name": "emotions",
+          "label": "Emotions",
+          "description": "What feelings were present during this moment?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "people",
+          "label": "People",
+          "description": "Who was involved in this moment? ",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": false,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "summary",
+          "label": "Summary",
+          "description": "Describe the moment",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
             "hidden": false
           }
         }

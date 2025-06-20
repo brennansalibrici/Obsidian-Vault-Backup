@@ -23,7 +23,12 @@ fields:
     options: {}
     path: ""
     id: gEM4J5
-version: "2.14"
+  - name: source_daily_note
+    type: File
+    options: {}
+    path: ""
+    id: ebUnny
+version: "2.15"
 limit: 20
 mapWithTag: false
 icon: package
@@ -36,6 +41,7 @@ extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - ebUnny
   - lhHvv9
   - ff2t2z
   - gEM4J5

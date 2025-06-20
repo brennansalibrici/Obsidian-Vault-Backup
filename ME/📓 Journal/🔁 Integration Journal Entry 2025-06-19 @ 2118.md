@@ -1,6 +1,6 @@
 ---
 fileClass: emotional_growth_journal
-id: <% tp.date.now("x") %>
+id: 1750385933942
 created: ""
 last_modified: ""
 title: ""
@@ -25,14 +25,11 @@ attachments: []
 ## What's Changing In Me
 ---
 
-
 ## Patterns I'm Starting To See
 ---
 
-
 ## Past Themes Revisited
 ---
-
 
 ## What I Still Need
 ---
