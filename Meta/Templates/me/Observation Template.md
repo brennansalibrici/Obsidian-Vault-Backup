@@ -7,13 +7,11 @@ title: ""
 status: 
 type: 
 tags: 
-category:
-  - note
+category: note
 entered: true
 archived: false
-priority:
-  - ⚪ None
-visibility: 🔒 private
+priority: "⚪ None"
+visibility: "🔒 private"
 source_daily_note: 
 importance: []
 feelings: 

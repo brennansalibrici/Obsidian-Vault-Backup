@@ -212,9 +212,6 @@ class ModalFormUtils {
                 }
             }
         }
-
-        //Automatically create filename, path and links
-        this.createNewFileName();
     }
 
     /*********************the loop that assigns the fileMatch value returns the number of files that match. For the new filename we need to increase that value by one.
@@ -271,11 +268,20 @@ class ModalFormUtils {
 
     //combines createNewFileFromTemplate() and updateFrontMatter() into a single method
     async createFileWithFrontmatter(fieldMap = {}) {
-    const file = await this.createNewFileFromTemplate();
-    if (file) {
-        await this.updateFrontMatter(file, fieldMap);
-    }
-    return file;
+        try {
+            //Just-in-time filename generation
+            this.createNewFileName();
+
+            const file = await this.createNewFileFromTemplate();
+            if (file) {
+                await this.updateFrontMatter(file, fieldMap);
+            }
+            return file;
+        } catch (err) {
+            console.error("❌ Failed in createFileWithFrontmatter:", err);
+            new Notice("Error during file creation. See console.");
+            return null;
+        }
     }
 
     //When called, this function creates a new and seperate file (from an existing template) which is called from a modal form's logic but it completely seperate from the template and/or the fileclass calling the function.

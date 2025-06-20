@@ -1072,6 +1072,718 @@
         }
       ],
       "version": "1"
+    },
+    {
+      "title": "Create New Emotion",
+      "name": "Create New Emotion",
+      "version": "1",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Name",
+          "description": "",
+          "input": {
+            "type": "text",
+            "allowUnknownValues": false,
+            "hidden": false
+          },
+          "isRequired": false
+        },
+        {
+          "name": "energy_mood",
+          "label": "",
+          "description": "",
+          "input": {
+            "type": "select",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "options": [
+              {
+                "value": "High Energy Pleasant",
+                "label": "High Energy Pleasant"
+              },
+              {
+                "value": "High Energy Unpleasant",
+                "label": "High Energy Unpleasant"
+              },
+              {
+                "value": "Low Energy Pleasant",
+                "label": "Low Energy Pleasant"
+              },
+              {
+                "value": "Low Energy Unpleasant",
+                "label": "Low Energy Unpleasant"
+              }
+            ],
+            "source": "fixed"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "emotion_category",
+          "label": "Emotion Category",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": true,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Sadness",
+              "Anger",
+              "Fear",
+              "Anxiety",
+              "Joy",
+              "Love",
+              "Shame",
+              "Guilt",
+              "Surprise",
+              "Disgust",
+              "Anticipation",
+              "Trust",
+              "Confusion",
+              "Peace",
+              "Awe",
+              "Spiritual"
+            ],
+            "source": "fixed"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "emotion_type",
+          "label": "Emotion Type",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": true,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Core Emotion",
+              "Surface Emotion",
+              "Trigger Emotion",
+              "Regulating Emotion",
+              "Blended Emotion",
+              "Dissociated State",
+              "Social Emotion",
+              "Spiritual Emotion"
+            ],
+            "source": "fixed"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "definition",
+          "label": "Definition",
+          "description": "",
+          "input": {
+            "type": "textarea",
+            "allowUnknownValues": false,
+            "hidden": false
+          },
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "title": "Create New Trigger",
+      "name": "Create New Trigger",
+      "fields": [
+        {
+          "name": "type_group",
+          "label": "Trigger Group",
+          "description": "Broad categories or groups of different types of triggers",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Relational",
+                "label": "Relational"
+              },
+              {
+                "value": "Enviromental",
+                "label": "Enviromental"
+              },
+              {
+                "value": "Somatic/Body-Based",
+                "label": "Somatic/Body-Based"
+              },
+              {
+                "value": "Trauma Echoes/Memory-Based",
+                "label": "Trauma Echoes/Memory-Based"
+              },
+              {
+                "value": "Identity-Based",
+                "label": "Identity-Based"
+              },
+              {
+                "value": "Boundary-Based",
+                "label": "Boundary-Based"
+              },
+              {
+                "value": "Social/Cultural",
+                "label": "Social/Cultural"
+              },
+              {
+                "value": "Spiritual/Existential",
+                "label": "Spiritual/Existential"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_relational",
+          "label": "Relational Triggers",
+          "description": "Relational trigger types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Relational"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Rejection",
+                "label": "Rejection"
+              },
+              {
+                "value": "Abandonment",
+                "label": "Abandonment"
+              },
+              {
+                "value": "Criticism",
+                "label": "Criticism"
+              },
+              {
+                "value": "Being Ignored",
+                "label": "Being Ignored"
+              },
+              {
+                "value": "Being Misunderstood",
+                "label": "Being Misunderstood"
+              },
+              {
+                "value": "Conflict",
+                "label": "Conflict"
+              },
+              {
+                "value": "Comparison",
+                "label": "Comparison"
+              },
+              {
+                "value": "Not Feeling Safe",
+                "label": "Not Feeling Safe"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_environmental",
+          "label": "Environmental Triggers",
+          "description": "Environmental trigger types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Enviromental"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Loud Noises",
+                "label": "Loud Noises"
+              },
+              {
+                "value": "Crowds",
+                "label": "Crowds"
+              },
+              {
+                "value": "Sudden Changes",
+                "label": "Sudden Changes"
+              },
+              {
+                "value": "Physical Clutter",
+                "label": "Physical Clutter"
+              },
+              {
+                "value": "Time Pressure/Deadlines",
+                "label": "Time Pressure/Deadlines"
+              },
+              {
+                "value": "Being Watched/Observed",
+                "label": "Being Watched/Observed"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_somantic",
+          "label": "Somatic/Body-Based Triggers",
+          "description": "Somatic/Body-Based trigger types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Somatic/Body-Based"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Physical Pain",
+                "label": "Physical Pain"
+              },
+              {
+                "value": "Fatigue",
+                "label": "Fatigue"
+              },
+              {
+                "value": "Hunger",
+                "label": "Hunger"
+              },
+              {
+                "value": "Overstimulation",
+                "label": "Overstimulation"
+              },
+              {
+                "value": "Hormonal Shifts",
+                "label": "Hormonal Shifts"
+              },
+              {
+                "value": "Breathlessness/Rapid Heartbeat",
+                "label": "Breathlessness/Rapid Heartbeat"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_trauma",
+          "label": "Trauma Echoes/Memory-Based Triggers",
+          "description": "Trauma Echoes/Memory-Based trigger types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Trauma Echoes/Memory-Based"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Flashback",
+                "label": "Flashback"
+              },
+              {
+                "value": "Smell-Linked Memory",
+                "label": "Smell-Linked Memory"
+              },
+              {
+                "value": "Location-Based Memory",
+                "label": "Location-Based Memory"
+              },
+              {
+                "value": "Repetition of Past Event",
+                "label": "Repetition of Past Event"
+              },
+              {
+                "value": "Similar Tone or Phrase",
+                "label": "Similar Tone or Phrase"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_identity",
+          "label": "Identity-Based Triggers",
+          "description": "Identity-Based trigger types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Identity-Based"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Feeling Incompetent",
+                "label": "Feeling Incompetent"
+              },
+              {
+                "value": "Being Dismissed",
+                "label": "Being Dismissed"
+              },
+              {
+                "value": "Not Feeling Valued",
+                "label": "Not Feeling Valued"
+              },
+              {
+                "value": "Not Feeling Heard",
+                "label": "Not Feeling Heard"
+              },
+              {
+                "value": "Being Controlled",
+                "label": "Being Controlled"
+              },
+              {
+                "value": "Loss of Autonomy",
+                "label": "Loss of Autonomy"
+              },
+              {
+                "value": "Feeling Trapped",
+                "label": "Feeling Trapped"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_boundary",
+          "label": "Boundary-Based Triggers",
+          "description": "Boundary-Based trigger types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Boundary-Based"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Intrusion",
+                "label": "Intrusion"
+              },
+              {
+                "value": "Overwhelm",
+                "label": "Overwhelm"
+              },
+              {
+                "value": "Lack of Space",
+                "label": "Lack of Space"
+              },
+              {
+                "value": "People-Pleasing Pressure",
+                "label": "People-Pleasing Pressure"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_social",
+          "label": "Social/Cultural Triggers",
+          "description": "Social/Cultural trigger types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Social/Cultural"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Social Judgment",
+                "label": "Social Judgment"
+              },
+              {
+                "value": "Marginalization",
+                "label": "Marginalization"
+              },
+              {
+                "value": "Group Exclusion",
+                "label": "Group Exclusion"
+              },
+              {
+                "value": "Public Embarrassment",
+                "label": "Public Embarrassment"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_spiritual",
+          "label": "Spiritual/Existential Triggers",
+          "description": "Spiritual/Existential trigger types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Spiritual/Existential"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Lack of Meaning",
+                "label": "Lack of Meaning"
+              },
+              {
+                "value": "Feeling Disconnected",
+                "label": "Feeling Disconnected"
+              },
+              {
+                "value": "Moral Dissonance",
+                "label": "Moral Dissonance"
+              },
+              {
+                "value": "Feeling Unseen by God",
+                "label": "Feeling Unseen by God"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_relational",
+          "label": "Relational Origins",
+          "description": "Origin types coming from relational issues",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Relational"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Attachment Wound",
+                "label": "Attachment Wound"
+              },
+              {
+                "value": "Developmental Trauma",
+                "label": "Developmental Trauma"
+              },
+              {
+                "value": "Relational Memory",
+                "label": "Relational Memory"
+              },
+              {
+                "value": "Social Rejection",
+                "label": "Social Rejection"
+              },
+              {
+                "value": "Abandonment Experience",
+                "label": "Abandonment Experience"
+              },
+              {
+                "value": "Power Imbalance",
+                "label": "Power Imbalance"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_enviromental",
+          "label": "Enviromental Origins",
+          "description": "Origin types coming from environmental causes",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Enviromental"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Violation of Safety",
+                "label": "Violation of Safety"
+              },
+              {
+                "value": "Sensory Overload",
+                "label": "Sensory Overload"
+              },
+              {
+                "value": "Sudden Change",
+                "label": "Sudden Change"
+              },
+              {
+                "value": "Unpredictable Environment",
+                "label": "Unpredictable Environment"
+              },
+              {
+                "value": "Crowd or Noise",
+                "label": "Crowd or Noise"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_somatic",
+          "label": "Somatic/Body-Based Origins",
+          "description": "Origin types coming from somatic or body-based causesissues",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Somatic/Body-Based"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Body Sensation",
+                "label": "Body Sensation"
+              },
+              {
+                "value": "Body-Stored Pattern",
+                "label": "Body-Stored Pattern"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_trauma",
+          "label": "Trauma Echoes/Memory-Based Origins",
+          "description": "Origin types coming from traumatic memories",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Trauma Echoes/Memory-Based"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Unprocessed Memory",
+                "label": "Unprocessed Memory"
+              },
+              {
+                "value": "Trauma Echo",
+                "label": "Trauma Echo"
+              },
+              {
+                "value": "Symbolic Reminder",
+                "label": "Symbolic Reminder"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_identity",
+          "label": "Identity-Based",
+          "description": "Origin types coming from not having a solid identity",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Identity-Based"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Self-Judgment",
+                "label": "Self-Judgment"
+              },
+              {
+                "value": "Negative Core Belief",
+                "label": "Negative Core Belief"
+              },
+              {
+                "value": "Cognitive Distortion",
+                "label": "Cognitive Distortion"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_boundary",
+          "label": "Boundary-Based Origins",
+          "description": "Origin types coming from a lack of boundaries or boundary violations ",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Boundary-Based"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Conditioned Pattern",
+                "label": "Conditioned Pattern"
+              },
+              {
+                "value": "Embedded Narrative",
+                "label": "Embedded Narrative"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_social",
+          "label": "Social/Cultural Origins",
+          "description": "Origin types coming from social or cultural issues",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Social/Cultural"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Cultural Script",
+                "label": "Cultural Script"
+              },
+              {
+                "value": "Social Rejection",
+                "label": "Social Rejection"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_spiritual",
+          "label": "Spiritual/Existential Origins",
+          "description": "Origin types coming from unresolved spiritual issues",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "type_group",
+            "type": "isExactly",
+            "value": "Spiritual/Existential"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Spiritual Discord",
+                "label": "Spiritual Discord"
+              },
+              {
+                "value": "Symbolic Reminder",
+                "label": "Symbolic Reminder"
+              }
+            ]
+          }
+        }
+      ],
+      "version": "1"
     }
   ]
 }

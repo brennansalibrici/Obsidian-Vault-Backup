@@ -1,0 +1,12 @@
+Attachment Narrative
+Developmental
+Social
+Biological
+Spiritual
+Learned
+Experiential
+Unconscious
+Environmental
+Relational
+Somatic
+Cultural
