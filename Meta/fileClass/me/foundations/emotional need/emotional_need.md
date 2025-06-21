@@ -15,7 +15,7 @@ fields:
     options: {}
     path: ""
     id: oWqJz9
-  - name: protectice_strategies
+  - name: protective_strategies
     type: MultiFile
     options: {}
     path: ""
@@ -69,7 +69,7 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/emotional need/lists/emotional need group list.md
     path: ""
     id: kABz9r
-version: "2.78"
+version: "2.79"
 limit: 20
 mapWithTag: false
 icon: shield-half

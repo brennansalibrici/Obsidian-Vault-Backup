@@ -6,7 +6,7 @@
       {
         "id": "7740685a0346e57b",
         "type": "tabs",
-        "dimension": 35.47745358090186,
+        "dimension": 26.36300897170462,
         "children": [
           {
             "id": "8910d3bc0a70b6b8",
@@ -66,12 +66,13 @@
               "title": "me/foundations/trigger/trigger"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "52ba09faa3807009",
         "type": "tabs",
-        "dimension": 29.57559681697613,
+        "dimension": 13.802622498274673,
         "children": [
           {
             "id": "d8882fea2674afa0",
@@ -124,14 +125,28 @@
               "icon": "lucide-file",
               "title": "Internal Voice Template"
             }
+          },
+          {
+            "id": "d360f9b741c9ecfb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/fileClass/me/foundations/shared lists/rupture type list.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "rupture type list"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       },
       {
         "id": "f2b2d7b3ac7de6eb",
         "type": "tabs",
-        "dimension": 34.94694960212202,
+        "dimension": 59.8343685300207,
         "children": [
           {
             "id": "79a74a032649e366",
@@ -153,12 +168,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/fileClass/me/foundations/trigger/lists/trigger type list.md",
+                "file": "Meta/fileClass/me/foundations/attachment/style/attachment_style.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "trigger type list"
+              "title": "attachment_style"
+            }
+          },
+          {
+            "id": "7cf0ee86f5d4ad20",
+            "type": "leaf",
+            "state": {
+              "type": "FileClassView__me/foundations/attachment/style/attachment_style",
+              "state": {},
+              "icon": "package",
+              "title": "me/foundations/attachment/style/attachment_style"
             }
           },
           {
@@ -214,7 +239,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -339,7 +364,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.5
+    "width": 427.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -467,13 +492,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Meta/fileClass/me/foundations/trigger/lists/trigger type list.md",
+                "file": "Meta/fileClass/me/foundations/shared lists/rupture type list.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of trigger type list"
+              "title": "Outline of rupture type list"
             }
           },
           {
@@ -506,8 +531,26 @@
       "modalforms:Edit forms": false
     }
   },
-  "active": "8910d3bc0a70b6b8",
+  "active": "7cf0ee86f5d4ad20",
   "lastOpenFiles": [
+    "Meta/fileClass/me/foundations/shared lists/rupture type group list.md",
+    "Meta/fileClass/me/foundations/shared lists/rupture type list.md",
+    "Meta/fileClass/me/foundations/shared lists/core fears list.md",
+    "Meta/fileClass/me/foundations/shared lists/core fears group list.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style pattern list.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style subtype list.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style type list.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style group list.md",
+    "Meta/fileClass/me/foundations/internal voice/internal_voice.md",
+    "Meta/fileClass/me/foundations/trigger/trigger.md",
+    "Meta/fileClass/me/foundations/attachment/style/attachment_style.md",
+    "Meta/Attachments/Attachments.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists",
+    "Meta/fileClass/me/foundations/attachment/theory",
+    "Meta/fileClass/me/foundations/attachment/needs",
+    "Meta/fileClass/me/foundations/attachment/style",
+    "Meta/fileClass/me/foundations/attachment",
+    "Meta/fileClass/me/foundations/trigger/lists/trigger type list.md",
     "ME/🏛️ Foundations/🕸️ Attachment/🪢 Theory",
     "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs",
     "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles",
@@ -524,26 +567,8 @@
     "Meta/fileClass/me/foundations/emotional need/lists/emotional need group list.md",
     "Meta/fileClass/me/foundations/emotional need/lists/developmental origin list.md",
     "Meta/fileClass/me/foundations/emotion/lists/emotion type list.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion origin list.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion group list.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion flags list.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion effects list.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion color list.md",
-    "Meta/Templates/me/Foundations/Internal Voice Template.md",
-    "Meta/Templates/me/Foundations/Emotional Need Template.md",
-    "Meta/Templates/me/Foundations/Trigger Template.md",
-    "Meta/fileClass/me/foundations/trigger/trigger.md",
-    "ME/🧭 Maps & Patterns/🛡️ Emotional Needs/🛡️ Emotional Needs.md",
-    "Meta/fileClass/me/foundations/internal voice/internal_voice.md",
-    "Meta/fileClass/me/foundations/emotional need/emotional_need.md",
     "Meta/fileClass/me/foundations/healing resource/lists",
     "Meta/fileClass/me/foundations/healing resource",
-    "Meta/fileClass/me/foundations/soothing resouce/lists",
-    "Meta/fileClass/me/foundations/soothing resouce",
-    "Meta/fileClass/me/foundations/protectice strategy/lists",
-    "Meta/fileClass/me/foundations/protectice strategy",
-    "Meta/fileClass/me/foundations/emotional need/lists",
-    "Meta/fileClass/me/foundations/emotional need",
     "My Files/My Attachments/Pasted image 20250605211151.png",
     "ME/🧪 Practice Lab/Rehearsal - Live Session.canvas",
     "My Files/My Attachments/Pasted image 20250601203819.png",
