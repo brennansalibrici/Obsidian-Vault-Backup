@@ -6,24 +6,44 @@
       {
         "id": "7740685a0346e57b",
         "type": "tabs",
-        "dimension": 59.76253298153035,
+        "dimension": 35.47745358090186,
         "children": [
           {
-            "id": "364696917cb94d90",
+            "id": "8910d3bc0a70b6b8",
+            "type": "leaf",
+            "state": {
+              "type": "modal-form-manage-forms-view",
+              "state": {},
+              "icon": "documents",
+              "title": "Manage forms"
+            }
+          },
+          {
+            "id": "109fb9b1c41fa34a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/Templates/me/Foundations/Emotion Template.md",
+                "file": "Meta/fileClass/me/foundations/internal voice/internal_voice.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Emotion Template"
+              "title": "internal_voice"
             }
           },
           {
-            "id": "5915c117136dde3e",
+            "id": "0525145a8673be2f",
+            "type": "leaf",
+            "state": {
+              "type": "FileClassView__me/foundations/internal voice/internal_voice",
+              "state": {},
+              "icon": "megaphone",
+              "title": "me/foundations/internal voice/internal_voice"
+            }
+          },
+          {
+            "id": "90a251a7e8656f8e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -37,63 +57,150 @@
             }
           },
           {
-            "id": "8910d3bc0a70b6b8",
-            "type": "leaf",
-            "state": {
-              "type": "modal-form-manage-forms-view",
-              "state": {},
-              "icon": "documents",
-              "title": "Manage forms"
-            }
-          },
-          {
-            "id": "ddcfe5db729206ff",
+            "id": "71a22c0a40fdbf56",
             "type": "leaf",
             "state": {
               "type": "FileClassView__me/foundations/trigger/trigger",
               "state": {},
-              "icon": "package",
+              "icon": "zap",
               "title": "me/foundations/trigger/trigger"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "52ba09faa3807009",
+        "type": "tabs",
+        "dimension": 29.57559681697613,
+        "children": [
           {
-            "id": "d2a4991d33a281f0",
+            "id": "d8882fea2674afa0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/fileClass/me/foundations/emotion/emotion.md",
+                "file": "Meta/fileClass/me/foundations/emotional need/emotional_need.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "emotion"
+              "title": "emotional_need"
             }
           },
           {
-            "id": "d34febeb12fa5eec",
+            "id": "931d53e82c5759ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/fileClass/me/foundations/trigger/lists/trigger flag list.md",
+                "file": "Meta/Templates/me/Foundations/Emotional Need Template.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "trigger flag list"
+              "title": "Emotional Need Template"
+            }
+          },
+          {
+            "id": "b81b8bccf831af66",
+            "type": "leaf",
+            "state": {
+              "type": "FileClassView__me/foundations/emotional need/emotional_need",
+              "state": {},
+              "icon": "package",
+              "title": "me/foundations/emotional need/emotional_need"
+            }
+          },
+          {
+            "id": "5c8ec21283d1a686",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/Templates/me/Foundations/Internal Voice Template.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Internal Voice Template"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       },
       {
-        "id": "b90b71df48189557",
+        "id": "f2b2d7b3ac7de6eb",
         "type": "tabs",
-        "dimension": 40.23746701846966,
+        "dimension": 34.94694960212202,
         "children": [
           {
-            "id": "5565593336877e35",
+            "id": "79a74a032649e366",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/fileClass/me/foundations/emotional wound/lists/emotional wound origin context list.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "emotional wound origin context list"
+            }
+          },
+          {
+            "id": "aaa966f439fbdef6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/fileClass/me/foundations/trigger/lists/trigger type list.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "trigger type list"
+            }
+          },
+          {
+            "id": "de93e2c775787336",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/fileClass/me/foundations/emotional wound/emotional_wound.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "emotional_wound"
+            }
+          },
+          {
+            "id": "a431f047e8e8c377",
+            "type": "leaf",
+            "state": {
+              "type": "FileClassView__me/foundations/emotional wound/emotional_wound",
+              "state": {},
+              "icon": "package",
+              "title": "me/foundations/emotional wound/emotional_wound"
+            }
+          },
+          {
+            "id": "cc47012a0152b5ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/Templates/me/Foundations/Emotion Template.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Emotion Template"
+            }
+          },
+          {
+            "id": "b00c5f2848fe79dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -105,32 +212,9 @@
               "icon": "lucide-file",
               "title": "Trigger Template"
             }
-          },
-          {
-            "id": "0db0e3733dd19659",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/fileClass/me/foundations/emotion/emotion.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "emotion"
-            }
-          },
-          {
-            "id": "dc3999fce70bbc3c",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/foundations/emotion/emotion",
-              "state": {},
-              "icon": "package",
-              "title": "me/foundations/emotion/emotion"
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -255,7 +339,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5
+    "width": 329.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -383,13 +467,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Meta/Templates/me/Foundations/Trigger Template.md",
+                "file": "Meta/fileClass/me/foundations/trigger/lists/trigger type list.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Trigger Template"
+              "title": "Outline of trigger type list"
             }
           },
           {
@@ -422,44 +506,44 @@
       "modalforms:Edit forms": false
     }
   },
-  "active": "5565593336877e35",
+  "active": "8910d3bc0a70b6b8",
   "lastOpenFiles": [
+    "ME/🏛️ Foundations/🕸️ Attachment/🪢 Theory",
+    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs",
+    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles",
     "Meta/fileClass/me/foundations/trigger/lists/trigger origin list.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion group list.md",
-    "Meta/fileClass/me/foundations/trigger/lists/trigger flag list.md",
-    "Meta/fileClass/me/foundations/emotion/emotion.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion flags list.md",
-    "Meta/fileClass/me/foundations/trigger/trigger.md",
-    "Meta/Templates/me/Foundations/Emotion Template.md",
-    "Meta/fileClass/me/foundations/shared lists/mechanism list.md",
-    "Meta/fileClass/me/foundations/trigger/lists/trigger type list.md",
     "Meta/fileClass/me/foundations/trigger/lists/trigger group list.md",
-    "Meta/Templates/me/Foundations/Trigger Template.md",
-    "Meta/fileClass/me/foundations/shared lists/intensity scale list.md",
-    "Meta/fileClass/me/foundations/shared lists",
-    "ME/🧭 Maps & Patterns/🛡️ Emotional Needs/🛡️ Emotional Needs.md",
-    "Meta/fileClass/me/foundations/trigger/lists",
-    "Meta/fileClass/me/foundations/emotion/lists",
-    "Meta/fileClass/me/foundations/trigger",
-    "Meta/fileClass/me/foundations/emotional_wound.md",
-    "Meta/fileClass/me/importance value list.md",
-    "Meta/fileClass/me/foundations/soothing_resource.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion color list.md",
-    "Meta/fileClass/me/foundations/emotion",
-    "Meta/Templates/me/Foundations/Emotional Need Template.md",
-    "Meta/Templates/me/Captured Moment Template.md",
-    "Meta/Templates/me/Foundations",
-    "Meta/fileClass/me/foundations",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion effects list.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion origin list.md",
+    "Meta/fileClass/me/foundations/trigger/lists/trigger flag list.md",
+    "Meta/fileClass/me/foundations/internal voice/lists/internal voice type list.md",
+    "Meta/fileClass/me/foundations/internal voice/lists/internal voice style list.md",
+    "Meta/fileClass/me/foundations/internal voice/lists/internal voice group list.md",
+    "Meta/fileClass/me/foundations/emotional wound/lists/emotional wound type list.md",
+    "Meta/fileClass/me/foundations/emotional wound/lists/emotional wound origin context list.md",
+    "Meta/fileClass/me/foundations/emotional wound/lists/emotional wound group list.md",
+    "Meta/fileClass/me/foundations/emotional need/lists/emotional need type list.md",
+    "Meta/fileClass/me/foundations/emotional need/lists/emotional need group list.md",
+    "Meta/fileClass/me/foundations/emotional need/lists/developmental origin list.md",
     "Meta/fileClass/me/foundations/emotion/lists/emotion type list.md",
-    "ME/Emotions.md",
-    "ME/🏛️ Foundations/🎭 Emotions/🎭 Emotions.md",
-    "ME/🏛️ Foundations/🎭 Emotions/Abominable.md",
-    "Meta/Templates/me/Observation Template.md",
-    "ME/🎭 Emotions",
-    "I splashed water on Lori's socks cleaning the hottub, felt bad and wanted to fix it so I went into her (our) room and got her a fresh pair of socks and she thought and accused me of going through her socks",
-    "Meta/Scripts/CustomJS_Scripts/formatUtils.js",
+    "Meta/fileClass/me/foundations/emotion/lists/emotion origin list.md",
+    "Meta/fileClass/me/foundations/emotion/lists/emotion group list.md",
+    "Meta/fileClass/me/foundations/emotion/lists/emotion flags list.md",
+    "Meta/fileClass/me/foundations/emotion/lists/emotion effects list.md",
+    "Meta/fileClass/me/foundations/emotion/lists/emotion color list.md",
+    "Meta/Templates/me/Foundations/Internal Voice Template.md",
+    "Meta/Templates/me/Foundations/Emotional Need Template.md",
+    "Meta/Templates/me/Foundations/Trigger Template.md",
+    "Meta/fileClass/me/foundations/trigger/trigger.md",
+    "ME/🧭 Maps & Patterns/🛡️ Emotional Needs/🛡️ Emotional Needs.md",
+    "Meta/fileClass/me/foundations/internal voice/internal_voice.md",
+    "Meta/fileClass/me/foundations/emotional need/emotional_need.md",
+    "Meta/fileClass/me/foundations/healing resource/lists",
+    "Meta/fileClass/me/foundations/healing resource",
+    "Meta/fileClass/me/foundations/soothing resouce/lists",
+    "Meta/fileClass/me/foundations/soothing resouce",
+    "Meta/fileClass/me/foundations/protectice strategy/lists",
+    "Meta/fileClass/me/foundations/protectice strategy",
+    "Meta/fileClass/me/foundations/emotional need/lists",
+    "Meta/fileClass/me/foundations/emotional need",
     "My Files/My Attachments/Pasted image 20250605211151.png",
     "ME/🧪 Practice Lab/Rehearsal - Live Session.canvas",
     "My Files/My Attachments/Pasted image 20250601203819.png",

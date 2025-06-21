@@ -1,0 +1,11 @@
+Attachment  
+Attunement  
+Autonomy  
+Identity  
+Security  
+Expression  
+Regulation  
+Competence  
+Meaning  
+Belonging  
+Boundaries  

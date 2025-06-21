@@ -1,6 +1,6 @@
 ---
 # CLASS DEFINITION:
-fileClass: emotion
+fileClass: internal_voice
 
 # **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
@@ -11,7 +11,7 @@ title: ""
 
 # STATUS & WORKFLOW FIELDS
 status: ""
-type: emotion
+type: trigger
 tags: []
 category: note
 entered: true
@@ -19,25 +19,20 @@ archived: false
 priority: "⚪ None"
 visibility: "🔒 private"
 
-# EMOTION DEFINITION:
-emotion_group: []
-emotion_type: []
-energy_mood: ""
-emotion_origins: []
-emotion_effects: []
-emotion_flags: []
-opposite: []
+# INTERNAL VOICE DEFINITION:
+voice_group: ""
+voice_type: ""
+voice_style: []
+associated_emotions: []
+linked_wounds: []
 triggered_by: []
 needs_behind_it: []
 protective_strategies: []
 soothing_resources: []
-linked_wounds: []
-internal_voices: []
-associated_thoughts: []
-emotion_mechanism: []
+healing_resource: []
 intensity_scale:
-emotion_color: ""
-definition: ""
+voice_mechanism: []
+recurring_phrase: ""
 
 notes: 
 related: []

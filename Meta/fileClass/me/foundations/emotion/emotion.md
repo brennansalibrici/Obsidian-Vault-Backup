@@ -126,16 +126,16 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/shared lists/mechanism list.md
     path: ""
     id: f9JhDo
-version: "2.200"
+version: "2.204"
 limit: 20
 mapWithTag: false
-icon: package
+icon: drama
 tagNames: 
 filesPaths:
   - ME/🏛️ Foundations/🎭 Emotions
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:

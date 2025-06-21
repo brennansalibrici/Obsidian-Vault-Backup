@@ -1,13 +1,13 @@
 ---
 limit: 20
 mapWithTag: false
-icon: package
+icon: zap
 tagNames: 
 filesPaths:
   - ME/🏛️ Foundations/⚡ Triggers
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
@@ -21,7 +21,7 @@ fieldsOrder:
   - UPD9G3
   - pcBg7b
   - QqEMEJ
-version: "2.26"
+version: "2.31"
 fields:
   - name: definition
     type: Input
@@ -61,7 +61,7 @@ fields:
     options: {}
     path: ""
     id: V2ZMMc
-  - name: emotion_response
+  - name: associated_emotions
     type: MultiFile
     options: {}
     path: ""

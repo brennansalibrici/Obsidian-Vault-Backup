@@ -22,7 +22,7 @@ visibility: "🔒 private"
 # TRIGGER DEFINITION:
 trigger_group: ""
 trigger_type: ""
-emotion_response: []
+associated_emotions: []
 linked_wounds: []
 protective_strategies: []
 intensity_scale:

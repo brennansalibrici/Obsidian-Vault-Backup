@@ -1,34 +1,45 @@
 ---
+# CLASS DEFINITION:
 fileClass: emotional_need
+
+# **INHERITS FROM GLOBAL TEMPLATE:
+# CORE IDENTITY FIELDS:
 id: <% tp.date.now("x") %>
-created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-title: <% tp.file.title %>
-status:
-  - 🟩 complete
-type: 
-tags: 
+created: ""
+last_modified: ""
+title: ""
+
+# STATUS & WORKFLOW FIELDS
+status: ""
+type: trigger
+tags: []
 category: note
 entered: true
 archived: false
-priority:
-  - ⚪ None
-visibility: 🔒 private
-name: "{{VALUE:Name}}"
-need_category: "{{VALUE:Safety,Connection,Belonging,Autonomy,Purpose,Recognition,Peace,Play/Fun,Security/Stucture}}"
-need_type: "{{VALUE:Core Need,Relational Need,Existential Need,Spiritual Need,Developmental Need,Somatic/Physical Need}}"
-definition: "{{VALUE:Definition}}"
-related_emotions: []
-opposite: []
-fulfilled_by: []
-triggered_by: []
-notes: notes
-related: 
-media: 
-attachments:
+priority: "⚪ None"
+visibility: "🔒 private"
+
+# EMOTIONAL NEED DEFINITION:
+vneed_group: ""
+need_type: ""
+developmental_origin: ""
+unmet_effects: ""
+threatened_by: []
+linked_wounds: []
+soothing_resources: []
+protective_strategies: []
+fulfillment_strategies: []
+associated_emotions: []
+internal_vocies: []
+definition: ""
+
+notes: 
+related: []
+media: []
+attachments: []
 ---
 
 ## Notes
 ---
-{{VALUE:Definition}}
+
 

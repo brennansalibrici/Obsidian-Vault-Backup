@@ -1784,6 +1784,1356 @@
         }
       ],
       "version": "1"
+    },
+    {
+      "title": "Create New Emotional Wound",
+      "name": "Create New Emotional Wound",
+      "fields": [
+        {
+          "name": "wound_group",
+          "label": "Wound Group",
+          "description": "Broad categories or groups of different types of emotional wounds",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Family & Attachment",
+                "label": "Family & Attachment"
+              },
+              {
+                "value": "Psychological & Emotional Climate",
+                "label": "Psychological & Emotional Climate"
+              },
+              {
+                "value": "Social & School Environment",
+                "label": "Social & School Environment"
+              },
+              {
+                "value": "Trauma & Abuse",
+                "label": "Trauma & Abuse"
+              },
+              {
+                "value": "Cultural & Spiritual Contexts",
+                "label": "Cultural & Spiritual Contexts"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_family",
+          "label": "Family & Attachment Wounds",
+          "description": "Family or attachment wound types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "wound_group",
+            "type": "isExactly",
+            "value": "Family & Attachment"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Abandonment",
+                "label": "Abandonment"
+              },
+              {
+                "value": "Rejection",
+                "label": "Rejection"
+              },
+              {
+                "value": "Neglect",
+                "label": "Neglect"
+              },
+              {
+                "value": "Disconnection",
+                "label": "Disconnection"
+              },
+              {
+                "value": "Unlovability",
+                "label": "Unlovability"
+              },
+              {
+                "value": "Invisibility",
+                "label": "Invisibility"
+              },
+              {
+                "value": "Burden",
+                "label": "Burden"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_psychological",
+          "label": "Psychological & Emotional Climate Wounds",
+          "description": "Psychological or emotional wound types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "wound_group",
+            "type": "isExactly",
+            "value": "Psychological & Emotional Climate"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Shame",
+                "label": "Shame"
+              },
+              {
+                "value": "Unworthiness",
+                "label": "Unworthiness"
+              },
+              {
+                "value": "Not Enoughness",
+                "label": "Not Enoughness"
+              },
+              {
+                "value": "Failure",
+                "label": "Failure"
+              },
+              {
+                "value": "Disapproval",
+                "label": "Disapproval"
+              },
+              {
+                "value": "Judgment",
+                "label": "Judgment"
+              },
+              {
+                "value": "Control",
+                "label": "Control"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_social",
+          "label": "Social & School Environment Wounds",
+          "description": "Social or school environment wound types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "wound_group",
+            "type": "isExactly",
+            "value": "Social & School Environment"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Humiliation",
+                "label": "Humiliation"
+              },
+              {
+                "value": "Rejection",
+                "label": "Rejection"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_trauma",
+          "label": "Trauma & Abuse Wounds",
+          "description": "Trauma or abuse wound types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "wound_group",
+            "type": "isExactly",
+            "value": "Trauma & Abuse"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Betrayal",
+                "label": "Betrayal"
+              },
+              {
+                "value": "Violation",
+                "label": "Violation"
+              },
+              {
+                "value": "Loss",
+                "label": "Loss"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_cultural",
+          "label": "Cultural & Spiritual Context Wounds",
+          "description": "Cultural or spiritual wound types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "wound_group",
+            "type": "isExactly",
+            "value": "Cultural & Spiritual Contexts"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Judgment",
+                "label": "Judgment"
+              },
+              {
+                "value": "Shame",
+                "label": "Shame"
+              },
+              {
+                "value": "Unworthiness",
+                "label": "Unworthiness"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_family",
+          "label": "Family & Attachment Origins",
+          "description": "Origin types coming from family or attachment issues",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "wound_group",
+            "type": "isExactly",
+            "value": "Family & Attachment"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Attachment Rupture",
+                "label": "Attachment Rupture"
+              },
+              {
+                "value": "Childhood Neglect",
+                "label": "Childhood Neglect"
+              },
+              {
+                "value": "Abandonment by Caregiver",
+                "label": "Abandonment by Caregiver"
+              },
+              {
+                "value": "Inconsistent Parenting",
+                "label": "Inconsistent Parenting"
+              },
+              {
+                "value": "Emotional Enmeshment",
+                "label": "Emotional Enmeshment"
+              },
+              {
+                "value": "Parentification",
+                "label": "Parentification"
+              },
+              {
+                "value": "Sibling Favoritism",
+                "label": "Sibling Favoritism"
+              },
+              {
+                "value": "Divorce",
+                "label": "Divorce"
+              },
+              {
+                "value": "Family Fragmentation",
+                "label": "Family Fragmentation"
+              },
+              {
+                "value": "Chronic Emotional Loneliness",
+                "label": "Chronic Emotional Loneliness"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_psychological",
+          "label": "Psychological & Emotional Climate Origins",
+          "description": "Origin types coming from psychological or emotional climate issues",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "wound_group",
+            "type": "isExactly",
+            "value": "Psychological & Emotional Climate"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Emotional Invalidations",
+                "label": "Emotional Invalidations"
+              },
+              {
+                "value": "Highly Controlled",
+                "label": "Highly Controlled"
+              },
+              {
+                "value": "Perfectionist Environment",
+                "label": "Perfectionist Environment"
+              },
+              {
+                "value": "Performance-based Worth",
+                "label": "Performance-based Worth"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_social",
+          "label": "Social & School Environment  Origins",
+          "description": "Origin types coming from social or school environments",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "wound_group",
+            "type": "isExactly",
+            "value": "Social & School Environment"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Shaming",
+                "label": "Shaming"
+              },
+              {
+                "value": "Bullying",
+                "label": "Bullying"
+              },
+              {
+                "value": "Social Rejection",
+                "label": "Social Rejection"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_trauma",
+          "label": "Trauma & Abuse Origins",
+          "description": "Origin types coming from trauma or abusive situations",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "wound_group",
+            "type": "isExactly",
+            "value": "Trauma & Abuse"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Sexual Abuse",
+                "label": "Sexual Abuse"
+              },
+              {
+                "value": "Physical Abuse",
+                "label": "Physical Abuse"
+              },
+              {
+                "value": "Medical Trauma",
+                "label": "Medical Trauma"
+              },
+              {
+                "value": "Witnessing Violence",
+                "label": "Witnessing Violence"
+              },
+              {
+                "value": "Conflict",
+                "label": "Conflict"
+              },
+              {
+                "value": "Sudden Loss",
+                "label": "Sudden Loss"
+              },
+              {
+                "value": "Grief",
+                "label": "Grief"
+              }
+            ]
+          }
+        },
+        {
+          "name": "origin_culture",
+          "label": "Cultural & Spiritual Contexts Origins",
+          "description": "Origin types coming from cultural or spiritual situations",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "wound_group",
+            "type": "isExactly",
+            "value": "Cultural & Spiritual Contexts"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Religious Trauma",
+                "label": "Religious Trauma"
+              },
+              {
+                "value": "Racial Discrimination",
+                "label": "Racial Discrimination"
+              },
+              {
+                "value": "Cultural Shaming",
+                "label": "Cultural Shaming"
+              },
+              {
+                "value": "Identity Shaming",
+                "label": "Identity Shaming"
+              }
+            ]
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Create New Internal Voice",
+      "name": "Create New Internal Voice",
+      "fields": [
+        {
+          "name": "voice_group",
+          "label": "Voice Group",
+          "description": "Broad categories or groups of different types of internal voices",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Protective",
+                "label": "Protective"
+              },
+              {
+                "value": "Critical",
+                "label": "Critical"
+              },
+              {
+                "value": "Fear-Based",
+                "label": "Fear-Based"
+              },
+              {
+                "value": "Exiled/Wounded",
+                "label": "Exiled/Wounded"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_protective",
+          "label": "Protective Voices",
+          "description": "Protective voice types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "voice_group",
+            "type": "isExactly",
+            "value": "Protective"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Perfectionist",
+                "label": "Perfectionist"
+              },
+              {
+                "value": "Coping Manager",
+                "label": "Coping Manager"
+              },
+              {
+                "value": "Fixer",
+                "label": "Fixer"
+              },
+              {
+                "value": "Caretaker",
+                "label": "Caretaker"
+              },
+              {
+                "value": "Dismissive Protector",
+                "label": "Dismissive Protector"
+              },
+              {
+                "value": "People-Pleaser",
+                "label": "People-Pleaser"
+              },
+              {
+                "value": "The Good One",
+                "label": "The Good One"
+              },
+              {
+                "value": "Rage Voice",
+                "label": "Rage Voice"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_crtical",
+          "label": "Critical Voices",
+          "description": "Critical voice types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "voice_group",
+            "type": "isExactly",
+            "value": "Critical"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Inner Critic",
+                "label": "Inner Critic"
+              },
+              {
+                "value": "Judge",
+                "label": "Judge"
+              },
+              {
+                "value": "Shame Voice",
+                "label": "Shame Voice"
+              },
+              {
+                "value": "Persecutor",
+                "label": "Persecutor"
+              },
+              {
+                "value": "The Disappointment",
+                "label": "The Disappointment"
+              },
+              {
+                "value": "Rage Voice",
+                "label": "Rage Voice"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_fear",
+          "label": "Fear-Based Voices",
+          "description": "Fear-based voice types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "voice_group",
+            "type": "isExactly",
+            "value": "Fear-Based"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Fear Voice",
+                "label": "Fear Voice"
+              },
+              {
+                "value": "Worried Narrator",
+                "label": "Worried Narrator"
+              },
+              {
+                "value": "Hopeless Voice",
+                "label": "Hopeless Voice"
+              },
+              {
+                "value": "Saboteur",
+                "label": "Saboteur"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_exiled",
+          "label": "Exiled/Wounded Voices",
+          "description": "Exiled or wounded voice types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "voice_group",
+            "type": "isExactly",
+            "value": "Exiled/Wounded"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Inner Child",
+                "label": "Inner Child"
+              },
+              {
+                "value": "Abandoned Child",
+                "label": "Abandoned Child"
+              },
+              {
+                "value": "Invisible One",
+                "label": "Invisible One"
+              },
+              {
+                "value": "The Burden",
+                "label": "The Burden"
+              },
+              {
+                "value": "Resigned One",
+                "label": "Resigned One"
+              }
+            ]
+          }
+        },
+        {
+          "name": "style_protective",
+          "label": "Protective Voice Styles",
+          "description": "Protective voices often sound like this:",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "voice_group",
+            "type": "isExactly",
+            "value": "Protective"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Controlling",
+                "label": "Controlling"
+              },
+              {
+                "value": "Dismissive",
+                "label": "Dismissive"
+              },
+              {
+                "value": "Flat",
+                "label": "Flat"
+              },
+              {
+                "value": "Detached",
+                "label": "Detached"
+              },
+              {
+                "value": "Overwhelming",
+                "label": "Overwhelming"
+              },
+              {
+                "value": "Tense",
+                "label": "Tense"
+              },
+              {
+                "value": "Parental",
+                "label": "Parental"
+              },
+              {
+                "value": "Echoing",
+                "label": "Echoing"
+              },
+              {
+                "value": "Passive-Aggressive",
+                "label": "Passive-Aggressive"
+              }
+            ]
+          }
+        },
+        {
+          "name": "style_critical",
+          "label": "Critical Voice Styles",
+          "description": "Critical voices often sound like this:",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "voice_group",
+            "type": "isExactly",
+            "value": "Critical"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Harsh",
+                "label": "Harsh"
+              },
+              {
+                "value": "Shaming",
+                "label": "Shaming"
+              },
+              {
+                "value": "Cold",
+                "label": "Cold"
+              },
+              {
+                "value": "Cruel",
+                "label": "Cruel"
+              },
+              {
+                "value": "Mocking",
+                "label": "Mocking"
+              },
+              {
+                "value": "Authoritative",
+                "label": "Authoritative"
+              },
+              {
+                "value": "Calculated",
+                "label": "Calculated"
+              },
+              {
+                "value": "Overly Logical",
+                "label": "Overly Logical"
+              },
+              {
+                "value": "Demanding",
+                "label": "Demanding"
+              },
+              {
+                "value": "Explosive",
+                "label": "Explosive"
+              },
+              {
+                "value": "Sarcastic",
+                "label": "Sarcastic"
+              }
+            ]
+          }
+        },
+        {
+          "name": "style_fear",
+          "label": "Fear-Based Voice Styles",
+          "description": "Fear-based voices often sound like this:",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "voice_group",
+            "type": "isExactly",
+            "value": "Fear-Based"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Urgent",
+                "label": "Urgent"
+              },
+              {
+                "value": "Panicked",
+                "label": "Panicked"
+              },
+              {
+                "value": "Pleading",
+                "label": "Pleading"
+              },
+              {
+                "value": "Whiny",
+                "label": "Whiny"
+              },
+              {
+                "value": "Dramatic",
+                "label": "Dramatic"
+              },
+              {
+                "value": "Whispered",
+                "label": "Whispered"
+              },
+              {
+                "value": "Tense",
+                "label": "Tense"
+              },
+              {
+                "value": "Overwhelming",
+                "label": "Overwhelming"
+              }
+            ]
+          }
+        },
+        {
+          "name": "style_exiled",
+          "label": "Exiled or Wounded Voice Styles",
+          "description": "Exiled or wounded voices often sound like this:",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "voice_group",
+            "type": "isExactly",
+            "value": "Exiled/Wounded"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Defeated",
+                "label": "Defeated"
+              },
+              {
+                "value": "Heavy",
+                "label": "Heavy"
+              },
+              {
+                "value": "Numbing",
+                "label": "Numbing"
+              },
+              {
+                "value": "Whiny",
+                "label": "Whiny"
+              },
+              {
+                "value": "Pleading",
+                "label": "Pleading"
+              },
+              {
+                "value": "Echoing",
+                "label": "Echoing"
+              },
+              {
+                "value": "Whispered",
+                "label": "Whispered"
+              }
+            ]
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Create New Emotional Need",
+      "name": "Create New Emotional Need",
+      "fields": [
+        {
+          "name": "need_group",
+          "label": "Need Group",
+          "description": "Broad categories or groups of different types of emotional needs",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Attachment",
+                "label": "Attachment"
+              },
+              {
+                "value": "Attunement",
+                "label": "Attunement"
+              },
+              {
+                "value": "Autonomy",
+                "label": "Autonomy"
+              },
+              {
+                "value": "Identity",
+                "label": "Identity"
+              },
+              {
+                "value": "Security",
+                "label": "Security"
+              },
+              {
+                "value": "Expression",
+                "label": "Expression"
+              },
+              {
+                "value": "Regulation",
+                "label": "Regulation"
+              },
+              {
+                "value": "Competence",
+                "label": "Competence"
+              },
+              {
+                "value": "Meaning",
+                "label": "Meaning"
+              },
+              {
+                "value": "Belonging",
+                "label": "Belonging"
+              },
+              {
+                "value": "Boundaries",
+                "label": "Boundaries"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_attachment",
+          "label": "Attachment Needs",
+          "description": "Emotional needs that are based on attachment",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "need_group",
+            "type": "isExactly",
+            "value": "Attachment"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Connection",
+                "label": "Connection"
+              },
+              {
+                "value": "Closeness",
+                "label": "Closeness"
+              },
+              {
+                "value": "Being Chosen",
+                "label": "Being Chosen"
+              },
+              {
+                "value": "Being Known",
+                "label": "Being Known"
+              },
+              {
+                "value": "Dependability",
+                "label": "Dependability"
+              },
+              {
+                "value": "Trust",
+                "label": "Trust"
+              },
+              {
+                "value": "Protection",
+                "label": "Protection"
+              },
+              {
+                "value": "Reassurance",
+                "label": "Reassurance"
+              },
+              {
+                "value": "Affection",
+                "label": "Affection"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_attunement",
+          "label": "Attunement Needs",
+          "description": "Emotional needs that are based on attunement",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "need_group",
+            "type": "isExactly",
+            "value": "Attunement"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Attunement",
+                "label": "Attunement"
+              },
+              {
+                "value": "Being Seen",
+                "label": "Being Seen"
+              },
+              {
+                "value": "Validation",
+                "label": "Validation"
+              },
+              {
+                "value": "Understanding",
+                "label": "Understanding"
+              },
+              {
+                "value": "Shared Reality",
+                "label": "Shared Reality"
+              },
+              {
+                "value": "Recognition",
+                "label": "Recognition"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_autonomy",
+          "label": "Autonomy Needs",
+          "description": "Emotional needs that are based on autonomy",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "need_group",
+            "type": "isExactly",
+            "value": "Autonomy"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Freedom",
+                "label": "Freedom"
+              },
+              {
+                "value": "Agency",
+                "label": "Agency"
+              },
+              {
+                "value": "Space",
+                "label": "Space"
+              },
+              {
+                "value": "Respect",
+                "label": "Respect"
+              },
+              {
+                "value": "Control",
+                "label": "Control"
+              },
+              {
+                "value": "Permission",
+                "label": "Permission"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_identity",
+          "label": "Identity Needs",
+          "description": "Emotional needs that are based on identity",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "need_group",
+            "type": "isExactly",
+            "value": "Identity"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Authenticity",
+                "label": "Authenticity"
+              },
+              {
+                "value": "Acceptance",
+                "label": "Acceptance"
+              },
+              {
+                "value": "Encouragement",
+                "label": "Encouragement"
+              },
+              {
+                "value": "Stability",
+                "label": "Stability"
+              },
+              {
+                "value": "Belonging",
+                "label": "Belonging"
+              },
+              {
+                "value": "Reparation",
+                "label": "Reparation"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_security",
+          "label": "Security Needs",
+          "description": "Emotional needs that are based on security",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "need_group",
+            "type": "isExactly",
+            "value": "Security"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Safety",
+                "label": "Safety"
+              },
+              {
+                "value": "Stability",
+                "label": "Stability"
+              },
+              {
+                "value": "Protection",
+                "label": "Protection"
+              },
+              {
+                "value": "Dependability",
+                "label": "Dependability"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_expression",
+          "label": "Expression Needs",
+          "description": "Emotional needs that are based on expression",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "need_group",
+            "type": "isExactly",
+            "value": "Expression"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Voice",
+                "label": "Voice"
+              },
+              {
+                "value": "Attention",
+                "label": "Attention"
+              },
+              {
+                "value": "Being Seen",
+                "label": "Being Seen"
+              },
+              {
+                "value": "Permission",
+                "label": "Permission"
+              },
+              {
+                "value": "Authenticity",
+                "label": "Authenticity"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_regulation",
+          "label": "Regulation Needs",
+          "description": "Emotional needs that are based on regulation",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "need_group",
+            "type": "isExactly",
+            "value": "Regulation"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Comfort",
+                "label": "Comfort"
+              },
+              {
+                "value": "Nurture",
+                "label": "Nurture"
+              },
+              {
+                "value": "Support",
+                "label": "Support"
+              },
+              {
+                "value": "Reassurance",
+                "label": "Reassurance"
+              },
+              {
+                "value": "Soothing",
+                "label": "Soothing"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_competence",
+          "label": "Competence Needs",
+          "description": "Emotional needs that are based on competence",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "need_group",
+            "type": "isExactly",
+            "value": "Competence"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Encouragement",
+                "label": "Encouragement"
+              },
+              {
+                "value": "Recognition",
+                "label": "Recognition"
+              },
+              {
+                "value": "Capability",
+                "label": "Capability"
+              },
+              {
+                "value": "Success",
+                "label": "Success"
+              },
+              {
+                "value": "Effectiveness",
+                "label": "Effectiveness"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_meaning",
+          "label": "Meaning Needs",
+          "description": "Emotional needs that are based on meaning",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "need_group",
+            "type": "isExactly",
+            "value": "Meaning"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Purpose",
+                "label": "Purpose"
+              },
+              {
+                "value": "Contribution",
+                "label": "Contribution"
+              },
+              {
+                "value": "Matter to Others",
+                "label": "Matter to Others"
+              },
+              {
+                "value": "Impact",
+                "label": "Impact"
+              },
+              {
+                "value": "Spiritual Connection",
+                "label": "Spiritual Connection"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_belonging",
+          "label": "Belonging Needs",
+          "description": "Emotional needs that are based on belonging",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "need_group",
+            "type": "isExactly",
+            "value": "Belonging"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Belonging",
+                "label": "Belonging  "
+              },
+              {
+                "value": "Inclusion",
+                "label": "Inclusion  "
+              },
+              {
+                "value": "Being Chosen",
+                "label": "Being Chosen"
+              },
+              {
+                "value": "Shared Reality",
+                "label": "Shared Reality"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_boundary",
+          "label": "Boundary Needs",
+          "description": "Emotional needs that are based on boundaries",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "need_group",
+            "type": "isExactly",
+            "value": "Boundaries"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Respect",
+                "label": "Respect"
+              },
+              {
+                "value": "Space",
+                "label": "Space  "
+              },
+              {
+                "value": "Permission",
+                "label": "Permission  "
+              },
+              {
+                "value": "Control",
+                "label": "Control  "
+              },
+              {
+                "value": "Safety",
+                "label": "Safety  "
+              }
+            ]
+          }
+        },
+        {
+          "name": "developmental_origins",
+          "label": "Developmental Origin",
+          "description": "When the need is most active or critical",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Infancy",
+                "label": "Infancy"
+              },
+              {
+                "value": "Toddlerhood",
+                "label": "Toddlerhood"
+              },
+              {
+                "value": "Early Childhood",
+                "label": "Early Childhood"
+              },
+              {
+                "value": "Middle Childhood",
+                "label": "Middle Childhood"
+              },
+              {
+                "value": "Adolescence",
+                "label": "Adolescence"
+              },
+              {
+                "value": "Young Adulthood",
+                "label": "Young Adulthood"
+              },
+              {
+                "value": "Late Adulthood",
+                "label": "Late Adulthood"
+              },
+              {
+                "value": "Multistage",
+                "label": "Multistage"
+              },
+              {
+                "value": "Unclear Origin",
+                "label": "Unclear Origin"
+              }
+            ]
+          }
+        }
+      ],
+      "version": "1"
     }
   ]
 }
