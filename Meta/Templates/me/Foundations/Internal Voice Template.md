@@ -19,21 +19,26 @@ archived: false
 priority: "⚪ None"
 visibility: "🔒 private"
 
+# **INHERITS FROM FOUNDATION ELEMENT:
+linked_wounds: []
+associated_emotions: []
+soothing_resources: []
+healing_resources: []
+healing_pathways: []
+protective_strategies: []
+triggered_by: []
+needs_behind_it: []
+intensity_scale: ""
+mechanism: []
+definition: ""
+
 # INTERNAL VOICE DEFINITION:
 voice_group: ""
 voice_type: ""
 voice_style: []
-associated_emotions: []
-linked_wounds: []
-triggered_by: []
-needs_behind_it: []
-protective_strategies: []
-soothing_resources: []
-healing_resource: []
-intensity_scale:
-voice_mechanism: []
 recurring_phrase: ""
 
+# **REMAINING FIELDS INHERITED FROM GLOBAL:
 notes: 
 related: []
 media: []

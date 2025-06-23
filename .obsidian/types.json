@@ -118,6 +118,7 @@
     "last_modified": "datetime",
     "scenario": "multitext",
     "source_daily_note": "text",
-    "grade": "number"
+    "grade": "number",
+    "excludes": "multitext"
   }
 }

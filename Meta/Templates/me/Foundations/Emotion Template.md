@@ -19,6 +19,17 @@ archived: false
 priority: "⚪ None"
 visibility: "🔒 private"
 
+# **INHERITS FROM FOUNDATION ELEMENT:
+linked_wounds: []
+internal_voices: []
+soothing_resources: []
+protective_strategies: []
+triggered_by: []
+needs_behind_it: []
+intensity_scale: ""
+mechanism: []
+definition: ""
+
 # EMOTION DEFINITION:
 emotion_group: []
 emotion_type: []
@@ -27,18 +38,10 @@ emotion_origins: []
 emotion_effects: []
 emotion_flags: []
 opposite: []
-triggered_by: []
-needs_behind_it: []
-protective_strategies: []
-soothing_resources: []
-linked_wounds: []
-internal_voices: []
 associated_thoughts: []
-emotion_mechanism: []
-intensity_scale:
 emotion_color: ""
-definition: ""
 
+# **REMAINING FIELDS INHERITED FROM GLOBAL:
 notes: 
 related: []
 media: []

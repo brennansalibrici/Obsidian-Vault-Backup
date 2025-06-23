@@ -11,11 +11,6 @@ fields:
         "4": Low Energy Unpleasant
     path: ""
     id: GHUsCk
-  - name: definition
-    type: Input
-    options: {}
-    path: ""
-    id: bw8PiN
   - name: emotion_type
     type: Multi
     options:
@@ -62,54 +57,11 @@ fields:
       valuesListNotePath: Meta/fileClass/me/emotion flags list.md
     path: ""
     id: DV45B7
-  - name: triggered_by
-    type: MultiFile
-    options: {}
-    path: ""
-    id: ZVWleF
-  - name: needs_behind_it
-    type: MultiFile
-    options: {}
-    path: ""
-    id: I87egn
-  - name: protective_strategies
-    type: MultiFile
-    options: {}
-    path: ""
-    id: QZ4Gsh
-  - name: soothing_resources
-    type: MultiFile
-    options: {}
-    path: ""
-    id: 5xaBUu
-  - name: linked_wounds
-    type: MultiFile
-    options: {}
-    path: ""
-    id: 19SYyb
-  - name: internal_voices
-    type: MultiFile
-    options: {}
-    path: ""
-    id: 8EpXwf
   - name: associated_thoughts
     type: MultiFile
     options: {}
     path: ""
     id: 96UaFz
-  - name: intensity_scale
-    type: Cycle
-    options:
-      sourceType: ValuesListNotePath
-      valuesList:
-        "1": Low
-        "2": Mild
-        "3": Moderate
-        "4": High
-        "5": Overwhelming
-      valuesListNotePath: Meta/fileClass/me/foundations/shared lists/intensity scale list.md
-    path: ""
-    id: PgqBpd
   - name: emotion_color
     type: Select
     options:
@@ -118,15 +70,7 @@ fields:
       valuesListNotePath: Meta/fileClass/me/emotion color list.md
     path: ""
     id: fvbTqs
-  - name: emotion_mechanism
-    type: Multi
-    options:
-      sourceType: ValuesListNotePath
-      valuesList: {}
-      valuesListNotePath: Meta/fileClass/me/foundations/shared lists/mechanism list.md
-    path: ""
-    id: f9JhDo
-version: "2.204"
+version: "2.216"
 limit: 20
 mapWithTag: false
 icon: drama
@@ -135,7 +79,7 @@ filesPaths:
   - ME/🏛️ Foundations/🎭 Emotions
 bookmarksGroups: 
 excludes: 
-extends: global/global
+extends: me/foundations/shared/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:
@@ -146,15 +90,6 @@ fieldsOrder:
   - bkN0Ew
   - DV45B7
   - XnPUHF
-  - ZVWleF
-  - I87egn
-  - QZ4Gsh
-  - 5xaBUu
-  - 19SYyb
-  - 8EpXwf
   - 96UaFz
-  - f9JhDo
-  - PgqBpd
   - fvbTqs
-  - bw8PiN
 ---

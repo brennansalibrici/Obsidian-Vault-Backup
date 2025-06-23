@@ -19,18 +19,21 @@ archived: false
 priority: "⚪ None"
 visibility: "🔒 private"
 
+# **INHERITS FROM FOUNDATION ELEMENT:
+linked_wounds: []
+associated_emotions: []
+protective_strategies: []
+intensity_scale:
+mechanism: []
+definition: ""
+
 # TRIGGER DEFINITION:
 trigger_group: ""
 trigger_type: ""
-associated_emotions: []
-linked_wounds: []
-protective_strategies: []
-intensity_scale:
 trigger_origin:
 trigger_flags: []
-trigger_mechanism: []
-definition: ""
 
+# **REMAINING FIELDS INHERITED FROM GLOBAL:
 notes: 
 related: []
 media: []

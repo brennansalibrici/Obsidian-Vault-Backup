@@ -1,6 +1,6 @@
 ---
 # CLASS DEFINITION:
-fileClass: emotional_wound
+fileClass: attachment_style
 
 # **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
@@ -20,23 +20,31 @@ priority: "⚪ None"
 visibility: "🔒 private"
 
 # **INHERITS FROM FOUNDATION ELEMENT:
+linked_wounds: []
 internal_voices: []
 associated_emotions: []
 soothing_resources: []
-healing_resource: []
 healing_pathways: []
+healing_resources: []
 protective_strategies: []
-needs_behind_it: []
 triggered_by: []
-intensity_scale: ""
-mechanism: []
-definition: ""
+needs_behind_it: []
 
-# EMOTIONAL WOUND DEFINITION:
-wound_group: ""
-wound_type: ""
-origin_context: []
-visible_patterns: ""
+# ATTACHMENT STYLE DEFINITION:
+style_group: ""
+style_type: ""
+style_subtype: []
+style_pattern: []
+progression_from: []
+progression_to: []
+core_fears_group: ""
+core_fears: []
+rupture_group: ""
+rupture_types: []
+internal_challenges: ""
+relational_challenges: ""
+partner_attunement: ""
+definition: ""
 
 # **REMAINING FIELDS INHERITED FROM GLOBAL:
 notes: 

@@ -6,22 +6,19 @@ tagNames:
 filesPaths:
   - ME/🏛️ Foundations/⚡ Triggers
 bookmarksGroups: 
-excludes: 
-extends: global/global
+excludes:
+  - healing_resources
+extends: me/foundations/shared/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:
   - gfc6eL
   - tYtvKw
-  - PP9GII
-  - V2ZMMc
   - wqqWLJ
-  - ZOfdQR
   - RXqewc
   - UPD9G3
-  - pcBg7b
   - QqEMEJ
-version: "2.31"
+version: "2.44"
 fields:
   - name: definition
     type: Input
@@ -43,29 +40,11 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/trigger/lists/trigger origin list.md
     path: ""
     id: RXqewc
-  - name: intensity_scale
-    type: Cycle
-    options:
-      sourceType: ValuesListNotePath
-      valuesList: {}
-      valuesListNotePath: Meta/fileClass/me/foundations/shared lists/intensity scale list.md
-    path: ""
-    id: ZOfdQR
   - name: protective_strategies
     type: MultiFile
     options: {}
     path: ""
     id: wqqWLJ
-  - name: linked_wounds
-    type: MultiFile
-    options: {}
-    path: ""
-    id: V2ZMMc
-  - name: associated_emotions
-    type: MultiFile
-    options: {}
-    path: ""
-    id: PP9GII
   - name: trigger_group
     type: Select
     options:
@@ -82,13 +61,5 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/trigger/lists/trigger type list.md
     path: ""
     id: tYtvKw
-  - name: trigger_mechanism
-    type: Multi
-    options:
-      sourceType: ValuesListNotePath
-      valuesList: {}
-      valuesListNotePath: Meta/fileClass/me/foundations/shared lists/mechanism list.md
-    path: ""
-    id: pcBg7b
 ---
 

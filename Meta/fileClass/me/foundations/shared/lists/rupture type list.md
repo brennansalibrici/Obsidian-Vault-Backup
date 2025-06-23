@@ -4,6 +4,7 @@ Emotional Absence
 Underprotection  
 Invalidation  
 Being Forgotten 
+Misattunement  
 Inconsistency  
 Dismissal  
 Criticism  

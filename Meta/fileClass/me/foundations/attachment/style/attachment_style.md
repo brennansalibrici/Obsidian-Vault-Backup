@@ -1,12 +1,13 @@
 ---
 limit: 20
 mapWithTag: false
-icon: package
+icon: link
 tagNames: 
-filesPaths: 
+filesPaths:
+  - ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: me/foundations/shared/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:
@@ -18,21 +19,13 @@ fieldsOrder:
   - d2TLPn
   - 32rM6A
   - vr9ItB
-  - OyCljo
-  - 73iMoK
-  - QR9l4C
-  - cBBQrH
-  - o20RGM
-  - 90bTnc
-  - udl8pD
-  - BlMJUP
-  - deoRF6
   - HFCQqW
   - HMqsrd
   - Pv3u2w
   - nfo0a7
   - BC6IsL
-version: "2.94"
+  - ZBFRlP
+version: "2.133"
 fields:
   - name: partner_attunement
     type: Input
@@ -52,51 +45,6 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/shared lists/rupture type list.md
     path: ""
     id: HMqsrd
-  - name: healing_resources
-    type: MultiFile
-    options: {}
-    path: ""
-    id: deoRF6
-  - name: healing_pathways
-    type: MultiFile
-    options: {}
-    path: ""
-    id: BlMJUP
-  - name: soothing_resources
-    type: MultiFile
-    options: {}
-    path: ""
-    id: udl8pD
-  - name: associated_emotions
-    type: MultiFile
-    options: {}
-    path: ""
-    id: 90bTnc
-  - name: triggered_by
-    type: MultiFile
-    options: {}
-    path: ""
-    id: o20RGM
-  - name: internal_voices
-    type: MultiFile
-    options: {}
-    path: ""
-    id: cBBQrH
-  - name: protective_strategies
-    type: MultiFile
-    options: {}
-    path: ""
-    id: QR9l4C
-  - name: linked_wounds
-    type: MultiFile
-    options: {}
-    path: ""
-    id: 73iMoK
-  - name: needs_behind_it
-    type: MultiFile
-    options: {}
-    path: ""
-    id: OyCljo
   - name: core_fears
     type: Multi
     options:
@@ -172,4 +120,9 @@ fields:
       valuesList: {}
     path: ""
     id: d2TLPn
+  - name: definition
+    type: Input
+    options: {}
+    path: ""
+    id: ZBFRlP
 ---

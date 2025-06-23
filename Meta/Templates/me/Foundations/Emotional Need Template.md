@@ -19,20 +19,23 @@ archived: false
 priority: "⚪ None"
 visibility: "🔒 private"
 
+# **INHERITS FROM FOUNDATION ELEMENT:
+linked_wounds: []
+internal_vocies: []
+associated_emotions: []
+soothing_resources: []
+protective_strategies: []
+fulfillment_strategies: []
+definition: ""
+
 # EMOTIONAL NEED DEFINITION:
-vneed_group: ""
+need_group: ""
 need_type: ""
 developmental_origin: ""
 unmet_effects: ""
 threatened_by: []
-linked_wounds: []
-soothing_resources: []
-protective_strategies: []
-fulfillment_strategies: []
-associated_emotions: []
-internal_vocies: []
-definition: ""
 
+# **REMAINING FIELDS INHERITED FROM GLOBAL:
 notes: 
 related: []
 media: []
