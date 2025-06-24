@@ -1,6 +1,6 @@
 ---
 # CLASS DEFINITION:
-fileClass: trigger
+fileClass: tradeoff
 
 # **INHERITS FROM GLOBAL TEMPLATE:
 # CORE IDENTITY FIELDS:
@@ -22,18 +22,26 @@ visibility: "🔒 private"
 # **INHERITS FROM FOUNDATION ELEMENT:
 linked_wounds: []
 associated_emotions: []
+soothing_resources: []
+healing_resources: []
+healing_pathways: []
 protective_strategies: []
-intensity_scale:
+triggered_by: []
+needs_behind_it: []
+intensity_scale: ""
 mechanism: []
 definition: ""
-
-# TRIGGER DEFINITION:
-trigger_group: ""
-trigger_type: ""
-trigger_origin:
-trigger_flags: []
 behavior_functions: []
-tradeoffs: []
+
+# TRADEOFF DEFINITION:
+tradeoff_group: ""
+tradeoff_type: ""
+applies_to: []
+example_behavior: ""
+dominant_pole_group: ""
+dominant_pole: ""
+conflicted_part: []
+resolved_by: []
 
 # **REMAINING FIELDS INHERITED FROM GLOBAL:
 notes: 

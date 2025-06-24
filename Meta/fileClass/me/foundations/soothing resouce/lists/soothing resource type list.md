@@ -1,0 +1,9 @@
+Sensory
+Relational
+Mental
+Spiritual
+Somatic
+Creative
+Grounding
+Environmental
+Imaginative

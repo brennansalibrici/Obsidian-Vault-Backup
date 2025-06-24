@@ -3119,8 +3119,8 @@
       "version": "1"
     },
     {
-      "title": "Create New Attachment Style",
-      "name": "Create New Attachment Style",
+      "title": "Create New Attachment Theory Style",
+      "name": "Create New Attachment Theory Style",
       "fields": [
         {
           "name": "style_group",
@@ -3475,8 +3475,8 @@
           }
         },
         {
-          "name": "rupture_group",
-          "label": "Rupture Group",
+          "name": "relational_effects_group",
+          "label": "Relational Effect Groups",
           "description": "",
           "isRequired": false,
           "input": {
@@ -3484,175 +3484,294 @@
             "source": "fixed",
             "options": [
               {
-                "value": "Neglect-Based",
-                "label": "Neglect-Based"
+                "value": "Trust & Safety Challenges",
+                "label": "Trust & Safety Challenges"
               },
               {
-                "value": "Misattunement-Based",
-                "label": "Misattunement-Based"
+                "value": "Vulnerability & Expression",
+                "label": "Vulnerability & Expression"
               },
               {
-                "value": "Boundary & Identity",
-                "label": "Boundary & Identity"
+                "value": "Closeness & Distance Dynamics",
+                "label": "Closeness & Distance Dynamics"
               },
               {
-                "value": "Attachment Breaks/Disruptions",
-                "label": "Attachment Breaks/Disruptions"
+                "value": "Communication & Conflict",
+                "label": "Communication & Conflict"
+              },
+              {
+                "value": "Self-Perception in Relationship",
+                "label": "Self-Perception in Relationship"
               }
             ]
           }
         },
         {
-          "name": "rupture_neglect",
-          "label": "Neglect-Based Ruptures",
+          "name": "rtype_trust",
+          "label": "Trust & Safety Effects",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "rupture_group",
+            "dependencyName": "relational_effects_group",
             "type": "isExactly",
-            "value": "Neglect-Based"
+            "value": "Trust & Safety Challenges"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Neglect",
-                "label": "Neglect"
-              },
-              {
-                "value": "Invisibility",
-                "label": "Invisibility"
-              },
-              {
-                "value": "Emotional Absence",
-                "label": "Emotional Absence"
-              },
-              {
-                "value": "Underprotection",
-                "label": "Underprotection"
-              },
-              {
-                "value": "Invalidation",
-                "label": "Invalidation"
-              },
-              {
-                "value": "Being Forgotten",
-                "label": "Being Forgotten"
-              }
-            ]
+            "multi_select_options": [
+              "",
+              "Difficulty Trusting  Others",
+              "Hypervigilance To Emotional Shifts",
+              "Misreading Partner’s Intentions",
+              "Strong Reactions To Perceived Rejection",
+              "Testing Partner’s Loyalty Or Love"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
-          "name": "rupture_misattunement",
-          "label": "Misattunement-Based Ruptures",
+          "name": "rtype_vulnerable",
+          "label": "Vulnerability & Expression",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "rupture_group",
+            "dependencyName": "relational_effects_group",
             "type": "isExactly",
-            "value": "Misattunement-Based"
+            "value": "Vulnerability & Expression"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Misattunement",
-                "label": "Misattunement "
-              },
-              {
-                "value": "Inconsistency",
-                "label": "Inconsistency"
-              },
-              {
-                "value": "Dismissal",
-                "label": "Dismissal"
-              },
-              {
-                "value": "Criticism",
-                "label": "Criticism"
-              },
-              {
-                "value": "Shaming",
-                "label": "Shaming"
-              },
-              {
-                "value": "Withholding",
-                "label": "Withholding"
-              }
-            ]
+            "multi_select_options": [
+              "Difficulty Expressing Needs Directly",
+              "Tendency To Avoid Vulnerability",
+              "Feeling “Too Much” or “Not Enough”",
+              "Avoiding Conflict Through Detachment"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
-          "name": "rupture_bounday",
-          "label": "Boundary & Identity Ruptures",
+          "name": "rtype_closeness",
+          "label": "Closeness & Distance Dynamics",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "rupture_group",
+            "dependencyName": "relational_effects_group",
             "type": "isExactly",
-            "value": "Boundary & Identity"
+            "value": "Closeness & Distance Dynamics"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Enmeshment",
-                "label": "Enmeshment"
-              },
-              {
-                "value": "Overcontrol",
-                "label": "Overcontrol"
-              },
-              {
-                "value": "Reversal of Roles",
-                "label": "Reversal of Roles"
-              },
-              {
-                "value": "Punishment for Authenticity",
-                "label": "Punishment for Authenticity"
-              },
-              {
-                "value": "Conditional Love",
-                "label": "Conditional Love"
-              },
-              {
-                "value": "Overprotection",
-                "label": "Overprotection"
-              }
-            ]
+            "multi_select_options": [
+              " Of Abandonment",
+              "Clinginess Or Emotional Over-Dependence",
+              "Emotional Withdrawal Or Shutdown",
+              "Push-Pull Relational Patterns",
+              "Fear Of Engulfment",
+              "Sabotaging Closeness When It Feels Threatening"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
-          "name": "rupture_attachment",
-          "label": "Attachment Breaks/Disruptions Ruptures",
+          "name": "rtype_communcation",
+          "label": "Communication & Conflict",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "rupture_group",
+            "dependencyName": "relational_effects_group",
             "type": "isExactly",
-            "value": "Attachment Breaks/Disruptions"
+            "value": "Communication & Conflict"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
+            "multi_select_options": [
+              "Inconsistent Signals In Relationships",
+              "Conflict Avoidance",
+              "Compulsive Caretaking",
+              "Rescuing Or Needing To Be Rescued"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "rtype_self",
+          "label": "Self-Perception in Relationship",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "relational_effects_group",
+            "type": "isExactly",
+            "value": "Self-Perception in Relationship"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Difficulty Sustaining Intimacy",
+              "Sabotaging Closeness When It Feels Threatening"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "integration_group",
+          "label": "Integration Group",
+          "description": "",
+          "input": {
+            "type": "select",
+            "allowUnknownValues": false,
+            "hidden": false,
             "options": [
               {
-                "value": "Abandonment",
-                "label": "Abandonment"
+                "value": "Core Skills to Practice",
+                "label": "Core Skills to Practice"
               },
               {
-                "value": "Loss or Separation",
-                "label": "Loss or Separation"
+                "value": "Relational Repair & Connection",
+                "label": "Relational Repair & Connection"
               },
               {
-                "value": "Disruption of Safety",
-                "label": "Disruption of Safety"
+                "value": "Somatic & Emotional Regulation",
+                "label": "Somatic & Emotional Regulation"
+              },
+              {
+                "value": "Cognitive Reframing",
+                "label": "Cognitive Reframing"
+              },
+              {
+                "value": "External Support",
+                "label": "External Support"
               }
-            ]
-          }
+            ],
+            "source": "fixed"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "itype_core",
+          "label": "Core Skills to Practice",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Practice Identifying And Naming Emotional Needs",
+              "Learn To Tolerate Healthy Emotional Discomfort",
+              "Learn To Ask Directly For Reassurance Or Space",
+              "Practice Staying Emotionally Present In Discomfort"
+            ],
+            "source": "fixed"
+          },
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Core Skills to Practice"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "itype_relational",
+          "label": "Relational Repair & Connection",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Build Safety Through Consistent Relationships",
+              "Create Rituals Of Connection And Repair",
+              "Share Fears Vulnerably Instead Of Defensively",
+              "Normalize The Presence Of Conflict In Healthy Love",
+              "Build Trust Slowly Through Repeat Experiences"
+            ],
+            "source": "fixed"
+          },
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Relational Repair & Connection"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "itype_somatic",
+          "label": "Somatic & Emotional Regulation",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Engage In Body-Based Calming Practices",
+              "Use Grounding Tools During Conflict Or Distance",
+              "Practice Self-Soothing Techniques"
+            ],
+            "source": "fixed"
+          },
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Somatic & Emotional Regulation"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "itype_cognitive",
+          "label": "Cognitive Reframing",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Name And Challenge All-Or-Nothing Thinking",
+              "Notice Protective Patterns And Pause Before Acting",
+              "Journal To Explore Emotional Triggers"
+            ],
+            "source": "fixed"
+          },
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Cognitive Reframing"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "itype_external",
+          "label": "External Support",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Explore Therapy To Re-Pattern Early Attachment Wounds"
+            ],
+            "source": "fixed"
+          },
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "External Support"
+          },
+          "isRequired": false
         }
       ],
       "version": "1"
@@ -5187,6 +5306,1935 @@
               }
             ]
           }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Create New Behavior Function",
+      "name": "Create New Behavior Function",
+      "fields": [
+        {
+          "name": "function_group",
+          "label": "Behavior Function Groups",
+          "description": "Broad categories or groups of different types of behavior functions",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Avoidance",
+                "label": "Avoidance"
+              },
+              {
+                "value": "Control",
+                "label": "Control"
+              },
+              {
+                "value": "Emotional Regulation",
+                "label": "Emotional Regulation"
+              },
+              {
+                "value": "Self-Image and Identity",
+                "label": "Self-Image and Identity"
+              },
+              {
+                "value": "Connection Management",
+                "label": "Connection Management"
+              },
+              {
+                "value": "Safety and Protection",
+                "label": "Safety and Protection"
+              },
+              {
+                "value": "Distress Signals",
+                "label": "Distress Signals"
+              },
+              {
+                "value": "Moral or Social",
+                "label": "Moral or Social"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_avoidance",
+          "label": "Avoidance Behavior Functions",
+          "description": "Avoidance behavior function types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "function_group",
+            "type": "isExactly",
+            "value": "Avoidance"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Avoid Rejection",
+                "label": "Avoid Rejection"
+              },
+              {
+                "value": "Prevent Abandonment",
+                "label": "Prevent Abandonment"
+              },
+              {
+                "value": "Avoid Punishment",
+                "label": "Avoid Punishment"
+              },
+              {
+                "value": "Avoid Being Seen",
+                "label": "Avoid Being Seen"
+              },
+              {
+                "value": "Avoid Humiliation",
+                "label": "Avoid Humiliation"
+              },
+              {
+                "value": "Avoid Exposure",
+                "label": "Avoid Exposure"
+              },
+              {
+                "value": "Stay Invisible",
+                "label": "Stay Invisible"
+              },
+              {
+                "value": "Avoid Responsibility",
+                "label": "Avoid Responsibility"
+              },
+              {
+                "value": "Avoid Dependency",
+                "label": "Avoid Dependency"
+              },
+              {
+                "value": "Avoid Loss",
+                "label": "Avoid Loss"
+              },
+              {
+                "value": "Distance From Pain",
+                "label": "Distance From Pain"
+              },
+              {
+                "value": "Avoid Being Overwhelmed",
+                "label": "Avoid Being Overwhelmed"
+              },
+              {
+                "value": "Avoid Conflict",
+                "label": "Avoid Conflict"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_control",
+          "label": "Control Behavior Functions",
+          "description": "Control behavior function types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "function_group",
+            "type": "isExactly",
+            "value": "Control"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Maintain Control",
+                "label": "Maintain Control"
+              },
+              {
+                "value": "Feel Powerful",
+                "label": "Feel Powerful"
+              },
+              {
+                "value": "Reclaim Power",
+                "label": "Reclaim Power"
+              },
+              {
+                "value": "Ensure Fairness",
+                "label": "Ensure Fairness"
+              },
+              {
+                "value": "Create Predictability",
+                "label": "Create Predictability"
+              },
+              {
+                "value": "Feel In Control",
+                "label": "Feel In Control"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_emotional",
+          "label": "Emotional Regulation Behavior Functions",
+          "description": "Emotional regulation behavior function types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "function_group",
+            "type": "isExactly",
+            "value": "Emotional Regulation"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Manage Overwhelming Emotions",
+                "label": "Manage Overwhelming Emotions"
+              },
+              {
+                "value": "Manage Anger",
+                "label": "Manage Anger"
+              },
+              {
+                "value": "Self-Soothe",
+                "label": "Self-Soothe"
+              },
+              {
+                "value": "Discharge Emotion",
+                "label": "Discharge Emotion"
+              },
+              {
+                "value": "Regain Balance",
+                "label": "Regain Balance"
+              },
+              {
+                "value": "Reduce Anxiety",
+                "label": "Reduce Anxiety"
+              },
+              {
+                "value": "Reduce Shame",
+                "label": "Reduce Shame"
+              },
+              {
+                "value": "Reduce Confusion",
+                "label": "Reduce Confusion"
+              },
+              {
+                "value": "Express Inner Truth",
+                "label": "Express Inner Truth"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_self",
+          "label": "Self-Image and Identity Behavior Functions",
+          "description": "Self-image and identity behavior function types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "function_group",
+            "type": "isExactly",
+            "value": "Self-Image and Identity"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Protect Self-Image",
+                "label": "Protect Self-Image"
+              },
+              {
+                "value": "Preserve Identity",
+                "label": "Preserve Identity"
+              },
+              {
+                "value": "Preserve Self-Worth",
+                "label": "Preserve Self-Worth"
+              },
+              {
+                "value": "Reinforce Beliefs",
+                "label": "Reinforce Beliefs"
+              },
+              {
+                "value": "Maintain Self-Worth",
+                "label": "Maintain Self-Worth"
+              },
+              {
+                "value": "Preserve Dignity",
+                "label": "Preserve Dignity"
+              },
+              {
+                "value": "Preserve Autonomy",
+                "label": "Preserve Autonomy"
+              },
+              {
+                "value": "Preserve Family System",
+                "label": "Preserve Family System"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_connection",
+          "label": "Connection Management Behavior Functions",
+          "description": "Connection management behavior function types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "function_group",
+            "type": "isExactly",
+            "value": "Connection Management"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Gain Approval",
+                "label": "Gain Approval"
+              },
+              {
+                "value": "Keep Peace",
+                "label": "Keep Peace"
+              },
+              {
+                "value": "Maintain Connection",
+                "label": "Maintain Connection"
+              },
+              {
+                "value": "Test Loyalty",
+                "label": "Test Loyalty"
+              },
+              {
+                "value": "Maintain Role",
+                "label": "Maintain Role"
+              },
+              {
+                "value": "Secure Love",
+                "label": "Secure Love"
+              },
+              {
+                "value": "Stay Needed",
+                "label": "Stay Needed"
+              },
+              {
+                "value": "Stay In Favor",
+                "label": "Stay In Favor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_safety",
+          "label": "Safety and Protection Behavior Functions",
+          "description": "Safety and protection behavior function types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "function_group",
+            "type": "isExactly",
+            "value": "Safety and Protection"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Buy Time",
+                "label": "Buy Time"
+              },
+              {
+                "value": "Stay Consistent",
+                "label": "Stay Consistent"
+              },
+              {
+                "value": "Restore Order",
+                "label": "Restore Order"
+              },
+              {
+                "value": "Compensate For Neglect",
+                "label": "Compensate For Neglect"
+              },
+              {
+                "value": "Meet Expectations",
+                "label": "Meet Expectations"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_distress",
+          "label": "Distress Signals Behavior Functions",
+          "description": "Distress signals behavior function types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "function_group",
+            "type": "isExactly",
+            "value": "Distress Signals"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Signal Distress",
+                "label": "Signal Distress"
+              },
+              {
+                "value": "Minimize Threat",
+                "label": "Minimize Threat"
+              },
+              {
+                "value": "Maintain Safety",
+                "label": "Maintain Safety"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_moral",
+          "label": "Moral or Social Behavior Functions",
+          "description": "Moral or social behavior function types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "function_group",
+            "type": "isExactly",
+            "value": "Moral or Social"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Fulfill Moral Obligation",
+                "label": "Fulfill Moral Obligation"
+              },
+              {
+                "value": "Protect Others",
+                "label": "Protect Others"
+              },
+              {
+                "value": "Ensure Fairness",
+                "label": "Ensure Fairness"
+              }
+            ]
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Create New Trade-Off",
+      "name": "Create New Trade-Off",
+      "fields": [
+        {
+          "name": "tradeoff_group",
+          "label": "Trade-Off Groups",
+          "description": "Broad categories or groups of different types of tradeoffs",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Connection vs. Autonomy",
+                "label": "Connection vs. Autonomy"
+              },
+              {
+                "value": "Safety vs. Authenticity",
+                "label": "Safety vs. Authenticity"
+              },
+              {
+                "value": "Control vs. Vulnerability",
+                "label": "Control vs. Vulnerability"
+              },
+              {
+                "value": "Short-Term Relief vs. Long-Term Growth",
+                "label": "Short-Term Relief vs. Long-Term Growth"
+              },
+              {
+                "value": "Self-Image vs. Emotional Honesty",
+                "label": "Self-Image vs. Emotional Honesty"
+              },
+              {
+                "value": "Avoidance vs. Engagement",
+                "label": "Avoidance vs. Engagement"
+              },
+              {
+                "value": "Familiarity vs. Change",
+                "label": "Familiarity vs. Change"
+              },
+              {
+                "value": "Power vs. Intimacy",
+                "label": "Power vs. Intimacy"
+              },
+              {
+                "value": "Belonging vs. Integrity",
+                "label": "Belonging vs. Integrity"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_connection",
+          "label": "Connection vs. Autonomy Trade-Offs",
+          "description": "Connection vs. autonomy trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Connection vs. Autonomy"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Closeness vs. Independence",
+                "label": "Closeness vs. Independence"
+              },
+              {
+                "value": "Distance vs. Closeness",
+                "label": "Distance vs. Closeness"
+              },
+              {
+                "value": "Trust vs. Control",
+                "label": "Trust vs. Control"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_safety",
+          "label": "Safety vs. Authenticity Trade-Offs",
+          "description": "Safety vs. authenticity trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Safety vs. Authenticity"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Honesty vs. Acceptance",
+                "label": "Honesty vs. Acceptance"
+              },
+              {
+                "value": "Compliance vs. Authenticity",
+                "label": "Compliance vs. Authenticity"
+              },
+              {
+                "value": "Conflict Avoidance vs. Emotional Honesty",
+                "label": "Conflict Avoidance vs. Emotional Honesty"
+              },
+              {
+                "value": "Keeping Peace vs. Naming Needs",
+                "label": "Keeping Peace vs. Naming Needs"
+              },
+              {
+                "value": "Guardedness vs. Openness",
+                "label": "Guardedness vs. Openness"
+              },
+              {
+                "value": "Stability vs. Authenticity",
+                "label": "Stability vs. Authenticity"
+              },
+              {
+                "value": "Fitting In vs. Being Real",
+                "label": "Fitting In vs. Being Real"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_control",
+          "label": "Control vs. Vulnerability Trade-Offs",
+          "description": "Control vs. vulnerability trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Control vs. Vulnerability"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Being Known vs. Being in Control",
+                "label": "Being Known vs. Being in Control"
+              },
+              {
+                "value": "Self-Protection vs. Vulnerability",
+                "label": "Self-Protection vs. Vulnerability"
+              },
+              {
+                "value": "Avoiding Discomfort vs. Resolving the Real Issue",
+                "label": "Avoiding Discomfort vs. Resolving the Real Issue"
+              },
+              {
+                "value": "Not Rocking the Boat vs. Being Fully Alive",
+                "label": "Not Rocking the Boat vs. Being Fully Alive"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_shortterm",
+          "label": "Short-Term Relief vs. Long-Term Growth Trade-Offs",
+          "description": "Short-term relief vs. long-term growth trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Short-Term Relief vs. Long-Term Growth"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Comfort vs. Growth",
+                "label": "Comfort vs. Growth"
+              },
+              {
+                "value": "Short-Term Safety vs. Long-Term Connection",
+                "label": "Short-Term Safety vs. Long-Term Connection"
+              },
+              {
+                "value": "Staying Numb vs. Staying Present",
+                "label": "Staying Numb vs. Staying Present"
+              },
+              {
+                "value": "Security vs. Growth",
+                "label": "Security vs. Growth"
+              },
+              {
+                "value": "Old Safety vs. New Possibility",
+                "label": "Old Safety vs. New Possibility"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_self",
+          "label": "Self-Image vs. Emotional Honesty Trade-Offs",
+          "description": "Self-image vs. emotional honesty trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Self-Image vs. Emotional Honesty"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Truth vs. Protection",
+                "label": "Truth vs. Protection"
+              },
+              {
+                "value": "Validation vs. Truth-Telling",
+                "label": "Validation vs. Truth-Telling"
+              },
+              {
+                "value": "Approval vs. Truth",
+                "label": "Approval vs. Truth"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_avoidance",
+          "label": "Avoidance vs. Engagement Trade-Offs",
+          "description": "Avoidance vs. engagement trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Avoidance vs. Engagement"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Avoiding Pain vs. Doing What’s Needed",
+                "label": "Avoiding Pain vs. Doing What’s Needed"
+              },
+              {
+                "value": "Avoiding Discomfort vs. Resolving the Real Issue",
+                "label": "Avoiding Discomfort vs. Resolving the Real Issue"
+              },
+              {
+                "value": "Not Rocking the Boat vs. Being Fully Alive",
+                "label": "Not Rocking the Boat vs. Being Fully Alive"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_familiarity",
+          "label": "Familiarity vs. Change Trade-Offs",
+          "description": "Familiarity vs. change trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Familiarity vs. Change"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Predictability vs. Healing",
+                "label": "Predictability vs. Healing"
+              },
+              {
+                "value": "Reinforcing Old Roles vs. Becoming Whole",
+                "label": "Reinforcing Old Roles vs. Becoming Whole"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_power",
+          "label": "Power vs. Intimacy Trade-Offs",
+          "description": "Power vs. intimacy trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Power vs. Intimacy"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Power vs. Intimacy",
+                "label": "Power vs. Intimacy"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_belonging",
+          "label": "Belonging vs. Integrity Trade-Offs",
+          "description": "Belonging vs. integrity trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Belonging vs. Integrity"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Pleasing Others vs. Staying True to Self",
+                "label": "Pleasing Others vs. Staying True to Self"
+              },
+              {
+                "value": "Survival vs. Self-Actualization",
+                "label": "Survival vs. Self-Actualization"
+              }
+            ]
+          }
+        },
+        {
+          "name": "pole_group",
+          "label": "Dominant Pole Group",
+          "description": "Broad categories or groups of unique types of mental poles",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Safety & Protection",
+                "label": "Safety & Protection"
+              },
+              {
+                "value": "Connection & Belonging",
+                "label": "Connection & Belonging"
+              },
+              {
+                "value": "Truth & Authenticity",
+                "label": "Truth & Authenticity"
+              },
+              {
+                "value": "Regulation & Avoidance",
+                "label": "Regulation & Avoidance"
+              },
+              {
+                "value": "Identity & Role Maintenance",
+                "label": "Identity & Role Maintenance"
+              },
+              {
+                "value": "Growth & Change",
+                "label": "Growth & Change"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_safety",
+          "label": "Safety & Protection",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Safety & Protection"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Safety",
+                "label": "Safety"
+              },
+              {
+                "value": "Security",
+                "label": "Security"
+              },
+              {
+                "value": "Protection",
+                "label": "Protection"
+              },
+              {
+                "value": "Self-Protection",
+                "label": "Self-Protection"
+              },
+              {
+                "value": "Short-Term Safety",
+                "label": "Short-Term Safety"
+              },
+              {
+                "value": "Old Safety",
+                "label": "Old Safety"
+              },
+              {
+                "value": "Guardedness",
+                "label": "Guardedness"
+              },
+              {
+                "value": "Familiarity",
+                "label": "Familiarity"
+              },
+              {
+                "value": "Predictability",
+                "label": "Predictability"
+              },
+              {
+                "value": "Stability",
+                "label": "Stability"
+              },
+              {
+                "value": "Survival",
+                "label": "Survival"
+              },
+              {
+                "value": "Comfort",
+                "label": "Comfort"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_connection",
+          "label": "Connection & Belonging",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Connection & Belonging"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Closeness",
+                "label": "Closeness"
+              },
+              {
+                "value": "Intimacy",
+                "label": "Intimacy"
+              },
+              {
+                "value": "Emotional Intimacy",
+                "label": "Emotional Intimacy"
+              },
+              {
+                "value": "Being Seen",
+                "label": "Being Seen"
+              },
+              {
+                "value": "Being Real",
+                "label": "Being Real"
+              },
+              {
+                "value": "Being in Control (as a means to secure closeness)",
+                "label": "Being in Control (as a means to secure closeness)"
+              },
+              {
+                "value": "Fitting In",
+                "label": "Fitting In"
+              },
+              {
+                "value": "Validation",
+                "label": "Validation"
+              },
+              {
+                "value": "Acceptance",
+                "label": "Acceptance"
+              },
+              {
+                "value": "Approval",
+                "label": "Approval"
+              },
+              {
+                "value": "Power (when used to keep connection on one’s terms)",
+                "label": "Power (when used to keep connection on one’s terms)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_truth",
+          "label": "Truth & Authenticity",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Truth & Authenticity"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Honesty",
+                "label": "Honesty"
+              },
+              {
+                "value": "Truth",
+                "label": "Truth"
+              },
+              {
+                "value": "Authenticity",
+                "label": "Authenticity"
+              },
+              {
+                "value": "Naming Needs",
+                "label": "Naming Needs"
+              },
+              {
+                "value": "Emotional Honesty",
+                "label": "Emotional Honesty"
+              },
+              {
+                "value": "Staying True to Self",
+                "label": "Staying True to Self"
+              },
+              {
+                "value": "Being Real",
+                "label": "Being Real"
+              },
+              {
+                "value": "Openness",
+                "label": "Openness"
+              },
+              {
+                "value": "Vulnerability",
+                "label": "Vulnerability"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_regulation",
+          "label": "Regulation & Avoidance",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Regulation & Avoidance"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Staying Numb",
+                "label": "Staying Numb"
+              },
+              {
+                "value": "Staying Present",
+                "label": "Staying Present"
+              },
+              {
+                "value": "Short-Term Relief",
+                "label": "Short-Term Relief"
+              },
+              {
+                "value": "Not Rocking the Boat",
+                "label": "Not Rocking the Boat"
+              },
+              {
+                "value": "Keeping Peace",
+                "label": "Keeping Peace"
+              },
+              {
+                "value": "Conflict Avoidance",
+                "label": "Conflict Avoidance"
+              },
+              {
+                "value": "Distance",
+                "label": "Distance"
+              },
+              {
+                "value": "Reassurance",
+                "label": "Reassurance"
+              },
+              {
+                "value": "Distraction",
+                "label": "Distraction"
+              },
+              {
+                "value": "Avoidance (generalized)",
+                "label": "Avoidance (generalized)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_identity",
+          "label": "Identity & Role Maintenance",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Identity & Role Maintenance"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Reinforcing Old Roles",
+                "label": "Reinforcing Old Roles"
+              },
+              {
+                "value": "Compliance",
+                "label": "Compliance"
+              },
+              {
+                "value": "Control",
+                "label": "Control"
+              },
+              {
+                "value": "Being in Control",
+                "label": "Being in Control"
+              },
+              {
+                "value": "Power",
+                "label": "Power"
+              },
+              {
+                "value": "Self-Image",
+                "label": "Self-Image"
+              },
+              {
+                "value": "Validation",
+                "label": "Validation"
+              },
+              {
+                "value": "Familiarity (again, in identity terms)",
+                "label": "Familiarity (again, in identity terms)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_grouth",
+          "label": "Growth & Change",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Growth & Change"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Growth",
+                "label": "Growth"
+              },
+              {
+                "value": "Healing",
+                "label": "Healing"
+              },
+              {
+                "value": "Long-Term Connection",
+                "label": "Long-Term Connection"
+              },
+              {
+                "value": "Resolution",
+                "label": "Resolution"
+              },
+              {
+                "value": "Change",
+                "label": "Change"
+              },
+              {
+                "value": "Becoming Whole",
+                "label": "Becoming Whole"
+              },
+              {
+                "value": "Self-Actualization",
+                "label": "Self-Actualization"
+              }
+            ]
+          }
+        },
+        {
+          "name": "applies_to",
+          "label": "Applies To",
+          "description": "Which foundation-type element is this tradeoff most relevant to",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Protective Strategy",
+                "label": "Protective Strategy"
+              },
+              {
+                "value": "Behavior Function",
+                "label": "Behavior Function"
+              },
+              {
+                "value": "Emotional Need",
+                "label": "Emotional Need"
+              },
+              {
+                "value": "Core Wound",
+                "label": "Core Wound"
+              },
+              {
+                "value": "Internal Message",
+                "label": "Internal Message"
+              },
+              {
+                "value": "Coping Style",
+                "label": "Coping Style"
+              },
+              {
+                "value": "Attachment Strategy",
+                "label": "Attachment Strategy"
+              },
+              {
+                "value": "Self-Belief",
+                "label": "Self-Belief"
+              },
+              {
+                "value": "Emotion",
+                "label": "Emotion"
+              },
+              {
+                "value": "Relational Pattern",
+                "label": "Relational Pattern"
+              }
+            ]
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Create New Soothing Resource",
+      "name": "Create New Soothing Resource",
+      "fields": [
+        {
+          "name": "resource_type",
+          "label": "Soothing Resource Type",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Sensory",
+                "label": "Sensory"
+              },
+              {
+                "value": "Relational",
+                "label": "Relational"
+              },
+              {
+                "value": "Mental",
+                "label": "Mental"
+              },
+              {
+                "value": "Spiritual",
+                "label": "Spiritual"
+              },
+              {
+                "value": "Somatic",
+                "label": "Somatic"
+              },
+              {
+                "value": "Creative",
+                "label": "Creative"
+              },
+              {
+                "value": "Grounding",
+                "label": "Grounding"
+              },
+              {
+                "value": "Environmental",
+                "label": "Environmental"
+              },
+              {
+                "value": "Imaginative",
+                "label": "Imaginative"
+              }
+            ]
+          }
+        },
+        {
+          "name": "access_mode",
+          "label": "Access Mode",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Internal",
+              "External"
+            ],
+            "allowUnknownValues": false
+          }
+        },
+        {
+          "name": "regulation_zone",
+          "label": "Regulation Zone",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Mild Dysregulation",
+                "label": "Mild Dysregulation"
+              },
+              {
+                "value": "Moderate Distress",
+                "label": "Moderate Distress"
+              },
+              {
+                "value": "Severe/Shutdown",
+                "label": "Severe/Shutdown"
+              },
+              {
+                "value": "General Use",
+                "label": "General Use"
+              }
+            ]
+          }
+        },
+        {
+          "name": "soothing_effects",
+          "label": "Soothing Effects",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Calms Nervous System",
+              "Grounds In The Present",
+              "Regulates Emotion",
+              "Reduces Shame",
+              "Rebuilds Safety",
+              "Reconnects To Self",
+              "Restores Hope"
+            ],
+            "allowUnknownValues": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Create New Attachment Theory Style",
+      "name": "Create New Attachment Theory Style",
+      "fields": [
+        {
+          "name": "style_group",
+          "label": "Style Group - LEAVE THIS OFF THE FORM. SET IT WITH TEMPLATE CONTROLLER",
+          "description": "The overall categories or groups of the different types of attachment styles",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Secure",
+                "label": "Secure"
+              },
+              {
+                "value": "Insecure",
+                "label": "Insecure"
+              },
+              {
+                "value": "Disorganized",
+                "label": "Disorganized"
+              }
+            ]
+          }
+        },
+        {
+          "name": "style_type",
+          "label": "Attachment Style Type",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Secure",
+                "label": "Secure"
+              },
+              {
+                "value": "Anxious Preoccupied",
+                "label": "Anxious Preoccupied"
+              },
+              {
+                "value": "Dismissive Avoidant",
+                "label": "Dismissive Avoidant"
+              },
+              {
+                "value": "Fearful Avoidant",
+                "label": "Fearful Avoidant"
+              },
+              {
+                "value": "Disorganized Reactive",
+                "label": "Disorganized Reactive"
+              },
+              {
+                "value": "Disorganized Unresolved",
+                "label": "Disorganized Unresolved"
+              },
+              {
+                "value": "Anxious-Avoidant Mixed",
+                "label": "Anxious-Avoidant Mixed"
+              },
+              {
+                "value": "Earned Secure",
+                "label": "Earned Secure"
+              }
+            ]
+          }
+        },
+        {
+          "name": "style_subtype",
+          "label": "Attachment Style Subtype",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Anxious with Avoidant Traits",
+                "label": "Anxious with Avoidant Traits"
+              },
+              {
+                "value": "Avoidant with Anxious Traits",
+                "label": "Avoidant with Anxious Traits"
+              },
+              {
+                "value": "Earned Secure from Anxious",
+                "label": "Earned Secure from Anxious"
+              },
+              {
+                "value": "Earned Secure from Avoidant",
+                "label": "Earned Secure from Avoidant"
+              },
+              {
+                "value": "Earned Secure from Disorganized",
+                "label": "Earned Secure from Disorganized"
+              },
+              {
+                "value": "Earned Secure – Mixed Origin",
+                "label": "Earned Secure – Mixed Origin"
+              },
+              {
+                "value": "Disorganized Reactive",
+                "label": "Disorganized Reactive"
+              },
+              {
+                "value": "Disorganized Withdrawn",
+                "label": "Disorganized Withdrawn"
+              },
+              {
+                "value": "Anxious Reactive",
+                "label": "Anxious Reactive"
+              },
+              {
+                "value": "Avoidant Dismissive",
+                "label": "Avoidant Dismissive"
+              },
+              {
+                "value": "Avoidant Shutdown",
+                "label": "Avoidant Shutdown"
+              },
+              {
+                "value": "Secure with Anxious Sensitivities",
+                "label": "Secure with Anxious Sensitivities"
+              },
+              {
+                "value": "Secure with Avoidant Boundaries",
+                "label": "Secure with Avoidant Boundaries"
+              },
+              {
+                "value": "Secure with Disorganized Echoes",
+                "label": "Secure with Disorganized Echoes"
+              },
+              {
+                "value": "Fearful Avoidant Split",
+                "label": "Fearful Avoidant Split"
+              }
+            ]
+          }
+        },
+        {
+          "name": "style_pattern",
+          "label": "Attachment Style Pattern",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Blended",
+                "label": "Blended"
+              },
+              {
+                "value": "Protective Variant",
+                "label": "Protective Variant"
+              },
+              {
+                "value": "Earned Secure",
+                "label": "Earned Secure"
+              },
+              {
+                "value": "Secure-Plus",
+                "label": "Secure-Plus"
+              }
+            ]
+          }
+        },
+        {
+          "name": "core_fears_group",
+          "label": "Core Fears Group",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Relational",
+                "label": "Relational"
+              },
+              {
+                "value": "Identity & Worth",
+                "label": "Identity & Worth"
+              },
+              {
+                "value": "Vulnerability & Exposure",
+                "label": "Vulnerability & Exposure"
+              },
+              {
+                "value": "Autonomy & Control",
+                "label": "Autonomy & Control"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fear_relational",
+          "label": "Relational Core Fears",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "core_fears_group",
+            "type": "isExactly",
+            "value": "Relational"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Abandonment",
+                "label": "Abandonment"
+              },
+              {
+                "value": "Rejection",
+                "label": "Rejection"
+              },
+              {
+                "value": "Disconnection",
+                "label": "Disconnection"
+              },
+              {
+                "value": "Being Forgotten",
+                "label": "Being Forgotten"
+              },
+              {
+                "value": "Being Replaced",
+                "label": "Being Replaced"
+              },
+              {
+                "value": "Being Needed",
+                "label": "Being Needed"
+              },
+              {
+                "value": "Conflict",
+                "label": "Conflict"
+              },
+              {
+                "value": "Punishment",
+                "label": "Punishment"
+              },
+              {
+                "value": "Being Unlovable",
+                "label": "Being Unlovable"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fear_identity",
+          "label": "Identity & Worth Core Feas",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "core_fears_group",
+            "type": "isExactly",
+            "value": "Identity & Worth"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Unworthiness",
+                "label": "Unworthiness"
+              },
+              {
+                "value": "Being Not Enough",
+                "label": "Being Not Enough"
+              },
+              {
+                "value": "Being Too Much",
+                "label": "Being Too Much"
+              },
+              {
+                "value": "Failure",
+                "label": "Failure"
+              },
+              {
+                "value": "Letting Someone Down",
+                "label": "Letting Someone Down"
+              },
+              {
+                "value": "Being a Burden",
+                "label": "Being a Burden"
+              },
+              {
+                "value": "Judgment",
+                "label": "Judgment"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fear_vulnerable",
+          "label": "Vulnerability & Exposure Fears",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "core_fears_group",
+            "type": "isExactly",
+            "value": "Vulnerability & Exposure"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Exposure",
+                "label": "Exposure"
+              },
+              {
+                "value": "Being Seen",
+                "label": "Being Seen"
+              },
+              {
+                "value": "Being Vulnerable",
+                "label": "Being Vulnerable"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fear_autonomy",
+          "label": "Autonomy & Control Fears",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "core_fears_group",
+            "type": "isExactly",
+            "value": "Autonomy & Control"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Engulfment",
+                "label": "Engulfment"
+              },
+              {
+                "value": "Being Trapped",
+                "label": "Being Trapped"
+              },
+              {
+                "value": "Losing Control",
+                "label": "Losing Control"
+              }
+            ]
+          }
+        },
+        {
+          "name": "relational_effects_group",
+          "label": "Relational Effect Groups",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Trust & Safety Challenges",
+                "label": "Trust & Safety Challenges"
+              },
+              {
+                "value": "Vulnerability & Expression",
+                "label": "Vulnerability & Expression"
+              },
+              {
+                "value": "Closeness & Distance Dynamics",
+                "label": "Closeness & Distance Dynamics"
+              },
+              {
+                "value": "Communication & Conflict",
+                "label": "Communication & Conflict"
+              },
+              {
+                "value": "Self-Perception in Relationship",
+                "label": "Self-Perception in Relationship"
+              }
+            ]
+          }
+        },
+        {
+          "name": "rtype_trust",
+          "label": "Trust & Safety Effects",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "relational_effects_group",
+            "type": "isExactly",
+            "value": "Trust & Safety Challenges"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "",
+              "Difficulty Trusting  Others",
+              "Hypervigilance To Emotional Shifts",
+              "Misreading Partner’s Intentions",
+              "Strong Reactions To Perceived Rejection",
+              "Testing Partner’s Loyalty Or Love"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "rtype_vulnerable",
+          "label": "Vulnerability & Expression",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "relational_effects_group",
+            "type": "isExactly",
+            "value": "Vulnerability & Expression"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Difficulty Expressing Needs Directly",
+              "Tendency To Avoid Vulnerability",
+              "Feeling “Too Much” or “Not Enough”",
+              "Avoiding Conflict Through Detachment"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "rtype_closeness",
+          "label": "Closeness & Distance Dynamics",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "relational_effects_group",
+            "type": "isExactly",
+            "value": "Closeness & Distance Dynamics"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              " Of Abandonment",
+              "Clinginess Or Emotional Over-Dependence",
+              "Emotional Withdrawal Or Shutdown",
+              "Push-Pull Relational Patterns",
+              "Fear Of Engulfment",
+              "Sabotaging Closeness When It Feels Threatening"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "rtype_communcation",
+          "label": "Communication & Conflict",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "relational_effects_group",
+            "type": "isExactly",
+            "value": "Communication & Conflict"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Inconsistent Signals In Relationships",
+              "Conflict Avoidance",
+              "Compulsive Caretaking",
+              "Rescuing Or Needing To Be Rescued"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "rtype_self",
+          "label": "Self-Perception in Relationship",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "relational_effects_group",
+            "type": "isExactly",
+            "value": "Self-Perception in Relationship"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Difficulty Sustaining Intimacy",
+              "Sabotaging Closeness When It Feels Threatening"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "integration_group",
+          "label": "Integration Group",
+          "description": "",
+          "input": {
+            "type": "select",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "options": [
+              {
+                "value": "Core Skills to Practice",
+                "label": "Core Skills to Practice"
+              },
+              {
+                "value": "Relational Repair & Connection",
+                "label": "Relational Repair & Connection"
+              },
+              {
+                "value": "Somatic & Emotional Regulation",
+                "label": "Somatic & Emotional Regulation"
+              },
+              {
+                "value": "Cognitive Reframing",
+                "label": "Cognitive Reframing"
+              },
+              {
+                "value": "External Support",
+                "label": "External Support"
+              }
+            ],
+            "source": "fixed"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "itype_core",
+          "label": "Core Skills to Practice",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Practice Identifying And Naming Emotional Needs",
+              "Learn To Tolerate Healthy Emotional Discomfort",
+              "Learn To Ask Directly For Reassurance Or Space",
+              "Practice Staying Emotionally Present In Discomfort"
+            ],
+            "source": "fixed"
+          },
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Core Skills to Practice"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "itype_relational",
+          "label": "Relational Repair & Connection",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Build Safety Through Consistent Relationships",
+              "Create Rituals Of Connection And Repair",
+              "Share Fears Vulnerably Instead Of Defensively",
+              "Normalize The Presence Of Conflict In Healthy Love",
+              "Build Trust Slowly Through Repeat Experiences"
+            ],
+            "source": "fixed"
+          },
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Relational Repair & Connection"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "itype_somatic",
+          "label": "Somatic & Emotional Regulation",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Engage In Body-Based Calming Practices",
+              "Use Grounding Tools During Conflict Or Distance",
+              "Practice Self-Soothing Techniques"
+            ],
+            "source": "fixed"
+          },
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Somatic & Emotional Regulation"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "itype_cognitive",
+          "label": "Cognitive Reframing",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Name And Challenge All-Or-Nothing Thinking",
+              "Notice Protective Patterns And Pause Before Acting",
+              "Journal To Explore Emotional Triggers"
+            ],
+            "source": "fixed"
+          },
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Cognitive Reframing"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "itype_external",
+          "label": "External Support",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Explore Therapy To Re-Pattern Early Attachment Wounds"
+            ],
+            "source": "fixed"
+          },
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "External Support"
+          },
+          "isRequired": false
         }
       ],
       "version": "1"

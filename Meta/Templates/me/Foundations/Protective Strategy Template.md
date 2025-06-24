@@ -31,6 +31,8 @@ needs_behind_it: []
 intensity_scale: ""
 mecahanism: []
 definition: ""
+behavior_functions: []
+tradeoffs: []
 
 # PROTECTIVE STRATEGY DEFINITION:
 strategy_group: ""

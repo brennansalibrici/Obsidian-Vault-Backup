@@ -31,6 +31,8 @@ needs_behind_it: []
 intensity_scale: ""
 mechanism: []
 definition: ""
+behavior_functions: []
+tradeoffs: []
 
 # INTERNAL VOICE DEFINITION:
 voice_group: ""

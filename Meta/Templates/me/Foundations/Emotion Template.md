@@ -29,6 +29,8 @@ needs_behind_it: []
 intensity_scale: ""
 mechanism: []
 definition: ""
+behavior_functions: []
+tradeoffs: []
 
 # EMOTION DEFINITION:
 emotion_group: []

@@ -29,6 +29,8 @@ healing_resources: []
 protective_strategies: []
 triggered_by: []
 needs_behind_it: []
+behavior_functions: []
+tradeoffs: []
 
 # ATTACHMENT STYLE DEFINITION:
 style_group: ""

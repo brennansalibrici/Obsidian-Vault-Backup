@@ -71,7 +71,17 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/shared/lists/mechanism list.md
     path: ""
     id: JURyC0
-version: "2.44"
+  - name: behavior_functions
+    type: MultiFile
+    options: {}
+    path: ""
+    id: Xw9AyV
+  - name: tradeoffs
+    type: MultiFile
+    options: {}
+    path: ""
+    id: MKMeud
+version: "2.47"
 limit: 20
 mapWithTag: false
 icon: landmark
@@ -83,6 +93,8 @@ extends:
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - MKMeud
+  - Xw9AyV
   - 9xtS9G
   - IrJGSE
   - mSN1nl

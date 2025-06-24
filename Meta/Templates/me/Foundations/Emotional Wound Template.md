@@ -31,6 +31,8 @@ triggered_by: []
 intensity_scale: ""
 mechanism: []
 definition: ""
+behavior_functions: []
+tradeoffs: []
 
 # EMOTIONAL WOUND DEFINITION:
 wound_group: ""

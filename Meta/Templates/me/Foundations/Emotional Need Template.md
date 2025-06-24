@@ -27,6 +27,8 @@ soothing_resources: []
 protective_strategies: []
 fulfillment_strategies: []
 definition: ""
+behavior_functions: []
+tradeoffs: []
 
 # EMOTIONAL NEED DEFINITION:
 need_group: ""
