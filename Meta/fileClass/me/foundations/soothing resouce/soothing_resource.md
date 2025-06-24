@@ -7,7 +7,7 @@ filesPaths:
   - ME/🏛️ Foundations/🪷 Soothing Resources
 bookmarksGroups: 
 excludes: 
-extends: me/foundations/shared/foundation_element
+extends: me/foundations/foundation element/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:
@@ -15,7 +15,7 @@ fieldsOrder:
   - 4FXzVD
   - inGwd5
   - Gisvor
-version: "2.9"
+version: "2.10"
 fields:
   - name: soothing_effects
     type: Multi

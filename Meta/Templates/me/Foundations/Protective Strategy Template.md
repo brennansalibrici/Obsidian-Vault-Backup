@@ -21,7 +21,7 @@ visibility: "🔒 private"
 
 # **INHERITS FROM FOUNDATION ELEMENT:
 linked_wounds: []
-internal_vocies: []
+internal_voices: []
 associated_emotions: []
 soothing_resources: []
 healing_resources: []
@@ -29,7 +29,7 @@ healing_pathways: []
 triggered_by: []
 needs_behind_it: []
 intensity_scale: ""
-mecahanism: []
+mechanism: []
 definition: ""
 behavior_functions: []
 tradeoffs: []

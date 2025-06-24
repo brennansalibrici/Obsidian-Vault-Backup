@@ -23,14 +23,14 @@ visibility: "🔒 private"
 linked_wounds: []
 associated_emotions: []
 protective_strategies: []
-intensity_scale:
+intensity_scale: ""
 mechanism: []
 definition: ""
 
 # TRIGGER DEFINITION:
 trigger_group: ""
 trigger_type: ""
-trigger_origin:
+trigger_origin: []
 trigger_flags: []
 behavior_functions: []
 tradeoffs: []

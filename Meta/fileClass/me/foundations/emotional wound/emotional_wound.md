@@ -7,7 +7,7 @@ filesPaths:
   - ME/🏛️ Foundations/🌀 Emotional Wounds
 bookmarksGroups: 
 excludes: 
-extends: me/foundations/shared/foundation_element
+extends: me/foundations/foundation element/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:
@@ -15,7 +15,7 @@ fieldsOrder:
   - KqvcwX
   - DJM75v
   - xI5biW
-version: "2.53"
+version: "2.55"
 fields:
   - name: visible_patterns
     type: Input

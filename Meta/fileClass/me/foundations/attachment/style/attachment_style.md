@@ -7,7 +7,7 @@ filesPaths:
   - ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles
 bookmarksGroups: 
 excludes: 
-extends: me/foundations/shared/foundation_element
+extends: me/foundations/foundation element/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:
@@ -25,7 +25,7 @@ fieldsOrder:
   - nfo0a7
   - BC6IsL
   - ZBFRlP
-version: "2.133"
+version: "2.134"
 fields:
   - name: partner_attunement
     type: Input

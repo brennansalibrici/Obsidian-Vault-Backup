@@ -7,7 +7,7 @@ filesPaths:
   - ME/🏛️ Foundations/📢 Internal Voices
 bookmarksGroups: 
 excludes: 
-extends: me/foundations/shared/foundation_element
+extends: me/foundations/foundation element/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:
@@ -16,7 +16,7 @@ fieldsOrder:
   - XGXxIL
   - Znbo6t
   - lLld7q
-version: "2.75"
+version: "2.77"
 fields:
   - name: recurring_phrase
     type: Input

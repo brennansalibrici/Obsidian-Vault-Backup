@@ -21,7 +21,7 @@ visibility: "🔒 private"
 
 # **INHERITS FROM FOUNDATION ELEMENT:
 linked_wounds: []
-internal_vocies: []
+internal_voices: []
 associated_emotions: []
 soothing_resources: []
 protective_strategies: []
@@ -43,7 +43,7 @@ rupture_effects: ""
 relational_fulfillment: ""
 relational_risk: ""
 earned_security_supports: []
-partner_attunement_cure: ""
+partner_attunement_cue: ""
 
 # **REMAINING FIELDS INHERITED FROM GLOBAL:
 notes: 

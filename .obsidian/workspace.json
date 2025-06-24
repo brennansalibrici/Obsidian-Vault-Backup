@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ec88719e9d7b6709",
+        "id": "34caa925daf1e233",
         "type": "tabs",
         "children": [
           {
-            "id": "c60d36afef3accc3",
+            "id": "cfcc95efe931a67a",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -142,7 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 406.5
+    "width": 234.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -270,13 +270,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Meta/fileClass/me/foundations/shared/foundation_element.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of foundation_element"
+              "title": "Outline"
             }
           },
           {
@@ -309,42 +308,42 @@
       "modalforms:Edit forms": false
     }
   },
-  "active": "c60d36afef3accc3",
+  "active": "cfcc95efe931a67a",
   "lastOpenFiles": [
-    "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
+    "Meta/Templates/me/Foundations/Trigger Template.md",
     "Meta/fileClass/me/foundations/attachment/theory/lists/integration tip list.md",
+    "Meta/fileClass/me/foundations/trigger/trigger.md",
+    "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
+    "Meta/Templates/me/Foundations/Attachment/Attachment Needs Template.md",
+    "Meta/Templates/me/Foundations/Protective Strategy Template.md",
+    "Meta/Templates/me/Foundations/Emotional Need Template.md",
+    "Meta/Templates/me/Foundations/Attachment/Attachment Theory Template.md",
     "Meta/fileClass/me/foundations/attachment/theory/lists/integration group list.md",
     "Meta/fileClass/me/foundations/attachment/theory/lists/relational effects list.md",
     "Meta/fileClass/me/foundations/attachment/theory/lists/relational effects group list.md",
-    "Meta/fileClass/me/foundations/shared/lists/core fears group list.md",
-    "Meta/fileClass/me/foundations/shared/lists/core fears list.md",
     "Meta/fileClass/me/foundations/attachment/theory/lists/attachment style list.md",
     "Meta/fileClass/me/foundations/attachment/theory/lists/attachment style group list.md",
-    "Meta/fileClass/me/foundations/soothing resouce/lists/soothing resources effects list.md",
-    "Meta/fileClass/me/foundations/soothing resouce/lists/soothing resource regulation zone list.md",
-    "Meta/fileClass/me/foundations/attachment/theory/lists",
-    "Meta/fileClass/me/foundations/soothing resouce/soothing_resource.md",
-    "Meta/fileClass/me/foundations/soothing resouce/lists/soothing resource type list.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style pattern list.md",
+    "Meta/Templates/me/Foundations/Attachment/Attachment Style Template.md",
+    "Meta/fileClass/me/foundations/attachment/style/attachment_style.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style subtype list.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style type list.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style group list.md",
+    "Meta/fileClass/me/foundations/trigger/lists/trigger flag list.md",
+    "Meta/fileClass/me/foundations/attachment/needs/attachment_need.md",
+    "Meta/fileClass/me/foundations/trigger/lists/trigger origin list.md",
+    "Meta/fileClass/me/foundations/trigger/lists/trigger type list.md",
+    "Meta/fileClass/me/foundations/trigger/lists/trigger group list.md",
     "Meta/fileClass/me/foundations/tradeoffs/lists/tradeoffs applies to list.md",
-    "Meta/Templates/me/Foundations/Soothing Resource Template.md",
-    "Meta/Templates/me/Foundations/Internal Voice Template.md",
-    "Meta/Templates/me/Foundations/TradeOff Template.md",
     "Meta/fileClass/me/foundations/tradeoffs/tradeoff.md",
-    "Meta/fileClass/me/foundations/tradeoffs/lists/tradeoff pole type list.md",
-    "Meta/fileClass/me/foundations/tradeoffs/lists/tradeoff pole group list.md",
-    "Meta/fileClass/me/foundations/tradeoffs/lists/tradeoff type list.md",
-    "Meta/fileClass/me/foundations/tradeoffs/lists/tradeoff group list.md",
-    "Meta/fileClass/me/foundations/shared/foundation_element.md",
-    "Meta/fileClass/me/foundations/protectice strategy/lists/strategy behavior tradeoff group list.md",
-    "Meta/fileClass/me/foundations/behavior functions/lists/behavior function type list.md",
-    "Meta/fileClass/me/foundations/behavior functions/lists/behavior function group list.md",
+    "Meta/fileClass/me/foundations/attachment/theory/lists",
     "Meta/fileClass/me/foundations/tradeoffs/lists",
     "Meta/fileClass/me/foundations/behavior functions/lists",
     "Meta/fileClass/me/foundations/tradeoffs",
     "Meta/fileClass/me/foundations/behavior functions",
     "ME/🏛️ Foundations/⚖️Trade-Offs",
     "ME/🏛️ Foundations/🐾 Behavior Functions",
-    "Meta/fileClass/me/foundations/shared/lists",
+    "Meta/fileClass/me/foundations/foundation element/lists",
     "Meta/fileClass/me/foundations/attachment/needs/lists",
     "Meta/Templates/me/Foundations/Attachment",
     "My Files/My Attachments/Pasted image 20250605211151.png",

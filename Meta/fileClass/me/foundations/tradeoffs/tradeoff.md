@@ -28,8 +28,9 @@ fields:
   - name: applies_to
     type: Multi
     options:
-      sourceType: ValuesList
+      sourceType: ValuesListNotePath
       valuesList: {}
+      valuesListNotePath: Meta/fileClass/me/foundations/tradeoffs/lists/tradeoffs applies to list.md
     path: ""
     id: dXSTh9
   - name: tradeoff_type
@@ -56,7 +57,7 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/tradeoffs/lists/tradeoff pole type list.md
     path: ""
     id: nn0foi
-version: "2.22"
+version: "2.24"
 limit: 20
 mapWithTag: false
 icon: scale
@@ -65,7 +66,7 @@ filesPaths:
   - ME/🏛️ Foundations/⚖️Trade-Offs
 bookmarksGroups: 
 excludes: 
-extends: me/foundations/shared/foundation_element
+extends: me/foundations/foundation element/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:

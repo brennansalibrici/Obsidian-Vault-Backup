@@ -1,13 +1,13 @@
 ---
 limit: 20
 mapWithTag: false
-icon: package
+icon: hard-hat
 tagNames: 
 filesPaths:
   - ME/🏛️ Foundations/🪖 Protective Strategies
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: me/foundations/foundation element/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:
@@ -19,7 +19,7 @@ fieldsOrder:
   - ZRu7BR
   - b51Ijc
   - ix0C2f
-version: "2.20"
+version: "2.22"
 fields:
   - name: narrative
     type: Input

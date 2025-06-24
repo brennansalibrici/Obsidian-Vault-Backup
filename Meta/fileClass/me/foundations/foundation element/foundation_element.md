@@ -81,7 +81,7 @@ fields:
     options: {}
     path: ""
     id: MKMeud
-version: "2.47"
+version: "2.49"
 limit: 20
 mapWithTag: false
 icon: landmark
@@ -89,7 +89,7 @@ tagNames:
 filesPaths: 
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:

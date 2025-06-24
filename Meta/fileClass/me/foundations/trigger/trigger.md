@@ -6,9 +6,8 @@ tagNames:
 filesPaths:
   - ME/🏛️ Foundations/⚡ Triggers
 bookmarksGroups: 
-excludes:
-  - healing_resources
-extends: me/foundations/shared/foundation_element
+excludes: 
+extends: me/foundations/foundation element/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:
@@ -18,7 +17,7 @@ fieldsOrder:
   - RXqewc
   - UPD9G3
   - QqEMEJ
-version: "2.44"
+version: "2.45"
 fields:
   - name: definition
     type: Input

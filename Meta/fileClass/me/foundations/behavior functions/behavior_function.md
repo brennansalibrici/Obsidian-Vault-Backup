@@ -16,7 +16,7 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/behavior functions/lists/behavior function type list.md
     path: ""
     id: Ta263T
-version: "2.7"
+version: "2.9"
 limit: 20
 mapWithTag: false
 icon: paw-print
@@ -25,7 +25,7 @@ filesPaths:
   - ME/🏛️ Foundations/🐾 Behavior Functions
 bookmarksGroups: 
 excludes: 
-extends: me/foundations/shared/foundation_element
+extends: me/foundations/foundation element/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:

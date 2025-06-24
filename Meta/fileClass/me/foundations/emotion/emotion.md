@@ -70,7 +70,7 @@ fields:
       valuesListNotePath: Meta/fileClass/me/emotion color list.md
     path: ""
     id: fvbTqs
-version: "2.216"
+version: "2.218"
 limit: 20
 mapWithTag: false
 icon: drama
@@ -79,7 +79,7 @@ filesPaths:
   - ME/🏛️ Foundations/🎭 Emotions
 bookmarksGroups: 
 excludes: 
-extends: me/foundations/shared/foundation_element
+extends: me/foundations/foundation element/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:

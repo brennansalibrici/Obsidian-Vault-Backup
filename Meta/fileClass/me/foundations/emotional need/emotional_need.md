@@ -34,7 +34,7 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/emotional need/lists/emotional need group list.md
     path: ""
     id: kABz9r
-version: "2.90"
+version: "2.91"
 limit: 20
 mapWithTag: false
 icon: shield-half
@@ -43,7 +43,7 @@ filesPaths:
   - ME/🏛️ Foundations/🛡️ Emotional Needs
 bookmarksGroups: 
 excludes: 
-extends: me/foundations/shared/foundation_element
+extends: me/foundations/foundation element/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:
