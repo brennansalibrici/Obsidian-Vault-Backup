@@ -1,7 +1,7 @@
 ---
 limit: 20
 mapWithTag: false
-icon: package
+icon: dna
 tagNames: 
 filesPaths:
   - ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills
@@ -23,7 +23,7 @@ fieldsOrder:
   - AClCyP
   - fpWuEU
   - qPp2cf
-version: "2.32"
+version: "2.33"
 fields:
   - name: related_scenarios
     type: MultiFile

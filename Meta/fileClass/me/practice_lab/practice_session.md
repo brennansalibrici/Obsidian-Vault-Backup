@@ -122,16 +122,16 @@ fields:
       min: 1
     path: ""
     id: DOrYNh
-version: "2.166"
+version: "2.168"
 limit: 20
 mapWithTag: false
-icon: package
+icon: clapperboard
 tagNames: 
 filesPaths:
   - ME/🧪 Practice Lab/🎬 Practice Logs
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:

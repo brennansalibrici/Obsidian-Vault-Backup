@@ -8,7 +8,7 @@ fields:
       valuesListNotePath: Meta/fileClass/me/importance value list.md
     path: ""
     id: lhHvv9
-  - name: feelings
+  - name: emotions
     type: MultiFile
     options: {}
     path: ""
@@ -28,10 +28,10 @@ fields:
     options: {}
     path: ""
     id: ebUnny
-version: "2.15"
+version: "2.17"
 limit: 20
 mapWithTag: false
-icon: package
+icon: eye
 tagNames: 
 filesPaths:
   - ME/👀 Observations

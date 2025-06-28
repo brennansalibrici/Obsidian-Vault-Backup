@@ -13,6 +13,7 @@ practiceSession.init({
   context1: result.data.scenario,
   useContextAsLink: true
 });
+
 practiceSession.createNewFileName();
 
 // Create the Practice Session file

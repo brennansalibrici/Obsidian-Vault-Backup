@@ -16,7 +16,12 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/behavior functions/lists/behavior function type list.md
     path: ""
     id: Ta263T
-version: "2.9"
+  - name: why
+    type: Input
+    options: {}
+    path: ""
+    id: j7A0jA
+version: "2.12"
 limit: 20
 mapWithTag: false
 icon: paw-print
@@ -31,4 +36,5 @@ favoriteView:
 fieldsOrder:
   - i0OiJi
   - Ta263T
+  - j7A0jA
 ---

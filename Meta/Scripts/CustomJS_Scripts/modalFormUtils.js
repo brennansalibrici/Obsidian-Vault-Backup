@@ -17,26 +17,34 @@ class ModalFormUtils {
         CAPTURED_MOMENT: "captured moment",
         OBSERVATION: "observation",
         INTEGRATION_JOURNAL: "integration journal",
-        REFLECTION_JOURNAL: "reflection journal"
+        REFLECTION_JOURNAL: "reflection journal",
+        TRIGGER: "trigger",
+        INTERNAL_VOICE: "internal voice",
+        SOOTHING_RESOURCE: "soothing resource",
+        EMOTIONAL_WOUND: "emotional wound",
+        BEHAVIOR_FUNCTION: "behavior function",
+        EMOTIONAL_NEED: "emotional need",
+        PROTECTIVE_STRATEGY: "protective strategy"
     };
 
-    static skipLinkFields = [
-    "rehearsal_mode",
-    "status",
-    "type",
-    "visibility",
-    "last_modified",
-    "created",
-    "export_to_inputs",
-    "driver",
-    "motive",
-    "response_alignment",
-    "event_date_time",
-    "context",
-    "summary",
-    "title",
-    "importance"
-    ];
+    static linkFields = [
+  "linked_wounds",
+  "associated_emotions",
+  "healing_resources",
+  "healing_pathways",
+  "protective_strategies",
+  "triggered_by",
+  "needs_behind_it",
+  "related",
+  "media",
+  "attachments",
+  "linked_resources",
+  "linked_log",
+  "source_daily_note",
+  "emotions",
+  "threatened_by"
+];
+
 
     //Constructor and define class properties
     constructor(){
@@ -56,7 +64,6 @@ class ModalFormUtils {
         this.newCreatedFileLink = "";
         this.newCreatedFile = "";
         this.newFileFullPath = "";
-        this.fileCreatingTemplate = "";
         this.newLiveFile = "";
         this.lnkDailyNote = "";
         this.formatUtils = window.customJS.createFormatUtilsInstance();
@@ -70,48 +77,48 @@ class ModalFormUtils {
     static fileTypeHandlers = {
         "practice session": {
             folder: "ME/🧪 Practice Lab/🎬 Practice Logs",
-            template: "Meta/Templates/me/Practice Lab/Practice Session Template",
+            template: "Meta/Templates/me/Practice Lab/Practice Session Template.md",
             naming: (baseName, count) => `${baseName}_Session-${count}`
         },
         "live rehearsal": {
             folder: "ME/🧪 Practice Lab/🎙️ Live Rehearsals",
-            template: "Meta/Templates/me/Practice Lab/Live Rehearsal Template",
+            template: "Meta/Templates/me/Practice Lab/Live Rehearsal Template.md",
             naming: (baseName, count) => `${baseName}_Live Rehearsal_Take-${count}`
         },
         "coaching session": {
             folder: "ME/🧪 Practice Lab/🧠 Coaching",
-            template: "Meta/Templates/me/Practice Lab/Coaching Session Template",
+            template: "Meta/Templates/me/Practice Lab/Coaching Session Template.md",
             naming: (baseName, count) => `${baseName}_Coaching Session-${count}`
         },
         "inner check-in": {
             folder: "ME/🌒 Reflections/🕹️ Inner Check-Ins",
-            template: "Meta/Templates/me/Inner_CheckIn_Template",
+            template: "Meta/Templates/me/Inner_CheckIn_Template.md",
             naming: (context, count) => context
         },
         "scenario": {
             folder: "ME/🧪 Practice Lab/🎲 Scenarios",
-            template:"Meta/Templates/me/Practice Lab/Scenario Template",
+            template:"Meta/Templates/me/Practice Lab/Scenario Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName);
             }
         },
         "captured moment": {
             folder: "ME/📝 Captured Moments",
-            template: "Meta/Templates/me/Captured Moment Template",
+            template: "Meta/Templates/me/Captured Moment Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName);
             }
         },
         "observation": {
             folder: "ME/👀 Observations",
-            template: "Meta/Templates/me/Observation Template",
+            template: "Meta/Templates/me/Observation Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName);
             }
         },
         "integration journal": {
             folder: "ME/📓 Journal",
-            template: "Meta/Templates/me/Emotional Growth Journal/Integration Journal Template",
+            template: "Meta/Templates/me/Emotional Growth Journal/Integration Journal Template.md",
             naming: function () {
                 const now = new Date();
                 const datePart = this.formatUtils.db_formatDateOnly(now); // e.g., 2025-06-19
@@ -121,14 +128,68 @@ class ModalFormUtils {
         },
         "reflection journal": {
             folder: "ME/📓 Journal",
-            template: "Meta/Templates/me/Emotional Growth Journal/Reflection Journal Template",
+            template: "Meta/Templates/me/Emotional Growth Journal/Reflection Journal Template.md",
             naming: function () {
                 const now = new Date();
                 const datePart = this.formatUtils.db_formatDateOnly(now); // e.g., 2025-06-19
                 const timePart = this.formatUtils.formatTimeOnly(now).replace(":", ""); // e.g., 1430
                 return `🪞 Reflection Journal Entry ${datePart} @ ${timePart}`;
             }
+        },
+        "trigger": {
+            folder: "ME/🏛️ Foundations/⚡ Triggers",
+            template: "Meta/Templates/me/Foundations/Trigger Template.md",
+            naming: function (baseName) {
+                return this.formatUtils.formatTitleCase(baseName);
+            }
+        },
+        "internal voice": {
+            folder: "ME/🏛️ Foundations/📢 Internal Voices",
+            template: "Meta/Templates/me/Foundations/Internal Voice Template.md",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Internal Voice");
+          }
+        },
+        "soothing resource": {
+            folder: "ME/🏛️ Foundations/🩹 Soothing Resources",
+            template: "Meta/Templates/me/Foundations/Soothing Resource Template.md",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Soothing Resource");
+            }
+        },
+        "emotional wound": {
+            folder: "ME/🏛️ Foundations/🌀 Emotional Wounds",
+            template: "Meta/Templates/me/Foundations/Emotional Wound Template.md",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Emotional Wound");
+            }
+        },
+        "behavior function": {
+            folder: "ME/🏛️ Foundations/🐾 Behavior Functions",
+            template: "Meta/Templates/me/Foundations/Behavior Function Template.md",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Behavior Function");
+            }
+        },
+        "emotional need": {
+            folder: "ME/🏛️ Foundations/🛡️ Emotional Needs",
+            template: "Meta/Templates/me/Foundations/Emotional Need Template.md",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Emotional Need");
+            }
+        },
+        "protective strategy": {
+            folder: "ME/🏛️ Foundations/🪖 Protective Strategies",
+            template: "Meta/Templates/me/Foundations/Protective Strategy Template.md",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Protective Strategy");
+            }
         }
+
+
+
+
+
     };
 
     //checks to see if the filename created already exists in the folder and if so, appends '-1', '-2', etc.
@@ -191,28 +252,48 @@ class ModalFormUtils {
             useContextAsLink = true
         } = config;
 
-        const handler = ModalFormUtils.fileTypeHandlers[fileType];
-        if (!handler) throw new Error(`❌ Unknown fileType: ${fileType}`);
+        // Normalize fileType input (e.g., "Trigger" → "trigger")
+        const normalizedTypeKey = this.normalizeFileType(fileType);
+        if (!normalizedTypeKey) {
+            throw new Error(`❌ Unknown or invalid fileType provided: "${fileType}"`);
+        }
+
+        // Use the normalized value to fetch fileType string and handler
+        this.fileType = ModalFormUtils.filetype[normalizedTypeKey];
+        const handler = ModalFormUtils.fileTypeHandlers[this.fileType];
+
+        if (!handler) {
+            throw new Error(`❌ No fileTypeHandler found for: "${this.fileType}"`);
+        }
 
         this.app = app;
         this.tp = tp;
-        this.fileType = fileType;
-
         this.folderPath = handler.folder;
         this.folder = app.vault.getAbstractFileByPath(this.folderPath);
         this.templateFile = handler.template;
         this.strField1 = context1;
         this.lnkField1 = useContextAsLink ? this.string2Link(context1) : context1;
 
-        //loops through the specificed folder and returns the number of files that contains a specified phrase in the title
-         if(this.folder && this.folder.children){
-            for(const file of this.folder.children){
-                if(file.name.includes(this.strField1)){
+        if (!this.templateFile) {
+            throw new Error(`❌ Template file path was not set for fileType: "${this.fileType}"`);
+        }
+
+        console.log("🛠️ ModalFormUtils initialized with:");
+        console.log("📂 folderPath:", this.folderPath);
+        console.log("📄 templateFile:", this.templateFile);
+        console.log("🔖 fileType:", this.fileType);
+        console.log("🧩 context1:", this.strField1);
+
+        // Count matches in folder for naming logic
+        if (this.folder && this.folder.children) {
+            for (const file of this.folder.children) {
+                if (file.name.includes(this.strField1)) {
                     this.fileMatch++;
                 }
             }
         }
     }
+
 
     /*********************the loop that assigns the fileMatch value returns the number of files that match. For the new filename we need to increase that value by one.
     creates both a stringname and a link for the newly created file***********************************/
@@ -273,10 +354,12 @@ class ModalFormUtils {
             this.createNewFileName();
 
             const file = await this.createNewFileFromTemplate();
+            console.log("New file object received", file);
             if (file) {
                 await this.updateFrontMatter(file, fieldMap);
             }
             return file;
+
         } catch (err) {
             console.error("❌ Failed in createFileWithFrontmatter:", err);
             new Notice("Error during file creation. See console.");
@@ -286,45 +369,61 @@ class ModalFormUtils {
 
     //When called, this function creates a new and seperate file (from an existing template) which is called from a modal form's logic but it completely seperate from the template and/or the fileclass calling the function.
     async createNewFileFromTemplate() {
-    try {
+        try {
+            const templateFile = this.app.vault.getAbstractFileByPath(this.templateFile);
+            if (!templateFile) {
+            throw new Error(`❌ Template file not found at path: ${this.templateFile}`);
+            }
 
-        // Find the template file
-        this.fileCreatingTemplate = this.tp.file.find_tfile(this.templateFile);
-        if (!this.fileCreatingTemplate) {
-        throw new Error(`❌ Could not find template file: ${this.templateFile}`);
-        }
+            const templateContent = await this.app.vault.read(templateFile);
 
-        // Create the new file
-        await this.tp.file.create_new(this.fileCreatingTemplate, this.newCreatedFileName, false, this.folderPath);
+            //console.log("🧾 Template Content Preview:", templateContent);
 
-        // Wait a bit to ensure file is created
-        await new Promise(resolve => setTimeout(resolve, 500));
+            const filePath = `${this.folderPath}/${this.newCreatedFileName}.md`;
+            this.newCreatedFile = await this.app.vault.create(filePath, templateContent);
+            this.newCreatedFileLink = `[[${this.newCreatedFileName}]]`;
 
-        // Get reference to the new file
-        this.newCreatedFile = this.app.vault.getAbstractFileByPath(this.newFileFullPath);
-        if (!this.newCreatedFile) {
-        new Notice(`❌ Could not find created file at: ${this.newFileFullPath}`);
-        throw new Error("File creation failed");
-        }
-
-        // Open the file in a new leaf
-        await this.app.workspace.getLeaf().openFile(this.newCreatedFile);
-
-        console.log("✅ File created and opened:", this.newCreatedFile.path);
-        return this.newCreatedFile;
-        }
-    catch (err) {
-            console.error("❌ Error in createNewFileFromTemplate:", err);
-            new Notice("Error creating file from template. See console.");
-            return null;
+            console.log(`✅ File created at: ${filePath}`);
+            return this.newCreatedFile;
+        } catch (err) {
+            console.error("❌ Error creating file from template:", err);
+            new Notice("❌ Failed to create file from template. Check console for details.");
         }
     }
+
+
 
     //generate a hook that can be linked to a DailyNote
     generateDailyNoteLink() {
         const today = this.formatUtils.db_formatDateOnly(new Date());
         return `[[${today}]]`;
 
+    }
+
+    //from within an open form, opens a new form and creates the new forms object and pushes the newly created object into the current form
+    async openAndLinkNewItem({formName, linkField, targetArray}) {
+        const modalForm = app.plugins.plugins.modalforms.api;
+        const result = await modalForm.openForm(formName);
+        const newItem = `[[${result?.data?.title || "Unnamed"}]]`;
+        this.debug && console.log("Created new item:", newItem);
+        this.resultData[targetArray] = [...(this.resultData[targetArray] || []), newItem];
+    }
+
+    //known issue with Templater update is that it inserts the template path name on the first line after the frontmatter if you create a new file programmatically with fronmatter. This function removes it.
+    async cleanTemplatePathFromBody(file) {
+        const fileContent = await this.app.vault.read(file);
+        const lines = fileContent.split("\n");
+
+        // Find where frontmatter ends
+        let fmEndIndex = lines.findIndex((line, i) => line.trim() === "---" && i > 0);
+        if (fmEndIndex === -1 || fmEndIndex + 1 >= lines.length) return;
+
+        const suspiciousLine = lines[fmEndIndex + 1].trim();
+        if (suspiciousLine === this.templateFile.trim()) {
+            lines.splice(fmEndIndex + 1, 1); // Remove that one line
+            await this.app.vault.modify(file, lines.join("\n"));
+            console.log(`🧼 Cleaned template path from line ${fmEndIndex + 2} of ${file.path}`);
+        }
     }
 
 
@@ -341,7 +440,7 @@ class ModalFormUtils {
                     const existing = fm[key];
 
                     const toLink = (v, key) => {
-                    if (ModalFormUtils.skipLinkFields.includes(key)) return v;
+                    if (!ModalFormUtils.linkFields.includes(key)) return v;
                     if (typeof v !== "string") return v;
                     return v.startsWith("[[") ? v : `[[${v}]]`;
                     };

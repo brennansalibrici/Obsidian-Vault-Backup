@@ -3,7 +3,7 @@ fileClass: practice_log
 id: <% tp.date.now("x") %>
 created: ""
 last_modified: ""
-title: <% tp.file.title %>
+title: ""
 status: 
 type: 
 tags: 
@@ -13,14 +13,13 @@ entered: true
 archived: false
 priority:
   - ⚪ None
-visibility:
-  - 🔒 private
+visibility: 🔒 private
 rehearsal_mode: ""
-scenario: 
+scenario: []
 session_number: ""
 people: 
 session_summary: ""
-skill_level: []
+skill_level: 
 live_rehearsals: 
 coaching_sessions: 
 meta_skills: 
@@ -35,7 +34,7 @@ grade: ""
 linked_resources: 
 key_miss: ""
 export_to_inputs: false
-notes: ""
+notes: 
 related: 
 media: 
 attachments:

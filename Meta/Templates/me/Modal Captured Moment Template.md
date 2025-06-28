@@ -27,6 +27,6 @@ await capturedMoment.createFileWithFrontmatter({
   created: capturedMoment.formatUtils.db_formatDateTime(new Date()),
   last_modified: capturedMoment.formatUtils.db_formatDateTime(new Date()),
   source_daily_note: capturedMoment.generateDailyNoteLink(),
-  feelings: result.data.feelings
+  emotions: result.data.feelings
 });
 -%>

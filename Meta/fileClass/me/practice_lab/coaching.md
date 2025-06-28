@@ -117,16 +117,16 @@ fields:
       min: 1
     path: ""
     id: 2y6gFH
-version: "2.161"
+version: "2.163"
 limit: 20
 mapWithTag: false
-icon: package
+icon: brain
 tagNames: 
 filesPaths:
   - ME/🧪 Practice Lab/🧠 Coaching
 bookmarksGroups: 
 excludes: 
-extends: 
+extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:

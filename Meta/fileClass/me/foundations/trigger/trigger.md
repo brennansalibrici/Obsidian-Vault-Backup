@@ -17,7 +17,7 @@ fieldsOrder:
   - RXqewc
   - UPD9G3
   - QqEMEJ
-version: "2.45"
+version: "2.49"
 fields:
   - name: definition
     type: Input

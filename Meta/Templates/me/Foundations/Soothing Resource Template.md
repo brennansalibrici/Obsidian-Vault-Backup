@@ -33,7 +33,7 @@ definition: ""
 behavior_functions: []
 tradeoffs: []
 
-# INTERNAL VOICE DEFINITION:
+# SOOTHING RESOURCE DEFINITION:
 resource_type: []
 access_mode: []
 regulation_zone: ""

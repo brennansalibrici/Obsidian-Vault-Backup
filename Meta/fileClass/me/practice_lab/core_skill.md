@@ -1,7 +1,7 @@
 ---
 limit: 20
 mapWithTag: false
-icon: package
+icon: speech
 tagNames: 
 filesPaths:
   - ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills
@@ -18,7 +18,7 @@ fieldsOrder:
   - sLUUZq
   - moYFyP
   - 2OePll
-version: "2.8"
+version: "2.9"
 fields:
   - name: current_focus
     type: Boolean

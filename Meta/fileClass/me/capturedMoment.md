@@ -29,7 +29,7 @@ fields:
     options: {}
     path: ""
     id: WGVUwk
-  - name: feelings
+  - name: emotions
     type: MultiFile
     options: {}
     path: ""
@@ -51,9 +51,9 @@ fields:
     options: {}
     path: ""
     id: kFEdFx
-version: "2.49"
+version: "2.51"
 limit: 100
-icon: package
+icon: notebook-pen
 tagNames: 
 filesPaths:
   - ME/📝 Captured Moments

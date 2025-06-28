@@ -22,7 +22,7 @@ visibility: "🔒 private"
 # CAPTURED MOMENT DEFINITION:
 source_daily_note: 
 importance: ""
-feelings: []
+emotions: []
 people: []
 theme:
 summary: ""

@@ -1,7 +1,7 @@
 ---
 limit: 20
 mapWithTag: false
-icon: package
+icon: flame
 tagNames: 
 filesPaths:
   - ME/🔥 From The Fire
@@ -12,7 +12,7 @@ savedViews: []
 favoriteView: 
 fieldsOrder:
   - RyVm55
-version: "2.2"
+version: "2.3"
 fields:
   - name: message_date
     type: Date

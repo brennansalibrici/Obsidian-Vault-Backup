@@ -1174,6 +1174,16 @@
       "name": "Create New Trigger",
       "fields": [
         {
+          "name": "trigger_name",
+          "label": "Trigger Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
           "name": "type_group",
           "label": "Trigger Group",
           "description": "Broad categories or groups of different types of triggers",
@@ -1262,6 +1272,10 @@
               {
                 "value": "Not Feeling Safe",
                 "label": "Not Feeling Safe"
+              },
+              {
+                "value": "Note Feeling Heard",
+                "label": "Note Feeling Heard"
               }
             ]
           }
@@ -1536,7 +1550,7 @@
           "isRequired": false,
           "condition": {
             "dependencyName": "type_group",
-            "type": "isExactly",
+            "type": "startsWith",
             "value": "Relational"
           },
           "input": {
@@ -1764,6 +1778,199 @@
               }
             ]
           }
+        },
+        {
+          "name": "protective_strategies",
+          "label": "Protective Strategies",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies"
+          }
+        },
+        {
+          "name": "trigger_flag_group",
+          "label": "Trigger Flag Group",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Emotional Overload",
+                "label": "Emotional Overload"
+              },
+              {
+                "value": "Rooted History",
+                "label": "Rooted History"
+              },
+              {
+                "value": "Power Dynamics & Identity",
+                "label": "Power Dynamics & Identity"
+              },
+              {
+                "value": "Relational Wounding",
+                "label": "Relational Wounding"
+              },
+              {
+                "value": "Avoidance or Distortion",
+                "label": "Avoidance or Distortion"
+              },
+              {
+                "value": "Time Pattern & Context",
+                "label": "Time Pattern & Context"
+              },
+              {
+                "value": "Cognitive or Sensory Basis",
+                "label": "Cognitive or Sensory Basis"
+              },
+              {
+                "value": "Boundary Disruptions",
+                "label": "Boundary Disruptions"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fgroup_emotional",
+          "label": "Emotional Overload Trigger Flags",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "trigger_flag_group",
+            "type": "isExactly",
+            "value": "Emotional Overload"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Emotional Overload"
+          }
+        },
+        {
+          "name": "fgroup_rooted",
+          "label": "Rooted History Trigger Flags",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "trigger_flag_group",
+            "type": "isExactly",
+            "value": "Rooted History"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Rooted History"
+          }
+        },
+        {
+          "name": "fgroup_power",
+          "label": "Power Dynamics & Identity Trigger Flags",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "trigger_flag_group",
+            "type": "isExactly",
+            "value": "Power Dynamics & Identity"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Power Dynamics & Identity"
+          }
+        },
+        {
+          "name": "fgroup_relational",
+          "label": "Relational Wounding Trigger Flags",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "trigger_flag_group",
+            "type": "isExactly",
+            "value": "Relational Wounding"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Relational Wounding"
+          }
+        },
+        {
+          "name": "fgroup_avoidance",
+          "label": "Avoidance or Distortion Trigger Flags",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "trigger_flag_group",
+            "type": "isExactly",
+            "value": "Avoidance or Distortion"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Avoidance or Distortion"
+          }
+        },
+        {
+          "name": "fgroup_time",
+          "label": "Time Pattern & Context Trigger Flags",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "trigger_flag_group",
+            "type": "isExactly",
+            "value": "Time Pattern & Context"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Time Pattern & Context"
+          }
+        },
+        {
+          "name": "fgroup_cognitive",
+          "label": "Cognitive or Sensory Basis Trigger Flags",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "trigger_flag_group",
+            "type": "isExactly",
+            "value": "Cognitive or Sensory Basis"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Cognitive or Sensory Basis"
+          }
+        },
+        {
+          "name": "fgroup_boundary",
+          "label": "Boundary Disruptions Trigger Flags",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "trigger_flag_group",
+            "type": "isExactly",
+            "value": "Boundary Disruptions"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Boundary Disruptions"
+          }
+        },
+        {
+          "name": "definition",
+          "label": "Definition",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
         }
       ],
       "version": "1"
@@ -1772,6 +1979,16 @@
       "title": "Create New Emotional Wound",
       "name": "Create New Emotional Wound",
       "fields": [
+        {
+          "name": "wound_name",
+          "label": "Wound Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
         {
           "name": "wound_group",
           "label": "Wound Group",
@@ -2173,6 +2390,16 @@
               }
             ]
           }
+        },
+        {
+          "name": "visible_patterns",
+          "label": "Visible Patterns",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
         }
       ],
       "version": "1"
@@ -2181,6 +2408,16 @@
       "title": "Create New Internal Voice",
       "name": "Create New Internal Voice",
       "fields": [
+        {
+          "name": "voice_name",
+          "label": "Internal Voice Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
         {
           "name": "voice_group",
           "label": "Voice Group",
@@ -2576,6 +2813,26 @@
               }
             ]
           }
+        },
+        {
+          "name": "tone",
+          "label": "Tone",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "recurring_phrase",
+          "label": "Recurring Phrase",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
         }
       ],
       "version": "1"
@@ -2584,6 +2841,16 @@
       "title": "Create New Emotional Need",
       "name": "Create New Emotional Need",
       "fields": [
+        {
+          "name": "need_name",
+          "label": "Emotional Need Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
         {
           "name": "need_group",
           "label": "Need Group",
@@ -3114,6 +3381,158 @@
               }
             ]
           }
+        },
+        {
+          "name": "threat_source_group",
+          "label": "Threat Source Group",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "⚡ Triggers",
+                "label": "⚡ Triggers"
+              },
+              {
+                "value": "🌀 Emotional Wounds",
+                "label": "🌀 Emotional Wounds"
+              },
+              {
+                "value": "📢 Internal Voices",
+                "label": "📢 Internal Voices"
+              },
+              {
+                "value": "🪖 Protective Strategies",
+                "label": "🪖 Protective Strategies"
+              },
+              {
+                "value": "🐾 Behavior Functions",
+                "label": "🐾 Behavior Functions"
+              },
+              {
+                "value": "⚖️Trade-Offs",
+                "label": "⚖️Trade-Offs"
+              }
+            ]
+          }
+        },
+        {
+          "name": "threat_trigger",
+          "label": "⚡ Trigger Threats",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "threat_source_group",
+            "type": "isExactly",
+            "value": "⚡ Triggers"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/⚡ Triggers"
+          }
+        },
+        {
+          "name": "threat_wound",
+          "label": "🌀 Emotional Wound Threats",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "threat_source_group",
+            "type": "isExactly",
+            "value": "🌀 Emotional Wounds"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds"
+          }
+        },
+        {
+          "name": "threat_voice",
+          "label": "📢 Internal Voice Threats",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "threat_source_group",
+            "type": "isExactly",
+            "value": "📢 Internal Voices"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
+          }
+        },
+        {
+          "name": "threat_strategy",
+          "label": "🪖 Protective Strategy Threats",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "threat_source_group",
+            "type": "isExactly",
+            "value": "🪖 Protective Strategies"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies"
+          }
+        },
+        {
+          "name": "threat_function",
+          "label": "🐾 Behavior Function Threats",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "threat_source_group",
+            "type": "isExactly",
+            "value": "🐾 Behavior Functions"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🐾 Behavior Functions"
+          }
+        },
+        {
+          "name": "threat_trade",
+          "label": "⚖️Trade-Off Threats",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "threat_source_group",
+            "type": "isExactly",
+            "value": "⚖️Trade-Offs"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/⚖️Trade-Offs"
+          }
+        },
+        {
+          "name": "unmet_effects",
+          "label": "Unmet Effects",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "definition",
+          "label": "Definition",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
         }
       ],
       "version": "1"
@@ -3527,8 +3946,7 @@
               "Strong Reactions To Perceived Rejection",
               "Testing Partner’s Loyalty Or Love"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -3550,8 +3968,7 @@
               "Feeling “Too Much” or “Not Enough”",
               "Avoiding Conflict Through Detachment"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -3575,8 +3992,7 @@
               "Fear Of Engulfment",
               "Sabotaging Closeness When It Feels Threatening"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -3598,8 +4014,7 @@
               "Compulsive Caretaking",
               "Rescuing Or Needing To Be Rescued"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -3619,18 +4034,17 @@
               "Difficulty Sustaining Intimacy",
               "Sabotaging Closeness When It Feels Threatening"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
           "name": "integration_group",
           "label": "Integration Group",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "select",
-            "allowUnknownValues": false,
-            "hidden": false,
+            "source": "fixed",
             "options": [
               {
                 "value": "Core Skills to Practice",
@@ -3652,44 +4066,44 @@
                 "value": "External Support",
                 "label": "External Support"
               }
-            ],
-            "source": "fixed"
-          },
-          "isRequired": false
+            ]
+          }
         },
         {
           "name": "itype_core",
           "label": "Core Skills to Practice",
           "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Core Skills to Practice"
+          },
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
+            "source": "fixed",
             "multi_select_options": [
               "Practice Identifying And Naming Emotional Needs",
               "Learn To Tolerate Healthy Emotional Discomfort",
               "Learn To Ask Directly For Reassurance Or Space",
               "Practice Staying Emotionally Present In Discomfort"
             ],
-            "source": "fixed"
-          },
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Core Skills to Practice"
-          },
-          "isRequired": false
+            "allowUnknownValues": false
+          }
         },
         {
           "name": "itype_relational",
           "label": "Relational Repair & Connection",
           "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Relational Repair & Connection"
+          },
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
+            "source": "fixed",
             "multi_select_options": [
               "Build Safety Through Consistent Relationships",
               "Create Rituals Of Connection And Repair",
@@ -3697,81 +4111,69 @@
               "Normalize The Presence Of Conflict In Healthy Love",
               "Build Trust Slowly Through Repeat Experiences"
             ],
-            "source": "fixed"
-          },
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Relational Repair & Connection"
-          },
-          "isRequired": false
+            "allowUnknownValues": false
+          }
         },
         {
           "name": "itype_somatic",
           "label": "Somatic & Emotional Regulation",
           "description": "",
-          "input": {
-            "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [
-              "Engage In Body-Based Calming Practices",
-              "Use Grounding Tools During Conflict Or Distance",
-              "Practice Self-Soothing Techniques"
-            ],
-            "source": "fixed"
-          },
+          "isRequired": false,
           "condition": {
             "dependencyName": "integration_group",
             "type": "isExactly",
             "value": "Somatic & Emotional Regulation"
           },
-          "isRequired": false
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Engage In Body-Based Calming Practices",
+              "Use Grounding Tools During Conflict Or Distance",
+              "Practice Self-Soothing Techniques"
+            ],
+            "allowUnknownValues": false
+          }
         },
         {
           "name": "itype_cognitive",
           "label": "Cognitive Reframing",
           "description": "",
-          "input": {
-            "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [
-              "Name And Challenge All-Or-Nothing Thinking",
-              "Notice Protective Patterns And Pause Before Acting",
-              "Journal To Explore Emotional Triggers"
-            ],
-            "source": "fixed"
-          },
+          "isRequired": false,
           "condition": {
             "dependencyName": "integration_group",
             "type": "isExactly",
             "value": "Cognitive Reframing"
           },
-          "isRequired": false
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Name And Challenge All-Or-Nothing Thinking",
+              "Notice Protective Patterns And Pause Before Acting",
+              "Journal To Explore Emotional Triggers"
+            ],
+            "allowUnknownValues": false
+          }
         },
         {
           "name": "itype_external",
           "label": "External Support",
           "description": "",
-          "input": {
-            "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [
-              "Explore Therapy To Re-Pattern Early Attachment Wounds"
-            ],
-            "source": "fixed"
-          },
+          "isRequired": false,
           "condition": {
             "dependencyName": "integration_group",
             "type": "isExactly",
             "value": "External Support"
           },
-          "isRequired": false
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Explore Therapy To Re-Pattern Early Attachment Wounds"
+            ],
+            "allowUnknownValues": false
+          }
         }
       ],
       "version": "1"
@@ -4319,6 +4721,16 @@
       "name": "Create New Protective Strategy",
       "fields": [
         {
+          "name": "strategy_name",
+          "label": "Strategy Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
           "name": "strategy_group",
           "label": "Strategy Group",
           "description": "Broad categories or groups of different types of protective strategies",
@@ -4684,58 +5096,24 @@
             "value": "Protection-Oriented"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Avoid Rejection",
-                "label": "Avoid Rejection"
-              },
-              {
-                "value": "Avoid Humiliation",
-                "label": "Avoid Humiliation"
-              },
-              {
-                "value": "Avoid Punishment",
-                "label": "Avoid Punishment"
-              },
-              {
-                "value": "Avoid Exposure",
-                "label": "Avoid Exposure"
-              },
-              {
-                "value": "Protect Self-Image",
-                "label": "Protect Self-Image"
-              },
-              {
-                "value": "Preserve Dignity",
-                "label": "Preserve Dignity"
-              },
-              {
-                "value": "Preserve Identity",
-                "label": "Preserve Identity"
-              },
-              {
-                "value": "Preserve Self-Worth",
-                "label": "Preserve Self-Worth"
-              },
-              {
-                "value": "Protect Others",
-                "label": "Protect Others"
-              },
-              {
-                "value": "Avoid Being Seen",
-                "label": "Avoid Being Seen"
-              },
-              {
-                "value": "Avoid Responsibility",
-                "label": "Avoid Responsibility"
-              },
-              {
-                "value": "Avoid Dependency",
-                "label": "Avoid Dependency"
-              }
-            ]
+            "multi_select_options": [
+              "Avoid Rejection",
+              "Avoid Humiliation",
+              "Avoid Punishment",
+              "Avoid Exposure",
+              "Protect Self-Image",
+              "Preserve Dignity",
+              "Preserve Identity",
+              "Preserve Self-Worth",
+              "Protect Others",
+              "Avoid Being Seen",
+              "Avoid Responsibility",
+              "Avoid Dependency"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -4749,62 +5127,25 @@
             "value": "Emotional Regulation"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Reduce Shame",
-                "label": "Reduce Shame"
-              },
-              {
-                "value": "Reduce Anxiety",
-                "label": "Reduce Anxiety"
-              },
-              {
-                "value": "Discharge Emotion",
-                "label": "Discharge Emotion"
-              },
-              {
-                "value": "Manage Overwhelming Emotions",
-                "label": "Manage Overwhelming Emotions"
-              },
-              {
-                "value": "Self-Soothe",
-                "label": "Self-Soothe"
-              },
-              {
-                "value": "Regain Balance",
-                "label": "Regain Balance"
-              },
-              {
-                "value": "Avoid Being Overwhelmed",
-                "label": "Avoid Being Overwhelmed"
-              },
-              {
-                "value": "Distance From Pain",
-                "label": "Distance From Pain"
-              },
-              {
-                "value": "Minimize Threat",
-                "label": "Minimize Threat"
-              },
-              {
-                "value": "Stay Safe",
-                "label": "Stay Safe"
-              },
-              {
-                "value": "Stay Invisible",
-                "label": "Stay Invisible"
-              },
-              {
-                "value": "Restore Order",
-                "label": "Restore Order"
-              },
-              {
-                "value": "Reduce Confusion",
-                "label": "Reduce Confusion"
-              }
-            ]
+            "multi_select_options": [
+              "Reduce Shame",
+              "Reduce Anxiety",
+              "Discharge Emotion",
+              "Manage Overwhelming Emotions",
+              "Self-Soothe",
+              "Regain Balance",
+              "Avoid Being Overwhelmed",
+              "Distance From Pain",
+              "Minimize Threat",
+              "Stay Safe",
+              "Stay Invisible",
+              "Restore Order",
+              "Reduce Confusion"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -4818,50 +5159,22 @@
             "value": "Relational Maintenance"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Gain Approval",
-                "label": "Gain Approval"
-              },
-              {
-                "value": "Keep Peace",
-                "label": "Keep Peace"
-              },
-              {
-                "value": "Maintain Connection",
-                "label": "Maintain Connection"
-              },
-              {
-                "value": "Test Loyalty",
-                "label": "Test Loyalty  "
-              },
-              {
-                "value": "Secure Love",
-                "label": "Secure Love"
-              },
-              {
-                "value": "Stay Needed",
-                "label": "Stay Needed"
-              },
-              {
-                "value": "Stay In Favor",
-                "label": "Stay In Favor"
-              },
-              {
-                "value": "Signal Distress",
-                "label": "Signal Distress"
-              },
-              {
-                "value": "Fulfill Moral Obligation",
-                "label": "Fulfill Moral Obligation"
-              },
-              {
-                "value": "Meet Expectations",
-                "label": "Meet Expectations"
-              }
-            ]
+            "multi_select_options": [
+              "Gain Approval",
+              "Keep Peace",
+              "Maintain Connection",
+              "Test Loyalty",
+              "Secure Love",
+              "Stay Needed",
+              "Stay In Favor",
+              "Signal Distress",
+              "Fulfill Moral Obligation",
+              "Meet Expectations"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -4875,38 +5188,20 @@
             "value": "Control & Power"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Maintain Control",
-                "label": "Maintain Control"
-              },
-              {
-                "value": "Feel Powerful",
-                "label": "Feel Powerful"
-              },
-              {
-                "value": "Reclaim Power",
-                "label": "Reclaim Power"
-              },
-              {
-                "value": "Create Predictability",
-                "label": "Create Predictability"
-              },
-              {
-                "value": "Ensure Fairness",
-                "label": "Ensure Fairness"
-              },
-              {
-                "value": "Maintain Role",
-                "label": "Maintain Role"
-              },
-              {
-                "value": "Compensate For Neglect",
-                "label": "Compensate For Neglect"
-              }
-            ]
+            "multi_select_options": [
+              "Meet Expectations",
+              "Maintain Control",
+              "Feel Powerful",
+              "Reclaim Power",
+              "Create Predictability",
+              "Ensure Fairness",
+              "Maintain Role",
+              "Compensate For Neglect"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -4920,30 +5215,17 @@
             "value": "Cognitive Preservation"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Reinforce Beliefs",
-                "label": "Reinforce Beliefs"
-              },
-              {
-                "value": "Preserve Family System",
-                "label": "Preserve Family System"
-              },
-              {
-                "value": "Buy Time",
-                "label": "Buy Time"
-              },
-              {
-                "value": "Stay Consistent",
-                "label": "Stay Consistent"
-              },
-              {
-                "value": "Maintain Self-Worth",
-                "label": "Maintain Self-Worth"
-              }
-            ]
+            "multi_select_options": [
+              "Reinforce Beliefs",
+              "Preserve Family System",
+              "Buy Time",
+              "Stay Consistent",
+              "Maintain Self-Worth"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -5005,7 +5287,7 @@
             "value": "Connection vs. Autonomy"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
             "options": [
               {
@@ -5024,6 +5306,14 @@
                 "value": "Staying Numb vs. Staying Present",
                 "label": "Staying Numb vs. Staying Present"
               }
+            ],
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": [
+              "Closeness vs. Independence",
+              "Distance vs. Closeness",
+              "Being Known vs. Being in Control",
+              "Staying Numb vs. Staying Present"
             ]
           }
         },
@@ -5038,7 +5328,7 @@
             "value": "Safety vs. Authenticity"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
             "options": [
               {
@@ -5069,6 +5359,17 @@
                 "value": "Stability vs. Authenticity",
                 "label": "Stability vs. Authenticity"
               }
+            ],
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": [
+              "Honesty vs. Acceptance",
+              "Compliance vs. Authenticity",
+              "Pleasing Others vs. Staying True to Self",
+              "Conflict Avoidance vs. Emotional Honesty",
+              "Keeping Peace vs. Naming Needs",
+              "Validation vs. Truth-Telling",
+              "Stability vs. Authenticity"
             ]
           }
         },
@@ -5083,7 +5384,7 @@
             "value": "Control vs. Vulnerability"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
             "options": [
               {
@@ -5106,6 +5407,15 @@
                 "value": "Power vs. Intimacy",
                 "label": "Power vs. Intimacy"
               }
+            ],
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": [
+              "Trust vs. Control",
+              "Self-Protection vs. Vulnerability",
+              "Guardedness vs. Openness",
+              "Being Seen vs. Feeling Safe",
+              "Power vs. Intimacy"
             ]
           }
         },
@@ -5120,7 +5430,7 @@
             "value": "Short-Term Relief vs. Long-Term Growth"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
             "options": [
               {
@@ -5151,6 +5461,17 @@
                 "value": "Old Safety vs. New Possibility",
                 "label": "Old Safety vs. New Possibility"
               }
+            ],
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": [
+              "Comfort vs. Growth",
+              "Avoiding Discomfort vs. Resolving the Real Issue",
+              "Short-Term Safety vs. Long-Term Connection",
+              "Avoiding Pain vs. Doing What’s Needed",
+              "Not Rocking the Boat vs. Being Fully Alive",
+              "Security vs. Growth",
+              "Old Safety vs. New Possibility"
             ]
           }
         },
@@ -5165,7 +5486,7 @@
             "value": "Self-Image vs. Emotional Honesty"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
             "options": [
               {
@@ -5184,6 +5505,14 @@
                 "value": "Survival vs. Self-Actualization",
                 "label": "Survival vs. Self-Actualization"
               }
+            ],
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": [
+              "Truth vs. Protection",
+              "Reinforcing Old Roles vs. Becoming Whole",
+              "Approval vs. Truth",
+              "Survival vs. Self-Actualization"
             ]
           }
         },
@@ -5198,7 +5527,7 @@
             "value": "Avoidance vs. Engagement"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
             "options": [
               {
@@ -5217,6 +5546,14 @@
                 "value": "Guardedness vs. Openness",
                 "label": "Guardedness vs. Openness"
               }
+            ],
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": [
+              "Staying Numb vs. Staying Present",
+              "Avoiding Discomfort vs. Resolving the Real Issue",
+              "Avoiding Pain vs. Doing What’s Needed",
+              "Guardedness vs. Openness"
             ]
           }
         },
@@ -5231,7 +5568,7 @@
             "value": "Familiarity vs. Change"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
             "options": [
               {
@@ -5246,6 +5583,13 @@
                 "value": "Reinforcing Old Roles vs. Becoming Whole",
                 "label": "Reinforcing Old Roles vs. Becoming Whole"
               }
+            ],
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": [
+              "Predictability vs. Healing",
+              "Old Safety vs. New Possibility",
+              "Reinforcing Old Roles vs. Becoming Whole"
             ]
           }
         },
@@ -5260,7 +5604,7 @@
             "value": "Power vs. Intimacy"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
             "options": [
               {
@@ -5275,6 +5619,13 @@
                 "value": "Trust vs. Control",
                 "label": "Trust vs. Control"
               }
+            ],
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": [
+              "Power vs. Intimacy",
+              "Being Known vs. Being in Control",
+              "Trust vs. Control"
             ]
           }
         },
@@ -5289,7 +5640,7 @@
             "value": "Belonging vs. Integrity"
           },
           "input": {
-            "type": "select",
+            "type": "multiselect",
             "source": "fixed",
             "options": [
               {
@@ -5304,7 +5655,34 @@
                 "value": "Fitting In vs. Being Real",
                 "label": "Fitting In vs. Being Real"
               }
+            ],
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": [
+              "Compliance vs. Authenticity",
+              "Pleasing Others vs. Staying True to Self",
+              "Fitting In vs. Being Real"
             ]
+          }
+        },
+        {
+          "name": "narrative",
+          "label": "Narrative",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "adaptive_alternatives",
+          "label": "Adaptive Alternatives",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
           }
         }
       ],
@@ -5314,6 +5692,16 @@
       "title": "Create New Behavior Function",
       "name": "Create New Behavior Function",
       "fields": [
+        {
+          "name": "behavior_name",
+          "label": "Behavior Function Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
         {
           "name": "function_group",
           "label": "Behavior Function Groups",
@@ -5712,6 +6100,16 @@
                 "label": "Ensure Fairness"
               }
             ]
+          }
+        },
+        {
+          "name": "why",
+          "label": "Why Do People Function Like This? ",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
           }
         }
       ],
@@ -6468,6 +6866,16 @@
       "name": "Create New Soothing Resource",
       "fields": [
         {
+          "name": "resource_name",
+          "label": "Soothing Resource Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
           "name": "resource_type",
           "label": "Soothing Resource Type",
           "description": "",
@@ -6990,8 +7398,7 @@
               "Strong Reactions To Perceived Rejection",
               "Testing Partner’s Loyalty Or Love"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -7013,8 +7420,7 @@
               "Feeling “Too Much” or “Not Enough”",
               "Avoiding Conflict Through Detachment"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -7038,8 +7444,7 @@
               "Fear Of Engulfment",
               "Sabotaging Closeness When It Feels Threatening"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -7061,8 +7466,7 @@
               "Compulsive Caretaking",
               "Rescuing Or Needing To Be Rescued"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -7082,18 +7486,17 @@
               "Difficulty Sustaining Intimacy",
               "Sabotaging Closeness When It Feels Threatening"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
           "name": "integration_group",
           "label": "Integration Group",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "select",
-            "allowUnknownValues": false,
-            "hidden": false,
+            "source": "fixed",
             "options": [
               {
                 "value": "Core Skills to Practice",
@@ -7115,44 +7518,44 @@
                 "value": "External Support",
                 "label": "External Support"
               }
-            ],
-            "source": "fixed"
-          },
-          "isRequired": false
+            ]
+          }
         },
         {
           "name": "itype_core",
           "label": "Core Skills to Practice",
           "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Core Skills to Practice"
+          },
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
+            "source": "fixed",
             "multi_select_options": [
               "Practice Identifying And Naming Emotional Needs",
               "Learn To Tolerate Healthy Emotional Discomfort",
               "Learn To Ask Directly For Reassurance Or Space",
               "Practice Staying Emotionally Present In Discomfort"
             ],
-            "source": "fixed"
-          },
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Core Skills to Practice"
-          },
-          "isRequired": false
+            "allowUnknownValues": false
+          }
         },
         {
           "name": "itype_relational",
           "label": "Relational Repair & Connection",
           "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Relational Repair & Connection"
+          },
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
+            "source": "fixed",
             "multi_select_options": [
               "Build Safety Through Consistent Relationships",
               "Create Rituals Of Connection And Repair",
@@ -7160,81 +7563,400 @@
               "Normalize The Presence Of Conflict In Healthy Love",
               "Build Trust Slowly Through Repeat Experiences"
             ],
-            "source": "fixed"
-          },
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Relational Repair & Connection"
-          },
-          "isRequired": false
+            "allowUnknownValues": false
+          }
         },
         {
           "name": "itype_somatic",
           "label": "Somatic & Emotional Regulation",
           "description": "",
-          "input": {
-            "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [
-              "Engage In Body-Based Calming Practices",
-              "Use Grounding Tools During Conflict Or Distance",
-              "Practice Self-Soothing Techniques"
-            ],
-            "source": "fixed"
-          },
+          "isRequired": false,
           "condition": {
             "dependencyName": "integration_group",
             "type": "isExactly",
             "value": "Somatic & Emotional Regulation"
           },
-          "isRequired": false
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Engage In Body-Based Calming Practices",
+              "Use Grounding Tools During Conflict Or Distance",
+              "Practice Self-Soothing Techniques"
+            ],
+            "allowUnknownValues": false
+          }
         },
         {
           "name": "itype_cognitive",
           "label": "Cognitive Reframing",
           "description": "",
-          "input": {
-            "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [
-              "Name And Challenge All-Or-Nothing Thinking",
-              "Notice Protective Patterns And Pause Before Acting",
-              "Journal To Explore Emotional Triggers"
-            ],
-            "source": "fixed"
-          },
+          "isRequired": false,
           "condition": {
             "dependencyName": "integration_group",
             "type": "isExactly",
             "value": "Cognitive Reframing"
           },
-          "isRequired": false
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Name And Challenge All-Or-Nothing Thinking",
+              "Notice Protective Patterns And Pause Before Acting",
+              "Journal To Explore Emotional Triggers"
+            ],
+            "allowUnknownValues": false
+          }
         },
         {
           "name": "itype_external",
           "label": "External Support",
           "description": "",
-          "input": {
-            "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [
-              "Explore Therapy To Re-Pattern Early Attachment Wounds"
-            ],
-            "source": "fixed"
-          },
+          "isRequired": false,
           "condition": {
             "dependencyName": "integration_group",
             "type": "isExactly",
             "value": "External Support"
           },
-          "isRequired": false
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Explore Therapy To Re-Pattern Early Attachment Wounds"
+            ],
+            "allowUnknownValues": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Trigger Flag Picker",
+      "name": "Picker_Trigger Flag Picker",
+      "fields": [
+        {
+          "name": "flag_group",
+          "label": "Trigger Flag Group",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Rooted History",
+                "label": "Rooted History"
+              },
+              {
+                "value": "Emotional Overload",
+                "label": "Emotional Overload"
+              },
+              {
+                "value": "Power Dynamics & Identity",
+                "label": "Power Dynamics & Identity"
+              },
+              {
+                "value": "Relational Wounding",
+                "label": "Relational Wounding"
+              },
+              {
+                "value": "Avoidance or Distortion",
+                "label": "Avoidance or Distortion"
+              },
+              {
+                "value": "Time Pattern & Context",
+                "label": "Time Pattern & Context"
+              },
+              {
+                "value": "Cognitive or Sensory Basis",
+                "label": "Cognitive or Sensory Basis"
+              },
+              {
+                "value": "Boundary Disruptions",
+                "label": "Boundary Disruptions"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_rooted",
+          "label": "Rooted History Trigger Flag Types",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "flag_group",
+            "type": "isExactly",
+            "value": "Rooted History"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Inherited",
+                "label": "Inherited"
+              },
+              {
+                "value": "Trauma-Linked",
+                "label": "Trauma-Linked"
+              },
+              {
+                "value": "Culturally Conditioned",
+                "label": "Culturally Conditioned"
+              },
+              {
+                "value": "Spiritually Significant",
+                "label": "Spiritually Significant"
+              },
+              {
+                "value": "Pre-Verbal",
+                "label": "Pre-Verbal"
+              },
+              {
+                "value": "Post-Event Realization",
+                "label": "Post-Event Realization"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_emotion",
+          "label": "Emotional Overload Trigger Flag Types",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "flag_group",
+            "type": "isExactly",
+            "value": "Emotional Overload"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Emotional Flooding",
+                "label": "Emotional Flooding"
+              },
+              {
+                "value": "Frozen / Numb Response",
+                "label": "Frozen / Numb Response"
+              },
+              {
+                "value": "Dissociation Risk",
+                "label": "Dissociation Risk"
+              },
+              {
+                "value": "Overpowering",
+                "label": "Overpowering"
+              },
+              {
+                "value": "Amplified",
+                "label": "Amplified"
+              },
+              {
+                "value": "Delayed Activation",
+                "label": "Delayed Activation"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_power",
+          "label": "Power Dynamics & Identity Trigger Flag Types",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "flag_group",
+            "type": "isExactly",
+            "value": "Power Dynamics & Identity"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Role-Based",
+                "label": "Role-Based"
+              },
+              {
+                "value": "Authority-Related",
+                "label": "Authority-Related"
+              },
+              {
+                "value": "Identity-Threatening",
+                "label": "Identity-Threatening"
+              },
+              {
+                "value": "Power Imbalance",
+                "label": "Power Imbalance"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_relational",
+          "label": "Relational Wounding Trigger Flag Types",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "flag_group",
+            "type": "isExactly",
+            "value": "Relational Wounding"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Relationship-Triggered",
+                "label": "Relationship-Triggered"
+              },
+              {
+                "value": "Betrayal-Based",
+                "label": "Betrayal-Based"
+              },
+              {
+                "value": "Neglect-Based",
+                "label": "Neglect-Based"
+              },
+              {
+                "value": "Shame-Inducing",
+                "label": "Shame-Inducing"
+              },
+              {
+                "value": "Guilt-Inducing",
+                "label": "Guilt-Inducing"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_avoidance",
+          "label": "Avoidance or Distortion Trigger Flag Types",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "flag_group",
+            "type": "isExactly",
+            "value": "Avoidance or Distortion"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Avoided",
+                "label": "Avoided"
+              },
+              {
+                "value": "Minimized",
+                "label": "Minimized"
+              },
+              {
+                "value": "Misattributed",
+                "label": "Misattributed"
+              },
+              {
+                "value": "Subtle",
+                "label": "Subtle"
+              },
+              {
+                "value": "Unconscious",
+                "label": "Unconscious"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_time",
+          "label": "Time Pattern & Context Trigger Flag Types",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "flag_group",
+            "type": "isExactly",
+            "value": "Time Pattern & Context"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Acute",
+                "label": "Acute"
+              },
+              {
+                "value": "Chronic",
+                "label": "Chronic"
+              },
+              {
+                "value": "Repeating Pattern",
+                "label": "Repeating Pattern"
+              },
+              {
+                "value": "First-Time Experience",
+                "label": "First-Time Experience"
+              },
+              {
+                "value": "Unexpected",
+                "label": "Unexpected"
+              },
+              {
+                "value": "Compounded (Layered)",
+                "label": "Compounded (Layered)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_cognitive",
+          "label": "Cognitive or Sensory Basis Trigger Flag Types",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "flag_group",
+            "type": "isExactly",
+            "value": "Cognitive or Sensory Basis"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Symbolic",
+                "label": "Symbolic"
+              },
+              {
+                "value": "Thought-Driven",
+                "label": "Thought-Driven"
+              },
+              {
+                "value": "Sensory-Driven",
+                "label": "Sensory-Driven"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_boudnay",
+          "label": "Boundary Disruptions Trigger Flag Types",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "flag_group",
+            "type": "isExactly",
+            "value": "Boundary Disruptions"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Boundary-Crossing",
+                "label": "Boundary-Crossing"
+              }
+            ]
+          }
         }
       ],
       "version": "1"

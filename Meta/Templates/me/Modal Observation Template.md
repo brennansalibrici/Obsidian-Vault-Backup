@@ -27,7 +27,7 @@ await observation.createFileWithFrontmatter({
   created: observation.formatUtils.db_formatDateTime(new Date()),
   last_modified: observation.formatUtils.db_formatDateTime(new Date()),
   source_daily_note: observation.generateDailyNoteLink(),
-  feelings: result.data.feelings
+  emotions: result.data.feelings
 });
 
 -%>

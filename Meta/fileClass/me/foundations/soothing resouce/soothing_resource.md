@@ -15,20 +15,22 @@ fieldsOrder:
   - 4FXzVD
   - inGwd5
   - Gisvor
-version: "2.10"
+version: "2.12"
 fields:
   - name: soothing_effects
     type: Multi
     options:
-      sourceType: ValuesList
+      sourceType: ValuesListNotePath
       valuesList: {}
+      valuesListNotePath: Meta/fileClass/me/foundations/soothing resouce/lists/soothing resources effects list.md
     path: ""
     id: Gisvor
   - name: regulation_zone
     type: Select
     options:
-      sourceType: ValuesList
+      sourceType: ValuesListNotePath
       valuesList: {}
+      valuesListNotePath: Meta/fileClass/me/foundations/soothing resouce/lists/soothing resource regulation zone list.md
     path: ""
     id: inGwd5
   - name: access_mode

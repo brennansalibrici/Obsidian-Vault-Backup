@@ -20,7 +20,7 @@ priority: "⚪ None"
 visibility: "🔒 private"
 
 # INNER CHECK-IN DEFINITION:
-source_daily_note: [[<% tp.date.now("YYYY-MM-DD") %>]]
+source_daily_note: ""
 event_date_time: ""
 driver: []
 motive: []
