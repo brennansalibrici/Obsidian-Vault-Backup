@@ -25,7 +25,7 @@ fieldsOrder:
   - nfo0a7
   - BC6IsL
   - ZBFRlP
-version: "2.134"
+version: "2.136"
 fields:
   - name: partner_attunement
     type: Input
@@ -109,15 +109,17 @@ fields:
   - name: progression_from
     type: Multi
     options:
-      sourceType: ValuesList
+      sourceType: ValuesListNotePath
       valuesList: {}
+      valuesListNotePath: Meta/fileClass/me/foundations/attachment/style/lists/attachment style type list.md
     path: ""
     id: 3AKlMw
   - name: progression_to
     type: Multi
     options:
-      sourceType: ValuesList
+      sourceType: ValuesListNotePath
       valuesList: {}
+      valuesListNotePath: Meta/fileClass/me/foundations/attachment/style/lists/attachment style type list.md
     path: ""
     id: d2TLPn
   - name: definition

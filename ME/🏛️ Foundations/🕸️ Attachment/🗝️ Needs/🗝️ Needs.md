@@ -13,7 +13,7 @@ id: ""
 hidden: false
 actions:
   - type: runTemplaterFile
-    templateFile: Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Tempalte.md
+    templateFile: Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Template.md
 
 ```
 

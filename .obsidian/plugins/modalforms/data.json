@@ -3538,12 +3538,22 @@
       "version": "1"
     },
     {
-      "title": "Create New Attachment Theory Style",
-      "name": "Create New Attachment Theory Style",
+      "title": "Create New Attachment Style",
+      "name": "Create New Attachment Style",
       "fields": [
         {
+          "name": "style_name",
+          "label": "Style Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
           "name": "style_group",
-          "label": "Style Group - LEAVE THIS OFF THE FORM. SET IT WITH TEMPLATE CONTROLLER",
+          "label": "Style Group",
           "description": "The overall categories or groups of the different types of attachment styles",
           "isRequired": false,
           "input": {
@@ -3894,8 +3904,52 @@
           }
         },
         {
-          "name": "relational_effects_group",
-          "label": "Relational Effect Groups",
+          "name": "progression_from",
+          "label": "Progression From",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Secure",
+              "Anxious Preoccupied",
+              "Dismissive Avoidant",
+              "Fearful Avoidant",
+              "Disorganized Reactive",
+              "Disorganized Unresolved",
+              "Anxious-Avoidant Mixed",
+              "Earned Secure"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "progression_to",
+          "label": "Progression To",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Secure",
+              "Anxious Preoccupied",
+              "Dismissive Avoidant",
+              "Fearful Avoidant",
+              "Disorganized Reactive",
+              "Disorganized Unresolved",
+              "Anxious-Avoidant Mixed",
+              "Earned Secure"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "rupture_group",
+          "label": "Rupture Group",
           "description": "",
           "isRequired": false,
           "input": {
@@ -3903,276 +3957,159 @@
             "source": "fixed",
             "options": [
               {
-                "value": "Trust & Safety Challenges",
-                "label": "Trust & Safety Challenges"
+                "value": "Neglect-Based",
+                "label": "Neglect-Based"
               },
               {
-                "value": "Vulnerability & Expression",
-                "label": "Vulnerability & Expression"
+                "value": "Misattunement-Based",
+                "label": "Misattunement-Based"
               },
               {
-                "value": "Closeness & Distance Dynamics",
-                "label": "Closeness & Distance Dynamics"
+                "value": "Boundary & Identity",
+                "label": "Boundary & Identity"
               },
               {
-                "value": "Communication & Conflict",
-                "label": "Communication & Conflict"
-              },
-              {
-                "value": "Self-Perception in Relationship",
-                "label": "Self-Perception in Relationship"
+                "value": "Attachment Breaks/Disruptions",
+                "label": "Attachment Breaks/Disruptions"
               }
             ]
           }
         },
         {
-          "name": "rtype_trust",
-          "label": "Trust & Safety Effects",
+          "name": "rtype_neglect",
+          "label": "Neglect-Based Ruptures",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "relational_effects_group",
+            "dependencyName": "rupture_group",
             "type": "isExactly",
-            "value": "Trust & Safety Challenges"
+            "value": "Neglect-Based"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              "",
-              "Difficulty Trusting  Others",
-              "Hypervigilance To Emotional Shifts",
-              "Misreading Partner’s Intentions",
-              "Strong Reactions To Perceived Rejection",
-              "Testing Partner’s Loyalty Or Love"
+              "Neglect",
+              "Invisibility",
+              "Emotional Absence",
+              "Underprotection",
+              "Being Forgotten",
+              "Withholding",
+              "Abandonment"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
-          "name": "rtype_vulnerable",
-          "label": "Vulnerability & Expression",
+          "name": "rtype_misattunement",
+          "label": "Misattunement-Based Ruptures",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "relational_effects_group",
+            "dependencyName": "rupture_group",
             "type": "isExactly",
-            "value": "Vulnerability & Expression"
+            "value": "Misattunement-Based"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              "Difficulty Expressing Needs Directly",
-              "Tendency To Avoid Vulnerability",
-              "Feeling “Too Much” or “Not Enough”",
-              "Avoiding Conflict Through Detachment"
+              "Misattunement",
+              "Inconsistency",
+              "Dismissal",
+              "Criticism",
+              "Invalidational",
+              "Shaming"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
-          "name": "rtype_closeness",
-          "label": "Closeness & Distance Dynamics",
+          "name": "rtype_boundary",
+          "label": "Boundary & Identity Ruptures",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "relational_effects_group",
+            "dependencyName": "rupture_group",
             "type": "isExactly",
-            "value": "Closeness & Distance Dynamics"
+            "value": "Boundary & Identity"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              " Of Abandonment",
-              "Clinginess Or Emotional Over-Dependence",
-              "Emotional Withdrawal Or Shutdown",
-              "Push-Pull Relational Patterns",
-              "Fear Of Engulfment",
-              "Sabotaging Closeness When It Feels Threatening"
+              "Enmeshment",
+              "Overcontrol",
+              "Reversal of Roles",
+              "Punishment for Authenticity",
+              "Conditional Love",
+              "Overprotection"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
-          "name": "rtype_communcation",
-          "label": "Communication & Conflict",
+          "name": "rtype_breaks",
+          "label": "Attachment Break/Disruption Ruptures",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "relational_effects_group",
+            "dependencyName": "rupture_group",
             "type": "isExactly",
-            "value": "Communication & Conflict"
+            "value": "Attachment Breaks/Disruptions"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              "Inconsistent Signals In Relationships",
-              "Conflict Avoidance",
-              "Compulsive Caretaking",
-              "Rescuing Or Needing To Be Rescued"
+              "Loss or Separation",
+              "Disruption of Safety"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
-          "name": "rtype_self",
-          "label": "Self-Perception in Relationship",
+          "name": "internal_challenges",
+          "label": "Internal Challenges",
           "description": "",
           "isRequired": false,
-          "condition": {
-            "dependencyName": "relational_effects_group",
-            "type": "isExactly",
-            "value": "Self-Perception in Relationship"
-          },
           "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Difficulty Sustaining Intimacy",
-              "Sabotaging Closeness When It Feels Threatening"
-            ],
-            "allowUnknownValues": false
+            "type": "textarea",
+            "hidden": false
           }
         },
         {
-          "name": "integration_group",
-          "label": "Integration Group",
+          "name": "relational_challenges",
+          "label": "Relational Challenges",
           "description": "",
           "isRequired": false,
           "input": {
-            "type": "select",
-            "source": "fixed",
-            "options": [
-              {
-                "value": "Core Skills to Practice",
-                "label": "Core Skills to Practice"
-              },
-              {
-                "value": "Relational Repair & Connection",
-                "label": "Relational Repair & Connection"
-              },
-              {
-                "value": "Somatic & Emotional Regulation",
-                "label": "Somatic & Emotional Regulation"
-              },
-              {
-                "value": "Cognitive Reframing",
-                "label": "Cognitive Reframing"
-              },
-              {
-                "value": "External Support",
-                "label": "External Support"
-              }
-            ]
+            "type": "textarea",
+            "hidden": false
           }
         },
         {
-          "name": "itype_core",
-          "label": "Core Skills to Practice",
+          "name": "partner_attunement",
+          "label": "Partner Attunement",
           "description": "",
           "isRequired": false,
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Core Skills to Practice"
-          },
           "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Practice Identifying And Naming Emotional Needs",
-              "Learn To Tolerate Healthy Emotional Discomfort",
-              "Learn To Ask Directly For Reassurance Or Space",
-              "Practice Staying Emotionally Present In Discomfort"
-            ],
-            "allowUnknownValues": false
+            "type": "textarea",
+            "hidden": false
           }
         },
         {
-          "name": "itype_relational",
-          "label": "Relational Repair & Connection",
+          "name": "definition",
+          "label": "Definition",
           "description": "",
           "isRequired": false,
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Relational Repair & Connection"
-          },
           "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Build Safety Through Consistent Relationships",
-              "Create Rituals Of Connection And Repair",
-              "Share Fears Vulnerably Instead Of Defensively",
-              "Normalize The Presence Of Conflict In Healthy Love",
-              "Build Trust Slowly Through Repeat Experiences"
-            ],
-            "allowUnknownValues": false
-          }
-        },
-        {
-          "name": "itype_somatic",
-          "label": "Somatic & Emotional Regulation",
-          "description": "",
-          "isRequired": false,
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Somatic & Emotional Regulation"
-          },
-          "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Engage In Body-Based Calming Practices",
-              "Use Grounding Tools During Conflict Or Distance",
-              "Practice Self-Soothing Techniques"
-            ],
-            "allowUnknownValues": false
-          }
-        },
-        {
-          "name": "itype_cognitive",
-          "label": "Cognitive Reframing",
-          "description": "",
-          "isRequired": false,
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Cognitive Reframing"
-          },
-          "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Name And Challenge All-Or-Nothing Thinking",
-              "Notice Protective Patterns And Pause Before Acting",
-              "Journal To Explore Emotional Triggers"
-            ],
-            "allowUnknownValues": false
-          }
-        },
-        {
-          "name": "itype_external",
-          "label": "External Support",
-          "description": "",
-          "isRequired": false,
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "External Support"
-          },
-          "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Explore Therapy To Re-Pattern Early Attachment Wounds"
-            ],
-            "allowUnknownValues": false
+            "type": "textarea",
+            "hidden": false
           }
         }
       ],
@@ -7223,12 +7160,22 @@
       "version": "1"
     },
     {
-      "title": "Create New Attachment Theory Style",
-      "name": "Create New Attachment Theory Style",
+      "title": "Create New Attachment Style",
+      "name": "Create New Attachment Style",
       "fields": [
         {
+          "name": "style_name",
+          "label": "Style Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
           "name": "style_group",
-          "label": "Style Group - LEAVE THIS OFF THE FORM. SET IT WITH TEMPLATE CONTROLLER",
+          "label": "Style Group",
           "description": "The overall categories or groups of the different types of attachment styles",
           "isRequired": false,
           "input": {
@@ -7579,8 +7526,52 @@
           }
         },
         {
-          "name": "relational_effects_group",
-          "label": "Relational Effect Groups",
+          "name": "progression_from",
+          "label": "Progression From",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Secure",
+              "Anxious Preoccupied",
+              "Dismissive Avoidant",
+              "Fearful Avoidant",
+              "Disorganized Reactive",
+              "Disorganized Unresolved",
+              "Anxious-Avoidant Mixed",
+              "Earned Secure"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "progression_to",
+          "label": "Progression To",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Secure",
+              "Anxious Preoccupied",
+              "Dismissive Avoidant",
+              "Fearful Avoidant",
+              "Disorganized Reactive",
+              "Disorganized Unresolved",
+              "Anxious-Avoidant Mixed",
+              "Earned Secure"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "rupture_group",
+          "label": "Rupture Group",
           "description": "",
           "isRequired": false,
           "input": {
@@ -7588,276 +7579,159 @@
             "source": "fixed",
             "options": [
               {
-                "value": "Trust & Safety Challenges",
-                "label": "Trust & Safety Challenges"
+                "value": "Neglect-Based",
+                "label": "Neglect-Based"
               },
               {
-                "value": "Vulnerability & Expression",
-                "label": "Vulnerability & Expression"
+                "value": "Misattunement-Based",
+                "label": "Misattunement-Based"
               },
               {
-                "value": "Closeness & Distance Dynamics",
-                "label": "Closeness & Distance Dynamics"
+                "value": "Boundary & Identity",
+                "label": "Boundary & Identity"
               },
               {
-                "value": "Communication & Conflict",
-                "label": "Communication & Conflict"
-              },
-              {
-                "value": "Self-Perception in Relationship",
-                "label": "Self-Perception in Relationship"
+                "value": "Attachment Breaks/Disruptions",
+                "label": "Attachment Breaks/Disruptions"
               }
             ]
           }
         },
         {
-          "name": "rtype_trust",
-          "label": "Trust & Safety Effects",
+          "name": "rtype_neglect",
+          "label": "Neglect-Based Ruptures",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "relational_effects_group",
+            "dependencyName": "rupture_group",
             "type": "isExactly",
-            "value": "Trust & Safety Challenges"
+            "value": "Neglect-Based"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              "",
-              "Difficulty Trusting  Others",
-              "Hypervigilance To Emotional Shifts",
-              "Misreading Partner’s Intentions",
-              "Strong Reactions To Perceived Rejection",
-              "Testing Partner’s Loyalty Or Love"
+              "Neglect",
+              "Invisibility",
+              "Emotional Absence",
+              "Underprotection",
+              "Being Forgotten",
+              "Withholding",
+              "Abandonment"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
-          "name": "rtype_vulnerable",
-          "label": "Vulnerability & Expression",
+          "name": "rtype_misattunement",
+          "label": "Misattunement-Based Ruptures",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "relational_effects_group",
+            "dependencyName": "rupture_group",
             "type": "isExactly",
-            "value": "Vulnerability & Expression"
+            "value": "Misattunement-Based"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              "Difficulty Expressing Needs Directly",
-              "Tendency To Avoid Vulnerability",
-              "Feeling “Too Much” or “Not Enough”",
-              "Avoiding Conflict Through Detachment"
+              "Misattunement",
+              "Inconsistency",
+              "Dismissal",
+              "Criticism",
+              "Invalidational",
+              "Shaming"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
-          "name": "rtype_closeness",
-          "label": "Closeness & Distance Dynamics",
+          "name": "rtype_boundary",
+          "label": "Boundary & Identity Ruptures",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "relational_effects_group",
+            "dependencyName": "rupture_group",
             "type": "isExactly",
-            "value": "Closeness & Distance Dynamics"
+            "value": "Boundary & Identity"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              " Of Abandonment",
-              "Clinginess Or Emotional Over-Dependence",
-              "Emotional Withdrawal Or Shutdown",
-              "Push-Pull Relational Patterns",
-              "Fear Of Engulfment",
-              "Sabotaging Closeness When It Feels Threatening"
+              "Enmeshment",
+              "Overcontrol",
+              "Reversal of Roles",
+              "Punishment for Authenticity",
+              "Conditional Love",
+              "Overprotection"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
-          "name": "rtype_communcation",
-          "label": "Communication & Conflict",
+          "name": "rtype_breaks",
+          "label": "Attachment Break/Disruption Ruptures",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "relational_effects_group",
+            "dependencyName": "rupture_group",
             "type": "isExactly",
-            "value": "Communication & Conflict"
+            "value": "Attachment Breaks/Disruptions"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              "Inconsistent Signals In Relationships",
-              "Conflict Avoidance",
-              "Compulsive Caretaking",
-              "Rescuing Or Needing To Be Rescued"
+              "Loss or Separation",
+              "Disruption of Safety"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
-          "name": "rtype_self",
-          "label": "Self-Perception in Relationship",
+          "name": "internal_challenges",
+          "label": "Internal Challenges",
           "description": "",
           "isRequired": false,
-          "condition": {
-            "dependencyName": "relational_effects_group",
-            "type": "isExactly",
-            "value": "Self-Perception in Relationship"
-          },
           "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Difficulty Sustaining Intimacy",
-              "Sabotaging Closeness When It Feels Threatening"
-            ],
-            "allowUnknownValues": false
+            "type": "textarea",
+            "hidden": false
           }
         },
         {
-          "name": "integration_group",
-          "label": "Integration Group",
+          "name": "relational_challenges",
+          "label": "Relational Challenges",
           "description": "",
           "isRequired": false,
           "input": {
-            "type": "select",
-            "source": "fixed",
-            "options": [
-              {
-                "value": "Core Skills to Practice",
-                "label": "Core Skills to Practice"
-              },
-              {
-                "value": "Relational Repair & Connection",
-                "label": "Relational Repair & Connection"
-              },
-              {
-                "value": "Somatic & Emotional Regulation",
-                "label": "Somatic & Emotional Regulation"
-              },
-              {
-                "value": "Cognitive Reframing",
-                "label": "Cognitive Reframing"
-              },
-              {
-                "value": "External Support",
-                "label": "External Support"
-              }
-            ]
+            "type": "textarea",
+            "hidden": false
           }
         },
         {
-          "name": "itype_core",
-          "label": "Core Skills to Practice",
+          "name": "partner_attunement",
+          "label": "Partner Attunement",
           "description": "",
           "isRequired": false,
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Core Skills to Practice"
-          },
           "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Practice Identifying And Naming Emotional Needs",
-              "Learn To Tolerate Healthy Emotional Discomfort",
-              "Learn To Ask Directly For Reassurance Or Space",
-              "Practice Staying Emotionally Present In Discomfort"
-            ],
-            "allowUnknownValues": false
+            "type": "textarea",
+            "hidden": false
           }
         },
         {
-          "name": "itype_relational",
-          "label": "Relational Repair & Connection",
+          "name": "definition",
+          "label": "Definition",
           "description": "",
           "isRequired": false,
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Relational Repair & Connection"
-          },
           "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Build Safety Through Consistent Relationships",
-              "Create Rituals Of Connection And Repair",
-              "Share Fears Vulnerably Instead Of Defensively",
-              "Normalize The Presence Of Conflict In Healthy Love",
-              "Build Trust Slowly Through Repeat Experiences"
-            ],
-            "allowUnknownValues": false
-          }
-        },
-        {
-          "name": "itype_somatic",
-          "label": "Somatic & Emotional Regulation",
-          "description": "",
-          "isRequired": false,
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Somatic & Emotional Regulation"
-          },
-          "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Engage In Body-Based Calming Practices",
-              "Use Grounding Tools During Conflict Or Distance",
-              "Practice Self-Soothing Techniques"
-            ],
-            "allowUnknownValues": false
-          }
-        },
-        {
-          "name": "itype_cognitive",
-          "label": "Cognitive Reframing",
-          "description": "",
-          "isRequired": false,
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "Cognitive Reframing"
-          },
-          "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Name And Challenge All-Or-Nothing Thinking",
-              "Notice Protective Patterns And Pause Before Acting",
-              "Journal To Explore Emotional Triggers"
-            ],
-            "allowUnknownValues": false
-          }
-        },
-        {
-          "name": "itype_external",
-          "label": "External Support",
-          "description": "",
-          "isRequired": false,
-          "condition": {
-            "dependencyName": "integration_group",
-            "type": "isExactly",
-            "value": "External Support"
-          },
-          "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Explore Therapy To Re-Pattern Early Attachment Wounds"
-            ],
-            "allowUnknownValues": false
+            "type": "textarea",
+            "hidden": false
           }
         }
       ],
@@ -8189,6 +8063,584 @@
                 "label": "Boundary-Crossing"
               }
             ]
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Create New Attachment Style",
+      "name": "Create New Attachment Theory-copy",
+      "fields": [
+        {
+          "name": "style_name",
+          "label": "Style Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "style_group",
+          "label": "Style Group",
+          "description": "The overall categories or groups of the different types of attachment styles",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Secure",
+                "label": "Secure"
+              },
+              {
+                "value": "Insecure",
+                "label": "Insecure"
+              },
+              {
+                "value": "Disorganized",
+                "label": "Disorganized"
+              }
+            ]
+          }
+        },
+        {
+          "name": "style_type",
+          "label": "Attachment Style Type",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Secure",
+                "label": "Secure"
+              },
+              {
+                "value": "Anxious Preoccupied",
+                "label": "Anxious Preoccupied"
+              },
+              {
+                "value": "Dismissive Avoidant",
+                "label": "Dismissive Avoidant"
+              },
+              {
+                "value": "Fearful Avoidant",
+                "label": "Fearful Avoidant"
+              },
+              {
+                "value": "Disorganized Reactive",
+                "label": "Disorganized Reactive"
+              },
+              {
+                "value": "Disorganized Unresolved",
+                "label": "Disorganized Unresolved"
+              },
+              {
+                "value": "Anxious-Avoidant Mixed",
+                "label": "Anxious-Avoidant Mixed"
+              },
+              {
+                "value": "Earned Secure",
+                "label": "Earned Secure"
+              }
+            ]
+          }
+        },
+        {
+          "name": "style_subtype",
+          "label": "Attachment Style Subtype",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Anxious with Avoidant Traits",
+                "label": "Anxious with Avoidant Traits"
+              },
+              {
+                "value": "Avoidant with Anxious Traits",
+                "label": "Avoidant with Anxious Traits"
+              },
+              {
+                "value": "Earned Secure from Anxious",
+                "label": "Earned Secure from Anxious"
+              },
+              {
+                "value": "Earned Secure from Avoidant",
+                "label": "Earned Secure from Avoidant"
+              },
+              {
+                "value": "Earned Secure from Disorganized",
+                "label": "Earned Secure from Disorganized"
+              },
+              {
+                "value": "Earned Secure – Mixed Origin",
+                "label": "Earned Secure – Mixed Origin"
+              },
+              {
+                "value": "Disorganized Reactive",
+                "label": "Disorganized Reactive"
+              },
+              {
+                "value": "Disorganized Withdrawn",
+                "label": "Disorganized Withdrawn"
+              },
+              {
+                "value": "Anxious Reactive",
+                "label": "Anxious Reactive"
+              },
+              {
+                "value": "Avoidant Dismissive",
+                "label": "Avoidant Dismissive"
+              },
+              {
+                "value": "Avoidant Shutdown",
+                "label": "Avoidant Shutdown"
+              },
+              {
+                "value": "Secure with Anxious Sensitivities",
+                "label": "Secure with Anxious Sensitivities"
+              },
+              {
+                "value": "Secure with Avoidant Boundaries",
+                "label": "Secure with Avoidant Boundaries"
+              },
+              {
+                "value": "Secure with Disorganized Echoes",
+                "label": "Secure with Disorganized Echoes"
+              },
+              {
+                "value": "Fearful Avoidant Split",
+                "label": "Fearful Avoidant Split"
+              }
+            ]
+          }
+        },
+        {
+          "name": "style_pattern",
+          "label": "Attachment Style Pattern",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Blended",
+                "label": "Blended"
+              },
+              {
+                "value": "Protective Variant",
+                "label": "Protective Variant"
+              },
+              {
+                "value": "Earned Secure",
+                "label": "Earned Secure"
+              },
+              {
+                "value": "Secure-Plus",
+                "label": "Secure-Plus"
+              }
+            ]
+          }
+        },
+        {
+          "name": "core_fears_group",
+          "label": "Core Fears Group",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Relational",
+                "label": "Relational"
+              },
+              {
+                "value": "Identity & Worth",
+                "label": "Identity & Worth"
+              },
+              {
+                "value": "Vulnerability & Exposure",
+                "label": "Vulnerability & Exposure"
+              },
+              {
+                "value": "Autonomy & Control",
+                "label": "Autonomy & Control"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fear_relational",
+          "label": "Relational Core Fears",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "core_fears_group",
+            "type": "isExactly",
+            "value": "Relational"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Abandonment",
+                "label": "Abandonment"
+              },
+              {
+                "value": "Rejection",
+                "label": "Rejection"
+              },
+              {
+                "value": "Disconnection",
+                "label": "Disconnection"
+              },
+              {
+                "value": "Being Forgotten",
+                "label": "Being Forgotten"
+              },
+              {
+                "value": "Being Replaced",
+                "label": "Being Replaced"
+              },
+              {
+                "value": "Being Needed",
+                "label": "Being Needed"
+              },
+              {
+                "value": "Conflict",
+                "label": "Conflict"
+              },
+              {
+                "value": "Punishment",
+                "label": "Punishment"
+              },
+              {
+                "value": "Being Unlovable",
+                "label": "Being Unlovable"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fear_identity",
+          "label": "Identity & Worth Core Feas",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "core_fears_group",
+            "type": "isExactly",
+            "value": "Identity & Worth"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Unworthiness",
+                "label": "Unworthiness"
+              },
+              {
+                "value": "Being Not Enough",
+                "label": "Being Not Enough"
+              },
+              {
+                "value": "Being Too Much",
+                "label": "Being Too Much"
+              },
+              {
+                "value": "Failure",
+                "label": "Failure"
+              },
+              {
+                "value": "Letting Someone Down",
+                "label": "Letting Someone Down"
+              },
+              {
+                "value": "Being a Burden",
+                "label": "Being a Burden"
+              },
+              {
+                "value": "Judgment",
+                "label": "Judgment"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fear_vulnerable",
+          "label": "Vulnerability & Exposure Fears",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "core_fears_group",
+            "type": "isExactly",
+            "value": "Vulnerability & Exposure"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Exposure",
+                "label": "Exposure"
+              },
+              {
+                "value": "Being Seen",
+                "label": "Being Seen"
+              },
+              {
+                "value": "Being Vulnerable",
+                "label": "Being Vulnerable"
+              }
+            ]
+          }
+        },
+        {
+          "name": "fear_autonomy",
+          "label": "Autonomy & Control Fears",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "core_fears_group",
+            "type": "isExactly",
+            "value": "Autonomy & Control"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Engulfment",
+                "label": "Engulfment"
+              },
+              {
+                "value": "Being Trapped",
+                "label": "Being Trapped"
+              },
+              {
+                "value": "Losing Control",
+                "label": "Losing Control"
+              }
+            ]
+          }
+        },
+        {
+          "name": "progression_from",
+          "label": "Progression From",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Secure",
+              "Anxious Preoccupied",
+              "Dismissive Avoidant",
+              "Fearful Avoidant",
+              "Disorganized Reactive",
+              "Disorganized Unresolved",
+              "Anxious-Avoidant Mixed",
+              "Earned Secure"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "progression_to",
+          "label": "Progression To",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Secure",
+              "Anxious Preoccupied",
+              "Dismissive Avoidant",
+              "Fearful Avoidant",
+              "Disorganized Reactive",
+              "Disorganized Unresolved",
+              "Anxious-Avoidant Mixed",
+              "Earned Secure"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "rupture_group",
+          "label": "Rupture Group",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Neglect-Based",
+                "label": "Neglect-Based"
+              },
+              {
+                "value": "Misattunement-Based",
+                "label": "Misattunement-Based"
+              },
+              {
+                "value": "Boundary & Identity",
+                "label": "Boundary & Identity"
+              },
+              {
+                "value": "Attachment Breaks/Disruptions",
+                "label": "Attachment Breaks/Disruptions"
+              }
+            ]
+          }
+        },
+        {
+          "name": "rtype_neglect",
+          "label": "Neglect-Based Ruptures",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "rupture_group",
+            "type": "isExactly",
+            "value": "Neglect-Based"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Neglect",
+              "Invisibility",
+              "Emotional Absence",
+              "Underprotection",
+              "Being Forgotten",
+              "Withholding",
+              "Abandonment"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "rtype_misattunement",
+          "label": "Misattunement-Based Ruptures",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "rupture_group",
+            "type": "isExactly",
+            "value": "Misattunement-Based"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Misattunement",
+              "Inconsistency",
+              "Dismissal",
+              "Criticism",
+              "Invalidational",
+              "Shaming"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "rtype_boundary",
+          "label": "Boundary & Identity Ruptures",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "rupture_group",
+            "type": "isExactly",
+            "value": "Boundary & Identity"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Enmeshment",
+              "Overcontrol",
+              "Reversal of Roles",
+              "Punishment for Authenticity",
+              "Conditional Love",
+              "Overprotection"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "rtype_breaks",
+          "label": "Attachment Break/Disruption Ruptures",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "rupture_group",
+            "type": "isExactly",
+            "value": "Attachment Breaks/Disruptions"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Loss or Separation",
+              "Disruption of Safety"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "internal_challenges",
+          "label": "Internal Challenges",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "relational_challenges",
+          "label": "Relational Challenges",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "partner_attunement",
+          "label": "Partner Attunement",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "definition",
+          "label": "Definition",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
           }
         }
       ],

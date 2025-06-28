@@ -6,7 +6,7 @@
       {
         "id": "34caa925daf1e233",
         "type": "tabs",
-        "dimension": 36.051743532058495,
+        "dimension": 31.94029850746269,
         "children": [
           {
             "id": "3f61f7f11069012a",
@@ -24,12 +24,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Test - Dissmisive Avoidant.md",
+                "file": "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Test - Dissmisive Avoidant"
+              "title": "attachment_theory"
+            }
+          },
+          {
+            "id": "373bbbbbceea4454",
+            "type": "leaf",
+            "state": {
+              "type": "FileClassView__me/foundations/attachment/theory/attachment_theory",
+              "state": {},
+              "icon": "heart",
+              "title": "me/foundations/attachment/theory/attachment_theory"
             }
           }
         ]
@@ -37,7 +47,7 @@
       {
         "id": "d8744f42e5dd3c54",
         "type": "tabs",
-        "dimension": 63.94825646794151,
+        "dimension": 28.000000000000004,
         "children": [
           {
             "id": "a44d3435ef33b391",
@@ -45,68 +55,62 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/fileClass/me/foundations/attachment/needs/attachment_need.md",
+                "file": "Meta/fileClass/me/foundations/attachment/style/attachment_style.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "attachment_style"
+            }
+          },
+          {
+            "id": "91bc18fa8ce42233",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/Templates/me/Foundations/Attachment/Modal Attachment Style Template.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Modal Attachment Style Template"
+            }
+          },
+          {
+            "id": "8293e1dd3b2bdbf6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/🔗 Styles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "attachment_need"
+              "title": "🔗 Styles"
             }
-          },
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "f277f63d776292f4",
+        "type": "tabs",
+        "dimension": 40.059701492537314,
+        "children": [
           {
-            "id": "5adba83d5b94f34b",
+            "id": "5b800c925530bd74",
             "type": "leaf",
             "state": {
-              "type": "FileClassView__me/foundations/attachment/needs/attachment_need",
+              "type": "FileClassView__me/foundations/attachment/style/attachment_style",
               "state": {},
-              "icon": "key-round",
-              "title": "me/foundations/attachment/needs/attachment_need"
+              "icon": "link",
+              "title": "me/foundations/attachment/style/attachment_style"
             }
           },
           {
-            "id": "1fb00e75810ca575",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/Another Test.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Another Test"
-            }
-          },
-          {
-            "id": "b82e033fb4935191",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Tempalte.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Modal Attachment Need Tempalte"
-            }
-          },
-          {
-            "id": "2109f271c8167d82",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ME/🏛️ Foundations/🪖 Protective Strategies/🪖 Protective Strategies.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "🪖 Protective Strategies"
-            }
-          },
-          {
-            "id": "042896f110eeb7a1",
+            "id": "f117e774fbf931b2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -120,41 +124,17 @@
             }
           },
           {
-            "id": "0bfe632a52910937",
+            "id": "9b780723496a7cdd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/fileClass/me/foundations/soothing resouce/soothing_resource.md",
+                "file": "Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "soothing_resource"
-            }
-          },
-          {
-            "id": "98176bedf62528ee",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/foundations/soothing resouce/soothing_resource",
-              "state": {},
-              "icon": "bandage",
-              "title": "me/foundations/soothing resouce/soothing_resource"
-            }
-          },
-          {
-            "id": "5a56cbcf1e7dff17",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Foundations/Modal Protective Strategy Template.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Modal Protective Strategy Template"
+              "title": "Modal Attachment Need Template"
             }
           }
         ],
@@ -283,7 +263,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 373.49999618530273
+    "width": 200
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -450,34 +430,34 @@
       "modalforms:Edit forms": false
     }
   },
-  "active": "1fb00e75810ca575",
+  "active": "3f61f7f11069012a",
   "lastOpenFiles": [
-    "Meta/fileClass/me/foundations/soothing resouce/soothing_resource.md",
-    "Meta/fileClass/me/foundations/emotional need/emotional_need.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/Another Test.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Secure.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Fearful Avoidant.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/🔗 Styles.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Dismissive Avoidant.md",
+    "Meta/Templates/me/Foundations/Attachment/Modal Attachment Style Template.md",
+    "Meta/Templates/me/Foundations/Attachment/Attachment Style Template.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Test - Secure Attachment.md",
     "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/🗝️ Needs.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/A Test of a One.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/A Test ONe.md",
-    "Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Tempalte.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/Test Name.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Test - Dissmisive Avoidant.md",
-    "Meta/Templates/me/Foundations/Modal Protective Strategy Template.md",
-    "Personal/👤 People/Nate Kinney.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/Untitled Attachment Need.md",
-    "Meta/Templates/me/Foundations/Modal Emotional Need Template.md",
+    "Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Template.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Anxious.md",
     "ME/🏛️ Foundations/1_Todo List.md",
-    "Meta/Templates/me/Foundations/Attachment/Attachment Need Template.md",
-    "Meta/fileClass/personal/people/person.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/Test - Being Wanted Not Just Needed.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style type list.md",
+    "Meta/fileClass/me/foundations/attachment/style/attachment_style.md",
+    "Meta/fileClass/me/foundations/foundation element/lists/rupture type list.md",
+    "Meta/fileClass/me/foundations/foundation element/lists/rupture type group list.md",
+    "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Test - Dissmisive Avoidant.md",
+    "Meta/fileClass/me/foundations/foundation element/lists/core fears type list.md",
+    "Meta/fileClass/me/foundations/foundation element/lists/core fears group list.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style pattern list.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style subtype list.md",
+    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style group list.md",
+    "Meta/fileClass/me/foundations/soothing resouce/soothing_resource.md",
     "Meta/fileClass/me/foundations/attachment/needs/attachment_need.md",
-    "Meta/fileClass/me/foundations/protectice strategy/lists/strategy behavior tradeoff type list.md",
-    "ME/🏛️ Foundations/🩹 Soothing Resources/🩹 Soothing Resources.md",
-    "ME/🏛️ Foundations/🪖 Protective Strategies/🪖 Protective Strategies.md",
-    "ME/🏛️ Foundations/🐾 Behavior Functions/🐾 Behavior Functions.md",
-    "ME/🏛️ Foundations/🌀 Emotional Wounds/🌀 Emotional Wounds.md",
-    "ME/🏛️ Foundations/📢 Internal Voices/📢 Internal Voices.md",
-    "Personal/👤 People/👤 People.md",
-    "Personal/👤 People/Dan Schmoyer.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/Trust They Will Come Back.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/Safe to Be Dependent.md",
     "ME/⚡ Triggers",
     "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Boundary Disruptions",
     "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Cognitive or Sensory Basis",
