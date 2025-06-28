@@ -4,7 +4,7 @@ mapWithTag: false
 icon: bandage
 tagNames: 
 filesPaths:
-  - ME/🏛️ Foundations/🪷 Soothing Resources
+  - ME/🏛️ Foundations/🩹 Soothing Resources
 bookmarksGroups: 
 excludes: 
 extends: me/foundations/foundation element/foundation_element
@@ -15,7 +15,7 @@ fieldsOrder:
   - 4FXzVD
   - inGwd5
   - Gisvor
-version: "2.12"
+version: "2.16"
 fields:
   - name: soothing_effects
     type: Multi

@@ -79,16 +79,23 @@ fields:
     options: {}
     path: ""
     id: v3JAxr
-version: "2.62"
+  - name: earned_attachment_support
+    type: Boolean
+    options: {}
+    path: ""
+    id: hNpujt
+version: "2.65"
 limit: 100
 filesPaths:
   - Personal/👤 People
 bookmarksGroups: 
 excludes: 
-extends: _global/global
+extends: 
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - hNpujt
+  - v3JAxr
   - k4woZR
   - kUNAvn
   - tDtjqv
@@ -105,6 +112,6 @@ customer:
 status: 
 email: 
 phone: 
-icon: package
+icon: user
 tagNames: 
 ---

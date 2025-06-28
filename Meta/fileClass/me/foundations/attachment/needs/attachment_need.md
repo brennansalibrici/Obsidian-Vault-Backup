@@ -15,9 +15,10 @@ fieldsOrder:
   - 4xGc3p
   - iDOglN
   - bmg1oz
+  - BLQvYV
   - q8RcS0
   - 2pbobI
-version: "2.9"
+version: "2.15"
 fields:
   - name: partner_attunement_cue
     type: Input
@@ -49,4 +50,18 @@ fields:
     options: {}
     path: ""
     id: btlog8
+  - name: support_source_group
+    type: Select
+    options:
+      sourceType: ValuesList
+      valuesList:
+        "1": 🩹 Soothing Resources
+        "2": 🪖 Protective Strategies
+        "3": 🐾 Behavior Functions
+        "4": 🌀 Emotional Wounds
+        "5": 📢 Internal Voices
+        "6": 👤 People
+        "7": 💖 Attachment Theory or Inputs
+    path: ""
+    id: BLQvYV
 ---

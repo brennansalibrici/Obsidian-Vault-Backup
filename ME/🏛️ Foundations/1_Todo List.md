@@ -15,41 +15,41 @@ Foundations Forms Functioning
 - [ ] Attachment Styles
 - [ ] Attachment Needs
 - [x] Soothing Resources
-- [ ] Protective Strategies
+- [x] Protective Strategies
 - [x] Emotional Needs
 
 look up the protective strategies field lists for behvaior functions and trade-offs and create these as actual objects
 
-Create New Protective Strategy
+Create New Attachment Need
 
-title: Create New Protective Strategy
+title: Create New Attachment Need
 fields: 27
 version: 1
 Field names: 
-strategy_name
-strategy_group
-type_cognitive
-type_behavioral
-type_relational
-type_somatic
-type_emotional
-type_defensive
+aneed_name
+need_group
+type_attachment
+type_attunement
+type_autonomy
 type_identity
-function_group
-ftype_protection
-ftype_emotional
-ftype_relational
-ftype_control
-ftype_cognitive
-tradeoff_group
-ttype_connection
-ttype_safety
-ttype_control
-ttype_shortterm
-ttype_self
-ttype_avoidance
-ttype_familiar
-ttype_power
-ttype_belonging
-adaptive_alternatives
-narrative
+type_security
+type_expression
+type_regulation
+type_competence
+type_meaning
+type_belonging
+type_boundary
+developmental_origins
+attach_style
+rupture_effects
+relational_fulfillment
+relational_risk
+support_source_group
+supports_soothing
+supports_strategy
+supports_behavior
+supports_wounds
+supports_voice
+supports_people
+supports_theory
+partner_attachment_cue

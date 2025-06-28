@@ -24,7 +24,8 @@ class ModalFormUtils {
         EMOTIONAL_WOUND: "emotional wound",
         BEHAVIOR_FUNCTION: "behavior function",
         EMOTIONAL_NEED: "emotional need",
-        PROTECTIVE_STRATEGY: "protective strategy"
+        PROTECTIVE_STRATEGY: "protective strategy",
+        ATTACHMENT_NEED: "attachment need"
     };
 
     static linkFields = [
@@ -42,7 +43,9 @@ class ModalFormUtils {
   "linked_log",
   "source_daily_note",
   "emotions",
-  "threatened_by"
+  "threatened_by",
+  "earned_security_supports",
+  "attachment_style_link"
 ];
 
 
@@ -184,7 +187,15 @@ class ModalFormUtils {
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Protective Strategy");
             }
+        },
+        "attachment need": {
+            folder: "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs",
+            template: "Meta/Templates/me/Foundations/Attachment/Attachment Need Template.md",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Attachment Need");
+            }
         }
+
 
 
 

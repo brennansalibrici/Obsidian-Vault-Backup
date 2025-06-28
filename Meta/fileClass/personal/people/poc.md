@@ -2,7 +2,7 @@
 Created: 
 limit: 20
 mapWithTag: false
-icon: package
+icon: user-pen
 tagNames: 
 filesPaths:
   - Work/👤 POCs
@@ -15,7 +15,7 @@ fieldsOrder:
   - 6C8LtR
   - V00YcY
   - fsorqs
-version: "2.38"
+version: "2.39"
 fields:
   - name: company
     type: File

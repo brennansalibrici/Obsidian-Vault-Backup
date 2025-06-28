@@ -4183,6 +4183,16 @@
       "name": "Create New Attachment Need",
       "fields": [
         {
+          "name": "aneed_name",
+          "label": "Attachment Need Name",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
           "name": "need_group",
           "label": "Need Group",
           "description": "Broad categories or groups of different types of emotional needs",
@@ -4711,6 +4721,229 @@
                 "label": "Unclear Origin"
               }
             ]
+          }
+        },
+        {
+          "name": "attach_style",
+          "label": "Attachment Style",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "rupture_effects",
+          "label": "Rupture Effects",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "relational_fulfillment",
+          "label": "Relational Fulfillment",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "relational_risk",
+          "label": "Relational Risk",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "support_source_group",
+          "label": "Earned Security Supports Groups",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "🩹 Soothing Resources",
+                "label": "🩹 Soothing Resources"
+              },
+              {
+                "value": "🪖 Protective Strategies",
+                "label": "🪖 Protective Strategies"
+              },
+              {
+                "value": "🐾 Behavior Functions",
+                "label": "🐾 Behavior Functions"
+              },
+              {
+                "value": "🌀 Emotional Wounds",
+                "label": "🌀 Emotional Wounds"
+              },
+              {
+                "value": "📢 Internal Voices",
+                "label": "📢 Internal Voices"
+              },
+              {
+                "value": "👤 People",
+                "label": "👤 People"
+              },
+              {
+                "value": "💖 Attachment Theory or Inputs",
+                "label": "💖 Attachment Theory or Inputs"
+              }
+            ]
+          }
+        },
+        {
+          "name": "supports_soothing",
+          "label": "🩹 Soothing Resource Supports",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "support_source_group",
+            "type": "isExactly",
+            "value": "🩹 Soothing Resources"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "supports_strategy",
+          "label": "🪖 Protective Strategy Supports",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "support_source_group",
+            "type": "isExactly",
+            "value": "🪖 Protective Strategies"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "supports_strategy",
+          "label": "🐾 Behavior Function Supports",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "support_source_group",
+            "type": "isExactly",
+            "value": "🐾 Behavior Functions"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🐾 Behavior Functions",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "supports_wound",
+          "label": "🌀 Emotional Wound Supports",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "support_source_group",
+            "type": "isExactly",
+            "value": "🌀 Emotional Wounds"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "supports_voice",
+          "label": "📢 Internal Voice Support",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "support_source_group",
+            "type": "isExactly",
+            "value": "📢 Internal Voices"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "supports_people",
+          "label": "👤 People Support",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "support_source_group",
+            "type": "isExactly",
+            "value": "👤 People"
+          },
+          "input": {
+            "type": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.earned_attachment_support=== true)\n  .map(p => `[[${p.file.name}]]`)"
+          }
+        },
+        {
+          "name": "supports_theory",
+          "label": "💖 Attachment Theory or Inputs",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "support_source_group",
+            "type": "isExactly",
+            "value": "💖 Attachment Theory or Inputs"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "partner_attachment_cue",
+          "label": "Partner Attachment Cue",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
           }
         }
       ],

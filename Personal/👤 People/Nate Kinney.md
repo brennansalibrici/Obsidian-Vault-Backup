@@ -38,6 +38,7 @@ attachments: []
 
 
 practice_lab: true
+earned_attachment_support: true
 ---
 
 ## Details
@@ -50,11 +51,9 @@ practice_lab: true
 ---
 Query in here
 
-
 ## Thoughts
 ---
 Query in here
-
 
 ## Questions To Ask
 ---
