@@ -6,7 +6,7 @@
       {
         "id": "34caa925daf1e233",
         "type": "tabs",
-        "dimension": 31.94029850746269,
+        "dimension": 17.33102253032929,
         "children": [
           {
             "id": "3f61f7f11069012a",
@@ -16,6 +16,83 @@
               "state": {},
               "icon": "documents",
               "title": "Manage forms"
+            }
+          },
+          {
+            "id": "381a06a2e084958e",
+            "type": "leaf",
+            "state": {
+              "type": "FileClassView__me/foundations/attachment/style/attachment_style",
+              "state": {},
+              "icon": "link",
+              "title": "me/foundations/attachment/style/attachment_style"
+            }
+          },
+          {
+            "id": "3d4e30067b348899",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/Templates/me/Foundations/Attachment/Attachment Theory Template.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Attachment Theory Template"
+            }
+          }
+        ]
+      },
+      {
+        "id": "eb29e944dd072a7b",
+        "type": "tabs",
+        "dimension": 17.33102253032929,
+        "children": [
+          {
+            "id": "2c7b95b99c8f3dd8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "attachment_theory"
+            }
+          },
+          {
+            "id": "d5013691662bf188",
+            "type": "leaf",
+            "state": {
+              "type": "FileClassView__me/foundations/attachment/theory/attachment_theory",
+              "state": {},
+              "icon": "heart",
+              "title": "me/foundations/attachment/theory/attachment_theory"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "d8744f42e5dd3c54",
+        "type": "tabs",
+        "dimension": 65.33795493934143,
+        "children": [
+          {
+            "id": "b27ce53a70236bcf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory/Test.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Test"
             }
           },
           {
@@ -33,34 +110,17 @@
             }
           },
           {
-            "id": "373bbbbbceea4454",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/foundations/attachment/theory/attachment_theory",
-              "state": {},
-              "icon": "heart",
-              "title": "me/foundations/attachment/theory/attachment_theory"
-            }
-          }
-        ]
-      },
-      {
-        "id": "d8744f42e5dd3c54",
-        "type": "tabs",
-        "dimension": 28.000000000000004,
-        "children": [
-          {
-            "id": "a44d3435ef33b391",
+            "id": "9b780723496a7cdd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/fileClass/me/foundations/attachment/style/attachment_style.md",
+                "file": "Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Template.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "attachment_style"
+              "title": "Modal Attachment Need Template"
             }
           },
           {
@@ -78,67 +138,20 @@
             }
           },
           {
-            "id": "8293e1dd3b2bdbf6",
+            "id": "f8bb02c257683964",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/🔗 Styles.md",
+                "file": "Meta/Templates/me/Foundations/Attachment/Modal Attachment Theory Template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🔗 Styles"
+              "title": "Modal Attachment Theory Template"
             }
           }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "f277f63d776292f4",
-        "type": "tabs",
-        "dimension": 40.059701492537314,
-        "children": [
-          {
-            "id": "5b800c925530bd74",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/foundations/attachment/style/attachment_style",
-              "state": {},
-              "icon": "link",
-              "title": "me/foundations/attachment/style/attachment_style"
-            }
-          },
-          {
-            "id": "f117e774fbf931b2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ME/🏛️ Foundations/1_Todo List.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1_Todo List"
-            }
-          },
-          {
-            "id": "9b780723496a7cdd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Template.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Modal Attachment Need Template"
-            }
-          }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -430,34 +443,34 @@
       "modalforms:Edit forms": false
     }
   },
-  "active": "3f61f7f11069012a",
+  "active": "b27ce53a70236bcf",
   "lastOpenFiles": [
+    "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory/💖 Theory.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory/Test.md",
+    "Meta/Templates/me/Foundations/Attachment/Modal Attachment Theory Template.md",
+    "Meta/Templates/me/Foundations/Attachment/Modal Attachment Style Template.md",
+    "Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Template.md",
+    "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
+    "Meta/fileClass/global/global.md",
+    "Meta/Templates/me/Foundations/Attachment/Attachment Theory Template.md",
+    "Meta/fileClass/me/foundations/attachment/theory/lists/integration group list.md",
+    "Meta/fileClass/me/foundations/attachment/theory/lists/integration tip list.md",
+    "Meta/fileClass/me/foundations/attachment/theory/lists/relational effects list.md",
+    "Meta/fileClass/me/foundations/attachment/theory/lists/relational effects group list.md",
+    "ME/🏛️ Foundations/1_Todo List.md",
+    "Meta/fileClass/me/foundations/attachment/style/attachment_style.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory/TEst Note.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/🔗 Styles.md",
     "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Secure.md",
     "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Fearful Avoidant.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/🔗 Styles.md",
     "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Dismissive Avoidant.md",
-    "Meta/Templates/me/Foundations/Attachment/Modal Attachment Style Template.md",
     "Meta/Templates/me/Foundations/Attachment/Attachment Style Template.md",
     "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Test - Secure Attachment.md",
     "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/🗝️ Needs.md",
-    "Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Template.md",
     "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Anxious.md",
-    "ME/🏛️ Foundations/1_Todo List.md",
     "Meta/fileClass/me/foundations/attachment/style/lists/attachment style type list.md",
-    "Meta/fileClass/me/foundations/attachment/style/attachment_style.md",
     "Meta/fileClass/me/foundations/foundation element/lists/rupture type list.md",
     "Meta/fileClass/me/foundations/foundation element/lists/rupture type group list.md",
-    "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Test - Dissmisive Avoidant.md",
-    "Meta/fileClass/me/foundations/foundation element/lists/core fears type list.md",
-    "Meta/fileClass/me/foundations/foundation element/lists/core fears group list.md",
-    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style pattern list.md",
-    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style subtype list.md",
-    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style group list.md",
-    "Meta/fileClass/me/foundations/soothing resouce/soothing_resource.md",
-    "Meta/fileClass/me/foundations/attachment/needs/attachment_need.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/Trust They Will Come Back.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/Safe to Be Dependent.md",
     "ME/⚡ Triggers",
     "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Boundary Disruptions",
     "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Cognitive or Sensory Basis",

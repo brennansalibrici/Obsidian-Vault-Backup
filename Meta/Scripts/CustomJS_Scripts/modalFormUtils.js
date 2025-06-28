@@ -47,7 +47,8 @@ class ModalFormUtils {
   "emotions",
   "threatened_by",
   "earned_security_supports",
-  "attachment_style_link"
+  "attachment_style_link",
+  "strategies"
 ];
 
 
@@ -203,6 +204,14 @@ class ModalFormUtils {
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Attachment Style");
             }
+        },
+        "attachment theory": {
+            folder: "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory",
+            template: "Meta/Templates/me/Foundations/Attachment/Attachment Theory Template.md",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Attachment Theory");
+            }
+
         }
 
 

@@ -3921,8 +3921,7 @@
               "Anxious-Avoidant Mixed",
               "Earned Secure"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -3943,8 +3942,7 @@
               "Anxious-Avoidant Mixed",
               "Earned Secure"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -3997,8 +3995,7 @@
               "Withholding",
               "Abandonment"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -4022,8 +4019,7 @@
               "Invalidational",
               "Shaming"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -4047,8 +4043,7 @@
               "Conditional Love",
               "Overprotection"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -4068,8 +4063,7 @@
               "Loss or Separation",
               "Disruption of Safety"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -4668,10 +4662,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles"
           }
         },
         {
@@ -4757,10 +4748,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources"
           }
         },
         {
@@ -4776,10 +4764,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies"
           }
         },
         {
@@ -4795,10 +4780,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🐾 Behavior Functions",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/🐾 Behavior Functions"
           }
         },
         {
@@ -4814,10 +4796,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds"
           }
         },
         {
@@ -4833,10 +4812,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/📢 Internal Voices",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
           }
         },
         {
@@ -4867,10 +4843,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory"
           }
         },
         {
@@ -5282,8 +5255,7 @@
               "Avoid Responsibility",
               "Avoid Dependency"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -5314,8 +5286,7 @@
               "Restore Order",
               "Reduce Confusion"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -5343,8 +5314,7 @@
               "Fulfill Moral Obligation",
               "Meet Expectations"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -5370,8 +5340,7 @@
               "Maintain Role",
               "Compensate For Neglect"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -5394,8 +5363,7 @@
               "Stay Consistent",
               "Maintain Self-Worth"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -5459,32 +5427,13 @@
           "input": {
             "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Closeness vs. Independence",
-                "label": "Closeness vs. Independence"
-              },
-              {
-                "value": "Distance vs. Closeness",
-                "label": "Distance vs. Closeness"
-              },
-              {
-                "value": "Being Known vs. Being in Control",
-                "label": "Being Known vs. Being in Control"
-              },
-              {
-                "value": "Staying Numb vs. Staying Present",
-                "label": "Staying Numb vs. Staying Present"
-              }
-            ],
-            "allowUnknownValues": false,
-            "query": "",
             "multi_select_options": [
               "Closeness vs. Independence",
               "Distance vs. Closeness",
               "Being Known vs. Being in Control",
               "Staying Numb vs. Staying Present"
-            ]
+            ],
+            "allowUnknownValues": false
           }
         },
         {
@@ -5500,38 +5449,6 @@
           "input": {
             "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Honesty vs. Acceptance",
-                "label": "Honesty vs. Acceptance"
-              },
-              {
-                "value": "Compliance vs. Authenticity",
-                "label": "Compliance vs. Authenticity"
-              },
-              {
-                "value": "Pleasing Others vs. Staying True to Self",
-                "label": "Pleasing Others vs. Staying True to Self"
-              },
-              {
-                "value": "Conflict Avoidance vs. Emotional Honesty",
-                "label": "Conflict Avoidance vs. Emotional Honesty"
-              },
-              {
-                "value": "Keeping Peace vs. Naming Needs",
-                "label": "Keeping Peace vs. Naming Needs"
-              },
-              {
-                "value": "Validation vs. Truth-Telling",
-                "label": "Validation vs. Truth-Telling"
-              },
-              {
-                "value": "Stability vs. Authenticity",
-                "label": "Stability vs. Authenticity"
-              }
-            ],
-            "allowUnknownValues": false,
-            "query": "",
             "multi_select_options": [
               "Honesty vs. Acceptance",
               "Compliance vs. Authenticity",
@@ -5540,7 +5457,8 @@
               "Keeping Peace vs. Naming Needs",
               "Validation vs. Truth-Telling",
               "Stability vs. Authenticity"
-            ]
+            ],
+            "allowUnknownValues": false
           }
         },
         {
@@ -5556,37 +5474,14 @@
           "input": {
             "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Trust vs. Control",
-                "label": "Trust vs. Control"
-              },
-              {
-                "value": "Self-Protection vs. Vulnerability",
-                "label": "Self-Protection vs. Vulnerability"
-              },
-              {
-                "value": "Guardedness vs. Openness",
-                "label": "Guardedness vs. Openness"
-              },
-              {
-                "value": "Being Seen vs. Feeling Safe",
-                "label": "Being Seen vs. Feeling Safe"
-              },
-              {
-                "value": "Power vs. Intimacy",
-                "label": "Power vs. Intimacy"
-              }
-            ],
-            "allowUnknownValues": false,
-            "query": "",
             "multi_select_options": [
               "Trust vs. Control",
               "Self-Protection vs. Vulnerability",
               "Guardedness vs. Openness",
               "Being Seen vs. Feeling Safe",
               "Power vs. Intimacy"
-            ]
+            ],
+            "allowUnknownValues": false
           }
         },
         {
@@ -5602,38 +5497,6 @@
           "input": {
             "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Comfort vs. Growth",
-                "label": "Comfort vs. Growth"
-              },
-              {
-                "value": "Avoiding Discomfort vs. Resolving the Real Issue",
-                "label": "Avoiding Discomfort vs. Resolving the Real Issue"
-              },
-              {
-                "value": "Short-Term Safety vs. Long-Term Connection",
-                "label": "Short-Term Safety vs. Long-Term Connection"
-              },
-              {
-                "value": "Avoiding Pain vs. Doing What’s Needed",
-                "label": "Avoiding Pain vs. Doing What’s Needed"
-              },
-              {
-                "value": "Not Rocking the Boat vs. Being Fully Alive",
-                "label": "Not Rocking the Boat vs. Being Fully Alive"
-              },
-              {
-                "value": "Security vs. Growth",
-                "label": "Security vs. Growth"
-              },
-              {
-                "value": "Old Safety vs. New Possibility",
-                "label": "Old Safety vs. New Possibility"
-              }
-            ],
-            "allowUnknownValues": false,
-            "query": "",
             "multi_select_options": [
               "Comfort vs. Growth",
               "Avoiding Discomfort vs. Resolving the Real Issue",
@@ -5642,7 +5505,8 @@
               "Not Rocking the Boat vs. Being Fully Alive",
               "Security vs. Growth",
               "Old Safety vs. New Possibility"
-            ]
+            ],
+            "allowUnknownValues": false
           }
         },
         {
@@ -5658,32 +5522,13 @@
           "input": {
             "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Truth vs. Protection",
-                "label": "Truth vs. Protection"
-              },
-              {
-                "value": "Reinforcing Old Roles vs. Becoming Whole",
-                "label": "Reinforcing Old Roles vs. Becoming Whole"
-              },
-              {
-                "value": "Approval vs. Truth",
-                "label": "Approval vs. Truth"
-              },
-              {
-                "value": "Survival vs. Self-Actualization",
-                "label": "Survival vs. Self-Actualization"
-              }
-            ],
-            "allowUnknownValues": false,
-            "query": "",
             "multi_select_options": [
               "Truth vs. Protection",
               "Reinforcing Old Roles vs. Becoming Whole",
               "Approval vs. Truth",
               "Survival vs. Self-Actualization"
-            ]
+            ],
+            "allowUnknownValues": false
           }
         },
         {
@@ -5699,32 +5544,13 @@
           "input": {
             "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Staying Numb vs. Staying Present",
-                "label": "Staying Numb vs. Staying Present"
-              },
-              {
-                "value": "Avoiding Discomfort vs. Resolving the Real Issue",
-                "label": "Avoiding Discomfort vs. Resolving the Real Issue"
-              },
-              {
-                "value": "Avoiding Pain vs. Doing What’s Needed",
-                "label": "Avoiding Pain vs. Doing What’s Needed"
-              },
-              {
-                "value": "Guardedness vs. Openness",
-                "label": "Guardedness vs. Openness"
-              }
-            ],
-            "allowUnknownValues": false,
-            "query": "",
             "multi_select_options": [
               "Staying Numb vs. Staying Present",
               "Avoiding Discomfort vs. Resolving the Real Issue",
               "Avoiding Pain vs. Doing What’s Needed",
               "Guardedness vs. Openness"
-            ]
+            ],
+            "allowUnknownValues": false
           }
         },
         {
@@ -5740,27 +5566,12 @@
           "input": {
             "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Predictability vs. Healing",
-                "label": "Predictability vs. Healing"
-              },
-              {
-                "value": "Old Safety vs. New Possibility",
-                "label": "Old Safety vs. New Possibility"
-              },
-              {
-                "value": "Reinforcing Old Roles vs. Becoming Whole",
-                "label": "Reinforcing Old Roles vs. Becoming Whole"
-              }
-            ],
-            "allowUnknownValues": false,
-            "query": "",
             "multi_select_options": [
               "Predictability vs. Healing",
               "Old Safety vs. New Possibility",
               "Reinforcing Old Roles vs. Becoming Whole"
-            ]
+            ],
+            "allowUnknownValues": false
           }
         },
         {
@@ -5776,27 +5587,12 @@
           "input": {
             "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Power vs. Intimacy",
-                "label": "Power vs. Intimacy"
-              },
-              {
-                "value": "Being Known vs. Being in Control",
-                "label": "Being Known vs. Being in Control"
-              },
-              {
-                "value": "Trust vs. Control",
-                "label": "Trust vs. Control"
-              }
-            ],
-            "allowUnknownValues": false,
-            "query": "",
             "multi_select_options": [
               "Power vs. Intimacy",
               "Being Known vs. Being in Control",
               "Trust vs. Control"
-            ]
+            ],
+            "allowUnknownValues": false
           }
         },
         {
@@ -5812,27 +5608,12 @@
           "input": {
             "type": "multiselect",
             "source": "fixed",
-            "options": [
-              {
-                "value": "Compliance vs. Authenticity",
-                "label": "Compliance vs. Authenticity"
-              },
-              {
-                "value": "Pleasing Others vs. Staying True to Self",
-                "label": "Pleasing Others vs. Staying True to Self"
-              },
-              {
-                "value": "Fitting In vs. Being Real",
-                "label": "Fitting In vs. Being Real"
-              }
-            ],
-            "allowUnknownValues": false,
-            "query": "",
             "multi_select_options": [
               "Compliance vs. Authenticity",
               "Pleasing Others vs. Staying True to Self",
               "Fitting In vs. Being Real"
-            ]
+            ],
+            "allowUnknownValues": false
           }
         },
         {
@@ -7543,8 +7324,7 @@
               "Anxious-Avoidant Mixed",
               "Earned Secure"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -7565,8 +7345,7 @@
               "Anxious-Avoidant Mixed",
               "Earned Secure"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -7619,8 +7398,7 @@
               "Withholding",
               "Abandonment"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -7644,8 +7422,7 @@
               "Invalidational",
               "Shaming"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -7669,8 +7446,7 @@
               "Conditional Love",
               "Overprotection"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -7690,8 +7466,7 @@
               "Loss or Separation",
               "Disruption of Safety"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8069,12 +7844,12 @@
       "version": "1"
     },
     {
-      "title": "Create New Attachment Style",
-      "name": "Create New Attachment Theory-copy",
+      "title": "Create New Attachment Theory",
+      "name": "Create New Attachment Theory",
       "fields": [
         {
-          "name": "style_name",
-          "label": "Style Name",
+          "name": "theory_name",
+          "label": "Theory Name",
           "description": "",
           "isRequired": true,
           "input": {
@@ -8146,106 +7921,6 @@
               {
                 "value": "Earned Secure",
                 "label": "Earned Secure"
-              }
-            ]
-          }
-        },
-        {
-          "name": "style_subtype",
-          "label": "Attachment Style Subtype",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "select",
-            "source": "fixed",
-            "options": [
-              {
-                "value": "Anxious with Avoidant Traits",
-                "label": "Anxious with Avoidant Traits"
-              },
-              {
-                "value": "Avoidant with Anxious Traits",
-                "label": "Avoidant with Anxious Traits"
-              },
-              {
-                "value": "Earned Secure from Anxious",
-                "label": "Earned Secure from Anxious"
-              },
-              {
-                "value": "Earned Secure from Avoidant",
-                "label": "Earned Secure from Avoidant"
-              },
-              {
-                "value": "Earned Secure from Disorganized",
-                "label": "Earned Secure from Disorganized"
-              },
-              {
-                "value": "Earned Secure – Mixed Origin",
-                "label": "Earned Secure – Mixed Origin"
-              },
-              {
-                "value": "Disorganized Reactive",
-                "label": "Disorganized Reactive"
-              },
-              {
-                "value": "Disorganized Withdrawn",
-                "label": "Disorganized Withdrawn"
-              },
-              {
-                "value": "Anxious Reactive",
-                "label": "Anxious Reactive"
-              },
-              {
-                "value": "Avoidant Dismissive",
-                "label": "Avoidant Dismissive"
-              },
-              {
-                "value": "Avoidant Shutdown",
-                "label": "Avoidant Shutdown"
-              },
-              {
-                "value": "Secure with Anxious Sensitivities",
-                "label": "Secure with Anxious Sensitivities"
-              },
-              {
-                "value": "Secure with Avoidant Boundaries",
-                "label": "Secure with Avoidant Boundaries"
-              },
-              {
-                "value": "Secure with Disorganized Echoes",
-                "label": "Secure with Disorganized Echoes"
-              },
-              {
-                "value": "Fearful Avoidant Split",
-                "label": "Fearful Avoidant Split"
-              }
-            ]
-          }
-        },
-        {
-          "name": "style_pattern",
-          "label": "Attachment Style Pattern",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "select",
-            "source": "fixed",
-            "options": [
-              {
-                "value": "Blended",
-                "label": "Blended"
-              },
-              {
-                "value": "Protective Variant",
-                "label": "Protective Variant"
-              },
-              {
-                "value": "Earned Secure",
-                "label": "Earned Secure"
-              },
-              {
-                "value": "Secure-Plus",
-                "label": "Secure-Plus"
               }
             ]
           }
@@ -8435,52 +8110,22 @@
           }
         },
         {
-          "name": "progression_from",
-          "label": "Progression From",
+          "name": "strategies",
+          "label": "Strategies",
           "description": "",
           "isRequired": false,
           "input": {
             "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Secure",
-              "Anxious Preoccupied",
-              "Dismissive Avoidant",
-              "Fearful Avoidant",
-              "Disorganized Reactive",
-              "Disorganized Unresolved",
-              "Anxious-Avoidant Mixed",
-              "Earned Secure"
-            ],
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies",
             "allowUnknownValues": false,
-            "query": ""
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
-          "name": "progression_to",
-          "label": "Progression To",
-          "description": "",
-          "isRequired": false,
-          "input": {
-            "type": "multiselect",
-            "source": "fixed",
-            "multi_select_options": [
-              "Secure",
-              "Anxious Preoccupied",
-              "Dismissive Avoidant",
-              "Fearful Avoidant",
-              "Disorganized Reactive",
-              "Disorganized Unresolved",
-              "Anxious-Avoidant Mixed",
-              "Earned Secure"
-            ],
-            "allowUnknownValues": false,
-            "query": ""
-          }
-        },
-        {
-          "name": "rupture_group",
-          "label": "Rupture Group",
+          "name": "relational_effects_group",
+          "label": "Relational Effects Group",
           "description": "",
           "isRequired": false,
           "input": {
@@ -8488,124 +8133,147 @@
             "source": "fixed",
             "options": [
               {
-                "value": "Neglect-Based",
-                "label": "Neglect-Based"
+                "value": "Trust & Safety Challenges",
+                "label": "Trust & Safety Challenges"
               },
               {
-                "value": "Misattunement-Based",
-                "label": "Misattunement-Based"
+                "value": "Vulnerability & Expression",
+                "label": "Vulnerability & Expression"
               },
               {
-                "value": "Boundary & Identity",
-                "label": "Boundary & Identity"
+                "value": "Closeness & Distance Dynamics",
+                "label": "Closeness & Distance Dynamics"
               },
               {
-                "value": "Attachment Breaks/Disruptions",
-                "label": "Attachment Breaks/Disruptions"
+                "value": "Communication & Conflict",
+                "label": "Communication & Conflict"
+              },
+              {
+                "value": "Self-Perception in Relationship",
+                "label": "Self-Perception in Relationship"
               }
             ]
           }
         },
         {
-          "name": "rtype_neglect",
-          "label": "Neglect-Based Ruptures",
+          "name": "etrust_effects",
+          "label": "Trust & Safety Challenge Effects",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "rupture_group",
+            "dependencyName": "relational_effects_group",
             "type": "isExactly",
-            "value": "Neglect-Based"
+            "value": "Trust & Safety Challenges"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              "Neglect",
-              "Invisibility",
-              "Emotional Absence",
-              "Underprotection",
-              "Being Forgotten",
-              "Withholding",
-              "Abandonment"
+              "Difficulty Trusting Others",
+              "Hypervigilance To Emotional Shifts",
+              "Misreading Partner’s Intentions",
+              "Strong Reactions To Perceived Rejection",
+              "Testing Partner’s Loyalty Or Love"
             ],
             "allowUnknownValues": false,
             "query": ""
           }
         },
         {
-          "name": "rtype_misattunement",
-          "label": "Misattunement-Based Ruptures",
+          "name": "evulnerability_effects",
+          "label": "Vulnerability & Expression Effects",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "rupture_group",
+            "dependencyName": "relational_effects_group",
             "type": "isExactly",
-            "value": "Misattunement-Based"
+            "value": "Vulnerability & Expression"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              "Misattunement",
-              "Inconsistency",
-              "Dismissal",
-              "Criticism",
-              "Invalidational",
-              "Shaming"
+              "Difficulty Expressing Needs Directly",
+              "Tendency To Avoid Vulnerability",
+              "Feeling “Too Much” or “Not Enough”",
+              "Fear Of Abandonment",
+              "Fear Of Engulfment"
             ],
             "allowUnknownValues": false,
             "query": ""
           }
         },
         {
-          "name": "rtype_boundary",
-          "label": "Boundary & Identity Ruptures",
+          "name": "ecloseness_effects",
+          "label": "Closeness & Distance Dynamic Effects",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "rupture_group",
+            "dependencyName": "relational_effects_group",
             "type": "isExactly",
-            "value": "Boundary & Identity"
+            "value": "Closeness & Distance Dynamics"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              "Enmeshment",
-              "Overcontrol",
-              "Reversal of Roles",
-              "Punishment for Authenticity",
-              "Conditional Love",
-              "Overprotection"
+              "Clinginess Or Emotional Over-Dependence",
+              "Emotional Withdrawal Or Shutdown",
+              "Push-Pull Relational Patterns",
+              "Sabotaging Closeness When It Feels Threatening",
+              "Inconsistent Signals In Relationships",
+              "Difficulty Sustaining Intimacy"
             ],
             "allowUnknownValues": false,
             "query": ""
           }
         },
         {
-          "name": "rtype_breaks",
-          "label": "Attachment Break/Disruption Ruptures",
+          "name": "ecommunication_effectes",
+          "label": "Communication & Conflict Effects",
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "rupture_group",
+            "dependencyName": "relational_effects_group",
             "type": "isExactly",
-            "value": "Attachment Breaks/Disruptions"
+            "value": "Communication & Conflict"
           },
           "input": {
             "type": "multiselect",
             "source": "fixed",
             "multi_select_options": [
-              "Loss or Separation",
-              "Disruption of Safety"
+              "Avoiding Conflict Through Detachment",
+              "Conflict Avoidance",
+              "Compulsive Caretaking",
+              "Rescuing Or Needing To Be Rescued"
             ],
             "allowUnknownValues": false,
             "query": ""
           }
         },
         {
-          "name": "internal_challenges",
-          "label": "Internal Challenges",
+          "name": "eself_effects",
+          "label": "Self-Perception in Relationship Effects",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "relational_effects_group",
+            "type": "isExactly",
+            "value": "Self-Perception in Relationship"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Feeling “Too Much” or “Not Enough” ("
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "growth_path",
+          "label": "Growth Path",
           "description": "",
           "isRequired": false,
           "input": {
@@ -8614,28 +8282,269 @@
           }
         },
         {
-          "name": "relational_challenges",
-          "label": "Relational Challenges",
+          "name": "integration_group",
+          "label": "Integration Group",
           "description": "",
           "isRequired": false,
           "input": {
-            "type": "textarea",
-            "hidden": false
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Core Skills to Practice",
+                "label": "Core Skills to Practice"
+              },
+              {
+                "value": "Relational Repair & Connection",
+                "label": "Relational Repair & Connection"
+              },
+              {
+                "value": "Somatic & Emotional Regulation",
+                "label": "Somatic & Emotional Regulation"
+              },
+              {
+                "value": "Cognitive Reframing",
+                "label": "Cognitive Reframing"
+              },
+              {
+                "value": "External Support",
+                "label": "External Support"
+              }
+            ]
           }
         },
         {
-          "name": "partner_attunement",
-          "label": "Partner Attunement",
+          "name": "itip_core",
+          "label": "Core Skills to Practice",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Core Skills to Practice"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Practice Identifying And Naming Emotional Needs",
+              "Learn To Tolerate Healthy Emotional Discomfort",
+              "Learn To Ask Directly For Reassurance Or Space",
+              "Practice Staying Emotionally Present In Discomfort"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "itip_realtional",
+          "label": "Relational Repair & Connection",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Relational Repair & Connection"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Build Safety Through Consistent Relationships",
+              "Create Rituals Of Connection And Repair",
+              "Share Fears Vulnerably Instead Of Defensively",
+              "Normalize The Presence Of Conflict In Healthy Love",
+              "Build Trust Slowly Through Repeat Experiences"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "itip_somatic",
+          "label": "Somatic & Emotional Regulation",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Somatic & Emotional Regulation"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Engage In Body-Based Calming Practices",
+              "Use Grounding Tools During Conflict Or Distance",
+              "Practice Self-Soothing Techniques"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "itip_cognitive",
+          "label": "Cognitive Reframing",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "Cognitive Reframing"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Name And Challenge All-Or-Nothing Thinking",
+              "Notice Protective Patterns And Pause Before Acting",
+              "Journal To Explore Emotional Triggers"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "itip_external",
+          "label": "External Support",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "integration_group",
+            "type": "isExactly",
+            "value": "External Support"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Explore Therapy To Re-Pattern Early Attachment Wounds"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "influenced_group",
+          "label": "Influenced By (Group)",
           "description": "",
           "isRequired": false,
           "input": {
-            "type": "textarea",
-            "hidden": false
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "For Attachment Theory",
+                "label": "For Attachment Theory"
+              },
+              {
+                "value": "For Ployvagal-Informed Approaches",
+                "label": "For Ployvagal-Informed Approaches"
+              },
+              {
+                "value": "For Internal Family Systems",
+                "label": "For Internal Family Systems"
+              },
+              {
+                "value": "Modern Integrative Models",
+                "label": "Modern Integrative Models"
+              }
+            ]
           }
         },
         {
-          "name": "definition",
-          "label": "Definition",
+          "name": "if_attach",
+          "label": "For Attachment Theory",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "influenced_group",
+            "type": "isExactly",
+            "value": "For Attachment Theory"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "John Bowlby",
+              "Mary Ainsworth",
+              "Harry Harlow",
+              "Donald Winnicott"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "if_poly",
+          "label": "",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "influenced_group",
+            "type": "isExactly",
+            "value": "For Ployvagal-Informed Approaches"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Stephen Porges",
+              "Deb Dana"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "if_poly",
+          "label": "Internal Family Systems",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "influenced_group",
+            "type": "isExactly",
+            "value": "For Internal Family Systems"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Richard Schwartz",
+              "Parts Work"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "if_modern",
+          "label": "Modern Integrative Models",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "influenced_group",
+            "type": "isExactly",
+            "value": "Modern Integrative Models"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Stan Tatkin",
+              "Diane Poole Heller",
+              "Sue Johnson",
+              "Emotionally Focused Therapy",
+              "Somatic Experiencing",
+              "Interpersonal Neurobiology"
+            ],
+            "allowUnknownValues": false,
+            "query": ""
+          }
+        },
+        {
+          "name": "note",
+          "label": "Notes",
           "description": "",
           "isRequired": false,
           "input": {

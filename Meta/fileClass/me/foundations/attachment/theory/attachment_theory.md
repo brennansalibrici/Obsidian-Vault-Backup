@@ -79,13 +79,13 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/attachment/theory/lists/integration group list.md
     path: ""
     id: 7eDUoB
-version: "2.35"
+version: "2.38"
 limit: 20
 mapWithTag: false
 icon: heart
 tagNames: 
 filesPaths:
-  - ME/🏛️ Foundations/🕸️ Attachment/🪢 Theory
+  - ME/🏛️ Foundations/🕸️ Attachment/💖 Theory
 bookmarksGroups: 
 excludes: 
 extends: me/foundations/foundation element/foundation_element
