@@ -27,21 +27,14 @@ definition: ""
 style_group: Secure
 style_type: ""
 core_fears_group: Relational
-core_fears:
-  - Abandonment
-strategies:
-  - "[[Intellectualizing]]"
-relational_effects_group:
-  - Trust & Safety Challenges
-relational_effects:
-  - Difficulty Trusting Others
+core_fears: [Abandonment]
+strategies: ["[[Intellectualizing]]"]
+relational_effects_group: [Trust & Safety Challenges]
+relational_effects: [Difficulty Trusting Others]
 growth_path: TEst
-integration_group:
-  - Core Skills to Practice
-integration_tips:
-  - Learn To Tolerate Healthy Emotional Discomfort
-influenced_by:
-  - John Bowlby
+integration_group: [Core Skills to Practice]
+integration_tips: [Learn To Tolerate Healthy Emotional Discomfort]
+influenced_by: [John Bowlby]
 notes: TEst
 related: []
 media: []
@@ -52,5 +45,4 @@ export_to_inputs: false
 
 ## Notes
 ---
-
 

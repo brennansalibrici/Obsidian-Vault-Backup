@@ -1069,13 +1069,65 @@
       "name": "Create New Emotion",
       "fields": [
         {
-          "name": "title",
-          "label": "Name",
+          "name": "emotion_name",
+          "label": "Emotion Name",
           "description": "",
           "isRequired": false,
           "input": {
             "type": "text",
             "hidden": false
+          }
+        },
+        {
+          "name": "emotion_group",
+          "label": "Emotion Group",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Sadness",
+              "Anger",
+              "Fear",
+              "Anxiety",
+              "Joy",
+              "Love",
+              "Shame",
+              "Guilt",
+              "Surprise",
+              "Disgust",
+              "Anticipation",
+              "Trust",
+              "Confusion",
+              "Peace",
+              "Awe",
+              "Spiritual"
+            ],
+            "allowUnknownValues": true,
+            "query": ""
+          }
+        },
+        {
+          "name": "emotion_type",
+          "label": "Emotion Type",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Core Emotion",
+              "Surface Emotion",
+              "Trigger Emotion",
+              "Regulating Emotion",
+              "Blended Emotion",
+              "Dissociated State",
+              "Social Emotion",
+              "Spiritual Emotion"
+            ],
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -1107,54 +1159,263 @@
           }
         },
         {
-          "name": "emotion_category",
-          "label": "Emotion Category",
+          "name": "emotion_origins",
+          "label": "Emotion Origins",
           "description": "",
-          "isRequired": false,
           "input": {
             "type": "multiselect",
-            "source": "fixed",
+            "allowUnknownValues": true,
+            "hidden": false,
+            "query": "",
             "multi_select_options": [
-              "Sadness",
-              "Anger",
-              "Fear",
-              "Anxiety",
-              "Joy",
-              "Love",
-              "Shame",
-              "Guilt",
-              "Surprise",
-              "Disgust",
-              "Anticipation",
-              "Trust",
-              "Confusion",
-              "Peace",
-              "Awe",
-              "Spiritual"
+              "Attachment Narrative",
+              "Developmental",
+              "Social",
+              "Biological",
+              "Spiritual",
+              "Learned",
+              "Experiential",
+              "Unconscious",
+              "Environmental",
+              "Relational",
+              "Somatic",
+              "Cultural"
             ],
-            "allowUnknownValues": true
-          }
+            "source": "fixed"
+          },
+          "isRequired": false
         },
         {
-          "name": "emotion_type",
-          "label": "Emotion Type",
+          "name": "emotion_effects",
+          "label": "Emotion Effects",
           "description": "",
-          "isRequired": false,
           "input": {
             "type": "multiselect",
-            "source": "fixed",
+            "allowUnknownValues": true,
+            "hidden": false,
+            "query": "",
             "multi_select_options": [
-              "Core Emotion",
-              "Surface Emotion",
-              "Trigger Emotion",
-              "Regulating Emotion",
-              "Blended Emotion",
-              "Dissociated State",
-              "Social Emotion",
-              "Spiritual Emotion"
+              "Activates Defense",
+              "Leads to Disconnection",
+              "Invites Repair",
+              "Fuels Rumination",
+              "Motivates Action",
+              "Reinforces Shame",
+              "Restores Balance",
+              "Amplifies Other Emotions",
+              "Suppresses Expression",
+              "Blocks Connection",
+              "Enhances Clarity",
+              "Reorients Priorities",
+              "Strengthens Bonds",
+              "Increases Vulnerability"
             ],
-            "allowUnknownValues": true
-          }
+            "source": "fixed"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "emotion_flags",
+          "label": "Emotion Flags",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": true,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [
+              "Ambivalent",
+              "Masked",
+              "Blended",
+              "Dissociated",
+              "Delayed Onset",
+              "Somatic Signal",
+              "Contagious",
+              "Socially Learned",
+              "Internalized",
+              "Adaptive",
+              "Maladaptive",
+              "Boundary Alert",
+              "Power Oriented",
+              "Control Seeking",
+              "Attachment Seeking",
+              "Connection Oriented",
+              "Displacement",
+              "Spiritual",
+              "Existential",
+              "Residual"
+            ],
+            "source": "fixed"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "emotion_color",
+          "label": "Emotion Color",
+          "description": "",
+          "input": {
+            "type": "select",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "options": [
+              {
+                "value": "Red",
+                "label": "Red"
+              },
+              {
+                "value": "Dark Red",
+                "label": "Dark Red"
+              },
+              {
+                "value": "Pink",
+                "label": "Pink"
+              },
+              {
+                "value": "Orange",
+                "label": "Orange"
+              },
+              {
+                "value": "Yellow",
+                "label": "Yellow"
+              },
+              {
+                "value": "Green",
+                "label": "Green"
+              },
+              {
+                "value": "Dark Green",
+                "label": "Dark Green"
+              },
+              {
+                "value": "Blue",
+                "label": "Blue"
+              },
+              {
+                "value": "Light Blue",
+                "label": "Light Blue"
+              },
+              {
+                "value": "Teal",
+                "label": "Teal"
+              },
+              {
+                "value": "Purple",
+                "label": "Purple"
+              },
+              {
+                "value": "Lavender",
+                "label": "Lavender"
+              },
+              {
+                "value": "Gray",
+                "label": "Gray"
+              },
+              {
+                "value": "Black",
+                "label": "Black"
+              },
+              {
+                "value": "White",
+                "label": "White"
+              },
+              {
+                "value": "Brown",
+                "label": "Brown"
+              }
+            ],
+            "source": "fixed"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "opposite",
+          "label": "Opposite(s)",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [],
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🎭 Emotions"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "internal voices",
+          "label": "Internal Voices/Associated Thoughts",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [],
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "linked_wounds",
+          "label": "Linked Wounds",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [],
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "soothing_resources",
+          "label": "Soothing Resources",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [],
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "needs_behind_it",
+          "label": "Needs Behind It",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [],
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/🛡️ Emotional Needs"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "triggered_by",
+          "label": "Triggered By",
+          "description": "",
+          "input": {
+            "type": "multiselect",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "query": "",
+            "multi_select_options": [],
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/⚡ Triggers"
+          },
+          "isRequired": false
         },
         {
           "name": "definition",
@@ -6071,6 +6332,16 @@
       "name": "Create New Trade-Off",
       "fields": [
         {
+          "name": "tradeoff_name",
+          "label": "Trade-Off Name",
+          "description": "Name",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
           "name": "tradeoff_group",
           "label": "Trade-Off Groups",
           "description": "Broad categories or groups of different types of tradeoffs",
@@ -6713,7 +6984,7 @@
           }
         },
         {
-          "name": "ptype_grouth",
+          "name": "ptype_growth",
           "label": "Growth & Change",
           "description": "",
           "isRequired": false,
@@ -6807,6 +7078,134 @@
                 "label": "Relational Pattern"
               }
             ]
+          }
+        },
+        {
+          "name": "conflicted_part",
+          "label": "Conflicted Part",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
+          }
+        },
+        {
+          "name": "resolvedby_group",
+          "label": "Resolved By Group ",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Internal Integration",
+                "label": "Internal Integration"
+              },
+              {
+                "value": "Relational Mirroring & Externalization",
+                "label": "Relational Mirroring & Externalization"
+              },
+              {
+                "value": "Cognitive & Emotional Reframing",
+                "label": "Cognitive & Emotional Reframing"
+              },
+              {
+                "value": "Practice & Embodiment",
+                "label": "Practice & Embodiment"
+              }
+            ]
+          }
+        },
+        {
+          "name": "rinternal_group",
+          "label": "Resolved By Internal Integration",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "resolvedby_group",
+            "type": "isExactly",
+            "value": "Internal Integration"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Naming both needs clearly",
+              "Allowing both feelings to coexist",
+              "Shifting from binary thinking to “both/and”",
+              "Giving each part a turn to lead",
+              "Welcoming contradiction as part of wholeness",
+              "Practicing internal listening without rushing a fix"
+            ],
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "rrelational_group",
+          "label": "Resolved By Relational Mirroring & Externalization",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "resolvedby_group",
+            "type": "isExactly",
+            "value": "Relational Mirroring & Externalization"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Mirroring the fears behind each side",
+              "Getting external support for the overwhelmed part",
+              "Letting the protective voice feel seen",
+              "Inviting a deeper core need to speak"
+            ],
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "rcognitive_group",
+          "label": "Resolved By Cognitive & Emotional Reframing",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "resolvedby_group",
+            "type": "isExactly",
+            "value": "Cognitive & Emotional Reframing"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Reframing vulnerability as strength",
+              "Recognizing the role of trauma or conditioning",
+              "Naming protective strategies for what they are"
+            ],
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "rpractice_group",
+          "label": "Resolved By Practice & Embodiment",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "resolvedby_group",
+            "type": "isExactly",
+            "value": "Practice & Embodiment"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Slowing down decisions until alignment emerges",
+              "Creating a container for experimentation",
+              "Journal dialoguing between parts",
+              "Embodied grounding to regulate intensity"
+            ],
+            "allowUnknownValues": true
           }
         }
       ],
@@ -8117,10 +8516,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies"
           }
         },
         {
@@ -8175,8 +8571,7 @@
               "Strong Reactions To Perceived Rejection",
               "Testing Partner’s Loyalty Or Love"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8199,8 +8594,7 @@
               "Fear Of Abandonment",
               "Fear Of Engulfment"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8224,8 +8618,7 @@
               "Inconsistent Signals In Relationships",
               "Difficulty Sustaining Intimacy"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8247,8 +8640,7 @@
               "Compulsive Caretaking",
               "Rescuing Or Needing To Be Rescued"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8267,8 +8659,7 @@
             "multi_select_options": [
               "Feeling “Too Much” or “Not Enough” ("
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8332,8 +8723,7 @@
               "Learn To Ask Directly For Reassurance Or Space",
               "Practice Staying Emotionally Present In Discomfort"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8356,8 +8746,7 @@
               "Normalize The Presence Of Conflict In Healthy Love",
               "Build Trust Slowly Through Repeat Experiences"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8378,8 +8767,7 @@
               "Use Grounding Tools During Conflict Or Distance",
               "Practice Self-Soothing Techniques"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8400,8 +8788,7 @@
               "Notice Protective Patterns And Pause Before Acting",
               "Journal To Explore Emotional Triggers"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8420,8 +8807,7 @@
             "multi_select_options": [
               "Explore Therapy To Re-Pattern Early Attachment Wounds"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8471,8 +8857,7 @@
               "Harry Harlow",
               "Donald Winnicott"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8492,8 +8877,7 @@
               "Stephen Porges",
               "Deb Dana"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8513,8 +8897,7 @@
               "Richard Schwartz",
               "Parts Work"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {
@@ -8538,8 +8921,7 @@
               "Somatic Experiencing",
               "Interpersonal Neurobiology"
             ],
-            "allowUnknownValues": false,
-            "query": ""
+            "allowUnknownValues": false
           }
         },
         {

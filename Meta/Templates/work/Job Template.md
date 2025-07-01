@@ -4,10 +4,10 @@ fileClass: job
 
 # INHERITS FROM GLOBAL TEMPLATE
 # CORE IDENTITY FIELDS:
-id: <% tp.date.now("x") %>
-created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-title: <% tp.file.title %>
+id: 1751291319691
+created: 2025-06-30 08:48
+last_modified: 2025-06-30 08:48
+title: Job Template
 
 # STATUS & WORKFLOW FIELDS:
 status: [🟧 in progress]

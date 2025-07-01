@@ -6,26 +6,16 @@
       {
         "id": "34caa925daf1e233",
         "type": "tabs",
-        "dimension": 17.33102253032929,
+        "dimension": 15.60880829015544,
         "children": [
           {
-            "id": "3f61f7f11069012a",
+            "id": "45dcb9c9d4bcedcd",
             "type": "leaf",
             "state": {
               "type": "modal-form-manage-forms-view",
               "state": {},
               "icon": "documents",
               "title": "Manage forms"
-            }
-          },
-          {
-            "id": "381a06a2e084958e",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/foundations/attachment/style/attachment_style",
-              "state": {},
-              "icon": "link",
-              "title": "me/foundations/attachment/style/attachment_style"
             }
           },
           {
@@ -41,87 +31,6 @@
               "icon": "lucide-file",
               "title": "Attachment Theory Template"
             }
-          }
-        ]
-      },
-      {
-        "id": "eb29e944dd072a7b",
-        "type": "tabs",
-        "dimension": 17.33102253032929,
-        "children": [
-          {
-            "id": "2c7b95b99c8f3dd8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "attachment_theory"
-            }
-          },
-          {
-            "id": "d5013691662bf188",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/foundations/attachment/theory/attachment_theory",
-              "state": {},
-              "icon": "heart",
-              "title": "me/foundations/attachment/theory/attachment_theory"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "d8744f42e5dd3c54",
-        "type": "tabs",
-        "dimension": 65.33795493934143,
-        "children": [
-          {
-            "id": "b27ce53a70236bcf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory/Test.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Test"
-            }
-          },
-          {
-            "id": "9aef4ba990152348",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "attachment_theory"
-            }
-          },
-          {
-            "id": "9b780723496a7cdd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Template.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Modal Attachment Need Template"
-            }
           },
           {
             "id": "91bc18fa8ce42233",
@@ -136,6 +45,111 @@
               "icon": "lucide-file",
               "title": "Modal Attachment Style Template"
             }
+          }
+        ]
+      },
+      {
+        "id": "eb29e944dd072a7b",
+        "type": "tabs",
+        "dimension": 51.48963730569949,
+        "children": [
+          {
+            "id": "2c7b95b99c8f3dd8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/fileClass/me/foundations/emotion/emotion.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "emotion"
+            }
+          },
+          {
+            "id": "29e7890b969110af",
+            "type": "leaf",
+            "state": {
+              "type": "FileClassView__me/foundations/emotion/emotion",
+              "state": {},
+              "icon": "drama",
+              "title": "me/foundations/emotion/emotion"
+            }
+          },
+          {
+            "id": "778c932a00a2167d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ME/🏛️ Foundations/🎭 Emotions/🎭 Emotions.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🎭 Emotions"
+            }
+          },
+          {
+            "id": "99717c31997c7313",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/fileClass/me/foundations/foundation element/foundation_element.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "foundation_element"
+            }
+          },
+          {
+            "id": "0241bb0f858e52bb",
+            "type": "leaf",
+            "state": {
+              "type": "FileClassView__me/foundations/foundation element/foundation_element",
+              "state": {},
+              "icon": "landmark",
+              "title": "me/foundations/foundation element/foundation_element"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "d8744f42e5dd3c54",
+        "type": "tabs",
+        "dimension": 32.90155440414508,
+        "children": [
+          {
+            "id": "b27ce53a70236bcf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ME/🏛️ Foundations/1_Todo List.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1_Todo List"
+            }
+          },
+          {
+            "id": "9b780723496a7cdd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/Templates/me/Foundations/Modal Emotion Template.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Modal Emotion Template"
+            }
           },
           {
             "id": "f8bb02c257683964",
@@ -143,12 +157,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/Templates/me/Foundations/Attachment/Modal Attachment Theory Template.md",
+                "file": "Meta/Templates/me/Foundations/Emotion Template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Modal Attachment Theory Template"
+              "title": "Emotion Template"
             }
           }
         ]
@@ -276,7 +290,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 332.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -376,8 +390,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -438,49 +452,50 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
-      "modalforms:Edit forms": false
+      "modalforms:Edit forms": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "b27ce53a70236bcf",
   "lastOpenFiles": [
-    "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory/💖 Theory.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory/Test.md",
-    "Meta/Templates/me/Foundations/Attachment/Modal Attachment Theory Template.md",
-    "Meta/Templates/me/Foundations/Attachment/Modal Attachment Style Template.md",
-    "Meta/Templates/me/Foundations/Attachment/Modal Attachment Need Template.md",
-    "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
-    "Meta/fileClass/global/global.md",
-    "Meta/Templates/me/Foundations/Attachment/Attachment Theory Template.md",
-    "Meta/fileClass/me/foundations/attachment/theory/lists/integration group list.md",
-    "Meta/fileClass/me/foundations/attachment/theory/lists/integration tip list.md",
-    "Meta/fileClass/me/foundations/attachment/theory/lists/relational effects list.md",
-    "Meta/fileClass/me/foundations/attachment/theory/lists/relational effects group list.md",
+    "ME/🏛️ Foundations/🎭 Emotions/🎭 Emotions.md",
+    "ME/🏛️ Foundations/🎭 Emotions/AA TEST.md",
+    "ME/🏛️ Foundations/🎭 Emotions/AA Test.md",
+    "Meta/Templates/me/Foundations/Emotion Template.md",
+    "Meta/fileClass/me/foundations/emotion/lists/emotion effects list.md",
+    "Meta/fileClass/me/foundations/emotion/lists/emotion flags list.md",
+    "Meta/fileClass/me/foundations/emotion/lists/emotion color list.md",
+    "Meta/Templates/me/Foundations/Modal Emotion Template.md",
+    "Meta/fileClass/me/foundations/foundation element/foundation_element.md",
+    "Meta/fileClass/me/foundations/emotion/emotion.md",
+    "Meta/Templates/me/Foundations/Modal TradeOff Template.md",
+    "ME/🏛️ Foundations/🎭 Emotions/Untitled Emotion.md",
+    "ME/🏛️ Foundations/🎭 Emotions/Abominable.md",
+    "Meta/fileClass/me/foundations/emotion/lists/emotion origin list.md",
+    "Meta/fileClass/me/foundations/tradeoffs/lists/tradeoffs resolved by group type list.md",
     "ME/🏛️ Foundations/1_Todo List.md",
-    "Meta/fileClass/me/foundations/attachment/style/attachment_style.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory/TEst Note.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/🔗 Styles.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Secure.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Fearful Avoidant.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Dismissive Avoidant.md",
-    "Meta/Templates/me/Foundations/Attachment/Attachment Style Template.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Test - Secure Attachment.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/🗝️ Needs.md",
-    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Anxious.md",
-    "Meta/fileClass/me/foundations/attachment/style/lists/attachment style type list.md",
-    "Meta/fileClass/me/foundations/foundation element/lists/rupture type list.md",
-    "Meta/fileClass/me/foundations/foundation element/lists/rupture type group list.md",
+    "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
+    "Meta/fileClass/me/foundations/tradeoffs/tradeoff.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Test.md",
+    "ME/🏛️ Foundations/📢 Internal Voices/Abandoned Child.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Test Trade Off.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-1.md",
+    "Allowing both feelings to coexist.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory/💖 Theory.md",
+    "My Files/My Attachments/Pasted image 20250701063017.png",
+    "My Calendar/My Daily Notes",
+    "My Thoughts",
+    "My Calendar",
+    "My Areas",
     "ME/⚡ Triggers",
     "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Boundary Disruptions",
     "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Cognitive or Sensory Basis",
     "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Time Pattern & Context",
     "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Avoidance or Distortion",
     "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Relational Wounding",
-    "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Power Dynamics & Identity",
-    "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Emotional Overload",
-    "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Rooted History",
-    "Meta/fileClass/me/foundations/trigger/lists/trigger flags",
     "My Files/My Attachments/Pasted image 20250605211151.png",
     "ME/🧪 Practice Lab/Rehearsal - Live Session.canvas",
     "My Files/My Attachments/Pasted image 20250601203819.png",
@@ -492,7 +507,6 @@
     "Files/My Attachments/Pic Test.png",
     "Files/My Attachments/Pasted image 20250508203302.png",
     "Files/My Attachments/file-20250510025433554989png.png",
-    "Files/My Attachments/Pasted image 20250415002454.png",
     "Personal/Greenhouse/Canvases/My Note-Making Station Board.canvas",
     "Systems/Dashboards/Captured Moments Dashboard.canvas",
     "Systems/Dashboards/Canvases/My Canvas Vision Board.canvas",

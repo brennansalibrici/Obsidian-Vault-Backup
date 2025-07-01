@@ -27,7 +27,9 @@ class ModalFormUtils {
         PROTECTIVE_STRATEGY: "protective strategy",
         ATTACHMENT_NEED: "attachment need",
         ATTACHMENT_STYLE: "attachment style",
-        ATTACHMENT_THEORY: "attachment theory"
+        ATTACHMENT_THEORY: "attachment theory",
+        TRADE_OFF: "tradeoff",
+        EMOTION: "emotion"
     };
 
     static linkFields = [
@@ -48,7 +50,12 @@ class ModalFormUtils {
   "threatened_by",
   "earned_security_supports",
   "attachment_style_link",
-  "strategies"
+  "strategies",
+  "conflicted_part",
+  "internal_voices",
+  "soothing_resources",
+  "opposite",
+  "associated_thoughts"
 ];
 
 
@@ -212,12 +219,21 @@ class ModalFormUtils {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Attachment Theory");
             }
 
+        },
+        "tradeoff": {
+            folder: "ME/🏛️ Foundations/⚖️Trade-Offs",
+            template: "Meta/Templates/me/Foundations/TradeOff Template.md",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Trade-Off");
+            }
+        },
+        "emotion": {
+            folder: "ME/🏛️ Foundations/🎭 Emotions",
+            template: "Meta/Templates/me/Foundations/Emotion Template.md",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Emotion");
+            }
         }
-
-
-
-
-
 
     };
 

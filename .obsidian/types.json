@@ -119,6 +119,7 @@
     "scenario": "multitext",
     "source_daily_note": "text",
     "grade": "number",
-    "excludes": "multitext"
+    "excludes": "multitext",
+    "emotion_type": "multitext"
   }
 }

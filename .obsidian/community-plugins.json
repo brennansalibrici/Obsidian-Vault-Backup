@@ -1,18 +1,16 @@
 [
-  "obsidian-minimal-settings",
-  "quickadd",
-  "fleeting-notes-obsidian",
-  "obsidian-git",
-  "metadata-menu",
-  "metadata-hider",
-  "obsidian-outliner",
-  "templater-obsidian",
-  "chatgpt-md",
-  "buttons",
+  "auto-note-mover",
   "dataview",
-  "obsidian-linter",
+  "fleeting-notes-obsidian",
   "journals",
+  "obsidian-linter",
   "obsidian-meta-bind-plugin",
+  "metadata-hider",
+  "metadata-menu",
+  "obsidian-minimal-settings",
+  "nldates-obsidian",
+  "templater-obsidian",
   "modalforms",
-  "customjs"
+  "customjs",
+  "obsidian-git"
 ]

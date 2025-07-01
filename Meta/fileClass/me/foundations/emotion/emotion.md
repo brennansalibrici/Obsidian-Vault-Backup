@@ -57,11 +57,6 @@ fields:
       valuesListNotePath: Meta/fileClass/me/emotion flags list.md
     path: ""
     id: DV45B7
-  - name: associated_thoughts
-    type: MultiFile
-    options: {}
-    path: ""
-    id: 96UaFz
   - name: emotion_color
     type: Select
     options:
@@ -70,7 +65,7 @@ fields:
       valuesListNotePath: Meta/fileClass/me/emotion color list.md
     path: ""
     id: fvbTqs
-version: "2.218"
+version: "2.219"
 limit: 20
 mapWithTag: false
 icon: drama
@@ -90,6 +85,5 @@ fieldsOrder:
   - bkN0Ew
   - DV45B7
   - XnPUHF
-  - 96UaFz
   - fvbTqs
 ---

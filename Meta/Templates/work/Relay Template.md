@@ -3,10 +3,10 @@
 fileClass: relay
 
 # **INHERITS FROM GLOBAL TEMPLATE**
-id: <% tp.date.now("x") %>
-created: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-last_modified: <% tp.date.now("YYYY-MM-DD HH:mm") %>
-title: <% tp.file.title %>
+id: 1751291319233
+created: 2025-06-30 08:48
+last_modified: 2025-06-30 08:48
+title: Relay Template
 
 # STATUS & WORKFLOW FIELDS:
 status: [🟩 complete]
