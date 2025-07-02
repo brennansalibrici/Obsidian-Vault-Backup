@@ -19,10 +19,19 @@ actions:
 
 possible misspellings - needs behind it - 'protection'
 
+### To Review
 ```dataview
-table emotion_group as "Group", emotion_type as "Type", energy_mood as "Energy/Mood"
+table status as "Status"
 from "ME/🏛️ Foundations/🎭 Emotions"
-where file.name != "🎭 Emotions" and file.name != "🎭 Emotions"
+where status = null and file.name != "🎭 Emotions"
+sort file.name asc 
+```
+
+### Completed File List
+```dataview
+table emotion_group as "Group", emotion_type as "Type", energy_mood as "Energy/Mood", status as "Status"
+from "ME/🏛️ Foundations/🎭 Emotions"
+where status != null and file.name != "🎭 Emotions"
 sort file.name asc 
 
 ```

@@ -17,10 +17,19 @@ actions:
 
 ```
 
+### To Review
 ```dataview
-table resource_type as "Type", access_mode as "Access Mode", regulation_zone as "Regulation Zone", soothing_effects as "Effects"
+table status as "Status"
 from "ME/🏛️ Foundations/🩹 Soothing Resources"
-where file.name != "🩹 Soothing Resources"
+where status = null and file.name != "🩹 Soothing Resources"
+sort file.name asc
+```
+
+### Completed File List
+```dataview
+table resource_type as "Type", access_mode as "Access Mode", regulation_zone as "Regulation Zone", soothing_effects as "Effects", status as "Status"
+from "ME/🏛️ Foundations/🩹 Soothing Resources"
+where status != null and file.name != "🩹 Soothing Resources"
 sort file.name asc
 ```
 

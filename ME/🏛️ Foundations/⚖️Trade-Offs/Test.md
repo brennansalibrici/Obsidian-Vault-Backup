@@ -1,9 +1,9 @@
 ---
 fileClass: tradeoff
-id: 1751384181967
-created: 2025-07-01 10:36
-last_modified: 2025-07-01 10:36
-title: Test Trade Off
+id: 1751388865198
+created: 2025-07-01 11:54
+last_modified: 2025-07-01 11:54
+title: Test
 status: 🟩 complete
 type: trigger
 tags: []
@@ -31,7 +31,7 @@ example_behavior: ""
 dominant_pole_group: Safety & Protection
 dominant_pole: Safety
 conflicted_part: ["[[Abandoned Child]]"]
-resolved_by: [Naming both needs clearly]
+resolved_by: []
 notes: 
 related: []
 media: []

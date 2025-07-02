@@ -18,6 +18,7 @@ Foundations Forms Functioning
 - [x] Protective Strategies
 - [x] Emotional Needs
 - [ ] Change all multiselect fields on a form to allow for new user input values
-- [ ] Create field list note for Elia
+- [x] Create field list note for Elia
 - [ ] Create basic files for each elements
-- [ ] Double check each existing element to ensure that all current links actually lead somehwere. 
+- [x] Double check each existing element to ensure that all current links actually lead somehwere. 
+- [ ] Include Body Headers/Sections in the templates and update ModalFormUtils to copy frontmatter where it needs to be

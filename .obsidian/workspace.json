@@ -4,124 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "34caa925daf1e233",
+        "id": "ba5f8c7270d5c98f",
         "type": "tabs",
-        "dimension": 15.60880829015544,
-        "children": [
-          {
-            "id": "45dcb9c9d4bcedcd",
-            "type": "leaf",
-            "state": {
-              "type": "modal-form-manage-forms-view",
-              "state": {},
-              "icon": "documents",
-              "title": "Manage forms"
-            }
-          },
-          {
-            "id": "3d4e30067b348899",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Foundations/Attachment/Attachment Theory Template.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Attachment Theory Template"
-            }
-          },
-          {
-            "id": "91bc18fa8ce42233",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Foundations/Attachment/Modal Attachment Style Template.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Modal Attachment Style Template"
-            }
-          }
-        ]
-      },
-      {
-        "id": "eb29e944dd072a7b",
-        "type": "tabs",
-        "dimension": 51.48963730569949,
-        "children": [
-          {
-            "id": "2c7b95b99c8f3dd8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/fileClass/me/foundations/emotion/emotion.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "emotion"
-            }
-          },
-          {
-            "id": "29e7890b969110af",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/foundations/emotion/emotion",
-              "state": {},
-              "icon": "drama",
-              "title": "me/foundations/emotion/emotion"
-            }
-          },
-          {
-            "id": "778c932a00a2167d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ME/🏛️ Foundations/🎭 Emotions/🎭 Emotions.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "🎭 Emotions"
-            }
-          },
-          {
-            "id": "99717c31997c7313",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/fileClass/me/foundations/foundation element/foundation_element.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "foundation_element"
-            }
-          },
-          {
-            "id": "0241bb0f858e52bb",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/foundations/foundation element/foundation_element",
-              "state": {},
-              "icon": "landmark",
-              "title": "me/foundations/foundation element/foundation_element"
-            }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "d8744f42e5dd3c54",
-        "type": "tabs",
-        "dimension": 32.90155440414508,
         "children": [
           {
             "id": "b27ce53a70236bcf",
@@ -138,34 +22,21 @@
             }
           },
           {
-            "id": "9b780723496a7cdd",
+            "id": "0beca163c9fa33b9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/Templates/me/Foundations/Modal Emotion Template.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Modal Emotion Template"
-            }
-          },
-          {
-            "id": "f8bb02c257683964",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Foundations/Emotion Template.md",
+                "file": "ME/🏛️ Foundations/1_Todo List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Emotion Template"
+              "title": "1_Todo List"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -290,7 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 332.5
+    "width": 391.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -457,34 +328,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b27ce53a70236bcf",
+  "active": "0beca163c9fa33b9",
   "lastOpenFiles": [
-    "ME/🏛️ Foundations/🎭 Emotions/🎭 Emotions.md",
-    "ME/🏛️ Foundations/🎭 Emotions/AA TEST.md",
-    "ME/🏛️ Foundations/🎭 Emotions/AA Test.md",
-    "Meta/Templates/me/Foundations/Emotion Template.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion effects list.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion flags list.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion color list.md",
-    "Meta/Templates/me/Foundations/Modal Emotion Template.md",
-    "Meta/fileClass/me/foundations/foundation element/foundation_element.md",
-    "Meta/fileClass/me/foundations/emotion/emotion.md",
-    "Meta/Templates/me/Foundations/Modal TradeOff Template.md",
-    "ME/🏛️ Foundations/🎭 Emotions/Untitled Emotion.md",
-    "ME/🏛️ Foundations/🎭 Emotions/Abominable.md",
-    "Meta/fileClass/me/foundations/emotion/lists/emotion origin list.md",
-    "Meta/fileClass/me/foundations/tradeoffs/lists/tradeoffs resolved by group type list.md",
-    "ME/🏛️ Foundations/1_Todo List.md",
-    "Meta/fileClass/me/foundations/attachment/theory/attachment_theory.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
-    "Meta/fileClass/me/foundations/tradeoffs/tradeoff.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/Test.md",
-    "ME/🏛️ Foundations/📢 Internal Voices/Abandoned Child.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/Test Trade Off.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-1.md",
-    "Allowing both feelings to coexist.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off.md",
+    "ME/🏛️ Foundations/🛡️ Emotional Needs/🛡️ Emotional Needs.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/🗝️ Needs.md",
+    "ME/🏛️ Foundations/🪖 Protective Strategies/🪖 Protective Strategies.md",
+    "ME/🏛️ Foundations/🪖 Protective Strategies/Test Strategy.md",
+    "ME/🏛️ Foundations/🩹 Soothing Resources/🩹 Soothing Resources.md",
+    "ME/🏛️ Foundations/🩹 Soothing Resources/Test - Breathing Techniques.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs/Test Need.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/🔗 Styles.md",
+    "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Test Style.md",
     "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory/💖 Theory.md",
+    "ME/🏛️ Foundations/📢 Internal Voices/📢 Internal Voices.md",
+    "ME/🏛️ Foundations/📢 Internal Voices/Test Voice.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/🐾 Behavior Functions.md",
+    "ME/🏛️ Foundations/🎭 Emotions/🎭 Emotions.md",
+    "ME/🏛️ Foundations/🌀 Emotional Wounds/🌀 Emotional Wounds.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Test Behavior.md",
+    "ME/🏛️ Foundations/🎭 Emotions/AAA Test EMotion.md",
+    "ME/🏛️ Foundations/🌀 Emotional Wounds/Test Wound.md",
+    "ME/🏛️ Foundations/⚡ Triggers/⚡ Triggers.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
+    "ME/🏛️ Foundations/⚡ Triggers/TEst Trigger.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Trade Off Test.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Test Trade Off.md",
+    "ME/🏛️ Foundations/1_Todo List.md",
+    "Meta/fileClass/me/zField List Inner Check In.md",
+    "Meta/fileClass/me/practice_lab/zField List New Journal Entry.md",
     "My Files/My Attachments/Pasted image 20250701063017.png",
     "My Calendar/My Daily Notes",
     "My Thoughts",

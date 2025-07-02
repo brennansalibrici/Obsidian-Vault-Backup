@@ -17,9 +17,18 @@ actions:
 
 ```
 
+### To Review
 ```dataview
-table strategy_type as "Type", functions as "Functions", tradeoffs as "Trade-Offs", adaptive_alternatives as "Adaptations", narrative as "Narrative"
+table status as "Status"
 from "ME/🏛️ Foundations/🪖 Protective Strategies"
-where file.name != "🪖 Protective Strategies"
+where status = null and file.name != "🪖 Protective Strategies"
+sort file asc
+```
+
+### Completed File List
+```dataview
+table strategy_type as "Type", functions as "Functions", tradeoffs as "Trade-Offs", adaptive_alternatives as "Adaptations", narrative as "Narrative", status as "Status"
+from "ME/🏛️ Foundations/🪖 Protective Strategies"
+where status != null and file.name != "🪖 Protective Strategies"
 sort file asc
 ```

@@ -17,9 +17,18 @@ actions:
 
 ```
 
+### To Review
 ```dataview
-table styles as "Attachment Style", core_fears as "Core Fears", relational_effects as "Relational Effects", growth_path as "Growth Path"
+table status as "Status"
 from "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory"
-where file.name != "💖 Theory"
+where status = null and file.name != "💖 Theory"
+sort file asc
+```
+
+### Completed File List
+```dataview
+table styles as "Attachment Style", core_fears as "Core Fears", relational_effects as "Relational Effects", growth_path as "Growth Path", status as "Status"
+from "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory"
+where file.name != "💖 Theory" and status != null
 sort file asc
 ```

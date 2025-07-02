@@ -17,10 +17,19 @@ actions:
 
 ```
 
+### To Review
 ```dataview
-table voice_type As "Type", voice_style as "Style", tone as "Tone", recurring_phrase as "Phrase"
+table status as "Status"
 from "ME/🏛️ Foundations/📢 Internal Voices"
-where file.name != "📢 Internal Voices"
+where status = null and file.name != "📢 Internal Voices"
+sort file.name asc 
+```
+
+### Completed File List
+```dataview
+table voice_type As "Type", voice_style as "Style", tone as "Tone", recurring_phrase as "Phrase", status as "Status"
+from "ME/🏛️ Foundations/📢 Internal Voices"
+where file.name != "📢 Internal Voices" and status != null
 sort file.name asc 
 
 ```

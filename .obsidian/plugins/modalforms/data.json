@@ -7088,7 +7088,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -7140,7 +7143,8 @@
               "Welcoming contradiction as part of wholeness",
               "Practicing internal listening without rushing a fix"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -7162,7 +7166,8 @@
               "Letting the protective voice feel seen",
               "Inviting a deeper core need to speak"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -7183,7 +7188,8 @@
               "Recognizing the role of trauma or conditioning",
               "Naming protective strategies for what they are"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -7205,7 +7211,8 @@
               "Journal dialoguing between parts",
               "Embodied grounding to regulate intensity"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         }
       ],
@@ -8294,20 +8301,44 @@
                 "label": "Secure"
               },
               {
-                "value": "Anxious Preoccupied",
-                "label": "Anxious Preoccupied"
+                "value": "Earned Secure",
+                "label": "Earned Secure"
               },
               {
-                "value": "Dismissive Avoidant",
-                "label": "Dismissive Avoidant"
+                "value": "Anxious",
+                "label": "Anxious"
+              },
+              {
+                "value": "Avoidant",
+                "label": "Avoidant"
               },
               {
                 "value": "Fearful Avoidant",
                 "label": "Fearful Avoidant"
               },
               {
+                "value": "Disorganized",
+                "label": "Disorganized"
+              },
+              {
                 "value": "Disorganized Reactive",
                 "label": "Disorganized Reactive"
+              },
+              {
+                "value": "Dismissive Avoidant",
+                "label": "Dismissive Avoidant"
+              },
+              {
+                "value": "Anxious-Preoccupied",
+                "label": "Anxious-Preoccupied"
+              },
+              {
+                "value": "Avoidant-Fearful",
+                "label": "Avoidant-Fearful"
+              },
+              {
+                "value": "Anxious Preoccupied",
+                "label": "Anxious Preoccupied"
               },
               {
                 "value": "Disorganized Unresolved",
@@ -8316,10 +8347,6 @@
               {
                 "value": "Anxious-Avoidant Mixed",
                 "label": "Anxious-Avoidant Mixed"
-              },
-              {
-                "value": "Earned Secure",
-                "label": "Earned Secure"
               }
             ]
           }
@@ -8516,7 +8543,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies"
+            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -8571,7 +8601,8 @@
               "Strong Reactions To Perceived Rejection",
               "Testing Partner’s Loyalty Or Love"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8594,7 +8625,8 @@
               "Fear Of Abandonment",
               "Fear Of Engulfment"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8618,7 +8650,8 @@
               "Inconsistent Signals In Relationships",
               "Difficulty Sustaining Intimacy"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8640,7 +8673,8 @@
               "Compulsive Caretaking",
               "Rescuing Or Needing To Be Rescued"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8659,7 +8693,8 @@
             "multi_select_options": [
               "Feeling “Too Much” or “Not Enough” ("
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8723,7 +8758,8 @@
               "Learn To Ask Directly For Reassurance Or Space",
               "Practice Staying Emotionally Present In Discomfort"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8746,7 +8782,8 @@
               "Normalize The Presence Of Conflict In Healthy Love",
               "Build Trust Slowly Through Repeat Experiences"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8767,7 +8804,8 @@
               "Use Grounding Tools During Conflict Or Distance",
               "Practice Self-Soothing Techniques"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8788,7 +8826,8 @@
               "Notice Protective Patterns And Pause Before Acting",
               "Journal To Explore Emotional Triggers"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8807,7 +8846,8 @@
             "multi_select_options": [
               "Explore Therapy To Re-Pattern Early Attachment Wounds"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8857,7 +8897,8 @@
               "Harry Harlow",
               "Donald Winnicott"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8877,7 +8918,8 @@
               "Stephen Porges",
               "Deb Dana"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8897,7 +8939,8 @@
               "Richard Schwartz",
               "Parts Work"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
@@ -8921,7 +8964,8 @@
               "Somatic Experiencing",
               "Interpersonal Neurobiology"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": false,
+            "query": ""
           }
         },
         {
