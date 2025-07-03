@@ -3,26 +3,30 @@ fileClass: capturedMoment
 id: 1748459834378
 created: 2025-05-28 14:17
 last_modified: 2025-05-28 14:17
-title: "The Ones Who Don't Come In"
-status: [🟨 review]
+title: The Ones Who Don't Come In
+status:
+  - 🟨 review
 type: 
 tags: []
 category: note
 entered: true
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 source_daily_note:
   - - 2025-05-28
-importance: [Big Milestone]
-feelings: ["[[Grief]]"]
+importance:
+  - Big Milestone
+feelings:
+  - "[[Grief old]]"
 people: []
 theme: ""
 summary: Sometimes fearful avoidants never get past or overcome their fear
 notes: 
 related: 
 media: 
-attachments:
+attachments: 
 ---
 
 ## Context

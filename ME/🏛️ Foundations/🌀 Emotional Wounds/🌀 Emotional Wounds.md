@@ -30,6 +30,6 @@ sort file asc
 table wound_type as "Type", origin_context as "Origin/Context", visible_patterns as "Visible Patterns", status as "Status"
 from "ME/🏛️ Foundations/🌀 Emotional Wounds"
 where file.name != "🌀 Emotional Wounds" and status != null
-sort file asc
+sort file.name asc
 ```
 

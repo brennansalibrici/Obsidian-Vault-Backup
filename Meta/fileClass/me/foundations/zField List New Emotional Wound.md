@@ -23,3 +23,18 @@ Origin - singleselect - Wound Group = Trauma & Abuse {Sexual Abuse, Physical Abu
 Origin - singleselect - Wound Group = Cultural & Spiritual Contexts {Religious Trauma, Racial Discrimination, Cultural Shaming, Identity Shaming}
 
 Visible Patterns - text area
+
+---
+Body Content as Follows:
+
+## 🩸 What This Wound Comes From
+---
+<Describe the kind of rupture, neglect, betrayal, or chronic experience that tends to create this wound. Use gentle but direct language.>
+
+## 💥 How It Echoes in the Present
+---
+<Describe the common triggers, internal reactions, or protective behaviors that flare up when this wound is touched. Think in patterns.>
+
+## 🧪 What Healing Might Involve
+---
+<Offer clues about how this wound can begin to mend — through safety, truth, emotional presence, or integration. This is not a “fix” but a restoration path.>

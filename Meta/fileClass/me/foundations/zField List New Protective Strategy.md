@@ -52,3 +52,18 @@ Narrative - text area
 
 Adaptive Alternatives - text area
 
+---
+Body Content as Follows:
+
+## 🛡️ What This Strategy Protects
+---
+<Describe the internal wound, vulnerability, or emotional overwhelm this strategy is trying to protect you from. Use language that honors its survival function, even if it’s maladaptive now.>
+
+## ⚠️ When It Gets Triggered
+---
+<Describe what kinds of situations, thoughts, relational dynamics, or internal cues tend to activate this protective strategy — including real-life examples or patterns.>
+
+## 🔄 When It Helps / When It Hurts
+---
+<Explain the double-edged nature of the strategy: how it may have once helped or still occasionally helps, but also the way it can interfere with connection, healing, or growth.>
+

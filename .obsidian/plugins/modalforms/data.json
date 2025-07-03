@@ -261,7 +261,8 @@
           "input": {
             "type": "select",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🎲 Scenarios"
+            "folder": "ME/🧪 Practice Lab/🎲 Scenarios",
+            "options": []
           }
         },
         {
@@ -273,7 +274,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -313,7 +315,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills"
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -329,7 +334,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills"
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         }
       ],
@@ -352,7 +360,8 @@
           "input": {
             "type": "select",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🎬 Practice Logs"
+            "folder": "ME/🧪 Practice Lab/🎬 Practice Logs",
+            "options": []
           }
         },
         {
@@ -364,7 +373,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -400,7 +410,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills"
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -416,7 +429,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills"
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         }
       ],
@@ -439,7 +455,8 @@
           "input": {
             "type": "select",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🎬 Practice Logs"
+            "folder": "ME/🧪 Practice Lab/🎬 Practice Logs",
+            "options": []
           }
         },
         {
@@ -451,7 +468,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -482,7 +500,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills"
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -493,7 +514,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills"
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         }
       ],
@@ -564,7 +588,8 @@
               "The Student (eager to learn, curious)",
               "The Becoming Man (integrated, values-aligned self)"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -591,7 +616,8 @@
               "Hold Emotional Ground",
               "Stay Regulated"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -627,7 +653,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -639,7 +666,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         }
       ],
@@ -668,7 +696,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -843,7 +872,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -855,7 +885,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -954,7 +985,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -966,7 +998,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -995,7 +1028,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -1007,7 +1041,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -1036,7 +1071,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -1048,7 +1084,8 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "multi_select_options": []
           }
         },
         {
@@ -1124,7 +1161,11 @@
               "Blended Emotion",
               "Dissociated State",
               "Social Emotion",
-              "Spiritual Emotion"
+              "Spiritual Emotion",
+              "Protective Emotion",
+              "Masked Emotion",
+              "Attachment Emotion",
+              "Developmental Emotion"
             ],
             "allowUnknownValues": true,
             "query": ""
@@ -1162,11 +1203,10 @@
           "name": "emotion_origins",
           "label": "Emotion Origins",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": true,
-            "hidden": false,
-            "query": "",
+            "source": "fixed",
             "multi_select_options": [
               "Attachment Narrative",
               "Developmental",
@@ -1181,19 +1221,18 @@
               "Somatic",
               "Cultural"
             ],
-            "source": "fixed"
-          },
-          "isRequired": false
+            "allowUnknownValues": true,
+            "query": ""
+          }
         },
         {
           "name": "emotion_effects",
           "label": "Emotion Effects",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": true,
-            "hidden": false,
-            "query": "",
+            "source": "fixed",
             "multi_select_options": [
               "Activates Defense",
               "Leads to Disconnection",
@@ -1210,19 +1249,18 @@
               "Strengthens Bonds",
               "Increases Vulnerability"
             ],
-            "source": "fixed"
-          },
-          "isRequired": false
+            "allowUnknownValues": true,
+            "query": ""
+          }
         },
         {
           "name": "emotion_flags",
           "label": "Emotion Flags",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": true,
-            "hidden": false,
-            "query": "",
+            "source": "fixed",
             "multi_select_options": [
               "Ambivalent",
               "Masked",
@@ -1245,18 +1283,18 @@
               "Existential",
               "Residual"
             ],
-            "source": "fixed"
-          },
-          "isRequired": false
+            "allowUnknownValues": true,
+            "query": ""
+          }
         },
         {
           "name": "emotion_color",
           "label": "Emotion Color",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "select",
-            "allowUnknownValues": false,
-            "hidden": false,
+            "source": "fixed",
             "options": [
               {
                 "value": "Red",
@@ -1322,100 +1360,92 @@
                 "value": "Brown",
                 "label": "Brown"
               }
-            ],
-            "source": "fixed"
-          },
-          "isRequired": false
+            ]
+          }
         },
         {
           "name": "opposite",
           "label": "Opposite(s)",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [],
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🎭 Emotions"
-          },
-          "isRequired": false
+            "folder": "ME/🏛️ Foundations/🎭 Emotions",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
         },
         {
           "name": "internal voices",
           "label": "Internal Voices/Associated Thoughts",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [],
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
-          },
-          "isRequired": false
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
         },
         {
           "name": "linked_wounds",
           "label": "Linked Wounds",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [],
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds"
-          },
-          "isRequired": false
+            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
         },
         {
           "name": "soothing_resources",
           "label": "Soothing Resources",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [],
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources"
-          },
-          "isRequired": false
+            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
         },
         {
           "name": "needs_behind_it",
           "label": "Needs Behind It",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [],
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🛡️ Emotional Needs"
-          },
-          "isRequired": false
+            "folder": "ME/🏛️ Foundations/🛡️ Emotional Needs",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
         },
         {
           "name": "triggered_by",
           "label": "Triggered By",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "multiselect",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "query": "",
-            "multi_select_options": [],
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/⚡ Triggers"
-          },
-          "isRequired": false
+            "folder": "ME/🏛️ Foundations/⚡ Triggers",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
+          }
         },
         {
           "name": "definition",
@@ -2048,7 +2078,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies"
+            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -2108,7 +2141,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Emotional Overload"
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Emotional Overload",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -2124,7 +2160,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Rooted History"
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Rooted History",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -2140,7 +2179,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Power Dynamics & Identity"
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Power Dynamics & Identity",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -2156,7 +2198,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Relational Wounding"
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Relational Wounding",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -2172,7 +2217,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Avoidance or Distortion"
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Avoidance or Distortion",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -2188,7 +2236,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Time Pattern & Context"
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Time Pattern & Context",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -2204,7 +2255,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Cognitive or Sensory Basis"
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Cognitive or Sensory Basis",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -2220,7 +2274,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Boundary Disruptions"
+            "folder": "Meta/fileClass/me/foundations/trigger/lists/trigger flags/Boundary Disruptions",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -3692,7 +3749,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/⚡ Triggers"
+            "folder": "ME/🏛️ Foundations/⚡ Triggers",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -3708,7 +3768,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds"
+            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -3724,7 +3787,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -3740,7 +3806,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies"
+            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -3756,7 +3825,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🐾 Behavior Functions"
+            "folder": "ME/🏛️ Foundations/🐾 Behavior Functions",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -3772,7 +3844,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/⚖️Trade-Offs"
+            "folder": "ME/🏛️ Foundations/⚖️Trade-Offs",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -4182,7 +4257,8 @@
               "Anxious-Avoidant Mixed",
               "Earned Secure"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -4203,7 +4279,8 @@
               "Anxious-Avoidant Mixed",
               "Earned Secure"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -4256,7 +4333,8 @@
               "Withholding",
               "Abandonment"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -4280,7 +4358,8 @@
               "Invalidational",
               "Shaming"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -4304,7 +4383,8 @@
               "Conditional Love",
               "Overprotection"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -4324,7 +4404,8 @@
               "Loss or Separation",
               "Disruption of Safety"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -4923,7 +5004,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles"
+            "folder": "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -5009,7 +5093,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources"
+            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -5025,7 +5112,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies"
+            "folder": "ME/🏛️ Foundations/🪖 Protective Strategies",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -5041,7 +5131,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🐾 Behavior Functions"
+            "folder": "ME/🏛️ Foundations/🐾 Behavior Functions",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -5057,7 +5150,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds"
+            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -5073,7 +5169,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -5104,7 +5203,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory"
+            "folder": "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -5516,7 +5618,8 @@
               "Avoid Responsibility",
               "Avoid Dependency"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5547,7 +5650,8 @@
               "Restore Order",
               "Reduce Confusion"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5575,7 +5679,8 @@
               "Fulfill Moral Obligation",
               "Meet Expectations"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5601,7 +5706,8 @@
               "Maintain Role",
               "Compensate For Neglect"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5624,7 +5730,8 @@
               "Stay Consistent",
               "Maintain Self-Worth"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5694,7 +5801,8 @@
               "Being Known vs. Being in Control",
               "Staying Numb vs. Staying Present"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5719,7 +5827,8 @@
               "Validation vs. Truth-Telling",
               "Stability vs. Authenticity"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5742,7 +5851,8 @@
               "Being Seen vs. Feeling Safe",
               "Power vs. Intimacy"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5767,7 +5877,8 @@
               "Security vs. Growth",
               "Old Safety vs. New Possibility"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5789,7 +5900,8 @@
               "Approval vs. Truth",
               "Survival vs. Self-Actualization"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5811,7 +5923,8 @@
               "Avoiding Pain vs. Doing What’s Needed",
               "Guardedness vs. Openness"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5832,7 +5945,8 @@
               "Old Safety vs. New Possibility",
               "Reinforcing Old Roles vs. Becoming Whole"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5853,7 +5967,8 @@
               "Being Known vs. Being in Control",
               "Trust vs. Control"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -5874,7 +5989,8 @@
               "Pleasing Others vs. Staying True to Self",
               "Fitting In vs. Being Real"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -7143,7 +7259,7 @@
               "Welcoming contradiction as part of wholeness",
               "Practicing internal listening without rushing a fix"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -7292,7 +7408,8 @@
               "Internal",
               "External"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -7340,7 +7457,8 @@
               "Reconnects To Self",
               "Restores Hope"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         }
       ],
@@ -7730,7 +7848,8 @@
               "Anxious-Avoidant Mixed",
               "Earned Secure"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -7751,7 +7870,8 @@
               "Anxious-Avoidant Mixed",
               "Earned Secure"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -7804,7 +7924,8 @@
               "Withholding",
               "Abandonment"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -7828,7 +7949,8 @@
               "Invalidational",
               "Shaming"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -7852,7 +7974,8 @@
               "Conditional Love",
               "Overprotection"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -7872,7 +7995,8 @@
               "Loss or Separation",
               "Disruption of Safety"
             ],
-            "allowUnknownValues": false
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -8601,7 +8725,7 @@
               "Strong Reactions To Perceived Rejection",
               "Testing Partner’s Loyalty Or Love"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8625,7 +8749,7 @@
               "Fear Of Abandonment",
               "Fear Of Engulfment"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8650,7 +8774,7 @@
               "Inconsistent Signals In Relationships",
               "Difficulty Sustaining Intimacy"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8673,7 +8797,7 @@
               "Compulsive Caretaking",
               "Rescuing Or Needing To Be Rescued"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8693,7 +8817,7 @@
             "multi_select_options": [
               "Feeling “Too Much” or “Not Enough” ("
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8758,7 +8882,7 @@
               "Learn To Ask Directly For Reassurance Or Space",
               "Practice Staying Emotionally Present In Discomfort"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8782,7 +8906,7 @@
               "Normalize The Presence Of Conflict In Healthy Love",
               "Build Trust Slowly Through Repeat Experiences"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8804,7 +8928,7 @@
               "Use Grounding Tools During Conflict Or Distance",
               "Practice Self-Soothing Techniques"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8826,7 +8950,7 @@
               "Notice Protective Patterns And Pause Before Acting",
               "Journal To Explore Emotional Triggers"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8846,7 +8970,7 @@
             "multi_select_options": [
               "Explore Therapy To Re-Pattern Early Attachment Wounds"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8897,7 +9021,7 @@
               "Harry Harlow",
               "Donald Winnicott"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8918,7 +9042,7 @@
               "Stephen Porges",
               "Deb Dana"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8939,7 +9063,7 @@
               "Richard Schwartz",
               "Parts Work"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },
@@ -8964,7 +9088,7 @@
               "Somatic Experiencing",
               "Interpersonal Neurobiology"
             ],
-            "allowUnknownValues": false,
+            "allowUnknownValues": true,
             "query": ""
           }
         },

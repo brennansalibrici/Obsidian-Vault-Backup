@@ -17,7 +17,7 @@ Foundations Forms Functioning
 - [x] Soothing Resources
 - [x] Protective Strategies
 - [x] Emotional Needs
-- [ ] Change all multiselect fields on a form to allow for new user input values
+- [x] Change all multiselect fields on a form to allow for new user input values
 - [x] Create field list note for Elia
 - [ ] Create basic files for each elements
 - [x] Double check each existing element to ensure that all current links actually lead somehwere. 

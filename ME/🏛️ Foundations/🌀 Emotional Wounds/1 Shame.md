@@ -1,9 +1,9 @@
 ---
-fileClass: internal_voice
-id: 1751000900431
-created: 2025-06-27 00:08
-last_modified: 2025-06-27 00:08
-title: The Ghost
+fileClass: emotional_wound
+id: 1751521535498
+created: 2025-07-03 00:45
+last_modified: 2025-07-03 00:45
+title: 1 Shame
 status: 🟩 complete
 type: trigger
 tags: []
@@ -12,34 +12,30 @@ entered: false
 archived: false
 priority: ⚪ None
 visibility: 🔒 private
-linked_wounds: []
+internal_voices: []
 associated_emotions: []
 soothing_resources: []
-healing_resources: []
+healing_resource: []
 healing_pathways: []
 protective_strategies: []
-triggered_by: []
 needs_behind_it: []
+triggered_by: []
 intensity_scale: ""
 mechanism: []
 definition: ""
 behavior_functions: []
 tradeoffs: []
-voice_group: Exiled/Wounded
-voice_type: Perfectionist
-voice_style:
-  - Controlling
-  - Whispered
-recurring_phrase: No one sees me. I don’t matter."
+wound_group: Psychological & Emotional Climate
+wound_type: Abandonment
+origin_context: [Attachment Rupture]
+visible_patterns: Over-apologizing, sabotage of joy, emotional masking, self-punishment, hiding truth from fear of being seen as “bad”
 notes: 
 related: []
 media: []
 attachments: []
-tone: Barely audible, almost absent
 export_to_inputs: false
 ---
 
 ## Notes
 ---
-
 

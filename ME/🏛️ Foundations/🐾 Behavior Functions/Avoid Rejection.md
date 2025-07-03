@@ -34,6 +34,14 @@ why: Rooted in shame and fear of disconnection. Shows up in people-pleasing, per
 export_to_inputs: false
 ---
 
-## Notes
+## 🧠 What This Behavior Does
 ---
+Avoiding rejection is a protective strategy that keeps you from risking emotional exposure. It softens your words, edits your truth, or keeps you small in the hopes of being spared the pain of being unwanted. It helps preserve connection — even if it costs authenticity.
 
+## 🔁 What It Tries to Solve
+---
+It tries to prevent the deep emotional pain that comes from being cast out, criticized, or emotionally dropped. It manages the fear that “if they really knew me, they’d leave.”
+
+## 🚧 When It Gets in the Way
+---
+This strategy eventually erases your voice. You may be accepted — but not for who you truly are. Relationships built on self-protection lack the possibility of deep intimacy, because the real you never enters the room.

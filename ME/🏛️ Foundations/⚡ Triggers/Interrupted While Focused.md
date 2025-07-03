@@ -31,6 +31,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## ⚡ What This Trigger Activates
 ---
+Frustration, dysregulation, and sometimes disproportionate anger. It can create a jolt of cognitive whiplash — an involuntary loss of flow, focus, and internal control.
 
+## 🔍 Where It Comes From
+---
+This often traces back to environments where focus was a form of emotional protection or productivity was tied to worth. Interruptions can symbolize disrespect, intrusion, or lack of safety.
+
+## 🧭 How to Work With It
+---
+Breathe and pause to re-anchor. Name what was interrupted internally: “I was in something deep.” Consider setting boundaries around work/focus time and affirming that it’s okay to return to your rhythm without guilt.

@@ -31,6 +31,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## ⚡ What This Trigger Activates
 ---
+Hurt, resentment, or anger. Often accompanied by a collapsing sensation — as if your voice, presence, or reality doesn’t matter. It may stir inner protest or retreat.
 
+## 🔍 Where It Comes From
+---
+Usually tied to experiences of emotional neglect, dismissal, or being told your perspective was wrong, exaggerated, or unimportant. Can echo wounds around invisibility and unmet validation needs.
+
+## 🧭 How to Work With It
+---
+Breathe into the discomfort and affirm: “My experience is valid even if it’s not received.” You can reassert your truth calmly or protect your energy by disengaging when repeated misattunement occurs.

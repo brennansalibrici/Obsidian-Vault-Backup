@@ -43,3 +43,18 @@ Threat Source - multiselect - Threat Source Group = ⚖️Trade-Offs - ⚖️Tra
 Unmet Effects - Text Area
 
 Definition - Text Area
+
+---
+Body Content as Follows:
+
+## 🌱 What This Need Represents
+---
+<Describe the heart of the emotional need — what it is, why it matters, and how it connects to human thriving. Use warm, grounding language.>
+
+## 📌 When It Gets Activated
+---
+<Describe the kinds of situations or inner experiences that make this need rise to the surface — including the feelings or protective strategies that may appear when it’s unmet.>
+
+## 💬 How It Speaks
+---
+<Describe how the need might show up emotionally, behaviorally, or in language — especially the signals it sends (e.g., “See me,” “Hold me,” “Let me decide”).>

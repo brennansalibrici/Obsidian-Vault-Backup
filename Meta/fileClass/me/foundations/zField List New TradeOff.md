@@ -47,3 +47,18 @@ Resolved By Type - multiselect - Resolved By Group = Relational Mirroring & Exte
 Resolved By Type - multiselect - Resolved By Group = Cognitive & Emotional Reframing {Reframing vulnerability as strength, Recognizing the role of trauma or conditioning, Naming protective strategies for what they are}
 
 Resolved By Type - multiselect - Resolved By Group = Practice & Embodiment {Slowing down decisions until alignment emerges,  a container for experimentation, Journal dialoguing between parts, Embodied grounding to regulate intensity}
+
+---
+Body Content as Follows:
+
+## ⚖️ What’s Being Balanced
+---
+<Describe the core tension between two competing values, needs, or fears in this tradeoff — such as safety vs. connection, control vs. truth.>
+
+## 🤔 Why This Tradeoff Exists
+---
+<Explain the emotional or developmental logic behind the tradeoff — how it served a purpose or helped navigate a threat, even if it now limits growth.>
+
+## 🔓 How It Could Unwind
+---
+<Describe what might allow the system to loosen or resolve the tradeoff — such as internal integration, relational safety, or reworking a core belief.>

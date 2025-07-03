@@ -55,3 +55,18 @@ Trigger Flag - single select - Trigger Flag Group = Cognitive or Sensory Basis {
 Trigger Flag - single select - Trigger Flag Group = Boundary Disruptions {Boundary-Crossing}
 
 Definition - text area
+
+---
+Body Content as Follows:
+
+## ⚡ What This Trigger Activates
+---
+<Describe the emotional or nervous system response this trigger tends to evoke — such as fear, shutdown, anger, or dissociation. Focus on what it awakens inside, not just what it is.>
+
+## 🔍 Where It Comes From
+---
+<Explain the source or meaning behind the trigger — what deeper wound, unmet need, or past experience it links to, even unconsciously.>
+
+## 🧭 How to Work With It
+---
+<Offer guidance on how to notice, pause, and respond when this trigger arises — including self-talk, grounding, or relational repair strategies.>

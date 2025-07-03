@@ -37,6 +37,17 @@ tone: Cold, intellectual superiority
 export_to_inputs: false
 ---
 
-## Notes
+## 🗣️ What This Voice Says
 ---
+“They’re wrong. You’re right.”  
+“They’ll hurt you — stay guarded.”  
+“They don’t deserve your vulnerability.”  
+This voice speaks with certainty, moral superiority, and underlying fear.
 
+## 🎭 Where It Comes From
+---
+Often formed in response to betrayal or misattunement, this voice tries to protect by dividing the world into “safe” and “dangerous,” “right” and “wrong.” It deflects pain by assigning blame — often to avoid grief.
+
+## 🧘‍♂️ How to Respond
+---
+Pause and ask: “What’s underneath this?” Often it’s hurt, fear, or longing. Offer compassion for the pain without feeding the righteousness. This voice softens when reminded that nuance is not danger — it’s freedom.

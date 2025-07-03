@@ -39,3 +39,18 @@ Relational Challenges - Text Area
 Partner Attunement - Text Area 
 
 Definition - Text Area 
+
+---
+Body Content as Follows:
+
+## 🧬 Core Relational Pattern
+---
+<Describe the essential pattern of this attachment style: how it experiences closeness, what it fears, how it navigates autonomy vs. intimacy. Use psychological insight mixed with lived emotional tone.>
+
+## ⚙️ How It Shows Up in Relationships
+---
+<Give examples of real-world relational behavior — how this style tends to behave under stress, how it seeks safety, and what dynamics it often creates with others.>
+
+## 🔄 Growth Edges
+---
+<Identify what healing or integration might look like for someone with this style — what helps them grow, regulate, and feel safe in connection.>

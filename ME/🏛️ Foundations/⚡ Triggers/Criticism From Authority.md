@@ -32,6 +32,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## ⚡ What This Trigger Activates
 ---
+Shame, defensiveness, and a collapse into self-doubt or rage. The nervous system may interpret it as a threat to belonging, approval, or survival. It can lead to either fawning or rebellion.
 
+## 🔍 Where It Comes From
+---
+Often linked to childhood experiences of authoritarian parenting, high-stakes performance environments, or being punished for not meeting expectations. This trigger fuses identity with evaluation.
+
+## 🧭 How to Work With It
+---
+Separate the message from the tone or delivery. Ask: “Is this about me now, or about who I used to be?” Regulate first, then revisit the content with discernment. Validate your worth *before* assessing accuracy.

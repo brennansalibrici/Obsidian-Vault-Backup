@@ -20,3 +20,19 @@ Behavior Type - singleselect - Behavior Group = Moral or Social {Fulfill Moral O
 
 Why People Function Like This - Text Area
 
+---
+Body Content as Follows:
+
+## 🧠 What This Behavior Does
+---
+<Explain the adaptive or protective role this behavior plays — even if it looks dysfunctional on the surface. Emphasize how it may have emerged for a reason.>
+
+## 🔁 What It Tries to Solve
+---
+<Describe the internal discomfort, unmet need, emotional overwhelm, or relational tension this behavior is trying to manage or avoid.>
+
+## 🚧 When It Gets in the Way
+---
+<Describe how this behavior — though functional in its origin — may now block growth, connection, or healing. Offer insight into what to watch for when it oversteps.>
+
+

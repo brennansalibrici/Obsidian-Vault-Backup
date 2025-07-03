@@ -27,9 +27,7 @@ behavior_functions: []
 tradeoffs: []
 wound_group: Social & School Environment
 wound_type: Abandonment
-origin_context:
-  - Attachment Rupture
-  - Bullying
+origin_context: [Attachment Rupture, Bullying]
 visible_patterns: Overadapts to groups; deep loneliness; mirrors others to avoid rejection
 notes: 
 related: []
@@ -38,7 +36,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## 🩸 What This Wound Comes From
 ---
+This wound forms when a child consistently feels like an outsider — in their family, culture, faith, or peer group. You may have been the “different one,” the emotional one, the quiet one, the questioning one — and that difference was not welcomed, mirrored, or valued.
 
+## 💥 How It Echoes in the Present
+---
+You may over-adapt in social spaces, fear exclusion deeply, or sacrifice authenticity for approval. Even in a room full of people, you might feel profoundly alone. This longing is not just about community — it’s about *home*.
 
+## 🧪 What Healing Might Involve
+---
+You must begin to belong to yourself. Reclaim the parts you exiled to fit in. Seek spaces where your whole self — messy, tender, questioning — is welcome. Healing happens in brave spaces, not perfect ones.

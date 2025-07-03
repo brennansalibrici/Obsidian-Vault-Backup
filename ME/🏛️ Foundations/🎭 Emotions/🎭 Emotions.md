@@ -31,7 +31,7 @@ sort file.name asc
 ```dataview
 table emotion_group as "Group", emotion_type as "Type", energy_mood as "Energy/Mood", status as "Status"
 from "ME/🏛️ Foundations/🎭 Emotions"
-where status != null and file.name != "🎭 Emotions"
+where status != null and file.name != "🎭 Emotions" and emotion_group != null
 sort file.name asc 
 
 ```

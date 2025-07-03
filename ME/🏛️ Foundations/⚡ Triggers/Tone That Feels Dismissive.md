@@ -33,6 +33,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## ⚡ What This Trigger Activates
 ---
+Immediate irritation, hurt, or shutdown. It often bypasses logic and cuts straight to feeling small, mocked, or disregarded. Can cause mental spiraling or emotional disengagement.
 
+## 🔍 Where It Comes From
+---
+Often rooted in childhood experiences of sarcasm, ridicule, or subtle belittling. The nervous system associates certain tones with emotional danger or loss of dignity.
+
+## 🧭 How to Work With It
+---
+Pause before reacting. Clarify internally: “Did they *mean* to dismiss me, or does this tone remind me of someone who did?” Ask for clarification if safe. Set boundaries if the pattern persists.

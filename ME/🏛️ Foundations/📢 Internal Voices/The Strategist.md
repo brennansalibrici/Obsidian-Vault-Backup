@@ -37,6 +37,17 @@ tone: Emotionally distant but highly analytical
 export_to_inputs: false
 ---
 
-## Notes
+## 🗣️ What This Voice Says
 ---
+“Stay five steps ahead.”  
+“Read the room. Adjust accordingly.”  
+“Plan now so you don’t get hurt later.”  
+It’s calculated, calm, and often praised — but rarely relaxed.
 
+## 🎭 Where It Comes From
+---
+It emerged to keep you safe through hyper-attunement. If unpredictability or shame were common, this voice stepped in to analyze, predict, and adapt — always managing risk.
+
+## 🧘‍♂️ How to Respond
+---
+Let it know it doesn’t have to carry everything alone. Say: “We’re safe enough to improvise.” Offer it rest by building trust in the *present moment* rather than the future contingency.

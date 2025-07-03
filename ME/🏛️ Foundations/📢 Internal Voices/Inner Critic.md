@@ -27,9 +27,7 @@ behavior_functions: []
 tradeoffs: []
 voice_group: Critical
 voice_type: Perfectionist
-voice_style:
-  - Controlling
-  - Shaming
+voice_style: [Controlling, Shaming]
 recurring_phrase: What’s wrong with you? You always mess it up.
 notes: 
 related: []
@@ -39,7 +37,17 @@ tone: Condescending and relentless
 export_to_inputs: false
 ---
 
-## Notes
+## 🗣️ What This Voice Says
 ---
+“You’re not good enough.”  
+“You should’ve known better.”  
+“Everyone’s going to see how flawed you are.”  
+It speaks with harshness, authority, and a tone of contempt masked as discipline.
 
+## 🎭 Where It Comes From
+---
+This voice mimics caregivers, teachers, or cultural standards that taught you love was conditional. It believes shame creates growth. It’s often trying to prevent failure by preemptively punishing imperfection.
 
+## 🧘‍♂️ How to Respond
+---
+Don’t debate it — ground yourself first. Then respond with curiosity: “What are you afraid would happen if I stopped trying so hard?” This voice softens when you listen beneath its anger to the fear it's hiding.

@@ -33,6 +33,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## ⚡ What This Trigger Activates
 ---
+Deep shame, fear of abandonment, and internal panic. It can evoke a regression into helplessness or desperation, especially if you're left to make sense of the silence alone. Often triggers internal voices like “I must have done something wrong” or “I don’t matter.”
 
+## 🔍 Where It Comes From
+---
+This trigger often ties to relational wounds around emotional neglect, punishment by withdrawal, or early experiences where love or safety were revoked when you expressed emotion or made a mistake.
+
+## 🧭 How to Work With It
+---
+Name the silence instead of filling it with self-blame. Anchor to the truth: “Silence isn’t always rejection — but my nervous system learned it that way.” Ground yourself and reach out when regulated, or create boundaries if it feels punitive.

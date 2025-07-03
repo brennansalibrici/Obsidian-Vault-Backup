@@ -16,10 +16,20 @@ type command
 action QuickAdd: 👤 Create Person Note
 ```
 
+### To Review
 ```dataview
-table phone.phone_number as "Phone", email.email_address as "Email", status as "Verified"
+table status as "Status"
 from "Personal/👤 People"
-where file.name != "👤 People"
+where status = null and file.name != "👤 People"
+sort file.name asc
+
+```
+
+### Completed File List
+```dataview
+table phone.phone_number as "Phone", email.email_address as "Email", status as "Status"
+from "Personal/👤 People"
+where status != null and file.name != "👤 People"
 sort file.name asc
 
 ```

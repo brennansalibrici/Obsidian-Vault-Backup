@@ -37,6 +37,17 @@ tone: Sharp and commanding
 export_to_inputs: false
 ---
 
-## Notes
+## 🗣️ What This Voice Says
 ---
+“We do not break the rules.”  
+“Control the chaos or it’ll control you.”  
+“Hold the line.”  
+This voice is rigid, often emotionless, and speaks with certainty. It confuses strength with strictness.
 
+## 🎭 Where It Comes From
+---
+It emerged in systems where emotional safety came from structure or performance — not presence. It likely took charge early to keep things predictable, safe, or “acceptable.” It sees feelings as threats.
+
+## 🧘‍♂️ How to Respond
+---
+Affirm its purpose — then remind it you’re no longer in danger. Say: “Thank you for protecting me. But we don’t need to live by fear anymore.” Invite this voice into a role of stability, not domination.

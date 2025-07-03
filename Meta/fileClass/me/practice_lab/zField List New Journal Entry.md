@@ -1,3 +1,0 @@
-Emotions []
-
-Summary - Text Area

@@ -20,10 +20,8 @@ mechanism: []
 definition: ""
 trigger_group: Identity-Based
 trigger_type: Rejection
-trigger_origin:
-  - Attachment Wound
-trigger_flags:
-  - Frozen or Numb Response
+trigger_origin: [Attachment Wound]
+trigger_flags: [Frozen or Numb Response]
 behavior_functions: []
 tradeoffs: []
 notes: 
@@ -33,7 +31,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## ⚡ What This Trigger Activates
 ---
+Anxiety, panic, or attempts to micromanage. It can lead to disorientation, irritability, or a desperate need to regain order — sometimes through overcorrection or withdrawal.
 
+## 🔍 Where It Comes From
+---
+This is frequently tied to early experiences of chaos, unpredictability, or being placed in roles without support. Control becomes a protective adaptation for feeling safe in a world that once felt unsafe.
 
+## 🧭 How to Work With It
+---
+Acknowledge the fear beneath the grasping. Ground in the body: “What can I *actually* influence right now?” Shift from control to containment — trust that you can handle, even if you can’t control.

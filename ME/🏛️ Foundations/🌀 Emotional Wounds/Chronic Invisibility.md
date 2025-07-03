@@ -27,9 +27,8 @@ behavior_functions: []
 tradeoffs: []
 wound_group: Family & Attachment
 wound_type: Invisibility
-origin_context:
-  - Inconsistent Parenting
-visible_patterns: Disappearing in relationships; trouble speaking up; assumes needs don't matter
+origin_context: [Inconsistent Parenting]
+visible_patterns: "Disappearing in relationships; trouble speaking up; assumes needs don't matter"
 notes: 
 related: []
 media: []
@@ -37,7 +36,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## 🩸 What This Wound Comes From
 ---
+This wound forms in environments where your presence, emotions, or voice were routinely overlooked — not through explosive neglect, but persistent, subtle omission. You may have been the “easy child,” the “helper,” or simply the one no one checked in on. Over time, you learned that blending in was safer than being seen.
 
+## 💥 How It Echoes in the Present
+---
+You may downplay your needs, minimize your voice, or disappear in group settings. Even in loving relationships, you might feel unseen or unimportant, struggling to believe your presence truly matters. This wound often leads to overfunctioning or emotional self-erasure.
 
+## 🧪 What Healing Might Involve
+---
+To heal, you must practice *insisting on your own presence*. Begin by noticing when you shrink, silence, or defer — and gently reverse course. Healing means reclaiming space, allowing visibility, and believing that your presence is not just tolerated — it’s needed.

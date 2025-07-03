@@ -53,3 +53,18 @@ Influence - multiselect - Influence Group = For Internal Family Systems {Richard
 Influence - multiselect - Influence Group = Modern Integrative Models {Stan Tatkin, Diane Poole Heller, Sue Johnson, Emotionally Focused Therapy, Somatic Experiencing, Interpersonal Neurobiology}
 
 Notes - text area
+
+---
+Body Content as Follows:
+
+## 🧠 What This Theory Proposes
+---
+<Explain the core idea of the theory — what it says about how early relational bonds shape emotional development and adult intimacy. Use language that bridges science and human story.>
+
+## 🔍 What It Helps Explain
+---
+<Describe the types of patterns, behaviors, or emotional struggles that attachment theory brings insight into — including why it matters.>
+
+## 🧩 How It Integrates With Healing
+---
+<Explain how understanding attachment theory can guide emotional repair, relational safety, and therapeutic growth. Optionally note which modalities (e.g., EMDR, IFS) draw from it.>

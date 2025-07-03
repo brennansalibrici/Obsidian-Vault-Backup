@@ -36,7 +36,14 @@ why: |+
 export_to_inputs: false
 ---
 
-## Notes
+## 🧠 What This Behavior Does
 ---
+This behavior creates stability and purpose by doing what’s right — especially in systems where morality, responsibility, or helpfulness equaled worth. It provides structure when internal chaos or doubt feels dangerous.
 
+## 🔁 What It Tries to Solve
+---
+It tries to reduce guilt, earn love, and prove your goodness. Especially if you were praised for being the “good one” or shamed for being “difficult,” obligation became your map to belonging.
 
+## 🚧 When It Gets in the Way
+---
+It becomes performative. You may give more than you have, say yes when you mean no, or uphold values that no longer fit you — all because being “right” feels safer than being real.

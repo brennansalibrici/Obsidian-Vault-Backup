@@ -17,6 +17,7 @@ emotion.createNewFileName();
 
 await emotion.createFileWithFrontmatter({
 title: result.data.emotion_name,
+  status: "🟩 complete",
   emotion_group: result.data.emotion_group,
   emotion_type: result.data.emotion_type,
   energy_mood: result.data.energy_mood,

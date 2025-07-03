@@ -27,3 +27,18 @@ Needs Behind It []
 Triggered By []
 
 Definition - text area
+
+---
+Body Content as Follows:
+
+## 💔 What This Emotion Means
+---
+<Short narrative-style definition, capturing its emotional essence and significance. Use metaphor or grounded language.>
+
+## 🔍 When It Shows Up
+---
+<Describe the common situations, triggers, or life moments when this emotion tends to emerge. Include both big and subtle moments.>
+
+## 🧭 How It Guides
+---
+<What this emotion invites or asks for. This is the emotional intelligence part — what it's signaling, or what it helps you reorient toward.>

@@ -36,7 +36,14 @@ why: |+
 export_to_inputs: false
 ---
 
-## Notes
+## 🧠 What This Behavior Does
 ---
+This strategy protects your core self from being seen as bad, broken, or wrong. It reduces shame by deflecting, performing, fixing, or disappearing — anything to avoid the unbearable feeling of “I’m not enough.”
 
+## 🔁 What It Tries to Solve
+---
+It tries to protect you from emotional exposure — especially when mistakes, feelings, or needs were met with ridicule or rejection. It’s a way of staying in control of how you’re perceived.
 
+## 🚧 When It Gets in the Way
+---
+You lose the chance to receive compassion. In trying to manage how others see you, you block the possibility that someone could see your shame and still stay.

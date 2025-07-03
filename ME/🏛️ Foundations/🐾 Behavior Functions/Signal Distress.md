@@ -36,7 +36,14 @@ why: |+
 export_to_inputs: false
 ---
 
-## Notes
+## 🧠 What This Behavior Does
 ---
+This behavior lets you express pain when it feels too risky or vulnerable to say it directly. It creates nonverbal signals — withdrawal, sarcasm, overwhelm — that say “I’m not okay” without explicitly asking for help.
 
+## 🔁 What It Tries to Solve
+---
+It tries to avoid rejection, conflict, or punishment for being needy. It often forms in environments where asking for help was unsafe or ignored.
 
+## 🚧 When It Gets in the Way
+---
+Others may miss your signals or resent the indirectness. You may feel misunderstood or uncared for, even though the distress was real. Over time, it leaves both parties confused and disconnected.

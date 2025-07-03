@@ -36,7 +36,14 @@ why: |+
 export_to_inputs: false
 ---
 
-## Notes
+## 🧠 What This Behavior Does
 ---
+This behavior helps you maintain a consistent story about who you are — especially when you feel fragile inside. It polishes the parts that feel lovable and hides the ones that feel risky.
 
+## 🔁 What It Tries to Solve
+---
+It tries to shield against shame, judgment, or emotional exile. If you were loved conditionally, self-image became armor — a curated version of “you” designed to stay safe.
 
+## 🚧 When It Gets in the Way
+---
+It creates disconnection. Others may love the mask but miss the real you. And inside, you may still feel unworthy — because only the polished parts get seen.

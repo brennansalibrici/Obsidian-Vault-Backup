@@ -27,9 +27,7 @@ behavior_functions: []
 tradeoffs: []
 voice_group: Fear-Based
 voice_type: Perfectionist
-voice_style:
-  - Controlling
-  - Urgent
+voice_style: [Controlling, Urgent]
 recurring_phrase: Something’s not right. Stay alert. Stay small.
 notes: 
 related: []
@@ -39,7 +37,17 @@ tone: Hyper-vigilant and analytical
 export_to_inputs: false
 ---
 
-## Notes
+## 🗣️ What This Voice Says
 ---
+“Observe. Don’t engage.”  
+“Watch everyone before you speak.”  
+“Stay still. It’s safer to witness than participate.”  
+This voice is quiet, skeptical, and detached.
 
+## 🎭 Where It Comes From
+---
+Often formed in homes with volatility, performance expectations, or surveillance. The Watcher protects through emotional distancing and pattern recognition — always monitoring the room for threat or approval.
 
+## 🧘‍♂️ How to Respond
+---
+Thank it for noticing. Then ask gently: “What would it be like to *join*?” The Watcher softens when it learns that safety doesn’t require disappearance — only discernment.

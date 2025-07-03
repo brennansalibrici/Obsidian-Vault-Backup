@@ -52,3 +52,19 @@ Supports - Earned Security Supports = 💖 Attachment Theory or Inputs - 💖 At
 
 Partner Attachment Cue - Text
 
+---
+Body Content as Follows:
+
+## 🤝 What This Need Reflects
+---
+<Explain the core desire behind this attachment need — what kind of bond, presence, or relational assurance it seeks. Use emotionally attuned language that reflects deep human longing.>
+
+## 🧲 When It Gets Activated
+---
+<Describe the life situations, attachment wounds, or relational ruptures that tend to activate this need — especially when it's unmet or partially met.>
+
+## 🗣️ What It Longs to Hear
+---
+<Give examples of the kinds of words, actions, or emotional signals that meet this need. This could include internal self-talk or what the person might need from a partner or caregiver.>
+
+

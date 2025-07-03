@@ -36,7 +36,14 @@ why: |+
 export_to_inputs: false
 ---
 
-## Notes
+## 🧠 What This Behavior Does
 ---
+This behavior steps in to fill the gaps others left behind — emotionally, physically, or relationally. It drives you to become the caretaker, the achiever, or the one who “has it all together.”
 
+## 🔁 What It Tries to Solve
+---
+It tries to resolve the emptiness and hunger created by early emotional deprivation. If no one met your needs, you learn to meet everyone else’s instead — sometimes to prove you didn’t need much after all.
 
+## 🚧 When It Gets in the Way
+---
+It exhausts you. You pour out from a place of lack and may resent those who don’t notice. Meanwhile, your own unmet needs keep echoing louder beneath all the service.

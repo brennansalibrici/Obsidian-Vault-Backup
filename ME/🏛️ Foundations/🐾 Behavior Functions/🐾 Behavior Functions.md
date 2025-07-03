@@ -30,5 +30,5 @@ sort file asc
 table function_group as "Group", function_type as "Type", status as "Status"
 from "ME/🏛️ Foundations/🐾 Behavior Functions"
 where file.name != "🐾 Behavior Functions" and status != null
-sort file asc
+sort file.name asc
 ```

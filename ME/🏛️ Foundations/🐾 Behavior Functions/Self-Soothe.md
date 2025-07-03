@@ -36,7 +36,14 @@ why: |+
 export_to_inputs: false
 ---
 
-## Notes
+## 🧠 What This Behavior Does
 ---
+Self-soothing helps you regulate your nervous system and emotions when overwhelm or distress sets in. It gives you an internal anchor — a way to come back to yourself without needing someone else to fix it.
 
+## 🔁 What It Tries to Solve
+---
+It tries to reduce panic, emotional flooding, or the shame of “needing too much.” It’s especially common for people who learned not to depend on others or were shamed for being upset.
 
+## 🚧 When It Gets in the Way
+---
+It can become emotional isolation. You may over-rely on independence and miss out on relational repair. When self-soothing turns into self-sealing, connection becomes harder — even when you want it.

@@ -36,7 +36,14 @@ why: |+
 export_to_inputs: false
 ---
 
-## Notes
+## 🧠 What This Behavior Does
 ---
+Staying invisible reduces the chances of being criticized, rejected, or overwhelmed. It allows you to blend into the background, where there’s less risk of harm — and less pressure to be something you’re not ready to be.
 
+## 🔁 What It Tries to Solve
+---
+It tries to resolve the danger of visibility: being too much, being wrong, or being asked to carry more than you can. Especially when attention once meant obligation or scrutiny, invisibility becomes a safe haven.
 
+## 🚧 When It Gets in the Way
+---
+You stop existing in the room. Your needs go unmet, not because no one cares — but because no one knows they’re there. Over time, invisibility reinforces the belief that your presence doesn’t matter.

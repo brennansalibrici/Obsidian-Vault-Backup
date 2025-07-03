@@ -22,13 +22,8 @@ definition: |+
 
 trigger_group: Relational
 trigger_type: Note Feeling Heard
-trigger_origin:
-  - Attachment Wound
-trigger_flags:
-  - Inherited
-  - Identity-Threatening
-  - Neglect-Based
-  - Shame-Inducing
+trigger_origin: [Attachment Wound]
+trigger_flags: [Inherited, Identity-Threatening, Neglect-Based, Shame-Inducing]
 behavior_functions: []
 tradeoffs: []
 notes: 
@@ -38,7 +33,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## ⚡ What This Trigger Activates
 ---
+Feelings of invisibility, worthlessness, and suppressed rage. It can cause shutdown, overexplanation, or emotional withdrawal. Internally, it often reinforces the belief that “my needs are too much.”
 
+## 🔍 Where It Comes From
+---
+This is often rooted in developmental wounds where emotional expression was dismissed or seen as inconvenient. Caregivers may have modeled emotional suppression, invalidation, or chronic misattunement.
 
+## 🧭 How to Work With It
+---
+Reclaim the right to have needs. Begin by validating them to yourself. If safe, name the pattern: “When I feel brushed aside, I start to believe I don’t deserve care. But I do.” Make space for the unmet need without shame.
