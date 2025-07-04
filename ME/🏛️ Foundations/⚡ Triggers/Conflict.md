@@ -14,14 +14,19 @@ priority: ⚪ None
 visibility: 🔒 private
 linked_wounds: []
 associated_emotions: []
-protective_strategies: ["[[Conflict Avoidance]]", "[[Emotional Shutdown]]", "[[OverExplaining]]"]
+protective_strategies:
+  - "[[Conflict Avoidance]]"
+  - "[[Emotional Shutdown]]"
+  - "[[Overexplaining]]"
 intensity_scale: ""
 mechanism: []
 definition: The emotional charge that arises when relational disagreement threatens connection, safety, or self-worth. Even minor conflict can feel overwhelming if past experiences equated it with rejection, danger, or shame.
 trigger_group: Relational
 trigger_type: Conflict
-trigger_origin: [Attachment Wound]
-trigger_flags: [Emotional Flooding]
+trigger_origin:
+  - Attachment Wound
+trigger_flags:
+  - Emotional Flooding
 behavior_functions: []
 tradeoffs: []
 notes: 

@@ -11,16 +11,17 @@ Soothing Effects - multiselect - {Calms Nervous System, Grounds In The Present, 
 ---
 Body Content as Follows:
 
-## 🗣️ What This Voice Says
+## 🕊️ What This Resource Offers
 ---
-<Describe the common phrases, tones, or messages this internal voice uses — especially under stress, shame, or emotional reactivity. Use direct quotes where possible (“You always screw things up”).>
+<Describe the kind of regulation, comfort, or grounding this resource provides — whether it’s emotional, sensory, relational, or spiritual. Use concrete examples where possible.>
 
-## 🎭 Where It Comes From
+## 📍 When To Reach For It
 ---
-<Offer insight into the origin of this voice — whether it echoes a parent, cultural norm, survival instinct, or past emotional wound. Describe its deeper function or protective role.>
+<Describe situations or emotional states where this resource is especially helpful — including what it might interrupt, soften, or support.>
 
-## 🧘‍♂️ How to Respond
+## 🔄 How It Supports Healing
 ---
-Describe how to engage with this voice — not by silencing it, but by meeting it with curiosity, boundaries, or compassion. What does it need in order to soften?>
+<Explain how this resource works with the nervous system, attachment needs, or inner safety. This can include phrases, actions, or symbolic meaning.>
+
 
 

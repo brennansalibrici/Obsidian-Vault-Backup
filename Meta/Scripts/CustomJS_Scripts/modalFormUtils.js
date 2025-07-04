@@ -55,7 +55,9 @@ class ModalFormUtils {
   "internal_voices",
   "soothing_resources",
   "opposite",
-  "associated_thoughts"
+  "associated_thoughts",
+  "functions",
+  "tradeoffs"
 ];
 
 
