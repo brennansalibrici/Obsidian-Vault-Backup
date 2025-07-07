@@ -7,18 +7,19 @@ title: Target
 status: [🟩 complete]
 type: 
 tags: []
-category: note
+category: [note]
 entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
 name: Target
-customer_status: 🟨
-site_rules: ['rule: "NFPA LOTO procedures for shutdowns. "', 'rule: No Hoodies In The Building']
-notes: ""
+customer_status: [🟨]
+site_rules: ['rule: "NFPA LOTO procedures for shutdowns. "', "rule: No Hoodies In The Building"]
+notes: [""]
 related: 
 media: 
-attachments:
+attachments: 
+icon: "[[target.ico]]"
 ---
 
 ## Notes

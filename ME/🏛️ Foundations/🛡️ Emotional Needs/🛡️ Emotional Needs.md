@@ -1,4 +1,5 @@
 ---
+searchTerm: ""
 ---
 
 ```meta-bind-button
@@ -25,10 +26,13 @@ where status = null and file.name != "🛡️ Emotional Needs"
 sort file asc
 ```
 
+#### Search By Title:
+`INPUT[text:searchTerm]`
+
 ### Completed File List
 ```dataview
 table need_type as "Need", developmental_origin as "Origin", threatened_by as "Threatened By", unmet_effects as "Unmet Effects", definition as "Definition", status as "Status"
 from "ME/🏛️ Foundations/🛡️ Emotional Needs"
-where status != null and file.name != "🛡️ Emotional Needs"
+where status != null and file.name != "🛡️ Emotional Needs" and icontains(title,this.searchTerm)
 sort file asc
 ```

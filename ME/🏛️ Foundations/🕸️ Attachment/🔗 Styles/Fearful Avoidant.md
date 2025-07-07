@@ -52,6 +52,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## 🧬 Core Relational Pattern
 ---
+Fearful avoidant individuals are caught between opposing fears — of being too close and of being too far. They long for connection but expect it to hurt. Their inner world says: “I want to trust you… but I’m already bracing for the wound.”
 
+## ⚙️ How It Shows Up in Relationships
+---
+They may idealize partners one moment and push them away the next. Emotional vulnerability often triggers panic or shutdown. There's a deep mistrust of both self and others — and a felt sense that intimacy will cost safety or control. Self-sabotage is common.
+
+## 🔄 Growth Edges
+---
+Healing starts with coherence: learning to recognize emotional whiplash and choosing a middle path. They benefit from slow, stable connection, trauma-informed support, and parts work that allows them to integrate both the pursuer and protector inside.

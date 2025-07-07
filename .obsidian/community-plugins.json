@@ -11,5 +11,7 @@
   "templater-obsidian",
   "modalforms",
   "customjs",
-  "obsidian-git"
+  "obsidian-git",
+  "buttons",
+  "quickadd"
 ]

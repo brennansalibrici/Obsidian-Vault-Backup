@@ -26,7 +26,16 @@ fields:
       valuesList: {}
     path: ""
     id: 8wGr9V
-version: "2.25"
+  - name: icon
+    type: Media
+    options:
+      embed: false
+      folders: []
+      display: card
+      thumbnailSize: "100"
+    path: ""
+    id: Doaxh8
+version: "2.26"
 limit: 20
 mapWithTag: false
 icon: package
@@ -39,6 +48,7 @@ extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - Doaxh8
   - 8wGr9V
   - QibfMD
   - XYJ7au

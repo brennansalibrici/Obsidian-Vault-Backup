@@ -1,4 +1,5 @@
 ---
+searchTerm: ""
 ---
 
 ```meta-bind-button
@@ -25,10 +26,13 @@ where status = null and file.name != "🐾 Behavior Functions"
 sort file asc
 ```
 
+#### Search By Title:
+`INPUT[text:searchTerm]`
+
 ### Completed File List
 ```dataview
 table function_group as "Group", function_type as "Type", status as "Status"
 from "ME/🏛️ Foundations/🐾 Behavior Functions"
-where file.name != "🐾 Behavior Functions" and status != null
+where file.name != "🐾 Behavior Functions" and status != null and icontains(title,this.searchTerm)
 sort file.name asc
 ```

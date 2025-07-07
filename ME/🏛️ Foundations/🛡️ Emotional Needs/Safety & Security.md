@@ -25,11 +25,7 @@ need_group: Security
 need_type: Connection
 developmental_origin: Infancy
 unmet_effects: Chronic anxiety, hypervigilance, controlling behaviors, or deep freeze responses under pressure
-threatened_by:
-  - "[[Yelling or Explosive Conflict]]"
-  - "[[Unpredictable Environment]]"
-  - "[[Loss of Control]]"
-  - "[[Having My Needs Minimized or Brushed Aside]]"
+threatened_by: ["[[Yelling or Explosive Conflict]]", "[[Unpredictable Environment]]", "[[Loss of Control]]", "[[Having My Needs Minimized or Brushed Aside]]"]
 notes: 
 related: []
 media: []
@@ -38,7 +34,14 @@ threat_source_group: ⚡ Triggers
 export_to_inputs: false
 ---
 
-## Notes
+## 🩸 What This Wound Comes From
 ---
+This wound comes from environments where unpredictability, chaos, or danger were the norm — emotionally, physically, or relationally. Safety was never guaranteed, and your system never learned to rest.
 
+## 💥 How It Echoes in the Present
+---
+You may live on high alert, struggle to trust calm, or brace against intimacy. Even good things feel suspicious, as if peace itself can’t be trusted to last.
 
+## 🧪 What Healing Might Involve
+---
+Safety is rebuilt slowly — through consistency, attunement, and nervous system regulation. It’s not just about external protection, but about teaching your body that *this moment* is different than back then.

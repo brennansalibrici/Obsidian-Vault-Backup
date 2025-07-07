@@ -1,4 +1,5 @@
 ---
+searchTerm: ""
 ---
 
 ```meta-bind-button
@@ -24,11 +25,14 @@ from "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles"
 where status = null and file.name != "🔗 Styles"
 sort file asc
 ```
+#### Search By Title:
+`INPUT[text:searchTerm]`
 
 ### Completed File List
 ```dataview
 table style_type as "Type", style_subtype as "SubType", style_pattern as "Pattern", core_fears as "Core Fears", status as "Status"
 from "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles"
-where status != null and file.name != "🔗 Styles"
+	where status != null and file.name != "🔗 Styles" and icontains(title,this.searchTerm)
 sort file asc
 ```
+

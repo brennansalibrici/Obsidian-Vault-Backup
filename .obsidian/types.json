@@ -120,6 +120,9 @@
     "source_daily_note": "text",
     "grade": "number",
     "excludes": "multitext",
-    "emotion_type": "multitext"
+    "emotion_type": "multitext",
+    "core_fears": "multitext",
+    "style_subtype": "multitext",
+    "style_pattern": "multitext"
   }
 }

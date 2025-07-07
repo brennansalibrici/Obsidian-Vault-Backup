@@ -7,7 +7,7 @@ title: Site Template
 status: [🟩 complete]
 type: 
 tags: []
-category: note
+category: [note]
 entered: true
 archived: false
 priority: [⚪ None]
@@ -16,13 +16,13 @@ customer: "[[Target]]"
 siteName: "T0560 Stuart's Draft, VA"
 siteStatus: 🟩
 siteAddress:
-  streetAddress: "345 Mount Vernon Rd."
-  city: "Stuarts Draft"
-  state: "VA"
+  streetAddress: 345 Mount Vernon Rd.
+  city: Stuarts Draft
+  state: VA
   zip: "24477"
-switchgear: 
+switchgear: ["[[T0560 MSB1]]", "[[T0560 MSB2]]", "[[T0560 MSB3]]", "[[T0560 MSB4]]"]
 jobs: 
-notes: notes
+notes: ["MSB 4 cage does not have EM 120V power available. However, there is an EM/UPS panel above the trucking office on the mezzanine level. You just need a 100' extension cord and drop it down into the MSB 4 cage"]
 related: 
 media: 
 attachments:

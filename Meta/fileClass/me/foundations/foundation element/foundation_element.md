@@ -81,7 +81,19 @@ fields:
     options: {}
     path: ""
     id: MKMeud
-version: "2.49"
+  - name: my_experience
+    type: Cycle
+    options:
+      sourceType: ValuesList
+      valuesList:
+        "1": ❤️🤍🤍🤍🤍
+        "2": ❤️❤️🤍🤍🤍
+        "3": ❤️❤️❤️🤍🤍
+        "4": ❤️❤️❤️❤️🤍
+        "5": ❤️❤️❤️❤️❤️
+    path: ""
+    id: h6kdcR
+version: "2.51"
 limit: 20
 mapWithTag: false
 icon: landmark
@@ -93,6 +105,7 @@ extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - h6kdcR
   - MKMeud
   - Xw9AyV
   - 9xtS9G

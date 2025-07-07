@@ -42,20 +42,12 @@ style_group: Insecure
 style_type: Anxious Preoccupied
 style_subtype: Anxious Reactive
 style_pattern: Blended
-progression_from:
-  - Dismissive Avoidant
-  - Fearful Avoidant
-progression_to:
-  - Earned Secure
+progression_from: [Dismissive Avoidant, Fearful Avoidant]
+progression_to: [Earned Secure]
 core_fears_group: Relational
 core_fears: Abandonment
 rupture_group: Attachment Breaks/Disruptions
-rupture_types:
-  - Being Forgotten
-  - Underprotection
-  - Misattunement
-  - Dismissal
-  - Inconsistency
+rupture_types: [Being Forgotten, Underprotection, Misattunement, Dismissal, Inconsistency]
 internal_challenges: |+
   Struggles with emotional regulation, overthinking, and persistent worry about being unloved or left. Needs frequent reassurance and fears emotional distance.
 
@@ -64,7 +56,14 @@ partner_attunement: Benefits from clear verbal reassurance, emotional consistenc
 export_to_inputs: false
 ---
 
-## Notes
+## 🧬 Core Relational Pattern
 ---
+This style craves closeness but fears it will disappear. Love feels fragile, and the internal belief is often: “If I’m not needed, I won’t be wanted.” Intimacy becomes a lifeline, not a choice.
 
+## ⚙️ How It Shows Up in Relationships
+---
+Anxious-preoccupied individuals often seek constant reassurance, overexplain themselves, and may panic when responses feel delayed or unclear. Their nervous system is highly attuned to shifts in tone, silence, or space. Emotional intensity is often their way of asking: “Do I still matter to you?”
 
+## 🔄 Growth Edges
+---
+The healing path involves building internal safety and learning to regulate emotion without outsourcing security. They benefit from slowing down, naming needs directly, and trusting that they can hold connection even without constant confirmation.

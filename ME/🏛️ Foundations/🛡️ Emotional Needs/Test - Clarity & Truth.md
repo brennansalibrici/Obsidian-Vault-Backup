@@ -1,3 +1,0 @@
----
-title: Test - Clarity & Truth
----

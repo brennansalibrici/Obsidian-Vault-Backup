@@ -25,27 +25,14 @@ behavior_functions: []
 tradeoffs: []
 style_group: Secure
 style_type: Secure
-style_subtype:
-  - Secure with Anxious Sensitivities
-style_pattern:
-  - Secure-Plus
-progression_from:
-  - Earned Secure
-progression_to:
-  - Secure
+style_subtype: [Secure with Anxious Sensitivities]
+style_pattern: [Secure-Plus]
+progression_from: [Earned Secure]
+progression_to: [Secure]
 core_fears_group: Identity & Worth
-core_fears:
-  - Abandonment
+core_fears: [Abandonment]
 rupture_group: Attachment Breaks/Disruptions
-rupture_types:
-  - Being Forgotten
-  - Underprotection
-  - Misattunement
-  - Invalidational
-  - Overcontrol
-  - Punishment for Authenticity
-  - Loss or Separation
-  - Disruption of Safety
+rupture_types: [Being Forgotten, Underprotection, Misattunement, Invalidational, Overcontrol, Punishment for Authenticity, Loss or Separation, Disruption of Safety]
 internal_challenges: |+
   May still carry echoes of old fear or self-doubt but generally able to regulate emotions, seek repair, and stay emotionally connected under stress.
 
@@ -65,7 +52,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## 🧬 Core Relational Pattern
 ---
+Secure attachment reflects a balanced ability to stay connected without losing oneself. These individuals are generally comfortable with intimacy and independence. They trust that love doesn't require performance, and they recover from rupture through repair, not retreat.
 
+## ⚙️ How It Shows Up in Relationships
+---
+Secure individuals can name their needs without shame, listen without defensiveness, and tolerate emotional discomfort in service of repair. They don't need constant reassurance, but they offer it freely. They approach conflict as an opportunity to connect, not as a threat to self.
 
+## 🔄 Growth Edges
+---
+Securely attached people still grow — particularly in deepening emotional nuance, supporting partners with different styles, and staying soft in moments of relational stress. Their edge is to lead with presence and humility rather than assume “rightness” from their security.

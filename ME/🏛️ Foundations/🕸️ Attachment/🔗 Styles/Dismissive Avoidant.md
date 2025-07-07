@@ -52,6 +52,14 @@ attachments: []
 export_to_inputs: false
 ---
 
-## Notes
+## 🧬 Core Relational Pattern
 ---
+This style values independence and views emotional needs as potential liabilities. Vulnerability often feels unsafe or shameful. The internal story is: “If I need too much, I’ll lose control — or be rejected.”
 
+## ⚙️ How It Shows Up in Relationships
+---
+Dismissive avoidant individuals often shut down during emotional conflict, avoid discussing feelings, and may appear cold or unbothered. They withdraw under stress, compartmentalize pain, and rarely initiate emotional repair. Partners may feel chronically unseen or disconnected.
+
+## 🔄 Growth Edges
+---
+Growth means softening into emotional risk. Practicing presence during conflict, allowing interdependence, and naming needs even when it feels awkward are key steps. Learning to trust that closeness won’t mean loss of self is foundational.

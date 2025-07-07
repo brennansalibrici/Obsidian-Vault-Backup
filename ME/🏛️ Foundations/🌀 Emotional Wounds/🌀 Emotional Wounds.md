@@ -1,4 +1,5 @@
 ---
+searchTerm: ""
 ---
 
 ```meta-bind-button
@@ -25,11 +26,14 @@ where file.name != "🌀 Emotional Wounds" and status = null
 sort file asc
 ```
 
+#### Search By Title:
+`INPUT[text:searchTerm]`
+
 ### Completed File List
 ```dataview
 table wound_type as "Type", origin_context as "Origin/Context", visible_patterns as "Visible Patterns", status as "Status"
 from "ME/🏛️ Foundations/🌀 Emotional Wounds"
-where file.name != "🌀 Emotional Wounds" and status != null
+where file.name != "🌀 Emotional Wounds" and status != null and icontains(title,this.searchTerm)
 sort file.name asc
 ```
 

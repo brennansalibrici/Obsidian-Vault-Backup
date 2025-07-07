@@ -1,4 +1,5 @@
 ---
+searchTerm: ""
 ---
 
 ```meta-bind-button
@@ -25,10 +26,13 @@ where status = null and file.name != "🪖 Protective Strategies"
 sort file asc
 ```
 
+#### Search By Title:
+`INPUT[text:searchTerm]`
+
 ### Completed File List
 ```dataview
 table strategy_type as "Type", functions as "Functions", tradeoffs as "Trade-Offs", adaptive_alternatives as "Adaptations", narrative as "Narrative", status as "Status"
 from "ME/🏛️ Foundations/🪖 Protective Strategies"
-where status != null and file.name != "🪖 Protective Strategies"
+where status != null and file.name != "🪖 Protective Strategies" and icontains(title,this.searchTerm)
 sort file asc
 ```

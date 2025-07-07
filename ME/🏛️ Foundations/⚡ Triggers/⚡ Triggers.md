@@ -1,4 +1,5 @@
 ---
+searchTerm: ""
 ---
 
 ```meta-bind-button
@@ -25,12 +26,14 @@ where status = null and file.name != "⚡ Triggers"
 sort file.name asc 
 
 ```
+#### Search By Title:
+`INPUT[text:searchTerm]`
 
 ### Completed File List
 ```dataview
 table trigger_type As "Type", trigger_origin as "Origin", trigger_flags as "Flags", status as "Status"
 from "ME/🏛️ Foundations/⚡ Triggers"
-where file.name != "⚡ Triggers" and status != null
+where file.name != "⚡ Triggers" and status != null and icontains(title,this.searchTerm)
 sort file.name asc 
 
 ```

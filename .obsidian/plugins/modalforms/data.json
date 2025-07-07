@@ -1589,6 +1589,10 @@
               {
                 "value": "Breathlessness/Rapid Heartbeat",
                 "label": "Breathlessness/Rapid Heartbeat"
+              },
+              {
+                "value": "Internal Disorganization",
+                "label": "Internal Disorganization"
               }
             ]
           }
@@ -1873,6 +1877,10 @@
               {
                 "value": "Body-Stored Pattern",
                 "label": "Body-Stored Pattern"
+              },
+              {
+                "value": "Mixed Messages, Inconsistent Experiences",
+                "label": "Mixed Messages, Inconsistent Experiences"
               }
             ]
           }
@@ -3918,6 +3926,10 @@
               {
                 "value": "Fearful Avoidant Split",
                 "label": "Fearful Avoidant Split"
+              },
+              {
+                "value": "Disorganized Unresolved",
+                "label": "Disorganized Unresolved"
               }
             ]
           }
@@ -7459,6 +7471,10 @@
               {
                 "value": "Fearful Avoidant Split",
                 "label": "Fearful Avoidant Split"
+              },
+              {
+                "value": "Disorganized Unresolved",
+                "label": "Disorganized Unresolved"
               }
             ]
           }
@@ -8391,13 +8407,17 @@
               {
                 "value": "Being Unlovable",
                 "label": "Being Unlovable"
+              },
+              {
+                "value": "Being Too Much",
+                "label": "Being Too Much"
               }
             ]
           }
         },
         {
           "name": "fear_identity",
-          "label": "Identity & Worth Core Feas",
+          "label": "Identity & Worth Core Fears",
           "description": "",
           "isRequired": false,
           "condition": {
@@ -8436,6 +8456,14 @@
               {
                 "value": "Judgment",
                 "label": "Judgment"
+              },
+              {
+                "value": "Disconnection",
+                "label": "Disconnection"
+              },
+              {
+                "value": "Letting Someone Down",
+                "label": "Letting Someone Down"
               }
             ]
           }
@@ -8500,7 +8528,7 @@
         },
         {
           "name": "strategies",
-          "label": "Strategies",
+          "label": "🪖 Protective Strategies",
           "description": "",
           "isRequired": false,
           "input": {

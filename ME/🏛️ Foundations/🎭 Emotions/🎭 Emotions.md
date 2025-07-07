@@ -1,4 +1,5 @@
 ---
+searchTerm: ""
 ---
 
 ```meta-bind-button
@@ -27,11 +28,14 @@ where status = null and file.name != "🎭 Emotions"
 sort file.name asc 
 ```
 
+#### Search By Title:
+`INPUT[text:searchTerm]`
+
 ### Completed File List
 ```dataview
 table emotion_group as "Group", emotion_type as "Type", energy_mood as "Energy/Mood", status as "Status"
 from "ME/🏛️ Foundations/🎭 Emotions"
-where status != null and file.name != "🎭 Emotions" and emotion_group != null
+where status != null and file.name != "🎭 Emotions" and emotion_group != null and icontains(title,this.searchTerm)
 sort file.name asc 
 
 ```
