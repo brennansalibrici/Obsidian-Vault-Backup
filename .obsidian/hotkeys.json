@@ -268,5 +268,21 @@
       ],
       "key": "Enter"
     }
+  ],
+  "editor:focus-left": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "ArrowLeft"
+    }
+  ],
+  "editor:focus-right": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "ArrowRight"
+    }
   ]
 }

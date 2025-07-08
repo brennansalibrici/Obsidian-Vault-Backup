@@ -1,12 +1,11 @@
 ---
-tags:
-  - area
-  - software_development
+tags: [area, software_development]
 Links: 
 Created: 2025-03-20T20:16:04
 areaGroup: Obsidian
 Group: Misc
 ---
+
 ## Tasks
 
 ```meta-bind-button

@@ -22,3 +22,7 @@ Foundations Forms Functioning
 - [x] Create basic files for each elements
 - [x] Double check each existing element to ensure that all current links actually lead somehwere. 
 - [x] Include Body Headers/Sections in the templates and update ModalFormUtils to copy frontmatter where it needs to be
+- [ ] Behavior Functions Entries
+- [ ] Internal Voices Entries
+- [ ] Protective Strategies Entries
+- [ ] Go through the elements and add 'how I've felt this' value

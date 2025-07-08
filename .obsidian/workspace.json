@@ -4,21 +4,43 @@
     "type": "split",
     "children": [
       {
-        "id": "ba5f8c7270d5c98f",
+        "id": "e6f2858cd98aa84f",
         "type": "tabs",
+        "dimension": 61.18881118881119,
         "children": [
           {
-            "id": "51dcbe2ac6e17d13",
+            "id": "359ebe56daaf486d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Anxious Reactive.md",
+                "file": "ME/🏛️ Foundations/🐾 Behavior Functions/Maintain Role.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Anxious Reactive"
+              "title": "Maintain Role"
+            }
+          }
+        ]
+      },
+      {
+        "id": "55723bc360e5d338",
+        "type": "tabs",
+        "dimension": 38.81118881118881,
+        "children": [
+          {
+            "id": "b72c93764efdfa6c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ME/🏛️ Foundations/🐾 Behavior Functions/🐾 Behavior Functions.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "🐾 Behavior Functions"
             }
           }
         ]
@@ -146,7 +168,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 289.5
+    "width": 445.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -313,11 +335,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "51dcbe2ac6e17d13",
+  "active": "359ebe56daaf486d",
   "lastOpenFiles": [
-    "Meta/fileClass/work/customer.md",
-    "Work/🏢 Customers/Target.md",
-    "Files/icons/Screenshot 2025-06-21 012659.ico.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Maintain Role 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Maintain Control.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/🐾 Behavior Functions.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Maintain Control 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Avoid Judgment.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Avoid Judgment 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Avoid Being Seen.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Avoid Being Seen 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Preserve Identity.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Preserve Identity 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Stay Consistent.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Stay Consistent 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Protect Others.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Protect Others 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Untitled Behavior Function.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Adapt To Survive.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Adapt to Survive 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Protect Vulnerability.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Protect Vulnerability 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Avoid Abandonment.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Avoid Abandonment 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Meet Others’ Needs First.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Meet Others' Needs First 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Stay In Control.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Stay in Control 1.md",
+    "ME/🏛️ Foundations/🐾 Behavior Functions/Avoid Disappointment.md",
     "Files/icons/amazon.ico",
     "Files/icons/nestle.ico",
     "Files/icons/reuters.ico",
@@ -327,30 +372,7 @@
     "Files/icons/rrdonnelly.ico",
     "Files/icons/uhg.ico",
     "Files/icons/target.ico",
-    "Work/⚡Electric Equipment/Switchgear/Switchgear.md",
     "Files/icons/unitedhealthcare-emblem.ico",
-    "Work/⚡Electric Equipment/Switchgear/T3803 MSB3.md",
-    "Work/⚡Electric Equipment/Switchgear/T3803 MSB2.md",
-    "Work/⚡Electric Equipment/Switchgear/T3803 MSB1.md",
-    "Work/⚡Electric Equipment/Switchgear/T0560 MSB4.md",
-    "Work/👤 POCs/👤 POCs.md",
-    "Work/👤 POCs/Felix Regalado.md",
-    "Work/👤 POCs/Wayne Cunningham.md",
-    "Work/📍 Sites/📍 Sites.md",
-    "Work/📍 Sites/T3803 Topeka, KS.md",
-    "Work/👷 Subcontractors/👷 Subcontractors.md",
-    "Work/👷 Subcontractors/Jayhawk Fire Sprinkler.md",
-    "Work/⚡Electric Equipment/Trip Units/Trip Units.md",
-    "Work/⚡Electric Equipment/Switchgear/T3886 MSS.md",
-    "Work/⚡Electric Equipment/Trip Units/PXR 20.md",
-    "Work/⚡Electric Equipment/Breakers/Eaton Power Defense SB 4000A.md",
-    "Work/⚡Electric Equipment/Breakers/Breakers.md",
-    "Work/🛠 My Jobs/🛠 My Jobs.md",
-    "Work/🛠 My Jobs/IR T3886 Detroit, MI 2025.md",
-    "Work/📍 Sites/T3863 King of Prussia, PA.md",
-    "Work/👤 POCs/Chris Harrington.md",
-    "Work/👤 POCs/Larry Milewski.md",
-    "Work/👤 POCs/Doug Pearson.md",
     "My Files/My Attachments/Pasted image 20250701063017.png",
     "My Files/My Attachments/Pasted image 20250605211151.png",
     "ME/🧪 Practice Lab/Rehearsal - Live Session.canvas",

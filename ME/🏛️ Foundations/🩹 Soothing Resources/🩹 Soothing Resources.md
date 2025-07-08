@@ -18,16 +18,17 @@ actions:
 
 ```
 
+---
+#### Search By Title:
+`INPUT[text:searchTerm]`
+
 ### To Review
 ```dataview
 table status as "Status"
 from "ME/🏛️ Foundations/🩹 Soothing Resources"
-where status = null and file.name != "🩹 Soothing Resources"
+where (status = null or status = "-") and file.name != "🩹 Soothing Resources" and icontains(file.name,this.searchTerm)
 sort file.name asc
 ```
-
-#### Search By Title:
-`INPUT[text:searchTerm]`
 
 ### Completed File List
 ```dataview

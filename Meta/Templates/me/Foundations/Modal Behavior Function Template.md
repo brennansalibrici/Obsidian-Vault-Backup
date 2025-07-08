@@ -35,7 +35,7 @@ await behavior.createFileWithFrontmatter({
   created: behavior.formatUtils.db_formatDateTime(new Date()),
   last_modified: behavior.formatUtils.db_formatDateTime(new Date()),
   status: "🟩 complete",
-  entered: false,
+  entered: true,
   export_to_inputs: false
 });
 -%>

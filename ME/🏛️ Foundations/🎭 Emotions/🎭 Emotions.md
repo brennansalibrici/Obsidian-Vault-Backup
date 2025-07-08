@@ -18,18 +18,19 @@ actions:
 
 ```
 
+---
+#### Search By Title:
+`INPUT[text:searchTerm]`
+
 possible misspellings - needs behind it - 'protection'
 
 ### To Review
 ```dataview
 table status as "Status"
 from "ME/🏛️ Foundations/🎭 Emotions"
-where status = null and file.name != "🎭 Emotions"
+where (status = null or status = "-") and file.name != "🎭 Emotions" and icontains(file.name,this.searchTerm)
 sort file.name asc 
 ```
-
-#### Search By Title:
-`INPUT[text:searchTerm]`
 
 ### Completed File List
 ```dataview
