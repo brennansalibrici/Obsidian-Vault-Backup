@@ -1,5 +1,5 @@
 ---
-searchTerm: ""
+searchTerm: resolve
 ---
 
 ```meta-bind-button

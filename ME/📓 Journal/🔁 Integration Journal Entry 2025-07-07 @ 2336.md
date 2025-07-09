@@ -4,16 +4,20 @@ id: 1751949381377
 created: 2025-07-07 23:36
 last_modified: 2025-07-07 23:36
 title: 🔁 Integration Journal Entry 2025-07-07 @ 2336
-status: [🟩 complete]
+status:
+  - 🟩 complete
 type: 
 tags: []
-category: [note]
+category:
+  - note
 entered: true
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 source_daily_note: "[[2025-07-07]]"
-people: ["[[Lori Kinney]]"]
+people:
+  - "[[Lori Kinney]]"
 journal_type: Integration
 summary: |-
   Emotional wincing and physical pain in response to Lori’s reaction. Stayed grounded instead of collapsing.
@@ -24,7 +28,19 @@ related:
 media: 
 attachments: 
 export_to_inputs: false
-emotions: ["[[Ashamed]]", "[[Humiliation]]", "[[Guilt]]", "[[Embarrassment]]", "[[Regret]]", "[[Fragility]]", "[[Exposed]]", "[[Overwhelmed]]", "[[Startled]]", "[[Confusion]]", "[[Disheartened]]", "[[Defensive]]"]
+emotions:
+  - "[[Ashamed]]"
+  - "[[ME/🏛️ Foundations/🎭 Emotions/Humiliation]]"
+  - "[[ME/🏛️ Foundations/🎭 Emotions/Guilt]]"
+  - "[[Embarrassment]]"
+  - "[[Regret]]"
+  - "[[Fragility]]"
+  - "[[Exposed]]"
+  - "[[Overwhelmed]]"
+  - "[[Startled]]"
+  - "[[Confusion]]"
+  - "[[Disheartened]]"
+  - "[[Defensive]]"
 ---
 
 ## 🚗 Who Was Driving?

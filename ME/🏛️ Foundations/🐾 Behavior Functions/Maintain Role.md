@@ -33,6 +33,7 @@ attachments: []
 why: Preserves a stable sense of self and belonging by sticking to familiar roles — caretaker, achiever, peacekeeper, etc. Often formed in childhood to meet family or relational expectations.
 export_to_inputs: false
 ---
+
 ## 🧠 What This Behavior Does
 ---
 Stays in a defined identity or interpersonal role, even when it no longer serves. May overfunction, suppress needs, or avoid change to uphold the role.

@@ -4,13 +4,17 @@ id: 1751834873085
 created: 2025-07-06 15:47
 last_modified: 2025-07-06 15:47
 title: Affection
-status: [🟩 complete]
-type: [trigger]
+status:
+  - 🟩 complete
+type:
+  - trigger
 tags: []
-category: [note]
+category:
+  - note
 entered: false
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 linked_wounds: 
 internal_voices: 
@@ -22,15 +26,20 @@ definition: ""
 behavior_functions: 
 tradeoffs: 
 need_group: Attachment
-need_type: [Affection]
+need_type:
+  - Affection
 developmental_origin: Toddlerhood
 unmet_effects: ""
 threatened_by: 
-attachment_style_link: ["[[Anxious]]", "[[Secure]]"]
+attachment_style_link:
+  - "[[Anxious]]"
+  - "[[ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Secure]]"
 rupture_effects: Emotional coldness, touch aversion, or desperation for physical/affirmative contact
 relational_fulfillment: Met through warm words, touch, tone, and gestures of care that communicate fondness without performance
 relational_risk: May perform to receive affection or collapse into shame when not offered spontaneously
-earned_security_supports: ["[[You're Not Lovable]]", "[[You Have To Earn Warmth]]"]
+earned_security_supports:
+  - "[[You're Not Lovable]]"
+  - "[[You Have To Earn Warmth]]"
 partner_attunement_cue: “You are cherished — and I like showing it.”
 notes: 
 related: 

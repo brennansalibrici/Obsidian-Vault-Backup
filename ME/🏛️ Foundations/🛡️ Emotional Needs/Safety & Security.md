@@ -25,7 +25,11 @@ need_group: Security
 need_type: Connection
 developmental_origin: Infancy
 unmet_effects: Chronic anxiety, hypervigilance, controlling behaviors, or deep freeze responses under pressure
-threatened_by: ["[[Yelling or Explosive Conflict]]", "[[Unpredictable Environment]]", "[[Loss of Control]]", "[[Having My Needs Minimized or Brushed Aside]]"]
+threatened_by:
+  - "[[Yelling or Explosive Conflict]]"
+  - "[[Unpredictable Environment]]"
+  - "[[ME/🏛️ Foundations/⚡ Triggers/Loss of Control]]"
+  - "[[Having My Needs Minimized or Brushed Aside]]"
 notes: 
 related: []
 media: []

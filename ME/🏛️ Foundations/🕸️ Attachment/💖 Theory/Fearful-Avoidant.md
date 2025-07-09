@@ -36,7 +36,7 @@ core_fears:
   - Rejection
 strategies:
   - "[[Role Locking]]"
-  - "[[Emotional Shutdown]]"
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
   - "[[Guardedness]]"
 relational_effects_group:
   - Closeness & Distance Dynamics

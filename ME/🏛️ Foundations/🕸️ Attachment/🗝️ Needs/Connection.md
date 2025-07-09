@@ -26,11 +26,14 @@ need_type: Connection
 developmental_origin: Infancy
 unmet_effects: ""
 threatened_by: []
-attachment_style_link: ["[[Secure]]", "[[Earned Secure]]"]
+attachment_style_link:
+  - "[[ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles/Secure]]"
+  - "[[Earned Secure]]"
 rupture_effects: Disconnection becomes identity-threatening; the world feels distant, cold, or untrustworthy.
 relational_fulfillment: Connection is met when someone engages emotionally, shares reality, and stays relational even in conflict.
 relational_risk: Disconnection may trigger withdrawal, protest, or collapse; shame may follow disconnection.
-earned_security_supports: ["[[Co-Regulation]]"]
+earned_security_supports:
+  - "[[Co-Regulation]]"
 partner_attunement_cue: “Let’s stay connected — even if we don’t agree right now.”
 notes: 
 related: []

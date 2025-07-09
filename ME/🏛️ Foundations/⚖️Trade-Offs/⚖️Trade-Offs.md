@@ -1,5 +1,5 @@
 ---
-searchTerm: ""
+searchTerm: avoiding
 ---
 
 ```meta-bind-button

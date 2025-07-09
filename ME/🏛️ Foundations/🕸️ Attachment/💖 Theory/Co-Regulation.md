@@ -4,13 +4,18 @@ id: 1751950906755
 created: 2025-07-08 00:01
 last_modified: 2025-07-08 00:01
 title: Co-Regulation
-status: ["", 🟩 complete]
-type: [trigger]
+status:
+  - ""
+  - 🟩 complete
+type:
+  - trigger
 tags: []
-category: [note]
+category:
+  - note
 entered: false
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 linked_wounds: 
 internal_voices: 
@@ -28,13 +33,26 @@ style_group: All Styles
 style_type: Secure & Insecure
 core_fears_group: Emotional Safety
 core_fears: Dysregulation in Isolation
-strategies: ["[[Self-Reliance As Safety]]", "[[Emotional Shutdown]]", "[[Overcontrol]]"]
+strategies:
+  - "[[Self-Reliance As Safety]]"
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
+  - "[[Overcontrol]]"
 relational_effects_group: Trust & Safety Challenges
-relational_effects: [Emotional Flooding or Collapse, Withdrawal or Over-Pursuit, Mistrust in Conflict]
+relational_effects:
+  - Emotional Flooding or Collapse
+  - Withdrawal or Over-Pursuit
+  - Mistrust in Conflict
 growth_path: Learn to receive emotional regulation through connection rather than avoidance, control, or self-isolation. Practice mutual grounding in moments of rupture or overwhelm.
 integration_group: Somatic & Emotional Regulation
-integration_tips: [Practice Soft Eye Contact and Gentle Voice, Use Anchoring Phrases During Stress, Regulate Together Without Fixing]
-influenced_by: [Stephen Porges, Deb Dana, Sue Johnson, Stan Tatkin]
+integration_tips:
+  - Practice Soft Eye Contact and Gentle Voice
+  - Use Anchoring Phrases During Stress
+  - Regulate Together Without Fixing
+influenced_by:
+  - Stephen Porges
+  - Deb Dana
+  - Sue Johnson
+  - Stan Tatkin
 notes: Core pillar of secure attachment. Insecure styles often lack early co-regulation, leading to dysregulated or self-contained strategies for managing distress.
 related: 
 media: 

@@ -27,15 +27,30 @@ definition: ""
 style_group: Insecure
 style_type: ""
 core_fears_group: Autonomy & Control
-core_fears: [Abandonment]
-strategies: ["[[Emotional Shutdown]]", "[[Compartmentalization]]", "[[Masking Vulnerability]]"]
-relational_effects_group: [Closeness & Distance Dynamics]
-relational_effects: [Emotional Withdrawal Or Shutdown, Difficulty Sustaining Intimacy, Avoiding Conflict Through Detachment, Difficulty Sustaining Intimacy]
+core_fears:
+  - Abandonment
+strategies:
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
+  - "[[Compartmentalization]]"
+  - "[[Masking Vulnerability]]"
+relational_effects_group:
+  - Closeness & Distance Dynamics
+relational_effects:
+  - Emotional Withdrawal Or Shutdown
+  - Difficulty Sustaining Intimacy
+  - Avoiding Conflict Through Detachment
+  - Difficulty Sustaining Intimacy
 growth_path: |
   Learn to trust safe closeness and allow regulated emotional expression in connection.
-integration_group: [Somatic & Emotional Regulation]
-integration_tips: [Practice Self-Soothing Techniques, Use Grounding Tools During Conflict Or Distance]
-influenced_by: [John Bowlby, Mary Ainsworth, Stan Tatkin]
+integration_group:
+  - Somatic & Emotional Regulation
+integration_tips:
+  - Practice Self-Soothing Techniques
+  - Use Grounding Tools During Conflict Or Distance
+influenced_by:
+  - John Bowlby
+  - Mary Ainsworth
+  - Stan Tatkin
 notes: |
   Often formed when early emotional needs were met with indifference, pressure to self-soothe, or emotional dismissal.
 related: []

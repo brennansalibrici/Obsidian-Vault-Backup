@@ -16,7 +16,7 @@ linked_wounds: []
 associated_emotions: []
 protective_strategies:
   - "[[Conflict Avoidance]]"
-  - "[[Emotional Shutdown]]"
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
   - "[[Overexplaining]]"
 intensity_scale: ""
 mechanism: []

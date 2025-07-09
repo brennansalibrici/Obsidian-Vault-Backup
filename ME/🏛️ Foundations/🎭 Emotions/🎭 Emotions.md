@@ -1,5 +1,5 @@
 ---
-searchTerm: ""
+searchTerm: start
 ---
 
 ```meta-bind-button
@@ -24,7 +24,7 @@ actions:
 
 possible misspellings - needs behind it - 'protection'
 
-### To Review
+### New Ones To Review
 ```dataview
 table status as "Status"
 from "ME/🏛️ Foundations/🎭 Emotions"
@@ -36,7 +36,14 @@ sort file.name asc
 ```dataview
 table emotion_group as "Group", emotion_type as "Type", energy_mood as "Energy/Mood", status as "Status"
 from "ME/🏛️ Foundations/🎭 Emotions"
-where status != null and file.name != "🎭 Emotions" and emotion_group != null and icontains(title,this.searchTerm)
+where status != null and icontains(title,this.searchTerm) and file.name != "🎭 Emotions" and emotion_group
 sort file.name asc 
 
+```
+### First Attempt Files
+```dataview
+table emotion_group as "Group", emotion_type as "Type", energy_mood as "Energy/Mood", status as "Status"
+from "ME/🏛️ Foundations/🎭 Emotions"
+where icontains(title,this.searchTerm) and file.name != "🎭 Emotions" and !emotion_group
+sort file.name asc 
 ```

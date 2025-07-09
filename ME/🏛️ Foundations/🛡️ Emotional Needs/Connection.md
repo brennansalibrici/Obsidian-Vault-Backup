@@ -25,7 +25,10 @@ need_group: Attachment
 need_type: Connection
 developmental_origin: Infancy
 unmet_effects: Feelings of emotional invisibility, disconnection from others, difficulty trusting relationships, or retreat into isolation.
-threatened_by: ["[[Masking Vulnerability]]", "[[Emotional Shutdown]]", "[[Distraction]]"]
+threatened_by:
+  - "[[Masking Vulnerability]]"
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
+  - "[[Distraction]]"
 notes: 
 related: []
 media: []

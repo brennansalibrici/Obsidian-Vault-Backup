@@ -16,10 +16,10 @@ source_daily_note: "[[2025-07-02]]"
 importance: Breakthrough
 emotions:
   - "[[Grief old]]"
-  - "[[Numbness]]"
+  - "[[Numb]]"
   - "[[Sorrow]]"
   - "[[Compassion]]"
-  - "[[Tenderness]]"
+  - "[[ME/🏛️ Foundations/🎭 Emotions/Tenderness]]"
   - "[[Steadiness]]"
 people:
   - "[[Lori Kinney]]"

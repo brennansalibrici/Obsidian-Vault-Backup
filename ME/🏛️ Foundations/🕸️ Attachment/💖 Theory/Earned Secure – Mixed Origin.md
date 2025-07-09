@@ -4,13 +4,18 @@ id: 1751800871151
 created: 2025-07-06 06:21
 last_modified: 2025-07-06 06:21
 title: Earned Secure – Mixed Origin
-status: ["", 🟩 complete]
-type: [trigger]
+status:
+  - ""
+  - 🟩 complete
+type:
+  - trigger
 tags: []
-category: [note]
+category:
+  - note
 entered: false
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 linked_wounds: 
 internal_voices: 
@@ -27,15 +32,28 @@ definition: ""
 style_group: Secure
 style_type: ""
 core_fears_group: Identity & Worth
-core_fears: [Being Not Enough]
-strategies: ["[[Emotional Shutdown]]", "[[Persona Shaping]]", "[[Conflict Avoidance]]"]
-relational_effects_group: [Vulnerability & Expression]
-relational_effects: [Difficulty Expressing Needs Directly, Feeling “Too Much” or “Not Enough”]
+core_fears:
+  - Being Not Enough
+strategies:
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
+  - "[[Persona Shaping]]"
+  - "[[Conflict Avoidance]]"
+relational_effects_group:
+  - Vulnerability & Expression
+relational_effects:
+  - Difficulty Expressing Needs Directly
+  - Feeling “Too Much” or “Not Enough”
 growth_path: |
   Maintain coherence by tending to old echoes gently, while choosing secure behavior repeatedly.
-integration_group: [Cognitive Reframing]
-integration_tips: [Notice Protective Patterns And Pause Before Acting, Practice Staying Emotionally Present In Discomfort]
-influenced_by: [Emotionally Focused Therapy, IFS, Somatic Experiencing]
+integration_group:
+  - Cognitive Reframing
+integration_tips:
+  - Notice Protective Patterns And Pause Before Acting
+  - Practice Staying Emotionally Present In Discomfort
+influenced_by:
+  - Emotionally Focused Therapy
+  - IFS
+  - Somatic Experiencing
 notes: A nuanced subtype of Earned Secure — developed through integrating multiple insecure roots often across relationships and healing modalities.
 related: 
 media: 

@@ -14,14 +14,18 @@ priority: ⚪ None
 visibility: 🔒 private
 linked_wounds: []
 associated_emotions: []
-protective_strategies: ["[[Emotional Shutdown]]", "[[Distraction]]"]
+protective_strategies:
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
+  - "[[Distraction]]"
 intensity_scale: ""
 mechanism: []
 definition: The experience of being overwhelmed by too many emotions at once — so intensely and suddenly that it hijacks your ability to think, speak, or stay grounded.
 trigger_group: Somatic/Body-Based
 trigger_type: Rejection
-trigger_origin: [Attachment Wound]
-trigger_flags: [Emotional Flooding]
+trigger_origin:
+  - Attachment Wound
+trigger_flags:
+  - Emotional Flooding
 behavior_functions: []
 tradeoffs: []
 notes: 

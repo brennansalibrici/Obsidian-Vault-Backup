@@ -25,7 +25,10 @@ need_group: Attachment
 need_type: Connection
 developmental_origin: Infancy
 unmet_effects: Deep loneliness, emotional withdrawal, self-doubt, clinging behavior, or despair around one’s worthiness to be loved.
-threatened_by: ["[[Emotional Shutdown]]", "[[Role Locking]]", "[[Overfunctioning]]"]
+threatened_by:
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
+  - "[[Role Locking]]"
+  - "[[Overfunctioning]]"
 notes: 
 related: []
 media: []

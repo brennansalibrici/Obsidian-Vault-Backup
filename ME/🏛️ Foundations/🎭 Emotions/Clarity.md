@@ -12,7 +12,7 @@ entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
-linked_wounds: 
+linked_wounds: []
 internal_voices: 
 soothing_resources: 
 protective_strategies: 
@@ -30,7 +30,7 @@ energy_mood: Low Energy Pleasant
 emotion_origins: [Experiential, Developmental]
 emotion_effects: [Enhances Clarity, Reorients Priorities, Restores Balance]
 emotion_flags: [Adaptive]
-opposite: 
+opposite: ["[[Alive]]"]
 associated_thoughts: 
 emotion_color: Teal
 notes: 

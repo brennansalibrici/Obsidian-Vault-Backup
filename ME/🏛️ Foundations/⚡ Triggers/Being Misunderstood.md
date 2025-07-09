@@ -16,7 +16,7 @@ linked_wounds: []
 associated_emotions: []
 protective_strategies:
   - "[[Overexplaining]]"
-  - "[[Emotional Shutdown]]"
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
 intensity_scale: ""
 mechanism: []
 definition: The distressing experience of being seen in a way that doesn’t match your intentions, feelings, or truth. This can feel like emotional exile — a rupture in connection that makes you question your worth or clarity.

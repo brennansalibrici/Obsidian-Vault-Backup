@@ -14,14 +14,18 @@ priority: ⚪ None
 visibility: 🔒 private
 linked_wounds: []
 associated_emotions: []
-protective_strategies: ["[[Emotional Shutdown]]"]
+protective_strategies:
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
 intensity_scale: ""
 mechanism: []
 definition: The painful emotional experience of believing you’ve been forgotten, ignored, or overlooked by God — especially in suffering.
 trigger_group: Spiritual/Existential
 trigger_type: Rejection
-trigger_origin: [Attachment Wound]
-trigger_flags: [Spiritually Significant, Post-Event Realization]
+trigger_origin:
+  - Attachment Wound
+trigger_flags:
+  - Spiritually Significant
+  - Post-Event Realization
 behavior_functions: []
 tradeoffs: []
 notes: 

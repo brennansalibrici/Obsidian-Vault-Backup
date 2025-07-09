@@ -17,7 +17,7 @@ importance: Relationship Guide
 emotions:
   - "[[Compassion]]"
   - "[[Grief old]]"
-  - "[[Tenderness]]"
+  - "[[ME/🏛️ Foundations/🎭 Emotions/Tenderness]]"
   - "[[Protective Urge]]"
   - "[[Softness]]"
   - "[[Clarity]]"

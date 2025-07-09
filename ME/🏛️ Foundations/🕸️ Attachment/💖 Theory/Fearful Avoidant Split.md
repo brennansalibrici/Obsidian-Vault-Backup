@@ -4,13 +4,18 @@ id: 1751803158596
 created: 2025-07-06 06:59
 last_modified: 2025-07-06 06:59
 title: Fearful Avoidant Split
-status: ["", 🟩 complete]
-type: [trigger]
+status:
+  - ""
+  - 🟩 complete
+type:
+  - trigger
 tags: []
-category: [note]
+category:
+  - note
 entered: false
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 linked_wounds: 
 internal_voices: 
@@ -28,14 +33,25 @@ style_group: Disorganized
 style_type: ""
 core_fears_group: Relational
 core_fears: Being Needed
-strategies: ["[[Emotional Shutdown]]", "[[Role Locking]]", "[[Testing]]"]
+strategies:
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
+  - "[[Role Locking]]"
+  - "[[Testing]]"
 relational_effects_group: Closeness & Distance Dynamics
-relational_effects: [Push-Pull Relational Patterns, Testing Partner’s Loyalty Or Love]
+relational_effects:
+  - Push-Pull Relational Patterns
+  - Testing Partner’s Loyalty Or Love
 growth_path: |
   Begin integrating polarized self-states into relational coherence.
 integration_group: Core Skills to Practice
-integration_tips: [Practice Staying Emotionally Present In Discomfort, Share Fears Vulnerably Instead Of Defensively]
-influenced_by: [Richard Schwartz, Stan Tatkin, Richard Schwartz, Stan Tatkin]
+integration_tips:
+  - Practice Staying Emotionally Present In Discomfort
+  - Share Fears Vulnerably Instead Of Defensively
+influenced_by:
+  - Richard Schwartz
+  - Stan Tatkin
+  - Richard Schwartz
+  - Stan Tatkin
 notes: This subtype features extreme internal splits — often toggling between intense longing and panic-driven retreat. Usually rooted in high-conflict or high-need childhood systems.
 related: 
 media: 

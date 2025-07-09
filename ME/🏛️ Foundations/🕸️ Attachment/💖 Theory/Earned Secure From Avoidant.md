@@ -4,13 +4,18 @@ id: 1751802702107
 created: 2025-07-06 06:51
 last_modified: 2025-07-06 06:51
 title: Earned Secure From Avoidant
-status: ["", 🟩 complete]
-type: [trigger]
+status:
+  - ""
+  - 🟩 complete
+type:
+  - trigger
 tags: []
-category: [note]
+category:
+  - note
 entered: false
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 linked_wounds: 
 internal_voices: 
@@ -28,14 +33,23 @@ style_group: Secure
 style_type: ""
 core_fears_group: Autonomy & Control
 core_fears: Abandonment
-strategies: ["[[Compartmentalization]]", "[[Emotional Shutdown]]", "[[Disconnection]]"]
+strategies:
+  - "[[Compartmentalization]]"
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
+  - "[[Disconnection]]"
 relational_effects_group: Closeness & Distance Dynamics
-relational_effects: [Difficulty Trusting Others, Conflict Avoidance]
+relational_effects:
+  - Difficulty Trusting Others
+  - Conflict Avoidance
 growth_path: |
   Maintain emotional openness even during relational stress or overwhelm.
 integration_group: Somatic & Emotional Regulation
-integration_tips: [Use Grounding Tools During Conflict Or Distance, Practice Staying Emotionally Present In Discomfort]
-influenced_by: [Stan Tatkin, Interpersonal Neurobiology]
+integration_tips:
+  - Use Grounding Tools During Conflict Or Distance
+  - Practice Staying Emotionally Present In Discomfort
+influenced_by:
+  - Stan Tatkin
+  - Interpersonal Neurobiology
 notes: These individuals retain secure behavior but may still default to withdrawal or self-reliance when under pressure.
 related: 
 media: 

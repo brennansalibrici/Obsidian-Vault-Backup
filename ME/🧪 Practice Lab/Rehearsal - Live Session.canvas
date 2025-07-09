@@ -2,7 +2,7 @@
 	"nodes":[
 		{"id":"scenario","type":"file","file":"ME/🧪 Practice Lab/🎲 Scenarios/11_Blindsided by Lori After Bedtime Story Photo.md","x":-900,"y":-460,"width":1020,"height":1080},
 		{"id":"practice_log","type":"text","text":"## 🗣️ Practice Log\n_(Copy/paste or link the note where the live practice happened)_\n\nExample: [[Practice Log - 2025-06-01 Blindsided Response Attempt 1]]","x":-900,"y":-740,"width":600,"height":220},
-		{"id":"core_skills","type":"text","text":"## 🧠 Core Skills Practiced\n- [[Emotional Mirroring]]\n- [[Validation]]","x":1040,"y":-380,"width":300,"height":260},
+		{"id":"core_skills","type":"text","text":"## 🧠 Core Skills Practiced\n- [[Emotional Mirroring]]\n- [[ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Validation]]","x":1040,"y":-380,"width":300,"height":260},
 		{"id":"meta_skills","type":"text","text":"## 🧭 Meta Skills Engaged\n- [[Holding Discomfort]]\n- [[Shame De-Escalation]]\n- [[Trigger Navigation]]\n- [[Staying With The Moment]]","x":670,"y":-380,"width":300,"height":260},
 		{"id":"progress","type":"text","text":"## 📊 Progress Snapshot\n_(Manual placeholder for now)_\n- skill_level: ⭐☆☆☆☆\n- grade: 25%\n- current_level_num for key meta skills","x":965,"y":-740,"width":370,"height":220},
 		{"id":"feedback","type":"text","text":"## 💬 Feedback Summary\n- What happened\n- Where things broke down\n- What would’ve helped\n- What skill was practiced (and how it went)","x":180,"y":-740,"width":600,"height":220},

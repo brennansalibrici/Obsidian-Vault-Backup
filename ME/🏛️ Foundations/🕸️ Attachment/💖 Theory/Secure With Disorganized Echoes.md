@@ -4,13 +4,18 @@ id: 1751803057139
 created: 2025-07-06 06:57
 last_modified: 2025-07-06 06:57
 title: Secure With Disorganized Echoes
-status: ["", 🟩 complete]
-type: [trigger]
+status:
+  - ""
+  - 🟩 complete
+type:
+  - trigger
 tags: []
-category: [note]
+category:
+  - note
 entered: false
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 linked_wounds: 
 internal_voices: 
@@ -28,14 +33,23 @@ style_group: Secure
 style_type: ""
 core_fears_group: Vulnerability & Exposure
 core_fears: Abandonment
-strategies: ["[[Persona Shaping]]", "[[Emotional Shutdown]]", "[[Overfunctioning]]"]
+strategies:
+  - "[[Persona Shaping]]"
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
+  - "[[Overfunctioning]]"
 relational_effects_group: Self-Perception in Relationship
-relational_effects: [Feeling “Too Much” or “Not Enough”, Inconsistent Signals In Relationships]
+relational_effects:
+  - Feeling “Too Much” or “Not Enough”
+  - Inconsistent Signals In Relationships
 growth_path: |
   Stay congruent even when triggered — own your wholeness and stay relationally anchored.
 integration_group: Cognitive Reframing
-integration_tips: [Name And Challenge All-Or-Nothing Thinking, Practice Self-Soothing Techniques]
-influenced_by: [Dan Siegel, Emotionally Focused Therapy]
+integration_tips:
+  - Name And Challenge All-Or-Nothing Thinking
+  - Practice Self-Soothing Techniques
+influenced_by:
+  - Dan Siegel
+  - Emotionally Focused Therapy
 notes: These individuals generally relate securely but carry old trauma blueprints that may activate under emotional threat. Healing continues in moments of reactivity.
 related: 
 media: 

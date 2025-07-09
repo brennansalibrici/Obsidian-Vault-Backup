@@ -39,7 +39,7 @@ sort file.name asc
 - Any scenario can be selected or created to practice with.
 - Once a scenario has been chosen you can begin a new Practice Session which will be added to the Practice Log. 
 - In each practice session, you can practice with as many conversation rehearsals as you want or need. There is no limit. 
-- Each conversation rehearsal does not need to have the same parameters. For example you can practice a few times on a particular scenario with the intent to work on [[Validation]] skills and on the next run through you can work on [[Holding Discomfort]] skills. 
+- Each conversation rehearsal does not need to have the same parameters. For example you can practice a few times on a particular scenario with the intent to work on [[ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Validation]] skills and on the next run through you can work on [[Holding Discomfort]] skills. 
 - When finished, each conversation becomes a 'Live Rehearsal' which gets imported from the web browser (phone app, wherever you practiced) and attached to the Practice Session and added to the Practice Log. 
 - If you discover specific things or want take notes or journal anything about any of your practicing, the Reflections Journal is where you should track those things because this journal is specifically tailored to track with the Practice Lab. 
 - You can also keep track of your progress on the Practice Lab Dashboard

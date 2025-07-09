@@ -4,13 +4,18 @@ id: 1751801116066
 created: 2025-07-06 06:25
 last_modified: 2025-07-06 06:25
 title: Avoidant With Anxious Traits
-status: ["", 🟩 complete]
-type: [trigger]
+status:
+  - ""
+  - 🟩 complete
+type:
+  - trigger
 tags: []
-category: [note]
+category:
+  - note
 entered: false
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 linked_wounds: 
 internal_voices: 
@@ -28,14 +33,23 @@ style_group: Insecure
 style_type: ""
 core_fears_group: Relational
 core_fears: Disconnection
-strategies: ["[[Masking Vulnerability]]", "[[Role Locking]]", "[[Emotional Shutdown]]"]
+strategies:
+  - "[[Masking Vulnerability]]"
+  - "[[Role Locking]]"
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
 relational_effects_group: Closeness & Distance Dynamics
-relational_effects: [Push-Pull Relational Patterns, Emotional Withdrawal Or Shutdown]
+relational_effects:
+  - Push-Pull Relational Patterns
+  - Emotional Withdrawal Or Shutdown
 growth_path: |
   Recognize the inner longing for connection and reduce defensive detachment when intimacy feels threatening.
 integration_group: Core Skills to Practice
-integration_tips: [Practice Staying Emotionally Present In Discomfort, Learn To Tolerate Healthy Emotional Discomfort]
-influenced_by: [Stan Tatkin, Emotionally Focused Therapy]
+integration_tips:
+  - Practice Staying Emotionally Present In Discomfort
+  - Learn To Tolerate Healthy Emotional Discomfort
+influenced_by:
+  - Stan Tatkin
+  - Emotionally Focused Therapy
 notes: Appears avoidant on the surface, but has an underlying anxious nervous system that’s masked by over-functioning and guardedness.
 related: 
 media: 

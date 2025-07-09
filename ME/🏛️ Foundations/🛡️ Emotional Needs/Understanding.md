@@ -18,14 +18,17 @@ associated_emotions: []
 soothing_resources: []
 protective_strategies: []
 fulfillment_strategies: []
-definition: "The need to be emotionally and cognitively understood — for someone to grasp not just what you're saying, but where you're coming from."
+definition: The need to be emotionally and cognitively understood — for someone to grasp not just what you're saying, but where you're coming from.
 behavior_functions: []
 tradeoffs: []
 need_group: Attunement
 need_type: Connection
 developmental_origin: Early Childhood
 unmet_effects: Feeling invisible or misrepresented, emotional loneliness, resentment, or withdrawal due to chronic misattunement.
-threatened_by: ["[[Conflict Avoidance]]", "[[Emotional Shutdown]]", "[[Persona Shaping]]"]
+threatened_by:
+  - "[[Conflict Avoidance]]"
+  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
+  - "[[Persona Shaping]]"
 notes: 
 related: []
 media: []

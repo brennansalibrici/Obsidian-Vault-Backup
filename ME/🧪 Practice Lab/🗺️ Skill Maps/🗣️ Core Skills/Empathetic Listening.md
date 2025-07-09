@@ -48,4 +48,4 @@ Most people don’t feel truly heard. Empathetic listening transforms communicat
 - [[Attuning to Emotional Meaning]]
 - [[Pausing Before Responding]]
 - [[Holding Discomfort]]
-- [[Validation]]
+- [[ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills/Validation]]

@@ -1104,7 +1104,8 @@
               "Awe",
               "Spiritual"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -1129,12 +1130,13 @@
               "Attachment Emotion",
               "Developmental Emotion"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
           "name": "energy_mood",
-          "label": "",
+          "label": "Energy/Mood",
           "description": "",
           "isRequired": false,
           "input": {
@@ -1182,7 +1184,8 @@
               "Somatic",
               "Cultural"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -1209,7 +1212,8 @@
               "Strengthens Bonds",
               "Increases Vulnerability"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -1242,7 +1246,8 @@
               "Existential",
               "Residual"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -1329,7 +1334,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🎭 Emotions"
+            "folder": "ME/🏛️ Foundations/🎭 Emotions",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -1340,7 +1348,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -1351,7 +1362,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds"
+            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -1362,7 +1376,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources"
+            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -1373,7 +1390,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🛡️ Emotional Needs"
+            "folder": "ME/🏛️ Foundations/🛡️ Emotional Needs",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -1384,7 +1404,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/⚡ Triggers"
+            "folder": "ME/🏛️ Foundations/⚡ Triggers",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {

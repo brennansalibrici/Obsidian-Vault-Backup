@@ -1,5 +1,5 @@
 ---
-searchTerm: ""
+searchTerm: fair
 ---
 
 ```meta-bind-button

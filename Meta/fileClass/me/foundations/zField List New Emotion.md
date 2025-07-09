@@ -31,6 +31,10 @@ Definition - text area
 ---
 Body Content as Follows:
 
+## 🧾 Definition
+---
+<definition text. Exactly the same definition as defined in the frontmatter>
+
 ## 💔 What This Emotion Means
 ---
 <Short narrative-style definition, capturing its emotional essence and significance. Use metaphor or grounded language.>
