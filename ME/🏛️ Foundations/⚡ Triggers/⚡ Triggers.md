@@ -1,5 +1,5 @@
 ---
-searchTerm: power
+searchTerm: ""
 ---
 
 ```meta-bind-button

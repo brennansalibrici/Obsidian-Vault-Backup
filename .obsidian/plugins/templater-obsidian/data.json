@@ -48,7 +48,9 @@
   ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
-  "enabled_templates_hotkeys": [],
+  "enabled_templates_hotkeys": [
+    "Meta/Templates/me/Practice Lab/Modal Update Form Template.md"
+  ],
   "startup_templates": [
     ""
   ],

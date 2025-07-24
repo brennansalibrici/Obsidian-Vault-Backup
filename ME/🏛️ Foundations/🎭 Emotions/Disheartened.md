@@ -31,7 +31,7 @@ triggered_by:
   - "[[Repeated Letdown]]"
   - "[[Dismissive Response]]"
 needs_behind_it:
-  - "[[Hope]]"
+  - "[[ME/🏛️ Foundations/🛡️ Emotional Needs/Hope]]"
   - "[[ME/🏛️ Foundations/🛡️ Emotional Needs/Reassurance]]"
 intensity_scale: ""
 mechanism: 

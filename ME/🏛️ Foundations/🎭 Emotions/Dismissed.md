@@ -19,7 +19,7 @@ priority:
 visibility: 🔒 private
 linked_wounds:
   - "[[Invisibility]]"
-  - "[[Judgment]]"
+  - "[[ME/🏛️ Foundations/🌀 Emotional Wounds/Judgment]]"
 internal_voices:
   - "[[I Don’t Matter]]"
   - "[[They Don’t Care What I Think]]"

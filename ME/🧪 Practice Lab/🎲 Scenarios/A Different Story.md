@@ -10,19 +10,19 @@ archived: false
 priority: [⚪ None]
 visibility: 🔒 private
 people: ["[[Lori Kinney]]"]
-type: "Validation"
-summary: "test"
-skill_level:
-meta_skills: []
-core_skills: []
-emotions_in_play: []
-triggers: []
-needs_activated: []
-emotional_wounds: []
-protective_strategies: []
-steps_targeted: []
-grade: []
-practice_log: []
+type: [Validation]
+summary: test
+skill_level: 
+meta_skills: ["[[ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Emotional Containment]]"]
+core_skills: 
+emotions_in_play: 
+triggers: 
+needs_activated: 
+emotional_wounds: 
+protective_strategies: 
+steps_targeted: 
+grade: 
+practice_log: 
 notes: 
 media: 
 attachments:
@@ -30,15 +30,47 @@ attachments:
 
 ## 🔍 Situation 
 ---
-_(Describe the triggering event, message, or moment of emotional tension)_
+_(Describe 
+
+the triggering ev
+
+ent
+
+, m
+
+e
+
+s
+
+sage, 
+
+or mom
+
+ent of emoti
+
+ona
+
+l te
+n
+
+sio
+
+n)_
 
 ## 🌐 Why This Scenario Matters 
 ---
-_(What makes this difficult or important to get right?)_
+_(Wha
+t makes 
+this d
+
+ifficult or import
+
+ant to get right?)_
 
 ## 🎯 Desired Growth Area  
 ---
-_(E.g., mirroring, validation, staying present, not shutting down)_
+_(E.g., mirroring, validation, staying pres
+ent, not shutting down)_
 
 ## 🧵 Themes or Patterns  
 ---

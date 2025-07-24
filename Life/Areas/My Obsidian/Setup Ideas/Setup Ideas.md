@@ -9,7 +9,7 @@ Brainstorms for future tweaks, plugin combos, or workflows.
 - [x] FleetingNotes
 - [x] Work
 - [x] Tighten up queries so it doesn't search the entire vault
-- [ ] Emotions
+- [x] Emotions
 - [ ] Tasks reset and re-organized
 - [ ] Web Clipper
 - [ ] Create Modal Forms to update files

@@ -1,5 +1,5 @@
 ---
-searchTerm: start
+searchTerm: ""
 ---
 
 ```meta-bind-button
@@ -18,6 +18,21 @@ actions:
 
 ```
 
+```meta-bind-button
+label: File Checker
+icon: ""
+style: default
+class: ""
+cssStyle: ""
+backgroundImage: ""
+tooltip: ""
+id: ""
+hidden: false
+actions:
+  - type: runTemplaterFile
+    templateFile: Meta/Templates/me/Foundations/Modal File Checker Template.md
+
+```
 ---
 #### Search By Title:
 `INPUT[text:searchTerm]`
@@ -31,7 +46,6 @@ from "ME/🏛️ Foundations/🎭 Emotions"
 where (status = null or status = "-") and file.name != "🎭 Emotions" and icontains(file.name,this.searchTerm)
 sort file.name asc 
 ```
-
 ### Completed File List
 ```dataview
 table emotion_group as "Group", emotion_type as "Type", energy_mood as "Energy/Mood", status as "Status"

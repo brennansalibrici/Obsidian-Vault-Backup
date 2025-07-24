@@ -4,32 +4,62 @@ id: 1752053832961
 created: ""
 last_modified: 2025-07-09 04:37
 title: Flooded
-status: ["", 🟩 complete]
-type: [emotion]
+status:
+  - ""
+  - 🟩 complete
+type:
+  - emotion
 tags: []
-category: [note]
+category:
+  - note
 entered: true
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
-linked_wounds: ["[[Overwhelm]]", "[[Disapproval]]"]
-internal_voices: ["[[It’s Too Much]]", "[[I Can’t Handle This]]"]
-soothing_resources: ["[[Grounding Through Body]]", "[[Breath Awareness]]"]
+linked_wounds:
+  - "[[Overwhelm]]"
+  - "[[Disapproval]]"
+internal_voices:
+  - "[[It’s Too Much]]"
+  - "[[I Can’t Handle This]]"
+soothing_resources:
+  - "[[Grounding Through Body]]"
+  - "[[Breath Awareness]]"
 protective_strategies: 
-triggered_by: ["[[Emotional Flooding]]", "[[Time Pressure or Deadlines]]"]
-needs_behind_it: ["[[Containment]]", "[[Emotional Regulation]]"]
+triggered_by:
+  - "[[Emotional Flooding]]"
+  - "[[Time Pressure or Deadlines]]"
+needs_behind_it:
+  - "[[Containment]]"
+  - "[[ME/🏛️ Foundations/🛡️ Emotional Needs/Emotional Regulation]]"
 intensity_scale: ""
 mechanism: 
 definition: A state of emotional overload where your system is flooded beyond capacity — thoughts race, body surges, and everything feels too much.
 behavior_functions: 
 tradeoffs: 
-emotion_group: [Anxiety]
-emotion_type: [Blended Emotion, Somatic Emotion, Trigger Emotion]
+emotion_group:
+  - Anxiety
+emotion_type:
+  - Blended Emotion
+  - Somatic Emotion
+  - Trigger Emotion
 energy_mood: High Energy Unpleasant
-emotion_origins: [Somatic, Relational, Developmental]
-emotion_effects: [Activates Defense, Suppresses Expression, Fuels Rumination]
-emotion_flags: [Emotional Flooding, Dissociated, Somatic Signal]
-opposite: ["[[Calm]]", "[[Grounded]]"]
+emotion_origins:
+  - Somatic
+  - Relational
+  - Developmental
+emotion_effects:
+  - Activates Defense
+  - Suppresses Expression
+  - Fuels Rumination
+emotion_flags:
+  - Emotional Flooding
+  - Dissociated
+  - Somatic Signal
+opposite:
+  - "[[Calm]]"
+  - "[[Grounded]]"
 associated_thoughts: 
 emotion_color: Teal
 notes: 

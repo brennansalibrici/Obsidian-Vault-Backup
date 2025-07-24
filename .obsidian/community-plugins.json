@@ -13,5 +13,11 @@
   "customjs",
   "obsidian-git",
   "buttons",
-  "quickadd"
+  "quickadd",
+  "todoist-sync-plugin",
+  "todoist-context-bridge",
+  "cmdr",
+  "file-explorer-note-count",
+  "folder-note-plugin",
+  "metaedit"
 ]

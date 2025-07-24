@@ -1,10 +1,10 @@
 ---
 fileClass: emotion
-id: 1751452978109
+id: 1752098993370
 created: ""
-last_modified: 2025-07-02 05:42
+last_modified: ""
 title: Grief
-status: [🟧 in progress]
+status: ["", 🟩 complete]
 type: [emotion]
 tags: []
 category: [note]
@@ -12,44 +12,51 @@ entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
-linked_wounds: ["[[Fear of Abandonment]]"]
-internal_voices: 
-soothing_resources: 
+linked_wounds: ["[[Loss]]", "[[Abandonment]]"]
+internal_voices: ["[[It Shouldn’t Have Ended Like This]]", "[[They’re Really Gone]]"]
+soothing_resources: ["[[Gentle Music]]", "[[Safe Space]]"]
 protective_strategies: 
-triggered_by: 
-needs_behind_it: ["[[Test - Love & Connection]]"]
+triggered_by: ["[[Sudden Loss]]", "[[Endings]]"]
+needs_behind_it: ["[[Comfort]]", "[[Acknowledgment]]"]
 intensity_scale: ""
 mechanism: 
-definition: |
-  The emotional response to losing something or someone deeply meaningful. Grief often surfaces when attachment is severed, either through death, disconnection, or the loss of what once was. It can feel like heaviness, yearning, or profound sorrow, and while painful, it also signals what deeply mattered.
+definition: "Grief is the emotional process of mourning a loss — whether it's a person, a relationship, a dream, or a version of yourself."
 behavior_functions: 
 tradeoffs: 
-emotion_group: [Sadness, Spiritual]
-emotion_type: [Core Emotion]
+emotion_group: [Sadness]
+emotion_type: [Core Emotion, Blended Emotion, Attachment Emotion]
 energy_mood: Low Energy Unpleasant
-emotion_origins: [Attachment Narrative, Developmental, Relational, Experiential]
-emotion_effects: [Amplifies Other Emotions, Invites Repair, Restores Balance, Strengthens Bonds, Reorients Priorities]
-emotion_flags: [Delayed Onset, Attachment Seeking, Existential, Residual]
-opposite: 
+emotion_origins: [Relational, Developmental, Experiential, Spiritual]
+emotion_effects: [Amplifies Other Emotions, Leads to Disconnection, Reorients Priorities, Restores Balance]
+emotion_flags: [Delayed Onset, Residual, Existential]
+opposite: ["[[Hope]]"]
 associated_thoughts: 
-emotion_color: Blue
+emotion_color: Gray
 notes: 
 related: 
 media: 
 attachments:
 ---
 
-## ## 💔 What This Emotion Means
+## 🧾 Definition
 ---
-Grief emerges when something once held close — a person, connection, role, or dream — is taken away or broken. It’s not just sadness; it’s the echo of love interrupted.
+Grief is the emotional process of mourning a loss — whether it's a person, a relationship, a dream, or a version of yourself.
+
+## 💔 What This Emotion Means
+---
+Grief is the ache of something deeply loved and now absent.
+It’s not just sadness — it’s the hollow echo left behind by something that mattered.
+Grief moves like a tide: sometimes roaring, sometimes still. It marks the space where connection used to live, asking us to witness what we lost and what we still carry.
 
 ## 🔍 When It Shows Up
 ---
-Grief often appears after major losses (death, divorce, betrayal), but also in subtle moments: when an emotional truth is spoken aloud, or when you finally realize something won’t be coming back. It can be delayed, stored in the body, or masked by anger or numbness.
+Grief often shows up in the wake of endings: a death, a divorce, a dream that didn’t happen.
+But it also arrives in subtle moments — old songs, familiar smells, an empty chair.
+It can be triggered by transitions, goodbyes, anniversaries, or seeing someone move on while you still feel behind.
 
 ## 🧭 How It Guides
 ---
-Though painful, grief is deeply human. It invites you to slow down, to feel, to honor. It’s not something to “fix” — it’s something to move through. It reminds you what mattered. And in doing so, it gently reorients you toward what still does.
-
----
-
+Grief invites presence, not escape.
+It asks you to slow down and honor what mattered.
+It teaches tenderness, connection, and humility.
+When you let it move through you — not rush it, not numb it — grief becomes a sacred tether between past and future.

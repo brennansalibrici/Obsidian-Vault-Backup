@@ -4,32 +4,61 @@ id: 1752053446099
 created: ""
 last_modified: 2025-07-09 04:30
 title: Exposed
-status: ["", 🟩 complete]
-type: [emotion]
+status:
+  - ""
+  - 🟩 complete
+type:
+  - emotion
 tags: []
-category: [note]
+category:
+  - note
 entered: true
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
-linked_wounds: ["[[Judgment]]", "[[Violation]]"]
-internal_voices: ["[[They Can See Too Much]]", "[[I’m Not Safe Here]]"]
-soothing_resources: ["[[Emotional Covering]]", "[[Grounding Through Body]]"]
+linked_wounds:
+  - "[[ME/🏛️ Foundations/🌀 Emotional Wounds/Judgment]]"
+  - "[[Violation]]"
+internal_voices:
+  - "[[They Can See Too Much]]"
+  - "[[I’m Not Safe Here]]"
+soothing_resources:
+  - "[[Emotional Covering]]"
+  - "[[Grounding Through Body]]"
 protective_strategies: 
-triggered_by: ["[[Intrusion]]", "[[Being Watched or Observed]]"]
-needs_behind_it: ["[[Safety & Security]]", "[[Containment]]"]
+triggered_by:
+  - "[[Intrusion]]"
+  - "[[Being Watched or Observed]]"
+needs_behind_it:
+  - "[[Safety & Security]]"
+  - "[[Containment]]"
 intensity_scale: ""
 mechanism: 
 definition: A visceral feeling of being too open, too seen, or too emotionally naked — like your defenses dropped and now there’s no shield.
 behavior_functions: 
 tradeoffs: 
-emotion_group: [Fear]
-emotion_type: [Blended Emotion, Attachment Emotion, Trigger Emotion]
+emotion_group:
+  - Fear
+emotion_type:
+  - Blended Emotion
+  - Attachment Emotion
+  - Trigger Emotion
 energy_mood: High Energy Unpleasant
-emotion_origins: [Relational, Developmental, Somatic]
-emotion_effects: [Increases Vulnerability, Activates Defense]
-emotion_flags: [Attachment Seeking, Boundary Alert, Somatic Signal]
-opposite: ["[[Protected]]", "[[Secure]]"]
+emotion_origins:
+  - Relational
+  - Developmental
+  - Somatic
+emotion_effects:
+  - Increases Vulnerability
+  - Activates Defense
+emotion_flags:
+  - Attachment Seeking
+  - Boundary Alert
+  - Somatic Signal
+opposite:
+  - "[[Protected]]"
+  - "[[Secure]]"
 associated_thoughts: 
 emotion_color: Red
 notes: 

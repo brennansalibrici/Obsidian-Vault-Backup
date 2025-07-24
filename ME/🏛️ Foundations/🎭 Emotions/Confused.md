@@ -4,32 +4,54 @@ id: 1752034320190
 created: ""
 last_modified: 2025-07-08 23:11
 title: Confused
-status: ["", 🟩 complete]
-type: [emotion]
+status:
+  - ""
+  - 🟩 complete
+type:
+  - emotion
 tags: []
-category: [note]
+category:
+  - note
 entered: true
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
-linked_wounds: ["[[Judgment]]"]
-internal_voices: ["[[I Don't Know What's True]]", "[[This Doesn't Add Up]]"]
-soothing_resources: ["[[Clarity Cues]]"]
+linked_wounds:
+  - "[[ME/🏛️ Foundations/🌀 Emotional Wounds/Judgment]]"
+internal_voices:
+  - "[[I Don't Know What's True]]"
+  - "[[This Doesn't Add Up]]"
+soothing_resources:
+  - "[[Clarity Cues]]"
 protective_strategies: 
-triggered_by: ["[[Mixed Signals]]"]
-needs_behind_it: ["[[Understanding]]", "[[Clarity & Truth]]"]
+triggered_by:
+  - "[[Mixed Signals]]"
+needs_behind_it:
+  - "[[Understanding]]"
+  - "[[Clarity & Truth]]"
 intensity_scale: ""
 mechanism: 
 definition: A state of disorientation, uncertainty, or conflicting signals that cloud understanding.
 behavior_functions: 
 tradeoffs: 
-emotion_group: [Confusion]
-emotion_type: [Core Emotion, Blended Emotion]
+emotion_group:
+  - Confusion
+emotion_type:
+  - Core Emotion
+  - Blended Emotion
 energy_mood: High Energy Unpleasant
-emotion_origins: [Experiential, Relational]
-emotion_effects: [Enhances Clarity, Blocks Connection]
-emotion_flags: [Delayed Onset, Cognitive Disruption]
-opposite: ["[[Clarity]]"]
+emotion_origins:
+  - Experiential
+  - Relational
+emotion_effects:
+  - Enhances Clarity
+  - Blocks Connection
+emotion_flags:
+  - Delayed Onset
+  - Cognitive Disruption
+opposite:
+  - "[[Clarity]]"
 associated_thoughts: 
 emotion_color: Gray
 notes: 

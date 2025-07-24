@@ -31,7 +31,7 @@ export_to_inputs: false
 emotions:
   - "[[Ashamed]]"
   - "[[ME/🏛️ Foundations/🎭 Emotions/Humiliation]]"
-  - "[[ME/🏛️ Foundations/🎭 Emotions/Guilt]]"
+  - "[[Guilt]]"
   - "[[Embarrassment]]"
   - "[[Regret]]"
   - "[[Fragility]]"
@@ -41,6 +41,7 @@ emotions:
   - "[[Confusion]]"
   - "[[Disheartened]]"
   - "[[Defensive]]"
+
 ---
 
 ## 🚗 Who Was Driving?

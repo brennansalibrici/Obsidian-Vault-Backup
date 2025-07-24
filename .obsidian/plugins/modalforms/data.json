@@ -1104,8 +1104,7 @@
               "Awe",
               "Spiritual"
             ],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -1130,8 +1129,7 @@
               "Attachment Emotion",
               "Developmental Emotion"
             ],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -1184,8 +1182,7 @@
               "Somatic",
               "Cultural"
             ],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -1212,8 +1209,7 @@
               "Strengthens Bonds",
               "Increases Vulnerability"
             ],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -1246,8 +1242,7 @@
               "Existential",
               "Residual"
             ],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -1334,10 +1329,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🎭 Emotions",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/🎭 Emotions"
           }
         },
         {
@@ -1348,10 +1340,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/📢 Internal Voices",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
           }
         },
         {
@@ -1362,10 +1351,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/🌀 Emotional Wounds"
           }
         },
         {
@@ -1376,10 +1362,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/🩹 Soothing Resources"
           }
         },
         {
@@ -1390,10 +1373,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/🛡️ Emotional Needs",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/🛡️ Emotional Needs"
           }
         },
         {
@@ -1404,10 +1384,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/⚡ Triggers",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/⚡ Triggers"
           }
         },
         {
@@ -8969,6 +8946,320 @@
           "name": "note",
           "label": "Notes",
           "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "File Checker",
+      "name": "File Checker",
+      "fields": [
+        {
+          "name": "emotion_links",
+          "label": "🎭 Emotions Links",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "voices_links",
+          "label": "📢 Internal Voices Links",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "wounds_links",
+          "label": "🌀 Emotional Wounds Links",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "resources_links",
+          "label": "🩹 Soothing Resources Links",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "needs_links",
+          "label": "🛡️ Emotional Needs Links",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "triggers_links",
+          "label": "⚡ Triggers Links",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "show_more",
+          "label": "Show More Elements",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        },
+        {
+          "name": "tradeoffs_links",
+          "label": "⚖️Trade-Offs Links",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "show_more",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "functions_links",
+          "label": "🐾 Behavior Functions Links",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "show_more",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "strategies_links",
+          "label": "🪖 Protective Strategies Links",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "show_more",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "show_attachment",
+          "label": "Show Attachment Elements",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        },
+        {
+          "name": "theory_links",
+          "label": "💖 Attachment Theory Links",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "show_attachment",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "style_links",
+          "label": "🔗 Attachment Styles Links",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "show_attachment",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "needs_links",
+          "label": "🗝️ Attachment Needs Links",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "show_attachment",
+            "type": "boolean",
+            "value": true
+          },
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Update Scenario",
+      "name": "Update Scenario",
+      "fields": [
+        {
+          "name": "filename",
+          "label": "File",
+          "description": "",
+          "input": {
+            "type": "select",
+            "allowUnknownValues": false,
+            "hidden": false,
+            "allowedExtensions": [],
+            "folder": "ME/🧪 Practice Lab/🎲 Scenarios",
+            "parentFolder": "ME/🧪 Practice Lab/🎲 Scenarios",
+            "options": [
+              {
+                "value": "",
+                "label": ""
+              }
+            ],
+            "source": "notes"
+          },
+          "isRequired": false
+        },
+        {
+          "name": "title",
+          "label": "Title",
+          "description": "A brief description of the scenario that occured",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "type",
+          "label": "Scenario Type",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Mirroring",
+                "label": "Mirroring"
+              },
+              {
+                "value": "Validation",
+                "label": "Validation"
+              },
+              {
+                "value": "Conflict Repair",
+                "label": "Conflict Repair"
+              },
+              {
+                "value": "Boundaries",
+                "label": "Boundaries"
+              },
+              {
+                "value": "Emotional Disclosure",
+                "label": "Emotional Disclosure"
+              },
+              {
+                "value": "Trigger Navigation",
+                "label": "Trigger Navigation"
+              },
+              {
+                "value": "Presence Under Pressure",
+                "label": "Presence Under Pressure"
+              },
+              {
+                "value": "Vulnerability Response",
+                "label": "Vulnerability Response"
+              },
+              {
+                "value": "Listening Without Fixing",
+                "label": "Listening Without Fixing"
+              },
+              {
+                "value": "Emotional Containment",
+                "label": "Emotional Containment"
+              },
+              {
+                "value": "Partnering Instead of Defending",
+                "label": "Partnering Instead of Defending"
+              },
+              {
+                "value": "Staying With The Moment",
+                "label": "Staying With The Moment"
+              },
+              {
+                "value": "Shame De-Escalation",
+                "label": "Shame De-Escalation"
+              },
+              {
+                "value": "Holding Space",
+                "label": "Holding Space"
+              },
+              {
+                "value": "Masked Vulnerability",
+                "label": "Masked Vulnerability"
+              },
+              {
+                "value": "Emotional Subtext Listening",
+                "label": "Emotional Subtext Listening"
+              }
+            ]
+          }
+        },
+        {
+          "name": "people",
+          "label": "People",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": true,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "summary",
+          "label": "Summary",
+          "description": "What actually happened? ",
           "isRequired": false,
           "input": {
             "type": "textarea",

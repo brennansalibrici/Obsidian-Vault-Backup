@@ -27,7 +27,7 @@ actions:
 table status as "Status"
 from "ME/🏛️ Foundations/🛡️ Emotional Needs"
 where (status = null or status = "-") and file.name != "🛡️ Emotional Needs" and icontains(file.name,this.searchTerm)
-sort file asc
+sort file.name asc
 ```
 
 ### Completed File List
@@ -35,5 +35,5 @@ sort file asc
 table need_type as "Need", developmental_origin as "Origin", threatened_by as "Threatened By", unmet_effects as "Unmet Effects", definition as "Definition", status as "Status"
 from "ME/🏛️ Foundations/🛡️ Emotional Needs"
 where status != null and file.name != "🛡️ Emotional Needs" and icontains(title,this.searchTerm)
-sort file asc
+sort file.name asc
 ```

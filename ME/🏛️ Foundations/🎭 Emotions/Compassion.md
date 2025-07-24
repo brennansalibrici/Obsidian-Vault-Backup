@@ -1,10 +1,10 @@
 ---
 fileClass: emotion
-id: 1751453854848
+id: 1752107792249
 created: ""
-last_modified: ""
+last_modified: 2025-07-09 19:36
 title: Compassion
-status: [🟧 in progress]
+status: ["", 🟩 complete]
 type: [emotion]
 tags: []
 category: [note]
@@ -12,33 +12,47 @@ entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
-linked_wounds: ["[[Internalized Shame]]"]
-internal_voices: 
-soothing_resources: 
+linked_wounds: ["[[Judgment]]"]
+internal_voices: ["[[This Hurts And Still Matters]]", "[[They’re Doing Their Best]]"]
+soothing_resources: ["[[Warm Eye Contact]]", "[[Kind Self-Talk]]"]
 protective_strategies: 
-triggered_by: 
-needs_behind_it: ["[[Test - Love & Connection]]"]
+triggered_by: ["[[Seeing Suffering]]", "[[Recognizing Shared Humanity]]"]
+needs_behind_it: ["[[Connection]]", "[[Mercy]]"]
 intensity_scale: ""
 mechanism: 
-definition: |
-  The emotional impulse to tend to suffering — not out of pity, but of resonance. Compassion bridges pain and connection, creating space for healing, understanding, and repair.
+definition: A soft, steady presence that turns toward suffering with care — offering warmth, not fixes, and honoring the humanity of pain.
 behavior_functions: 
 tradeoffs: 
 emotion_group: [Love]
-emotion_type: [Attachment Emotion, Social Emotion]
-energy_mood: High Energy Pleasant
-emotion_origins: [Relational, Developmental, Experiential]
-emotion_effects: [Restores Balance, Enhances Clarity, Strengthens Bonds, Reorients Priorities]
-emotion_flags: [Connection Oriented, Socially Learned]
-opposite: 
+emotion_type: [Regulating Emotion, Attachment Emotion, Constructive Emotion]
+energy_mood: Low Energy Pleasant
+emotion_origins: [Relational, Spiritual, Developmental]
+emotion_effects: [Strengthens Bonds, Restores Balance]
+emotion_flags: [Attachment Seeking, Adaptive]
+opposite: ["[[Judgment]]", "[[Harshness]]"]
 associated_thoughts: 
-emotion_color: Pink
+emotion_color: Lavender
 notes: 
 related: 
 media: 
-attachments:
+attachments: 
 ---
 
-## Notes
+## 🧾 Definition
 ---
+A soft, steady presence that turns toward suffering with care — offering warmth, not fixes, and honoring the humanity of pain.
 
+## 💔 What This Emotion Means
+---
+Compassion is the open hand you extend — to yourself or someone else — when judgment would be easier.
+It doesn't require agreement, only recognition: *this hurts, and that matters.*
+
+## 🔍 When It Shows Up
+---
+It often arises in the presence of vulnerability, suffering, or sincere struggle — especially when you pause long enough to see beyond behavior into what’s underneath.
+
+## 🧭 How It Guides
+---
+Compassion invites presence over performance.
+It reminds you that healing isn’t always about solving — sometimes, it’s about *staying with.*
+It softens shame, reconnects you to empathy, and often helps you meet the parts of yourself you once rejected.

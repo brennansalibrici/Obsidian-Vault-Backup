@@ -1,10 +1,10 @@
 ---
 fileClass: emotion
-id: 1751454447824
+id: 1752099982706
 created: ""
-last_modified: 2025-07-02 06:07
+last_modified: ""
 title: Protective Urge
-status: [🟧 in progress]
+status: ["", 🟩 complete]
 type: [emotion]
 tags: []
 category: [note]
@@ -12,33 +12,48 @@ entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
-linked_wounds: ["[[Fear of Abandonment]]"]
-internal_voices: ["[[The Hero]]"]
-soothing_resources: 
+linked_wounds: ["[[Powerlessness]]", "[[Loss]]"]
+internal_voices: ["[[I Want To Shield Them]]", "[[I'll Step In]]"]
+soothing_resources: ["[[Guardian Visualization]]", "[[Instinctive Response]]"]
 protective_strategies: 
-triggered_by: 
-needs_behind_it: ["[[Safety & Security]]"]
+triggered_by: ["[[Seeing Pain in Others]]", "[[Feeling Their Fear]]"]
+needs_behind_it: ["[[Protection]]", "[[Empowerment]]"]
 intensity_scale: ""
 mechanism: 
-definition: |
-  The instinct to protect someone you care about — often arising when they’re being misunderstood, hurt, or threatened. It blends care with a sharpened edge, motivating defense with empathy at its core.
+definition: A surge of instinctive care that drives you to step in, shield, or advocate — often before words arrive.
 behavior_functions: 
 tradeoffs: 
-emotion_group: [Love, Anger]
-emotion_type: [Blended Emotion, Attachment Emotion]
+emotion_group: [Love]
+emotion_type: [Attachment Emotion, Protective Emotion, Constructive Emotion]
 energy_mood: High Energy Pleasant
-emotion_origins: [Attachment Narrative, Developmental, Relational]
-emotion_effects: [Motivates Action, Enhances Clarity, Strengthens Bonds]
-emotion_flags: [Attachment Seeking, Power Oriented]
-opposite: 
+emotion_origins: [Relational, Developmental, Biological]
+emotion_effects: [Strengthens Bonds, Increases Vulnerability]
+emotion_flags: [Attachment Seeking, Boundary Alert, Adaptive]
+opposite: ["[[Indifferent]]", "[[Abandoned]]"]
 associated_thoughts: 
-emotion_color: Red
+emotion_color: Dark Green
 notes: 
 related: 
 media: 
-attachments:
+attachments: 
 ---
 
-## Notes
+## 🧾 Definition
 ---
+A surge of instinctive care that drives you to step in, shield, or advocate — often before words arrive.
 
+## 💔 What This Emotion Means
+---
+Protective Urge is the fierce softness that shows up when someone you love is hurting.
+It’s the part of you that wants to stand in front of them, hold the line, or absorb the blow — even if they don’t ask for it.
+
+## 🔍 When It Shows Up
+---
+It often shows up around children, partners, or those who seem vulnerable.
+It can be triggered by subtle cues — a face falling, a voice cracking, or something in your gut that says, *they need me now.*
+
+## 🧭 How It Guides
+---
+Protective Urge invites you to act — not from control, but from care.
+It reminds you that love has muscle, and that presence sometimes means advocacy, shielding, or simply staying with someone through the storm.
+	

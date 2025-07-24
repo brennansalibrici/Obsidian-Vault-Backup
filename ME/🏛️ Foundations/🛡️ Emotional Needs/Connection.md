@@ -28,7 +28,7 @@ unmet_effects: Feelings of emotional invisibility, disconnection from others, di
 threatened_by:
   - "[[Masking Vulnerability]]"
   - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
-  - "[[Distraction]]"
+  - "[[Distraction]]" ["[[Masking Vulnerability]]", "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]", "[[Distraction]]"]
 notes: 
 related: []
 media: []

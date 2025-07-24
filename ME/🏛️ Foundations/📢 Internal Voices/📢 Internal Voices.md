@@ -1,5 +1,5 @@
 ---
-searchTerm: fair
+searchTerm: unlovable
 ---
 
 ```meta-bind-button

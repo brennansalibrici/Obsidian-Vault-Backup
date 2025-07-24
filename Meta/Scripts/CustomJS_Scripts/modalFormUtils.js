@@ -82,6 +82,11 @@ class ModalFormUtils {
         this.newLiveFile = "";
         this.lnkDailyNote = "";
         this.formatUtils = window.customJS.createFormatUtilsInstance();
+        this.fileClass = "";
+        this.frontmatter = "";
+        this.modalFormName = "";
+        this.modalFormFieldMap = "";
+        this.modalFormFieldMap_Values = {};
 
     }
 
@@ -93,43 +98,64 @@ class ModalFormUtils {
         "practice session": {
             folder: "ME/🧪 Practice Lab/🎬 Practice Logs",
             template: "Meta/Templates/me/Practice Lab/Practice Session Template.md",
-            naming: (baseName, count) => `${baseName}_Session-${count}`
+            naming: (baseName, count) => `${baseName}_Session-${count}`,
+            mdlFormName_Update1: "",
+            fileClass: "practice_session"
         },
         "live rehearsal": {
             folder: "ME/🧪 Practice Lab/🎙️ Live Rehearsals",
             template: "Meta/Templates/me/Practice Lab/Live Rehearsal Template.md",
-            naming: (baseName, count) => `${baseName}_Live Rehearsal_Take-${count}`
+            naming: (baseName, count) => `${baseName}_Live Rehearsal_Take-${count}`,
+            mdlFormName_Update1: "",
+            fileClass: "live_rehearsal"
         },
         "coaching session": {
             folder: "ME/🧪 Practice Lab/🧠 Coaching",
             template: "Meta/Templates/me/Practice Lab/Coaching Session Template.md",
-            naming: (baseName, count) => `${baseName}_Coaching Session-${count}`
+            naming: (baseName, count) => `${baseName}_Coaching Session-${count}`,
+            mdlFormName_Update1: "",
+            fileClass: "coaching"
         },
         "inner check-in": {
             folder: "ME/🌒 Reflections/🕹️ Inner Check-Ins",
             template: "Meta/Templates/me/Inner_CheckIn_Template.md",
-            naming: (context, count) => context
+            naming: (context, count) => context,
+            mdlFormName_Update1: "",
+            fileClass: "inner_checkin"
         },
         "scenario": {
             folder: "ME/🧪 Practice Lab/🎲 Scenarios",
             template:"Meta/Templates/me/Practice Lab/Scenario Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName);
-            }
+            },
+            mdlFormName_Update1: "Update Scenario",
+            mdlFormName_Update1_fieldMap: {
+                "filename": {key: "filename", from: "file"},
+                "title": "title",
+                "type": {key: "type", singleSelect: true},
+                "people": "people",
+                "summary": "summary"
+            },
+            fileClass: "scenario"
         },
         "captured moment": {
             folder: "ME/📝 Captured Moments",
             template: "Meta/Templates/me/Captured Moment Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName);
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "capturedMoment"
         },
         "observation": {
             folder: "ME/👀 Observations",
             template: "Meta/Templates/me/Observation Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName);
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "observation"
         },
         "integration journal": {
             folder: "ME/📓 Journal",
@@ -139,7 +165,9 @@ class ModalFormUtils {
                 const datePart = this.formatUtils.db_formatDateOnly(now); // e.g., 2025-06-19
                 const timePart = this.formatUtils.formatTimeOnly(now).replace(":", ""); // e.g., 1430
                 return `🔁 Integration Journal Entry ${datePart} @ ${timePart}`;
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "emotional_growth_journal"
         },
         "reflection journal": {
             folder: "ME/📓 Journal",
@@ -149,92 +177,117 @@ class ModalFormUtils {
                 const datePart = this.formatUtils.db_formatDateOnly(now); // e.g., 2025-06-19
                 const timePart = this.formatUtils.formatTimeOnly(now).replace(":", ""); // e.g., 1430
                 return `🪞 Reflection Journal Entry ${datePart} @ ${timePart}`;
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "emotional_growth_journal"
         },
         "trigger": {
             folder: "ME/🏛️ Foundations/⚡ Triggers",
             template: "Meta/Templates/me/Foundations/Trigger Template.md",
             naming: function (baseName) {
                 return this.formatUtils.formatTitleCase(baseName);
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "trigger"
         },
         "internal voice": {
             folder: "ME/🏛️ Foundations/📢 Internal Voices",
             template: "Meta/Templates/me/Foundations/Internal Voice Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Internal Voice");
-          }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "internal_voice"
         },
         "soothing resource": {
             folder: "ME/🏛️ Foundations/🩹 Soothing Resources",
             template: "Meta/Templates/me/Foundations/Soothing Resource Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Soothing Resource");
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "soothing_resource"
         },
         "emotional wound": {
             folder: "ME/🏛️ Foundations/🌀 Emotional Wounds",
             template: "Meta/Templates/me/Foundations/Emotional Wound Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Emotional Wound");
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "emotional_wound"
         },
         "behavior function": {
             folder: "ME/🏛️ Foundations/🐾 Behavior Functions",
             template: "Meta/Templates/me/Foundations/Behavior Function Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Behavior Function");
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "behavior_function"
         },
         "emotional need": {
             folder: "ME/🏛️ Foundations/🛡️ Emotional Needs",
             template: "Meta/Templates/me/Foundations/Emotional Need Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Emotional Need");
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "emotional_need"
         },
         "protective strategy": {
             folder: "ME/🏛️ Foundations/🪖 Protective Strategies",
             template: "Meta/Templates/me/Foundations/Protective Strategy Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Protective Strategy");
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "protective_strategy"
         },
         "attachment need": {
             folder: "ME/🏛️ Foundations/🕸️ Attachment/🗝️ Needs",
             template: "Meta/Templates/me/Foundations/Attachment/Attachment Need Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Attachment Need");
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "attachment_need"
         },
         "attachment style": {
             folder: "ME/🏛️ Foundations/🕸️ Attachment/🔗 Styles",
             template: "Meta/Templates/me/Foundations/Attachment/Attachment Style Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Attachment Style");
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "attachment_style"
         },
         "attachment theory": {
             folder: "ME/🏛️ Foundations/🕸️ Attachment/💖 Theory",
             template: "Meta/Templates/me/Foundations/Attachment/Attachment Theory Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Attachment Theory");
-            }
-
+            },
+            mdlFormName_Update1: "",
+            fileClass: "attachment_theory"
         },
         "tradeoff": {
             folder: "ME/🏛️ Foundations/⚖️Trade-Offs",
             template: "Meta/Templates/me/Foundations/TradeOff Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Trade-Off");
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "tradeoff"
         },
         "emotion": {
             folder: "ME/🏛️ Foundations/🎭 Emotions",
             template: "Meta/Templates/me/Foundations/Emotion Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Emotion");
-            }
+            },
+            mdlFormName_Update1: "",
+            fileClass: "emotion"
         }
 
     };
@@ -528,8 +581,9 @@ class ModalFormUtils {
 
     //retrieves the full frontmatter map from the specified file
     getFrontMatterMap(file){
-        const cache = this.app.metadataCache.getFileCache(file);
-        return cache?.frontmatter || {};
+        const cache = app.metadataCache.getFileCache(file);
+        if (!cache || !cache.frontmatter) return {};
+        return cache.frontmatter;
     }
 
     //retrieves a single value from the frontmatter of a specified file
@@ -547,20 +601,68 @@ class ModalFormUtils {
 
     //accepts a 'target' file and will update the global property 'last_modified' to the current date/time
     async updateLastModified(file) {
-  try {
-       const formattedNow = this.formatUtils.db_formatDateTime(window.moment());
+        try {
+            const formattedNow = this.formatUtils.db_formatDateTime(window.moment());
 
-    await this.app.fileManager.processFrontMatter(file, (fm) => {
-      fm["last_modified"] = formattedNow;
-    });
+            await this.app.fileManager.processFrontMatter(file, (fm) => {
+            fm["last_modified"] = formattedNow;
+            });
 
-    console.log(`🕒 last_modified updated to ${formattedNow} for ${file.path}`);
-  } catch (err) {
-    console.error("❌ Failed to update last_modified field:", err);
-    new Notice("Error updating last_modified. See console.");
-  }
-}
+            console.log(`🕒 last_modified updated to ${formattedNow} for ${file.path}`);
+        } catch (err) {
+            console.error("❌ Failed to update last_modified field:", err);
+            new Notice("Error updating last_modified. See console.");
+        }
+    }
 
+
+//#endregion
+
+//#region RETRIEVE SPECIFIED FILE PROPERTIES
+    // accepts a fileClass value in order to retrieve the appropriate form to open. It also accepts the tp and app object in preparation for other actions once the form is opened like populating form fields and updating data fields
+    getUpdateFormFromFileClass(app, tp, file) {
+        this.app = app;
+        this.tp = tp;
+        this.frontmatter = this.getFrontMatterMap(file);
+
+        if (!this.frontmatter || Object.keys(this.frontmatter).length === 0) {
+            new Notice("Could not read frontmatter.");
+            return;
+        }
+
+        const handler = Object.values(this.constructor.fileTypeHandlers).find(
+            entry => entry.fileClass === this.frontmatter.fileClass
+        );
+
+        if (!handler || !handler.mdlFormName_Update1) {
+            new Notice(`No update form defined for fileClass "${this.frontmatter.fileClass}"`);
+            return null;
+        }
+
+        this.modalFormName = handler ? handler.mdlFormName_Update1 : null;
+        this.modalFormFieldMap = handler ? handler.mdlFormName_Update1_fieldMap : null;
+
+        if(this.modalFormFieldMap){
+            for(const [formField, frontmatterKey] of Object.entries(this.modalFormFieldMap)){
+                const {key, singleSelect, from} = typeof frontmatterKey === "object" ? frontmatterKey : {key: frontmatterKey, singleSelect: false, from: "frontmatter"};
+
+
+                if (singleSelect && Array.isArray(this.frontmatter[key]) && this.frontmatter[key].length === 1) {
+                    this.frontmatter[key] = this.frontmatter[key].toString();
+                }
+
+                if(from === "file") {
+                        this.modalFormFieldMap_Values[formField] = file.basename;
+                    } else {
+                        this.modalFormFieldMap_Values[formField] = this.frontmatter[key];
+                //this.modalFormFieldMap_Values[formField] = this.frontmatter[frontmatterKey]; //When this line is the only uncommented line, the for loop works
+                //this.modalFormFieldMap_Values[formField] = this.frontmatter[frontmatterKey];
+                }
+            }
+        }
+
+        return this.modalFormFieldMap_Values;
+    }
 
 //#endregion
 

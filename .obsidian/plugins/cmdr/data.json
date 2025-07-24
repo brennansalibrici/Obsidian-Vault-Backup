@@ -4,11 +4,25 @@
   "debug": false,
   "editorMenu": [],
   "fileMenu": [],
-  "leftRibbon": [],
+  "leftRibbon": [
+    {
+      "id": "templater-obsidian:Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
+      "icon": "lucide-file-up",
+      "name": "Templater: Insert Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
+      "mode": "any"
+    }
+  ],
   "rightRibbon": [],
   "titleBar": [],
   "statusBar": [],
-  "pageHeader": [],
+  "pageHeader": [
+    {
+      "id": "templater-obsidian:Meta/Templates/me/Practice Lab/Modal Button Test.md",
+      "icon": "lucide-file-up",
+      "name": "Templater: Insert Meta/Templates/me/Practice Lab/Modal Button Test.md",
+      "mode": "any"
+    }
+  ],
   "macros": [],
   "explorer": [],
   "hide": {

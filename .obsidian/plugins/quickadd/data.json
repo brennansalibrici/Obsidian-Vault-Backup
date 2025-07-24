@@ -1249,6 +1249,13 @@
       "type": "Macro",
       "command": true,
       "macroId": "a51b0872-ab59-4df1-90dd-12fcdbaf0cb5"
+    },
+    {
+      "id": "cbc64c7a-3c93-45e6-8c0d-23ca200e9717",
+      "name": "Test",
+      "type": "Macro",
+      "command": true,
+      "macroId": "8a2541ef-76b9-402c-87cc-ee24e83dfbe0"
     }
   ],
   "macros": [
@@ -1894,6 +1901,26 @@
       "name": "Run JS Sandbox Test",
       "id": "290bcaf3-e41e-49a7-8702-d57a3cf127b0",
       "commands": [],
+      "runOnStartup": false
+    },
+    {
+      "name": "mcrTest Notice",
+      "id": "25396f1e-3655-4668-98de-64a9d407c655",
+      "commands": [],
+      "runOnStartup": false
+    },
+    {
+      "name": "Test",
+      "id": "8a2541ef-76b9-402c-87cc-ee24e83dfbe0",
+      "commands": [
+        {
+          "name": "btnUpdateModal",
+          "type": "UserScript",
+          "id": "8e43e219-13f9-4469-8b19-a68ad74f9455",
+          "path": "Meta/Scripts/CustomJS_Scripts/btnUpdateModal.js",
+          "settings": {}
+        }
+      ],
       "runOnStartup": false
     }
   ],

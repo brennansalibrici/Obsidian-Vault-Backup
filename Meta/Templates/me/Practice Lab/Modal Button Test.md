@@ -1,0 +1,4 @@
+<%*
+
+new Notice(`Test Notice`);
+%>

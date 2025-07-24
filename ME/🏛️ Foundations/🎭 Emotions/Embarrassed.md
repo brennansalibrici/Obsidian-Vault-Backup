@@ -1,64 +1,36 @@
 ---
 fileClass: emotion
-id: 1752052981284
+id: 1752173998799
 created: ""
-last_modified: 2025-07-09 04:23
+last_modified: 2025-07-10 13:59
 title: Embarrassed
-status:
-  - ""
-  - 🟩 complete
-type:
-  - emotion
+status: ["", 🟩 complete]
+type: [emotion]
 tags: []
-category:
-  - note
+category: [note]
 entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-linked_wounds:
-  - "[[Humiliation]]"
-  - "[[Judgment]]"
-internal_voices:
-  - "[[Everyone Saw That]]"
-  - "[[I Look So Stupid]]"
-soothing_resources:
-  - "[[Reassurance]]"
-  - "[[Shared Laughter]]"
+linked_wounds: ["[[Shame]]"]
+internal_voices: ["[[Everyone Saw That]]", "[[I’m Not Safe Here]]"]
+soothing_resources: ["[[Kind Self-Talk]]", "[[Grounding Exercise]]"]
 protective_strategies: 
-triggered_by:
-  - "[[Public Embarrassment]]"
-  - "[[Being Misunderstood]]"
-needs_behind_it:
-  - "[[Acceptance]]"
-  - "[[ME/🏛️ Foundations/🛡️ Emotional Needs/Dignity]]"
+triggered_by: ["[[Social Rejection]]"]
+needs_behind_it: ["[[Dignity]]", "[[Safety & Security]]"]
 intensity_scale: ""
 mechanism: 
-definition: A sharp self-conscious jolt that arises when you feel seen in a way that feels exposing, awkward, or unworthy — often in front of others.
+definition: |
+  A sharp, often sudden feeling of self-conscious discomfort when your actions, appearance, or inner self are perceived as unacceptable or exposed. It marks the moment you believe others are judging you—and you agree with them.
 behavior_functions: 
 tradeoffs: 
-emotion_group:
-  - Shame
-emotion_type:
-  - Surface Emotion
-  - Social Emotion
-  - Trigger Emotion
+emotion_group: [Shame, Anxiety]
+emotion_type: [Social Emotion, Surface Emotion, Trigger Emotion]
 energy_mood: High Energy Unpleasant
-emotion_origins:
-  - Social
-  - Developmental
-  - Cultural
-emotion_effects:
-  - Activates Defense
-  - Reinforces Shame
-emotion_flags:
-  - Socially Learned
-  - "Amplified "
-  - Attachment Seeking
-opposite:
-  - "[[Acceptance]]"
-  - "[[Belonging]]"
+emotion_origins: [Social, Learned, Cultural]
+emotion_effects: [Suppresses Expression, Fuels Rumination, Reinforces Shame]
+emotion_flags: [Socially Learned, Contagious, Masked, Power Oriented]
+opposite: ["[[Pride]]", "[[Confidence]]"]
 associated_thoughts: 
 emotion_color: Pink
 notes: 
@@ -69,20 +41,16 @@ attachments:
 
 ## 🧾 Definition
 ---
-A sharp self-conscious jolt that arises when you feel seen in a way that feels exposing, awkward, or unworthy — often in front of others.
+A sharp, often sudden feeling of self-conscious discomfort when your actions, appearance, or inner self are perceived as unacceptable or exposed. It marks the moment you believe others are judging you—and you agree with them.
 
 ## 💔 What This Emotion Means
 ---
-Embarrassed is the hot flush of *please don’t look at me* — the inward collapse of being exposed in the wrong way.
-It’s not always about doing something “wrong”; it’s about being seen in a way that doesn’t match how you want to be known.
+Embarrassment is like a flash of heat across the skin—a flood of "I want to disappear" energy. It's a moment of internal collapse in the face of imagined or actual social judgment. Underneath it lies a fear of being rejected for who you are, especially in moments you didn’t intend to be seen.
 
 ## 🔍 When It Shows Up
 ---
-It flares when you make a mistake in public, when attention lands unexpectedly, or when your vulnerability gets revealed in front of people who don’t feel emotionally safe.
-It can also stem from childhood moments of mockery, scolding, or being called out in front of others.
+Embarrassment often arises in social situations where you feel you’ve done something awkward, exposed, or “wrong.” It can be triggered by public mistakes, moments of vulnerability, or being the focus of unexpected attention—especially when caught off guard. Even minor slip-ups can carry a heavy emotional weight when shame sensitivity is high.
 
 ## 🧭 How It Guides
 ---
-Embarrassed reminds you of your longing for dignity and respect.
-It invites you to breathe through the moment instead of shrinking — and to remember that being seen awkwardly isn’t the same as being unworthy.
-Sometimes, humor or shared humanity can be a gentle way through.
+Embarrassment signals a desire to preserve dignity and social belonging. While it can prompt self-awareness and correction, it also asks for compassion—for yourself and others. When you meet embarrassment with kindness instead of harshness, it can become a moment of gentle realignment rather than internal shame.

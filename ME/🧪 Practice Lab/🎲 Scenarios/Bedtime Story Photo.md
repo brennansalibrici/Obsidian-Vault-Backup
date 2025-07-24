@@ -30,9 +30,34 @@ attachments:
 
 ## 🔍 Situation 
 ---
-_(Describe the triggering event, message, or moment of emotional tension)_
+_(Describe the trig
 
-I was visiting my sister and she asked me to read a bedtime story to her kids. My mom took a picture and sent it to Lori. When Lori saw it, she got deeply triggered and accused me of pretending to be a “good uncle” just to impress others — especially my mom — and said I never show up that way for our own kids. I was completely blindsided and didn’t even understand at first what she was upset about. I felt overwhelmed and emotionally paralyzed.
+gering event, message, or moment of em
+
+otional 
+
+tension)
+
+_
+
+I was visiting my sister and she a
+
+sked me to read a bedtime story to 
+
+her kids. My 
+
+m
+
+
+
+
+om t
+
+ook a picture and sent it to Lori. When Lori saw it, she got deeply triggere
+
+d and accused me of pretending to be a “good uncle” just to impress others — especially my mom — and said I never show up that way for our own kids. I was completely blindsided and didn’t even unde
+
+rstand at first what she was upset about. I felt overwhelmed and emotionally paralyzed.
 
 ## 🌐 Why This Scenario Matters 
 ---
