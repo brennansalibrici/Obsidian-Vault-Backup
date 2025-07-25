@@ -9257,6 +9257,156 @@
         }
       ],
       "version": "1"
+    },
+    {
+      "title": "Update Inner Check-In",
+      "name": "Update Inner Check-In",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "date_time",
+          "label": "Date/Time",
+          "description": "When did this event occur? ",
+          "isRequired": false,
+          "input": {
+            "type": "datetime",
+            "hidden": false
+          }
+        },
+        {
+          "name": "context",
+          "label": "Context",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "driver",
+          "label": "Driver",
+          "description": "Who inside is driving the car right now? ",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "The Boy",
+              "The Pleaser",
+              "The Protector",
+              "The Performer",
+              "Court Jester",
+              "The Ghost (emotionally absent)",
+              "The Defender (argumentative, reactive, logical combat mode)",
+              "The Fixer",
+              "The Parent (caring for others at your own expense)",
+              "The Student (eager to learn, curious)",
+              "The Becoming Man (integrated, values-aligned self)"
+            ],
+            "allowUnknownValues": true,
+            "query": ""
+          }
+        },
+        {
+          "name": "motive",
+          "label": "Motive",
+          "description": "What is the motive behind the action?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Avoid Conflict",
+              "Seek Connection",
+              "Earn Love",
+              "Secure Safety (emotional safety or relational stability)",
+              "Get It Right (give the 'correct' answer)",
+              "Minimize Damage",
+              "Fix The Problem",
+              "Make Her Feel Better",
+              "Protect Myself",
+              "Defend My Truth",
+              "Speak From Integrity",
+              "Show Care",
+              "Hold Emotional Ground",
+              "Stay Regulated"
+            ],
+            "allowUnknownValues": true,
+            "query": ""
+          }
+        },
+        {
+          "name": "response_alignment",
+          "label": "Response Alignment",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "✅ Fully Aligned",
+                "label": "✅ Fully Aligned"
+              },
+              {
+                "value": "⚠️ Right Words, Wrong Motive",
+                "label": "⚠️ Right Words, Wrong Motive"
+              },
+              {
+                "value": "❌ Misaligned / Self-Abandoning",
+                "label": "❌ Misaligned / Self-Abandoning"
+              }
+            ]
+          }
+        },
+        {
+          "name": "people",
+          "label": "People",
+          "description": "Who was involved in this situation? ",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": true,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "emotions",
+          "label": "Emotions",
+          "description": "What emotions did you feel during this?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
+            "allowUnknownValues": true,
+            "multi_select_options": []
+          }
+        },
+        {
+          "name": "reviewed",
+          "label": "Reviewed",
+          "description": "Has this Inner Check Been Reviewed and is Ready To Commit?",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        }
+      ],
+      "version": "1"
     }
   ]
 }

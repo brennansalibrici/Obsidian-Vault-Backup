@@ -87,6 +87,11 @@ class ModalFormUtils {
         this.modalFormName = "";
         this.modalFormFieldMap = "";
         this.modalFormFieldMap_Values = {};
+        this.fieldTypeFormatHooks = {
+            "date":     this.formatUtils.db_formatDateOnly,
+            "time":     this.formatUtils.formatTimeOnly,
+            "date_time":this.formatUtils.db_formatDateTime
+        };
 
     }
 
@@ -120,7 +125,19 @@ class ModalFormUtils {
             folder: "ME/🌒 Reflections/🕹️ Inner Check-Ins",
             template: "Meta/Templates/me/Inner_CheckIn_Template.md",
             naming: (context, count) => context,
-            mdlFormName_Update1: "",
+            mdlFormName_Update1: "Update Inner Check-In",
+            mdlFormName_Update1_fieldMap: {
+                "filename": {key: "filename", from: "file"},
+                "date_time": {key: "event_date_time", type: "date_time"},
+                "title": "title",
+                "context": "context",
+                "driver": "driver",
+                "motive": "motive",
+                "response_alignment": "response_alignment",
+                "people": "people",
+                "emotions": "emotions",
+                "reviewed": "entered"
+            },
             fileClass: "inner_checkin"
         },
         "scenario": {
@@ -291,6 +308,7 @@ class ModalFormUtils {
         }
 
     };
+
 
     //checks to see if the filename created already exists in the folder and if so, appends '-1', '-2', etc.
     ensureUniqueFilename(baseName) {
@@ -671,15 +689,45 @@ class ModalFormUtils {
         }
 
         const formattedNow = this.formatUtils.db_formatDateTime(window.moment());
-/*
-            await this.app.fileManager.processFrontMatter(file, (fm) => {
-            fm["last_modified"] = formattedNow;
-            });
-*/
+
+        const fileClass = this.frontmatter.fileClass;
+        const handler = Object.values(this.constructor.fileTypeHandlers).find(
+            entry => entry.fileClass === fileClass
+        );
+
+        const fieldMap = handler?.mdlFormName_Update1_fieldMap;
+
         app.fileManager.processFrontMatter(file, (frontmatter) => {
             frontmatter["last_modified"] = formattedNow;
-            for (const [key, value] of Object.entries(result.data)) {
-                frontmatter[key] = value;
+
+
+            for (const [formField, formValue] of Object.entries(result.data)) {
+                let frontmatterKey, fieldType;
+
+                //Find the correct frontmatter key
+                const mapping = this.modalFormFieldMap?.[formField];
+                if(typeof mapping === "string") {
+                    frontmatterKey = mapping;
+                } else if (typeof mapping === "object") {
+                    frontmatterKey = mapping.key || formField;
+                    fieldType = mapping.type || null;
+                } else {
+                    frontmatterKey = formField; //Fallback
+                }
+
+                //Format the value if a formatting hook exists for the type
+                let finalValue = formValue;
+                if(fieldType && this.fieldTypeFormatHooks?.[fieldType]) {
+                    finalValue = this.fieldTypeFormatHooks[fieldType](formValue);
+                }
+
+                frontmatter[frontmatterKey] = finalValue;
+            }
+
+            // ✅ Handle special case: reviewed === true
+            if (result.data.hasOwnProperty("reviewed") && result.data.reviewed === true) {
+                frontmatter["status"] = "🟩 complete";
+                frontmatter["entered"] = true;
             }
         });
 

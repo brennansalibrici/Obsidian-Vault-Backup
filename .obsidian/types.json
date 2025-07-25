@@ -123,6 +123,7 @@
     "emotion_type": "multitext",
     "core_fears": "multitext",
     "style_subtype": "multitext",
-    "style_pattern": "multitext"
+    "style_pattern": "multitext",
+    "meta_skills": "multitext"
   }
 }
