@@ -90,7 +90,8 @@ class ModalFormUtils {
         this.fieldTypeFormatHooks = {
             "date":     this.formatUtils.db_formatDateOnly,
             "time":     this.formatUtils.formatTimeOnly,
-            "date_time":this.formatUtils.db_formatDateTime
+            "date_time":this.formatUtils.db_formatDateTime,
+            "link":     this.string2Link
         };
 
     }
@@ -162,7 +163,17 @@ class ModalFormUtils {
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName);
             },
-            mdlFormName_Update1: "",
+            mdlFormName_Update1: "Update Captured Moment",
+            mdlFormName_Update1_fieldMap: {
+                "filename": {key: "filename", from: "file"},
+                "title": "title",
+                "importance": {key: "importance", singleSelect: true},
+                "emotions": {key:"emotions", type: "link"},
+                "people": "people",
+                "summary": "summary",
+                "status": {key: "status", singleSelect: true},
+                "reviewed": "entered"
+            },
             fileClass: "capturedMoment"
         },
         "observation": {
@@ -171,7 +182,17 @@ class ModalFormUtils {
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName);
             },
-            mdlFormName_Update1: "",
+            mdlFormName_Update1: "Update Observation",
+            mdlFormName_Update1_fieldMap: {
+                "filename": {key: "filename", from: "file"},
+                "title": "title",
+                "importance": {key: "importance", singleSelect: true},
+                "emotions": {key:"emotions", type: "link"},
+                "people": "people",
+                "summary": "summary",
+                "status": {key: "status", singleSelect: true},
+                "reviewed": "entered"
+            },
             fileClass: "observation"
         },
         "integration journal": {
@@ -339,7 +360,14 @@ class ModalFormUtils {
 
     //accepts a string and returns an Obsidian link of the same string
     string2Link(stringInput){
-        return `[[${stringInput}]]`;
+        if(typeof stringInput !== "string") return stringInput;
+
+        //If it's already a wililink, return it as-is
+        if(stringInput.trim().startsWith("[[")) {
+            return stringInput;
+        }
+        //Otherwise, wrap it in [[...]]
+        return `[[${stringInput.trim()}]]`;
     }
 
     //converts incoming string value to the enum value
@@ -717,8 +745,15 @@ class ModalFormUtils {
 
                 //Format the value if a formatting hook exists for the type
                 let finalValue = formValue;
-                if(fieldType && this.fieldTypeFormatHooks?.[fieldType]) {
-                    finalValue = this.fieldTypeFormatHooks[fieldType](formValue);
+
+                // ✅ Apply formatting hook if defined
+                if (fieldType && this.fieldTypeFormatHooks?.[fieldType]) {
+                    const formatter = this.fieldTypeFormatHooks[fieldType];
+                    if (Array.isArray(formValue)) {
+                        finalValue = formValue.map(item => formatter(item, result, formField));
+                    } else {
+                        finalValue = formatter(formValue, result, formField);
+                    }
                 }
 
                 frontmatter[frontmatterKey] = finalValue;

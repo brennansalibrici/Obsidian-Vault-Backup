@@ -9313,8 +9313,7 @@
               "The Student (eager to learn, curious)",
               "The Becoming Man (integrated, values-aligned self)"
             ],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -9341,8 +9340,7 @@
               "Hold Emotional Ground",
               "Stay Regulated"
             ],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -9378,8 +9376,7 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": true,
-            "multi_select_options": []
+            "allowUnknownValues": true
           }
         },
         {
@@ -9391,8 +9388,7 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
-            "allowUnknownValues": true,
-            "multi_select_options": []
+            "allowUnknownValues": true
           }
         },
         {
@@ -9403,6 +9399,330 @@
           "input": {
             "type": "toggle",
             "hidden": false
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Update Captured Moment",
+      "name": "Update Captured Moment",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "description": "A short description of the moment",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "importance",
+          "label": "Importance",
+          "description": "What is the main 'thing' about this moment?",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Small Win",
+                "label": "Small Win"
+              },
+              {
+                "value": "Big Milestone",
+                "label": "Big Milestone"
+              },
+              {
+                "value": "Breakthrough",
+                "label": "Breakthrough"
+              },
+              {
+                "value": "Deep Grief",
+                "label": "Deep Grief"
+              },
+              {
+                "value": "Hopeful Shift",
+                "label": "Hopeful Shift"
+              },
+              {
+                "value": "AHA Moment",
+                "label": "AHA Moment"
+              },
+              {
+                "value": "Encouragement",
+                "label": "Encouragement"
+              },
+              {
+                "value": "Personal Truth",
+                "label": "Personal Truth"
+              },
+              {
+                "value": "Relationship Guide",
+                "label": "Relationship Guide"
+              },
+              {
+                "value": "Pattern Shift",
+                "label": "Pattern Shift"
+              },
+              {
+                "value": "Triggering Event",
+                "label": "Triggering Event"
+              },
+              {
+                "value": "Other",
+                "label": "Other"
+              }
+            ]
+          }
+        },
+        {
+          "name": "emotions",
+          "label": "Emotions",
+          "description": "What feelings were present during this moment?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "people",
+          "label": "People",
+          "description": "Who was involved in this moment? ",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "summary",
+          "label": "Summary",
+          "description": "Describe the moment",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "reviewed",
+          "label": "Reviewed",
+          "description": "Has this Captured Moment Been Reviewed?",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        },
+        {
+          "name": "status",
+          "label": "Status",
+          "description": "Has This Captured Moment's Status Changed?",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "reviewed",
+            "type": "boolean",
+            "value": false
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "🟥 draft",
+                "label": "🟥 draft"
+              },
+              {
+                "value": "🟧 in progress",
+                "label": "🟧 in progress"
+              },
+              {
+                "value": "🟨 review",
+                "label": "🟨 review"
+              },
+              {
+                "value": "🟩 complete",
+                "label": "🟩 complete"
+              },
+              {
+                "value": "🟦 archived",
+                "label": "🟦 archived"
+              },
+              {
+                "value": "⬛️ blocked",
+                "label": "⬛️ blocked"
+              }
+            ]
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Update Observation",
+      "name": "Update Observation",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "description": "A short description of the moment",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "importance",
+          "label": "Importance",
+          "description": "What is the main 'thing' about this moment?",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Small Win",
+                "label": "Small Win"
+              },
+              {
+                "value": "Big Milestone",
+                "label": "Big Milestone"
+              },
+              {
+                "value": "Breakthrough",
+                "label": "Breakthrough"
+              },
+              {
+                "value": "Deep Grief",
+                "label": "Deep Grief"
+              },
+              {
+                "value": "Hopeful Shift",
+                "label": "Hopeful Shift"
+              },
+              {
+                "value": "AHA Moment",
+                "label": "AHA Moment"
+              },
+              {
+                "value": "Encouragement",
+                "label": "Encouragement"
+              },
+              {
+                "value": "Personal Truth",
+                "label": "Personal Truth"
+              },
+              {
+                "value": "Relationship Guide",
+                "label": "Relationship Guide"
+              },
+              {
+                "value": "Pattern Shift",
+                "label": "Pattern Shift"
+              },
+              {
+                "value": "Triggering Event",
+                "label": "Triggering Event"
+              },
+              {
+                "value": "Other",
+                "label": "Other"
+              }
+            ]
+          }
+        },
+        {
+          "name": "emotions",
+          "label": "Emotions",
+          "description": "What feelings were present during this moment?",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"ME/🏛️ Foundations/🎭 Emotions\"').file.name",
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "people",
+          "label": "People",
+          "description": "Who was involved in this moment? ",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "summary",
+          "label": "Summary",
+          "description": "Describe the moment",
+          "isRequired": false,
+          "input": {
+            "type": "textarea",
+            "hidden": false
+          }
+        },
+        {
+          "name": "reviewed",
+          "label": "Reviewed",
+          "description": "Has This Observation Been Reviewed?",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        },
+        {
+          "name": "status",
+          "label": "Status",
+          "description": "Has This Observation's Status Changed? ",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "reviewed",
+            "type": "boolean",
+            "value": false
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "🟥 draft",
+                "label": "🟥 draft"
+              },
+              {
+                "value": "🟧 in progress",
+                "label": "🟧 in progress"
+              },
+              {
+                "value": "🟨 review",
+                "label": "🟨 review"
+              },
+              {
+                "value": "🟩 complete",
+                "label": "🟩 complete"
+              },
+              {
+                "value": "🟦 archived",
+                "label": "🟦 archived"
+              },
+              {
+                "value": "⬛️ blocked",
+                "label": "⬛️ blocked"
+              }
+            ]
           }
         }
       ],

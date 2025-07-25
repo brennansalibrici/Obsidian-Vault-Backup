@@ -7,7 +7,7 @@ title: Doing It Afraid
 status: [🟨 review]
 type: 
 tags: []
-category: note
+category: [note]
 entered: true
 archived: false
 priority: [⚪ None]
@@ -17,7 +17,7 @@ source_daily_note:
 importance: [Small Win]
 feelings: [""]
 people: ["[[Lori Kinney]]"]
-theme: [""]
+theme: []
 summary: Responded well to a difficult situation
 notes: 
 related: 

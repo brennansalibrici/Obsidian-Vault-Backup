@@ -21,7 +21,7 @@ actions:
 ```dataview
 table id as "ID", importance as "Importance", people as "People", type as "Type", created as "Date/Time", status as "Status"
 from "ME/📝 Captured Moments"
-where contains(status, "review")
+where contains(status, "review") or contains(status, "in progress")
 sort file.name asc 
 
 ```
