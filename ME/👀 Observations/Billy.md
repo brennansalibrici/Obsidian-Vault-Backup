@@ -10,15 +10,11 @@ tags: []
 category: note
 entered: true
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 importance: Personal Truth
-feelings:
-  - "[[Grief old]]"
-people:
-  - "[[Lori Kinney]]"
-  - "[[Personal/👤 People/Billy|Billy]]"
+feelings: ["[[Grief old]]"]
+people: ["[[Lori Kinney]]", "[[Personal/👤 People/Billy|Billy]]"]
 summary: "What Billy Meant to Lori. Can be an example to me of what's important to her. "
 notes: 
 related: 
@@ -26,12 +22,6 @@ media:
 attachments: 
 emotions: []
 ---
-
-
-
-
-
-
 
 ## Observation Notes
 ---

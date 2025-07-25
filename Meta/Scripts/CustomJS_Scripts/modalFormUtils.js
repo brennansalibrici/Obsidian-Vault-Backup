@@ -105,8 +105,21 @@ class ModalFormUtils {
             folder: "ME/🧪 Practice Lab/🎬 Practice Logs",
             template: "Meta/Templates/me/Practice Lab/Practice Session Template.md",
             naming: (baseName, count) => `${baseName}_Session-${count}`,
-            mdlFormName_Update1: "",
-            fileClass: "practice_session"
+            mdlFormName_Update1: "Update Practice Log",
+            mdlFormName_Update1_fieldMap: {
+                "filename": {key: "filename", from: "file"},
+                "title": "title",
+                "scenario": {key:"scenario", isLink: true, singleSelect: true},
+                "rehearsal_mode": {key: "rehearsal_mode", singleSelect: true},
+                "live_rehearsals": {key: "live_rehearsals", isLink: true},
+                "coaching_sessions": {key: "coaching_sessions", isLink: true},
+                "people": {key:"people", isLink: true},
+                "meta_skills": {key: "meta_skills", isLink: true},
+                "core_skills": {key: "core_skills", isLink: true},
+                "reviewed": "entered",
+                "status": {key: "status", singleSelect: true}
+            },
+            fileClass: "practice_log"
         },
         "live rehearsal": {
             folder: "ME/🧪 Practice Lab/🎙️ Live Rehearsals",
@@ -204,7 +217,16 @@ class ModalFormUtils {
                 const timePart = this.formatUtils.formatTimeOnly(now).replace(":", ""); // e.g., 1430
                 return `🔁 Integration Journal Entry ${datePart} @ ${timePart}`;
             },
-            mdlFormName_Update1: "",
+            mdlFormName_Update1: "Update Integration Journal Entry",
+            mdlFormName_Update1_fieldMap: {
+                "filename": {key: "filename", from: "file"},
+                "title": "title",
+                "emotions": {key:"emotions", type: "link"},
+                "people": "people",
+                "summary": "summary",
+                "status": {key: "status", singleSelect: true},
+                "reviewed": "entered"
+            },
             fileClass: "emotional_growth_journal"
         },
         "reflection journal": {
@@ -216,7 +238,16 @@ class ModalFormUtils {
                 const timePart = this.formatUtils.formatTimeOnly(now).replace(":", ""); // e.g., 1430
                 return `🪞 Reflection Journal Entry ${datePart} @ ${timePart}`;
             },
-            mdlFormName_Update1: "",
+            mdlFormName_Update1: "Update Reflection Journal Entry",
+            mdlFormName_Update1_fieldMap: {
+                "filename": {key: "filename", from: "file"},
+                "title": "title",
+                "emotions": {key:"emotions", type: "link"},
+                "people": "people",
+                "summary": "summary",
+                "status": {key: "status", singleSelect: true},
+                "reviewed": "entered"
+            },
             fileClass: "emotional_growth_journal"
         },
         "trigger": {
@@ -691,23 +722,40 @@ class ModalFormUtils {
 
         if(this.modalFormFieldMap){
             for(const [formField, frontmatterKey] of Object.entries(this.modalFormFieldMap)){
-                const {key, singleSelect, from} = typeof frontmatterKey === "object" ? frontmatterKey : {key: frontmatterKey, singleSelect: false, from: "frontmatter"};
+                //const {key, singleSelect, from} = typeof frontmatterKey === "object" ? frontmatterKey : {key: frontmatterKey, singleSelect: false, from: "frontmatter"};
+                const {key, singleSelect = false, from = "frontmatter", isLink = false} = typeof frontmatterKey === "object" ? frontmatterKey : {key: frontmatterKey};
 
 
                 if (singleSelect && Array.isArray(this.frontmatter[key]) && this.frontmatter[key].length === 1) {
                     this.frontmatter[key] = this.frontmatter[key].toString();
                 }
 
-                if(from === "file") {
-                        this.modalFormFieldMap_Values[formField] = file.basename;
-                    } else {
-                        this.modalFormFieldMap_Values[formField] = this.frontmatter[key];
+                if (from === "file") {
+                    this.modalFormFieldMap_Values[formField] = file.basename;
+                } else {
+                    let value = this.frontmatter[key];
+
+                    // Handle singleSelect stored as array of one
+                    if (singleSelect && Array.isArray(value) && value.length === 1) {
+                        value = value[0];
+                    }
+
+                    // Handle multiselect edge case (string turned array)
+                    if (!singleSelect && typeof value === "string") {
+                        value = [value];
+                    }
+
+                    // 🟦 Strip [[brackets]] if link
+                    if (isLink) {
+                        const strip = (v) =>
+                            typeof v === "string" ? v.replace(/^\[\[|\]\]$/g, "") : v;
+                        value = Array.isArray(value) ? value.map(strip) : strip(value);
+                    }
+
+                    this.modalFormFieldMap_Values[formField] = value;
                 }
             }
         }
-
-        //Update the file's frontmatter with the changes made in the form
-
     }
 
     updateFrontMatterFromForm(file, result){
@@ -730,17 +778,20 @@ class ModalFormUtils {
 
 
             for (const [formField, formValue] of Object.entries(result.data)) {
-                let frontmatterKey, fieldType;
+                let frontmatterKey, fieldType, isLink;
 
-                //Find the correct frontmatter key
+                // Find the correct frontmatter key
                 const mapping = this.modalFormFieldMap?.[formField];
-                if(typeof mapping === "string") {
+                if (typeof mapping === "string") {
                     frontmatterKey = mapping;
+                    isLink = false;
                 } else if (typeof mapping === "object") {
                     frontmatterKey = mapping.key || formField;
                     fieldType = mapping.type || null;
+                    isLink = mapping.isLink || false;
                 } else {
-                    frontmatterKey = formField; //Fallback
+                    frontmatterKey = formField; // Fallback
+                    isLink = false;
                 }
 
                 //Format the value if a formatting hook exists for the type
@@ -756,7 +807,17 @@ class ModalFormUtils {
                     }
                 }
 
-                frontmatter[frontmatterKey] = finalValue;
+                let valueToWrite = finalValue;
+
+                if (isLink) {
+                    const wrap = (v) =>
+                        typeof v === "string" && !v.startsWith("[[") ? `[[${v}]]` : v;
+                    valueToWrite = Array.isArray(finalValue)
+                        ? finalValue.map(wrap)
+                        : wrap(finalValue);
+                }
+
+                frontmatter[frontmatterKey] = valueToWrite;
             }
 
             // ✅ Handle special case: reviewed === true

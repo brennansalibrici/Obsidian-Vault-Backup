@@ -9,5 +9,3 @@ const result = await modalForm.openForm(utils.modalFormName, {values: utils.moda
 //Update file with changes made from the form
 utils.updateFrontMatterFromForm(file, result);
 %>
-
-

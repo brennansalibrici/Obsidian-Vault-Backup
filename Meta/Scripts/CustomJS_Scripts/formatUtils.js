@@ -83,6 +83,12 @@ class FormatUtils {
         return this.isLikelyAcronym(word) ? word : this.capitalizeWord(word);
       }
 
+      //strips brackets from a string link
+      stripLinkBrackets(str){
+        if(typeof str !== "string") return str;
+        return str.startsWith("[[") && str.endsWith("]]") ? str.slice(2, -2) : str;
+      }
+
     //#endregion COLLECTION OF MODULAR METHODS THAT CAN BE USED EITHER ON THEIR OWN OR COMBINED IN ANY COMBINATION TO ACHIEVE A PARTICULAR OUTCOME
 
   //#endregion STRING FORMATS

@@ -2,9 +2,9 @@
 fileClass: emotional_growth_journal
 id: 1748548281910
 created: 2025-05-29 14:51
-last_modified: 2025-05-29 14:51
+last_modified: 2025-07-25 08:49
 title: " 🪞 Reflection Journal Entry 2025-05-29 @ 1451"
-status: [🟩 complete]
+status: 🟩 complete
 type: 
 tags: []
 category: note
@@ -14,13 +14,14 @@ priority: [⚪ None]
 visibility: 🔒 private
 source_daily_note:
   - - 2025-05-29
-people: ["[[Dan Schmoyer]]"]
+people: ["[[Dan Schmoyer]]", "[[Hailey Salibrici]]"]
 journal_type: Reflection
-summary: Reflection Test Summary
+summary: Reflection Test Summary. Tested Again
 notes: 
 related: 
 media: 
-attachments:
+attachments: 
+emotions: ["[[Abominable]]"]
 ---
 
 ## What I Noticed

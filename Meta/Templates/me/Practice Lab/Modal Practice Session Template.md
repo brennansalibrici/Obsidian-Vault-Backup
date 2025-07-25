@@ -131,6 +131,7 @@ await new Promise(resolve => setTimeout(resolve, 600));
 await practiceSession.updateFrontMatter(practiceSession.newCreatedFile, {
   created: practiceSession.formatUtils.db_formatDateTime(now),
   last_modified: practiceSession.formatUtils.db_formatDateTime(now),
+  title: practiceSession.newCreatedFileName,
   people: Array.isArray(result.data.people) ? result.data.people : [],
   scenario: practiceSession.lnkField1,
   status: "🟧 in progress",
