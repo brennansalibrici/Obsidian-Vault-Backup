@@ -2,37 +2,40 @@
 fileClass: scenario
 id: 1748904809623
 created: 2025-06-02 17:53
-last_modified: 2025-06-02 17:53
-title: Blindsided by Lori After Bedtime Story Photo
+last_modified: 2025-07-24 20:30
+title: Blindsided After Bedtime Story Photo
 tags: []
 entered: true
 archived: false
 priority: [⚪ None]
 visibility: 🔒 private
 people: ["[[Lori Kinney]]"]
-type: "Trigger Navigation"
-summary: "Lori was triggered by a photo of me reading to my niece and accused me of being a fake, performative parent who only shows up for others. I shut down, didn’t know how to respond, and felt completely powerless."
-skill_level:
-meta_skills: []
-core_skills: []
-emotions_in_play: []
-triggers: []
-needs_activated: []
-emotional_wounds: []
-protective_strategies: []
-steps_targeted: []
-grade: []
-practice_log: []
+type: Trigger Navigation
+summary: Test - Lori was triggered by a photo of me reading to my niece and accused me of being a fake, performative parent who only shows up for others. I shut down, didn’t know how to respond, and felt completely powerless.
+skill_level: 
+meta_skills: 
+core_skills: 
+emotions_in_play: 
+triggers: 
+needs_activated: 
+emotional_wounds: 
+protective_strategies: 
+steps_targeted: 
+grade: 
+practice_log: 
 notes: 
 media: 
-attachments:
+attachments: 
+filename: Bedtime Story Photo
 ---
 
 ## 🔍 Situation 
 ---
 _(Describe the trig
 
-gering event, message, or moment of em
+gering event, message, or 
+
+moment of em
 
 otional 
 
@@ -47,9 +50,6 @@ sked me to read a bedtime story to
 her kids. My 
 
 m
-
-
-
 
 om t
 

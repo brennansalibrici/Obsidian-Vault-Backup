@@ -2,7 +2,7 @@
 fileClass: scenario
 id: 1749082600589
 created: 2025-06-04 19:16
-last_modified: 2025-06-04 19:16
+last_modified: 2025-07-24 20:30
 title: A Different Story
 tags: []
 entered: true
@@ -10,7 +10,7 @@ archived: false
 priority: [⚪ None]
 visibility: 🔒 private
 people: ["[[Lori Kinney]]"]
-type: [Validation]
+type: Validation
 summary: test
 skill_level: 
 meta_skills: ["[[ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Emotional Containment]]"]
@@ -25,7 +25,8 @@ grade:
 practice_log: 
 notes: 
 media: 
-attachments:
+attachments: 
+filename: A Different Story
 ---
 
 ## 🔍 Situation 

@@ -9140,22 +9140,12 @@
           "name": "filename",
           "label": "File",
           "description": "",
+          "isRequired": false,
           "input": {
             "type": "select",
-            "allowUnknownValues": false,
-            "hidden": false,
-            "allowedExtensions": [],
-            "folder": "ME/🧪 Practice Lab/🎲 Scenarios",
-            "parentFolder": "ME/🧪 Practice Lab/🎲 Scenarios",
-            "options": [
-              {
-                "value": "",
-                "label": ""
-              }
-            ],
-            "source": "notes"
-          },
-          "isRequired": false
+            "source": "notes",
+            "folder": "ME/🧪 Practice Lab/🎲 Scenarios"
+          }
         },
         {
           "name": "title",
@@ -9252,8 +9242,7 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
-            "allowUnknownValues": true,
-            "multi_select_options": []
+            "allowUnknownValues": true
           }
         },
         {

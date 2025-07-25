@@ -6,7 +6,7 @@
       {
         "id": "915370cbf2abbf92",
         "type": "tabs",
-        "dimension": 70.98821396192203,
+        "dimension": 34.175438596491226,
         "children": [
           {
             "id": "83c3f02bd9fd43cf",
@@ -65,6 +65,16 @@
             }
           },
           {
+            "id": "17460e420c2eeb93",
+            "type": "leaf",
+            "state": {
+              "type": "FileClassView__me/practice_lab/scenario",
+              "state": {},
+              "icon": "dice-3",
+              "title": "me/practice_lab/scenario"
+            }
+          },
+          {
             "id": "39053533f73a9983",
             "type": "leaf",
             "state": {
@@ -75,12 +85,12 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       },
       {
         "id": "34ee373fcc5b5ca6",
         "type": "tabs",
-        "dimension": 29.011786038077968,
+        "dimension": 65.82456140350878,
         "children": [
           {
             "id": "55a8956ed7541da2",
@@ -94,16 +104,6 @@
               },
               "icon": "lucide-file",
               "title": "Modal Update Form Template"
-            }
-          },
-          {
-            "id": "c94145041e3bcabd",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__me/practice_lab/scenario",
-              "state": {},
-              "icon": "dice-3",
-              "title": "me/practice_lab/scenario"
             }
           },
           {
@@ -417,18 +417,18 @@
       "cmdr:Templater: Insert Meta/Templates/me/Practice Lab/Modal Update Form Template.md": false
     }
   },
-  "active": "a58f5370e6224a67",
+  "active": "55a8956ed7541da2",
   "lastOpenFiles": [
-    "ME/🧪 Practice Lab/🎲 Scenarios/A Different Story.md",
+    "Meta/Templates/me/Practice Lab/Modal Live Rehearsal Template.md",
     "Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
-    "Meta/fileClass/me/practice_lab/scenario.md",
+    "ME/🧪 Practice Lab/🎲 Scenarios/A Different Story.md",
     "ME/🧪 Practice Lab/🎲 Scenarios/Bedtime Story Photo.md",
+    "Meta/fileClass/me/practice_lab/scenario.md",
     "Untitled 1.md",
     "Untitled.md",
     "Meta/Templates/me/Practice Lab/Modal Button Test.md",
     "Work/👤 POCs/Aaron Siebold.md",
     "Work/👤 POCs/👤 POCs.md",
-    "Meta/Templates/me/Practice Lab/Modal Live Rehearsal Template.md",
     "ME/🧪 Practice Lab/🎲 Scenarios/🎲 Scenarios.md",
     "Work/🛠 My Jobs/Data Collection  - T9156 Burlington, NJ 2025.md",
     "Work/🛠 My Jobs/🛠 My Jobs.md",

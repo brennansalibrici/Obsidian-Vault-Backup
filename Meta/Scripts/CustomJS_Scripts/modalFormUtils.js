@@ -625,6 +625,7 @@ class ModalFormUtils {
         this.tp = tp;
         this.frontmatter = this.getFrontMatterMap(file);
 
+        //Select the form, collect the file's data and populate the form with it
         if (!this.frontmatter || Object.keys(this.frontmatter).length === 0) {
             new Notice("Could not read frontmatter.");
             return;
@@ -655,13 +656,34 @@ class ModalFormUtils {
                         this.modalFormFieldMap_Values[formField] = file.basename;
                     } else {
                         this.modalFormFieldMap_Values[formField] = this.frontmatter[key];
-                //this.modalFormFieldMap_Values[formField] = this.frontmatter[frontmatterKey]; //When this line is the only uncommented line, the for loop works
-                //this.modalFormFieldMap_Values[formField] = this.frontmatter[frontmatterKey];
                 }
             }
         }
 
-        return this.modalFormFieldMap_Values;
+        //Update the file's frontmatter with the changes made in the form
+
+    }
+
+    updateFrontMatterFromForm(file, result){
+        if (!result.data || Object.keys(result.data).length === 0) {
+            new Notice("No data returned from form");
+        return;
+        }
+
+        const formattedNow = this.formatUtils.db_formatDateTime(window.moment());
+/*
+            await this.app.fileManager.processFrontMatter(file, (fm) => {
+            fm["last_modified"] = formattedNow;
+            });
+*/
+        app.fileManager.processFrontMatter(file, (frontmatter) => {
+            frontmatter["last_modified"] = formattedNow;
+            for (const [key, value] of Object.entries(result.data)) {
+                frontmatter[key] = value;
+            }
+        });
+
+        new Notice("Frontmatter Updated!");
     }
 
 //#endregion
