@@ -2,15 +2,19 @@
 fileClass: tradeoff
 id: 1751743243778
 created: 2025-07-05 14:20
-last_modified: 2025-07-05 14:20
-title: Avoiding Pain Vs. Doing What’s Needed
-status: [🟩 complete]
-type: [trigger]
-tags: []
-category: [note]
-entered: false
+last_modified: 2025-07-30 10:23
+title:
+  - Avoiding Pain Vs. Doing What’s Needed
+status: 🟩 complete
+type:
+  - trigger
+tags: 
+category:
+  - note
+entered: true
 archived: false
-priority: [⚪ None]
+priority:
+  - ⚪ None
 visibility: 🔒 private
 linked_wounds: 
 associated_emotions: 
@@ -25,19 +29,25 @@ mechanism:
 definition: ""
 behavior_functions: 
 tradeoff_group: Avoidance vs. Engagement
-tradeoff_type: Avoiding Discomfort vs. Resolving the Real Issue
-applies_to: [Protective Strategy]
+tradeoff_type: Not Rocking the Boat vs. Being Fully Alive
+applies_to: Protective Strategy
 example_behavior: ""
 dominant_pole_group: Safety & Protection
 dominant_pole: Protection
-conflicted_part: ["[[Resigned One]]", "[[Inner Critic]]"]
-resolved_by_group: [Internal Integration]
-resolved_by: [Emotion tolerance, Meaning-based action, Internal boundary repair]
+conflicted_part:
+  - "[[Resigned One]]"
+  - "[[Inner Critic]]"
 notes: 
 related: 
 media: 
 attachments: 
 export_to_inputs: false
+ptype_safety: Protection
+resolvedby_group: Internal Integration
+rinternal_group:
+  - Emotion tolerance
+  - Meaning-based action
+  - Internal boundary repair
 ---
 
 ## ⚖️ What’s Being Balanced

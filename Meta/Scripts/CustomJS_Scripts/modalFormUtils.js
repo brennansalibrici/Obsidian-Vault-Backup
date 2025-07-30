@@ -976,77 +976,92 @@ class ModalFormUtils {
 }
 
 
-    updateFrontMatterFromForm(file, result){
-        if (!result.data || Object.keys(result.data).length === 0) {
-            new Notice("No data returned from form");
+    updateFrontMatterFromForm(file, result) {
+    if (!result.data || Object.keys(result.data).length === 0) {
+        new Notice("No data returned from form");
         return;
-        }
+    }
 
-        const formattedNow = this.formatUtils.db_formatDateTime(window.moment());
+    const formattedNow = this.formatUtils.db_formatDateTime(window.moment());
 
-        const fileClass = this.frontmatter.fileClass;
-        const handler = Object.values(this.constructor.fileTypeHandlers).find(
-            entry => entry.fileClass === fileClass
-        );
+    const fileClass = this.frontmatter.fileClass;
+    const handler = Object.values(this.constructor.fileTypeHandlers).find(
+        entry => entry.fileClass === fileClass
+    );
 
-        const fieldMap = handler?.mdlFormName_Update1_fieldMap;
+    const fieldMap = handler?.mdlFormName_Update1_fieldMap;
 
-        app.fileManager.processFrontMatter(file, (frontmatter) => {
-            frontmatter["last_modified"] = formattedNow;
+    app.fileManager.processFrontMatter(file, (frontmatter) => {
+        frontmatter["last_modified"] = formattedNow;
 
+        for (const [formField, mapping] of Object.entries(this.modalFormFieldMap)) {
+            let frontmatterKey = formField;
+            let fieldType = null;
+            let isLink = false;
+            let groupFilter = null;
 
-            for (const [formField, formValue] of Object.entries(result.data)) {
-                let frontmatterKey, fieldType, isLink;
+            if (typeof mapping === "string") {
+                frontmatterKey = mapping;
+            } else if (typeof mapping === "object") {
+                frontmatterKey = mapping.key || formField;
+                fieldType = mapping.type || null;
+                isLink = mapping.isLink || false;
+                groupFilter = mapping.groupFilter || null;
+            }
 
-                // Find the correct frontmatter key
-                const mapping = this.modalFormFieldMap?.[formField];
-                if (typeof mapping === "string") {
-                    frontmatterKey = mapping;
-                    isLink = false;
-                } else if (typeof mapping === "object") {
-                    frontmatterKey = mapping.key || formField;
-                    fieldType = mapping.type || null;
-                    isLink = mapping.isLink || false;
-                } else {
-                    frontmatterKey = formField; // Fallback
-                    isLink = false;
-                }
+            let finalValue = result.data[formField]; // Default fallback
+            let sourceField = formField; // Track actual input field
 
-                //Format the value if a formatting hook exists for the type
-                let finalValue = formValue;
+            // ✅ Pull value from resolved groupFilter subfield if defined
+            if (groupFilter) {
+                const resolvedFilter = typeof groupFilter === "string"
+                    ? this.constructor.groupFilterRegistry?.[groupFilter]
+                    : groupFilter;
 
-                // ✅ Apply formatting hook if defined
-                if (fieldType && this.fieldTypeFormatHooks?.[fieldType]) {
-                    const formatter = this.fieldTypeFormatHooks[fieldType];
-                    if (Array.isArray(formValue)) {
-                        finalValue = formValue.map(item => formatter(item, result, formField));
-                    } else {
-                        finalValue = formatter(formValue, result, formField);
+                if (resolvedFilter?.groupField) {
+                    const groupValue = result.data[resolvedFilter.groupField];
+                    const subFieldKey = resolvedFilter.subFieldsByGroup?.[groupValue];
+
+                    if (subFieldKey && result.data[subFieldKey] !== undefined) {
+                        finalValue = result.data[subFieldKey];  // ✅ Pull value from subfield
+                        sourceField = subFieldKey;
                     }
                 }
-
-                let valueToWrite = finalValue;
-
-                if (isLink) {
-                    const wrap = (v) =>
-                        typeof v === "string" && !v.startsWith("[[") ? `[[${v}]]` : v;
-                    valueToWrite = Array.isArray(finalValue)
-                        ? finalValue.map(wrap)
-                        : wrap(finalValue);
-                }
-
-                frontmatter[frontmatterKey] = valueToWrite;
             }
 
-            // ✅ Handle special case: reviewed === true
-            if (result.data.hasOwnProperty("reviewed") && result.data.reviewed === true) {
-                frontmatter["status"] = "🟩 complete";
-                frontmatter["entered"] = true;
+            // ✅ Apply field formatting if applicable
+            if (fieldType && this.fieldTypeFormatHooks?.[fieldType]) {
+                const formatter = this.fieldTypeFormatHooks[fieldType];
+                finalValue = Array.isArray(finalValue)
+                    ? finalValue.map(item => formatter(item, result, sourceField))
+                    : formatter(finalValue, result, sourceField);
             }
-        });
 
-        new Notice("Frontmatter Updated!");
-    }
+            // 📎 Wrap [[links]] if needed
+            let valueToWrite = finalValue;
+            if (isLink) {
+                const wrap = (v) =>
+                    typeof v === "string" && !v.startsWith("[[") ? `[[${v}]]` : v;
+                valueToWrite = Array.isArray(finalValue)
+                    ? finalValue.map(wrap)
+                    : wrap(finalValue);
+            }
+
+            // ✅ Write value to the *main* frontmatter field
+            frontmatter[frontmatterKey] = valueToWrite;
+        }
+
+        // ✅ Handle special case: reviewed === true
+        if (result.data.hasOwnProperty("reviewed") && result.data.reviewed === true) {
+            frontmatter["status"] = "🟩 complete";
+            frontmatter["entered"] = true;
+        }
+    });
+
+    new Notice("Frontmatter Updated!");
+}
+
+
 
 //#endregion
 
