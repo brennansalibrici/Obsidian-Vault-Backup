@@ -57,7 +57,18 @@ fields:
       valuesListNotePath: Meta/fileClass/me/foundations/tradeoffs/lists/tradeoff pole type list.md
     path: ""
     id: nn0foi
-version: "2.24"
+  - name: resolved_by_group
+    type: Multi
+    options:
+      sourceType: ValuesList
+      valuesList:
+        "1": Internal Integration
+        "2": Relational Mirroring & Externalization
+        "3": Cognitive & Emotional Reframing
+        "4": Practice & Embodiment
+    path: ""
+    id: aW5Fiy
+version: "2.26"
 limit: 20
 mapWithTag: false
 icon: scale

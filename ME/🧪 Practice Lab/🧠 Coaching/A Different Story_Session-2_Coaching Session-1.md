@@ -7,20 +7,16 @@ title: A Different Story_Session-2_Coaching Session-1
 status: 🟧 in progress
 type: 
 tags: []
-category:
-  - note
+category: [note]
 entered: false
 archived: false
-priority:
-  - ⚪ None
-visibility:
-  - 🔒 private
+priority: [⚪ None]
+visibility: [🔒 private]
 rehearsal_mode: Live Rehearsal & Coaching
 practice_session: "[[A Different Story_Session-2]]"
 take: ""
 scenario: "[[A Different Story]]"
-people:
-  - "[[Dan Schmoyer]]"
+people: ["[[Dan Schmoyer]]"]
 coaching_summary: ""
 skill_level: []
 meta_skills: "[[ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills/Emotional Containment]]"

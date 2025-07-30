@@ -56,6 +56,7 @@ await tradeoff.createFileWithFrontmatter({
   dominant_pole: dominantPole,
   conflicted_part: result.data.conflicted_part,
   resolved_by: resolvedBy,
+  resolved_by_group: result.data.resolvedby_group
   created: tradeoff.formatUtils.db_formatDateTime(new Date()),
   last_modified: tradeoff.formatUtils.db_formatDateTime(new Date()),
   status: "🟩 complete",

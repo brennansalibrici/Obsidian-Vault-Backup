@@ -2,9 +2,9 @@
 fileClass: live_rehearsal
 id: 1751067279888
 created: 2025-06-27 18:34
-last_modified: 2025-06-27 18:34
-title: A Different Story_Session-2_Live Rehearsal_Take-1
-status: 🟧 in progress
+last_modified: 2025-07-28 07:16
+title: [A Different Story_Session-2_Live Rehearsal_Take-1]
+status: 🟨 review
 type: 
 tags: []
 category: [note]

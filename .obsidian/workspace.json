@@ -4,40 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "915370cbf2abbf92",
+        "id": "34ee373fcc5b5ca6",
         "type": "tabs",
-        "dimension": 54.11507647487255,
         "children": [
           {
-            "id": "a58f5370e6224a67",
+            "id": "bde90bef4435da68",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ME/🧪 Practice Lab/🎲 Scenarios/Bedtime Story Photo.md",
+                "file": "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bedtime Story Photo"
+              "title": "⚖️Trade-Offs"
             }
           },
           {
-            "id": "067e6dab264b5e30",
+            "id": "b57bff73b4fc199e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ME/🧪 Practice Lab/🎲 Scenarios/A Different Story.md",
+                "file": "ME/🏛️ Foundations/⚖️Trade-Offs/Avoiding Pain vs. Doing What’s Needed.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "A Different Story"
+              "title": "Avoiding Pain vs. Doing What’s Needed"
             }
           },
           {
-            "id": "39053533f73a9983",
+            "id": "a9b2f8ec97bf593f",
             "type": "leaf",
             "state": {
               "type": "modal-form-manage-forms-view",
@@ -45,82 +44,51 @@
               "icon": "documents",
               "title": "Manage forms"
             }
-          }
-        ],
-        "currentTab": 2
-      },
-      {
-        "id": "34ee373fcc5b5ca6",
-        "type": "tabs",
-        "dimension": 45.88492352512745,
-        "children": [
+          },
           {
-            "id": "c86114b6a8610f34",
+            "id": "e1bdf9d558e3bb03",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ME/🧪 Practice Lab/🎬 Practice Logs/Bedtime Story Photo_Session-1.md",
+                "file": "Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bedtime Story Photo_Session-1"
+              "title": "Modal Update Form Template"
             }
           },
           {
-            "id": "761715775175dc6b",
-            "type": "leaf",
-            "state": {
-              "type": "FileClassView__global/global",
-              "state": {},
-              "icon": "package",
-              "title": "global/global"
-            }
-          },
-          {
-            "id": "0355ee9dc51156ea",
+            "id": "ac7d9178c60db8a6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/Templates/me/Practice Lab/Modal Practice Session Template.md",
+                "file": "Meta/Templates/me/Foundations/TradeOff Template.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Modal Practice Session Template"
+              "title": "TradeOff Template"
             }
           },
           {
-            "id": "4ed8c1b092eff167",
+            "id": "8d41546c80148b93",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/fileClass/global/global.md",
+                "file": "Meta/Templates/me/Foundations/Modal TradeOff Template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "global"
-            }
-          },
-          {
-            "id": "6fd208411d1e764a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ME/🌒 Reflections/🕹️ Inner Check-Ins/Test 5.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Test 5"
+              "title": "Modal TradeOff Template"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -245,7 +213,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 240.5
+    "width": 240.5,
+    "collapsed": true
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -417,34 +386,34 @@
       "cmdr:Templater: Insert Meta/Templates/me/Practice Lab/Modal Update Form Template.md": false
     }
   },
-  "active": "39053533f73a9983",
+  "active": "b57bff73b4fc199e",
   "lastOpenFiles": [
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Test 5.md",
+    "Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Avoiding Pain vs. Doing What’s Needed.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
+    "Meta/Templates/me/Practice Lab/Modal Practice Session Template.md",
+    "ME/🧪 Practice Lab/🧠 Coaching/Bedtime Story Photo_Session-1_Coaching Session-1.md",
+    "Meta/Templates/me/Foundations/Modal TradeOff Template.md",
+    "Meta/Templates/me/Foundations/TradeOff Template.md",
+    "Meta/Templates/me/Foundations/Trigger Template.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-2.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-1.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off.md",
+    "Meta/Templates/me/Practice Lab/Coaching Session Template.md",
+    "ME/🧪 Practice Lab/🧠 Coaching/🧠 Coaching.md",
+    "ME/🧪 Practice Lab/🧠 Coaching/The Socks Episode_Session-1_Coaching Session-1.md",
+    "ME/🧪 Practice Lab/🧠 Coaching/A Different Story_Session-2_Coaching Session-1.md",
+    "Meta/Templates/me/Practice Lab/Practice Session Template.md",
+    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/🎙️ Live Rehearsals.md",
+    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/A Different Story_Session-2_Live Rehearsal_Take-1.md",
+    "Meta/fileClass/global/global.md",
+    "ME/🧪 Practice Lab/🎲 Scenarios/Bedtime Story Photo.md",
     "ME/🧪 Practice Lab/🎬 Practice Logs/Bedtime Story Photo_Session-1.md",
+    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Test 5.md",
+    "ME/🧪 Practice Lab/🎲 Scenarios/A Different Story.md",
     "ME/🌒 Reflections/🕹️ Inner Check-Ins/🕹️ Inner Check-Ins.md",
     "ME/🌒 Reflections/🌒 Reflections.md",
     "ME/🧪 Practice Lab/🎬 Practice Logs/🎬 Practice Logs.md",
-    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/Bedtime Story Photo_Session-1_Live Rehearsal_Take-1.md",
-    "ME/🧪 Practice Lab/🎬 Practice Logs/Bedtime Story Photo_Session-2.md",
-    "Meta/Templates/me/Practice Lab/Modal Practice Session Template.md",
-    "Meta/Templates/me/Practice Lab/Practice Session Template.md",
-    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/Bedtime Story Photo_Session-2_Live Rehearsal_Take-1.md",
-    "Meta/Templates/me/Modal Captured Moment Template.md",
-    "ME/🧪 Practice Lab/🎬 Practice Logs/The Socks Episode_Session-1.md",
-    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/🎙️ Live Rehearsals.md",
-    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/A Different Story_Session-2_Live Rehearsal_Take-1.md",
-    "ME/🧪 Practice Lab/🎬 Practice Logs/_Session-3.md",
-    "ME/🧪 Practice Lab/🎬 Practice Logs/A Different Story_Session-1.md",
-    "ME/🧪 Practice Lab/🎲 Scenarios/Bedtime Story Photo.md",
-    "ME/📓 Journal/🪞 Reflection Journal Entry 2025-05-29 @ 1451.md",
-    "Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
-    "ME/📓 Journal/📓 Journal.md",
-    "ME/📓 Journal/🔁 Integration Journal Entry 2025-07-05 @ 1945.md",
-    "Meta/fileClass/global/global.md",
-    "Meta/fileClass/global/global category values.md",
-    "Meta/fileClass/global/global type value list.md",
-    "Meta/fileClass/global/list_item.md",
-    "Meta/fileClass/global/5 point status list.md",
     "Meta/Scripts/CustomJS_Scripts/btnUpdateModal.js",
     "Meta/Scripts/CustomJS_Scripts/btnUpdateModal",
     "Obsidian Dashboard.canvas",

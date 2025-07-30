@@ -125,14 +125,33 @@ class ModalFormUtils {
             folder: "ME/🧪 Practice Lab/🎙️ Live Rehearsals",
             template: "Meta/Templates/me/Practice Lab/Live Rehearsal Template.md",
             naming: (baseName, count) => `${baseName}_Live Rehearsal_Take-${count}`,
-            mdlFormName_Update1: "",
+            mdlFormName_Update1: "Update Live Rehearsal",
+            mdlFormName_Update1_fieldMap: {
+                "filename": {key: "filename", from: "file"},
+                "title": "title",
+                "rehearsal_mode": {key: "rehearsal_mode", singleSelect: true},
+                "people": {key:"people", isLink: true},
+                "reviewed": "entered",
+                "status": {key: "status", singleSelect: true}
+            },
             fileClass: "live_rehearsal"
         },
         "coaching session": {
             folder: "ME/🧪 Practice Lab/🧠 Coaching",
             template: "Meta/Templates/me/Practice Lab/Coaching Session Template.md",
             naming: (baseName, count) => `${baseName}_Coaching Session-${count}`,
-            mdlFormName_Update1: "",
+            mdlFormName_Update1: "Update Coaching Session",
+            mdlFormName_Update1_fieldMap: {
+                "filename": {key: "filename", from: "file"},
+                "title": "title",
+                "rehearsal_mode": {key: "rehearsal_mode", singleSelect: true},
+                "coaching_sessions": {key: "coaching_sessions", isLink: true},
+                "people": {key:"people", isLink: true},
+                "meta_skills": {key: "meta_skills", isLink: true},
+                "core_skills": {key: "core_skills", isLink: true},
+                "reviewed": "entered",
+                "status": {key: "status", singleSelect: true}
+            },
             fileClass: "coaching"
         },
         "inner check-in": {
@@ -346,7 +365,21 @@ class ModalFormUtils {
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Trade-Off");
             },
-            mdlFormName_Update1: "",
+            mdlFormName_Update1: "Update Trade-Off",
+            mdlFormName_Update1_fieldMap: {
+                "filename": {key: "filename", from: "file"},
+                "tradeoff_name": "title",
+                "tradeoff_group": {key: "tradeoff_group", singleSelect: true},
+                "pole_group": {key: "dominant_pole_group", singleSelect: true},
+                "applies_to": {key: "applies_to", singleSelect: true},
+                "conflicted_part": {key: "conflicted_part", isLink: true},
+                "resolved_by_group": "resolved_by_group",
+                "reviewed": "entered",
+                "status": {key: "status", singleSelect: true},
+                "tradeoff_type": {key: "tradeoff_type", groupFilter: "tradeoff_type", singleSelect: true},
+                "poleType": {key: "dominant_pole", groupFilter: "pole_type", singleSelect: true},
+                "resolvedbyType": {key: "resolved_by", groupFilter: "resolvedby_type"},
+            },
             fileClass: "tradeoff"
         },
         "emotion": {
@@ -361,6 +394,156 @@ class ModalFormUtils {
 
     };
 
+    static groupFilterRegistry = {
+        //Trade-Offs
+        tradeoff_type: {
+            groupField: "tradeoff_group",
+                subFieldsByGroup: {
+                    "Connection vs. Autonomy": "type_connection",
+                    "Safety vs. Authenticity": "type_safety",
+                    "Control vs. Vulnerability": "type_control",
+                    "Short-Term Relief vs. Long-Term Growth": "type_shortterm",
+                    "Self-Image vs. Emotional Honesty": "type_self",
+                    "Avoidance vs. Engagement": "type_avoidance",
+                    "Familiarity vs. Change": "type_familiarity",
+                    "Power vs. Intimacy": "type_power",
+                    "Belonging vs. Integrity": "type_belonging"
+                },
+                reverseLookupMap: {
+                    "Closeness vs. Independence": "type_connection",
+                    "Distance vs. Closeness": "type_connection",
+                    "Trust vs. Control": "type_connection",
+                    "Honesty vs. Acceptance": "type_safety",
+                    "Compliance vs. Authenticity": "type_safety",
+                    "Conflict Avoidance vs. Emotional Honesty": "type_safety",
+                    "Keeping Peace vs. Naming Needs": "type_safety",
+                    "Guardedness vs. Openness": "type_safety",
+                    "Stability vs. Authenticity": "type_safety",
+                    "Fitting In vs. Being Real": "type_safety",
+                    "Being Known vs. Being in Control": "type_control",
+                    "Self-Protection vs. Vulnerability": "type_control",
+                    "Avoiding Discomfort vs. Resolving the Real Issue": "type_control",
+                    "Not Rocking the Boat vs. Being Fully Alive": "type_control",
+                    "Comfort vs. Growth": "type_shortterm",
+                    "Short-Term Safety vs. Long-Term Connection": "type_shortterm",
+                    "Staying Numb vs. Staying Present": "type_shortterm",
+                    "Security vs. Growth": "type_shortterm",
+                    "Old Safety vs. New Possibility": "type_shortterm",
+                    "Truth vs. Protection": "type_self",
+                    "Validation vs. Truth-Telling": "type_self",
+                    "Approval vs. Truth": "type_self",
+                    "Avoiding Pain vs. Doing What’s Needed": "type_avoidance",
+                    "Avoiding Discomfort vs. Resolving the Real Issue": "type_avoidance",
+                    "Not Rocking the Boat vs. Being Fully Alive": "type_avoidance",
+                    "Predictability vs. Healing": "type_familiarity",
+                    "Reinforcing Old Roles vs. Becoming Whole": "type_familiarity",
+                    "Power vs. Intimacy": "type_power",
+                    "Pleasing Others vs. Staying True to Self": "type_belonging",
+                    "Survival vs. Self-Actualization": "type_belonging"
+                }
+        },
+        pole_type: {
+            groupField: "pole_group",
+                subFieldsByGroup: {
+                    "Safety & Protection": "ptype_safety",
+                    "Connection & Belonging": "ptype_connection",
+                    "Truth & Authenticity": "ptype_truth",
+                    "Regulation & Avoidance": "ptype_regulation",
+                    "Identity & Role Maintenance": "ptype_identity",
+                    "Growth & Change": "ptype_growth"
+                },
+                reverseLookupMap: {
+                    "Safety": "ptype_safety",
+                    "Security": "ptype_safety",
+                    "Protection": "ptype_safety",
+                    "Self-Protection": "ptype_safety",
+                    "Short-Term Safety": "ptype_safety",
+                    "Old Safety": "ptype_safety",
+                    "Guardedness": "ptype_safety",
+                    "Familiarity": "ptype_safety",
+                    "Predictability": "ptype_safety",
+                    "Stability": "ptype_safety",
+                    "Survival": "ptype_safety",
+                    "Comfort": "ptype_safety",
+                    "Closeness": "ptype_connection",
+                    "Intimacy": "ptype_connection",
+                    "Emotional Intimacy": "ptype_connection",
+                    "Being Seen": "ptype_connection",
+                    "Being Real": "ptype_connection",
+                    "Being in Control (as a means to secure closeness)": "ptype_connection",
+                    "Fitting In": "ptype_connection",
+                    "Validation": "ptype_connection",
+                    "Acceptance": "ptype_connection",
+                    "Approval": "ptype_connection",
+                    "Power (when used to keep connection on one’s terms)": "ptype_connection",
+                    "Honesty": "ptype_truth",
+                    "Truth": "ptype_truth",
+                    "Authenticity": "ptype_truth",
+                    "Naming Needs": "ptype_truth",
+                    "Emotional Honesty": "ptype_truth",
+                    "Staying True to Self": "ptype_truth",
+                    "Being Real": "ptype_truth",
+                    "Openness": "ptype_truth",
+                    "Vulnerability": "ptype_truth",
+                    "Staying Numb": "ptype_regulation",
+                    "Staying Present": "ptype_regulation",
+                    "Short-Term Relief": "ptype_regulation",
+                    "Not Rocking the Boat": "ptype_regulation",
+                    "Keeping Peace": "ptype_regulation",
+                    "Conflict Avoidance": "ptype_regulation",
+                    "Distance": "ptype_regulation",
+                    "Reassurance": "ptype_regulation",
+                    "Distraction": "ptype_regulation",
+                    "Avoidance (generalized)": "ptype_regulation",
+                    "Reinforcing Old Roles": "ptype_identity",
+                    "Compliance": "ptype_identity",
+                    "Control": "ptype_identity",
+                    "Being in Control": "ptype_identity",
+                    "Power": "ptype_identity",
+                    "Self-Image": "ptype_identity",
+                    "Validation": "ptype_identity",
+                    "Familiarity (again, in identity terms)": "ptype_identity",
+                    "Growth": "ptype_growth",
+                    "Healing": "ptype_growth",
+                    "Long-Term Connection": "ptype_growth",
+                    "Resolution": "ptype_growth",
+                    "Change": "ptype_growth",
+                    "Becoming Whole": "ptype_growth",
+                    "Self-Actualization": "ptype_growth"
+                }
+        },
+        resolvedby_type: {
+            groupField: "resolved_by_group",
+                subFieldsByGroup: {
+                    "Internal Integration": "rinternal_group",
+                    "Relational Mirroring & Externalization": "rrelational_group",
+                    "Cognitive & Emotional Reframing": "rcognitive_group",
+                    "Practice & Embodiment": "rpractice_group"
+            },
+                reverseLookupMap:{
+                    "Naming both needs clearly": "rinternal_group",
+                    "Allowing both feelings to coexist": "rinternal_group",
+                    "Shifting from binary thinking to “both/and”": "rinternal_group",
+                    "Giving each part a turn to lead": "rinternal_group",
+                    "Welcoming contradiction as part of wholeness": "rinternal_group",
+                    "Practicing internal listening without rushing a fix": "rinternal_group",
+                    "Emotion tolerance": "rinternal_group",
+                    "Meaning-based action": "rinternal_group",
+                    "Internal boundary repair": "rinternal_group",
+                    "Mirroring the fears behind each side": "rrelational_group",
+                    "Getting external support for the overwhelmed part": "rrelational_group",
+                    "Letting the protective voice feel seen": "rrelational_group",
+                    "Inviting a deeper core need to speak": "rrelational_group",
+                    "Reframing vulnerability as strength": "rcognitive_group",
+                    "Recognizing the role of trauma or conditioning": "rcognitive_group",
+                    "Naming protective strategies for what they are": "rcognitive_group",
+                    "Slowing down decisions until alignment emerges": "rpractice_group",
+                    "Creating a container for experimentation": "rpractice_group",
+                    "Journal dialoguing between parts": "rpractice_group",
+                    "Embodied grounding to regulate intensity": "rpractice_group"
+            }
+        }
+    };
 
     //checks to see if the filename created already exists in the folder and if so, appends '-1', '-2', etc.
     ensureUniqueFilename(baseName) {
@@ -698,65 +881,100 @@ class ModalFormUtils {
 //#region RETRIEVE SPECIFIED FILE PROPERTIES
     // accepts a fileClass value in order to retrieve the appropriate form to open. It also accepts the tp and app object in preparation for other actions once the form is opened like populating form fields and updating data fields
     getUpdateFormFromFileClass(app, tp, file) {
-        this.app = app;
-        this.tp = tp;
-        this.frontmatter = this.getFrontMatterMap(file);
+    this.app = app;
+    this.tp = tp;
+    this.frontmatter = this.getFrontMatterMap(file);
+    this.modalFormFieldMap_Values = {}; // Make sure it's reset
 
-        //Select the form, collect the file's data and populate the form with it
-        if (!this.frontmatter || Object.keys(this.frontmatter).length === 0) {
-            new Notice("Could not read frontmatter.");
-            return;
-        }
+    // 🛑 Safety check
+    if (!this.frontmatter || Object.keys(this.frontmatter).length === 0) {
+        new Notice("Could not read frontmatter.");
+        return;
+    }
 
-        const handler = Object.values(this.constructor.fileTypeHandlers).find(
-            entry => entry.fileClass === this.frontmatter.fileClass
-        );
+    // 🔍 Find handler for this fileClass
+    const handler = Object.values(this.constructor.fileTypeHandlers).find(
+        entry => entry.fileClass === this.frontmatter.fileClass
+    );
 
-        if (!handler || !handler.mdlFormName_Update1) {
-            new Notice(`No update form defined for fileClass "${this.frontmatter.fileClass}"`);
-            return null;
-        }
+    if (!handler || !handler.mdlFormName_Update1) {
+        new Notice(`No update form defined for fileClass "${this.frontmatter.fileClass}"`);
+        return null;
+    }
 
-        this.modalFormName = handler ? handler.mdlFormName_Update1 : null;
-        this.modalFormFieldMap = handler ? handler.mdlFormName_Update1_fieldMap : null;
+    this.modalFormName = handler.mdlFormName_Update1;
+    this.modalFormFieldMap = handler.mdlFormName_Update1_fieldMap;
 
-        if(this.modalFormFieldMap){
-            for(const [formField, frontmatterKey] of Object.entries(this.modalFormFieldMap)){
-                //const {key, singleSelect, from} = typeof frontmatterKey === "object" ? frontmatterKey : {key: frontmatterKey, singleSelect: false, from: "frontmatter"};
-                const {key, singleSelect = false, from = "frontmatter", isLink = false} = typeof frontmatterKey === "object" ? frontmatterKey : {key: frontmatterKey};
+    if (this.modalFormFieldMap) {
+        for (const [formField, frontmatterKey] of Object.entries(this.modalFormFieldMap)) {
+            const {
+                key,
+                singleSelect = false,
+                from = "frontmatter",
+                isLink = false,
+                groupFilter = null
+            } = typeof frontmatterKey === "object"
+                ? frontmatterKey
+                : { key: frontmatterKey };
 
+            let value;
+            let targetField = formField; // 👈 Default assignment target
 
-                if (singleSelect && Array.isArray(this.frontmatter[key]) && this.frontmatter[key].length === 1) {
-                    this.frontmatter[key] = this.frontmatter[key].toString();
+            if (from === "file") {
+                value = file.basename;
+            } else {
+                // 🟡 Handle groupFilter if defined
+                let resolvedFilter = null;
+                if (groupFilter) {
+                    resolvedFilter = typeof groupFilter === "string"
+                        ? this.constructor.groupFilterRegistry?.[groupFilter]
+                        : groupFilter;
+
+                    if (resolvedFilter && resolvedFilter.groupField) {
+                        const groupField = resolvedFilter.groupField;
+                        const groupValue =
+                            this.modalFormFieldMap_Values[groupField] ?? this.frontmatter[groupField];
+
+                        const subFieldKey = resolvedFilter.subFieldsByGroup?.[groupValue];
+
+                        if (subFieldKey) {
+                            targetField = subFieldKey; // ✅ Use actual visible field name
+                            value = this.frontmatter[subFieldKey] ?? this.frontmatter[key];
+                        }
+                    }
                 }
 
-                if (from === "file") {
-                    this.modalFormFieldMap_Values[formField] = file.basename;
-                } else {
-                    let value = this.frontmatter[key];
+                // 🟢 Fallback to direct frontmatter key
+                if (value === undefined) {
+                    value = this.frontmatter[key];
+                }
 
-                    // Handle singleSelect stored as array of one
-                    if (singleSelect && Array.isArray(value) && value.length === 1) {
-                        value = value[0];
-                    }
+                // 📌 Flatten singleSelect arrays
+                if (singleSelect && Array.isArray(value) && value.length === 1) {
+                    value = value[0];
+                }
 
-                    // Handle multiselect edge case (string turned array)
-                    if (!singleSelect && typeof value === "string") {
-                        value = [value];
-                    }
+                // 📌 Normalize multiSelect from strings
+                if (!singleSelect && typeof value === "string") {
+                    value = [value];
+                }
 
-                    // 🟦 Strip [[brackets]] if link
-                    if (isLink) {
-                        const strip = (v) =>
-                            typeof v === "string" ? v.replace(/^\[\[|\]\]$/g, "") : v;
-                        value = Array.isArray(value) ? value.map(strip) : strip(value);
-                    }
-
-                    this.modalFormFieldMap_Values[formField] = value;
+                // 📎 Strip [[ ]] from link fields
+                if (isLink) {
+                    const strip = (v) =>
+                        typeof v === "string" ? v.replace(/^\[\[|\]\]$/g, "") : v;
+                    value = Array.isArray(value) ? value.map(strip) : strip(value);
                 }
             }
+
+            // ✅ Assign to the correct field (original or resolved subField)
+            this.modalFormFieldMap_Values[targetField] = value;
         }
     }
+    console.log("Form Values:", this.modalFormFieldMap_Values);
+
+}
+
 
     updateFrontMatterFromForm(file, result){
         if (!result.data || Object.keys(result.data).length === 0) {

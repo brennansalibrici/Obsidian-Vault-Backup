@@ -1,25 +1,17 @@
 ---
-# CLASS DEFINITION:
 fileClass: tradeoff
-
-# **INHERITS FROM GLOBAL TEMPLATE:
-# CORE IDENTITY FIELDS:
-id: <% tp.date.now("x") %>
-created: ""
-last_modified: ""
-title: ""
-
-# STATUS & WORKFLOW FIELDS
-status: ""
+id: 1753706360007
+created: 2025-07-28 07:39
+last_modified: 2025-07-28 07:39
+title: Untitled Trade-Off
+status: 🟩 complete
 type: trigger
 tags: []
 category: note
-entered: true
+entered: false
 archived: false
-priority: "⚪ None"
-visibility: "🔒 private"
-
-# **INHERITS FROM FOUNDATION ELEMENT:
+priority: ⚪ None
+visibility: 🔒 private
 linked_wounds: []
 associated_emotions: []
 soothing_resources: []
@@ -32,8 +24,6 @@ intensity_scale: ""
 mechanism: []
 definition: ""
 behavior_functions: []
-
-# TRADEOFF DEFINITION:
 tradeoff_group: ""
 tradeoff_type: ""
 applies_to: []
@@ -41,14 +31,12 @@ example_behavior: ""
 dominant_pole_group: ""
 dominant_pole: ""
 conflicted_part: []
-resolved_by_group: []
 resolved_by: []
-
-# **REMAINING FIELDS INHERITED FROM GLOBAL:
 notes: 
 related: []
 media: []
 attachments: []
+export_to_inputs: false
 ---
 
 ## Notes

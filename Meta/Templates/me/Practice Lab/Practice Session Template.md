@@ -3,7 +3,7 @@ fileClass: practice_log
 id: <% tp.date.now("x") %>
 created: ""
 last_modified: ""
-title: ""
+title: 
 status: 
 type: 
 tags: 
@@ -15,7 +15,7 @@ priority:
   - ⚪ None
 visibility: 🔒 private
 rehearsal_mode: ""
-scenario: []
+scenario: 
 session_number: ""
 people: 
 session_summary: ""

@@ -2,12 +2,12 @@
 fileClass: practice_log
 id: 1753454803191
 created: 2025-07-25 09:46
-last_modified: 2025-07-25 16:32
+last_modified: 2025-07-28 07:30
 title:
   - Bedtime Story Photo_Session-1
 status: 🟨 review
 type: 
-tags: 
+tags: []
 category:
   - note
 entered: false
@@ -19,13 +19,13 @@ rehearsal_mode: Live Rehearsal
 scenario: "[[Bedtime Story Photo]]"
 session_number: ""
 people:
-  - "[[Coleman Salibrici]]"
   - "[[Dan Schmoyer]]"
 session_summary: ""
 skill_level: 
 live_rehearsals:
   - "[[Bedtime Story Photo_Session-1_Live Rehearsal_Take-1]]"
-coaching_sessions: []
+coaching_sessions:
+  - "[[Bedtime Story Photo_Session-1_Coaching Session-1]]"
 meta_skills: 
 core_skills: 
 emotions_in_play: 

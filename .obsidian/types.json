@@ -124,6 +124,10 @@
     "core_fears": "multitext",
     "style_subtype": "multitext",
     "style_pattern": "multitext",
-    "meta_skills": "multitext"
+    "meta_skills": "multitext",
+    "title": "text",
+    "live_rehearsals": "multitext",
+    "core_skills": "multitext",
+    "resolved_by_group": "multitext"
   }
 }

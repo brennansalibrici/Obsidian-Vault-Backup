@@ -4,38 +4,39 @@ id: 1751743243778
 created: 2025-07-05 14:20
 last_modified: 2025-07-05 14:20
 title: Avoiding Pain Vs. Doing What’s Needed
-status: 🟩 complete
-type: trigger
+status: [🟩 complete]
+type: [trigger]
 tags: []
-category: note
+category: [note]
 entered: false
 archived: false
-priority: ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
-linked_wounds: []
-associated_emotions: []
-soothing_resources: []
-healing_resources: []
-healing_pathways: []
-protective_strategies: []
-triggered_by: []
-needs_behind_it: []
+linked_wounds: 
+associated_emotions: 
+soothing_resources: 
+healing_resources: 
+healing_pathways: 
+protective_strategies: 
+triggered_by: 
+needs_behind_it: 
 intensity_scale: ""
-mechanism: []
+mechanism: 
 definition: ""
-behavior_functions: []
+behavior_functions: 
 tradeoff_group: Avoidance vs. Engagement
-tradeoff_type: Closeness vs. Independence
+tradeoff_type: Avoiding Discomfort vs. Resolving the Real Issue
 applies_to: [Protective Strategy]
 example_behavior: ""
 dominant_pole_group: Safety & Protection
 dominant_pole: Protection
 conflicted_part: ["[[Resigned One]]", "[[Inner Critic]]"]
+resolved_by_group: [Internal Integration]
 resolved_by: [Emotion tolerance, Meaning-based action, Internal boundary repair]
 notes: 
-related: []
-media: []
-attachments: []
+related: 
+media: 
+attachments: 
 export_to_inputs: false
 ---
 
@@ -50,3 +51,4 @@ Pain once meant danger — or more than your system could hold. So avoidance bec
 ## 🔓 How It Could Unwind
 ---
 It begins when pain is reframed as meaningful, not fatal. Action guided by values — with pacing and support — creates internal safety for doing the hard thing.
+

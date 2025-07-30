@@ -9954,8 +9954,7 @@
           "input": {
             "type": "select",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🎲 Scenarios",
-            "options": []
+            "folder": "ME/🧪 Practice Lab/🎲 Scenarios"
           }
         },
         {
@@ -9967,8 +9966,7 @@
             "type": "multiselect",
             "source": "dataview",
             "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `${p.file.name}`)",
-            "allowUnknownValues": true,
-            "multi_select_options": []
+            "allowUnknownValues": true
           }
         },
         {
@@ -10008,10 +10006,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🎙️ Live Rehearsals",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🧪 Practice Lab/🎙️ Live Rehearsals"
           }
         },
         {
@@ -10027,10 +10022,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🧠 Coaching",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🧪 Practice Lab/🧠 Coaching"
           }
         },
         {
@@ -10046,10 +10038,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills"
           }
         },
         {
@@ -10065,10 +10054,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills"
           }
         },
         {
@@ -10129,6 +10115,1208 @@
         "createNoteCommand": true,
         "parsedTemplate": []
       }
+    },
+    {
+      "title": "Update Live Rehearsal",
+      "name": "Update Live Rehearsal",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "people",
+          "label": "People Involved",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "rehearsal_mode",
+          "label": "Rehearsal Mode",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Live Rehearsal",
+                "label": "Live Rehearsal"
+              },
+              {
+                "value": "Live Rehearsal & Coaching",
+                "label": "Live Rehearsal & Coaching"
+              }
+            ]
+          }
+        },
+        {
+          "name": "meta_skills",
+          "label": "Meta Skills",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "rehearsal_mode",
+            "type": "isExactly",
+            "value": "Coaching"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills"
+          }
+        },
+        {
+          "name": "core_skills",
+          "label": "Core Skills",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "rehearsal_mode",
+            "type": "isExactly",
+            "value": "Coaching"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills"
+          }
+        },
+        {
+          "name": "reviewed",
+          "label": "Reviewed",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        },
+        {
+          "name": "status",
+          "label": "Status",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "reviewed",
+            "type": "boolean",
+            "value": false
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "🟥 draft",
+                "label": "🟥 draft"
+              },
+              {
+                "value": "🟧 in progress",
+                "label": "🟧 in progress"
+              },
+              {
+                "value": "🟨 review",
+                "label": "🟨 review"
+              },
+              {
+                "value": "🟩 complete",
+                "label": "🟩 complete"
+              },
+              {
+                "value": "🟦 archived",
+                "label": "🟦 archived"
+              },
+              {
+                "value": "⬛️ blocked",
+                "label": "⬛️ blocked"
+              }
+            ]
+          }
+        }
+      ],
+      "version": "1",
+      "template": {
+        "createInsertCommand": false,
+        "createNoteCommand": true,
+        "parsedTemplate": []
+      }
+    },
+    {
+      "title": "Update Coaching Session",
+      "name": "Update Coaching Session",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "description": "",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "people",
+          "label": "People Involved",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "dataview",
+            "query": "dv.pages('\"Personal/👤 People\"')\n  .where(p => p.practice_lab === true)\n  .map(p => `[[${p.file.name}]]`)",
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "rehearsal_mode",
+          "label": "Rehearsal Mode",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Coaching Session",
+                "label": "Coaching Session"
+              },
+              {
+                "value": "Live Rehearsal & Coaching",
+                "label": "Live Rehearsal & Coaching"
+              }
+            ]
+          }
+        },
+        {
+          "name": "meta_skills",
+          "label": "Meta Skills",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🧬 Meta Skills"
+          }
+        },
+        {
+          "name": "core_skills",
+          "label": "Core Skills",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🧪 Practice Lab/🗺️ Skill Maps/🗣️ Core Skills"
+          }
+        },
+        {
+          "name": "reviewed",
+          "label": "Reviewed",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        },
+        {
+          "name": "status",
+          "label": "Status",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "reviewed",
+            "type": "boolean",
+            "value": false
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "🟥 draft",
+                "label": "🟥 draft"
+              },
+              {
+                "value": "🟧 in progress",
+                "label": "🟧 in progress"
+              },
+              {
+                "value": "🟨 review",
+                "label": "🟨 review"
+              },
+              {
+                "value": "🟩 complete",
+                "label": "🟩 complete"
+              },
+              {
+                "value": "🟦 archived",
+                "label": "🟦 archived"
+              },
+              {
+                "value": "⬛️ blocked",
+                "label": "⬛️ blocked"
+              }
+            ]
+          }
+        }
+      ],
+      "version": "1",
+      "template": {
+        "createInsertCommand": false,
+        "createNoteCommand": true,
+        "parsedTemplate": []
+      }
+    },
+    {
+      "title": "Update Trade-Off",
+      "name": "Update Trade-Off",
+      "fields": [
+        {
+          "name": "tradeoff_name",
+          "label": "Trade-Off Name",
+          "description": "Name",
+          "isRequired": true,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "tradeoff_group",
+          "label": "Trade-Off Groups",
+          "description": "Broad categories or groups of different types of tradeoffs",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Connection vs. Autonomy",
+                "label": "Connection vs. Autonomy"
+              },
+              {
+                "value": "Safety vs. Authenticity",
+                "label": "Safety vs. Authenticity"
+              },
+              {
+                "value": "Control vs. Vulnerability",
+                "label": "Control vs. Vulnerability"
+              },
+              {
+                "value": "Short-Term Relief vs. Long-Term Growth",
+                "label": "Short-Term Relief vs. Long-Term Growth"
+              },
+              {
+                "value": "Self-Image vs. Emotional Honesty",
+                "label": "Self-Image vs. Emotional Honesty"
+              },
+              {
+                "value": "Avoidance vs. Engagement",
+                "label": "Avoidance vs. Engagement"
+              },
+              {
+                "value": "Familiarity vs. Change",
+                "label": "Familiarity vs. Change"
+              },
+              {
+                "value": "Power vs. Intimacy",
+                "label": "Power vs. Intimacy"
+              },
+              {
+                "value": "Belonging vs. Integrity",
+                "label": "Belonging vs. Integrity"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_connection",
+          "label": "Connection vs. Autonomy Trade-Offs",
+          "description": "Connection vs. autonomy trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Connection vs. Autonomy"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Closeness vs. Independence",
+                "label": "Closeness vs. Independence"
+              },
+              {
+                "value": "Distance vs. Closeness",
+                "label": "Distance vs. Closeness"
+              },
+              {
+                "value": "Trust vs. Control",
+                "label": "Trust vs. Control"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_safety",
+          "label": "Safety vs. Authenticity Trade-Offs",
+          "description": "Safety vs. authenticity trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Safety vs. Authenticity"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Honesty vs. Acceptance",
+                "label": "Honesty vs. Acceptance"
+              },
+              {
+                "value": "Compliance vs. Authenticity",
+                "label": "Compliance vs. Authenticity"
+              },
+              {
+                "value": "Conflict Avoidance vs. Emotional Honesty",
+                "label": "Conflict Avoidance vs. Emotional Honesty"
+              },
+              {
+                "value": "Keeping Peace vs. Naming Needs",
+                "label": "Keeping Peace vs. Naming Needs"
+              },
+              {
+                "value": "Guardedness vs. Openness",
+                "label": "Guardedness vs. Openness"
+              },
+              {
+                "value": "Stability vs. Authenticity",
+                "label": "Stability vs. Authenticity"
+              },
+              {
+                "value": "Fitting In vs. Being Real",
+                "label": "Fitting In vs. Being Real"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_control",
+          "label": "Control vs. Vulnerability Trade-Offs",
+          "description": "Control vs. vulnerability trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Control vs. Vulnerability"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Being Known vs. Being in Control",
+                "label": "Being Known vs. Being in Control"
+              },
+              {
+                "value": "Self-Protection vs. Vulnerability",
+                "label": "Self-Protection vs. Vulnerability"
+              },
+              {
+                "value": "Avoiding Discomfort vs. Resolving the Real Issue",
+                "label": "Avoiding Discomfort vs. Resolving the Real Issue"
+              },
+              {
+                "value": "Not Rocking the Boat vs. Being Fully Alive",
+                "label": "Not Rocking the Boat vs. Being Fully Alive"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_shortterm",
+          "label": "Short-Term Relief vs. Long-Term Growth Trade-Offs",
+          "description": "Short-term relief vs. long-term growth trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Short-Term Relief vs. Long-Term Growth"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Comfort vs. Growth",
+                "label": "Comfort vs. Growth"
+              },
+              {
+                "value": "Short-Term Safety vs. Long-Term Connection",
+                "label": "Short-Term Safety vs. Long-Term Connection"
+              },
+              {
+                "value": "Staying Numb vs. Staying Present",
+                "label": "Staying Numb vs. Staying Present"
+              },
+              {
+                "value": "Security vs. Growth",
+                "label": "Security vs. Growth"
+              },
+              {
+                "value": "Old Safety vs. New Possibility",
+                "label": "Old Safety vs. New Possibility"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_self",
+          "label": "Self-Image vs. Emotional Honesty Trade-Offs",
+          "description": "Self-image vs. emotional honesty trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Self-Image vs. Emotional Honesty"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Truth vs. Protection",
+                "label": "Truth vs. Protection"
+              },
+              {
+                "value": "Validation vs. Truth-Telling",
+                "label": "Validation vs. Truth-Telling"
+              },
+              {
+                "value": "Approval vs. Truth",
+                "label": "Approval vs. Truth"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_avoidance",
+          "label": "Avoidance vs. Engagement Trade-Offs",
+          "description": "Avoidance vs. engagement trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Avoidance vs. Engagement"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Avoiding Pain vs. Doing What’s Needed",
+                "label": "Avoiding Pain vs. Doing What’s Needed"
+              },
+              {
+                "value": "Avoiding Discomfort vs. Resolving the Real Issue",
+                "label": "Avoiding Discomfort vs. Resolving the Real Issue"
+              },
+              {
+                "value": "Not Rocking the Boat vs. Being Fully Alive",
+                "label": "Not Rocking the Boat vs. Being Fully Alive"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_familiarity",
+          "label": "Familiarity vs. Change Trade-Offs",
+          "description": "Familiarity vs. change trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Familiarity vs. Change"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Predictability vs. Healing",
+                "label": "Predictability vs. Healing"
+              },
+              {
+                "value": "Reinforcing Old Roles vs. Becoming Whole",
+                "label": "Reinforcing Old Roles vs. Becoming Whole"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_power",
+          "label": "Power vs. Intimacy Trade-Offs",
+          "description": "Power vs. intimacy trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Power vs. Intimacy"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Power vs. Intimacy",
+                "label": "Power vs. Intimacy"
+              }
+            ]
+          }
+        },
+        {
+          "name": "type_belonging",
+          "label": "Belonging vs. Integrity Trade-Offs",
+          "description": "Belonging vs. integrity trade-off types",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_group",
+            "type": "isExactly",
+            "value": "Belonging vs. Integrity"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Pleasing Others vs. Staying True to Self",
+                "label": "Pleasing Others vs. Staying True to Self"
+              },
+              {
+                "value": "Survival vs. Self-Actualization",
+                "label": "Survival vs. Self-Actualization"
+              }
+            ]
+          }
+        },
+        {
+          "name": "pole_group",
+          "label": "Dominant Pole Group",
+          "description": "Broad categories or groups of unique types of mental poles",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Safety & Protection",
+                "label": "Safety & Protection"
+              },
+              {
+                "value": "Connection & Belonging",
+                "label": "Connection & Belonging"
+              },
+              {
+                "value": "Truth & Authenticity",
+                "label": "Truth & Authenticity"
+              },
+              {
+                "value": "Regulation & Avoidance",
+                "label": "Regulation & Avoidance"
+              },
+              {
+                "value": "Identity & Role Maintenance",
+                "label": "Identity & Role Maintenance"
+              },
+              {
+                "value": "Growth & Change",
+                "label": "Growth & Change"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_safety",
+          "label": "Safety & Protection",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Safety & Protection"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Safety",
+                "label": "Safety"
+              },
+              {
+                "value": "Security",
+                "label": "Security"
+              },
+              {
+                "value": "Protection",
+                "label": "Protection"
+              },
+              {
+                "value": "Self-Protection",
+                "label": "Self-Protection"
+              },
+              {
+                "value": "Short-Term Safety",
+                "label": "Short-Term Safety"
+              },
+              {
+                "value": "Old Safety",
+                "label": "Old Safety"
+              },
+              {
+                "value": "Guardedness",
+                "label": "Guardedness"
+              },
+              {
+                "value": "Familiarity",
+                "label": "Familiarity"
+              },
+              {
+                "value": "Predictability",
+                "label": "Predictability"
+              },
+              {
+                "value": "Stability",
+                "label": "Stability"
+              },
+              {
+                "value": "Survival",
+                "label": "Survival"
+              },
+              {
+                "value": "Comfort",
+                "label": "Comfort"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_connection",
+          "label": "Connection & Belonging",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Connection & Belonging"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Closeness",
+                "label": "Closeness"
+              },
+              {
+                "value": "Intimacy",
+                "label": "Intimacy"
+              },
+              {
+                "value": "Emotional Intimacy",
+                "label": "Emotional Intimacy"
+              },
+              {
+                "value": "Being Seen",
+                "label": "Being Seen"
+              },
+              {
+                "value": "Being Real",
+                "label": "Being Real"
+              },
+              {
+                "value": "Being in Control (as a means to secure closeness)",
+                "label": "Being in Control (as a means to secure closeness)"
+              },
+              {
+                "value": "Fitting In",
+                "label": "Fitting In"
+              },
+              {
+                "value": "Validation",
+                "label": "Validation"
+              },
+              {
+                "value": "Acceptance",
+                "label": "Acceptance"
+              },
+              {
+                "value": "Approval",
+                "label": "Approval"
+              },
+              {
+                "value": "Power (when used to keep connection on one’s terms)",
+                "label": "Power (when used to keep connection on one’s terms)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_truth",
+          "label": "Truth & Authenticity",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Truth & Authenticity"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Honesty",
+                "label": "Honesty"
+              },
+              {
+                "value": "Truth",
+                "label": "Truth"
+              },
+              {
+                "value": "Authenticity",
+                "label": "Authenticity"
+              },
+              {
+                "value": "Naming Needs",
+                "label": "Naming Needs"
+              },
+              {
+                "value": "Emotional Honesty",
+                "label": "Emotional Honesty"
+              },
+              {
+                "value": "Staying True to Self",
+                "label": "Staying True to Self"
+              },
+              {
+                "value": "Being Real",
+                "label": "Being Real"
+              },
+              {
+                "value": "Openness",
+                "label": "Openness"
+              },
+              {
+                "value": "Vulnerability",
+                "label": "Vulnerability"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_regulation",
+          "label": "Regulation & Avoidance",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Regulation & Avoidance"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Staying Numb",
+                "label": "Staying Numb"
+              },
+              {
+                "value": "Staying Present",
+                "label": "Staying Present"
+              },
+              {
+                "value": "Short-Term Relief",
+                "label": "Short-Term Relief"
+              },
+              {
+                "value": "Not Rocking the Boat",
+                "label": "Not Rocking the Boat"
+              },
+              {
+                "value": "Keeping Peace",
+                "label": "Keeping Peace"
+              },
+              {
+                "value": "Conflict Avoidance",
+                "label": "Conflict Avoidance"
+              },
+              {
+                "value": "Distance",
+                "label": "Distance"
+              },
+              {
+                "value": "Reassurance",
+                "label": "Reassurance"
+              },
+              {
+                "value": "Distraction",
+                "label": "Distraction"
+              },
+              {
+                "value": "Avoidance (generalized)",
+                "label": "Avoidance (generalized)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_identity",
+          "label": "Identity & Role Maintenance",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Identity & Role Maintenance"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Reinforcing Old Roles",
+                "label": "Reinforcing Old Roles"
+              },
+              {
+                "value": "Compliance",
+                "label": "Compliance"
+              },
+              {
+                "value": "Control",
+                "label": "Control"
+              },
+              {
+                "value": "Being in Control",
+                "label": "Being in Control"
+              },
+              {
+                "value": "Power",
+                "label": "Power"
+              },
+              {
+                "value": "Self-Image",
+                "label": "Self-Image"
+              },
+              {
+                "value": "Validation",
+                "label": "Validation"
+              },
+              {
+                "value": "Familiarity (again, in identity terms)",
+                "label": "Familiarity (again, in identity terms)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "ptype_growth",
+          "label": "Growth & Change",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "pole_group",
+            "type": "isExactly",
+            "value": "Growth & Change"
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Growth",
+                "label": "Growth"
+              },
+              {
+                "value": "Healing",
+                "label": "Healing"
+              },
+              {
+                "value": "Long-Term Connection",
+                "label": "Long-Term Connection"
+              },
+              {
+                "value": "Resolution",
+                "label": "Resolution"
+              },
+              {
+                "value": "Change",
+                "label": "Change"
+              },
+              {
+                "value": "Becoming Whole",
+                "label": "Becoming Whole"
+              },
+              {
+                "value": "Self-Actualization",
+                "label": "Self-Actualization"
+              }
+            ]
+          }
+        },
+        {
+          "name": "applies_to",
+          "label": "Applies To",
+          "description": "Which foundation-type element is this tradeoff most relevant to",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Protective Strategy",
+                "label": "Protective Strategy"
+              },
+              {
+                "value": "Behavior Function",
+                "label": "Behavior Function"
+              },
+              {
+                "value": "Emotional Need",
+                "label": "Emotional Need"
+              },
+              {
+                "value": "Core Wound",
+                "label": "Core Wound"
+              },
+              {
+                "value": "Internal Message",
+                "label": "Internal Message"
+              },
+              {
+                "value": "Coping Style",
+                "label": "Coping Style"
+              },
+              {
+                "value": "Attachment Strategy",
+                "label": "Attachment Strategy"
+              },
+              {
+                "value": "Self-Belief",
+                "label": "Self-Belief"
+              },
+              {
+                "value": "Emotion",
+                "label": "Emotion"
+              },
+              {
+                "value": "Relational Pattern",
+                "label": "Relational Pattern"
+              }
+            ]
+          }
+        },
+        {
+          "name": "conflicted_part",
+          "label": "Conflicted Part",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "multiselect",
+            "source": "notes",
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
+          }
+        },
+        {
+          "name": "resolvedby_group",
+          "label": "Resolved By Group ",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "Internal Integration",
+                "label": "Internal Integration"
+              },
+              {
+                "value": "Relational Mirroring & Externalization",
+                "label": "Relational Mirroring & Externalization"
+              },
+              {
+                "value": "Cognitive & Emotional Reframing",
+                "label": "Cognitive & Emotional Reframing"
+              },
+              {
+                "value": "Practice & Embodiment",
+                "label": "Practice & Embodiment"
+              }
+            ]
+          }
+        },
+        {
+          "name": "rinternal_group",
+          "label": "Resolved By Internal Integration",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "resolvedby_group",
+            "type": "isExactly",
+            "value": "Internal Integration"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Naming both needs clearly",
+              "Allowing both feelings to coexist",
+              "Shifting from binary thinking to “both/and”",
+              "Giving each part a turn to lead",
+              "Welcoming contradiction as part of wholeness",
+              "Practicing internal listening without rushing a fix",
+              "Emotion tolerance",
+              "Meaning-based action",
+              "Internal boundary repair"
+            ],
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "rrelational_group",
+          "label": "Resolved By Relational Mirroring & Externalization",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "resolvedby_group",
+            "type": "isExactly",
+            "value": "Relational Mirroring & Externalization"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Mirroring the fears behind each side",
+              "Getting external support for the overwhelmed part",
+              "Letting the protective voice feel seen",
+              "Inviting a deeper core need to speak"
+            ],
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "rcognitive_group",
+          "label": "Resolved By Cognitive & Emotional Reframing",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "resolvedby_group",
+            "type": "isExactly",
+            "value": "Cognitive & Emotional Reframing"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Reframing vulnerability as strength",
+              "Recognizing the role of trauma or conditioning",
+              "Naming protective strategies for what they are"
+            ],
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "rpractice_group",
+          "label": "Resolved By Practice & Embodiment",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "resolvedby_group",
+            "type": "isExactly",
+            "value": "Practice & Embodiment"
+          },
+          "input": {
+            "type": "multiselect",
+            "source": "fixed",
+            "multi_select_options": [
+              "Slowing down decisions until alignment emerges",
+              "Creating a container for experimentation",
+              "Journal dialoguing between parts",
+              "Embodied grounding to regulate intensity"
+            ],
+            "allowUnknownValues": true
+          }
+        },
+        {
+          "name": "reviewed",
+          "label": "Reviewed",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "toggle",
+            "hidden": false
+          }
+        },
+        {
+          "name": "status",
+          "label": "Status",
+          "description": "",
+          "isRequired": false,
+          "condition": {
+            "dependencyName": "reviewed",
+            "type": "boolean",
+            "value": false
+          },
+          "input": {
+            "type": "select",
+            "source": "fixed",
+            "options": [
+              {
+                "value": "🟥 draft",
+                "label": "🟥 draft"
+              },
+              {
+                "value": "🟧 in progress",
+                "label": "🟧 in progress"
+              },
+              {
+                "value": "🟨 review",
+                "label": "🟨 review"
+              },
+              {
+                "value": "🟩 complete",
+                "label": "🟩 complete"
+              },
+              {
+                "value": "🟦 archived",
+                "label": "🟦 archived"
+              },
+              {
+                "value": "⬛️ blocked",
+                "label": "⬛️ blocked"
+              }
+            ]
+          }
+        }
+      ],
+      "version": "1"
     }
   ]
 }

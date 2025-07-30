@@ -18,7 +18,7 @@ take: ""
 scenario: 
 people: 
 coaching_summary: ""
-skill_level: []
+skill_level: 
 meta_skills: 
 core_skills: 
 emotions_in_play: 
