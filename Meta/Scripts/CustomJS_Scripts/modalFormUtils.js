@@ -373,12 +373,12 @@ class ModalFormUtils {
                 "pole_group": {key: "dominant_pole_group", singleSelect: true},
                 "applies_to": {key: "applies_to", singleSelect: true},
                 "conflicted_part": {key: "conflicted_part", isLink: true},
-                "resolved_by_group": "resolved_by_group",
+                "resolved_by_group": {key: "resolved_by_group", singleSelect: true},
                 "reviewed": "entered",
                 "status": {key: "status", singleSelect: true},
                 "tradeoff_type": {key: "tradeoff_type", groupFilter: "tradeoff_type", singleSelect: true},
-                "poleType": {key: "dominant_pole", groupFilter: "pole_type", singleSelect: true},
-                "resolvedbyType": {key: "resolved_by", groupFilter: "resolvedby_type"},
+                "dominant_pole": {key: "dominant_pole", groupFilter: "pole_type", singleSelect: true},
+                "resolved_by": {key: "resolved_by", groupFilter: "resolvedby_type", multiSelect: true},
             },
             fileClass: "tradeoff"
         },
@@ -999,6 +999,7 @@ class ModalFormUtils {
             let fieldType = null;
             let isLink = false;
             let groupFilter = null;
+            let multiSelect = false;
 
             if (typeof mapping === "string") {
                 frontmatterKey = mapping;
@@ -1007,6 +1008,7 @@ class ModalFormUtils {
                 fieldType = mapping.type || null;
                 isLink = mapping.isLink || false;
                 groupFilter = mapping.groupFilter || null;
+                multiSelect = mapping.multiSelect || false;
             }
 
             let finalValue = result.data[formField]; // Default fallback
@@ -1014,16 +1016,13 @@ class ModalFormUtils {
 
             // ✅ Pull value from resolved groupFilter subfield if defined
             if (groupFilter) {
-                const resolvedFilter = typeof groupFilter === "string"
-                    ? this.constructor.groupFilterRegistry?.[groupFilter]
-                    : groupFilter;
-
+                const resolvedFilter = this.constructor.groupFilterRegistry?.[groupFilter];
                 if (resolvedFilter?.groupField) {
                     const groupValue = result.data[resolvedFilter.groupField];
                     const subFieldKey = resolvedFilter.subFieldsByGroup?.[groupValue];
 
                     if (subFieldKey && result.data[subFieldKey] !== undefined) {
-                        finalValue = result.data[subFieldKey];  // ✅ Pull value from subfield
+                        finalValue = result.data[subFieldKey];
                         sourceField = subFieldKey;
                     }
                 }
@@ -1038,17 +1037,25 @@ class ModalFormUtils {
             }
 
             // 📎 Wrap [[links]] if needed
-            let valueToWrite = finalValue;
             if (isLink) {
-                const wrap = (v) =>
-                    typeof v === "string" && !v.startsWith("[[") ? `[[${v}]]` : v;
-                valueToWrite = Array.isArray(finalValue)
+                const wrap = (v) => typeof v === "string" && !v.startsWith("[[") ? `[[${v}]]` : v;
+                finalValue = Array.isArray(finalValue)
                     ? finalValue.map(wrap)
                     : wrap(finalValue);
             }
 
+            // ✅ Final write: if multiSelect, ensure array format
+            let valueToWrite;
+            if (multiSelect && !Array.isArray(finalValue)) {
+                valueToWrite = [finalValue];
+            } else {
+                valueToWrite = finalValue;
+            }
+
             // ✅ Write value to the *main* frontmatter field
-            frontmatter[frontmatterKey] = valueToWrite;
+            if (valueToWrite !== undefined) {
+                frontmatter[frontmatterKey] = valueToWrite;
+            }
         }
 
         // ✅ Handle special case: reviewed === true

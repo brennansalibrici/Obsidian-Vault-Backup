@@ -11141,11 +11141,14 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
-          "name": "resolvedby_group",
+          "name": "resolved_by_group",
           "label": "Resolved By Group ",
           "description": "",
           "isRequired": false,
@@ -11178,7 +11181,7 @@
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "resolvedby_group",
+            "dependencyName": "resolved_by_group",
             "type": "isExactly",
             "value": "Internal Integration"
           },
@@ -11196,7 +11199,8 @@
               "Meaning-based action",
               "Internal boundary repair"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -11205,7 +11209,7 @@
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "resolvedby_group",
+            "dependencyName": "resolved_by_group",
             "type": "isExactly",
             "value": "Relational Mirroring & Externalization"
           },
@@ -11218,7 +11222,8 @@
               "Letting the protective voice feel seen",
               "Inviting a deeper core need to speak"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -11227,7 +11232,7 @@
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "resolvedby_group",
+            "dependencyName": "resolved_by_group",
             "type": "isExactly",
             "value": "Cognitive & Emotional Reframing"
           },
@@ -11239,7 +11244,8 @@
               "Recognizing the role of trauma or conditioning",
               "Naming protective strategies for what they are"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -11248,7 +11254,7 @@
           "description": "",
           "isRequired": false,
           "condition": {
-            "dependencyName": "resolvedby_group",
+            "dependencyName": "resolved_by_group",
             "type": "isExactly",
             "value": "Practice & Embodiment"
           },
@@ -11261,7 +11267,8 @@
               "Journal dialoguing between parts",
               "Embodied grounding to regulate intensity"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {

@@ -2,13 +2,13 @@
 fileClass: tradeoff
 id: 1751743243778
 created: 2025-07-05 14:20
-last_modified: 2025-07-30 10:23
+last_modified: 2025-07-30 23:43
 title:
   - Avoiding Pain Vs. Doing What’s Needed
 status: 🟩 complete
 type:
   - trigger
-tags: 
+tags: []
 category:
   - note
 entered: true
@@ -43,22 +43,14 @@ media:
 attachments: 
 export_to_inputs: false
 ptype_safety: Protection
-resolvedby_group: Internal Integration
-rinternal_group:
+resolved_by_group: Internal Integration
+resolved_by:
   - Emotion tolerance
   - Meaning-based action
   - Internal boundary repair
+  - Allowing both feelings to coexist
+fulfillment_strategies: 
+internal_voices: 
+tradeoffs: 
+my_experience: 
 ---
-
-## ⚖️ What’s Being Balanced
----
-This tradeoff captures the push-pull between emotional avoidance and necessary action. It’s the tug between fleeing discomfort and stepping into what’s painful *but true*.
-
-## 🤔 Why This Tradeoff Exists
----
-Pain once meant danger — or more than your system could hold. So avoidance became wisdom. But over time, the things you avoid grow heavier, and healing requires moving toward them.
-
-## 🔓 How It Could Unwind
----
-It begins when pain is reframed as meaningful, not fatal. Action guided by values — with pacing and support — creates internal safety for doing the hard thing.
-
