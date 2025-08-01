@@ -111,10 +111,10 @@ fields:
     options: {}
     path: ""
     id: uUSYY4
-version: "2.96"
+version: "2.97"
 limit: 20
 mapWithTag: false
-icon: package
+icon: map-pin
 tagNames: 
 filesPaths:
   - Work/📍 Sites

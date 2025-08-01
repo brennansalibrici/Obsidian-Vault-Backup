@@ -36,10 +36,10 @@ fields:
     options: {}
     path: ""
     id: Y0jyDi
-version: "2.11"
+version: "2.12"
 limit: 20
 mapWithTag: false
-icon: package
+icon: align-vertical-distribute-center
 tagNames: 
 filesPaths:
   - Work/⚡Electric Equipment/Fuses

@@ -28,10 +28,10 @@ fields:
     options: {}
     path: ""
     id: we5sLV
-version: "2.27"
+version: "2.28"
 limit: 20
 mapWithTag: false
-icon: package
+icon: square-power
 tagNames: 
 filesPaths:
   - Work/⚡Electric Equipment/Breakers

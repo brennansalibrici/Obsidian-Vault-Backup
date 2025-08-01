@@ -1,7 +1,7 @@
 ---
 limit: 20
 mapWithTag: false
-icon: package
+icon: book-heart
 tagNames: 
 filesPaths:
   - ME/📓 Journal
@@ -16,7 +16,7 @@ fieldsOrder:
   - qnIA0g
   - m0vpGY
   - gdIfkh
-version: "2.7"
+version: "2.9"
 fields:
   - name: journal_type
     type: Select

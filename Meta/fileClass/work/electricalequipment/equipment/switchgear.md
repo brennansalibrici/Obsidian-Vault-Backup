@@ -2,7 +2,7 @@
 Created: 2025-04-25T07:26:54
 limit: 20
 mapWithTag: false
-icon: package
+icon: container
 tagNames: 
 filesPaths:
   - Work/⚡Electric Equipment/Switchgear
@@ -21,7 +21,7 @@ fieldsOrder:
   - LOjpWC
   - 7mah1c
   - 6ax55d
-version: "2.156"
+version: "2.157"
 fields:
   - name: switchgear_type
     type: Select

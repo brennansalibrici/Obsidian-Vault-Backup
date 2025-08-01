@@ -35,10 +35,10 @@ fields:
       thumbnailSize: "100"
     path: ""
     id: Doaxh8
-version: "2.26"
+version: "2.27"
 limit: 20
 mapWithTag: false
-icon: package
+icon: building
 tagNames: 
 filesPaths:
   - Work/🏢 Customers

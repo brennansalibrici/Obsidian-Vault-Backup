@@ -19,7 +19,7 @@ fields:
     options: {}
     path: ""
     id: rn7Juy
-version: "2.32"
+version: "2.33"
 limit: 100
 mapWithTag: false
 icon: package
@@ -31,6 +31,7 @@ extends: global/global
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - rn7Juy
   - grydo9
   - HONpas
 ---

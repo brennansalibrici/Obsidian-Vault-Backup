@@ -32,10 +32,10 @@ fields:
         "3": Shunt
     path: ""
     id: FsiqhF
-version: "2.27"
+version: "2.28"
 limit: 20
 mapWithTag: false
-icon: package
+icon: waypoints
 tagNames: 
 filesPaths:
   - Work/⚡Electric Equipment/Relays

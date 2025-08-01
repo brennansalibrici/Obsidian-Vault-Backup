@@ -2,6 +2,7 @@
 //Open the form first
 const modalForm = app.plugins.plugins.modalforms.api;
 const fileType = tp.frontmatter.newObject;
+debugger;
 const utils = window.customJS.createModalFormUtilsInstance();
 const result = await modalForm.openForm(utils.constructor.fileTypeHandlers[fileType]?.mdlFormName_CreateNewObject);
 
@@ -16,7 +17,7 @@ const contextField = utils.constructor.fileTypeHandlers[fileType].mdlFormName_Cr
 const contextValue = result.data?.[contextField] || "";
 
 //Init the modalFormUtils object with context 
-utils.init({ app, tp, fileType, context1: contextValue });
+await utils.init({ app, tp, fileType, context1: contextValue });
 
 //Generate file name
 utils.createNewFileName();

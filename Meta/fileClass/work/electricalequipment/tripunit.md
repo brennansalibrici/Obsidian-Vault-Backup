@@ -13,10 +13,10 @@ fields:
       valuesListNotePath: Meta/fileClass/work/electricalequipment/equipment/tripunit manufacturer list.md
     path: ""
     id: 2HOhO1
-version: "2.10"
+version: "2.11"
 limit: 20
 mapWithTag: false
-icon: package
+icon: circuit-board
 tagNames: 
 filesPaths:
   - Work/⚡Electric Equipment/Trip Units

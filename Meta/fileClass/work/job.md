@@ -2,7 +2,7 @@
 tags: 
 Created: 2025-04-25T11:32:01
 mapWithTag: false
-icon: package
+icon: hammer
 fields:
   - name: start_date
     type: Date
@@ -116,7 +116,7 @@ fields:
     options: {}
     path: XgK3Ol
     id: 81dsQv
-version: "2.287"
+version: "2.288"
 limit: 100
 tagNames: 
 filesPaths:

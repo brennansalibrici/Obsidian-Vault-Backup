@@ -93,6 +93,7 @@ class ModalFormUtils {
             "date_time":this.formatUtils.db_formatDateTime,
             "link":     this.string2Link
         };
+        this.fileTypeHandler = {};
 
     }
 
@@ -620,7 +621,7 @@ class ModalFormUtils {
 
 //#region FILE GENERATION AND MANIPULATION FUNCTIONS
     //script classes used with the CustomJS plugin do not accept constructor arguments. The init() is intended as a sort of pseudo constructor
-    init(config = {}) {
+    async init(config = {}) {
         const {
             app,
             tp,
@@ -629,6 +630,12 @@ class ModalFormUtils {
             context2 = "",
             useContextAsLink = true
         } = config;
+
+        // ✅ Dynamically load fileTypeHandlers once per instance
+        if (!this.fileTypeHandler) {
+            const { fileTypeHandler } = await import("C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileTypeHandler.js");
+            this.fileTypeHandler = fileTypeHandler;
+        }
 
         // Normalize fileType input (e.g., "Trigger" → "trigger")
         const normalizedTypeKey = this.normalizeFileType(fileType);
@@ -655,12 +662,6 @@ class ModalFormUtils {
         if (!this.templateFile) {
             throw new Error(`❌ Template file path was not set for fileType: "${this.fileType}"`);
         }
-
-        console.log("🛠️ ModalFormUtils initialized with:");
-        console.log("📂 folderPath:", this.folderPath);
-        console.log("📄 templateFile:", this.templateFile);
-        console.log("🔖 fileType:", this.fileType);
-        console.log("🧩 context1:", this.strField1);
 
         // Count matches in folder for naming logic
         if (this.folder && this.folder.children) {

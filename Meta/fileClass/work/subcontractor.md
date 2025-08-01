@@ -13,10 +13,10 @@ fields:
       valuesListNotePath: Meta/fileClass/_global/5 point status list.md
     path: ""
     id: ERmxWm
-version: "2.7"
+version: "2.8"
 limit: 20
 mapWithTag: false
-icon: package
+icon: hard-hat
 tagNames: 
 filesPaths:
   - Work/👷 Subcontractors
