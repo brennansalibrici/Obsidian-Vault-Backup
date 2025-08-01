@@ -6,9 +6,9 @@
   "fileMenu": [],
   "leftRibbon": [
     {
-      "id": "templater-obsidian:Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
+      "id": "templater-obsidian:Meta/Templates/modal form controllers/Modal Update Form Template.md",
       "icon": "lucide-file-up",
-      "name": "Templater: Insert Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
+      "name": "Templater: Insert Meta/Templates/modal form controllers/Modal Update Form Template.md",
       "mode": "any"
     }
   ],
@@ -17,9 +17,9 @@
   "statusBar": [],
   "pageHeader": [
     {
-      "id": "templater-obsidian:Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
+      "id": "templater-obsidian:Meta/Templates/modal form controllers/Modal Update Form Template.md",
       "icon": "lucide-file-up",
-      "name": "Templater: Insert Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
+      "name": "Templater: Insert Meta/Templates/modal form controllers/Modal Update Form Template.md",
       "mode": "any"
     }
   ],

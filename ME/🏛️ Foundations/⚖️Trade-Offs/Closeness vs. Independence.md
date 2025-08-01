@@ -4,26 +4,20 @@ id: 1751734918737
 created: 2025-07-05 12:01
 last_modified: 2025-07-05 12:01
 title: Closeness Vs. Independence
-status:
-  - 🟩 complete
-type:
-  - trigger
+status: [🟩 complete]
+type: [trigger]
 tags: []
-category:
-  - note
+category: [note]
 entered: false
 archived: false
-priority:
-  - ⚪ None
+priority: [⚪ None]
 visibility: 🔒 private
 linked_wounds: []
 associated_emotions: 
 soothing_resources: 
 healing_resources: 
 healing_pathways: 
-protective_strategies:
-  - "[[Masking Vulnerability]]"
-  - "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"
+protective_strategies: ["[[Masking Vulnerability]]", "[[ME/🏛️ Foundations/🪖 Protective Strategies/Emotional Shutdown]]"]
 triggered_by: 
 needs_behind_it: 
 intensity_scale: ""
@@ -32,18 +26,12 @@ definition: ""
 behavior_functions: 
 tradeoff_group: Connection vs. Autonomy
 tradeoff_type: Distance vs. Closeness
-applies_to:
-  - Protective Strategy
+applies_to: [Protective Strategy]
 example_behavior: ""
 dominant_pole_group: Connection & Belonging
 dominant_pole: Safety
-conflicted_part:
-  - "[[Inner Child]]"
-  - "[[The Protector]]"
-resolved_by:
-  - Both/And Thinking
-  - Self-Trust
-  - Boundary Clarity
+conflicted_part: ["[[Inner Child]]", "[[The Protector]]"]
+resolved_by: [Both/And Thinking, Self-Trust, Boundary Clarity]
 notes: 
 related: 
 media: 

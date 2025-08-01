@@ -365,6 +365,24 @@ class ModalFormUtils {
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Trade-Off");
             },
+            mdlFormName_CreateNewObject: "Create New Trade-Off",
+            mdlFormName_CreateNewObject_fieldMap: {
+                title: "tradeoff_name",
+                tradeoff_group: "tradeoff_group",
+                tradeoff_type: function(data) {return this.resolveGroupedValue(data, "tradeoff_type")},
+                applies_to: "applies_to",
+                example_behavior: "example_behavior",
+                dominant_pole_group: "pole_group",
+                dominant_pole: function(data) {return this.resolveGroupedValue(data, "pole_type")},
+                conflicted_part: "conflicted_part",
+                resolved_by: function(data) {return this.resolveGroupedValue(data, "resolved_by_type", {multiSelect: true} )},
+                resolved_by_group: "resolved_by_group",
+                created: function(data) {return this.formatUtils.db_formatDateTime(new Date()) },
+                last_modified: function(data) {return this.formatUtils.db_formatDateTime(new Date()) },
+                status: () => "🟨 review",
+                entered: false,
+                export_to_inputs: false
+            },
             mdlFormName_Update1: "Update Trade-Off",
             mdlFormName_Update1_fieldMap: {
                 "filename": {key: "filename", from: "file"},
@@ -378,7 +396,7 @@ class ModalFormUtils {
                 "status": {key: "status", singleSelect: true},
                 "tradeoff_type": {key: "tradeoff_type", groupFilter: "tradeoff_type", singleSelect: true},
                 "dominant_pole": {key: "dominant_pole", groupFilter: "pole_type", singleSelect: true},
-                "resolved_by": {key: "resolved_by", groupFilter: "resolvedby_type", multiSelect: true},
+                "resolved_by": {key: "resolved_by", groupFilter: "resolved_by_type", multiSelect: true},
             },
             fileClass: "tradeoff"
         },
@@ -410,7 +428,7 @@ class ModalFormUtils {
                     "Belonging vs. Integrity": "type_belonging"
                 },
                 reverseLookupMap: {
-                    "Closeness vs. Independence": "type_connection",
+                    "Closeness vs. Independence": {key: "type_connection", singleSelect: true},
                     "Distance vs. Closeness": "type_connection",
                     "Trust vs. Control": "type_connection",
                     "Honesty vs. Acceptance": "type_safety",
@@ -512,7 +530,7 @@ class ModalFormUtils {
                     "Self-Actualization": "ptype_growth"
                 }
         },
-        resolvedby_type: {
+        resolved_by_type: {
             groupField: "resolved_by_group",
                 subFieldsByGroup: {
                     "Internal Integration": "rinternal_group",
@@ -975,7 +993,6 @@ class ModalFormUtils {
 
 }
 
-
     updateFrontMatterFromForm(file, result) {
     if (!result.data || Object.keys(result.data).length === 0) {
         new Notice("No data returned from form");
@@ -1068,7 +1085,52 @@ class ModalFormUtils {
     new Notice("Frontmatter Updated!");
 }
 
+resolveGroupedValue(formData, groupFilterKey, {multiSelect = false} = {}) {
+    const registry = this.constructor.groupFilterRegistry?.[groupFilterKey];
+    if(!registry || !registry.groupField || !registry.subFieldsByGroup) {
+        console.warn(`GroupFilter '${groupFilterKey}' is not registered.`);
+        return multiSelect ? []: null;
+    }
 
+    const groupValue = formData[registry.groupField];
+    if(!groupValue || !registry.subFieldsByGroup[groupValue]) {
+        console.warn(`No subfield match for group '${groupValue}' in '${groupFilterKey}'`);
+        return multiSelect ? [] : null;
+    }
+
+    const subField = registry.subFieldsByGroup[groupValue];
+    const value = formData[subField];
+
+    if(multiSelect) {
+        return Array.isArray(value) ? value : value ? [value] : [];
+    }
+
+    return Array.isArray(value) ? value[0] : value || null;
+}
+
+resolveAllFrontmatter_ObjectCreation(formData, fileType) {
+    const map = this.constructor.fileTypeHandlers?.[fileType].mdlFormName_CreateNewObject_fieldMap;
+    if(!map) {
+        console.warn(`No fieldMap defined for fileType: ${fileType}`);
+        return {};
+    }
+
+    const frontmatter = {};
+
+    for (const [key, resolver] of Object.entries(map)) {
+        if(typeof resolver === "function") {
+        const val = resolver.call(this, formData);
+        frontmatter[key] = (val !== undefined && val !== null) ? String(val) : "";
+        } else if (typeof resolver === "string") {
+        const val = formData[resolver];
+        frontmatter[key] = (val !== undefined && val !== null) ? String(val) : "";
+        } else {
+            console.warn(`Invalid resolver for field ${key}`);
+        }
+    }
+
+    return frontmatter;
+}
 
 //#endregion
 

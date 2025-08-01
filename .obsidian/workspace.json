@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bde90bef4435da68",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ME/🏛️ Foundations/⚖️Trade-Offs/Avoiding Pain vs. Doing What’s Needed.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Avoiding Pain vs. Doing What’s Needed"
-            }
-          },
-          {
             "id": "a9b2f8ec97bf593f",
             "type": "leaf",
             "state": {
@@ -37,43 +23,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
+                "file": "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Modal Update Form Template"
-            }
-          },
-          {
-            "id": "ac7d9178c60db8a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Foundations/TradeOff Template.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "TradeOff Template"
-            }
-          },
-          {
-            "id": "8d41546c80148b93",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Meta/Templates/me/Foundations/Modal TradeOff Template.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Modal TradeOff Template"
+              "title": "⚖️Trade-Offs"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -198,7 +157,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 278.5
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -367,40 +326,41 @@
       "modalforms:Edit forms": false,
       "obsidian-git:Open Git source control": false,
       "workspaces:Manage workspace layouts": false,
-      "cmdr:Templater: Insert Meta/Templates/me/Practice Lab/Modal Update Form Template.md": false
+      "cmdr:Templater: Insert Meta/Templates/modal form controllers/Modal Update Form Template.md": false
     }
   },
-  "active": "bde90bef4435da68",
+  "active": "e1bdf9d558e3bb03",
   "lastOpenFiles": [
-    "Meta/Templates/me/Foundations/Modal TradeOff Template.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/Avoiding Pain vs. Doing What’s Needed.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
-    "Work/🛠 My Jobs/LVPM - T3886 Detroit, MI 2025.md",
-    "Work/🛠 My Jobs/🛠 My Jobs.md",
-    "Work/🛠 My Jobs/GFR - T3886 Detroit, MI.md",
-    "Work/Work.md",
-    "Meta/Templates/me/Practice Lab/Modal Update Form Template.md",
-    "Meta/Templates/me/Practice Lab/Modal Practice Session Template.md",
-    "ME/🧪 Practice Lab/🧠 Coaching/Bedtime Story Photo_Session-1_Coaching Session-1.md",
     "Meta/Templates/me/Foundations/TradeOff Template.md",
-    "Meta/Templates/me/Foundations/Trigger Template.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-2.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-1.md",
+    "Meta/Templates/modal form controllers/Create New Object From Modal Form.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A Test At.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Antoerh Test.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Another Test ONe.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Closeness vs. Independence.md",
+    "ME/🏛️ Foundations/🏛️ Foundations.md",
     "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off.md",
-    "Meta/Templates/me/Practice Lab/Coaching Session Template.md",
-    "ME/🧪 Practice Lab/🧠 Coaching/🧠 Coaching.md",
-    "ME/🧪 Practice Lab/🧠 Coaching/The Socks Episode_Session-1_Coaching Session-1.md",
-    "ME/🧪 Practice Lab/🧠 Coaching/A Different Story_Session-2_Coaching Session-1.md",
-    "Meta/Templates/me/Practice Lab/Practice Session Template.md",
-    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/🎙️ Live Rehearsals.md",
-    "ME/🧪 Practice Lab/🎙️ Live Rehearsals/A Different Story_Session-2_Live Rehearsal_Take-1.md",
-    "Meta/fileClass/global/global.md",
-    "ME/🧪 Practice Lab/🎲 Scenarios/Bedtime Story Photo.md",
-    "ME/🧪 Practice Lab/🎬 Practice Logs/Bedtime Story Photo_Session-1.md",
-    "ME/🌒 Reflections/🕹️ Inner Check-Ins/Test 5.md",
+    "Meta/Templates/modal form controllers/Modal Update Form Template.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Tstt 2k.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-1.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A TestTradeOff 2.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A Test TradeOff1.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-4.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A Test TradeOff2.md",
+    "Meta/Templates/me/Foundations/Modal TradeOff Template.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-3.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-2.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/MultiSelect.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A Test TradeOff.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-6.md",
+    "Meta/Templates/modal form controllers",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A Test TradeOff4.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A Test TradeOff3.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Untitled Trade-Off-5.md",
+    "Obsidian Dashboard.canvas",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Suppressing Truth vs. Avoiding Conflict.md",
     "Meta/Scripts/CustomJS_Scripts/btnUpdateModal.js",
     "Meta/Scripts/CustomJS_Scripts/btnUpdateModal",
-    "Obsidian Dashboard.canvas",
     "desktop.ini",
     "Files/icons/amazon.ico",
     "Files/icons/nestle.ico",
@@ -408,7 +368,6 @@
     "Files/icons/medtronic.ico",
     "Files/icons/michaels.ico",
     "Files/icons/ross.ico",
-    "Files/icons/rrdonnelly.ico",
     "My Files/My Attachments/Pasted image 20250701063017.png",
     "My Files/My Attachments/Pasted image 20250605211151.png",
     "ME/🧪 Practice Lab/Rehearsal - Live Session.canvas",

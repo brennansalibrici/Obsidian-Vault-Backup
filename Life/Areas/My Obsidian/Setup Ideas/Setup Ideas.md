@@ -10,6 +10,8 @@ Brainstorms for future tweaks, plugin combos, or workflows.
 - [x] Work
 - [x] Tighten up queries so it doesn't search the entire vault
 - [x] Emotions
+- [ ] Migrate Map Libraires
+- [ ] Create Modal Form to update map entries. (If I add new selection choices to a singleSelect field, the form can update the map instead of having to manually go and do it.)
 - [ ] Tasks reset and re-organized
 - [ ] Web Clipper
 - [ ] Create Modal Forms to update files

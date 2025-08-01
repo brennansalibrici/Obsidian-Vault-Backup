@@ -1,5 +1,6 @@
 ---
-searchTerm: avoiding
+searchTerm: ""
+newObject: tradeoff
 ---
 
 ```meta-bind-button
@@ -14,7 +15,7 @@ id: ""
 hidden: false
 actions:
   - type: runTemplaterFile
-    templateFile: Meta/Templates/me/Foundations/Modal TradeOff Template.md
+    templateFile: Meta/Templates/modal form controllers/Create New Object From Modal Form.md
 
 ```
 
