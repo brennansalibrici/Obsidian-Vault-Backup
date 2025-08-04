@@ -1,4 +1,4 @@
-import { FILE_CLASS } from 'C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileClassRegistry';
+//import { FILE_CLASS } from 'C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileClassRegistry';
 
 export const groupTypeFilterRegistry = {
 //#region ME OBJECTS

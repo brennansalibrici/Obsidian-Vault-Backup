@@ -1,11 +1,94 @@
-import { FILE_CLASS } from 'C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileClassRegistry';
-import { createNewObject_fieldMap } from 'C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/createNewObject_fieldMaps';
-import { updateObject_fieldMap } from 'C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/updateObject_fieldMaps.js';
-import { groupFilterRegistry } from 'C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/groupFilterRegistry_fieldMap';
+
+ class fileTypeHandler {
+    constructor() {
+        this.registry = {};
+
+    }
+
+    init(FCR) {
+
+        this.registry = {
+             //#region ME OBJECTS
+            /*INNER_CHECKIN: "inner_checkin",
+            CAPTURED_MOMENT: "capturedMoment",
+            OBSERVATION: "observation",
+            INTEGRATION_JOURNAL: "emotional_growth_journal",
+            REFLECTION_JOURNAL: "emotional_growth_journal ",*/
+
+                //#region FOUNDATION OBJECTS
+                /*TRIGGER: "trigger",
+                INTERNAL_VOICE: "internal_voice",
+                SOOTHING_RESOURCE: "soothing_resource",
+                EMOTIONAL_WOUND: "emotional_wound",
+                BEHAVIOR_FUNCTION: "behavior_function",
+                EMOTIONAL_NEED: "emotional_need",
+                PROTECTIVE_STRATEGY: "protective_strategy",
+                ATTACHMENT_NEED: "attachment_need",
+                ATTACHMENT_STYLE: "attachment_style",
+                ATTACHMENT_THEORY: "attachment_theory",*/
+                [FCR.getFileClass("TRADE_OFF")]: {
+                    fileClass: FCR.getFileClass("TRADE_OFF"),
+                    folder: "ME/🏛️ Foundations/⚖️Trade-Offs",
+                    template: "Meta/Templates/me/Foundations/TradeOff Template.md",
+                    naming: function(baseName) {
+                        return this.formatUtils.formatTitleCase(baseName || "Untitled Trade-Off");
+                    },
+                }
+
+                //EMOTION: "emotion",
+                //#endregion
+
+                //#region PRACTICE LAB OBJECTS
+                /*PRACTICE_SESSION: "practice_session",
+                LIVE_REHEARSAL: "live_rehearsal",
+                COACHING_SESSION: "coaching",
+                SCENARIO: "scenario",*/
+                //#endregion
+
+            //#endregion
+
+            //#region PERSONAL
+            //PERSON: "person",
+            //#endregion
+
+            //#region WORK OBJECTS
+            /*SWITCHGEAR: "switchgear",
+            BREAKER: "breaker",
+            FUSE: "fuse",
+            RELAY: "relay",
+            TRIP_UNIT: "tripunit",
+            CUSTOMER: "customer",
+            JOB: "job",
+            SITE: "site",
+            SUBCONTRACTOR: "subcontractor",
+            POC: "poc"*/
+
+            //#endregion
+        };
 
 
- export const fileTypeHandler = {
-        [FILE_CLASS.PRACTICE_SESSION]: {
+
+    };
+
+
+    getAll() {
+        return this.registry;
+    }
+
+    getHandler(FILE_CLASS) {
+        return this.registry[FILE_CLASS] || null;
+    }
+
+    has(FILE_CLASS){
+        return !!this.registry[FILE_CLASS];
+    }
+
+    static register(customJS){
+        customJS.fileTypeHandler = new fileTypeHandler();
+    }
+
+ }
+        /*[FILE_CLASS.PRACTICE_SESSION]: {
             folder: "ME/🧪 Practice Lab/🎬 Practice Logs",
             template: "Meta/Templates/me/Practice Lab/Practice Session Template.md",
             naming: (baseName, count) => `${baseName}_Session-${count}`,
@@ -263,8 +346,18 @@ import { groupFilterRegistry } from 'C:/Brennan Salibrici/(Beta) Ultimate Starte
             mdlFormName_Update1: "",
             fileClass: FILE_CLASS.ATTACHMENT_THEORY
         },
+        [FILE_CLASS.EMOTION]: {
+            folder: "ME/🏛️ Foundations/🎭 Emotions",
+            template: "Meta/Templates/me/Foundations/Emotion Template.md",
+            naming: function(baseName) {
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Emotion");
+            },
+            mdlFormName_Update1: "",
+            fileClass: FILE_CLASS.EMOTION
+        },
         [FILE_CLASS.TRADE_OFF]: {
-            folder: "ME/🏛️ Foundations/⚖️Trade-Offs",
+            fileClass: FILE_CLASS.TRADE_OFF
+            /*folder: "ME/🏛️ Foundations/⚖️Trade-Offs",
             template: "Meta/Templates/me/Foundations/TradeOff Template.md",
             naming: function(baseName) {
                 return this.formatUtils.formatTitleCase(baseName || "Untitled Trade-Off");
@@ -272,7 +365,7 @@ import { groupFilterRegistry } from 'C:/Brennan Salibrici/(Beta) Ultimate Starte
             createNewObject: createNewObject_fieldMap.FILE_CLASS.TRADE_OFF,
             updateObject: updateObject_fieldMap.FILE_CLASS.TRADE_OFF,
             groupTypeFilterHandler: groupTypeFilterRegistry.FILE_CLASS.TRADE_OFF,
-            /*mdlFormName_CreateNewObject: "Create New Trade-Off",
+            mdlFormName_CreateNewObject: "Create New Trade-Off",
             mdlFormName_CreateNewObject_fieldMap: {
                 title: "tradeoff_name",
                 tradeoff_group: "tradeoff_group",
@@ -304,16 +397,12 @@ import { groupFilterRegistry } from 'C:/Brennan Salibrici/(Beta) Ultimate Starte
                 "tradeoff_type": {key: "tradeoff_type", groupFilter: "tradeoff_type", singleSelect: true},
                 "dominant_pole": {key: "dominant_pole", groupFilter: "pole_type", singleSelect: true},
                 "resolved_by": {key: "resolved_by", groupFilter: "resolved_by_type", multiSelect: true},
-            },*/
-            fileClass: FILE_CLASS.TRADE_OFF
-        },
-        [FILE_CLASS.EMOTION]: {
-            folder: "ME/🏛️ Foundations/🎭 Emotions",
-            template: "Meta/Templates/me/Foundations/Emotion Template.md",
-            naming: function(baseName) {
-                return this.formatUtils.formatTitleCase(baseName || "Untitled Emotion");
-            },
-            mdlFormName_Update1: "",
-            fileClass: FILE_CLASS.EMOTION
+            }
+
         }
     };
+ }*/
+
+
+
+

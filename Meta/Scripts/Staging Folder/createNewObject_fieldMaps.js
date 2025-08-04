@@ -1,7 +1,7 @@
-import { FILE_CLASS } from 'C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileClassRegistry';
+//import { FILE_CLASS } from 'C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileClassRegistry';
 
-export const updateObject_fieldMap = {
-//#region ME OBJECTS
+export const createNewObject_fieldMap = {
+    //#region ME OBJECTS
     [FILE_CLASS.INNER_CHECKIN]: {
 
     },
@@ -50,20 +50,23 @@ export const updateObject_fieldMap = {
 
     },
     [FILE_CLASS.TRADE_OFF]: {
-        mdlFormName_FullUpdate: "Update Trade-Off",
-        mdlFormName_FullUpdateFieldMap: {
-            "filename": {key: "filename", from: "file"},
-            "tradeoff_name": "title",
-            "tradeoff_group": {key: "tradeoff_group", singleSelect: true},
-            "pole_group": {key: "dominant_pole_group", singleSelect: true},
-            "applies_to": {key: "applies_to", singleSelect: true},
-            "conflicted_part": {key: "conflicted_part", isLink: true},
-            "resolved_by_group": {key: "resolved_by_group", singleSelect: true},
-            "reviewed": "entered",
-            "status": {key: "status", singleSelect: true},
-            "tradeoff_type": {key: "tradeoff_type", groupFilter: "tradeoff_type", singleSelect: true},
-            "dominant_pole": {key: "dominant_pole", groupFilter: "pole_type", singleSelect: true},
-            "resolved_by": {key: "resolved_by", groupFilter: "resolved_by_type", multiSelect: true}
+        mdlFormName: "Create New Trade-Off",
+        mdlFormFieldMap: {
+            title: "tradeoff_name",
+            tradeoff_group: "tradeoff_group",
+            tradeoff_type: function(data) {return this.resolveGroupedValue(data, "tradeoff_type")},
+            applies_to: "applies_to",
+            example_behavior: "example_behavior",
+            dominant_pole_group: "pole_group",
+            dominant_pole: function(data) {return this.resolveGroupedValue(data, "pole_type")},
+            conflicted_part: "conflicted_part",
+            resolved_by: function(data) {return this.resolveGroupedValue(data, "resolved_by_type", {multiSelect: true} )},
+            resolved_by_group: "resolved_by_group",
+            created: function(data) {return this.formatUtils.db_formatDateTime(new Date()) },
+            last_modified: function(data) {return this.formatUtils.db_formatDateTime(new Date()) },
+            status: () => "🟨 review",
+            entered: false,
+            export_to_inputs: false
         }
     },
     [FILE_CLASS.EMOTION]: {

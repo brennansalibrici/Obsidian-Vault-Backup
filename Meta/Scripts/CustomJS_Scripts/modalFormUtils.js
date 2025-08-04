@@ -8,7 +8,7 @@ class ModalFormUtils {
     and continuing adding 'cases' to the switch statement. You will also have to update the normalizeFileType() function to convert the function's incoming string to an
     actual enum value*/
 
-    static filetype = {
+/*    static filetype = {
         PRACTICE_SESSION: "practice session",
         LIVE_REHEARSAL: "live rehearsal",
         COACHING_SESSION: "coaching session",
@@ -31,7 +31,7 @@ class ModalFormUtils {
         TRADE_OFF: "tradeoff",
         EMOTION: "emotion"
     };
-
+*/
     static linkFields = [
   "linked_wounds",
   "associated_emotions",
@@ -65,7 +65,7 @@ class ModalFormUtils {
     constructor(){
         this.app = null;
         this.tp = null;
-        this.fileType = "";
+        //this.fileType = "";
         this.folderPath = "";
         this.folder = "";
         this.templateFile = "";
@@ -93,7 +93,9 @@ class ModalFormUtils {
             "date_time":this.formatUtils.db_formatDateTime,
             "link":     this.string2Link
         };
-        this.fileTypeHandler = {};
+        this.fileClassRegistry = window.customJS.createFILE_CLASS_REGISTRYInstance();
+        this.fileTypeHandler = window.customJS.createfileTypeHandlerInstance();
+        //this.fileClassRegistry = this.FILE_CLASS_REGISTRY.register(window.customJS);
 
     }
 
@@ -101,7 +103,7 @@ class ModalFormUtils {
 
 //#region CLASS UTILITY FUNCTIONS
     //defines a config object that handles the naming, folder and template resolution functions for creating new files
-    static fileTypeHandlers = {
+   /* static fileTypeHandlers = {
         "practice session": {
             folder: "ME/🧪 Practice Lab/🎬 Practice Logs",
             template: "Meta/Templates/me/Practice Lab/Practice Session Template.md",
@@ -615,13 +617,32 @@ class ModalFormUtils {
 
 
 
-
+*/
 
 //#endregion
 
 //#region FILE GENERATION AND MANIPULATION FUNCTIONS
     //script classes used with the CustomJS plugin do not accept constructor arguments. The init() is intended as a sort of pseudo constructor
     async init(config = {}) {
+        //STEP 1: Load and inject fileTypeHandlers and fileClassRegistry if not already loaded
+        if (!ModalFormUtils.fileTypeHandler) {
+            debugger;
+            this.fileTypeHandler.init(this.fileClassRegistry);
+
+            debugger;
+            //const { FILE_CLASS } = await import("C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileClassRegistry.js");
+            //    ModalFormUtils.fileClassRegistry = FILE_CLASS;
+            //const { fileTypeHandler } = await import("C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileTypeHandler.js");
+                ModalFormUtils.fileTypeHandlers = Object.entries(fileTypeHandler).reduce((acc, [key, handler]) => {
+                acc[key] = {
+                    ...handler,
+                    //fileClass: FILE_CLASS[key] || key
+                };
+                return acc;
+            }, {});
+        }
+
+        //STEP 2: Destruture config input
         const {
             app,
             tp,
@@ -631,26 +652,20 @@ class ModalFormUtils {
             useContextAsLink = true
         } = config;
 
-        // ✅ Dynamically load fileTypeHandlers once per instance
+        // STEP 3: Normalize and resolve core metadata
+        //const normalizedTypeKey = this.normalizeFileType(fileType);
+        debugger;
+        this.fileClass = ModalFormUtils.fileClassRegistry[fileType];
+        debugger;
+        this.fileTypeHandler = ModalFormUtils.fileTypeHandlers[this.fileClass];
+
         if (!this.fileTypeHandler) {
-            const { fileTypeHandler } = await import("C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileTypeHandler.js");
-            this.fileTypeHandler = fileTypeHandler;
-        }
-
-        // Normalize fileType input (e.g., "Trigger" → "trigger")
-        const normalizedTypeKey = this.normalizeFileType(fileType);
-        if (!normalizedTypeKey) {
-            throw new Error(`❌ Unknown or invalid fileType provided: "${fileType}"`);
-        }
-
-        // Use the normalized value to fetch fileType string and handler
-        this.fileType = ModalFormUtils.filetype[normalizedTypeKey];
-        const handler = ModalFormUtils.fileTypeHandlers[this.fileType];
-
-        if (!handler) {
             throw new Error(`❌ No fileTypeHandler found for: "${this.fileType}"`);
         }
 
+        //this.fileClass = this.fileTypeHandler.fileClass;
+
+        //STEP 4: Assign all remaining metadata
         this.app = app;
         this.tp = tp;
         this.folderPath = handler.folder;
@@ -673,7 +688,18 @@ class ModalFormUtils {
         }
     }
 
+    static lookupFileClass(fileTYpe) {
+        if(!fileType || typeof fileType !== "string") {
+            throw new Error(`Invalid fileType for fileClass lookup: ${fileTYpe}`);
+        }
 
+        const fileClass = fileClassRegistry[fileType];
+        if(!fileClass) {
+            throw new Error(`No fileClass registered for fileType: "${fileType}`);
+        }
+
+        return fileClass;
+    }
     /*********************the loop that assigns the fileMatch value returns the number of files that match. For the new filename we need to increase that value by one.
     creates both a stringname and a link for the newly created file***********************************/
     createNewFileName(strName = "") {
@@ -899,11 +925,22 @@ class ModalFormUtils {
 
 //#region RETRIEVE SPECIFIED FILE PROPERTIES
     // accepts a fileClass value in order to retrieve the appropriate form to open. It also accepts the tp and app object in preparation for other actions once the form is opened like populating form fields and updating data fields
-    getUpdateFormFromFileClass(app, tp, file) {
+    async getUpdateFormFromFileClass(app, tp, file) {
     this.app = app;
     this.tp = tp;
     this.frontmatter = this.getFrontMatterMap(file);
     this.modalFormFieldMap_Values = {}; // Make sure it's reset
+
+    //Dynamically load fileTypeHandler & fileClassRegistry if not already loaded
+    if (!this.fileTypeHandler) {
+        const { fileTypeHandler } = await import("C:/.../fileTypeHandler.js");
+        this.fileTypeHandler = fileTypeHandler;
+    }
+
+    if (!this.fileClassRegistry) {
+        const { fileClass } = await import("C:/.../fileClassRegistry.js");
+        this.fileClassRegistry = fileClass;
+    }
 
     // 🛑 Safety check
     if (!this.frontmatter || Object.keys(this.frontmatter).length === 0) {
@@ -912,14 +949,12 @@ class ModalFormUtils {
     }
 
     // 🔍 Find handler for this fileClass
-    const handler = Object.values(this.constructor.fileTypeHandlers).find(
-        entry => entry.fileClass === this.frontmatter.fileClass
-    );
+    const handler = this.fileTypeHandler?.[this.frontmatter.fileClass];
 
     if (!handler || !handler.mdlFormName_Update1) {
-        new Notice(`No update form defined for fileClass "${this.frontmatter.fileClass}"`);
-        return null;
-    }
+    new Notice(`No update form defined for fileClass "${this.frontmatter.fileClass}"`);
+    return null;
+}
 
     this.modalFormName = handler.mdlFormName_Update1;
     this.modalFormFieldMap = handler.mdlFormName_Update1_fieldMap;
@@ -993,7 +1028,7 @@ class ModalFormUtils {
     console.log("Form Values:", this.modalFormFieldMap_Values);
 
 }
-
+    // ****UPDATE THIS FUNCTION NEXT******
     updateFrontMatterFromForm(file, result) {
     if (!result.data || Object.keys(result.data).length === 0) {
         new Notice("No data returned from form");
@@ -1110,7 +1145,7 @@ resolveGroupedValue(formData, groupFilterKey, {multiSelect = false} = {}) {
 }
 
 resolveAllFrontmatter_ObjectCreation(formData, fileType) {
-    const map = this.constructor.fileTypeHandlers?.[fileType].mdlFormName_CreateNewObject_fieldMap;
+    const fieldMap = this.fileTypeHandler.mdlFormName_CreateNewObject_fieldMap;
     if(!map) {
         console.warn(`No fieldMap defined for fileType: ${fileType}`);
         return {};

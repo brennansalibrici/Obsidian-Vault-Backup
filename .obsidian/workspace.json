@@ -6,7 +6,7 @@
       {
         "id": "34ee373fcc5b5ca6",
         "type": "tabs",
-        "dimension": 20,
+        "dimension": 50,
         "children": [
           {
             "id": "a9b2f8ec97bf593f",
@@ -38,7 +38,7 @@
       {
         "id": "a862b9e9e32b0a33",
         "type": "tabs",
-        "dimension": 80,
+        "dimension": 50,
         "children": [
           {
             "id": "c29c468d26360010",
@@ -193,7 +193,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363.5
+    "width": 226.4
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -365,13 +365,23 @@
       "cmdr:Templater: Insert Meta/Templates/modal form controllers/Modal Update Form Template.md": false
     }
   },
-  "active": "c29c468d26360010",
+  "active": "18be80e20eda2e83",
   "lastOpenFiles": [
-    "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
     "Meta/Templates/modal form controllers/Create New Object From Modal Form.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
+    "Meta/Scripts/CustomJS_Scripts/fileTypeHandler.js",
+    "Meta/Scripts/Staging Folder/fileTypeHandler.js",
+    "Meta/Scripts/CustomJS_Scripts/updateObject_fieldMaps.js",
+    "Meta/Scripts/CustomJS_Scripts/createNewObject_fieldMaps.js",
+    "Meta/Scripts/Staging Folder/btnUpdateModal",
+    "Meta/Scripts/Staging Folder/updateObject_fieldMaps.js",
+    "Meta/Scripts/Staging Folder/testscript.js",
+    "Meta/Scripts/Staging Folder/groupTypeFilterRegistry_fieldMaps.js",
+    "Meta/Scripts/Staging Folder/doNotLinkRegistry.js",
+    "Meta/Scripts/Staging Folder/createNewObject_fieldMaps.js",
     "Meta/Templates/modal form controllers/Modal Update Form Template.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A TEst TradeOff.md",
     "ME/🏛️ Foundations/🏛️ Foundations.md",
-    "Meta/Scripts/CustomJS_Scripts/groupTypeFilterRegistry_fieldMaps.js",
     "Meta/fileClass/personal/people/person.md",
     "Meta/fileClass/personal/people/poc.md",
     "Meta/fileClass/work/training.md",
@@ -392,18 +402,7 @@
     "Meta/fileClass/me/practice_lab/practice_session.md",
     "Meta/fileClass/me/foundations/trigger/trigger.md",
     "Meta/fileClass/me/foundations/tradeoffs/tradeoff.md",
-    "Meta/fileClass/me/foundations/soothing resouce/soothing_resource.md",
-    "Meta/fileClass/me/foundations/protectice strategy/protective_strategy.md",
-    "Meta/Scripts/CustomJS_Scripts/doNotLinkRegistry.js",
-    "Meta/Scripts/CustomJS_Scripts/fileClassRegistry.js",
-    "Meta/Scripts/CustomJS_Scripts/groupFilterRegistry_fieldMap.js",
-    "Meta/Scripts/CustomJS_Scripts/createNewObject_fieldMaps.js",
-    "Meta/Scripts/CustomJS_Scripts/updateObject_fieldMaps.js",
-    "Meta/Scripts/CustomJS_Scripts/fileTypeHandler.js",
-    "Meta/Templates/modal form controllers",
     "Obsidian Dashboard.canvas",
-    "Meta/Scripts/CustomJS_Scripts/btnUpdateModal.js",
-    "Meta/Scripts/CustomJS_Scripts/btnUpdateModal",
     "My Files/My Attachments/Pasted image 20250701063017.png",
     "My Files/My Attachments/Pasted image 20250605211151.png",
     "ME/🧪 Practice Lab/Rehearsal - Live Session.canvas",
