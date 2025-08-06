@@ -2,7 +2,7 @@ class ModalFormUtils {
 
 //PURPOSE: TO HANDLE ALL FUNCTIONALITY THAT GETS DATA FROM ANY MODAL FORM AND COMPLETES WHATEVER PROCESSES NECESSARY TO HAVE THAT DATA REFLECTED APPROPRIATELY IN OBSIDIAN
 
-//#region CONSTRUCTOR, ENUMS AND PROPERTY DEFINITIONS
+//#region CONSTRUCTOR, ENUMS, PROPERTY & CLASS DEFINITIONS
     /*simulated enum used as an init() function parameter to identify the type of file coming in which will determine specific attributes about it, namely how to create
     the newly created file's name. The intention is that as you use this class for more and more similar types of modal form file creation, you continue adding to this enum
     and continuing adding 'cases' to the switch statement. You will also have to update the normalizeFileType() function to convert the function's incoming string to an
@@ -30,8 +30,8 @@ class ModalFormUtils {
         ATTACHMENT_THEORY: "attachment theory",
         TRADE_OFF: "tradeoff",
         EMOTION: "emotion"
-    };
-*/
+    };*/
+
     static linkFields = [
   "linked_wounds",
   "associated_emotions",
@@ -83,11 +83,12 @@ class ModalFormUtils {
         this.lnkDailyNote = "";
         this.formatUtils = window.customJS.createFormatUtilsInstance();
         this.fileClass = "";
+        this.handler = {};
         this.frontmatter = "";
         this.modalFormName = "";
         this.modalFormFieldMap = "";
         this.modalFormFieldMap_Values = {};
-        this.fieldTypeFormatHooks = {
+        this.fieldTypeFormatHooks = {                       //Eventually this should migrate to the formatting class
             "date":     this.formatUtils.db_formatDateOnly,
             "time":     this.formatUtils.formatTimeOnly,
             "date_time":this.formatUtils.db_formatDateTime,
@@ -95,18 +96,26 @@ class ModalFormUtils {
         };
         this.fileClassRegistry = window.customJS.createFILE_CLASS_REGISTRYInstance();
         this.fileTypeHandler = window.customJS.createfileTypeHandlerInstance();
-        //this.fileClassRegistry = this.FILE_CLASS_REGISTRY.register(window.customJS);
+        this.callingFormType = "";
+        this.formData = {};
 
     }
 
+
+    static FORM_TYPE = {
+        CREATE: "create",
+        UPDATE: "update"
+    }
 //#endregion
 
 //#region CLASS UTILITY FUNCTIONS
     //defines a config object that handles the naming, folder and template resolution functions for creating new files
-   /* static fileTypeHandlers = {
+    /*
+   static fileTypeHandlers = {
         "practice session": {
             folder: "ME/🧪 Practice Lab/🎬 Practice Logs",
             template: "Meta/Templates/me/Practice Lab/Practice Session Template.md",
+            countTracking: true,
             naming: (baseName, count) => `${baseName}_Session-${count}`,
             mdlFormName_Update1: "Update Practice Log",
             mdlFormName_Update1_fieldMap: {
@@ -127,6 +136,7 @@ class ModalFormUtils {
         "live rehearsal": {
             folder: "ME/🧪 Practice Lab/🎙️ Live Rehearsals",
             template: "Meta/Templates/me/Practice Lab/Live Rehearsal Template.md",
+            countTracking: true,
             naming: (baseName, count) => `${baseName}_Live Rehearsal_Take-${count}`,
             mdlFormName_Update1: "Update Live Rehearsal",
             mdlFormName_Update1_fieldMap: {
@@ -142,6 +152,7 @@ class ModalFormUtils {
         "coaching session": {
             folder: "ME/🧪 Practice Lab/🧠 Coaching",
             template: "Meta/Templates/me/Practice Lab/Coaching Session Template.md",
+            countTracking: true,
             naming: (baseName, count) => `${baseName}_Coaching Session-${count}`,
             mdlFormName_Update1: "Update Coaching Session",
             mdlFormName_Update1_fieldMap: {
@@ -565,7 +576,7 @@ class ModalFormUtils {
             }
         }
     };
-
+*/
     //checks to see if the filename created already exists in the folder and if so, appends '-1', '-2', etc.
     ensureUniqueFilename(baseName) {
         const existingNames = new Set(this.folder?.children?.map(file => file.name.replace(/\.md$/, "")) || []);
@@ -582,15 +593,15 @@ class ModalFormUtils {
 
     //encapsulates the conversion between the static fileTypeHandler and other complexities between a dedicated method and instanced functions
     getFinalFileName(baseName, count = null) {
-        const handler = ModalFormUtils.fileTypeHandlers[this.fileType];
-        if (!handler || typeof handler.naming !== "function") {
+        //const handler = ModalFormUtils.fileTypeHandlers[this.fileType];
+        if (!this.handler || typeof this.handler.naming !== "function") {
             throw new Error(`❌ No valid naming function found for fileType: ${this.fileType}`);
         }
 
         // Call the naming function with the correct context (`this`) so formatUtils is available
         return count !== null
-            ? handler.naming.call(this, baseName, count)
-            : handler.naming.call(this, baseName);
+            ? this.handler.naming.call(this, baseName, count)
+            : this.handler.naming.call(this, baseName);
     }
 
     //accepts a string and returns an Obsidian link of the same string
@@ -617,60 +628,53 @@ class ModalFormUtils {
 
 
 
-*/
+
 
 //#endregion
 
 //#region FILE GENERATION AND MANIPULATION FUNCTIONS
     //script classes used with the CustomJS plugin do not accept constructor arguments. The init() is intended as a sort of pseudo constructor
     async init(config = {}) {
-        //STEP 1: Load and inject fileTypeHandlers and fileClassRegistry if not already loaded
-        if (!ModalFormUtils.fileTypeHandler) {
-            debugger;
-            this.fileTypeHandler.init(this.fileClassRegistry);
-
-            debugger;
-            //const { FILE_CLASS } = await import("C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileClassRegistry.js");
-            //    ModalFormUtils.fileClassRegistry = FILE_CLASS;
-            //const { fileTypeHandler } = await import("C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileTypeHandler.js");
-                ModalFormUtils.fileTypeHandlers = Object.entries(fileTypeHandler).reduce((acc, [key, handler]) => {
-                acc[key] = {
-                    ...handler,
-                    //fileClass: FILE_CLASS[key] || key
-                };
-                return acc;
-            }, {});
-        }
-
-        //STEP 2: Destruture config input
         const {
             app,
             tp,
             fileType,
+            formType,
             context1 = "",
             context2 = "",
             useContextAsLink = true
         } = config;
 
-        // STEP 3: Normalize and resolve core metadata
-        //const normalizedTypeKey = this.normalizeFileType(fileType);
-        debugger;
-        this.fileClass = ModalFormUtils.fileClassRegistry[fileType];
-        debugger;
-        this.fileTypeHandler = ModalFormUtils.fileTypeHandlers[this.fileClass];
-
-        if (!this.fileTypeHandler) {
-            throw new Error(`❌ No fileTypeHandler found for: "${this.fileType}"`);
-        }
-
-        //this.fileClass = this.fileTypeHandler.fileClass;
-
-        //STEP 4: Assign all remaining metadata
         this.app = app;
         this.tp = tp;
-        this.folderPath = handler.folder;
+
+        if(formType){
+            switch (formType.toLowerCase()){
+                case "create":
+                    this.callingFormType = ModalFormUtils.FORM_TYPE.CREATE;
+                    break;
+
+                case "update":
+                    this.callingFormType = ModalFormUtils.FORM_TYPE.UPDATE;
+                    break;
+
+                default:
+                    this.callingFormType = ModalFormUtils.FORM_TYPE.CREATE; //fallback
+            }
+        }
+
+        this.fileClass = this.fileClassRegistry.getKeyFromValue(fileType);
+        this.fileTypeHandler.init(this.fileClassRegistry, this.callingFormType);
+        this.handler = this.fileTypeHandler.getHandler(this.fileClass);
+
+        if (!this.handler) {
+            throw new Error(`❌ No fileTypeHandler found for: "${this.fileClass}"`);
+        }
+
+        this.folderPath = this.handler.folder;
         this.folder = app.vault.getAbstractFileByPath(this.folderPath);
-        this.templateFile = handler.template;
+
+        this.templateFile = this.handler.template;
         this.strField1 = context1;
         this.lnkField1 = useContextAsLink ? this.string2Link(context1) : context1;
 
@@ -688,30 +692,18 @@ class ModalFormUtils {
         }
     }
 
-    static lookupFileClass(fileTYpe) {
-        if(!fileType || typeof fileType !== "string") {
-            throw new Error(`Invalid fileType for fileClass lookup: ${fileTYpe}`);
-        }
-
-        const fileClass = fileClassRegistry[fileType];
-        if(!fileClass) {
-            throw new Error(`No fileClass registered for fileType: "${fileType}`);
-        }
-
-        return fileClass;
-    }
-    /*********************the loop that assigns the fileMatch value returns the number of files that match. For the new filename we need to increase that value by one.
-    creates both a stringname and a link for the newly created file***********************************/
     createNewFileName(strName = "") {
         if (strName) this.strField2 = strName;
 
-        const handler = ModalFormUtils.fileTypeHandlers[this.fileType];
-        if (!handler || !handler.naming) throw new Error(`❌ No naming logic for fileType: ${this.fileType}`);
+        if (!this.handler?.naming) {
+            throw new Error(`❌ No naming logic available for fileType: ${this.fileClass}`);
+        }
 
-        const baseName = this.strField1;
-
+        //prefer a filename that is passed into the function if available
+        const baseName = this.strField2 || this.strField1 || "Untitled";
+ /***The loop that assigns the fileMatch value returns the number of files that match. For the new filename we need to increase that value by one. Creates both a stringname and a link for the newly created file***/
         // 🔁 Special case for count-tracking file types
-        if (["practice session", "live rehearsal", "coaching session"].includes(this.fileType)) {
+        if (this.handler?.countTracking) {
             const prefix = baseName;
             const pattern = new RegExp(`^${prefix}.*?(\\d+)$`);
             let maxCount = 0;
@@ -752,17 +744,23 @@ class ModalFormUtils {
 
     }
 
+
     //combines createNewFileFromTemplate() and updateFrontMatter() into a single method
-    async createFileWithFrontmatter(fieldMap = {}) {
+    async createFileWithFrontmatter(formData) {
         try {
-            //Just-in-time filename generation
-            this.createNewFileName();
+            this.formData = formData;
+            const titleValue = this.handler.modalFormMap?.mdlForm_fieldMap.title;
+            this.createNewFileName(this.formData[titleValue]);
+
+
 
             const file = await this.createNewFileFromTemplate();
+            debugger;
             console.log("New file object received", file);
             if (file) {
-                await this.updateFrontMatter(file, fieldMap);
+                await this.updateFrontMatter(file);
             }
+
             return file;
 
         } catch (err) {
@@ -796,8 +794,10 @@ class ModalFormUtils {
         }
     }
 
+/**********OLD******************************************************************************************************************************************************************************************************* */
 
 
+/****WOULD THIS BE BETTER PLACED IN FORMATUTILS?  */
     //generate a hook that can be linked to a DailyNote
     generateDailyNoteLink() {
         const today = this.formatUtils.db_formatDateOnly(new Date());
@@ -831,13 +831,81 @@ class ModalFormUtils {
         }
     }
 
+/*    static lookupFileClass(fileTYpe) {
+        if(!fileType || typeof fileType !== "string") {
+            throw new Error(`Invalid fileType for fileClass lookup: ${fileTYpe}`);
+        }
+
+        const fileClass = fileClassRegistry[fileType];
+        if(!fileClass) {
+            throw new Error(`No fileClass registered for fileType: "${fileType}`);
+        }
+
+        return fileClass;
+    }
+*/
 
 //#endregion
 
 //#region FRONTMATTER FUNCTIONS
+
+resolveAllFrontmatter(formData) {
+    switch (this.callingFormType) {
+        case ModalFormUtils.FORM_TYPE.CREATE:
+            return this._resolveFrontmatterCreate(formData);
+
+        case ModalFormUtils.FORM_TYPE.UPDATE:
+            return this.resolveFrontMatterUpdate(formData);
+
+        default:
+            throw new Error(`❌ Unsupported frontmatter resolution mode: ${this.callingFormType}`);
+    }
+}
+
+_resolveFrontmatterCreate(formData) {
+    const map = this.handler.modalFormMap.mdlForm_fieldMap;
+    if(!map) {
+        console.warn(`No fieldMap defined for fileType: ${this.fileClass}`);
+        return {};
+    }
+
+    const frontmatter = {};
+
+    for (const [key, resolver] of Object.entries(map)) {
+        if(typeof resolver === "function") {
+        const val = resolver.call(this, formData);
+        frontmatter[key] = (val !== undefined && val !== null) ? String(val) : "";
+        } else if (typeof resolver === "string") {
+        const val = formData[resolver];
+        frontmatter[key] = (val !== undefined && val !== null) ? String(val) : "";
+        } else {
+            console.warn(`Invalid resolver for field ${key}`);
+        }
+    }
+
+    return frontmatter;
+}
+
+_resolveFrontmatterUpdate(formData) {
+     const map = this.handler.modalFormMap.mdlForm_fieldMap;
+ if (!map) {
+        console.warn(`⚠️ No fieldMap defined for fileClass: ${this.fileClass}`);
+        return {};
+    }
+
+    const frontmatter = {};
+    // ... rest of the loop
+
+    return frontmatter;
+}
+
+
  //updates the frontmatter with defined results from any modal form and inserts them into the frontmatter of any specified file
-    async updateFrontMatter(file, fieldMap = {}) {
+    async updateFrontMatter(file) {
     try {
+        debugger;
+        const fieldMap = this.resolveAllFrontmatter(this.formData); //Automatically resolves based on form type
+
         await this.app.fileManager.processFrontMatter(file, (fm) => {
             for (const [key, value] of Object.entries(fieldMap)) {
                 if (value === undefined || value === null) continue;
@@ -845,7 +913,7 @@ class ModalFormUtils {
                     const existing = fm[key];
 
                     const toLink = (v, key) => {
-                    if (!ModalFormUtils.linkFields.includes(key)) return v;
+                    if (!ModalFormUtils.linkFields.includes(key)) return v; //Eventually this list of fields needs to be trasfered to the fieldMap and the formatting portion needs to be transfered to the formatting class
                     if (typeof v !== "string") return v;
                     return v.startsWith("[[") ? v : `[[${v}]]`;
                     };
@@ -884,6 +952,7 @@ class ModalFormUtils {
         }
     }
 
+/*
     //retrieves the full frontmatter map from the specified file
     getFrontMatterMap(file){
         const cache = app.metadataCache.getFileCache(file);
@@ -903,7 +972,7 @@ class ModalFormUtils {
 
         return frontmatter[key];
     }
-
+*/
     //accepts a 'target' file and will update the global property 'last_modified' to the current date/time
     async updateLastModified(file) {
         try {
@@ -919,6 +988,7 @@ class ModalFormUtils {
             new Notice("Error updating last_modified. See console.");
         }
     }
+/**********OLD****************************************************************************************************************************************************************************************** */
 
 
 //#endregion
@@ -1144,29 +1214,7 @@ resolveGroupedValue(formData, groupFilterKey, {multiSelect = false} = {}) {
     return Array.isArray(value) ? value[0] : value || null;
 }
 
-resolveAllFrontmatter_ObjectCreation(formData, fileType) {
-    const fieldMap = this.fileTypeHandler.mdlFormName_CreateNewObject_fieldMap;
-    if(!map) {
-        console.warn(`No fieldMap defined for fileType: ${fileType}`);
-        return {};
-    }
 
-    const frontmatter = {};
-
-    for (const [key, resolver] of Object.entries(map)) {
-        if(typeof resolver === "function") {
-        const val = resolver.call(this, formData);
-        frontmatter[key] = (val !== undefined && val !== null) ? String(val) : "";
-        } else if (typeof resolver === "string") {
-        const val = formData[resolver];
-        frontmatter[key] = (val !== undefined && val !== null) ? String(val) : "";
-        } else {
-            console.warn(`Invalid resolver for field ${key}`);
-        }
-    }
-
-    return frontmatter;
-}
 
 //#endregion
 

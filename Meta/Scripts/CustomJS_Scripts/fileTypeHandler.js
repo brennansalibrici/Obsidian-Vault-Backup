@@ -2,12 +2,34 @@
  class fileTypeHandler {
     constructor() {
         this.registry = {};
+        this.createNewObject_fieldMap = {};
+        this.updateObject_fieldMap = {};
+        this.groupTypeFilter_fieldMap = {};
+        this.formMapSource = "";
+        //this.updateObject_fieldMap = window.customJS.createupdateObject_fieldMapInstance();
+        //
 
     }
 
-    init(FCR) {
+    init(FCR, formType) {
+        this.createNewObject_fieldMap = window.customJS.createcreateNewObject_fieldMapInstance();
+        this.updateObject_fieldMap = window.customJS.createupdateObject_fieldMapInstance();
+        this.groupTypeFilter_fieldMap = window.customJS.creategroupTypeFilter_fieldMapInstance();
 
+        switch(formType){
+            case "create":
+                this.formMapSource = this.createNewObject_fieldMap;
+                break;
+
+            case "update":
+                this.formMapSource = this.updateObject_fieldMap;
+
+            //default:
+                //this.formMapSource = this.createNewObject_fieldMap; //fallback
+        }
+/*ADD 'COUNTTRACKING: TRUE TO THE OBJECTS THAT NEED TO LOOP THROUGH THE FOLDER AND GET A COUNT VALUE WHICH IS INCLUDED IN THE OBJECT'S TITLE, PRACTICE SESSION, LIVE REHEARSAL, COACHING. EXAMPLE IN PRACTICE SESSION***************************************************************************************************************************************************************************************** */
         this.registry = {
+            TEST: "TRADE_OFF",
              //#region ME OBJECTS
             /*INNER_CHECKIN: "inner_checkin",
             CAPTURED_MOMENT: "capturedMoment",
@@ -25,18 +47,26 @@
                 PROTECTIVE_STRATEGY: "protective_strategy",
                 ATTACHMENT_NEED: "attachment_need",
                 ATTACHMENT_STYLE: "attachment_style",
-                ATTACHMENT_THEORY: "attachment_theory",*/
-                [FCR.getFileClass("TRADE_OFF")]: {
-                    fileClass: FCR.getFileClass("TRADE_OFF"),
+                ATTACHMENT_THEORY: "attachment_theory",
+                //#endregion */
+                [FCR.getKeyFromValue("tradeoff")]: {
+                    fileClass: FCR.getKeyFromValue("tradeoff"),
                     folder: "ME/🏛️ Foundations/⚖️Trade-Offs",
                     template: "Meta/Templates/me/Foundations/TradeOff Template.md",
                     naming: function(baseName) {
                         return this.formatUtils.formatTitleCase(baseName || "Untitled Trade-Off");
                     },
+                    formType: formType,
+                    modalFormMap: this.formMapSource.getFieldMap("TRADE_OFF"),
+                    //createNewObject: () => this.createNewObject_fieldMap.getFieldMap("TRADE_OFF"),
+                    //updateObject: () => this.updateObject_fieldMap.getFieldMap("TRADE_OFF"),
+                    groupTypeFilter: () => this.groupTypeFilter_fieldMap.getFieldMap("TRADE_OFF")
+
+
                 }
 
                 //EMOTION: "emotion",
-                //#endregion
+
 
                 //#region PRACTICE LAB OBJECTS
                 /*PRACTICE_SESSION: "practice_session",
@@ -81,6 +111,10 @@
 
     has(FILE_CLASS){
         return !!this.registry[FILE_CLASS];
+    }
+
+    getFormName(formType, fileType){
+
     }
 
     static register(customJS){

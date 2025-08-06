@@ -1,0 +1,39 @@
+{
+	"files": [
+		{
+			"path": "modalFormUtils.js",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 0,
+					"label": "REGION - CONSTRUCTOR, ENUMS, PROPERTIES AND CLASS DEFS"
+				},
+				{
+					"line": 110,
+					"column": 0,
+					"label": "REGION - CLASS UTILITY FUNCTIONS"
+				},
+				{
+					"line": 634,
+					"column": 0,
+					"label": "REGION - FILE GENERATION FUNCTIONS"
+				},
+				{
+					"line": 766,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 849,
+					"column": 0,
+					"label": "REGION - FRONTMATTER FUNCTIONS"
+				},
+				{
+					"line": 915,
+					"column": 0,
+					"label": ""
+				}
+			]
+		}
+	]
+}

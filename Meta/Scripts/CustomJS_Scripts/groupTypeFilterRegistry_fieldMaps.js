@@ -1,5 +1,19 @@
-//import { FILE_CLASS } from 'C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileClassRegistry';
+class groupTypeFilter_fieldMap {
+    constructor() {
+        this.fieldMap = {
+            "tradeoff": {
+                fieldC: "value3"
+            }
+        };
+    }
 
+    static register(customJS) {
+        customJS.groupTypeFilter_fieldMap = new groupTypeFilter_fieldMap();
+    }
+}
+
+
+/*
 export const groupTypeFilterRegistry = {
 //#region ME OBJECTS
     [FILE_CLASS.INNER_CHECKIN]: {
@@ -258,4 +272,4 @@ export const groupTypeFilterRegistry = {
 
     }
     //#endregion
-}
+}*/

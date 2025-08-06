@@ -1,6 +1,50 @@
-//import { FILE_CLASS } from 'C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileClassRegistry';
+class createNewObject_fieldMap {
+    constructor() {
+        this.fieldMap = {
+            "TRADE_OFF": {
+                mdlFormName: "Create New Trade-Off",
+                mdlForm_fieldMap: {
+                   title: "tradeoff_name",
+                    tradeoff_group: "tradeoff_group",
+                    tradeoff_type: function(data) {return this.resolveGroupedValue(data, "tradeoff_type")},
+                    applies_to: "applies_to",
+                    example_behavior: "example_behavior",
+                    dominant_pole_group: "pole_group",
+                    dominant_pole: function(data) {return this.resolveGroupedValue(data, "pole_type")},
+                    conflicted_part: "conflicted_part",
+                    resolved_by: function(data) {return this.resolveGroupedValue(data, "resolved_by_type", {multiSelect: true} )},
+                    resolved_by_group: "resolved_by_group",
+                    created: function(data) {return this.formatUtils.db_formatDateTime(new Date()) },
+                    last_modified: function(data) {return this.formatUtils.db_formatDateTime(new Date()) },
+                    status: () => "🟨 review",
+                    entered: false,
+                    export_to_inputs: false
+                }
+            }
 
-export const createNewObject_fieldMap = {
+        };
+    }
+
+
+    getAll() {
+        return this.fieldMap;
+    }
+
+    getFieldMap(FILE_CLASS) {
+        return this.fieldMap[FILE_CLASS] || null;
+    }
+
+    has(FILE_CLASS) {
+        return !!this.fieldMap[FILE_CLASS];
+    }
+
+    static register(customJS) {
+        customJS.createNewObject_fieldMap = new createNewObject_fieldMap();
+    }
+}
+
+
+/*
     //#region ME OBJECTS
     [FILE_CLASS.INNER_CHECKIN]: {
 
@@ -130,3 +174,4 @@ export const createNewObject_fieldMap = {
     }
     //#endregion
 }
+*/

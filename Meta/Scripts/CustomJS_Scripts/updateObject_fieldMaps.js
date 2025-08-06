@@ -1,6 +1,30 @@
-//import { FILE_CLASS } from 'C:/Brennan Salibrici/(Beta) Ultimate Starter Vault 2.2/Ultimate Starter Vault 2.2 Beta/Meta/Scripts/CustomJS_Scripts/fileClassRegistry';
+class updateObject_fieldMap {
+    constructor() {
+        this.fieldMap = {
+            "TRADE_OFF": {
+                mdlFormName: "Update Trade-Off"
+            }
+        };
+    }
 
-export const updateObject_fieldMap = {
+    getAll() {
+        return this.fieldMap;
+    }
+
+    getFieldMap(FILE_CLASS) {
+        return this.fieldMap[FILE_CLASS] || null;
+    }
+
+    has(FILE_CLASS) {
+        return !!this.fieldMap[FILE_CLASS];
+    }
+
+    static register(customJS) {
+        customJS.updateObject_fieldMap = new updateObject_fieldMap();
+    }
+}
+
+/*export const updateObject_fieldMap = {
 //#region ME OBJECTS
     [FILE_CLASS.INNER_CHECKIN]: {
 
@@ -126,4 +150,4 @@ export const updateObject_fieldMap = {
 
     }
     //#endregion
-}
+}*/

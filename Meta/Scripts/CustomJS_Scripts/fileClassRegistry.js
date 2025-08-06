@@ -60,8 +60,19 @@ class FILE_CLASS_REGISTRY {
         return this.registry[fileClass] || null;
     }
 
-    has(fileClass) {
-        return !!this.registry[fileClass];
+    hasKey(key) {
+        return !!this.registry[key];
+    }
+
+    getKeyFromValue(value){
+        for(const [key,val] of Object.entries(this.registry)){
+            if(val === value.trim()) return key;
+        }
+        return null;
+    }
+
+    hasValue(value) {
+        return Object.value(this.registry).includes(value.trim());
     }
 
     static register(customJS) {

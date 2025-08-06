@@ -1,5 +1,5 @@
 ---
-searchTerm: ""
+searchTerm: 
 newObject: tradeoff
 ---
 
