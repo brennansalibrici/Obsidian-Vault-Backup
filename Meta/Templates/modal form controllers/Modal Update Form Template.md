@@ -8,18 +8,18 @@ const fileClass = tp.frontmatter.fileClass;
 
 // Inject everything you need
 await utils.init({ app, tp, fileType: fileClass, formType: "update" });
-
+/*
 // Safely access modal form name from injected handlers
-const modalFormName = utils.handler.modalFormMap?.mdlFormName;
+//const modalFormName = utils.handler.modalFormMap?.mdlFormName;
 
 // If not found, fail fast
 if (!modalFormName) {
   new Notice("❌ No modal form defined for this object type.");
   return;
 }
-
+*/
 // Open modal form
-const result = await modalForm.openForm(modalFormName);
+const result = await modalForm.openForm(utils.modalFormName);
 
 // Cancel check
 if (result.status === "cancelled") {

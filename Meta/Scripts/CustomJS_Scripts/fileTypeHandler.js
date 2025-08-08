@@ -6,8 +6,6 @@
         this.updateObject_fieldMap = {};
         this.groupTypeFilter_fieldMap = {};
         this.formMapSource = "";
-        //this.updateObject_fieldMap = window.customJS.createupdateObject_fieldMapInstance();
-        //
 
     }
 
@@ -23,6 +21,7 @@
 
             case "update":
                 this.formMapSource = this.updateObject_fieldMap;
+                break;
 
             //default:
                 //this.formMapSource = this.createNewObject_fieldMap; //fallback
@@ -58,11 +57,7 @@
                     },
                     formType: formType,
                     modalFormMap: this.formMapSource.getFieldMap("TRADE_OFF"),
-                    //createNewObject: () => this.createNewObject_fieldMap.getFieldMap("TRADE_OFF"),
-                    //updateObject: () => this.updateObject_fieldMap.getFieldMap("TRADE_OFF"),
-                    groupTypeFilter: () => this.groupTypeFilter_fieldMap.getFieldMap("TRADE_OFF")
-
-
+                    groupTypeFilter: this.groupTypeFilter_fieldMap.getFieldMap("TRADE_OFF")
                 }
 
                 //EMOTION: "emotion",

@@ -1,21 +1,22 @@
 class createNewObject_fieldMap {
     constructor() {
+
         this.fieldMap = {
             "TRADE_OFF": {
                 mdlFormName: "Create New Trade-Off",
                 mdlForm_fieldMap: {
                    title: "tradeoff_name",
                     tradeoff_group: "tradeoff_group",
-                    tradeoff_type: function(data) {return this.resolveGroupedValue(data, "tradeoff_type")},
+                    tradeoff_type: function(data, ctx, format) {return ctx.resolveGroupedValue(data, "tradeoff_type")},
                     applies_to: "applies_to",
                     example_behavior: "example_behavior",
                     dominant_pole_group: "pole_group",
-                    dominant_pole: function(data) {return this.resolveGroupedValue(data, "pole_type")},
+                    dominant_pole: function(data, ctx, format) {return ctx.resolveGroupedValue(data, "pole_type")},
                     conflicted_part: "conflicted_part",
-                    resolved_by: function(data) {return this.resolveGroupedValue(data, "resolved_by_type", {multiSelect: true} )},
+                    resolved_by: function(data, ctx, format) {return ctx.resolveGroupedValue(data, "resolved_by_type", {multiSelect: true} )},
                     resolved_by_group: "resolved_by_group",
-                    created: function(data) {return this.formatUtils.db_formatDateTime(new Date()) },
-                    last_modified: function(data) {return this.formatUtils.db_formatDateTime(new Date()) },
+                    created: function(data, ctx, format) {return format.db_formatDateTime(new Date()) },
+                    last_modified: function(data, ctx, format) {return format.db_formatDateTime(new Date()) },
                     status: () => "🟨 review",
                     entered: false,
                     export_to_inputs: false

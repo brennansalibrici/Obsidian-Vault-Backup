@@ -640,27 +640,30 @@ class ModalFormUtils {
             tp,
             fileType,
             formType,
+            file = null,
             context1 = "",
             context2 = "",
             useContextAsLink = true
         } = config;
 
+        //Shared Setup Steps - ALWAYS NEEDED Regardless of which form type is chosen!
         this.app = app;
         this.tp = tp;
 
-        if(formType){
-            switch (formType.toLowerCase()){
-                case "create":
-                    this.callingFormType = ModalFormUtils.FORM_TYPE.CREATE;
-                    break;
+        //Form Type Specific Logic & Branching
+        switch (formType.toLowerCase()){
+            case "create":
+                this.callingFormType = ModalFormUtils.FORM_TYPE.CREATE;
+                break;
 
-                case "update":
-                    this.callingFormType = ModalFormUtils.FORM_TYPE.UPDATE;
-                    break;
+            case "update":
+                this.callingFormType = ModalFormUtils.FORM_TYPE.UPDATE;
+                //resolveAllFrontMatter(FORM_TYPE.UPDATE); goes here?
+                //updateFrontMatterFromForm();
+                break;
 
-                default:
-                    this.callingFormType = ModalFormUtils.FORM_TYPE.CREATE; //fallback
-            }
+            default:
+                throw new Error(`❌ Unsupported formType: ${formType}`);
         }
 
         this.fileClass = this.fileClassRegistry.getKeyFromValue(fileType);
@@ -671,15 +674,20 @@ class ModalFormUtils {
             throw new Error(`❌ No fileTypeHandler found for: "${this.fileClass}"`);
         }
 
-        this.folderPath = this.handler.folder;
-        this.folder = app.vault.getAbstractFileByPath(this.folderPath);
-
-        this.templateFile = this.handler.template;
         this.strField1 = context1;
         this.lnkField1 = useContextAsLink ? this.string2Link(context1) : context1;
+        this.folderPath = this.handler.folder;
+        this.folder = app.vault.getAbstractFileByPath(this.folderPath);
+        this.templateFile = this.handler.template;
 
         if (!this.templateFile) {
-            throw new Error(`❌ Template file path was not set for fileType: "${this.fileType}"`);
+            throw new Error(`❌ Template file path was not set for fileType: "${this.fileClass}"`);
+        }
+
+        this.modalFormName = this.handler.modalFormMap?.mdlFormName;
+        if (!this.modalFormName) {
+            new Notice("❌ No modal form defined for this object type.");
+            return;
         }
 
         // Count matches in folder for naming logic
@@ -690,6 +698,7 @@ class ModalFormUtils {
                 }
             }
         }
+
     }
 
     createNewFileName(strName = "") {
@@ -745,20 +754,18 @@ class ModalFormUtils {
     }
 
 
-    //combines createNewFileFromTemplate() and updateFrontMatter() into a single method
+    //combines createNewFileFromTemplate() and _writeFrontMatterCreate() into a single method
     async createFileWithFrontmatter(formData) {
         try {
             this.formData = formData;
             const titleValue = this.handler.modalFormMap?.mdlForm_fieldMap.title;
             this.createNewFileName(this.formData[titleValue]);
 
-
-
             const file = await this.createNewFileFromTemplate();
-            debugger;
+
             console.log("New file object received", file);
             if (file) {
-                await this.updateFrontMatter(file);
+                await this._writeFrontMatterCreate(file);
             }
 
             return file;
@@ -863,7 +870,10 @@ resolveAllFrontmatter(formData) {
 }
 
 _resolveFrontmatterCreate(formData) {
-    const map = this.handler.modalFormMap.mdlForm_fieldMap;
+    //Works whether modalFormMap is a function or an object:
+    const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap;
+
+    const map = mapContainer?.mdlForm_fieldMap;
     if(!map) {
         console.warn(`No fieldMap defined for fileType: ${this.fileClass}`);
         return {};
@@ -873,17 +883,17 @@ _resolveFrontmatterCreate(formData) {
 
     for (const [key, resolver] of Object.entries(map)) {
         if(typeof resolver === "function") {
-        const val = resolver.call(this, formData);
-        frontmatter[key] = (val !== undefined && val !== null) ? String(val) : "";
+        const val = resolver(formData, this, this.formatUtils);
+        if(val !== undefined && val !== null) frontmatter[key] = val;
+        //frontmatter[key] = (val !== undefined && val !== null) ? String(val) : ""; *********** REMOVE THIS LINE AFTER YOU'VE TESTED THAT THE NEW STRUCTURE WORKS *******************
         } else if (typeof resolver === "string") {
         const val = formData[resolver];
-        frontmatter[key] = (val !== undefined && val !== null) ? String(val) : "";
+        if(val !== undefined && val !== null) frontmatter[key] = val;
         } else {
             console.warn(`Invalid resolver for field ${key}`);
         }
     }
-
-    return frontmatter;
+    return frontmatter; // raw values (strings/arrays), including created/last_modified from format
 }
 
 _resolveFrontmatterUpdate(formData) {
@@ -901,23 +911,38 @@ _resolveFrontmatterUpdate(formData) {
 
 
  //updates the frontmatter with defined results from any modal form and inserts them into the frontmatter of any specified file
-    async updateFrontMatter(file) {
+    async _writeFrontMatterCreate(file) {
     try {
         debugger;
-        const fieldMap = this.resolveAllFrontmatter(this.formData); //Automatically resolves based on form type
-
+        const fieldMap = this.resolveAllFrontmatter(this.formData); //Automatically resolves based on form type (updated resolver)
+        const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap;
+        const mapObj = mapContainer?.mdlForm_fieldMap || {};
+debugger;
         await this.app.fileManager.processFrontMatter(file, (fm) => {
             for (const [key, value] of Object.entries(fieldMap)) {
                 if (value === undefined || value === null) continue;
 
-                    const existing = fm[key];
+                    //const existing = fm[key];
 
                     const toLink = (v, key) => {
                     if (!ModalFormUtils.linkFields.includes(key)) return v; //Eventually this list of fields needs to be trasfered to the fieldMap and the formatting portion needs to be transfered to the formatting class
                     if (typeof v !== "string") return v;
-                    return v.startsWith("[[") ? v : `[[${v}]]`;
+                    return v.trim().startsWith("[[") ? v.trim() : `[[${v.trim()}]]`;
                     };
 
+                    //look up per-field flags if you've set them in your mapObj
+                    const mapping = typeof mapObj[key] === "object" ? mapObj[key] : {};
+                    const isArrayField = mapping?.multiSelect === true;
+
+                    //CREATE PATH: no merging. Just write normalized value.
+                    if(Array.isArray(value)) {
+                        fm[key] = value.map(v => toLink(v, key));     //write YAML array
+                    } else {
+                        //If the field is explicitily multiSelect but a single value came in, make it a single item array
+                        fm[key] = isArrayField ? [toLink(value,key)] : toLink(value, key);
+                    }
+
+                    /*
                     // If the existing field is an array, merge and dedupe
                     if (Array.isArray(existing)) {
                     const incoming = Array.isArray(value) ? value : [value];
@@ -937,7 +962,7 @@ _resolveFrontmatterUpdate(formData) {
                     fm[key] = Array.isArray(value)
                         ? value.map((v) => toLink(v, key))
                         : toLink(value, key);
-                    }
+                    }*/
                 }
             });
 
@@ -995,9 +1020,9 @@ _resolveFrontmatterUpdate(formData) {
 
 //#region RETRIEVE SPECIFIED FILE PROPERTIES
     // accepts a fileClass value in order to retrieve the appropriate form to open. It also accepts the tp and app object in preparation for other actions once the form is opened like populating form fields and updating data fields
-    async getUpdateFormFromFileClass(app, tp, file) {
-    this.app = app;
-    this.tp = tp;
+ /*   async getUpdateFormFromFileClass(app, tp, file) {
+   // this.app = app;
+    //this.tp = tp;
     this.frontmatter = this.getFrontMatterMap(file);
     this.modalFormFieldMap_Values = {}; // Make sure it's reset
 
@@ -1097,7 +1122,7 @@ _resolveFrontmatterUpdate(formData) {
     }
     console.log("Form Values:", this.modalFormFieldMap_Values);
 
-}
+}*/
     // ****UPDATE THIS FUNCTION NEXT******
     updateFrontMatterFromForm(file, result) {
     if (!result.data || Object.keys(result.data).length === 0) {
@@ -1192,7 +1217,7 @@ _resolveFrontmatterUpdate(formData) {
 }
 
 resolveGroupedValue(formData, groupFilterKey, {multiSelect = false} = {}) {
-    const registry = this.constructor.groupFilterRegistry?.[groupFilterKey];
+    const registry = this.handler.groupTypeFilter?.[groupFilterKey];
     if(!registry || !registry.groupField || !registry.subFieldsByGroup) {
         console.warn(`GroupFilter '${groupFilterKey}' is not registered.`);
         return multiSelect ? []: null;

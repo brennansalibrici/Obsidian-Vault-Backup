@@ -2,7 +2,21 @@ class updateObject_fieldMap {
     constructor() {
         this.fieldMap = {
             "TRADE_OFF": {
-                mdlFormName: "Update Trade-Off"
+                mdlFormName: "Update Trade-Off",
+                mdlForm_fieldMap: {
+                   "filename": {key: "filename", from: "file"},
+                    "tradeoff_name": "title",
+                    "tradeoff_group": {key: "tradeoff_group", singleSelect: true},
+                    "pole_group": {key: "dominant_pole_group", singleSelect: true},
+                    "applies_to": {key: "applies_to", singleSelect: true},
+                    "conflicted_part": {key: "conflicted_part", isLink: true},
+                    "resolved_by_group": {key: "resolved_by_group", singleSelect: true},
+                    "reviewed": "entered",
+                    "status": {key: "status", singleSelect: true},
+                    "tradeoff_type": {key: "tradeoff_type", groupFilter: "tradeoff_type", singleSelect: true},
+                    "dominant_pole": {key: "dominant_pole", groupFilter: "pole_type", singleSelect: true},
+                    "resolved_by": {key: "resolved_by", groupFilter: "resolved_by_type", multiSelect: true},
+                }
             }
         };
     }

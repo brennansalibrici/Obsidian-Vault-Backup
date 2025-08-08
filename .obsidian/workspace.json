@@ -18,20 +18,6 @@
             }
           },
           {
-            "id": "18be80e20eda2e83",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ME/🏛️ Foundations/⚖️Trade-Offs/A Test TradeOff.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "A Test TradeOff"
-            }
-          },
-          {
             "id": "377919988d86717d",
             "type": "leaf",
             "state": {
@@ -72,9 +58,51 @@
               "icon": "lucide-file",
               "title": "Modal Update Form Template"
             }
+          },
+          {
+            "id": "a8a51ad0592403ab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Meta/Templates/me/Foundations/TradeOff Template.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TradeOff Template"
+            }
+          },
+          {
+            "id": "3bc678cf11168bfd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "⚖️Trade-Offs"
+            }
+          },
+          {
+            "id": "aba5b81b9fda8bbd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ME/🏛️ Foundations/⚖️Trade-Offs/A.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "A"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -199,7 +227,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 267.49999618530273
   },
   "right": {
     "id": "2ad0a5f6e9f09c33",
@@ -371,14 +399,35 @@
       "cmdr:Templater: Insert Meta/Templates/modal form controllers/Modal Update Form Template.md": false
     }
   },
-  "active": "18be80e20eda2e83",
+  "active": "aba5b81b9fda8bbd",
   "lastOpenFiles": [
     "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/A Test TradeOff.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/AAA.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/AAARP.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/AA TEST.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/AAS.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Asdf.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/AAASSSDDD.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/ASDSD.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/AASA.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/ASS.md",
+    "Meta/Scripts/CustomJS_Scripts/obsidianFormatTools {.js",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Asdfa.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/AGSGS.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Asdgf.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/ANOTHE.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Adf.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/ANOTHER ON.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/ANOTHER ONE.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/ANOTHER TRADEOFF.md",
+    "Meta/Templates/me/Foundations/TradeOff Template.md",
     "Meta/Templates/modal form controllers/Create New Object From Modal Form.md",
-    "Meta/Templates/modal form controllers/Modal Update Form Template.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A REAL TRADE.md",
+    "Scratch Pad.md",
     "ME/🏛️ Foundations/⚖️Trade-Offs/Anticipation vs. Presence.md",
-    "Work/👤 POCs/Chris Cisneros.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A TRADEOFF TEST.md",
+    "Meta/Templates/modal form controllers/Modal Update Form Template.md",
     "Meta/Scripts/CustomJS_Scripts/updateObject_fieldMaps.js",
     "Meta/Scripts/CustomJS_Scripts/groupTypeFilterRegistry_fieldMaps.js",
     "Meta/Scripts/CustomJS_Scripts/createNewObject_fieldMaps.js",
@@ -388,27 +437,6 @@
     "Meta/Scripts/Staging Folder/updateObject_fieldMaps.js",
     "Meta/Scripts/Staging Folder/testscript.js",
     "Meta/Scripts/Staging Folder/groupTypeFilterRegistry_fieldMaps.js",
-    "Meta/Scripts/Staging Folder/doNotLinkRegistry.js",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/A TEst TradeOff.md",
-    "ME/🏛️ Foundations/🏛️ Foundations.md",
-    "Meta/fileClass/personal/people/person.md",
-    "Meta/fileClass/personal/people/poc.md",
-    "Meta/fileClass/work/training.md",
-    "Meta/fileClass/work/subcontractor.md",
-    "Meta/fileClass/work/site.md",
-    "Meta/fileClass/work/job.md",
-    "Meta/fileClass/work/customer.md",
-    "Meta/fileClass/work/electricalequipment/tripunit.md",
-    "Meta/fileClass/work/electricalequipment/relay.md",
-    "Meta/fileClass/work/electricalequipment/ocpd/fuse.md",
-    "Meta/fileClass/work/electricalequipment/ocpd/breaker.md",
-    "Meta/fileClass/work/electricalequipment/equipment/equipment.md",
-    "Meta/fileClass/work/electricalequipment/equipment/switchgear.md",
-    "Meta/fileClass/work/electricalequipment/equipment/enclosuremanufacturer_list.md",
-    "Meta/fileClass/me/practice_lab/scenario.md",
-    "Meta/fileClass/me/practice_lab/coaching.md",
-    "Meta/fileClass/me/practice_lab/live_rehearsal.md",
-    "Meta/fileClass/me/practice_lab/practice_session.md",
     "Obsidian Dashboard.canvas",
     "My Files/My Attachments/Pasted image 20250701063017.png",
     "My Files/My Attachments/Pasted image 20250605211151.png",
