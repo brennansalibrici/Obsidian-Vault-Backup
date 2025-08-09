@@ -16,7 +16,7 @@ class groupTypeFilter_fieldMap {
                         "Belonging vs. Integrity": "type_belonging"
                     },
                     reverseLookupMap: {
-                        "Closeness vs. Independence": {key: "type_connection", singleSelect: true},
+                        "Closeness vs. Independence": "type_connection",
                         "Distance vs. Closeness": "type_connection",
                         "Trust vs. Control": "type_connection",
                         "Honesty vs. Acceptance": "type_safety",

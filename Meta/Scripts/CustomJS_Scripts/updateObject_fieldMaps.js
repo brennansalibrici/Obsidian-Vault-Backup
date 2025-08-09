@@ -9,7 +9,7 @@ class updateObject_fieldMap {
                     "tradeoff_group": {key: "tradeoff_group", singleSelect: true},
                     "pole_group": {key: "dominant_pole_group", singleSelect: true},
                     "applies_to": {key: "applies_to", singleSelect: true},
-                    "conflicted_part": {key: "conflicted_part", isLink: true},
+                    "conflicted_part": {key: "conflicted_part", isLink: true, multiSelect: true},
                     "resolved_by_group": {key: "resolved_by_group", singleSelect: true},
                     "reviewed": "entered",
                     "status": {key: "status", singleSelect: true},

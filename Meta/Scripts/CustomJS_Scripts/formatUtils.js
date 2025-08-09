@@ -85,8 +85,7 @@ class FormatUtils {
 
       //strips brackets from a string link
       stripLinkBrackets(str){
-        if(typeof str !== "string") return str;
-        return str.startsWith("[[") && str.endsWith("]]") ? str.slice(2, -2) : str;
+        return this.unwrapLink(str);
       }
 
     //#endregion COLLECTION OF MODULAR METHODS THAT CAN BE USED EITHER ON THEIR OWN OR COMBINED IN ANY COMBINATION TO ACHIEVE A PARTICULAR OUTCOME
@@ -120,49 +119,78 @@ class FormatUtils {
 
   //#region DIRECTIONAL NORMALIZERS
       //Normalize value for writing to YAML Frontmatter (array or scalar), link wrapping optional
-      toYamlList(value, {link = false} = {}) {
-        const arr = this.ensureArray(value)
-          .map(v => (typeof v === "string" ? v.trim() : v))
-          .map(v => (stripLinks ? this.unwrapLink(v) : v));
-        return this.uniqueClean(arr);
-      }
+      // Normalize value for writing to YAML Frontmatter (array or scalar), link wrapping optional
+    toYamlList(value, { link = false } = {}) {
+      const arr = this.ensureArray(value)
+        .map(v => (typeof v === "string" ? v.trim() : v))
+        .map(v => (link ? this.wrapLink(v) : v));   // ✅ wrap when link=true
+      return this.uniqueClean(arr);
+    }
 
-      mergeYamlLists(exsiting, incoming){
-        const left = this.ensureArray(exsiting);
-        const right = this.ensureArray(incoming);
-        return this.uniqueClean([...left, ...right]);
-      }
+    mergeYamlLists(existing, incoming) {
+      const left = this.ensureArray(existing);
+      const right = this.ensureArray(incoming);
+      return this.uniqueClean([...left, ...right]);
+    }
+
+    /**
+     * Convert a frontmatter value (scalar or array) into a clean JS array for modal form prefill.
+     * @param {string|string[]} value - The raw frontmatter value
+     * @param {Object} opts
+     * @param {boolean} [opts.stripLinks=false] - Remove [[ ]] from links
+     * @returns {string[]} Clean array for form
+     */
+    toFormList(value, { stripLinks = false } = {}) {
+      if (value == null) return [];
+
+      const arr = Array.isArray(value) ? value : [value];
+
+      if (!stripLinks) return arr;
+
+      return arr.map(v => {
+        if (typeof v !== "string") return v;
+        // unwrap [[...]] if present
+        return v.replace(/^\s*\[\[|\]\]\s*$/g, "").trim();
+      });
+    }
+
+
 
   //#endregion
 
   //#region SELECT SEMANTICS HELPERS
-      //Decide array vs scalar, then sape normalized array accordingly
-      applySelectSemantics(normarlizedArray, {singleSelect = false} = {}) {
-        return singleSelect ? (normarlizedArray[0] ?? "") : normarlizedArray;
+      // Decide array vs scalar, then shape normalized array accordingly
+      applySelectSemantics(normalizedArray, { singleSelect = false } = {}) {
+        return singleSelect ? (normalizedArray[0] ?? "") : normalizedArray;
       }
 
-      //One-stop normalizer using map flags & link rules
+      // One-stop normalizer using map flags & link rules
       normalizeForWrite({
-          value,
-          exsiting = undefined,
-          isLinkField = false,
-          singleSelect = false,
-          multiSelect = false,
-          merge = true, //merge arrays when updating
-        }) {
-          const wantsArray = multiSelect === true;
-          const normlizedArr = this.toYamlList(value, {link: isLinkField});
+        value,
+        existing = undefined,
+        isLinkField = false,
+        singleSelect = false,
+        multiSelect = false,
+        merge = true, // merge arrays when updating
+      }) {
+        // explicit-only: only multiSelect => array
+        const wantsArray = multiSelect === true;
 
-          const shaped = wantsArray ? normlizedArr : this.applySelectSemantics(normlizedArr, {singleSelect: true});
+        // produce a cleaned array, wrapping links per item if needed
+        const normalizedArr = this.toYamlList(value, { link: isLinkField });
 
-          if(!merge) return shaped;
+        const shaped = wantsArray
+          ? normalizedArr
+          : this.applySelectSemantics(normalizedArr, { singleSelect: true });
 
-          //Merge if existing is array-like or if wantsArray; otherwise overwrite scalar
-          if(wantsArray) {
-              return this.mergeYamlLists(exsiting, shaped);
-          } else {
-            return shaped;
-          }
+        if (!merge) return shaped;
+
+        // Merge if updating arrays, otherwise just return shaped scalar
+        if (wantsArray) {
+          return this.mergeYamlLists(existing, shaped);
+        } else {
+          return shaped;
+        }
       }
 
 

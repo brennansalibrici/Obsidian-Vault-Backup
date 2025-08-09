@@ -698,7 +698,6 @@ class ModalFormUtils {
                 }
             }
         }
-
     }
 
     createNewFileName(strName = "") {
@@ -754,7 +753,7 @@ class ModalFormUtils {
     }
 
 
-    //combines createNewFileFromTemplate() and _writeFrontMatterCreate() into a single method
+    //combines createNewFileFromTemplate() and _writeFrontMatter_fromCreateForm() into a single method
     async createFileWithFrontmatter(formData) {
         try {
             this.formData = formData;
@@ -765,7 +764,7 @@ class ModalFormUtils {
 
             console.log("New file object received", file);
             if (file) {
-                await this._writeFrontMatterCreate(file);
+                await this._writeFrontMatter_fromCreateForm(file);
             }
 
             return file;
@@ -777,7 +776,7 @@ class ModalFormUtils {
         }
     }
 
-    //When called, this function creates a new and seperate file (from an existing template) which is called from a modal form's logic but it completely seperate from the template and/or the fileclass calling the function.
+    //Creates a new and seperate file (from an existing template) which is called from a modal form's logic but it completely seperate from the template and/or the fileclass calling the function.
     async createNewFileFromTemplate() {
         try {
             const templateFile = this.app.vault.getAbstractFileByPath(this.templateFile);
@@ -798,6 +797,26 @@ class ModalFormUtils {
         } catch (err) {
             console.error("❌ Error creating file from template:", err);
             new Notice("❌ Failed to create file from template. Check console for details.");
+        }
+    }
+
+    //Updates an existing file's frontmatter with values from the current modal form
+    async updateFileWithFrontmatter(file, formData){
+        try{
+            //resolve & normalize YAML-ready values
+            const updatedFrontMatter = this._resolveFrontmatterUpdate(formData);
+
+            await this.app.fileManager.processFrontMatter(file, (fm) => {
+                for(const [k,v] of Object.entries(updatedFrontMatter)){
+                    fm[k] = v;
+                }
+                fm["last_modified"] = this.formatUtils.db_formatDateTime(new Date());
+            })
+
+            new Notice("✅ Updated frontmatter.");
+        } catch (err) {
+            console.error("❌ Error updating frontmatter from modal form:", err);
+            new Notice("❌ Failed to update file from form. Check console for details.");
         }
     }
 
@@ -875,7 +894,7 @@ _resolveFrontmatterCreate(formData) {
 
     const map = mapContainer?.mdlForm_fieldMap;
     if(!map) {
-        console.warn(`No fieldMap defined for fileType: ${this.fileClass}`);
+        console.warn(`⚠️ No fieldMap defined for fileType: ${this.fileClass}`);
         return {};
     }
 
@@ -885,7 +904,6 @@ _resolveFrontmatterCreate(formData) {
         if(typeof resolver === "function") {
         const val = resolver(formData, this, this.formatUtils);
         if(val !== undefined && val !== null) frontmatter[key] = val;
-        //frontmatter[key] = (val !== undefined && val !== null) ? String(val) : ""; *********** REMOVE THIS LINE AFTER YOU'VE TESTED THAT THE NEW STRUCTURE WORKS *******************
         } else if (typeof resolver === "string") {
         const val = formData[resolver];
         if(val !== undefined && val !== null) frontmatter[key] = val;
@@ -897,27 +915,105 @@ _resolveFrontmatterCreate(formData) {
 }
 
 _resolveFrontmatterUpdate(formData) {
-     const map = this.handler.modalFormMap.mdlForm_fieldMap;
- if (!map) {
-        console.warn(`⚠️ No fieldMap defined for fileClass: ${this.fileClass}`);
+    //Works whether modalFormMap is a function or an object:
+    const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap;
+
+    const map = mapContainer?.mdlForm_fieldMap;
+    if(!map) {
+        console.warn(`⚠️ No fieldMap defined for fileType: ${this.fileClass}`);
         return {};
     }
 
-    const frontmatter = {};
-    // ... rest of the loop
+    //Group filer registry (function or obejct)
+    const groupReg = (typeof this.handler.groupTypeFilter === "function") ? this.handler.groupTypeFilter() : this.handler.groupTypeFilter || {};
 
-    return frontmatter;
+    const updates = {};
+
+    //Apply optional type hooks (date, time, date_time, link, etc)
+    const applyTypeHook = (val, type, fieldName) => {
+        if(!type) return val;
+        const hook = this.fieldTypeFormatHooks?.[type];
+        if(!hook) return val;
+        return Array.isArray(val) ? val.map(v => hook(v, formData, fieldName)) : hook(val, formData, fieldName);
+    }
+
+    //Sahpe to YAML per explicit only declration rule and link wrapping
+    const shapeForYaml = (val, {isLinkField, singleSelect, multiSelect}) => {
+        const wantsArray = multiSelect === true;
+        const arr = this.formatUtils.toYamlList(val, { link: isLinkField });
+        return wantsArray ? arr : (arr[0] ?? "");
+    };
+
+    for(const [formField, mapping] of Object.entries(map)) {
+        //normalize mapping to object form
+        const m = (typeof mapping === "object") ? mapping : { key: mapping} ;
+        const {
+            key, //frontmatter key to write into
+            from = "frontmatter",
+            singleSelect = false,
+            multiSelect = false, //explicit declration only
+            isLink = false,
+            groupFilter = null,
+            type = null
+        } = m;
+
+        //fields coming "from: file" are read-only identifies (like filename)
+        if(from === "file") continue;
+
+        //GROUP FILTER PATH: resolve visible subfield back to a single frontmatter key
+        if(groupFilter && groupReg[groupFilter]) {
+            const reg = groupReg[groupFilter]; //{ groupField, subFieldsByGroup}
+            const groupField = reg.groupField;
+            const groupValue = formData[groupField];
+
+            //persist the group selector itself if present in the form
+            if(groupField && groupValue != null){
+                updates[groupField] = groupValue;
+            }
+
+            if(groupField && groupValue && reg.subFieldsByGroup) {
+                const subFieldKey = reg.subFieldsByGroup[groupValue];
+                if(subFieldKey){
+                    let subval = formData[subFieldKey];
+
+                    //apply type hook (if any) to the visible field's value
+                    subval = applyTypeHook(subval, type, subFieldKey);
+
+                    //shape for YAML (arrays only if multiSelect: true)
+                    updates[key] = shapeForYaml(subval, {
+                        isLinkField: isLink || ModalFormUtils.linkFields.includes(key), //***NEED TO GET RID OF LINK FIELDS AND DEFINE IT IN THE FIELD MAPS */
+                        singleSelect,
+                        multiSelect
+                    });
+                }
+            }
+            continue; //handled this mapping; next
+        }
+
+        //NON-GROUP field: get value from the form by the form field name
+        let val = formData[formField];
+
+        //apply type hook if defined on this mapping
+        val = applyTypeHook(val, type, formField);
+
+        //shape for YAML (eplicit-only multiSelect)
+        updates[key] = shapeForYaml(val, {
+            isLinkField: isLink || ModalFormUtils.linkFields.includes(key),
+            singleSelect,
+            multiSelect
+        });
+
+    }
+
+    return updates;
 }
 
-
- //updates the frontmatter with defined results from any modal form and inserts them into the frontmatter of any specified file
-    async _writeFrontMatterCreate(file) {
+//updates the frontmatter with defined results from any modal form and inserts them into the frontmatter of any specified file
+async _writeFrontMatter_fromCreateForm(file) {
     try {
-        debugger;
         const fieldMap = this.resolveAllFrontmatter(this.formData); //Automatically resolves based on form type (updated resolver)
-        const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap;
+        const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap; //works whether modalFormMap is a function or an object
         const mapObj = mapContainer?.mdlForm_fieldMap || {};
-debugger;
         await this.app.fileManager.processFrontMatter(file, (fm) => {
             for (const [key, value] of Object.entries(fieldMap)) {
                 if (value === undefined || value === null) continue;
@@ -941,28 +1037,6 @@ debugger;
                         //If the field is explicitily multiSelect but a single value came in, make it a single item array
                         fm[key] = isArrayField ? [toLink(value,key)] : toLink(value, key);
                     }
-
-                    /*
-                    // If the existing field is an array, merge and dedupe
-                    if (Array.isArray(existing)) {
-                    const incoming = Array.isArray(value) ? value : [value];
-                    const formatted = incoming.map((v) => toLink(v, key));
-                    const unique = new Set([...existing, ...formatted]);
-                    fm[key] = Array.from(unique);
-                    }
-
-                    // If the field exists but is a string, convert both to array and merge
-                    else if (existing && typeof existing === "string") {
-                    const formatted = toLink(value, key);
-                    fm[key] = Array.from(new Set([toLink(existing, key), formatted]));
-                    }
-
-                    // If it doesn’t exist yet, assign directly
-                    else {
-                    fm[key] = Array.isArray(value)
-                        ? value.map((v) => toLink(v, key))
-                        : toLink(value, key);
-                    }*/
                 }
             });
 
@@ -970,49 +1044,28 @@ debugger;
             await this.updateLastModified(file);
 
             console.log("✅ Frontmatter updated successfully:", file.path);
-        }
+    }
     catch (err) {
             console.error("❌ Failed to update frontmatter:", err);
             new Notice("❌ Error updating frontmatter. Check console for details.");
-        }
     }
+}
 
-/*
-    //retrieves the full frontmatter map from the specified file
-    getFrontMatterMap(file){
-        const cache = app.metadataCache.getFileCache(file);
-        if (!cache || !cache.frontmatter) return {};
-        return cache.frontmatter;
+//accepts a 'target' file and will update the global property 'last_modified' to the current date/time
+async updateLastModified(file) {
+    try {
+        const formattedNow = this.formatUtils.db_formatDateTime(window.moment());
+
+        await this.app.fileManager.processFrontMatter(file, (fm) => {
+        fm["last_modified"] = formattedNow;
+        });
+
+        console.log(`🕒 last_modified updated to ${formattedNow} for ${file.path}`);
+    } catch (err) {
+        console.error("❌ Failed to update last_modified field:", err);
+        new Notice("Error updating last_modified. See console.");
     }
-
-    //retrieves a single value from the frontmatter of a specified file
-    getFrontMatterValue(file, key){
-        const frontmatter = this.getFrontMatterMap(file);
-
-        if(!(key in frontmatter)) {
-            const errMsg = `❌ Frontmatter key "${key}" not found in file: ${file?.path || '[unknown file]'}`;
-            console.error(errMsg, frontmatter);
-            throw new Error(errMsg);
-        }
-
-        return frontmatter[key];
-    }
-*/
-    //accepts a 'target' file and will update the global property 'last_modified' to the current date/time
-    async updateLastModified(file) {
-        try {
-            const formattedNow = this.formatUtils.db_formatDateTime(window.moment());
-
-            await this.app.fileManager.processFrontMatter(file, (fm) => {
-            fm["last_modified"] = formattedNow;
-            });
-
-            console.log(`🕒 last_modified updated to ${formattedNow} for ${file.path}`);
-        } catch (err) {
-            console.error("❌ Failed to update last_modified field:", err);
-            new Notice("Error updating last_modified. See console.");
-        }
-    }
+}
 /**********OLD****************************************************************************************************************************************************************************************** */
 
 
@@ -1123,16 +1176,67 @@ debugger;
     console.log("Form Values:", this.modalFormFieldMap_Values);
 
 }*/
-    // ****UPDATE THIS FUNCTION NEXT******
-    updateFrontMatterFromForm(file, result) {
-    if (!result.data || Object.keys(result.data).length === 0) {
-        new Notice("No data returned from form");
-        return;
+
+buildFormValuesFromFrontmatter(file) {
+  // modalFormMap may be a function; normalize to object
+  const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap;
+
+  const mapObj = mapContainer?.mdlForm_fieldMap || {};
+  // group registry (fn or obj)
+  const groupReg = (typeof this.handler.groupTypeFilter === "function") ? this.handler.groupTypeFilter() : this.handler.groupTypeFilter || {};
+
+  // Use Templater’s parsed frontmatter snapshot
+  const fm = this.tp.frontmatter || {};
+  const values = {};
+
+  for (const [formField, mapping] of Object.entries(mapObj)) {
+    const m = (typeof mapping === "object") ? mapping : { key: mapping };
+    const {
+      key,
+      from = "frontmatter",
+      singleSelect = false,
+      isLink = false,
+      groupFilter = null
+    } = m;
+
+    if (from === "file") {
+      values[formField] = file?.basename || "";
+      continue;
     }
 
-    const formattedNow = this.formatUtils.db_formatDateTime(window.moment());
+    // ---- Group filter prefill ----
+    if (groupFilter && groupReg[groupFilter]) {
+      const reg = groupReg[groupFilter]; // { groupField, subFieldsByGroup }
+      const groupField = reg.groupField;
 
-    const fileClass = this.frontmatter.fileClass;
+      // Prefill the group selector itself if present
+      if (groupField && fm[groupField] != null) {
+        values[groupField] = fm[groupField];
+      }
+
+      // Now prefill the visible sub-field based on the group’s value
+      const raw = fm[key];
+      const arr = this.formatUtils.toFormList(raw, { stripLinks: isLink || ModalFormUtils.linkFields.includes(key) });
+
+      if (groupField && values[groupField] && reg.subFieldsByGroup) {const subFieldKey = reg.subFieldsByGroup[ values[groupField] ];
+        if (subFieldKey) {
+          values[subFieldKey] = singleSelect ? (arr[0] ?? null) : arr;
+        }
+      }
+      continue;
+    }
+
+    // ---- Non-group field ----
+    const raw = fm[key];
+    const arr = this.formatUtils.toFormList(raw, { stripLinks: isLink || ModalFormUtils.linkFields.includes(key) });
+    values[formField] = singleSelect ? (arr[0] ?? null) : arr;
+  }
+
+  return values;
+}
+
+
+    /*const fileClass = this.frontmatter.fileClass;
     const handler = Object.values(this.constructor.fileTypeHandlers).find(
         entry => entry.fileClass === fileClass
     );
@@ -1214,7 +1318,7 @@ debugger;
     });
 
     new Notice("Frontmatter Updated!");
-}
+}*/
 
 resolveGroupedValue(formData, groupFilterKey, {multiSelect = false} = {}) {
     const registry = this.handler.groupTypeFilter?.[groupFilterKey];
