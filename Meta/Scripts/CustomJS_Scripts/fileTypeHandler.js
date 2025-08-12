@@ -1,10 +1,11 @@
 
- class fileTypeHandler {
+class fileTypeHandler {
     constructor() {
         this.registry = {};
         this.createNewObject_fieldMap = {};
         this.updateObject_fieldMap = {};
         this.groupTypeFilter_fieldMap = {};
+        this.errorBus = {};
         this.formMapSource = "";
 
     }
@@ -13,6 +14,7 @@
         this.createNewObject_fieldMap = window.customJS.createcreateNewObject_fieldMapInstance();
         this.updateObject_fieldMap = window.customJS.createupdateObject_fieldMapInstance();
         this.groupTypeFilter_fieldMap = window.customJS.creategroupTypeFilter_fieldMapInstance();
+        this.errorBus = window.customJS.createerrorBusInstance();
 
         switch(formType){
             case "create":
@@ -22,10 +24,11 @@
             case "update":
                 this.formMapSource = this.updateObject_fieldMap;
                 break;
-
-            //default:
-                //this.formMapSource = this.createNewObject_fieldMap; //fallback
         }
+
+        const FC_VALUE = FCR.getAll();
+        const FILE_CLASS = Object.freeze(Object.fromEntries(Object.keys(FC_VALUE).map(k => [k,k])));
+
 /*ADD 'COUNTTRACKING: TRUE TO THE OBJECTS THAT NEED TO LOOP THROUGH THE FOLDER AND GET A COUNT VALUE WHICH IS INCLUDED IN THE OBJECT'S TITLE, PRACTICE SESSION, LIVE REHEARSAL, COACHING. EXAMPLE IN PRACTICE SESSION***************************************************************************************************************************************************************************************** */
         this.registry = {
             TEST: "TRADE_OFF",
@@ -48,8 +51,8 @@
                 ATTACHMENT_STYLE: "attachment_style",
                 ATTACHMENT_THEORY: "attachment_theory",
                 //#endregion */
-                [FCR.getKeyFromValue("tradeoff")]: {
-                    fileClass: FCR.getKeyFromValue("tradeoff"),
+                TRADE_OFF: {
+                    fileClass: "TRADE_OFF",
                     folder: "ME/🏛️ Foundations/⚖️Trade-Offs",
                     template: "Meta/Templates/me/Foundations/TradeOff Template.md",
                     naming: function(baseName) {
@@ -110,10 +113,6 @@
 
     getFormName(formType, fileType){
 
-    }
-
-    static register(customJS){
-        customJS.fileTypeHandler = new fileTypeHandler();
     }
 
  }

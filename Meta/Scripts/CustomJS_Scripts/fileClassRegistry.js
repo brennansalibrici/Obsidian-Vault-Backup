@@ -6,7 +6,7 @@ class FILE_CLASS_REGISTRY {
             CAPTURED_MOMENT: "capturedMoment",
             OBSERVATION: "observation",
             INTEGRATION_JOURNAL: "emotional_growth_journal",
-            REFLECTION_JOURNAL: "emotional_growth_journal ",
+            REFLECTION_JOURNAL: "emotional_growth_journal",
 
                 //#region FOUNDATION OBJECTS
                 TRIGGER: "trigger",
@@ -52,30 +52,32 @@ class FILE_CLASS_REGISTRY {
         };
     }
 
-    getAll() {
-        return this.registry;
-    }
+    getAll() { return this.registry; }
+    hasKey(key) {return !!this.registry[key]; }
+    hasValue(value) { return Object.values(this.registry).includes(value.trim()); }
 
-    getFileClass(fileClass){
-        return this.registry[fileClass] || null;
-    }
-
-    hasKey(key) {
-        return !!this.registry[key];
-    }
+    getFileClass(fileClass){ return this.registry[fileClass] || null; }
 
     getKeyFromValue(value){
+        if(typeof value !== "string") return null;
+        const needle = value.trim();
         for(const [key,val] of Object.entries(this.registry)){
-            if(val === value.trim()) return key;
+            if(val === needle) return key;
         }
         return null;
     }
 
-    hasValue(value) {
-        return Object.value(this.registry).includes(value.trim());
-    }
+   /*Input parameter can be either the element's [key] or the element's [value] and will return the element's [key].
+   For example you can pass either "TRADE_OFF" or "tradeoff" and will resolve and return the KEY => "TRADE_OFF" */
+   resolveKey(input) {
+    if(typeof input !== "string") return null;
+    const s = input.trim();
 
-    static register(customJS) {
-        customJS.FILE_CLASS_REGISTRY = new FILE_CLASS_REGISTRY();
-    }
+    //already a key?
+    if(this.registry[s]) return s;
+
+    //maybe a value?
+    const k = this.getKeyFromValue(s);
+    return k;
+   }
 }

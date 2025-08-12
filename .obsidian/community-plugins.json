@@ -10,7 +10,6 @@
   "nldates-obsidian",
   "templater-obsidian",
   "modalforms",
-  "customjs",
   "obsidian-git",
   "buttons",
   "quickadd",
@@ -19,5 +18,6 @@
   "cmdr",
   "file-explorer-note-count",
   "folder-note-plugin",
-  "metaedit"
+  "metaedit",
+  "customjs"
 ]

@@ -153,6 +153,7 @@ class groupTypeFilter_fieldMap {
         };
     }
 
+//#region FUNCTIONS
     getAll() {
         return this.fieldMap;
     }
@@ -165,10 +166,6 @@ class groupTypeFilter_fieldMap {
         return !!this.fieldMap[FILE_CLASS];
     }
 
-//#region FUNCTIONS
-    static register(customJS) {
-        customJS.groupTypeFilter_fieldMap = new groupTypeFilter_fieldMap();
-    }
 //#endregion
 }
 

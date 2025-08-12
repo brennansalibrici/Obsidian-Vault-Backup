@@ -2,6 +2,15 @@ class FormatUtils {
 
   // PURPOSE: Centralized source for formatting variable types across Obsidian
 
+  //#region CONSTANTS
+  static WIKILINK_RE = /^\[\[[^\]]+\]\]$/;
+
+  constructor() {
+    this.errorBus = window.customJS.createerrorBusInstance();
+  }
+
+  //#endregion
+
   //#region DATE & TIME FORMATS
 
       db_formatDateTime(dateObj) {
@@ -95,10 +104,22 @@ class FormatUtils {
 //#region FRONTMATTER/MODALFORM CONVERSIONS
 
   //#region CORE PRIMITIVES
-      wrapLink(str) {
-        if(typeof str !== "string") return str;
+      wrapStringIntoLink(str, { allowEmpty = false } = {}) {
+        if (str == null) return str;     //null/undefined -> just pass it through
+        if (Array.isArray(str)) return str.map(s => this.wrapStringIntoLink(s, { allowEmpty })); //array -> map each item
+
+        if (typeof str !== "string") return str;
         const s = str.trim();
-        return s.startsWith("[[") && s.endsWith("]]") ? s : `[[${s}]]`;
+        if (!s && !allowEmpty) return s; //normalize empties
+
+        //Already a link? Keep it exactly as is (covers alias, heading, blocks)
+        if (FormatUtils.WIKILINK_RE.test(s)) return s;
+
+        //Do not wrap image embeds like ![[...]]
+        if (s.startsWith("![[") && s.endsWith("]]")) return s;
+
+        //If the caller passed a bare heading anchor or block id, just wrap the whole thing, like "Note Name#Section", Note Name^abc123
+        return `[[${s}]]`;
       }
 
       unwrapLink(str) {
@@ -123,7 +144,7 @@ class FormatUtils {
     toYamlList(value, { link = false } = {}) {
       const arr = this.ensureArray(value)
         .map(v => (typeof v === "string" ? v.trim() : v))
-        .map(v => (link ? this.wrapLink(v) : v));   // ✅ wrap when link=true
+        .map(v => (link ? this.wrapStringIntoLink(v) : v));   // ✅ wrap when link=true
       return this.uniqueClean(arr);
     }
 
@@ -196,7 +217,25 @@ class FormatUtils {
 
   //#endregion
 
-//#endregion
+  //#region NAMING RULES
+      sanitizeForFilename(input) {
+        if (typeof input !== "string") return "Untitled";
+        // collapse underscores/commas to spaces
+        const collapsed = input.replace(/[,_]+/g, " ").replace(/\s+/g, " ").trim();
+        // remove illegal chars
+        const safe = this.stripIllegalFilenameChars(collapsed);
+        // Title Case but preserve acronyms
+        const titled = this.formatTitleCase(safe);
+        return titled || "Untitled";
+      }
+
+
+
+
+
+    //#endregion
+
+      //#endregion
 
 }
 

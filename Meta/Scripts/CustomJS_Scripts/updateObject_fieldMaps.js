@@ -6,6 +6,7 @@ class updateObject_fieldMap {
                 mdlForm_fieldMap: {
                    "filename": {key: "filename", from: "file"},
                     "tradeoff_name": "title",
+                    "titleBlock": "Test",
                     "tradeoff_group": {key: "tradeoff_group", singleSelect: true},
                     "pole_group": {key: "dominant_pole_group", singleSelect: true},
                     "applies_to": {key: "applies_to", singleSelect: true},
@@ -33,9 +34,6 @@ class updateObject_fieldMap {
         return !!this.fieldMap[FILE_CLASS];
     }
 
-    static register(customJS) {
-        customJS.updateObject_fieldMap = new updateObject_fieldMap();
-    }
 }
 
 /*export const updateObject_fieldMap = {

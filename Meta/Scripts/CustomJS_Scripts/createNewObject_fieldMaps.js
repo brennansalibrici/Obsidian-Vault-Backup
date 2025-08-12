@@ -39,9 +39,6 @@ class createNewObject_fieldMap {
         return !!this.fieldMap[FILE_CLASS];
     }
 
-    static register(customJS) {
-        customJS.createNewObject_fieldMap = new createNewObject_fieldMap();
-    }
 }
 
 

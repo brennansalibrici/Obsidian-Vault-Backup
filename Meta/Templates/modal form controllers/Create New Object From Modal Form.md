@@ -1,9 +1,9 @@
 <%*
 //Open the form first
 const modalForm = app.plugins.plugins.modalforms.api;
-const fileType = tp.frontmatter.newObject;
+const fileClass = tp.frontmatter.newObject;
 const utils = window.customJS.createModalFormUtilsInstance();
-await utils.init({ app, tp, fileType, formType: "create" });
+await utils.init({ app, tp, fileClass, formType: "create" });
 
 const result = await modalForm.openForm(utils.modalFormName);
 if (result.status === "cancelled") {

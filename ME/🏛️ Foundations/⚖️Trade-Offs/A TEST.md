@@ -1,10 +1,10 @@
 ---
 fileClass: tradeoff
-id: 1754679515727
-created: 2025-08-08 13:58
-last_modified: 2025-08-08 19:44
-title: A TRADEOFF TEST
-status: 🟨 review
+id: 1754946977383
+created: 2025-08-11 16:16
+last_modified: 2025-08-12 11:05
+title: A TEST
+status: 🟧 in progress
 type: [trigger]
 tags: []
 category: [note]
@@ -24,15 +24,15 @@ intensity_scale: ""
 mechanism: 
 definition: ""
 behavior_functions: 
-tradeoff_group: Connection vs. Autonomy
-tradeoff_type: Distance vs. Closeness
-applies_to: Core Wound
+tradeoff_group: Control vs. Vulnerability
+tradeoff_type: Being Known vs. Being in Control
+applies_to: Emotional Need
 example_behavior: ""
 dominant_pole_group: Truth & Authenticity
 dominant_pole: Authenticity
-conflicted_part: ["[[Don't Make It About You]]", "[[I Did That]]"]
+conflicted_part: ["[[Don't Feel That]]", "[[Everyone Saw That]]"]
 resolved_by_group: Cognitive & Emotional Reframing
-resolved_by: [Recognizing the role of trauma or conditioning, Naming protective strategies for what they are]
+resolved_by: [Reframing vulnerability as strength, Recognizing the role of trauma or conditioning]
 notes: 
 related: 
 media: 

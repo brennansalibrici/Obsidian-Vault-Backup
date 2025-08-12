@@ -10383,15 +10383,26 @@
     {
       "title": "Update Trade-Off",
       "name": "Update Trade-Off",
+      "customClassname": "",
       "fields": [
         {
           "name": "tradeoff_name",
           "label": "Trade-Off Name",
           "description": "Name",
-          "isRequired": true,
+          "isRequired": false,
           "input": {
             "type": "text",
-            "hidden": false
+            "hidden": true
+          }
+        },
+        {
+          "name": "TRADE-OFF TO UPDATE:",
+          "label": "",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "document_block",
+            "body": "return `${form.tradeoff_name}`"
           }
         },
         {
@@ -11141,7 +11152,10 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices",
+            "allowUnknownValues": false,
+            "query": "",
+            "multi_select_options": []
           }
         },
         {
@@ -11196,7 +11210,8 @@
               "Meaning-based action",
               "Internal boundary repair"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -11218,7 +11233,8 @@
               "Letting the protective voice feel seen",
               "Inviting a deeper core need to speak"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -11239,7 +11255,8 @@
               "Recognizing the role of trauma or conditioning",
               "Naming protective strategies for what they are"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -11261,7 +11278,8 @@
               "Journal dialoguing between parts",
               "Embodied grounding to regulate intensity"
             ],
-            "allowUnknownValues": true
+            "allowUnknownValues": true,
+            "query": ""
           }
         },
         {
@@ -11313,6 +11331,33 @@
                 "label": "⬛️ blocked"
               }
             ]
+          }
+        }
+      ],
+      "version": "1"
+    },
+    {
+      "title": "Test",
+      "name": "Test Form",
+      "fields": [
+        {
+          "name": "title",
+          "label": "",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
+          }
+        },
+        {
+          "name": "description",
+          "label": "",
+          "description": "",
+          "isRequired": false,
+          "input": {
+            "type": "text",
+            "hidden": false
           }
         }
       ],

@@ -4,7 +4,7 @@ id: 1751291319691
 created: 2025-06-30 08:48
 last_modified: 2025-06-30 08:48
 title: Job Template
-status: 🟩 complete
+status: [🟩 complete]
 type: 
 tags: []
 category: [note]
@@ -16,7 +16,7 @@ notes: [""]
 related: 
 media: 
 attachments: 
-job_name: Data Collection HTDC Ross, TX
+job_name: Data Collection HTDC Ross, TX Trip 1
 site: "[[HTDC Brookshire, TX]]"
 job_number: S00100.371
 pk_pm: "[[Walldo Deluna]]"

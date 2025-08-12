@@ -1,7 +1,9 @@
 {
   "jsFiles": "",
   "jsFolder": "Meta/Scripts/CustomJS_Scripts",
-  "startupScriptNames": [],
+  "startupScriptNames": [
+    "ModalFormsBootstrap"
+  ],
   "registeredInvocableScriptNames": [],
-  "rerunStartupScriptsOnFileChange": false
+  "rerunStartupScriptsOnFileChange": true
 }

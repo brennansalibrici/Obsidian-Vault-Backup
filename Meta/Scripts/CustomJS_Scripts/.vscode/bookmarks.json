@@ -9,52 +9,47 @@
 					"label": "REGION - CONSTRUCTOR, ENUMS, PROPERTIES AND CLASS DEFS"
 				},
 				{
-					"line": 110,
-					"column": 0,
-					"label": "REGION - CLASS UTILITY FUNCTIONS"
-				},
-				{
-					"line": 634,
+					"line": 168,
 					"column": 0,
 					"label": "REGION - FILE GENERATION FUNCTIONS"
 				},
 				{
-					"line": 653,
+					"line": 190,
 					"column": 0,
 					"label": "Init() Switch Statement"
 				},
 				{
-					"line": 772,
+					"line": 312,
 					"column": 0,
 					"label": "createFileWithFrontMatter()"
 				},
 				{
-					"line": 826,
+					"line": 366,
 					"column": 0,
 					"label": "updateFileWithFrontMatter"
 				},
 				{
-					"line": 875,
+					"line": 415,
 					"column": 0,
 					"label": "REGION - FRONTMATTER FUNCTIONS"
 				},
 				{
-					"line": 891,
+					"line": 431,
 					"column": 1,
 					"label": ""
 				},
 				{
-					"line": 1022,
+					"line": 562,
 					"column": 0,
 					"label": "_writeFrontMatterCreate()"
 				},
 				{
-					"line": 1090,
+					"line": 630,
 					"column": 0,
 					"label": "getUpdateFormFromFileClass()"
 				},
 				{
-					"line": 1178,
+					"line": 719,
 					"column": 0,
 					"label": "_writeFrontMatter_fromUpdateForm"
 				}
