@@ -7,8 +7,6 @@ class ModalFormsBootstrap {
         console.log("🚀 Bootstrap file loaded successfully!");
         new Notice("🚀 Bootstrap file loaded successfully!");
 
-
-
         //Idempotency: don't double-run on script reloads
         window.customJS.state = window.customJS.state || {};
         if (window.customJS.state.modalFormsBootstrapped_v1) return;
@@ -40,25 +38,8 @@ class ModalFormsBootstrap {
         window.customJS.createupdateObject_fieldMapInstance    = () => new UpdateMapCtor();
         window.customJS.creategroupTypeFilter_fieldMapInstance = () => new GroupMapCtor();
 
-        // ---- Field-type registry & pipeline
-       // if (FieldTypeCtor) {
-        // canonical (new)
-       // window.customJS.createFIELD_TYPE_REGISTRYInstance = () => new FieldTypeCtor();
-       //window.customJS.FIELD_TYPE_ENUM = (FieldTypeCtor.TYPE || FieldTypeCtor.TYPES || null);
-        //window.customJS.createFieldTypeInstance           = () => new FieldTypeCtor();
-
-        // back-compat alias used by current fieldMaps
-        //window.customJS.createFieldTypesInstance          = () => new FieldTypeCtor();
-        //window.customJS.createFieldTypesCJSInstance       = () => new FieldTypeCtor();
-       // }
-        if (FieldHandlerCtor) {
-        window.customJS.createFieldHandlerInstance        = () => new FieldHandlerCtor();
-        //window.customJS.createFieldHandlersCJSInstance    = () => new FieldHandlerCtor();
-        }
-        if (FieldPipelineCtor) {
-        window.customJS.createFieldPipelineInstance       = () => new FieldPipelineCtor();
-        //window.customJS.createFieldPipelineCJSInstance    = () => new FieldPipelineCtor();
-        }
+        if (FieldHandlerCtor) { window.customJS.createFieldHandlerInstance = () => new FieldHandlerCtor(); }
+        if (FieldPipelineCtor) { window.customJS.createFieldPipelineInstance = () => new FieldPipelineCtor(); }
 
         // ---- FILE_CLASS registry (factory + enum convenience)
         window.customJS.createFILE_CLASS_REGISTRYInstance = () => c.FILE_CLASS_REGISTRY;

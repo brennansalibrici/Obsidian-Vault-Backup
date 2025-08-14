@@ -6,7 +6,7 @@
       {
         "id": "34ee373fcc5b5ca6",
         "type": "tabs",
-        "dimension": 46.213808463251674,
+        "dimension": 51.54730327144121,
         "children": [
           {
             "id": "377919988d86717d",
@@ -49,14 +49,23 @@
               "icon": "lucide-file",
               "title": "⚖️Trade-Offs"
             }
+          },
+          {
+            "id": "f23c8c62419335bb",
+            "type": "leaf",
+            "state": {
+              "type": "modal-form-manage-forms-view",
+              "state": {},
+              "icon": "documents",
+              "title": "Manage forms"
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "5e51590480c6defc",
         "type": "tabs",
-        "dimension": 53.786191536748326,
+        "dimension": 48.45269672855879,
         "children": [
           {
             "id": "d8de7ce045dedacc",
@@ -86,8 +95,7 @@
               "title": "Create New Object From Modal Form"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -384,9 +392,12 @@
       "cmdr:Templater: Insert Meta/Templates/modal form controllers/Modal Update Form Template.md": false
     }
   },
-  "active": "c0eb15b5bffdd837",
+  "active": "d8de7ce045dedacc",
   "lastOpenFiles": [
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Anticipation vs. Presence.md",
     "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST.md",
+    "Meta/Templates/modal form controllers/Modal Update Form Template.md",
+    "Meta/Templates/modal form controllers/Create New Object From Modal Form.md",
     "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
     "My Areas/My Obsidian/My Obsidian.md",
     "Knowledge/My Resources/My Resources.md",
@@ -414,11 +425,8 @@
     "My Areas/My Obsidian/JS Structure/IO and Errors.md",
     "My Areas/My Obsidian/JS Structure/Naming Conventions.md",
     "Meta/Templates/me/Foundations/TradeOff Template.md",
-    "Meta/Templates/modal form controllers/Create New Object From Modal Form.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/Anticipation vs. Presence.md",
     "Meta/fileClass/me/foundations/tradeoffs/tradeoff.md",
     "Meta/fileClass/global/global.md",
-    "Meta/Templates/modal form controllers/Modal Update Form Template.md",
     "Work/🛠 My Jobs/Data Collection - HTDC Ross, TX Trip 2.md",
     "Work/🛠 My Jobs/Data Collection HTDC Ross, TX Trip 1.md",
     "Nicole Hammet.md",

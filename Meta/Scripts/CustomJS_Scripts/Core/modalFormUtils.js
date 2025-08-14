@@ -824,10 +824,23 @@ buildFormValuesFromFrontmatter(file) {
 
 concatUpdateFormTitle(file) {
     const name = file?.basename || "Untitled";
-    return `Update - ${name}`;
+    return "Update Frontmatter - " + name;
 }
 
-async #setDynamicModalTitle(desiredTitle, { className = null, timeoutMs = 2000 } = {}) {
+#setDynamicModalTitle(containerEl, titleText) {
+  try {
+    if (!containerEl || !titleText) return;
+    // Try common title selectors used by Modal Forms / Obsidian
+    const header =
+      containerEl.querySelector(".modal-title") ||
+      containerEl.querySelector("h3, h2, .setting-item-name");
+    if (header) header.textContent = titleText;
+  } catch (e) {
+    console.warn("[ModalFormUtils] setDynamicModalTitle failed:", e);
+  }
+}
+
+async #setDynamicModalTitle_old(desiredTitle, { className = null, timeoutMs = 2000 } = {}) {
   if (!desiredTitle) return false;
 
   const deadline = Date.now() + timeoutMs;
@@ -889,7 +902,7 @@ async #setDynamicModalTitle(desiredTitle, { className = null, timeoutMs = 2000 }
 
 async setDynamicFormTitle(newTitle, { className = "mf-dynamic-title", timeout = 6000 } = {}) {
     //wait until the modal with out custom class becomes visible
-    const moadl = await this.#waitForModal(`.${className}`, timeout);
+    const modal = await this.#waitForModal(`.${className}`, timeout);
     if(!modal) {
         console.warn("[ModaFormUtils] Dynamic title: modal not found");
         return;
@@ -918,21 +931,14 @@ async setDynamicFormTitle(newTitle, { className = "mf-dynamic-title", timeout = 
 }
 
 #waitForModal(selector, timeoutMS = 6000) {
-    return new Promise(resolve => {
-        const found = document.querySelector(selector);
-        if(found) return resolve(found);
-
-        const start = Date.now();
-        const poll = setInterval(() => {
-            if(el) {
-                clearInterval(poll);
-                resolve(el);
-            } else if (Date.now() - start > timeoutMS) {
-                clearInterval(poll);
-                resolve(null);
-            }
-        }, 50);
-    });
+  return new Promise(resolve => {
+    const start = Date.now();
+    const tick = setInterval(() => {
+      const el = document.querySelector(selector);
+      if (el) { clearInterval(tick); resolve(el); return; }
+      if (Date.now() - start > timeoutMS) { clearInterval(tick); resolve(null); }
+    }, 50);
+  });
 }
 
 
@@ -982,8 +988,33 @@ async openFormWithTitle(options = {}, ui = {}) {
   return result;
 }
 
+// Public helper: scoped observer to keep the title updated
+// Use when you open a saved form by *name* (not inline object) and want to override its title.
+ensureDynamicTitle(titleText, {
+  className = "mf-dynamic-title",      // set this as “Custom class name” in the form
+  timeout   = this.ui?.titleTimeoutMs ?? 6000
+} = {}) {
+  try {
+    const selector = `.modal-container.${className}, .${className} .modal-container, .${className}`;
+    // First shot: if the modal is already in DOM, set immediately
+    const applyNow = () => {
+      const container = document.querySelector(selector);
+      if (container) this.#setDynamicModalTitle(container, titleText);
+      return !!container;
+    };
+    if (applyNow()) return;
+
+    // Otherwise, observe until it appears (or timed out)
+    const obs = new MutationObserver(() => { if (applyNow()) obs.disconnect(); });
+    obs.observe(document.body, { childList: true, subtree: true });
+    setTimeout(() => obs.disconnect(), timeout);
+  } catch (e) {
+    console.warn("[ModalFormUtils] ensureDynamicTitle failed:", e);
+  }
+}
+
 //Fire-and-forget watcher: waits for a moadl with 'className', sets/guards its title.
-ensureDynamicTitle(newTitle, { className = "mf-dynamic-title", timeout = 8000 } = {}) {
+ensureDynamicTitle_old(newTitle, { className = "mf-dynamic-title", timeout = 8000 } = {}) {
     //start immediately - don't await this from the caller
     const start = Date.now();
 
@@ -1045,6 +1076,150 @@ async _applyFieldTypePipeline(frontmatterObj, mapContainer, env = {}) {
   }
   return out;
 }
+
+// Opens a saved ModalForms form as an inline object with a runtime title.
+// Returns the same result shape you currently use (prefers .data, falls back to .getData()).
+async openFormWithDynamicTitle({ file, values = {} }) {
+  const mf = this.app?.plugins?.plugins?.modalforms;
+  if (!mf?.api?.plugin?.settings?.formDefinitions) {
+    throw new Error("ModalForms API or form definitions not available");
+  }
+
+  // Resolve the canonical form name from your handler map
+  const mapContainer = (typeof this.handler.modalFormMap === "function")
+    ? this.handler.modalFormMap()
+    : this.handler.modalFormMap;
+
+  const baseFormName =
+    (typeof mapContainer?.mdlFormName === "function")
+      ? mapContainer.mdlFormName({ file, handler: this.handler })
+      : mapContainer?.mdlFormName || this.modalFormName;
+
+  if (!baseFormName) throw new Error("No modal form name defined for this fileClass");
+
+  // Find the saved definition by name (what you saw under plugin.settings.formDefinitions)
+  const def = mf.api.plugin.settings.formDefinitions
+    .find(f => f?.name === baseFormName);
+
+  if (!def) throw new Error(`Form definition not found: ${baseFormName}`);
+
+  // Clone → override only the display title
+  const inline = JSON.parse(JSON.stringify(def));
+  inline.title = `Update – ${file?.basename ?? "Untitled"}`;
+
+  // Open as inline form; keep your default values path unchanged
+  const result = await mf.api.openForm(inline, { values });
+
+  // Normalize the return (ModalForms result is either {data:…} or exposes getData())
+  const data = result?.data ?? (typeof result?.getData === "function" ? result.getData() : result);
+  return data || {};
+}
+
+// =====================================
+//  PREFERRED: INLINE‑FORM OPEN (UPDATE)
+// =====================================
+// Opens the resolved Update form as an inline object, overriding only its UI title.
+// Works for all fileClasses that define an Update form (via your handler maps).
+async openUpdateFormWithDynamicTitle(file, {
+  title     = `Update Frontmatter — ${file?.basename || "Untitled"}`,
+  values    = null,                      // defaults to buildFormValuesFromFrontmatter(file)
+  fallbackObserve = false,               // set true if you want to also run ensureDynamicTitle
+  className = "mf-dynamic-title",        // used only if fallbackObserve=true
+  timeoutMs = this.ui?.titleTimeoutMs ?? 6000
+} = {}) {
+  const mf = this.app?.plugins?.plugins?.modalforms?.api;
+  if (!mf?.plugin?.settings?.formDefinitions) {
+    console.warn("[ModalFormUtils] Modal Forms API or form definitions not available");
+    return null;
+  }
+
+  // Resolve base form name from your handler/fieldMap (init() already set modalFormName)
+  const baseFormName = this.modalFormName;
+  if (!baseFormName) throw new Error("No modal form name resolved for this fileClass");
+
+  // Find saved definition; clone so we don’t mutate settings
+  const def = mf.plugin.settings.formDefinitions.find(f => f?.name === baseFormName);
+  if (!def) throw new Error(`Form definition not found: ${baseFormName}`);
+  const inline = JSON.parse(JSON.stringify(def));
+
+  // Override only the display title
+  inline.title = String(title || "").trim() || `Update — ${file?.basename || "Untitled"}`;
+
+  // Optionally start a scoped observer as a belt‑and‑suspenders fallback
+  if (fallbackObserve) this.ensureDynamicTitle(inline.title, { className, timeout: timeoutMs });
+
+  // Open with defaults from frontmatter unless caller provided
+  const prefill = values ?? (typeof this.buildFormValuesFromFrontmatter === "function"
+    ? this.buildFormValuesFromFrontmatter(file)
+    : {});
+
+  const result = await mf.openForm(inline, { values: prefill });
+  return result;
+}
+
+// =====================================
+//  PREFERRED: INLINE‑FORM OPEN (UPDATE)
+// =====================================
+// TEMPLATER CONTROLLER CODE (INLINE-FORM)
+/*
+<%*
+const utils = window.customJS.createModalFormUtilsInstance();
+const file  = app.workspace.getActiveFile();
+await utils.init({ app, tp, fileClass: tp.frontmatter.fileClass, formType: "update" });
+
+const res = await utils.openUpdateFormWithDynamicTitle(file);
+if (!res || res.status === "cancelled") return;
+
+const data = res.data ?? (typeof res.getData === "function" ? res.getData() : res);
+await utils.updateFileWithFrontmatter(file, data);
+%>
+*/
+
+// ======================================================
+//  COMPAT: OPEN‑BY‑NAME + DYNAMIC TITLE (uses observer)
+// ======================================================
+// Use this only if you intentionally want to keep opening the saved form *by name*.
+// The observer will rewrite the title as soon as the modal renders.
+async openNamedUpdateFormWithDynamicTitle(file, {
+  title     = `Update — ${file?.basename || "Untitled"}`,
+  className = "mf-dynamic-title",
+  timeoutMs = this.ui?.titleTimeoutMs ?? 6000,
+  values    = null
+} = {}) {
+  const mf = this.app?.plugins?.plugins?.modalforms?.api;
+  if (!mf?.openForm) { console.warn("[ModalFormUtils] Modal Forms API not available"); return null; }
+
+  if (title) this.ensureDynamicTitle(title, { className, timeout: timeoutMs });
+
+  const prefill = values ?? (typeof this.buildFormValuesFromFrontmatter === "function"
+    ? this.buildFormValuesFromFrontmatter(file)
+    : {});
+
+  const result = await mf.openForm(this.modalFormName, { values: prefill });
+  return result;
+}
+
+// ======================================================
+//  COMPAT: OPEN‑BY‑NAME + DYNAMIC TITLE (uses observer)
+// ======================================================
+// TEMPLATER CONTROLLER CODE (OPEN BY SAVED NAME & OBSERVER)
+/*
+<%*
+const utils = window.customJS.createModalFormUtilsInstance();
+const file  = app.workspace.getActiveFile();
+await utils.init({ app, tp, fileClass: tp.frontmatter.fileClass, formType: "update" });
+
+const res = await utils.openNamedUpdateFormWithDynamicTitle(file, {
+  title: `Update — ${file?.basename || "Untitled"}`,
+  className: "mf-dynamic-title"  // set this in the form’s “Custom class name”
+});
+if (!res || res.status === "cancelled") return;
+
+const data = res.data ?? (typeof res.getData === "function" ? res.getData() : res);
+await utils.updateFileWithFrontmatter(file, data);
+%>
+*/
+
 
 
 

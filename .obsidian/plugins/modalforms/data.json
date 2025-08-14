@@ -10400,6 +10400,11 @@
           "label": "",
           "description": "",
           "isRequired": false,
+          "condition": {
+            "dependencyName": "tradeoff_name",
+            "type": "isExactly",
+            "value": "test"
+          },
           "input": {
             "type": "document_block",
             "body": "return `${form.tradeoff_name}`"
