@@ -2,7 +2,7 @@
 Status:
   - 🌿
 Links:
-  - "[[My Obsidian]]"
+  - "[[My Areas/My Obsidian/My Obsidian]]"
 Created: 2025-04-04T05:35:35
 fileClass: thought
 ---

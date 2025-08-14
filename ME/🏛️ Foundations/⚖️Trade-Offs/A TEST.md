@@ -2,7 +2,7 @@
 fileClass: tradeoff
 id: 1754946977383
 created: 2025-08-11 16:16
-last_modified: 2025-08-12 11:05
+last_modified: 2025-08-12 16:32
 title: A TEST
 status: 🟧 in progress
 type: [trigger]
@@ -38,6 +38,8 @@ related:
 media: 
 attachments: 
 pole_group: Truth & Authenticity
+reviewed: false
+enetered: ""
 ---
 
 ## Notes

@@ -80,4 +80,14 @@ class FILE_CLASS_REGISTRY {
     const k = this.getKeyFromValue(s);
     return k;
    }
+
+   // ---- Static mirrors (for symmetry with FIELD_TYPE_REGISTRY) ----
+  static getAll() { return new FILE_CLASS_REGISTRY().getAll(); }
+  static get KEYS() {
+    const reg = this.getAll();
+    return Object.freeze(Object.fromEntries(Object.keys(reg).map(k => [k, k])));
+  }
+  static hasKey(key) { return !!this.getAll()?.[key]; }
+  static hasValue(value) { return Object.values(this.getAll()).includes(String(value ?? "").trim()); }
+  static resolveKey(input) { return new FILE_CLASS_REGISTRY().resolveKey(input); }
 }

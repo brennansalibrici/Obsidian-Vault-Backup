@@ -1,7 +1,7 @@
 ---
 Created: 
 Notes: Adds a new ToDoist Task
-Related: "[[My Obsidian]]"
+Related: "[[My Areas/My Obsidian/My Obsidian]]"
 ---
 
 ```meta-bind-button

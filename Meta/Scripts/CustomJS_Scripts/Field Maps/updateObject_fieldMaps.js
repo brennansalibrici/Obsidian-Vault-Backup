@@ -1,25 +1,44 @@
 class updateObject_fieldMap {
     constructor() {
+        // Obtain the enum once and set on singular name; keep plural as alias for back-compat
+        this.getTypes();
+
+        // Build the field map eagerly so lookups work immediately
         this.fieldMap = {
             "TRADE_OFF": {
                 mdlFormName: "Update Trade-Off",
                 mdlForm_fieldMap: {
-                   "filename": {key: "filename", from: "file"},
-                    "tradeoff_name": "title",
-                    "titleBlock": "Test",
-                    "tradeoff_group": {key: "tradeoff_group", singleSelect: true},
-                    "pole_group": {key: "dominant_pole_group", singleSelect: true},
-                    "applies_to": {key: "applies_to", singleSelect: true},
-                    "conflicted_part": {key: "conflicted_part", isLink: true, multiSelect: true},
-                    "resolved_by_group": {key: "resolved_by_group", singleSelect: true},
-                    "reviewed": "entered",
-                    "status": {key: "status", singleSelect: true},
-                    "tradeoff_type": {key: "tradeoff_type", groupFilter: "tradeoff_type", singleSelect: true},
-                    "dominant_pole": {key: "dominant_pole", groupFilter: "pole_type", singleSelect: true},
-                    "resolved_by": {key: "resolved_by", groupFilter: "resolved_by_type", multiSelect: true},
+                    "filename": { key: "filename", from: "file", fieldType: this.type.TEXT },
+                    "tradeoff_name": { key: "title", fieldType: this.type.TEXT },
+                    "tradeoff_group": { key: "tradeoff_group", fieldType: this.type.SINGLESELECT },
+                    "pole_group": { key: "dominant_pole_group", fieldType: this.type.SINGLESELECT },
+                    "applies_to": { key: "applies_to", fieldType: this.type.SINGLESELECT },
+                    "conflicted_part": { key: "conflicted_part", isLink: true, fieldType: this.type.MULTISELECT },
+                    "resolved_by_group": { key: "resolved_by_group", fieldType: this.type.SINGLESELECT },
+                    "reviewed": { key: "reviewed", fieldType: this.type.TOGGLE },
+                    "entered": { key: "entered", fieldType: this.type.TOGGLE },
+                    "status": { key: "status", fieldType: this.type.SINGLESELECT },
+                    "tradeoff_type": { key: "tradeoff_type", groupFilter: "tradeoff_type", fieldType: this.type.SINGLESELECT },
+                    "dominant_pole": { key: "dominant_pole", groupFilter: "pole_type", fieldType: this.type.SINGLESELECT },
+                    "resolved_by": { key: "resolved_by", groupFilter: "resolved_by_type", fieldType: this.type.MULTISELECT }
                 }
             }
         };
+    }
+
+    getTypes() {
+    if (this.type) return this.type;
+    // one authoritative source, published by bootstrap
+    this.type = window.customJS.FIELD_TYPE || window.customJS.FIELD_TYPE_ENUM || {
+        // ultra-safe fallback (shouldn’t happen with the bootstrap in place)
+        TEXT:"Text", NUMBER:"Number", TAGS:"Tags", EMAIL:"Email", PHONE:"Phone",
+        DATE:"Date", TIME:"Time", DATETIME:"DateTime", TEXTAREA:"TextArea",
+        TOGGLE:"Toggle", NOTE:"Note", FOLDER:"Folder", SLIDER:"Slider",
+        SINGLESELECT:"SingleSelect", MULTISELECT:"MultiSelect", DATAVIEW:"Dataview",
+        DOCUMENTBLOCK:"DocumentBlock", MARKDOWNBLOCK:"MarkdownBlock", IMAGE:"Image", FILE:"File"
+    };
+    this.types = this.type; // back-compat alias
+    return this.type;
     }
 
     getAll() {
@@ -33,8 +52,9 @@ class updateObject_fieldMap {
     has(FILE_CLASS) {
         return !!this.fieldMap[FILE_CLASS];
     }
-
 }
+
+
 
 /*export const updateObject_fieldMap = {
 //#region ME OBJECTS

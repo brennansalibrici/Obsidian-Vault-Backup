@@ -12,6 +12,7 @@ category:
   - note
 entered: false
 archived: false
+reviewed: false
 priority:
   - ⚪ None
 visibility: 🔒 private

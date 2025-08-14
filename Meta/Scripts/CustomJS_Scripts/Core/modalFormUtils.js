@@ -30,7 +30,7 @@ class ModalFormUtils {
         ATTACHMENT_THEORY: "attachment theory",
         TRADE_OFF: "tradeoff",
         EMOTION: "emotion"
-    };*/
+    };
 
     static linkFields = [
   "linked_wounds",
@@ -59,7 +59,7 @@ class ModalFormUtils {
   "functions",
   "tradeoffs"
 ];
-
+*/
 
     //Constructor and define class properties
     constructor(){
@@ -298,17 +298,16 @@ class ModalFormUtils {
     async createFileWithFrontmatter(formData) {
         try {
             this.formData = formData;
-            const titleValue = this.handler.modalFormMap?.mdlForm_fieldMap.title;
-            this.createNewFileName(this.formData[titleValue]);
+
+            // ✅ NEW: derive display/title value from the map in the new canonical shape
+            const titleValue = this._getCreateTitleFromMap(this.formData);
+            this.createNewFileName(titleValue);
+
             const file = await this.createNewFileFromTemplate();
-
-            console.log("New file object received", file);
             if (file) {
-                await this._writeFrontMatter_fromCreateForm(file);
+            await this._writeFrontMatter_fromCreateForm(file);
             }
-
             return file;
-
         } catch (err) {
             console.error("❌ Failed in createFileWithFrontmatter:", err);
             new Notice("Error during file creation. See console.");
@@ -359,6 +358,41 @@ class ModalFormUtils {
             new Notice("❌ Failed to update file from form. Check console for details.");
         }
     }
+
+    // ✅ add inside class (e.g., near other helpers)
+    _getCreateTitleFromMap(formData) {
+    const mapContainer = (typeof this.handler.modalFormMap === "function")
+        ? this.handler.modalFormMap()
+        : this.handler.modalFormMap;
+
+    const map = mapContainer?.mdlForm_fieldMap || {};
+    // Prefer a mapping whose *frontmatter key* looks like a title
+    const candidates = ["title", "tradeoff_name"];
+    let chosen = null;
+
+    for (const [fmKey, mappingRaw] of Object.entries(map)) {
+        const m = (mappingRaw && typeof mappingRaw === "object")
+        ? mappingRaw
+        : (typeof mappingRaw === "function") ? { key: fmKey, resolver: mappingRaw }
+        : (typeof mappingRaw === "string")   ? { key: fmKey, modalKey: mappingRaw }
+        : null;
+        if (!m) continue;
+
+        const key = m.key || fmKey;
+        if (candidates.includes(key)) { chosen = m; break; }
+    }
+
+    if (!chosen) return formData?.title || this.strField2 || this.strField1 || "Untitled";
+
+    if (typeof chosen.resolver === "function") {
+        return chosen.resolver(formData, this, this.formatUtils);
+    }
+    if (typeof chosen.modalKey === "string") {
+        return formData[chosen.modalKey] ?? "";
+    }
+    return "";
+    }
+
 
 /**********OLD******************************************************************************************************************************************************************************************************* */
 
@@ -429,30 +463,42 @@ resolveAllFrontmatter(formData) {
 }
 
 _resolveFrontmatterCreate(formData) {
-    //Works whether modalFormMap is a function or an object:
-    const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap;
+  const mapContainer = (typeof this.handler.modalFormMap === "function")
+    ? this.handler.modalFormMap()
+    : this.handler.modalFormMap;
 
-    const map = mapContainer?.mdlForm_fieldMap;
-    if(!map) {
-        console.warn(`⚠️ No fieldMap defined for fileClass: ${this.fileClass}`);
-        return {};
+  const map = mapContainer?.mdlForm_fieldMap;
+  if (!map) { console.warn(`⚠️ No fieldMap defined for fileClass: ${this.fileClass}`); return {}; }
+
+  const frontmatter = {};
+
+  for (const [fmKey, mappingRaw] of Object.entries(map)) {
+    // Coerce legacy shapes → canonical object
+    const m = (mappingRaw && typeof mappingRaw === "object")
+      ? mappingRaw
+      : (typeof mappingRaw === "function") ? { key: fmKey, resolver: mappingRaw }
+      : (typeof mappingRaw === "string")   ? { key: fmKey, modalKey: mappingRaw }
+      : null;
+
+    if (!m) { console.warn(`Invalid mapping for '${fmKey}'`); continue; }
+    if (!m.key) m.key = fmKey;
+
+    let value;
+    if (typeof m.resolver === "function") {
+      value = m.resolver(formData, this, this.formatUtils);
+    } else if (typeof m.modalKey === "string") {
+      value = formData[m.modalKey];
+    } else {
+      console.warn(`Mapping for '${fmKey}' needs 'resolver' or 'modalKey'.`);
     }
 
-    const frontmatter = {};
-
-    for (const [key, resolver] of Object.entries(map)) {
-        if(typeof resolver === "function") {
-        const val = resolver(formData, this, this.formatUtils);
-        if(val !== undefined && val !== null) frontmatter[key] = val;
-        } else if (typeof resolver === "string") {
-        const val = formData[resolver];
-        if(val !== undefined && val !== null) frontmatter[key] = val;
-        } else {
-            console.warn(`Invalid resolver for field ${key}`);
-        }
+    if (value !== undefined && value !== null) {
+      frontmatter[m.key] = value;
     }
-    return frontmatter; // raw values (strings/arrays), including created/last_modified from format
+  }
+  return frontmatter;
 }
+
 
 _resolveFrontmatterUpdate(formData) {
     //Works whether modalFormMap is a function or an object:
@@ -521,7 +567,7 @@ _resolveFrontmatterUpdate(formData) {
 
                     //shape for YAML (arrays only if multiSelect: true)
                     updates[key] = shapeForYaml(subval, {
-                        isLinkField: isLink || ModalFormUtils.linkFields.includes(key), //***NEED TO GET RID OF LINK FIELDS AND DEFINE IT IN THE FIELD MAPS */
+                        isLinkField: !!m.isLink, //***NEED TO GET RID OF LINK FIELDS AND DEFINE IT IN THE FIELD MAPS */
                         singleSelect,
                         multiSelect
                     });
@@ -538,7 +584,7 @@ _resolveFrontmatterUpdate(formData) {
 
         //shape for YAML (eplicit-only multiSelect)
         updates[key] = shapeForYaml(val, {
-            isLinkField: isLink || ModalFormUtils.linkFields.includes(key),
+            isLinkField: !!m.isLink,
             singleSelect,
             multiSelect
         });
@@ -550,46 +596,45 @@ _resolveFrontmatterUpdate(formData) {
 
 //updates the frontmatter with defined results from any modal form and inserts them into the frontmatter of any specified file
 async _writeFrontMatter_fromCreateForm(file) {
-    try {
-        const fieldMap = this.resolveAllFrontmatter(this.formData); //Automatically resolves based on form type (updated resolver)
-        const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap; //works whether modalFormMap is a function or an object
-        const mapObj = mapContainer?.mdlForm_fieldMap || {};
-        await this.app.fileManager.processFrontMatter(file, (fm) => {
-            for (const [key, value] of Object.entries(fieldMap)) {
-                if (value === undefined || value === null) continue;
+  try {
+    // 1) resolve raw values from the create map (object entries)
+    const fieldMapRaw  = this._resolveFrontmatterCreate(this.formData);
 
-                    //const existing = fm[key];
+    // 2) run field-type pipeline (this is where isLink/date/number/etc. normalize)
+    const mapContainer = (typeof this.handler.modalFormMap === "function")
+      ? this.handler.modalFormMap()
+      : this.handler.modalFormMap;
 
-                    const toLink = (v, key) => {
-                    if (!ModalFormUtils.linkFields.includes(key)) return v; //Eventually this list of fields needs to be trasfered to the fieldMap and the formatting portion needs to be transfered to the formatting class
-                    if (typeof v !== "string") return v;
-                    return v.trim().startsWith("[[") ? v.trim() : `[[${v.trim()}]]`;
-                    };
+    const processed = await this._applyFieldTypePipeline(
+      fieldMapRaw,
+      mapContainer,
+      { app: this.app, tp: this.tp, fileType: this.fileClass, filePath: this.newFileFullPath }
+    );
 
-                    //look up per-field flags if you've set them in your mapObj
-                    const mapping = typeof mapObj[key] === "object" ? mapObj[key] : {};
-                    const isArrayField = mapping?.multiSelect === true;
+    // 3) write to YAML — no additional wrapping/formatting here
+    const mapObj = mapContainer?.mdlForm_fieldMap || {};
+    await this.app.fileManager.processFrontMatter(file, (fm) => {
+      for (const [key, value] of Object.entries(processed)) {
+        if (value === undefined || value === null) continue;
 
-                    //CREATE PATH: no merging. Just write normalized value.
-                    if(Array.isArray(value)) {
-                        fm[key] = value.map(v => toLink(v, key));     //write YAML array
-                    } else {
-                        //If the field is explicitily multiSelect but a single value came in, make it a single item array
-                        fm[key] = isArrayField ? [toLink(value,key)] : toLink(value, key);
-                    }
-                }
-            });
+        const mapping      = (typeof mapObj[key] === "object") ? mapObj[key] : {};
+        const isArrayField = mapping?.multiSelect === true;
 
-            // Update 'last_modified' unless it's a new file where created === last_modified
-            await this.updateLastModified(file);
+        if (Array.isArray(value)) {
+          fm[key] = value;                                 // already shaped by pipeline
+        } else {
+          fm[key] = isArrayField ? [value] : value;        // scalar vs array shaping only
+        }
+      }
+    });
 
-            console.log("✅ Frontmatter updated successfully:", file.path);
-    }
-    catch (err) {
-            console.error("❌ Failed to update frontmatter:", err);
-            new Notice("❌ Error updating frontmatter. Check console for details.");
-    }
+    await this.updateLastModified(file);
+  } catch (err) {
+    console.error("❌ Failed to update frontmatter:", err);
+    new Notice("❌ Error updating frontmatter. Check console for details.");
+  }
 }
+
 
 //accepts a 'target' file and will update the global property 'last_modified' to the current date/time
 async updateLastModified(file) {
@@ -757,7 +802,7 @@ buildFormValuesFromFrontmatter(file) {
 
       // Now prefill the visible sub-field based on the group’s value
       const raw = fm[key];
-      const arr = this.formatUtils.toFormList(raw, { stripLinks: isLink || ModalFormUtils.linkFields.includes(key) });
+      const arr = this.formatUtils.toFormList(raw, { stripLinks: !!m.isLink });
 
       if (groupField && values[groupField] && reg.subFieldsByGroup) {const subFieldKey = reg.subFieldsByGroup[ values[groupField] ];
         if (subFieldKey) {
@@ -769,7 +814,7 @@ buildFormValuesFromFrontmatter(file) {
 
     // ---- Non-group field ----
     const raw = fm[key];
-    const arr = this.formatUtils.toFormList(raw, { stripLinks: isLink || ModalFormUtils.linkFields.includes(key) });
+    const arr = this.formatUtils.toFormList(raw, { stripLinks: !!m.isLink });
     values[formField] = singleSelect ? (arr[0] ?? null) : arr;
   }
 
@@ -975,6 +1020,33 @@ ensureDynamicTitle(newTitle, { className = "mf-dynamic-title", timeout = 8000 } 
     requestAnimationFrame(tick);
 
 }
+
+async _applyFieldTypePipeline(frontmatterObj, mapContainer, env = {}) {
+  const mc   = (typeof mapContainer === "function") ? mapContainer() : mapContainer;
+  const map  = mc?.mdlForm_fieldMap || {};
+  const Types = window.customJS.FIELD_TYPE                      // ← new
+             || window.customJS.FIELD_TYPE_ENUM;                // ← back-compat
+  const pipeline = window.customJS.createFieldPipelineInstance(); // you already publish this in bootstrap
+
+  const out = { ...frontmatterObj };
+  for (const [fmKey, mappingRaw] of Object.entries(map)) {
+    const m = (typeof mappingRaw === "object") ? mappingRaw
+            : (typeof mappingRaw === "function") ? { key: fmKey, resolver: mappingRaw }
+            : (typeof mappingRaw === "string")   ? { key: fmKey, modalKey: mappingRaw }
+            : null;
+    if (!m) continue;
+
+    const fieldType = m.fieldType || Types.TEXT;   // ← use frozen enum
+    const key       = m.key || fmKey;
+    if (typeof out[key] === "undefined") continue;
+
+    const ctx = { fieldKey: key, modalKey: m.modalKey || fmKey, type: fieldType, raw: out[key], current: undefined, meta: m || {}, env };
+    out[key] = await pipeline.process(ctx);
+  }
+  return out;
+}
+
+
 
 
     /*const fileClass = this.frontmatter.fileClass;

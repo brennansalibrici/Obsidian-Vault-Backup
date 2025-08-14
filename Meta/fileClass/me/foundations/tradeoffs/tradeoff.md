@@ -68,7 +68,7 @@ fields:
         "4": Practice & Embodiment
     path: ""
     id: aW5Fiy
-version: "2.26"
+version: "2.27"
 limit: 20
 mapWithTag: false
 icon: scale
@@ -81,6 +81,7 @@ extends: me/foundations/foundation element/foundation_element
 savedViews: []
 favoriteView: 
 fieldsOrder:
+  - aW5Fiy
   - f2B8g0
   - IW9aXN
   - dXSTh9

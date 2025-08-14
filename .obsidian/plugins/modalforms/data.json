@@ -11152,10 +11152,7 @@
           "input": {
             "type": "multiselect",
             "source": "notes",
-            "folder": "ME/🏛️ Foundations/📢 Internal Voices",
-            "allowUnknownValues": false,
-            "query": "",
-            "multi_select_options": []
+            "folder": "ME/🏛️ Foundations/📢 Internal Voices"
           }
         },
         {
@@ -11210,8 +11207,7 @@
               "Meaning-based action",
               "Internal boundary repair"
             ],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -11233,8 +11229,7 @@
               "Letting the protective voice feel seen",
               "Inviting a deeper core need to speak"
             ],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -11255,8 +11250,7 @@
               "Recognizing the role of trauma or conditioning",
               "Naming protective strategies for what they are"
             ],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {
@@ -11278,8 +11272,7 @@
               "Journal dialoguing between parts",
               "Embodied grounding to regulate intensity"
             ],
-            "allowUnknownValues": true,
-            "query": ""
+            "allowUnknownValues": true
           }
         },
         {

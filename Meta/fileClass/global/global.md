@@ -121,7 +121,12 @@ fields:
       thumbnailSize: "100"
     path: ""
     id: 0JLUZV
-version: "2.167"
+  - name: reviewed
+    type: Boolean
+    options: {}
+    path: ""
+    id: FjKW6O
+version: "2.168"
 limit: 20
 icon: package
 tagNames: 
@@ -129,9 +134,10 @@ filesPaths:
 bookmarksGroups: 
 excludes: 
 extends: 
-savedViews: 
+savedViews: []
 favoriteView: 
 fieldsOrder:
+  - FjKW6O
   - 3HN2Ss
   - ai940O
   - tGAYij
