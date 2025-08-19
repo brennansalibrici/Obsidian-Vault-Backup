@@ -2,6 +2,7 @@ class updateObject_fieldMap {
     constructor() {
         // Obtain the enum once and set on singular name; keep plural as alias for back-compat
         this.getTypes();
+        this.getIntents();
 
         // Build the field map eagerly so lookups work immediately
         this.fieldMap = {
@@ -27,18 +28,43 @@ class updateObject_fieldMap {
     }
 
     getTypes() {
-    if (this.type) return this.type;
-    // one authoritative source, published by bootstrap
-    this.type = window.customJS.FIELD_TYPE || window.customJS.FIELD_TYPE_ENUM || {
-        // ultra-safe fallback (shouldn’t happen with the bootstrap in place)
-        TEXT:"Text", NUMBER:"Number", TAGS:"Tags", EMAIL:"Email", PHONE:"Phone",
-        DATE:"Date", TIME:"Time", DATETIME:"DateTime", TEXTAREA:"TextArea",
-        TOGGLE:"Toggle", NOTE:"Note", FOLDER:"Folder", SLIDER:"Slider",
-        SINGLESELECT:"SingleSelect", MULTISELECT:"MultiSelect", DATAVIEW:"Dataview",
-        DOCUMENTBLOCK:"DocumentBlock", MARKDOWNBLOCK:"MarkdownBlock", IMAGE:"Image", FILE:"File"
-    };
-    this.types = this.type; // back-compat alias
-    return this.type;
+        if (this.type) return this.type;
+
+        //Prefer bootstraip-published constant (no instantiation required)
+        const directEnum = window.customJS?.FIELD_TYPE_ENUM || null;
+
+        // Canonical factory published by bootstrap
+        const factory = window.customJS.createFIELD_TYPE_REGISTRYInstance;
+        const inst = typeof factory === "function" ? factory() : null;
+        const legacyEnum = inst?.constructor?.TYPE || inst?.constructor?.TYPES || null;
+
+        // Accept either .TYPE or .TYPES on the constructor and store
+        const enumObj = directEnum || legacyEnum;
+        this.type = enumObj;
+        this.types = enumObj; // alias for any legacy references
+
+        if (!this.type) {
+            console.warn("[createNewObject_fieldMap] FieldType enums not ready; falling back to strings.");
+            this.type = this.types = {
+                TEXT: "TEXT",
+                TAGS: "TAGS",
+                SINGLESELECT: "SINGLESELECT",
+                MULTISELECT: "MULTISELECT",
+                TOGGLE: "TOGGLE",
+                DATE: "DATE",
+                TIME: "TIME",
+                DATETIME: "DATETIME"
+            };
+        }
+        return this.type;
+    }
+
+    getIntents() {
+        if(this.intent) return this.intent;
+        //authoritative source (bootstrap sets this)
+        this.intent = window.customJS.INTENT || { TITLE:"title", FILENAME:"filename", SLUG:"slug", DEADLINE:"deadline" };
+        this.inents = this.intent; //optional alias for  symmetry
+        return this.intent;
     }
 
     getAll() {

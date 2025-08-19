@@ -9,8 +9,8 @@ class ModalFormsBootstrap {
 
         //Idempotency: don't double-run on script reloads
         window.customJS.state = window.customJS.state || {};
-        if (window.customJS.state.modalFormsBootstrapped_v1) return;
-        window.customJS.state.modalFormsBootstrapped_v1 = true;
+        if (window.customJS.state[this.flagKey]) return;
+        window.customJS.state[this.flagKey] = true;
 
         // Get the fully initialized customJS object
         const c = await cJS(); // ensures all classes are loaded & instantiated
@@ -29,6 +29,7 @@ class ModalFormsBootstrap {
         const FieldTypeCtor     = ctor(c.FIELD_TYPE_REGISTRY) || ctor(c.FieldType);
         const FieldHandlerCtor  = ctor(c.FieldHandler);
         const FieldPipelineCtor = ctor(c.FieldPipeline);
+        const IntentCtor        = ctor(c.INTENT_REGISTRY);
 
         // ---- Canonical factories
         window.customJS.createFormatUtilsInstance              = () => new FormatCtor();
@@ -38,10 +39,14 @@ class ModalFormsBootstrap {
         window.customJS.createupdateObject_fieldMapInstance    = () => new UpdateMapCtor();
         window.customJS.creategroupTypeFilter_fieldMapInstance = () => new GroupMapCtor();
 
-        if (FieldHandlerCtor) { window.customJS.createFieldHandlerInstance = () => new FieldHandlerCtor(); }
-        if (FieldPipelineCtor) { window.customJS.createFieldPipelineInstance = () => new FieldPipelineCtor(); }
+        if (FieldHandlerCtor)   { window.customJS.createFieldHandlerInstance = () => new FieldHandlerCtor(); }
+        if (FieldPipelineCtor)  { window.customJS.createFieldPipelineInstance = () => new FieldPipelineCtor(); }
+        if (IntentCtor)         {
+            window.customJS.createIntentRegistryInstance    = () => new IntentCtor();
+            window.customJS.createINTENT_REGISTRYInstance   = () => new IntentCtor(); //optional alias (class-name style)
+        }
 
-        // ---- FILE_CLASS registry (factory + enum convenience)
+        // ---- FILE_CLASS registry (factory & enum convenience)
         window.customJS.createFILE_CLASS_REGISTRYInstance = () => c.FILE_CLASS_REGISTRY;
         // Build a frozen FILE_CLASS { KEY: "KEY" } enum once for convenience
         (() => {
@@ -54,7 +59,7 @@ class ModalFormsBootstrap {
             }
         })();
 
-        // ---- FIELD_TYPE registry (factory + enum convenience)
+        // ---- FIELD_TYPE registry (factory & enum convenience)
         (() => {
         try {
             // Use the fully-initialized instance that cJS loaded
@@ -80,9 +85,25 @@ class ModalFormsBootstrap {
         }
         })();
 
+        // ---- INTENT registry (factory & enum convenience)
+        (() => {
+            try {
+                const inst = window.customJS.createIntentRegistryInstance?.() || window.customJS.createINTENT_REGISTRYInstance?.();
+                if(!inst?.constructor?.INTENT) {
+                    window.customJS.INTENT = Object.freeze({ ...inst.constructor.INTENT });
+                    window.customJS.INTENT_KEYS = Object.freeze(Object.values(inst.constructor.INTENT.map(v =>[v, v])));
+                }
+            } catch (e) {
+                console.warn("[Bootstrap] INTENT enum init skipped:", e);
+            }
+        })();
+
         // ---- ErrorBus passthrough: FIX scope to window.customJS
-        window.customJS.createerrorBusInstance = () => errorBus;  // <-- previously set on 'c', not usable by callers
-        errorBus.mode = "console";                                // your FormatUtils etc. read it via window.customJS
+        //window.customJS.createerrorBusInstance = () => errorBus;  // <-- previously set on 'c', not usable by callers
+        const ErrorBusCtor = ctor(c.errorBus);
+        window.customJS.createerrorBusInstance = () => ErrorBusCtor; // callers use static API
+        ErrorBusCtor.mode = "console";
+        //errorBus.mode = "console";                                // your FormatUtils etc. read it via window.customJS
         console.log("✅ ModalForms bootstrap complete.");
         new Notice("✅ ModalForms bootstrap complete.");
 

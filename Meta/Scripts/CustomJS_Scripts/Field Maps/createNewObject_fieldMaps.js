@@ -2,6 +2,7 @@ class createNewObject_fieldMap {
     constructor() {
         // Obtain the enum once and set on singular name; keep plural as alias for back-compat
         this.getTypes();
+        this.getIntents();
 
         // Build the field map eagerly so lookups work immediately
         this.fieldMap = {
@@ -9,7 +10,7 @@ class createNewObject_fieldMap {
                 mdlFormName: "Create New Trade-Off",
                 mdlForm_fieldMap: {
                     title: "tradeoff_name",
-                    tradeoff_name: { key: "tradeoff_name", modalKey: "title", fieldType: this.type.TEXT },
+                    tradeoff_name: { key: "tradeoff_name", modalKey: "title", fieldType: this.type.TEXT, intent: this.intent.TITLE },
                     tradeoff_group: { key: "tradeoff_group", modalKey: "tradeoff_group", fieldType: this.type.SINGLESELECT },
                     tradeoff_type: { key: "tradeoff_type", resolver: (data, ctx, fmt) => ctx.resolveGroupedValue(data, "tradeoff_type"), fieldType: this.type.SINGLESELECT },
                     applies_to: { key: "applies_to", modalKey: "applies_to", fieldType: this.type.SINGLESELECT },
@@ -45,6 +46,13 @@ class createNewObject_fieldMap {
     return this.type;
     }
 
+    getIntents() {
+        if(this.intent) return this.intent;
+        //authoritative source (bootstrap sets this)
+        this.intent = window.customJS.INTENT || { TITLE:"title", FILENAME:"filename", SLUG:"slug", DEADLINE:"deadline" };
+        this.inents = this.intent; //optional alias for  symmetry
+        return this.intent;
+    }
 
     getAll() {
         return this.fieldMap;

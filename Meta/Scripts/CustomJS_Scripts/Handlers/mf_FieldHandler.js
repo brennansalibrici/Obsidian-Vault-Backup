@@ -3,7 +3,7 @@ class FieldHandler {
     this.format = window.customJS.createFormatUtilsInstance();
   }
 
-  _pass() {
+  pass() {
     return {
       preprocess: ({ value, ctx }) => ({ value, ctx }),
       validate:   ({ value, ctx }) => ({ value, ctx }),
@@ -13,130 +13,146 @@ class FieldHandler {
     };
   }
 
-  _helpers() {
+  helpers() {
     return {
       asArray: v => (Array.isArray(v) ? v : (v == null || v === "" ? [] : [v])),
       trim: v => (typeof v === "string" ? v.trim() : v),
     };
   }
 
-  _buildRegistry() {
-    const H = this._helpers();
-    const pass = this._pass();
+  buildRegistry() {
     const F = this.format;
-
-    const TextBase = {
-      ...pass,
-      transform: ({ value, ctx }) => ({ value: H.trim(value), ctx }),
-      serialize: ({ value, ctx }) => {
-        if (ctx?.meta?.isLink === true) {
-          const w = Array.isArray(value) ? value.map(v => F.wrapStringIntoLink(v)) : F.wrapStringIntoLink(value);
-          return { value: w, ctx };
-        }
-        return { value, ctx };
-      }
+    const pass = (typeof this.pass === "function") ? this.pass() : {
+      preprocess:  ({ value, ctx }) => ({ value, ctx }),
+      validate:    ({ value, ctx }) => ({ value, ctx }),
+      transform:   ({ value, ctx }) => ({ value, ctx }),
+      serialize:   ({ value, ctx }) => ({ value, ctx }),
+      postprocess: ({ value, ctx }) => ({ value, ctx }),
     };
 
+    // --- helpers
+    const coerceArray = (v) => Array.isArray(v) ? v : (v == null ? [] : [v]);
+    const toString = (v) => (v == null ? "" : String(v).trim());
+    const toStringArray = (v) => coerceArray(v).map(x => toString(x)).filter(Boolean);
+
+    // ---------- Text-ish ----------
+    const TextBase = {
+      ...pass,
+      transform: ({ value, ctx }) => ({ value: toString(value), ctx }),
+      serialize: ({ value, ctx }) => {
+        if (ctx?.meta?.isLink === true && value) {
+          return { value: F.wrapStringIntoLink(value), ctx };
+        }
+        return { value, ctx };
+      },
+    };
+
+    const TextAreaBase = TextBase;
+    const NoteBase = TextBase;
+
+    // ---------- Numbers / Toggles ----------
     const NumberBase = {
       ...pass,
       transform: ({ value, ctx }) => {
-        const n = (typeof value === "number") ? value : Number(String(value ?? "").trim());
+        if (value === "" || value == null) return { value: null, ctx };
+        const n = Number(value);
         return { value: Number.isFinite(n) ? n : null, ctx };
-      }
+      },
     };
 
-    const TagsBase = {
+    const ToggleBase = {
       ...pass,
-      transform: ({ value, ctx }) => {
-        const arr = H.asArray(value).map(v => String(v ?? "").trim()).filter(Boolean);
-        return { value: arr, ctx };
-      }
+      transform: ({ value, ctx }) => ({ value: Boolean(value), ctx }),
     };
 
-    const ToggleBase = { ...pass, transform: ({ value, ctx }) => ({ value: Boolean(value), ctx }) };
-
+    // ---------- Selects ----------
     const SingleSelectBase = {
       ...pass,
-      transform: ({ value, ctx }) => ({ value: value == null ? "" : String(value).trim(), ctx }),
+      transform: ({ value, ctx }) => {
+        const first = toStringArray(value)[0] ?? "";
+        return { value: first, ctx };
+      },
       serialize: ({ value, ctx }) => {
-        if (ctx?.meta?.isLink === true) return { value: F.wrapStringIntoLink(value), ctx };
+        if (ctx?.meta?.isLink === true && value) {
+          return { value: F.wrapStringIntoLink(value), ctx };
+        }
         return { value, ctx };
-      }
+      },
     };
 
     const MultiSelectBase = {
       ...pass,
-      transform: ({ value, ctx }) => {
-        const arr = H.asArray(value).map(v => String(v ?? "").trim()).filter(Boolean);
-        return { value: arr, ctx };
-      },
-      serialize: ({ value, ctx }) => {
-        if (ctx?.meta?.isLink === true) return { value: value.map(v => F.wrapStringIntoLink(v)), ctx };
-        return { value, ctx };
-      }
-    };
-
-    const NoteBase = {
-      ...pass,
-      transform: ({ value, ctx }) => {
-        const s = String(value ?? "").trim().replace(/^\[\[|\]\]$/g, "");
-        return { value: s, ctx };
-      },
+      transform: ({ value, ctx }) => ({ value: toStringArray(value), ctx }),
       serialize: ({ value, ctx }) => {
         if (ctx?.meta?.isLink === true) {
-          const arr = Array.isArray(value) ? value : [value];
-          const wrapped = arr.map(v => F.wrapStringIntoLink(v));
-          return { value: Array.isArray(value) ? wrapped : wrapped[0], ctx };
+          return { value: (value || []).map(v => F.wrapStringIntoLink(v)), ctx };
         }
         return { value, ctx };
-      }
+      },
     };
 
-    const DateLikeBase = { ...pass, transform: ({ value, ctx }) => ({ value: String(value ?? "").trim(), ctx }) };
-
-    const TextAreaBase = TextBase;
-    const FolderBase = TextBase;
-    const SliderBase = NumberBase;
-    const DataviewBase = TextBase;
-    const MarkdownBlockBase = TextAreaBase;
-    const DocumentBlockBase = TextAreaBase;
-
-    const ImageBase = {
+    // ---------- Dates / Times ----------
+    // NOTE: This is where your old MFU "type hooks" now live.
+    const DateBase = {
       ...pass,
-      transform: ({ value, ctx }) => {
-        const arr = H.asArray(value).map(v => String(v ?? "").trim()).filter(Boolean);
-        return { value: arr, ctx };
-      }
+      transform: ({ value, ctx }) => ({ value: toString(value), ctx }),
+      serialize: ({ value, ctx }) => ({ value: F.db_formatDateOnly(value), ctx }),
     };
-    const FileBase = ImageBase;
 
+    const TimeBase = {
+      ...pass,
+      transform: ({ value, ctx }) => ({ value: toString(value), ctx }),
+      serialize: ({ value, ctx }) => ({ value: F.formatTimeOnly(value), ctx }),
+    };
+
+    const DateTimeBase = {
+      ...pass,
+      transform: ({ value, ctx }) => ({ value: toString(value), ctx }),
+      serialize: ({ value, ctx }) => ({ value: F.db_formatDateTime(value), ctx }),
+    };
+
+    // ---------- Misc simple aliases ----------
+    const TagsBase    = MultiSelectBase; // tags as array of strings
+    const EmailBase   = TextBase;
+    const PhoneBase   = TextBase;
+    const FolderBase  = TextBase;
+    const SliderBase  = NumberBase;
+
+    // ---------- Blocks / Files (pass-thru for now) ----------
+    const DataviewBase     = pass;
+    const DocumentBlockBase= pass;
+    const MarkdownBlockBase= pass;
+    const ImageBase        = pass;
+    const FileBase         = pass;
+
+    // ---------- Return full registry keyed by FieldType strings ----------
     return {
-      TEXT: TextBase,
-      NUMBER: NumberBase,
-      TAGS: TagsBase,
-      EMAIL: TextBase,
-      PHONE: TextBase,
-      DATE: DateLikeBase,
-      TIME: DateLikeBase,
-      DATETIME: DateLikeBase,
-      TEXTAREA: TextAreaBase,
-      TOGGLE: ToggleBase,
-      NOTE: NoteBase,
-      FOLDER: FolderBase,
-      SLIDER: SliderBase,
-      SINGLESELECT: SingleSelectBase,
-      MULTISELECT: MultiSelectBase,
-      DATAVIEW: DataviewBase,
-      DOCUMENTBLOCK: DocumentBlockBase,
-      MARKDOWNBLOCK: MarkdownBlockBase,
-      IMAGE: ImageBase,
-      FILE: FileBase,
-      __default: TextBase
+      Text:           TextBase,
+      Number:         NumberBase,
+      Tags:           TagsBase,
+      Email:          EmailBase,
+      Phone:          PhoneBase,
+      Date:           DateBase,
+      Time:           TimeBase,
+      DateTime:       DateTimeBase,
+      TextArea:       TextAreaBase,
+      Toggle:         ToggleBase,
+      Note:           NoteBase,
+      Folder:         FolderBase,
+      Slider:         SliderBase,
+      SingleSelect:   SingleSelectBase,
+      MultiSelect:    MultiSelectBase,
+      Dataview:       DataviewBase,
+      DocumentBlock:  DocumentBlockBase,
+      MarkdownBlock:  MarkdownBlockBase,
+      Image:          ImageBase,
+      File:           FileBase,
+      __default:      TextBase,
     };
   }
 
   getHandlers() {
-    if (!this._cache) this._cache = this._buildRegistry();
-    return this._cache;
+    if (!this.cache) this.cache = this.buildRegistry();
+    return this.cache;
   }
 }

@@ -3,6 +3,7 @@ searchTerm:
 newObject: tradeoff
 ---
 
+**
 ```meta-bind-button
 label: Create New ⚖️Trade-Off
 icon: ""

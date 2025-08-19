@@ -49,18 +49,9 @@
               "icon": "lucide-file",
               "title": "⚖️Trade-Offs"
             }
-          },
-          {
-            "id": "f23c8c62419335bb",
-            "type": "leaf",
-            "state": {
-              "type": "modal-form-manage-forms-view",
-              "state": {},
-              "icon": "documents",
-              "title": "Manage forms"
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "5e51590480c6defc",
@@ -392,13 +383,19 @@
       "cmdr:Templater: Insert Meta/Templates/modal form controllers/Modal Update Form Template.md": false
     }
   },
-  "active": "d8de7ce045dedacc",
+  "active": "3bc678cf11168bfd",
   "lastOpenFiles": [
-    "ME/🏛️ Foundations/⚖️Trade-Offs/Anticipation vs. Presence.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST.md",
-    "Meta/Templates/modal form controllers/Modal Update Form Template.md",
-    "Meta/Templates/modal form controllers/Create New Object From Modal Form.md",
     "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST.md",
+    "Meta/Scripts/CustomJS_Scripts/Registries/intentRegistry.js",
+    "Meta/Scripts/CustomJS_Scripts/Registries/mf_FieldTypeRegistry.js",
+    "Meta/Scripts/CustomJS_Scripts/Registries/fileClassRegistry.js",
+    "Meta/Scripts/CustomJS_Scripts/Registries",
+    "Meta/Templates/modal form controllers/Modal Update Form Template.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST 2.md",
+    "Meta/Scripts/CustomJS_Scripts/scratchpad.js",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/Anticipation vs. Presence.md",
+    "Meta/Templates/modal form controllers/Create New Object From Modal Form.md",
     "My Areas/My Obsidian/My Obsidian.md",
     "Knowledge/My Resources/My Resources.md",
     "My Areas/Chat GPT/Custom GPTs.md",
@@ -417,19 +414,12 @@
     "Meta/Scripts/CustomJS_Scripts/Handlers/fileTypeHandler.js",
     "Meta/Scripts/CustomJS_Scripts/Handlers/mf_FieldHandler.js",
     "Meta/Scripts/CustomJS_Scripts/Handlers",
-    "Meta/Scripts/CustomJS_Scripts/New folder",
-    "Meta/Scripts/CustomJS_Scripts/Field Maps/groupTypeFilterRegistry_fieldMaps.js",
-    "Meta/Scripts/CustomJS_Scripts/Field Maps/createNewObject_fieldMaps.js",
-    "Meta/Scripts/CustomJS_Scripts/Field Maps/updateObject_fieldMaps.js",
-    "Meta/Scripts/CustomJS_Scripts/Field Maps",
     "My Areas/My Obsidian/JS Structure/IO and Errors.md",
     "My Areas/My Obsidian/JS Structure/Naming Conventions.md",
     "Meta/Templates/me/Foundations/TradeOff Template.md",
     "Meta/fileClass/me/foundations/tradeoffs/tradeoff.md",
     "Meta/fileClass/global/global.md",
     "Work/🛠 My Jobs/Data Collection - HTDC Ross, TX Trip 2.md",
-    "Work/🛠 My Jobs/Data Collection HTDC Ross, TX Trip 1.md",
-    "Nicole Hammet.md",
     "Obsidian Dashboard.canvas",
     "My Files/My Attachments/Pasted image 20250701063017.png",
     "My Files/My Attachments/Pasted image 20250605211151.png",
