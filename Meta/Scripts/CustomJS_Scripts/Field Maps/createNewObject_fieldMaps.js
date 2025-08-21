@@ -12,16 +12,62 @@ class createNewObject_fieldMap {
                     title: "tradeoff_name",
                     tradeoff_name: { key: "tradeoff_name", modalKey: "title", fieldType: this.type.TEXT, intent: this.intent.TITLE },
                     tradeoff_group: { key: "tradeoff_group", modalKey: "tradeoff_group", fieldType: this.type.SINGLESELECT },
-                    tradeoff_type: { key: "tradeoff_type", resolver: (data, ctx, fmt) => ctx.resolveGroupedValue(data, "tradeoff_type"), fieldType: this.type.SINGLESELECT },
+                    tradeoff_type: {
+                        key: "tradeoff_type",
+                        groupFilter: "tradeoff_type",
+                        resolver: (data, ctx /*, fmt*/) => {
+                            const regFn = ctx?.handler?.groupTypeFilter;
+                            const reg = (typeof regFn === "function" ? regFn() : regFn) || {};
+                            const spec = reg["tradeoff_type]"];
+                            if(!spec) return ""; //no config -> empty
+                            const gf = spec.groupField;
+                            const groupV = data?.[gf];
+                            const subKey = spec.subFieldsByGroup?.[groupV];
+                            const cal = subKey ? data?.[subKey] : undefined;
+                            return Array.isArray(val) ? (val[0] ?? "") : (val ?? "");
+                            },
+                        fieldType: this.type.SINGLESELECT
+                    },
                     applies_to: { key: "applies_to", modalKey: "applies_to", fieldType: this.type.SINGLESELECT },
                     example_behavior: { key: "example_behavior", modalKey: "example_behavior", fieldType: this.type.TEXTAREA },
                     dominant_pole_group: { key: "pole_group", modalKey: "pole_group", fieldType: this.type.SINGLESELECT },
-                    dominant_pole: { key: "dominant_pole", resolver: (data, ctx, fmt) => ctx.resolveGroupedValue(data, "pole_type"), fieldType: this.type.SINGLESELECT },
-                    conflicted_part: { key: "conflicted_part", modalKey: "conflicted_part", fieldType: this.type.SINGLESELECT, isLink: true },
-                    resolved_by: { key: "resolved_by", resolver: (data, ctx, fmt) => ctx.resolveGroupedValue(data, "resolved_by_type"), fieldType: this.type.MULTISELECT },
+                    dominant_pole: {
+                        key: "dominant_pole",
+                        groupFilter: "pole_type",
+                        resolver: (data, ctx /*, fmt*/) => {
+                            const regFn = ctx?.handler?.groupTypeFilter;
+                            const reg = (typeof regFn === "function" ? regFn() : regFn) || {};
+                            const spec = reg["pole_type"];
+                            if(!spec) return "";
+                            const gf = spec.groupField;
+                            const groupV = data?.[gf];
+                            subKey = spec.subFieldsByGroup?.[groupV];
+                            const val = subKey ? data?.[subKey] : undefined;
+                            return Array.isArray(val) ? (val[0] ?? "") : (val ?? "");
+                        },
+                        fieldType: this.type.SINGLESELECT
+                    },
+                    conflicted_part: { key: "conflicted_part", modalKey: "conflicted_part", fieldType: this.type.MULTISELECT, isLink: true },
+                    resolved_by: {
+                        key: "resolved_by",
+                        groupFilter: "resolved_by_type",
+                        resolver: (data, ctx/*, fmt*/) => {
+                            const regFn = ctx?.handler?.groupFilter;
+                            const reg = (typeof regFn === "function" ? regFn() : regFn) || {};
+                            const spec = reg["resolved_by_type"];
+                            if(!spec) return [];
+                            const gf = spec.groupField;
+                            const groupV = data?.[gf];
+                            const subKey = spec.subFieldsByGroup?.[groupV];
+                            const val = subKey ? data?.[subKey] : undefined;
+                            const arr = Array.isArray(val) ? val : (val != null && val !== "" ? [val] : []);
+                            return arr.filter(v => v !=null && String(v).trim() !=="");
+                        },
+                        fieldType: this.type.MULTISELECT
+                    },
                     resolved_by_group: { key: "resolved_by_group", modalKey: "resolved_by_group", fieldType: this.type.SINGLESELECT },
-                    created: { key: "created", resolver: () => window.customJS.createFormatUtilsInstance().db_formatDateTime(new Date()), fieldType: this.type.DATETIME },
-                    last_modified: { key: "last_modified", resolver: () => window.customJS.createFormatUtilsInstance().db_formatDateTime(new Date()), fieldType: this.type.DATETIME },
+                    created: { key: "created", resolver: (data, ctx, fmt) => fmt.db_formatDateTime(new Date()), fieldType: this.type.DATETIME },
+                    last_modified: { key: "last_modified", resolver: (data, ctx, fmt) => fmt.db_formatDateTime(new Date()), fieldType: this.type.DATETIME },
                     status: { key: "status", resolver: () => "🟨 review", fieldType: this.type.SINGLESELECT },
                     entered: { key: "entered", resolver: () => false, fieldType: this.type.TOGGLE },
                     reviewed: { key: "reviewed", resolver: () => false, fieldType: this.type.TOGGLE },
@@ -50,7 +96,7 @@ class createNewObject_fieldMap {
         if(this.intent) return this.intent;
         //authoritative source (bootstrap sets this)
         this.intent = window.customJS.INTENT || { TITLE:"title", FILENAME:"filename", SLUG:"slug", DEADLINE:"deadline" };
-        this.inents = this.intent; //optional alias for  symmetry
+        this.intents = this.intent; //optional alias for  symmetry
         return this.intent;
     }
 

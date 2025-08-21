@@ -40,22 +40,18 @@ class updateObject_fieldMap {
 
         // Accept either .TYPE or .TYPES on the constructor and store
         const enumObj = directEnum || legacyEnum;
-        this.type = enumObj;
-        this.types = enumObj; // alias for any legacy references
 
-        if (!this.type) {
-            console.warn("[createNewObject_fieldMap] FieldType enums not ready; falling back to strings.");
-            this.type = this.types = {
-                TEXT: "TEXT",
-                TAGS: "TAGS",
-                SINGLESELECT: "SINGLESELECT",
-                MULTISELECT: "MULTISELECT",
-                TOGGLE: "TOGGLE",
-                DATE: "DATE",
-                TIME: "TIME",
-                DATETIME: "DATETIME"
-            };
-        }
+        // Silent fallback to strings if enums aren’t ready (maps must remain pure)
+        this.type = this.types = enumObj || {
+            TEXT: "TEXT",
+            TAGS: "TAGS",
+            SINGLESELECT: "SINGLESELECT",
+            MULTISELECT: "MULTISELECT",
+            TOGGLE: "TOGGLE",
+            DATE: "DATE",
+            TIME: "TIME",
+            DATETIME: "DATETIME"
+        };
         return this.type;
     }
 
@@ -63,7 +59,7 @@ class updateObject_fieldMap {
         if(this.intent) return this.intent;
         //authoritative source (bootstrap sets this)
         this.intent = window.customJS.INTENT || { TITLE:"title", FILENAME:"filename", SLUG:"slug", DEADLINE:"deadline" };
-        this.inents = this.intent; //optional alias for  symmetry
+        this.intents = this.intent; //optional alias for  symmetry
         return this.intent;
     }
 

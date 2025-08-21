@@ -51,7 +51,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "5e51590480c6defc",
@@ -383,10 +383,10 @@
       "cmdr:Templater: Insert Meta/Templates/modal form controllers/Modal Update Form Template.md": false
     }
   },
-  "active": "3bc678cf11168bfd",
+  "active": "ad43772da6ab2a65",
   "lastOpenFiles": [
-    "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
     "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
     "Meta/Scripts/CustomJS_Scripts/Registries/intentRegistry.js",
     "Meta/Scripts/CustomJS_Scripts/Registries/mf_FieldTypeRegistry.js",
     "Meta/Scripts/CustomJS_Scripts/Registries/fileClassRegistry.js",

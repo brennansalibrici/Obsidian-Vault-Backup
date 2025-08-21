@@ -6,26 +6,57 @@ class FormatUtils {
   static WIKILINK_RE = /^\[\[[^\]]+\]\]$/;
 
   constructor() {
-    this.errorBus = window.customJS.createerrorBusInstance();
+    const factory = window?.customJS?.createErrorBusInstance || window.customHS?.createerrorBusInstance;
+    if(typeof factory !== "function") {
+      throw new Error("[FormatUtils] errorBus factory not found on window.customJS");
+    }
+    this.errorBuss = factory({ module: "FormatUtils" });
   }
+
+  emit(type, message, meta = {}) {
+    const EB = this.errorBus;
+    if(!EB) return; //silent if unavailalbe
+    if(typeof EB[type] === "function") return EB[type](message, { module: "FormatUtils", ...meta });
+    if(typeof EB.notify === "function") return EB.notify({ type, message, module: "FormatUtils", ...meta });
+    if(typeof EB.emit === "function") return EB.emit(type, { message, module: "FormatUtils", ...meta });
+    if(typeof EB.push === "function") return EB.push({ type, message, module: "FormatUtils", ...meta });
+  }
+
+  success(msg, meta) {this.emit("success", msg, meta); }
+  error(msg, meta) {this.emit("error", msg, meta); }
 
   //#endregion
 
   //#region DATE & TIME FORMATS
 
       db_formatDateTime(dateObj) {
-        const momentObj = window.moment(dateObj ?? new Date());
-        return momentObj.format("YYYY-MM-DD HH:mm");
+        try {
+          const momentObj = window.moment(dateObj ?? new Date());
+          return momentObj.format("YYYY-MM-DD HH:mm");
+        } catch(e) {
+          this.error("sb_formateDateTime failed", { error: String(e) });
+          return "";
+        }
       }
 
       db_formatDateOnly(dateObj) {
-        const momentObj = window.moment(dateObj ?? new Date());
-        return momentObj.format("YYYY-MM-DD");
+        try{
+          const momentObj = window.moment(dateObj ?? new Date());
+          return momentObj.format("YYYY-MM-DD");
+        } catch (e) {
+          this.error("db_formatDateOnly failed", { error: String(e) });
+          return "";
+        }
       }
 
-      formatTimeOnly(dateObj) {
-        const momentObj = window.moment(dateObj ?? new Date());
-        return momentObj.format("HH:mm");
+      db_formatTimeOnly(dateObj) {
+        try{
+          const momentObj = window.moment(dateObj ?? new Date());
+          return momentObj.format("HH:mm");
+        } catch (e) {
+          this.error("db_formatTimeOnly failed", { error: String(e) });
+          return "";
+        }
       }
 
   //#endregion DATE & TIME FORMATS
@@ -92,7 +123,7 @@ class FormatUtils {
         return this.isLikelyAcronym(word) ? word : this.capitalizeWord(word);
       }
 
-      //strips brackets from a string link
+      //DEPRECATED ALIAS: prefer unwrapLink
       stripLinkBrackets(str){
         return this.unwrapLink(str);
       }
@@ -140,7 +171,6 @@ class FormatUtils {
 
   //#region DIRECTIONAL NORMALIZERS
       //Normalize value for writing to YAML Frontmatter (array or scalar), link wrapping optional
-      // Normalize value for writing to YAML Frontmatter (array or scalar), link wrapping optional
     toYamlList(value, { link = false } = {}) {
       const arr = this.ensureArray(value)
         .map(v => (typeof v === "string" ? v.trim() : v))
@@ -163,19 +193,10 @@ class FormatUtils {
      */
     toFormList(value, { stripLinks = false } = {}) {
       if (value == null) return [];
-
       const arr = Array.isArray(value) ? value : [value];
-
       if (!stripLinks) return arr;
-
-      return arr.map(v => {
-        if (typeof v !== "string") return v;
-        // unwrap [[...]] if present
-        return v.replace(/^\s*\[\[|\]\]\s*$/g, "").trim();
-      });
+      return arr.map(v => (typeof v === "string" ? this.unwrapLink(v) : v));
     }
-
-
 
   //#endregion
 
@@ -186,32 +207,15 @@ class FormatUtils {
       }
 
       // One-stop normalizer using map flags & link rules
-      normalizeForWrite({
-        value,
-        existing = undefined,
-        isLinkField = false,
-        singleSelect = false,
-        multiSelect = false,
-        merge = true, // merge arrays when updating
-      }) {
+      normalizeForWrite({ value, existing = undefined, isLinkField = false, singleSelect = false, multiSelect = false, merge = true, /*merge arrays when updating*/ }) {
         // explicit-only: only multiSelect => array
         const wantsArray = multiSelect === true;
 
         // produce a cleaned array, wrapping links per item if needed
         const normalizedArr = this.toYamlList(value, { link: isLinkField });
-
-        const shaped = wantsArray
-          ? normalizedArr
-          : this.applySelectSemantics(normalizedArr, { singleSelect: true });
-
+        const shaped = wantsArray ? normalizedArr : this.applySelectSemantics(normalizedArr, { singleSelect });
         if (!merge) return shaped;
-
-        // Merge if updating arrays, otherwise just return shaped scalar
-        if (wantsArray) {
-          return this.mergeYamlLists(existing, shaped);
-        } else {
-          return shaped;
-        }
+        return wantsArray ? this.mergeYamlLists(existing, shaped) : shaped;
       }
 
 
@@ -229,13 +233,9 @@ class FormatUtils {
         return titled || "Untitled";
       }
 
-
-
-
-
     //#endregion
 
-      //#endregion
+  //#endregion
 
 }
 

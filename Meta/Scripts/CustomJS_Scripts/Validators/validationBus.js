@@ -1,6 +1,11 @@
 class ValidationBus {
   constructor() {
-    this.ErrorBus   = window.customJS.createerrorBusInstance(); // class with static API
+    const factory = window?.customJS.createerrorBusInstance /*(published by bootstrap*/ || window?.customJS.createErrorBusInstance; /*accomdates newer name*/
+    if (typeof factory !== "function") {
+      //constructors may throw if no bus available yet
+      throw new Error("[ValidationBus] errorBus factory not found on window.customJS");
+    }
+    this.ErrorBus   = factory; // class with static API
     this.format     = window.customJS.createFormatUtilsInstance();
     this.rules = {
       _common_init: [
@@ -10,8 +15,14 @@ class ValidationBus {
         },
         // template present
         ({ handler, fileClass }) => {
-          if (!handler?.template) throw this.ErrorBus.err("LOOKUP", "NO_TEMPLATE", { where: fileClass });
-        },
+          if (!handler?.template) {
+            throw this.ErrorBus.err(
+              this.ErrorBus.TYPE.LOOKUP, "NOT_FOUND",
+              { what: `template for fileClass '${fileClass}'`, where: "ValidationBus._common_init" },
+              { domain: this.ErrorBus.DOMAIN.PIPELINE }
+            );
+          }
+        }
       ],
       _common_create: [
         // title present
@@ -19,7 +30,11 @@ class ValidationBus {
           const titleKey = handler?.modalFormMap?.mdlForm_fieldMap?.title;
           const titleVal = titleKey && formData?.[titleKey];
           if (!titleVal || (typeof titleVal === "string" && !titleVal.trim())) {
-            throw this.ErrorBus.err("VALIDATION", "TITLE_REQUIRED", { where: "create" });
+            throw this.ErrorBus.err(
+              this.ErrorBus.TYPE.VALIDATION, "MISSING_FIELD",
+              { field: "title", got: String(titleVal ?? "") },
+              { domain: this.ErrorBus.DOMAIN.FORMS }
+            );
           }
         },
       ],
@@ -27,12 +42,52 @@ class ValidationBus {
         // basic map sanity (objects/strings only)
         ({ map }) => {
           if (!map || typeof map !== "object") {
-            throw this.ErrorBus.err("UNKNOWN", "UNKNOWN", { where: "fieldMap missing/invalid" });
+            throw this.ErrorBus.err(
+              this.ErrorBus.TYPE.VALIDATION, "INVALID_TYPE",
+              { field: "fieldMap", expected: "object", got: typeof map },
+              { domain: this.ErrorBus.DOMAIN.PIPELINE }
+            );
           }
           for (const [formField, mapping] of Object.entries(map)) {
             const t = typeof mapping;
             if (!(t === "string" || t === "object")) {
-              throw this.ErrorBus.err("VALIDATION", "MISSING_FIELD", { where: `invalid mapping for '${formField}'` });
+              throw this.ErrorBus.err(
+                this.ErrorBus.TYPE.VALIDATION, "INVALID_TYPE",
+                { field: `mapping for '${formField}'`, expected: "string|object", got: t },
+                { domain: this.ErrorBus.DOMAIN.PIPELINE }
+              );
+            }
+          }
+        },
+        // verify fieldType exists in registry (if provided)
+        ({ map }) => {
+          const Types = window.customJS.FIELD_TYPE || window.customJS.FIELD_TYPE_ENUM || {};
+          const valid = new Set(Object.values(Types));
+          for (const [formField, mappingRaw] of Object.entries(map)) {
+            const m = (typeof mappingRaw === "object") ? mappingRaw : undefined;
+            if (m?.fieldType && !valid.has(m.fieldType)) {
+              throw this.ErrorBus.err(
+                this.ErrorBus.TYPE.VALIDATION, "INVALID_TYPE",
+                { field: `mapping '${formField}'.fieldType`, expected: "valid FIELD_TYPE", got: String(m.fieldType) },
+                { domain: this.ErrorBus.DOMAIN.PIPELINE }
+              );
+            }
+          }
+        },
+        // verify mapping must have one of { key | modalKey | resolver } unless { from: "file" }
+        ({ map }) => {
+          for (const [formField, mappingRaw] of Object.entries(map)) {
+            const m = (typeof mappingRaw === "object") ? mappingRaw : { modalKey: mappingRaw };
+            if (m.from === "file") continue;
+            const hasKey = !!m.key;
+            const hasModalKey = typeof m.modalKey === "string";
+            const hasResolver = typeof m.resolver === "function";
+            if (!hasKey && !hasModalKey && !hasResolver) {
+              throw this.ErrorBus.err(
+                this.ErrorBus.TYPE.VALIDATION, "MISSING_FIELD",
+                { field: `mapping '${formField}' requires key|modalKey|resolver`, got: "none" },
+                { domain: this.ErrorBus.DOMAIN.PIPELINE }
+              );
             }
           }
         },
@@ -43,7 +98,11 @@ class ValidationBus {
             if (!m.groupFilter) continue;
             const reg = groupReg?.[m.groupFilter];
             if (!reg?.groupField || !reg?.subFieldsByGroup) {
-              throw this.ErrorBus.err("LOOKUP", "NO_HANDLER", { where: `groupFilter '${m.groupFilter}'` });
+              throw this.ErrorBus.err(
+                this.ErrorBus.TYPE.LOOKUP, "NOT_FOUND",
+                { what: `groupFilter '${m.groupFilter}'`, where: `mapping '${formField}'`},
+                { domain: this.ErrorBus.DOMAIN.PIPELINE }
+              );
             }
           }
         },
@@ -57,7 +116,11 @@ class ValidationBus {
               const expected = file?.basename || "";
               const provided = formData?.[formField];
               if (provided && provided !== expected) {
-                throw this.ErrorBus.err("VALIDATION", "MISSING_FIELD", { where: `filename mismatch '${formField}'` });
+                throw this.ErrorBus.err(
+                  this.ErrorBus.TYPE.VALIDATION, "INVALID_TYPE",
+                  { field: formField, expected, got: provided },
+                  { domain: this.ErrorBus.DOMAIN.FORMS }
+                );
               }
             }
           }
@@ -91,8 +154,21 @@ class ValidationBus {
   }
 
   _run(fns, ctx) {
-    for (const fn of fns) fn(ctx);
-    return true;
+    try {
+      for (const fn of fns) fn(ctx);
+      return true;
+    } catch (e) {
+      //If already a buss error (has type/code), rethrow as-is
+      if(e && e.type && e.code) throw e;
+      //Otherwise, normalize to a typed runtime error
+      const EB = this.ErrorBus;
+      const wrapped = EB.err(
+        EB.TYPE.RUNTIME, "UNEXPECTED_STATE",
+        { where: "ValidationBus._run", cause: e?.message || String(e) },
+        { domain: EB.DOMAIN.PIPELINE }
+      );
+      throw wrapped;
+    }
   }
 
   static register(customJS) { customJS.validationBus = new ValidationBus(); }

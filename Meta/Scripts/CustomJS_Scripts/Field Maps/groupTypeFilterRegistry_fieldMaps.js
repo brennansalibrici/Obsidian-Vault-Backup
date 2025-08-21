@@ -1,5 +1,7 @@
 class groupTypeFilter_fieldMap {
     constructor() {
+        this.EB = window.customJS?.createerrorBusInstance?.();
+
         this.fieldMap = {
             "TRADE_OFF": {
                 tradeoff_type: {
@@ -151,22 +153,109 @@ class groupTypeFilter_fieldMap {
                 }
             }
         };
+
+        //Freeze & index for normalized lookups
+        this._deepFreeze(this.fieldMap);
+        this._index = this._buildIndex(this.fieldMap);
     }
 
-//#region FUNCTIONS
-    getAll() {
-        return this.fieldMap;
+    //#region PRIVATE FUNCTIONS
+    #_deepFreeze(obj) {
+        if(!obj || typeof obj !== "object") return obj;
+        Object.freeze(obj);
+        for (const k of Object.keys(obj)) {
+            const v = obj[k];
+            if(v && typeof v === "object" && !Object.isFrozen(v)) this.#_deepFreeze(v);
+        }
+        return obj;
     }
 
-    getFieldMap(FILE_CLASS) {
-        return this.fieldMap[FILE_CLASS] || null;
+    #_norm(s) {
+        return String(s ?? "")
+            .toLowerCase()
+      .normalize("NFKD").replace(/[\u0300-\u036f]/g, "") // strip accents
+      .replace(/[’‘‚‛']/g, "'").replace(/[“”„‟"]/g, '"') // unify quotes
+      .replace(/&/g, "and")
+      .replace(/\s+/g, " ")
+      .trim();
     }
 
-    has(FILE_CLASS) {
-        return !!this.fieldMap[FILE_CLASS];
+    #_buildIndex(map) {
+        const idx = {};
+        for(const [fc, filters] of Object.entries(filters || {})) {
+            idx[fc] = {};
+            for(const [filterKey, reg] of Object.entries(filters || {})) {
+                const normByGroup = {};
+                const validSubKeys = new Set(Object.values(reg?.subFieldsByGroup || {}));
+
+                for(const [label, key] of Object.entries(reg?.subFieldsByGroup || {})) {
+                    normByGroup[this.#_norm(label)] = key;
+                }
+
+                const normReverse = {};
+                for(const [label, ref] of Object.entries(reg?.reverseLookupMap || {})) {
+                    const subKey = (typeof ref === "string") ? ref : ref?.key;
+                    if(subKey) normReverse[this.#_norm(label)] = subKey;
+
+                    //Validate reverse ref exists in subFieldsByGroup
+                    if(subKey && !validSubKeys.has(subKey)) {
+                        const e = this.EB?.err?.(
+                            this.EB.TYPE.VALIDATION, "INVALID_TYPE",
+                            { where: "groupTypeFIlter_fieldMap.validate", field: `reverseLookup['${label}']`, expected: `one of ${[...validSubKeys].join(", ")}`, got: subKey },
+                            { domain: this.EB?.DOMAIN?.FORMS }
+                        );
+                        this.EB?.toast?.(e || `[groupTypeFilter] Invalid reverse ref '${subKey}'`, { level: "warn", console: true });
+                    }
+                }
+
+                idx[fc][filterKey] = Object.freeze({ groupField: reg?.groupField || null, normByGroup, normReverse, validSubKeys });
+            }
+        }
+        return idx;
     }
 
-//#endregion
+    //#endregion
+
+    //#region PUBLIC API (kept compatible)
+        getAll() { return this.fieldMap; }
+        getFieldMap(FILE_CLASS) { return this.fieldMap[FILE_CLASS] || null; } // used by fileTypeHandler → modalFormUtils
+        has(FILE_CLASS) { return !!this.fieldMap[FILE_CLASS]; }
+
+        //Convenience helpers
+        getFilter(FILE_CLASS, filterKey) { return this.fieldMap?.[FILE_CLASS]?.[filterKey]; }
+        hasFilter(FILE_CLASS, filterKey) { return !!this.filterKey?.[FILE_CLASS]?.[filterKey]; }
+
+        /** Given a group label (e.g., "Connection vs. Autonomy") return the subfield key ("type_connection"). */
+        resolveSubField(FILE_CLASS, filterKey, groupValue) {
+            const reg = this.getFilter(FILE_CLASS, filterKey);
+            if (!reg) return null;
+            // exact match first
+            const direct = reg.subFieldsByGroup?.[groupValue];
+            if (direct) return direct;
+            // normalized fallback
+            const n = this._index?.[FILE_CLASS]?.[filterKey]?.normByGroup;
+            return n ? n[this._norm(groupValue)] || null : null;
+        }
+
+        /** Reverse lookup: from label/synonym → subfield key. Returns { subFieldKey, groupField } or null. */
+        reverseLookup(FILE_CLASS, filterKey, label) {
+            const reg = this.getFilter(FILE_CLASS, filterKey);
+            if (!reg) return null;
+            // exact match in authored map
+            const raw = reg.reverseLookupMap?.[label];
+            const subFieldKey = (typeof raw === "string") ? raw : raw?.key;
+            if (subFieldKey) return { subFieldKey, groupField: reg.groupField };
+
+            // normalized fallback
+            const n = this._index?.[FILE_CLASS]?.[filterKey]?.normReverse;
+            const sub2 = n ? n[this._norm(label)] : null;
+            return sub2 ? { subFieldKey: sub2, groupField: reg.groupField } : null;
+        }
+
+        /** List filter keys available for a file class. */
+        getFilters(FILE_CLASS) { return Object.keys(this.fieldMap?.[FILE_CLASS] || {}); }
+
+    //#endregion
 }
 
 

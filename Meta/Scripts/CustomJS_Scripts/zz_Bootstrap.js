@@ -87,11 +87,14 @@ class ModalFormsBootstrap {
 
         // ---- INTENT registry (factory & enum convenience)
         (() => {
-            try {
-                const inst = window.customJS.createIntentRegistryInstance?.() || window.customJS.createINTENT_REGISTRYInstance?.();
-                if(!inst?.constructor?.INTENT) {
-                    window.customJS.INTENT = Object.freeze({ ...inst.constructor.INTENT });
-                    window.customJS.INTENT_KEYS = Object.freeze(Object.values(inst.constructor.INTENT.map(v =>[v, v])));
+        try {
+            const inst = window.customJS.createIntentRegistryInstance?.()
+                    || window.customJS.createINTENT_REGISTRYInstance?.();
+            if (inst?.constructor?.INTENT) {
+                window.customJS.INTENT = Object.freeze({ ...inst.constructor.INTENT });
+                window.customJS.INTENT_KEYS = Object.freeze(
+                    Object.fromEntries(Object.keys(inst.constructor.INTENT).map(k => [k, k]))
+                );
                 }
             } catch (e) {
                 console.warn("[Bootstrap] INTENT enum init skipped:", e);

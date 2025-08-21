@@ -1,20 +1,44 @@
 
 class fileTypeHandler {
     constructor() {
-        this.registry = {};
-        this.createNewObject_fieldMap = {};
-        this.updateObject_fieldMap = {};
-        this.groupTypeFilter_fieldMap = {};
-        this.errorBus = {};
-        this.formMapSource = "";
-
+        this.registry = Object.create(null);
+        this.createNewObject_fieldMap = null;
+        this.updateObject_fieldMap = null;
+        this.groupTypeFilter_fieldMap = null;
+        this.formMapSource = null;
+        this.EB = window.customJS?.createerrorBusInstance?.();
     }
 
+    /**
+   * Initialize handler registry for a given run mode.
+   * @param {FILE_CLASS_REGISTRY} FCR - instance published by bootstrap
+   * @param {"create"|"update"} formType
+   */
     init(FCR, formType) {
-        this.createNewObject_fieldMap = window.customJS.createcreateNewObject_fieldMapInstance();
-        this.updateObject_fieldMap = window.customJS.createupdateObject_fieldMapInstance();
-        this.groupTypeFilter_fieldMap = window.customJS.creategroupTypeFilter_fieldMapInstance();
-        this.errorBus = window.customJS.createerrorBusInstance();
+        //Guards
+        if(!FCR?.getAll) {
+            const e = this.EB?.err?.(this.EB.TYPE.RUNTIME, "MISSING_ENV",
+                { where: "fileTYpeHandler.init", missing: "FILE_CLASS_REGISTRY "},
+                { domain: this.EB.DOMAIN.FORMS }
+            );
+            this.EB?.toast?.(e, { level: "warn", console: true });
+            throw (e || new Error("[fileTypeHandler] Missing FILE_CLASS_REGISTRY"));
+        }
+
+        const mode = String(formType || "").toLowerCase();
+        if(mode !== "create" && mode !== "update") {
+            const e = this.EB?.err?.(this.EB.TYPE.VALIDATION, "INVALID_TYPE",
+                { where: "fileTypeHandler.init", field: "formType", expected: "'create' | 'update'", got: formType },
+                { domain: this.EB.DOMAIN.FORMS }
+            );
+            this.EB?.toast?.(e, { ui: true, console: true });
+            throw (e || new Error(`[fileTypeHandler] Invalid formType: ${formType}`));
+        }
+
+        //Resolve map sources (via factories set in bootstrap)
+        this.createNewObject_fieldMap = window.customJS.createcreateNewObject_fieldMapInstance?.();
+        this.updateObject_fieldMap = window.customJS.createupdateObject_fieldMapInstance?.();
+        this.groupTypeFilter_fieldMap = window.customJS.creategroupTypeFilter_fieldMapInstance?.();
 
         switch(formType){
             case "create":
@@ -26,10 +50,63 @@ class fileTypeHandler {
                 break;
         }
 
+        //Build quick FILE_CLASS enum (KEY -> KEY)
         const FC_VALUE = FCR.getAll();
         const FILE_CLASS = Object.freeze(Object.fromEntries(Object.keys(FC_VALUE).map(k => [k,k])));
 
-/*ADD 'COUNTTRACKING: TRUE TO THE OBJECTS THAT NEED TO LOOP THROUGH THE FOLDER AND GET A COUNT VALUE WHICH IS INCLUDED IN THE OBJECT'S TITLE, PRACTICE SESSION, LIVE REHEARSAL, COACHING. EXAMPLE IN PRACTICE SESSION***************************************************************************************************************************************************************************************** */
+        //Helper to compose a handler safely
+        const makeHandler = (key, {folder, template, naming, extra = {} }) => {
+            const modalFormMap = this.formMapSource?.getFieldMap?.(key); // { mdlFormName, mdlForm_fieldMap } expected
+            const groupTypeFilter = this.groupTypeFilter_fieldMap?.getFieldMap?.(key) || null;
+            if(!modalFormMap?.mdlForm_fieldMap) {
+                const e = this.EB?.err?.(this.EB.TYPE.LOOKUP, "NOT_FOUND",
+                    { where: "fileTypeHandler.makeHandler", what: `mdlForm_fieldMap for '${key}'`},
+                    { domain: this.EB.DOMAIN.FORMS }
+                );
+                this.EB?.toast?.(e, { level: "warn", console: true });
+            }
+
+            if(!template) {
+                const e = this.EB?.err?.(this.EB.TYPE.IO, "TEMPLATE_NOT_FOUND",
+                    { where: "fileTypeHandler.makeHandler", templateFile: String(template || "(unset)") },
+                    { domain: this.EB.DOMAIN.OBSIDIAN }
+                );
+                this.EB?.toast?.(e, { level: "warn", console: true });
+                //Do not throw; allow reading maps without IO targets in dev
+            }
+
+            return Object.freeze({ fileClass: key, folder, template, naming, formType: mode, modalFormMap, groupTypeFilter, ...extra });
+        };
+
+        // ---- Registry definition (enable types as you go) ----------------------
+        // TRADE_OFF — maps defined in create/update maps with expected shape
+        // create map shape example: mdlFormName + mdlForm_fieldMap present
+        // update map shape example with keys matching form → fm keys
+        const tradeOffHandler = makeHandler(FILE_CLASS.TRADE_OFF, {
+            folder:   "ME/🏛️ Foundations/⚖️Trade-Offs",
+            template: "Meta/Templates/me/Foundations/TradeOff Template.md",
+            naming: function (baseName) {
+                // `this` is ModalFormUtils (has formatUtils) when invoked
+                return this.formatUtils.formatTitleCase(baseName || "Untitled Trade-Off");
+            },
+            extra: {
+                // set to true if you later want filename counters for this type
+                countTracking: false
+            }
+            });
+
+            // Add more handlers here as you migrate file types…
+            // const practiceSession = makeHandler(FILE_CLASS.PRACTICE_SESSION, {...})
+
+            // ---- Finalize registry (immutable) -------------------------------------
+            this.registry = Object.freeze({
+            [FILE_CLASS.TRADE_OFF]: tradeOffHandler
+            });
+
+            return this; // fluent
+        }
+
+/*ADD 'COUNTTRACKING: TRUE TO THE OBJECTS THAT NEED TO LOOP THROUGH THE FOLDER AND GET A COUNT VALUE WHICH IS INCLUDED IN THE OBJECT'S TITLE, PRACTICE SESSION, LIVE REHEARSAL, COACHING. EXAMPLE IN PRACTICE SESSION*****************************************************************************************************************************************************************************************
         this.registry = {
             TEST: "TRADE_OFF",
              //#region ME OBJECTS
@@ -50,7 +127,7 @@ class fileTypeHandler {
                 ATTACHMENT_NEED: "attachment_need",
                 ATTACHMENT_STYLE: "attachment_style",
                 ATTACHMENT_THEORY: "attachment_theory",
-                //#endregion */
+                //#endregion
                 TRADE_OFF: {
                     fileClass: "TRADE_OFF",
                     folder: "ME/🏛️ Foundations/⚖️Trade-Offs",
@@ -89,7 +166,7 @@ class fileTypeHandler {
             JOB: "job",
             SITE: "site",
             SUBCONTRACTOR: "subcontractor",
-            POC: "poc"*/
+            POC: "poc"
 
             //#endregion
         };
@@ -97,22 +174,16 @@ class fileTypeHandler {
 
 
     };
+    */
 
+    getAll() { return this.registry; }
+    getHandler(FILE_CLASS) { return this.registry[FILE_CLASS] || null; }
+    has(FILE_CLASS){ return !!this.registry[FILE_CLASS]; }
 
-    getAll() {
-        return this.registry;
-    }
-
-    getHandler(FILE_CLASS) {
-        return this.registry[FILE_CLASS] || null;
-    }
-
-    has(FILE_CLASS){
-        return !!this.registry[FILE_CLASS];
-    }
-
-    getFormName(formType, fileType){
-
+    //Reserved for future: e.g., surface from name directly from maps
+    getFormName(FILE_CLASS){
+        const h = this.getHandler(FILE_CLASS);
+        return h?.modalFormMap?.mdlFormName || null;
     }
 
  }

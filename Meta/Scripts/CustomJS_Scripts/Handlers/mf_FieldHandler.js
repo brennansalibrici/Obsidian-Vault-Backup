@@ -1,28 +1,48 @@
 class FieldHandler {
   constructor() {
     this.format = window.customJS.createFormatUtilsInstance();
+    this.EB = window.customJS?.createerrorBusInstance?.();
+    this.cache = null; //Cache for built registry
   }
 
   pass() {
-    return {
-      preprocess: ({ value, ctx }) => ({ value, ctx }),
-      validate:   ({ value, ctx }) => ({ value, ctx }),
-      transform:  ({ value, ctx }) => ({ value, ctx }),
-      serialize:  ({ value, ctx }) => ({ value, ctx }),
-      postprocess:({ value, ctx }) => ({ value, ctx })
-    };
+    const id = ({ value, ctx }) => ({ value, ctx });
+    return Object.freeze({
+      preprocess: id,
+      validate:   id,
+      transform:  id,
+      serialize:  id,
+      postprocess:id
+    });
   }
 
-  helpers() {
-    return {
-      asArray: v => (Array.isArray(v) ? v : (v == null || v === "" ? [] : [v])),
-      trim: v => (typeof v === "string" ? v.trim() : v),
-    };
+  //Safe wrappers for formatUtils; fallback to identity if missing
+  F() {
+    const F = this.format || {};
+    const id = v => v;
+
+    return Object.freeze({
+      wrapStringIntoLink: typeof F.wrapStringIntoLink === "function" ? F.wrapStringIntoLink : id,
+      db_formatDateOnly:  typeof F.db_formatDateOnly  === "function" ? F.db_formatDateOnly  : id,
+      db_formatDateTime:  typeof F.db_formatDateTime  === "function" ? F.db_formatDateTime  : id,
+      formatTimeOnly:     typeof F.formatTimeOnly     === "function" ? F.formatTimeOnly     : id,
+    });
   }
 
+  //Build the immutable handler registry
   buildRegistry() {
-    const F = this.format;
-    const pass = (typeof this.pass === "function") ? this.pass() : {
+    const EB = this.EB;
+    const pass = this.pass();
+    const F = this.F();
+
+    //tiny helpers (local only)
+    const coerceArray = v => (Array.isArray(v) ? v : (v == null || v === "" ? [] : [v]));
+    const toString = v => (v == null ? "" : String(v).trim());
+    const toStringArray = v => coerceArray(v).map(x => toString(x)).filter(Boolean);
+
+    /*
+     F = this.format;
+     pass = (typeof this.pass === "function") ? this.pass() : {
       preprocess:  ({ value, ctx }) => ({ value, ctx }),
       validate:    ({ value, ctx }) => ({ value, ctx }),
       transform:   ({ value, ctx }) => ({ value, ctx }),
@@ -34,99 +54,123 @@ class FieldHandler {
     const coerceArray = (v) => Array.isArray(v) ? v : (v == null ? [] : [v]);
     const toString = (v) => (v == null ? "" : String(v).trim());
     const toStringArray = (v) => coerceArray(v).map(x => toString(x)).filter(Boolean);
+    */
 
-    // ---------- Text-ish ----------
-    const TextBase = {
+    //Text-ish
+    const TextBase = ({
       ...pass,
       transform: ({ value, ctx }) => ({ value: toString(value), ctx }),
       serialize: ({ value, ctx }) => {
-        if (ctx?.meta?.isLink === true && value) {
-          return { value: F.wrapStringIntoLink(value), ctx };
+        try {
+          if (ctx?.meta?.isLink === true && value) return { value: F.wrapStringIntoLink(value), ctx };
+        } catch (err) {
+          EB?.toast?.(err, { ui: true, console: true });
         }
-        return { value, ctx };
+          return { value, ctx };
       },
-    };
+    });
 
     const TextAreaBase = TextBase;
     const NoteBase = TextBase;
 
-    // ---------- Numbers / Toggles ----------
-    const NumberBase = {
+    //Numbers / Toggles
+    const NumberBase = Object.freeze({
       ...pass,
       transform: ({ value, ctx }) => {
         if (value === "" || value == null) return { value: null, ctx };
         const n = Number(value);
         return { value: Number.isFinite(n) ? n : null, ctx };
       },
-    };
+    });
 
-    const ToggleBase = {
+    const ToggleBase = Object.freeze({
       ...pass,
       transform: ({ value, ctx }) => ({ value: Boolean(value), ctx }),
-    };
+    });
 
-    // ---------- Selects ----------
-    const SingleSelectBase = {
+    //Selects
+    const SingleSelectBase = Object.freeze({
       ...pass,
-      transform: ({ value, ctx }) => {
-        const first = toStringArray(value)[0] ?? "";
-        return { value: first, ctx };
-      },
+      transform: ({ value, ctx }) => ({ value: toStringArray(value)[0] ?? "", ctx }),
       serialize: ({ value, ctx }) => {
-        if (ctx?.meta?.isLink === true && value) {
-          return { value: F.wrapStringIntoLink(value), ctx };
+        try {
+          if (ctx?.meta?.isLink === true && value) return { value: F.wrapStringIntoLink(value), ctx };
+        } catch (err) {
+          EB?.toast?.(err, { ui: true, console: true });
         }
-        return { value, ctx };
+          return { value, ctx };
       },
-    };
+    });
 
-    const MultiSelectBase = {
+    const MultiSelectBase = Object.freeze({
       ...pass,
       transform: ({ value, ctx }) => ({ value: toStringArray(value), ctx }),
       serialize: ({ value, ctx }) => {
-        if (ctx?.meta?.isLink === true) {
-          return { value: (value || []).map(v => F.wrapStringIntoLink(v)), ctx };
+        try{
+          if (ctx?.meta?.isLink === true && Array.isArray(value)) return { value: value.map(v => F.wrapStringIntoLink(v)), ctx };
+        } catch (err) {
+          EB?.toast?.(err, {ui: true, console: true });
         }
         return { value, ctx };
       },
-    };
+    });
 
-    // ---------- Dates / Times ----------
-    // NOTE: This is where your old MFU "type hooks" now live.
-    const DateBase = {
+    //Dates / Times
+    const DateBase = Object.freeze({
       ...pass,
       transform: ({ value, ctx }) => ({ value: toString(value), ctx }),
-      serialize: ({ value, ctx }) => ({ value: F.db_formatDateOnly(value), ctx }),
-    };
+      serialize: ({ value, ctx }) => {
+        try {
+          return { value: F.db_formatDateOnly(value), ctx };
+        } catch (err) {
+          EB?.toast?.(err, { ui: true, console: true });
+          return { value, ctx };
+        }
+      },
+    });
 
-    const TimeBase = {
+    const TimeBase = Object.freeze({
       ...pass,
       transform: ({ value, ctx }) => ({ value: toString(value), ctx }),
-      serialize: ({ value, ctx }) => ({ value: F.formatTimeOnly(value), ctx }),
-    };
+      serialize: ({ value, ctx }) => {
+        try {
+          return { value: F.formatTimeOnly(value), ctx }
+        } catch (err) {
+          EB?.toast?.(err, { ui: true, console: true });
+          return { value, ctx };
+        }
+      },
+    });
 
-    const DateTimeBase = {
+    const DateTimeBase = Object.freeze({
       ...pass,
       transform: ({ value, ctx }) => ({ value: toString(value), ctx }),
-      serialize: ({ value, ctx }) => ({ value: F.db_formatDateTime(value), ctx }),
-    };
+      serialize: ({ value, ctx }) => {
+        try {
+          return {value: F.db_formatDateTime(value), ctx };
+        } catch (err) {
+          EB?.toast?.(err, { ui: true, console: true });
+          return { value, ctx };
+        }
+      },
+    });
 
-    // ---------- Misc simple aliases ----------
+    //Misc simple aliases
     const TagsBase    = MultiSelectBase; // tags as array of strings
     const EmailBase   = TextBase;
     const PhoneBase   = TextBase;
     const FolderBase  = TextBase;
     const SliderBase  = NumberBase;
 
-    // ---------- Blocks / Files (pass-thru for now) ----------
+    //Blocks / Files (pass-thru for now)
     const DataviewBase     = pass;
     const DocumentBlockBase= pass;
     const MarkdownBlockBase= pass;
     const ImageBase        = pass;
     const FileBase         = pass;
 
-    // ---------- Return full registry keyed by FieldType strings ----------
-    return {
+    //Return full registry keyed by FieldType strings
+    const registry = Object.freeze ({
       Text:           TextBase,
       Number:         NumberBase,
       Tags:           TagsBase,
@@ -148,11 +192,19 @@ class FieldHandler {
       Image:          ImageBase,
       File:           FileBase,
       __default:      TextBase,
-    };
+    });
+    return registry;
   }
 
   getHandlers() {
-    if (!this.cache) this.cache = this.buildRegistry();
+    if (!this.cache) {
+      try {
+        this.cache = this.buildRegistry();
+      } catch (err) {
+        this.EB?.toast?.(err, { ui: true, console: true });
+        throw err;
+      }
+    }
     return this.cache;
   }
 }
