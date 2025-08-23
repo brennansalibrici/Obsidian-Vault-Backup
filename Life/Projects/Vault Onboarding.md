@@ -1,13 +1,12 @@
 ---
-Status:
-  - 🟨
-Links:
-  - "[[USV Legacy]]"
+Status: [🟨]
+Links: ["[[USV Legacy]]"]
 Created: 2022-05-07T11:51:16
 Area: "[[My Second Brain]]"
 Deadline: 2022-07-13
 fileClass: project
 ---
+
 This is a **project note**, one of the many types of notes in the Ultimate Starter Vault 🤩
 
 You can use this to make progress on and keep track of your learning journey 🚀

@@ -6,7 +6,7 @@
       {
         "id": "34ee373fcc5b5ca6",
         "type": "tabs",
-        "dimension": 51.54730327144121,
+        "dimension": 70.86391869000565,
         "children": [
           {
             "id": "377919988d86717d",
@@ -37,7 +37,7 @@
             }
           },
           {
-            "id": "ad43772da6ab2a65",
+            "id": "a1d87d7e44211b8b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -49,14 +49,40 @@
               "icon": "lucide-file",
               "title": "⚖️Trade-Offs"
             }
+          },
+          {
+            "id": "5ec15c3a643405db",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.10"
+            }
+          },
+          {
+            "id": "ad43772da6ab2a65",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "My Areas/My Obsidian/JS Structure/Chat GPT Architecture Implementation Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chat GPT Architecture Implementation Notes"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       },
       {
         "id": "5e51590480c6defc",
         "type": "tabs",
-        "dimension": 48.45269672855879,
+        "dimension": 29.136081309994356,
         "children": [
           {
             "id": "d8de7ce045dedacc",
@@ -173,8 +199,8 @@
             "state": {
               "type": "file-tree-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "icon": "lucide-ghost",
+              "title": "file-tree-view"
             }
           },
           {
@@ -370,6 +396,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "templater-obsidian:Templater": false,
       "templates:Insert template": false,
       "switcher:Open quick switcher": false,
@@ -385,19 +412,28 @@
   },
   "active": "ad43772da6ab2a65",
   "lastOpenFiles": [
-    "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST.md",
+    "Meta/Scripts/CustomJS_Scripts/Core/logger.js",
+    "My Areas/My Obsidian/JS Structure/Long Term Architecture Structure.md",
+    "My Areas/My Obsidian/JS Structure/Chat GPT Architecture Implementation Notes.md",
+    "Meta/Templates/modal form controllers/Modal Update Form Template.md",
+    "Meta/Scripts/CustomJS_Scripts/Core/wrtieQueue.js",
+    "Meta/Scripts/CustomJS_Scripts/Core/indexService.js",
+    "Knowledge/My Resources/My Resources.md",
+    "Life/Projects/Create new Obsidian video.md",
+    "Life/Projects/Obsidian Help/Help_Index_MOC.md",
+    "Life/Projects/Projects.md",
+    "Life/Projects/Vault Onboarding.md",
     "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST.md",
     "Meta/Scripts/CustomJS_Scripts/Registries/intentRegistry.js",
     "Meta/Scripts/CustomJS_Scripts/Registries/mf_FieldTypeRegistry.js",
     "Meta/Scripts/CustomJS_Scripts/Registries/fileClassRegistry.js",
     "Meta/Scripts/CustomJS_Scripts/Registries",
-    "Meta/Templates/modal form controllers/Modal Update Form Template.md",
     "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST 2.md",
     "Meta/Scripts/CustomJS_Scripts/scratchpad.js",
     "ME/🏛️ Foundations/⚖️Trade-Offs/Anticipation vs. Presence.md",
     "Meta/Templates/modal form controllers/Create New Object From Modal Form.md",
     "My Areas/My Obsidian/My Obsidian.md",
-    "Knowledge/My Resources/My Resources.md",
     "My Areas/Chat GPT/Custom GPTs.md",
     "My Areas/My Obsidian/JS Structure/Architecture Overview.md",
     "ME/📝 Captured Moments/📝 Captured Moments.md",
@@ -412,14 +448,6 @@
     "Meta/Scripts/CustomJS_Scripts/Handlers/mf_FieldPipeline.js",
     "Meta/Scripts/CustomJS_Scripts/Core/formatUtils.js",
     "Meta/Scripts/CustomJS_Scripts/Handlers/fileTypeHandler.js",
-    "Meta/Scripts/CustomJS_Scripts/Handlers/mf_FieldHandler.js",
-    "Meta/Scripts/CustomJS_Scripts/Handlers",
-    "My Areas/My Obsidian/JS Structure/IO and Errors.md",
-    "My Areas/My Obsidian/JS Structure/Naming Conventions.md",
-    "Meta/Templates/me/Foundations/TradeOff Template.md",
-    "Meta/fileClass/me/foundations/tradeoffs/tradeoff.md",
-    "Meta/fileClass/global/global.md",
-    "Work/🛠 My Jobs/Data Collection - HTDC Ross, TX Trip 2.md",
     "Obsidian Dashboard.canvas",
     "My Files/My Attachments/Pasted image 20250701063017.png",
     "My Files/My Attachments/Pasted image 20250605211151.png",

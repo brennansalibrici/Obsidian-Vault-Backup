@@ -1,3 +1,6 @@
+---
+---
+
 # 🔍 Help Index (MOC)
 
 Welcome to your **Obsidian Help Hub** — this is your Map of Content (MOC) for all structured knowledge and how-tos related to your vault.

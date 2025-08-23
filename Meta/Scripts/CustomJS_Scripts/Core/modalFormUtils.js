@@ -52,14 +52,6 @@ class ModalFormUtils {
             //UI
             this.ui = { dynamicTitleEnabled: true, titleTimeoutMs: 4000, }; //flip to false to keep the static form title defined in the manage forms window safety timeout for the observer
 
-
-            /*this.fieldTypeFormatHooks = {                       //Eventually this should migrate to the formatting class
-                "date":     this.formatUtils.db_formatDateOnly,
-                "time":     this.formatUtils.formatTimeOnly,
-                "date_time":this.formatUtils.db_formatDateTime,
-                "link":     this.formatUtils.wrapStringIntoLink
-            };*/
-
             /*this.ui = { dynamicTitleEnabled: true,  /
                         titleTimeoutMs: 4000        //
 
@@ -110,6 +102,8 @@ class ModalFormUtils {
 
             this.app = app;
             this.tp = tp;
+            this.Index = window.customJS.createIndexServiceInstance?.();
+            this.WQ    = window.customJS.createWriteQueueInstance?.();
 
             //Form Type Specific Logic & Branching
             switch (formType.toLowerCase()){
@@ -185,15 +179,6 @@ class ModalFormUtils {
                 this.EB.toast(e, { level: "warn", ui: true, console: true });
                 return null;
             }
-
-            // Count matches in folder for naming logic
-            if (this.folder && this.folder.children) {
-                for (const file of this.folder.children) {
-                    if (file.name.includes(this.strField1)) {
-                        this.fileMatch++;
-                    }
-                }
-            }
             return this; //fluent
         }
 
@@ -203,12 +188,23 @@ class ModalFormUtils {
         //checks to see if the filename created already exists in the target folder and if so, appends '-1', '-2', etc.
         ensureUniqueFilename(base) {
             const baseName = this.formatUtils.sanitizeForFilename(base);
-            const existingNames = new Set(this.folder?.children?.map(file => file.name.replace(/\.md$/, "")) || []);
-            if (!existingNames.has(baseName)) return baseName;
-            let counter = 1;
-            let uniqueName = `${baseName}-${counter}`;
-            while (existingNames.has(uniqueName)) { counter++; uniqueName = `${baseName}-${counter}`; }
-            return uniqueName;
+            const idx = this.Index || window.customJS.createIndexServiceInstance?.();
+
+            //Fast path via index
+            if(idx?.hasNameInFolder) {
+                let name = baseName, i = 1;
+                while (idx.hasNameInFolder(this.folderPath, name)) {
+                    name = `${baseName}-${i++}`;
+                }
+                return name;
+            }
+
+            //Fallback: scan folder children (previous behavior)
+            const existing = new Set(this.folder?.children?.map(f => f.name.replace(/\.md$/, "")) || []);
+            if (!existing.has(baseName)) return baseName;
+            let counter = 1, unique = `${baseName}-${counter}`;
+            while (existing.has(unique)) { counter++; unique = `${baseName}-${counter}`; }
+            return unique;
         }
 
         //Delegate to fileType handler naming
@@ -227,10 +223,10 @@ class ModalFormUtils {
             return count !== null ? this.handler.naming.call(this, clean, count) : this.handler.naming.call(this, clean);
         }
 
-
-        //Compute + set this.newCreatedFileName/link/path
+        // Compute + set this.newCreatedFileName/link/path (Index-first; fallback preserved)
         createNewFileName(strName = "") {
             if (strName) this.strField2 = strName;
+
             if (!this.handler?.naming) {
                 const e = this.EB.err(
                     this.EB.TYPE.RUNTIME, "UNEXPECTED_STATE",
@@ -241,38 +237,56 @@ class ModalFormUtils {
                 throw e;
             }
 
-            //Prefer a filename that is passed into the function if available
+            // Prefer explicit title if given, fallback to context, else "Untitled"
             const baseName = this.strField2 || this.strField1 || "Untitled";
+            const idx = this.Index || window.customJS.createIndexServiceInstance?.();
 
-            //Special case for count-tracking file types
+            // ---- Count-tracking path
             if (this.handler?.countTracking) {
-                const existingNames = this.folder?.children?.map(file => file.name.replace(/\.md$/, "")) || [];
                 const prefix = this.formatUtils.sanitizeForFilename(baseName);
-                const pattern = new RegExp(`^${prefix}.*?(\\d+)$`);
-                let maxCount = 0;
-                for (const name of existingNames) { const match = name.match(pattern); if (match) { const count = parseInt(match[1], 10); if (!isNaN(count) && count > maxCount) maxCount = count; } }
-                const nextCount = maxCount + 1;
+
+                // Try fast path from IndexService (sync), else fallback to scan
+                let nextCount = null;
+                try { if (idx?.nextCountSync) nextCount = idx.nextCountSync(this.folderPath, prefix); } catch {}
+
+                if (nextCount == null) {
+                    // Fallback: compute from existing names (previous logic)
+                    const existing = this.folder?.children?.map(f => f.name.replace(/\.md$/, "")) || [];
+                    const pattern  = new RegExp(`^${prefix}.*?(\\d+)$`);
+                    let max = 0;
+                    for (const name of existing) {
+                        const m = name.match(pattern);
+                        if (m) {
+                            const c = parseInt(m[1], 10);
+                            if (!isNaN(c) && c > max) max = c;
+                        }
+                    }
+                    nextCount = max + 1;
+                }
+
                 const finalName = this.getFinalFileName(baseName, nextCount);
                 this.newCreatedFileName = finalName;
                 this.newCreatedFileLink = this.formatUtils.wrapStringIntoLink(finalName);
-                this.newFileFullPath = `${this.folderPath}/${finalName}.md`;
+                this.newFileFullPath    = `${this.folderPath}/${finalName}.md`;
                 return finalName;
             }
 
-            //Default fallback for non-counted types. Use safety check to avoid overwriting existing files
+            // ---- Non-counted path
             const initialName = this.getFinalFileName(baseName);
+            // ensureUniqueFilename now uses IndexService when available
             const safeName = this.ensureUniqueFilename(initialName);
             if (safeName !== initialName) {
                 this.EB.info(`Filename "{initial}" already exists. Renamed to "{safe}".`,
                     { initial: initialName, safe: safeName },
                     { domain: this.EB.DOMAIN.OBSIDIAN, ui: true, console: true }
                 );
-           }
+            }
             this.newCreatedFileName = safeName;
             this.newCreatedFileLink = this.formatUtils.wrapStringIntoLink(safeName);
-            this.newFileFullPath = `${this.folderPath}/${safeName}.md`;
+            this.newFileFullPath    = `${this.folderPath}/${safeName}.md`;
             return safeName;
         }
+
 
         getCreateTitleFromMap(formData) {
             const mapContainer = (typeof this.handler.modalFormMap === "function")
@@ -330,11 +344,11 @@ class ModalFormUtils {
             }
         }
 
-        //Create new file from template path
+        // Create new file from template path (queued when WQ present)
         async createNewFileFromTemplate() {
-            try {
+            const task = async () => {
                 const templateFile = this.app.vault.getAbstractFileByPath(this.templateFile);
-                if(!templateFile) {
+                if (!templateFile) {
                     const e = this.EB.err(this.EB.TYPE.IO, "TEMPLATE_NOT_FOUND",
                         { where:"ModalFormUtils.createNewFileFromTemplate", templateFile: this.templateFile },
                         { domain: this.EB.DOMAIN.OBSIDIAN }
@@ -347,6 +361,10 @@ class ModalFormUtils {
                 this.newCreatedFile = await this.app.vault.create(filePath, templateContent);
                 this.newCreatedFileLink = `[[${this.newCreatedFileName}]]`;
                 return this.newCreatedFile;
+            };
+
+            try {
+                return this.WQ ? await this.WQ.push(task) : await task();
             } catch (err) {
                 const e = this.EB.err(
                     this.EB.TYPE.IO, "WRITE_FAILED",
@@ -354,8 +372,10 @@ class ModalFormUtils {
                     { domain: this.EB.DOMAIN.OBSIDIAN }
                 );
                 this.EB.toast(e, { ui: true, console: true });
+                return null;
             }
         }
+
 
         //Updates an existing file's frontmatter with values from the current modal form
         async updateFileWithFrontmatter(file, formData){
@@ -375,11 +395,13 @@ class ModalFormUtils {
                 );
 
                 // 3) write
-                await this.app.fileManager.processFrontMatter(file, (fm) => {
-                for (const [k, v] of Object.entries(processed)) fm[k] = v;
-                fm["last_modified"] = this.formatUtils.db_formatDateTime(new Date());
-                });
-                this.EB.success("Updated frontmatter for '{path}'.", { path: file?.path || "(unknown)" }, { domain: this.EB.DOMAIN.FORMS, ui: true, console: false } );
+                const task = async () => {
+                    await this.app.fileManager.processFrontMatter(file, (fm) => {
+                        for (const [k, v] of Object.entries(processed)) fm[k] = v;
+                        fm["last_modified"] = this.formatUtils.db_formatDateTime(new Date());
+                    });
+                };
+                this.WQ ? await this.WQ.push(task) : await task();
             } catch (err) {
                 const e = this.EB.err(this.EB.TYPE.IO, "WRITE_FAILED",
                 { where:"ModalFormUtils.updateFileWithFrontmatter", path: file?.path, cause: err?.message },
@@ -532,24 +554,30 @@ class ModalFormUtils {
         async writeFrontMatter_fromCreateForm(file) {
             try {
                 // 1) resolve raw values from the create map (object entries)
-                const fieldMapRaw  = this.resolveFrontmatterCreate(this.formData);
+                const fieldMapRaw = this.resolveFrontmatterCreate(this.formData);
 
                 // 2) run field-type/format pipeline
                 const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap;
-                const processed = await this.applyFieldTypePipeline(fieldMapRaw, mapContainer, { app: this.app, tp: this.tp, fileType: this.fileClass, filePath: this.newFileFullPath });
-
-                // 3) write to YAML
-                const mapObj = mapContainer?.mdlForm_fieldMap || {};
-                await this.app.fileManager.processFrontMatter(file, (fm) => {
-                    for (const [key, value] of Object.entries(processed)) {
-                        if (value === undefined || value === null) continue;
-                        const mapping = (typeof mapObj[key] === "object") ? mapObj[key] : {};
-                        const isArrayField = mapping?.multiSelect === true;
-                        if (Array.isArray(value)) fm[key] = value;
-                        else fm[key] = isArrayField ? [value] : value;
-                    }
+                const processed = await this.applyFieldTypePipeline(fieldMapRaw, mapContainer, {
+                    app: this.app, tp: this.tp, fileType: this.fileClass, filePath: this.newFileFullPath
                 });
-                await this.updateLastModified(file);
+
+                // 3) queued write to YAML (+ last_modified)
+                const mapObj = mapContainer?.mdlForm_fieldMap || {};
+                const task = async () => {
+                    await this.app.fileManager.processFrontMatter(file, (fm) => {
+                        for (const [key, value] of Object.entries(processed)) {
+                            if (value === undefined || value === null) continue;
+                            const mapping = (typeof mapObj[key] === "object") ? mapObj[key] : {};
+                            const isArrayField = mapping?.multiSelect === true;
+                            if (Array.isArray(value)) fm[key] = value;
+                            else fm[key] = isArrayField ? [value] : value;
+                        }
+                        fm["last_modified"] = this.formatUtils.db_formatDateTime(window.moment());
+                    });
+                };
+
+                this.WQ ? await this.WQ.push(task) : await task();
             } catch (err) {
                 const e = this.EB.err(this.EB.TYPE.IO, "WRITE_FAILED",
                     { where:"ModalFormUtils.writeFrontMatter_fromCreateForm", path: this.newFileFullPath, cause: err?.message },

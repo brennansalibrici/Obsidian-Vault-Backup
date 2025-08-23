@@ -2,10 +2,13 @@
 class errorBus {
   // 1) Axes (enums)
   static TYPE = Object.freeze({
-    VALIDATION: "VALIDATION",
-    RUNTIME:    "RUNTIME",
-    LOOKUP:     "LOOKUP",
-    IO:         "IO",
+    VALIDATION:       "VALIDATION",
+    RUNTIME:          "RUNTIME",
+    LOOKUP:           "LOOKUP",
+    IO:               "IO",
+    SCHEMA_MISMATCH:  "SCHEMA_MISMATCH",
+    FIELD_MAP:        "FIELD_MAP",
+    LINK_RESOLVE:     "LINK_RESOLVE"
   });
 
   static DOMAIN = Object.freeze({
@@ -19,10 +22,13 @@ class errorBus {
 
   // 2) Prefix styles for consistency (emoji + label)
   static TYPE_PREFIX = Object.freeze({
-    VALIDATION: "🧪 Validation",
-    RUNTIME:    "🛠️ Runtime",
-    LOOKUP:     "🔎 Lookup",
-    IO:         "📁 I/O",
+    VALIDATION:       "🧪 Validation",
+    RUNTIME:          "🛠️ Runtime",
+    LOOKUP:           "🔎 Lookup",
+    IO:               "📁 I/O",
+    SCHEMA_MISMATCH:  "📐 Schema",
+    FIELD_MAP:        "🗺️ FieldMap",
+    LINK_RESOLVE:     "🔗 Link",
   });
 
   static DOMAIN_PREFIX = Object.freeze({
@@ -52,6 +58,17 @@ class errorBus {
       READ_FAILED:         "Failed reading '{path}'.",
       WRITE_FAILED:        "Failed writing '{path}'.",
     },
+    SCHEMA_MISMATCH: {
+      BAD_SHAPE: "Schema mismatch at '{where}': {detail}.",
+    },
+    FIELD_MAP: {
+      BAD_ENTRY: "Field map entry '{field}' is invalid ({detail}).",
+      MISSING_KEY: "Field map '{field}' is missing {missing}.",
+    },
+    LINK_RESOLVE: {
+      FAILED: "Could not resolve link for '{value}'.",
+      FALLBACK: "Link resolve failed; fell back to plain string for '{value}'.",
+    },
   };
 
   // 4) Domain catalog (overrides or adds codes per domain)
@@ -71,6 +88,7 @@ class errorBus {
     const T = String(type || "").toUpperCase();
     this.CATALOG[T] = { ...(this.CATALOG[T] || {}), ...(codesObj || {}) };
   }
+
   static registerDomain(domain, type, codesObj) {
     const D = String(domain || "").toUpperCase();
     const T = String(type || "").toUpperCase();
@@ -110,6 +128,35 @@ class errorBus {
     return e;
   }
 
+  static with(preset = {}) {
+    const EB = this;
+    const defaults = {
+      domain: EB.DOMAIN.GENERAL,
+      module: undefined, // not used by err(), but we’ll add it to details
+      level: "error",
+      ui: undefined,     // inherit EB.mode
+      console: undefined // inherit EB.mode
+    };
+    const ctx = { ...defaults, ...preset };
+
+    const bindErr = (type, code, details = {}, opts = {}) => {
+      const e = EB.err(type, code, { ...details, module: ctx.module }, { domain: opts.domain ?? ctx.domain });
+      return e;
+    };
+
+    return Object.freeze({
+      TYPE: EB.TYPE,
+      DOMAIN: EB.DOMAIN,
+      err: bindErr,
+      toast: (e, opts = {}) => EB.toast(e, { level: ctx.level, ui: ctx.ui, console: ctx.console, ...opts }),
+      msg: (t, c = {}, o = {}) => EB.msg(t, c, { ui: ctx.ui, console: ctx.console, ...o }),
+      success: (t, c = {}, o = {}) => EB.success(t, c, { ui: ctx.ui, console: ctx.console, ...o }),
+      info:    (t, c = {}, o = {}) => EB.info(t, c, { ui: ctx.ui, console: ctx.console, ...o }),
+      warn:    (t, c = {}, o = {}) => EB.warn(t, c, { ui: ctx.ui, console: ctx.console, ...o }),
+    });
+  }
+
+
   // 8) Output
   // default mode: how to behave if caller doesn't pass ui/console flags
   // "both" | "console" | "ui" | "silent"
@@ -128,21 +175,47 @@ class errorBus {
     const mode = this.mode;
     const wantUI = (ui != null) ? ui : (mode === "ui" || mode === "both");
     const wantConsole = (console != null) ? console : (mode === "console" || mode === "both");
-
     const msg = e?.message || String(e);
 
-    if (wantUI) {
-      try { new Notice(msg, sticky ? 10000 : 4000); } catch {}
-    }
+    if (wantUI) { try { new Notice(msg, sticky ? 10000 : 4000); } catch {} }
     if (wantConsole) {
       const tag = `${e?.type || "ERR"}/${e?.domain || "GENERAL"}/${e?.code || "UNKNOWN"}`;
-      const fn = (level === "warn") ? console.warn
-              : (level === "info") ? console.info
-              : (level === "log")  ? console.log
-              : console.error;
-      fn.call(console, `[${tag}]`, e);
+      const fn = (level === "warn") ? globalThis.console.warn
+              : (level === "info") ? globalThis.console.info
+              : (level === "log")  ? globalThis.console.log
+              : globalThis.console?.error;
+      try { fn?.(`[$tag}]`, e); } catch {}
     }
+    try { this.sinks?.custom?.(this.toLog(e)); } catch {}
   }
+
+  static toLog(e, extra = {}) {
+    return {
+      ts: Date.now(),
+      type: e?.type || "ERR",
+      domain: e?.domain || "GENERAL",
+      code: e?.code || "UNKNOWN",
+      message: e?.message || String(e),
+      where: e?.where || e?.details?.where,
+      details: e?.details || {},
+      ...extra,
+    };
+  }
+
+  static sinks = {
+    ui:   (msg, { sticky }) => { try { new Notice(msg, sticky ? 10000 : 4000); } catch {} },
+    console: (tag, e, level="error") => {
+      const fn = level === "warn" ? globalThis.console?.warn
+              : level === "info" ? globalThis.console?.info
+              : level === "log"  ? globalThis.console?.log
+              : globalThis.console?.error;
+      fn?.(`[${tag}]`, e);
+    },
+    // opt-in extension point:
+    custom: null, // set to (logObj)=>{} if you add a structured logger
+  };
+
+  static setCustomSink(fn /* or null */) { this.sinks.custom = typeof fn === "function" ? fn : null; }
 
   // 9) Non-error messages (success/info/warn) without building an Error
   static LEVEL_PREFIX = Object.freeze({
@@ -188,5 +261,3 @@ class errorBus {
   static warn(t, c = {}, o = {})    { return this.msg(t, c, { ...o, level: "warn" }); }
 
 }
-
-try { module.exports = errorBus; } catch {}

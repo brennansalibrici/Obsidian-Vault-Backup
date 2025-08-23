@@ -27,9 +27,41 @@ class ModalFormsBootstrap {
 
         // Prefer new name; fall back to legacy symbol if still loaded
         const FieldTypeCtor     = ctor(c.FIELD_TYPE_REGISTRY) || ctor(c.FieldType);
+        const IndexSvcCtor      = ctor(c.IndexService)   || ctor(c.indexService);
+        const WriteQueueCtor    = ctor(c.WriteQueue)     || ctor(c.writeQueue);
         const FieldHandlerCtor  = ctor(c.FieldHandler);
         const FieldPipelineCtor = ctor(c.FieldPipeline);
         const IntentCtor        = ctor(c.INTENT_REGISTRY);
+
+        //ErrorBus
+        const ErrorBusCtor = ctor(c.errorBus) || ctor(c.ErrorBus); // tolerate class name variant
+        if (ErrorBusCtor) {
+            const make = (preset) => ErrorBusCtor.with?.(preset) ?? ErrorBusCtor; // prefer .with
+            window.customJS.createErrorBusInstance  = (preset) => make(preset);
+        }
+        console.log("✅ ModalForms bootstrap complete.");
+        new Notice("✅ ModalForms bootstrap complete.");
+
+        //Logger. Publish factory & a root singleton
+        const LoggerCtor = ctor(c.Logger) || globalThis.Logger;
+        if(!LoggerCtor) {
+            console.warn("[Bootstrap] Logger class not found; skipping logger setup.");
+        } else {
+            //Factories
+            window.custJS.createLoggerInstance = (opts={}) => new LoggerCtor(opts);
+            window.customJS.getRootLogger = () => { const st = (window.custJS.state ||= {}); return (st._rootLogger ||= new LoggerCtor({ source: "root" }).addSink("console", LoggerCtor.consoleSink())); }
+        }
+
+        window.customJS.createLoggerInstance = (opts={}) => new LoggerCtor(opts);
+        window.customJS.getRootLogger = () => { const st = (window.customJS.state ||= {}); return (st._rootLogger ||= new LoggerCtor({ source: "root" }).addSink("console", LoggerCtor.consoleSink())); };
+
+        // Install ErrorBus → Logger bridge (structured)
+        const EBctor = ctor(c.errorBus) || ctor(c.ErrorBus);
+        if (EBctor && LoggerCtor) {
+            const rootLog = window.custJS.getRootLogger?.() || new LoggerCtor({ source: "root" }).addSink("console", LoggerCtor.consoleSink());
+            EBctor.setCustomSink((obj) => rootLog.errorObj(obj, "error"));
+            window.customJS.loggerFor = (source, ctx={}) => rootLog.child({ source, context: ctx });
+        }
 
         // ---- Canonical factories
         window.customJS.createFormatUtilsInstance              = () => new FormatCtor();
@@ -39,11 +71,32 @@ class ModalFormsBootstrap {
         window.customJS.createupdateObject_fieldMapInstance    = () => new UpdateMapCtor();
         window.customJS.creategroupTypeFilter_fieldMapInstance = () => new GroupMapCtor();
 
+        // Singletons stored in customJS.state (so hot reloads don't duplicate)
+        const appRef = (window && window.app) ? window.app : (typeof app !== "undefined" ? app : null); // Obsidian 'app' is global; window.app for safety
+
         if (FieldHandlerCtor)   { window.customJS.createFieldHandlerInstance = () => new FieldHandlerCtor(); }
         if (FieldPipelineCtor)  { window.customJS.createFieldPipelineInstance = () => new FieldPipelineCtor(); }
         if (IntentCtor)         {
             window.customJS.createIntentRegistryInstance    = () => new IntentCtor();
             window.customJS.createINTENT_REGISTRYInstance   = () => new IntentCtor(); //optional alias (class-name style)
+        }
+
+        if (IndexSvcCtor) {
+            window.customJS.createIndexServiceInstance = () => {
+                const key = "_indexServiceSingleton";
+                const st = window.customJS.state;
+                if (!st[key]) { st[key] = new IndexSvcCtor(); st[key].init(appRef); }
+                return st[key];
+            };
+        }
+
+        if (WriteQueueCtor) {
+            window.customJS.createWriteQueueInstance = () => {
+                const key = "_writeQueueSingleton";
+                const st = window.customJS.state;
+                if (!st[key]) { st[key] = new WriteQueueCtor({ concurrency: 1 }); }
+                return st[key];
+            };
         }
 
         // ---- FILE_CLASS registry (factory & enum convenience)
@@ -101,14 +154,7 @@ class ModalFormsBootstrap {
             }
         })();
 
-        // ---- ErrorBus passthrough: FIX scope to window.customJS
-        //window.customJS.createerrorBusInstance = () => errorBus;  // <-- previously set on 'c', not usable by callers
-        const ErrorBusCtor = ctor(c.errorBus);
-        window.customJS.createerrorBusInstance = () => ErrorBusCtor; // callers use static API
-        ErrorBusCtor.mode = "console";
-        //errorBus.mode = "console";                                // your FormatUtils etc. read it via window.customJS
-        console.log("✅ ModalForms bootstrap complete.");
-        new Notice("✅ ModalForms bootstrap complete.");
+
 
         // Single clean sanity check
         (() => {
