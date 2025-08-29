@@ -2,8 +2,12 @@ class ModalFormUtils {
 //PURPOSE: TO HANDLE ALL FUNCTIONALITY THAT TAKES DATA FROM ANY MODAL FORMS FORM AND REFLECTS IT IN OBSIDIAN FILES (NAMING, TEMPLATING, FRONTMATTER, I/O, UI, ETC)
 
     //#region DEFINE ERRORBUS
-    //Quick accessor for the static error bus (constructor returned by factory)
-    get EB() { return window.customJS.createerrorBusInstance?.(); }
+        //Quick accessor for the static error bus (constructor returned by factory)
+        get EB() { return window.customJS.createErrorBusInstance?.(); }
+        // Central I/O helpers
+        get fmIO()    { return window.customJS.createFrontmatterIOInstance?.(); }
+        get writer()  { return window.customJS.createFileWriterInstance?.(); }
+
     //#endregion
 
     //#region CONSTRUCTOR & STATE
@@ -189,15 +193,7 @@ class ModalFormUtils {
         ensureUniqueFilename(base) {
             const baseName = this.formatUtils.sanitizeForFilename(base);
             const idx = this.Index || window.customJS.createIndexServiceInstance?.();
-
-            //Fast path via index
-            if(idx?.hasNameInFolder) {
-                let name = baseName, i = 1;
-                while (idx.hasNameInFolder(this.folderPath, name)) {
-                    name = `${baseName}-${i++}`;
-                }
-                return name;
-            }
+            if (idx?.ensureUnique) return idx.ensureUnique(this.folderPath, baseName);
 
             //Fallback: scan folder children (previous behavior)
             const existing = new Set(this.folder?.children?.map(f => f.name.replace(/\.md$/, "")) || []);
@@ -289,50 +285,118 @@ class ModalFormUtils {
 
 
         getCreateTitleFromMap(formData) {
-            const mapContainer = (typeof this.handler.modalFormMap === "function")
-                ? this.handler.modalFormMap()
-                : this.handler.modalFormMap;
+            const set = this.getStandardizedFieldMapSet();
+            if (!set) return formData?.title || this.strField2 || this.strField1 || "Untitled";
 
-            const map = mapContainer?.mdlForm_fieldMap || {};
-            // Prefer a mapping whose *frontmatter key* looks like a title
-            const candidates = ["title", "tradeoff_name"];
+            // Prefer a field with TITLE intent; else fall back to YAML key 'title'
             let chosen = null;
-
-            for (const [fmKey, mappingRaw] of Object.entries(map)) {
-                const m = (mappingRaw && typeof mappingRaw === "object")
-                ? mappingRaw
-                : (typeof mappingRaw === "function") ? { key: fmKey, resolver: mappingRaw }
-                : (typeof mappingRaw === "string")   ? { key: fmKey, modalKey: mappingRaw }
-                : null;
-                if (!m) continue;
-
-                const key = m.key || fmKey;
-                if (candidates.includes(key)) { chosen = m; break; }
+            for (const fm of Object.values(set)) {
+                if (fm?.intent && String(fm.intent).toLowerCase().includes("title")) { chosen = fm; break; }
             }
-
+            if (!chosen) {
+                for (const fm of Object.values(set)) {
+                if (fm?.io?.key === "title") { chosen = fm; break; }
+                }
+            }
             if (!chosen) return formData?.title || this.strField2 || this.strField1 || "Untitled";
 
-            if (typeof chosen.resolver === "function") {
-                return chosen.resolver(formData, this, this.formatUtils);
-            }
-            if (typeof chosen.modalKey === "string") {
-                return formData[chosen.modalKey] ?? "";
-            }
-            return "";
+            const fromForm = formData?.[chosen.fieldId];
+            if (typeof fromForm === "string" && fromForm.trim()) return fromForm.trim();
+            return formData?.title || this.strField2 || this.strField1 || "Untitled";
         }
     //#endregion
 
     //#region FILE CREATION/UPDATE (PUBLIC)
-        //Create file from template and write frontmatter based on formData
+        // Create file (template body + processed frontmatter) in one atomic write
         async createFileWithFrontmatter(formData) {
             try {
                 this.formData = formData;
+
+                // Resolve filename
                 const titleValue = this.getCreateTitleFromMap(this.formData);
                 this.createNewFileName(titleValue);
-                const file = await this.createNewFileFromTemplate();
-                if (file) await this.writeFrontMatter_fromCreateForm(file);
-                if (file) this.EB.success("Created file '{name}' from template.", { name: this.newCreatedFileName }, { domain: this.EB.DOMAIN.OBSIDIAN, ui: true, console: false });
-                return file;
+                const newPath = `${this.folderPath}/${this.newCreatedFileName}.md`;
+
+                // Load template body
+                const templateFile = this.app.vault.getAbstractFileByPath(this.templateFile);
+                if (!templateFile) {
+                    const e = this.EB.err(this.EB.TYPE.IO, "TEMPLATE_NOT_FOUND",
+                        { where:"ModalFormUtils.createFileWithFrontmatter", templateFile: this.templateFile },
+                        { domain: this.EB.DOMAIN.OBSIDIAN }
+                    );
+                    this.EB.toast(e, { ui: true, console: true });
+                    return null;
+                }
+                const templateBody = await this.app.vault.read(templateFile);
+
+                let processed = {};
+                try {
+                    const set = this.getStandardizedFieldMapSet && this.getStandardizedFieldMapSet();
+                    const ModalFormAdapter = window.customJS?.ModalFormAdapter || null;
+
+                    if (set && ModalFormAdapter && typeof ModalFormAdapter.serializeOnSubmit === "function") {
+                        const writes = ModalFormAdapter.serializeOnSubmit(set, this.formData, {
+                            app: this.app, tp: this.tp, formValues: this.formData
+                        });
+                        // Convert writes → frontmatter object (ignore body writes here)
+                        for (const w of writes) {
+                            if (w && w.location === "frontmatter" && w.key) processed[w.key] = w.raw;
+                        }
+                    } else {
+                        // Fallback to legacy resolve + FieldPipeline
+                        const fieldMapRaw = this.resolveFrontmatterCreate(this.formData);
+                        const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap;
+                        processed = await this.applyFieldTypePipeline(fieldMapRaw, mapContainer, {
+                            app: this.app, tp: this.tp, fileType: this.fileClass, filePath: newPath
+                        });
+                    }
+                } catch (e) {
+                    // On adapter failure, fallback to legacy pipeline
+                    const fieldMapRaw = this.resolveFrontmatterCreate(this.formData);
+                    const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap;
+                    processed = await this.applyFieldTypePipeline(fieldMapRaw, mapContainer, {
+                        app: this.app, tp: this.tp, fileType: this.fileClass, filePath: newPath
+                    });
+                }
+
+                // Stamp last_modified
+                processed["last_modified"] = this.formatUtils.db_formatDateTime(window.moment());
+
+                // ---- Schema + Cross-field validation (pre-write)
+                try {
+                    const VB = window.customJS.createValidationBusInstance?.();
+                    if (VB?.validateCreate) {
+                        await VB.validateCreate({
+                            fileClass: this.fileClass,
+                            handler: this.handler,
+                            formData: this.formData,
+                            normalized: processed,
+                            context: { app: this.app, filePath: newPath }
+                        });
+                    }
+                } catch (e) {
+                    // Validation failed → surface and abort create
+                    this.EB.toast(e, { ui: true, console: true });
+                    return null;
+                }
+
+                // I/O (atomic): frontmatter + body together
+                const fmIO = this.fmIO;
+                if (!fmIO) throw new Error("FrontmatterIO not available");
+
+                const WQ = window.customJS.createWriteQueueInstance?.();
+                if (WQ) {
+                    await WQ.enqueue(newPath, () => fmIO.write(newPath, { frontmatter: processed, body: templateBody }));
+                } else {
+                    await fmIO.write(newPath, { frontmatter: processed, body: templateBody });
+                }
+                try { this.Index?.recordCreate?.(this.folderPath, this.newCreatedFileName); } catch {}
+
+                // Update local state + return TFile
+                this.newCreatedFileLink = `[[${this.newCreatedFileName}]]`;
+                this.newCreatedFile = this.app.vault.getAbstractFileByPath(newPath);
+                this.EB.success("Created file '{name}' from template.", { name: this.newCreatedFileName }, { domain: this.EB.DOMAIN.OBSIDIAN, ui: true, console: false });
+                return this.newCreatedFile;
             } catch (err) {
                 const e = this.EB.err(
                     this.EB.TYPE.RUNTIME, "UNEXPECTED_STATE",
@@ -343,6 +407,7 @@ class ModalFormUtils {
                 return null;
             }
         }
+
 
         // Create new file from template path (queued when WQ present)
         async createNewFileFromTemplate() {
@@ -360,6 +425,7 @@ class ModalFormUtils {
                 const filePath = `${this.folderPath}/${this.newCreatedFileName}.md`;
                 this.newCreatedFile = await this.app.vault.create(filePath, templateContent);
                 this.newCreatedFileLink = `[[${this.newCreatedFileName}]]`;
+                try { this.Index?.recordCreate?.(this.folderPath, this.newCreatedFileName); } catch {}
                 return this.newCreatedFile;
             };
 
@@ -377,39 +443,85 @@ class ModalFormUtils {
         }
 
 
-        //Updates an existing file's frontmatter with values from the current modal form
-        async updateFileWithFrontmatter(file, formData){
+        // Updates an existing file's frontmatter via FrontmatterIO (safe merge)
+        async updateFileWithFrontmatter(file, formData) {
             try {
-                // 1) resolve raw values from UPDATE map
-                const updatesRaw = this.resolveFrontmatterUpdate(formData);
+                if (!file) throw new Error("No target file provided");
+                const fmIO = this.fmIO;
+                if (!fmIO) throw new Error("FrontmatterIO not available");
 
-                // 2) run through Field Type Pipeline (same as create)
-                const mapContainer = (typeof this.handler.modalFormMap === "function")
-                ? this.handler.modalFormMap()
-                : this.handler.modalFormMap;
+                let processed = {};
+                try {
+                    const set = this.getStandardizedFieldMapSet && this.getStandardizedFieldMapSet();
+                    const ModalFormAdapter = window.customJS?.ModalFormAdapter || null;
 
-                const processed = await this.applyFieldTypePipeline(
-                updatesRaw,
-                mapContainer,
-                { app: this.app, tp: this.tp, fileType: this.fileClass, filePath: file?.path }
-                );
+                    if (set && ModalFormAdapter && typeof ModalFormAdapter.serializeOnSubmit === "function") {
+                        const writes = ModalFormAdapter.serializeOnSubmit(set, formData, {
+                            app: this.app, tp: this.tp, formValues: formData
+                        });
+                        // Convert writes → frontmatter object only (ignore body writes here)
+                        for (const w of writes) {
+                            if (w && w.location === "frontmatter" && w.key) processed[w.key] = w.raw;
+                        }
+                    } else {
+                        // Fallback to legacy resolve + FieldPipeline
+                        const updatesRaw = this.resolveFrontmatterUpdate(formData);
+                        const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap;
+                        processed = await this.applyFieldTypePipeline(
+                            updatesRaw,
+                            mapContainer,
+                            { app: this.app, tp: this.tp, fileType: this.fileClass, filePath: file?.path }
+                        );
+                    }
+                } catch (e) {
+                    // On adapter failure, fallback to legacy pipeline
+                    const updatesRaw = this.resolveFrontmatterUpdate(formData);
+                    const mapContainer = (typeof this.handler.modalFormMap === "function") ? this.handler.modalFormMap() : this.handler.modalFormMap;
+                    processed = await this.applyFieldTypePipeline(
+                        updatesRaw,
+                        mapContainer,
+                        { app: this.app, tp: this.tp, fileType: this.fileClass, filePath: file?.path }
+                    );
+                }
 
-                // 3) write
-                const task = async () => {
-                    await this.app.fileManager.processFrontMatter(file, (fm) => {
-                        for (const [k, v] of Object.entries(processed)) fm[k] = v;
-                        fm["last_modified"] = this.formatUtils.db_formatDateTime(new Date());
-                    });
-                };
-                this.WQ ? await this.WQ.push(task) : await task();
+                // 2) last_modified
+                processed["last_modified"] = this.formatUtils.db_formatDateTime(window.moment());
+
+                // ---- Schema + Cross-field validation (pre-write)
+                try {
+                    const VB = window.customJS.createValidationBusInstance?.();
+                        if (VB?.validateUpdate) {
+                            await VB.validateUpdate({
+                            fileClass: this.fileClass,
+                            handler: this.handler,
+                            formData,
+                            file,
+                            normalized: processed,
+                            context: { app: this.app, filePath: file?.path }
+                        });
+                    }
+                } catch (e) {
+                    // Validation failed → surface and abort update
+                    this.EB.toast(e, { ui: true, console: true });
+                    return; // stop before writing
+                }
+
+                // 3) upsert with array-merge semantics when maps mark multiSelect
+                const WQ = window.customJS.createWriteQueueInstance?.();
+                if (WQ) {
+                await WQ.enqueue(file.path, () => fmIO.upsert(file.path, processed, { merge: "append_unique" }));
+                } else {
+                await fmIO.upsert(file.path, processed, { merge: "append_unique" });
+                }
             } catch (err) {
                 const e = this.EB.err(this.EB.TYPE.IO, "WRITE_FAILED",
-                { where:"ModalFormUtils.updateFileWithFrontmatter", path: file?.path, cause: err?.message },
-                { domain: this.EB.DOMAIN.OBSIDIAN }
+                    { where:"ModalFormUtils.updateFileWithFrontmatter", path: file?.path, cause: err?.message },
+                    { domain: this.EB.DOMAIN.OBSIDIAN }
                 );
                 this.EB.toast(e, { ui: true, console: true });
             }
         }
+
 
     //#endregion
 
@@ -589,8 +701,16 @@ class ModalFormUtils {
 
         async updateLastModified(file) {
             try {
+                if (!file) return;
+                const fmIO = this.fmIO;
+                if (!fmIO) throw new Error("FrontmatterIO not available");
                 const formattedNow = this.formatUtils.db_formatDateTime(window.moment());
-                await this.app.fileManager.processFrontMatter(file, (fm) => { fm["last_modified"] = formattedNow; });
+                const WQ = window.customJS.createWriteQueueInstance?.();
+                if (WQ) {
+                await WQ.enqueue(file.path, () => fmIO.upsert(file.path, { last_modified: formattedNow }));
+                } else {
+                await fmIO.upsert(file.path, { last_modified: formattedNow });
+                }
             } catch (err) {
                 const e = this.EB.err(this.EB.TYPE.IO, "WRITE_FAILED",
                     { where:"ModalFormUtils.updateLastModified", path: file?.path, cause: err?.message },
@@ -599,6 +719,8 @@ class ModalFormUtils {
                 this.EB.toast(e, { level:"warn", ui: true, console: true });
             }
         }
+
+
 
     //#endregion
 
@@ -625,6 +747,15 @@ class ModalFormUtils {
                 out[key] = await pipeline.process(ctx);
             }
             return out;
+        }
+
+        getStandardizedFieldMapSet() {
+            const set = this.handler?.fieldMapSet;
+            if (set) return set;
+            const getStd = (typeof this.handler?.modalFormMap?.getFieldMapSet === "function")
+                ? this.handler.modalFormMap.getFieldMapSet(this.fileClass)
+                : null;
+            return getStd || null;
         }
 
     //#endregion
@@ -724,6 +855,19 @@ class ModalFormUtils {
 
             const inline = JSON.parse(JSON.stringify(def));
             inline.title = String(title || "").trim() || `Update — ${file?.basename || "Untitled"}`;
+            try {
+                const set = this.getStandardizedFieldMapSet && this.getStandardizedFieldMapSet();
+                const ModalFormAdapter = window.customJS?.ModalFormAdapter || null;
+                if (set && ModalFormAdapter && typeof ModalFormAdapter.toFormFields === "function") {
+                    const mfFields = ModalFormAdapter.toFormFields(set, { app: this.app, tp: this.tp, formValues: {} });
+                    inline.fields = Array.isArray(inline.fields) ? inline.fields.concat(mfFields) : mfFields;
+                }
+            } catch (e) {
+                this.EB?.toast?.(this.EB.err?.(this.EB.TYPE.RUNTIME, "UNEXPECTED_STATE",
+                    { where: "ModalFormUtils.openUpdateFormWithDynamicTitle[B3]", cause: e?.message },
+                    { domain: this.EB.DOMAIN.PIPELINE }
+                ) || e, { console: true });
+            }
             if (fallbackObserve) this.ensureDynamicTitle(inline.title, { className, timeout: timeoutMs });
 
             const prefill = values ?? (typeof this.buildFormValuesFromFrontmatter === "function" ? this.buildFormValuesFromFrontmatter(file) : {});
@@ -787,11 +931,80 @@ class ModalFormUtils {
             if (fmEndIndex === -1 || fmEndIndex + 1 >= lines.length) return;
             const suspiciousLine = lines[fmEndIndex + 1].trim();
             if (suspiciousLine === this.templateFile.trim()) {
-                lines.splice(fmEndIndex + 1, 1); // Remove that one line
-                await this.app.vault.modify(file, lines.join("\n"));
+                lines.splice(fmEndIndex + 1, 1);
+                const writer = this.writer;
+                if (!writer) throw new Error("FileWriter not available");
+                const WQ = window.customJS.createWriteQueueInstance?.();
+                const doWrite = () => writer.writeString(file.path, lines.join("\n"));
+                if (WQ) { await WQ.enqueue(file.path, doWrite); } else { await doWrite(); }
             }
         }
 
+    //#endregion
+
+    //#region DEMO Function
+        //Show how to use the current handlers to normalize inputs, then runs ordered intents with a minimal fieldMap.
+        //Its a reminder for later to remember 'how we meant to use this'
+
+        /**
+         * Demo: build state from a TRADE_OFF form, then resolve intents deterministically and get diffs.
+         * formInput shape: { title, slug?, filename?, deadline? } (modal keys)
+         */
+        async runTradeOffIntentDemo(formInput = {}) {
+        const FP = new FieldPipeline();
+        const state = {};
+
+        // Minimal meta you’d normally pull from your field maps
+        const metaByFmKey = {
+            title:    { type: "Text", modalKey: "title",    intent: "title"    },
+            slug:     { type: "Text", modalKey: "slug",     intent: "slug"     },
+            filename: { type: "Text", modalKey: "filename", intent: "filename" },
+            deadline: { type: "Date", modalKey: "deadline", intent: "deadline" },
+        };
+
+        // 1) Type normalization (no semantic intents yet)
+        for (const fmKey of Object.keys(metaByFmKey)) {
+            const meta = metaByFmKey[fmKey];
+            const ctx = {
+            fieldKey: fmKey,
+            modalKey: meta.modalKey,
+            type: meta.type,
+            raw: formInput[meta.modalKey],
+            current: undefined,
+            meta,
+            env: {}
+            };
+            const { value } = await FP.processDetailed(ctx);
+            state[fmKey] = value;
+        }
+
+        // 2) Semantic pass (deterministic order) with a primary-field map for nicer diffs
+        const fieldMap = {
+            title:    "title",
+            slug:     "slug",
+            filename: "filename",
+            deadline: "deadline",
+        };
+
+        const { diffs } = await FP.resolveIntents({
+            state,
+            order: (window.customJS?.INTENT_ORDER) || INTENT_REGISTRY.DEFAULT_ORDER,
+            fieldMap
+        });
+
+        // optional: toast/log diffs
+        try {
+            const EB = window.customJS?.createerrorBusInstance?.();
+            EB?.toast?.({ title: "Intent diffs", body: JSON.stringify(diffs, null, 2) }, { ui: true, console: true });
+        } catch {}
+
+        return { state, diffs };
+        }
+
+        // expose for quick testing in the console or from commands
+        //(globalThis.window?.customJS ||= {}).runTradeOffIntentDemo = runTradeOffIntentDemo;
+
+    }
     //#endregion
 
     //#region LEGACY FUNCTIONS/ COMPAT (KEEP ONLY IF NEEDED)
@@ -1176,4 +1389,3 @@ await utils.updateFileWithFrontmatter(file, data);
 
 //#endregion
 
-}

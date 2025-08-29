@@ -4,36 +4,83 @@
     "type": "split",
     "children": [
       {
-        "id": "34ee373fcc5b5ca6",
+        "id": "3d8c100aa9508e7d",
         "type": "tabs",
-        "dimension": 70.86391869000565,
+        "dimension": 12.430080795525171,
         "children": [
           {
-            "id": "377919988d86717d",
+            "id": "9a8be47ea4cb0797",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ME/🏛️ Foundations/⚖️Trade-Offs/Anticipation vs. Presence.md",
+                "file": "eBay Resale/Reselling Reference on eBay, Depop, and Poshmark.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Anticipation vs. Presence"
+              "title": "Reselling Reference on eBay, Depop, and Poshmark"
             }
           },
           {
-            "id": "3bc678cf11168bfd",
+            "id": "8a62343a6199a859",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST.md",
+                "file": "eBay Resale/Listing Info.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "A TEST"
+              "title": "Listing Info"
+            }
+          },
+          {
+            "id": "1455dba928a2064d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "eBay Resale/Stuff Missing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stuff Missing"
+            }
+          }
+        ]
+      },
+      {
+        "id": "59c04e8cf6b2de9a",
+        "type": "tabs",
+        "dimension": 75.13983840894966,
+        "children": [
+          {
+            "id": "54e0f2b3181071df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "My Areas/My Obsidian/JS Structure/Chat GPT Architecture Implementation Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chat GPT Architecture Implementation Notes"
+            }
+          },
+          {
+            "id": "b66156d27fd0c426",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.12"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.12"
             }
           },
           {
@@ -49,40 +96,13 @@
               "icon": "lucide-file",
               "title": "⚖️Trade-Offs"
             }
-          },
-          {
-            "id": "5ec15c3a643405db",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.10"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.10"
-            }
-          },
-          {
-            "id": "ad43772da6ab2a65",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "My Areas/My Obsidian/JS Structure/Chat GPT Architecture Implementation Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chat GPT Architecture Implementation Notes"
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
         "id": "5e51590480c6defc",
         "type": "tabs",
-        "dimension": 29.136081309994356,
+        "dimension": 12.430080795525171,
         "children": [
           {
             "id": "d8de7ce045dedacc",
@@ -366,13 +386,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ME/🏛️ Foundations/🎭 Emotions/🎭 Emotions.md",
+                "file": "My Areas/My Obsidian/JS Structure/Chat GPT Architecture Implementation Notes.md",
                 "followCursor": true,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Modal Trigger Template"
+              "title": "Outline of Chat GPT Architecture Implementation Notes"
             }
           },
           {
@@ -407,47 +427,54 @@
       "modalforms:Edit forms": false,
       "obsidian-git:Open Git source control": false,
       "workspaces:Manage workspace layouts": false,
-      "cmdr:Templater: Insert Meta/Templates/modal form controllers/Modal Update Form Template.md": false
+      "cmdr:Templater: Insert Meta/Templates/modal form controllers/Modal Update Form Template.md": false,
+      "publish:Publish changes...": false
     }
   },
-  "active": "ad43772da6ab2a65",
+  "active": "54e0f2b3181071df",
   "lastOpenFiles": [
-    "Meta/Scripts/CustomJS_Scripts/Core/logger.js",
-    "My Areas/My Obsidian/JS Structure/Long Term Architecture Structure.md",
+    "Meta/Scripts/CustomJS_Scripts/Validators/crossFieldRules.js",
+    "Work/🛠 My Jobs/GFR - T0580 Huntsville, AL 2025.md",
+    "Work/🛠 My Jobs/Data Collection - HTDC Ross, TX Trip 3.md",
+    "Work/👤 POCs/Jordan Zagar.md",
+    "Work/🛠 My Jobs/LVPM - T3891 Savannah, GA 2025.md",
+    "Work/👤 POCs/Hector Blanco.md",
+    "Work/📍 Sites/T3891 Savannah, GA.md",
+    "eBay Resale/Reselling Reference on eBay, Depop, and Poshmark.md",
+    "Work/⚡Electric Equipment/Switchgear/T0580 MSB2.md",
+    "Work/⚡Electric Equipment/Switchgear/T0580 MSB1.md",
+    "eBay Resale/Listing Info.md",
+    "eBay Resale/Stuff Missing.md",
     "My Areas/My Obsidian/JS Structure/Chat GPT Architecture Implementation Notes.md",
-    "Meta/Templates/modal form controllers/Modal Update Form Template.md",
-    "Meta/Scripts/CustomJS_Scripts/Core/wrtieQueue.js",
-    "Meta/Scripts/CustomJS_Scripts/Core/indexService.js",
-    "Knowledge/My Resources/My Resources.md",
-    "Life/Projects/Create new Obsidian video.md",
-    "Life/Projects/Obsidian Help/Help_Index_MOC.md",
-    "Life/Projects/Projects.md",
-    "Life/Projects/Vault Onboarding.md",
     "ME/🏛️ Foundations/⚖️Trade-Offs/⚖️Trade-Offs.md",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST.md",
-    "Meta/Scripts/CustomJS_Scripts/Registries/intentRegistry.js",
-    "Meta/Scripts/CustomJS_Scripts/Registries/mf_FieldTypeRegistry.js",
-    "Meta/Scripts/CustomJS_Scripts/Registries/fileClassRegistry.js",
-    "Meta/Scripts/CustomJS_Scripts/Registries",
-    "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST 2.md",
-    "Meta/Scripts/CustomJS_Scripts/scratchpad.js",
+    "eBay Resale/Reselling Guide Outline.md",
     "ME/🏛️ Foundations/⚖️Trade-Offs/Anticipation vs. Presence.md",
-    "Meta/Templates/modal form controllers/Create New Object From Modal Form.md",
-    "My Areas/My Obsidian/My Obsidian.md",
-    "My Areas/Chat GPT/Custom GPTs.md",
-    "My Areas/My Obsidian/JS Structure/Architecture Overview.md",
-    "ME/📝 Captured Moments/📝 Captured Moments.md",
-    "ME/📝 Captured Moments/You Didn't Call.md",
-    "ME/📝 Captured Moments/Unexpected Reaction.md",
-    "ME/📝 Captured Moments/How To Handle Intense Emotions.md",
-    "ME/📝 Captured Moments/Boat Argument - No Room for My Perspective.md",
-    "ME/🏛️ Foundations/🎭 Emotions/🎭 Emotions.md",
-    "ME/🏛️ Foundations/⚡ Triggers/⚡ Triggers.md",
-    "ME/📝 Captured Moments/What She's Really Asking For.md",
-    "My Areas/My Obsidian/JS Structure/Module Contracts & Registry.md",
-    "Meta/Scripts/CustomJS_Scripts/Handlers/mf_FieldPipeline.js",
-    "Meta/Scripts/CustomJS_Scripts/Core/formatUtils.js",
-    "Meta/Scripts/CustomJS_Scripts/Handlers/fileTypeHandler.js",
+    "ME/🏛️ Foundations/⚖️Trade-Offs/A TEST.md",
+    "Meta/Scripts/CustomJS_Scripts/Field Maps/fieldMapShaper.js",
+    "Meta/Scripts/CustomJS_Scripts/Field Maps/updateObject_fieldMap.js",
+    "Meta/Scripts/CustomJS_Scripts/Field Maps/groupTypeFilterRegistry_fieldMap.js",
+    "Meta/Scripts/CustomJS_Scripts/Field Maps/createNewObject_fieldMap.js",
+    "Meta/Scripts/CustomJS_Scripts/Adapters/modalFormAdapter.js",
+    "Meta/Scripts/CustomJS_Scripts/Adapters",
+    "Meta/Scripts/CustomJS_Scripts/New folder",
+    "Meta/Scripts/CustomJS_Scripts/Registries/fieldMapRegistry.js",
+    "Meta/Scripts/CustomJS_Scripts/Registries/fieldMapRegistry {.js",
+    "Meta/Scripts/CustomJS_Scripts/Field Maps/fieldMapContracts.js",
+    "Work/⚡Electric Equipment/Switchgear/T0580 MSB3.md",
+    "Work/👤 POCs/Dan Moncreif.md",
+    "Work/📍 Sites/T0580 Huntsville, AL.md",
+    "Work/👤 POCs/Austin Fogg.md",
+    "My Files/My Attachments/IMG_8308.jpeg",
+    "My Files/My Attachments/IMG_8307.jpeg",
+    "My Files/My Attachments/IMG_8309.jpeg",
+    "My Files/My Attachments/IMG_8306 2.jpeg",
+    "My Files/My Attachments/IMG_8306 1.jpeg",
+    "My Files/My Attachments/IMG_8306.jpeg",
+    "Files/eBay Resale Attachments/Attachments.md",
+    "My Areas/My Obsidian.md",
+    "My Areas/My Obsidian/JS Structure/Long Term Architecture Structure.md",
+    "Meta/Templates/modal form controllers/Modal Update Form Template.md",
+    "Knowledge/My Resources/My Resources.md",
     "Obsidian Dashboard.canvas",
     "My Files/My Attachments/Pasted image 20250701063017.png",
     "My Files/My Attachments/Pasted image 20250605211151.png",
@@ -455,12 +482,6 @@
     "My Files/My Attachments/Pasted image 20250601203819.png",
     "Files/Canvases/Creating new task.canvas",
     "My Files/My Attachments/Pasted image 20250528150612.png",
-    "Files/My Attachments/IMG_1461.jpg",
-    "Files/My Attachments/IMG_1465.jpg",
-    "Files/My Attachments/Screenshot 2025-04-15 002323.png",
-    "Files/My Attachments/Pic Test.png",
-    "Files/My Attachments/Pasted image 20250508203302.png",
-    "Files/My Attachments/file-20250510025433554989png.png",
     "Personal/Greenhouse/Canvases/My Note-Making Station Board.canvas",
     "Systems/Dashboards/Captured Moments Dashboard.canvas",
     "Systems/Dashboards/Canvases/My Canvas Vision Board.canvas",

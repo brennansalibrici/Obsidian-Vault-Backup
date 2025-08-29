@@ -10,7 +10,7 @@ class WriteQueue {
   enqueue(path, taskFn) {
     return new Promise((resolve, reject) => {
       this.q.push({ path, taskFn, resolve, reject });
-      this._drain();
+      this.#drain();
     });
   }
 
@@ -30,7 +30,7 @@ class WriteQueue {
         .finally(() => {
           this.locks.delete(job.path);
           this.active--;
-          this._drain();
+          this.#drain();
         });
     }
   }

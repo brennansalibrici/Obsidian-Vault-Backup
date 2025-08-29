@@ -155,22 +155,22 @@ class groupTypeFilter_fieldMap {
         };
 
         //Freeze & index for normalized lookups
-        this._deepFreeze(this.fieldMap);
-        this._index = this._buildIndex(this.fieldMap);
+        this.#deepFreeze(this.fieldMap);
+        this._index = this.#buildIndex(this.fieldMap);
     }
 
     //#region PRIVATE FUNCTIONS
-    #_deepFreeze(obj) {
+    #deepFreeze(obj) {
         if(!obj || typeof obj !== "object") return obj;
         Object.freeze(obj);
         for (const k of Object.keys(obj)) {
             const v = obj[k];
-            if(v && typeof v === "object" && !Object.isFrozen(v)) this.#_deepFreeze(v);
+            if(v && typeof v === "object" && !Object.isFrozen(v)) this.#deepFreeze(v);
         }
         return obj;
     }
 
-    #_norm(s) {
+    #norm(s) {
         return String(s ?? "")
             .toLowerCase()
       .normalize("NFKD").replace(/[\u0300-\u036f]/g, "") // strip accents
@@ -180,35 +180,39 @@ class groupTypeFilter_fieldMap {
       .trim();
     }
 
-    #_buildIndex(map) {
+    #buildIndex(map) {
         const idx = {};
-        for(const [fc, filters] of Object.entries(filters || {})) {
-            idx[fc] = {};
-            for(const [filterKey, reg] of Object.entries(filters || {})) {
-                const normByGroup = {};
-                const validSubKeys = new Set(Object.values(reg?.subFieldsByGroup || {}));
+            for (const [fc, filters] of Object.entries(map || {})) {
+                idx[fc] = {};
+                for (const [filterKey, reg] of Object.entries(filters || {})) {
+                    const normByGroup = {};
+                    const validSubKeys = new Set(Object.values(reg?.subFieldsByGroup || {}));
 
-                for(const [label, key] of Object.entries(reg?.subFieldsByGroup || {})) {
-                    normByGroup[this.#_norm(label)] = key;
-                }
+                    for (const [label, key] of Object.entries(reg?.subFieldsByGroup || {})) {
+                        normByGroup[this.#norm(label)] = key;
+                    }
 
                 const normReverse = {};
-                for(const [label, ref] of Object.entries(reg?.reverseLookupMap || {})) {
+                for (const [label, ref] of Object.entries(reg?.reverseLookupMap || {})) {
                     const subKey = (typeof ref === "string") ? ref : ref?.key;
-                    if(subKey) normReverse[this.#_norm(label)] = subKey;
+                    if (subKey) normReverse[this.#norm(label)] = subKey;
 
-                    //Validate reverse ref exists in subFieldsByGroup
-                    if(subKey && !validSubKeys.has(subKey)) {
-                        const e = this.EB?.err?.(
-                            this.EB.TYPE.VALIDATION, "INVALID_TYPE",
-                            { where: "groupTypeFIlter_fieldMap.validate", field: `reverseLookup['${label}']`, expected: `one of ${[...validSubKeys].join(", ")}`, got: subKey },
-                            { domain: this.EB?.DOMAIN?.FORMS }
-                        );
-                        this.EB?.toast?.(e || `[groupTypeFilter] Invalid reverse ref '${subKey}'`, { level: "warn", console: true });
+                    if (subKey && !validSubKeys.has(subKey)) {
+                    const e = this.EB?.err?.(
+                        this.EB.TYPE.VALIDATION, "INVALID_TYPE",
+                        { where: "groupTypeFilter_fieldMap.validate",
+                        field: `reverseLookup['${label}']`,
+                        expected: `one of ${[...validSubKeys].join(", ")}`,
+                        got: subKey },
+                        { domain: this.EB?.DOMAIN?.FORMS }
+                    );
+                    this.EB?.toast?.(e || `[groupTypeFilter] Invalid reverse ref '${subKey}'`, { level: "warn", console: true });
                     }
                 }
 
-                idx[fc][filterKey] = Object.freeze({ groupField: reg?.groupField || null, normByGroup, normReverse, validSubKeys });
+                idx[fc][filterKey] = Object.freeze({
+                    groupField: reg?.groupField || null, normByGroup, normReverse, validSubKeys
+                });
             }
         }
         return idx;
@@ -223,7 +227,7 @@ class groupTypeFilter_fieldMap {
 
         //Convenience helpers
         getFilter(FILE_CLASS, filterKey) { return this.fieldMap?.[FILE_CLASS]?.[filterKey]; }
-        hasFilter(FILE_CLASS, filterKey) { return !!this.filterKey?.[FILE_CLASS]?.[filterKey]; }
+        hasFilter(FILE_CLASS, filterKey) { return !!this.fieldMap?.[FILE_CLASS]?.[filterKey]; }
 
         /** Given a group label (e.g., "Connection vs. Autonomy") return the subfield key ("type_connection"). */
         resolveSubField(FILE_CLASS, filterKey, groupValue) {
@@ -234,7 +238,7 @@ class groupTypeFilter_fieldMap {
             if (direct) return direct;
             // normalized fallback
             const n = this._index?.[FILE_CLASS]?.[filterKey]?.normByGroup;
-            return n ? n[this._norm(groupValue)] || null : null;
+            return n ? n[this.#norm(groupValue)] || null : null;
         }
 
         /** Reverse lookup: from label/synonym → subfield key. Returns { subFieldKey, groupField } or null. */
@@ -248,7 +252,7 @@ class groupTypeFilter_fieldMap {
 
             // normalized fallback
             const n = this._index?.[FILE_CLASS]?.[filterKey]?.normReverse;
-            const sub2 = n ? n[this._norm(label)] : null;
+            const sub2 = n ? n[this.#norm(label)] : null;
             return sub2 ? { subFieldKey: sub2, groupField: reg.groupField } : null;
         }
 

@@ -18,7 +18,7 @@ class fileTypeHandler {
         //Guards
         if(!FCR?.getAll) {
             const e = this.EB?.err?.(this.EB.TYPE.RUNTIME, "MISSING_ENV",
-                { where: "fileTYpeHandler.init", missing: "FILE_CLASS_REGISTRY "},
+                { where: "fileTypeHandler.init", missing: "FILE_CLASS_REGISTRY "},
                 { domain: this.EB.DOMAIN.FORMS }
             );
             this.EB?.toast?.(e, { level: "warn", console: true });
@@ -55,27 +55,42 @@ class fileTypeHandler {
         const FILE_CLASS = Object.freeze(Object.fromEntries(Object.keys(FC_VALUE).map(k => [k,k])));
 
         //Helper to compose a handler safely
-        const makeHandler = (key, {folder, template, naming, extra = {} }) => {
-            const modalFormMap = this.formMapSource?.getFieldMap?.(key); // { mdlFormName, mdlForm_fieldMap } expected
+        const makeHandler = (key, { folder, template, naming, extra = {} }) => {
+            let fieldMapSet = this.formMapSource?.getFieldMapSet?.(key) || null;
+
+            // Keep a tiny compatibility wrapper so older call sites don't crash
+            let modalFormMap = fieldMapSet
+                ? { mdlFormName: null, mdlForm_fieldMap: null, getFieldMapSet: () => fieldMapSet }
+                : (this.formMapSource?.getFieldMap?.(key) || null);
+
             const groupTypeFilter = this.groupTypeFilter_fieldMap?.getFieldMap?.(key) || null;
-            if(!modalFormMap?.mdlForm_fieldMap) {
+
+            // Warn only if we have neither the new set nor the legacy map
+            if (!fieldMapSet && !modalFormMap?.mdlForm_fieldMap) {
                 const e = this.EB?.err?.(this.EB.TYPE.LOOKUP, "NOT_FOUND",
-                    { where: "fileTypeHandler.makeHandler", what: `mdlForm_fieldMap for '${key}'`},
+                    { where: "fileTypeHandler.makeHandler", what: `fieldMap for '${key}'` },
                     { domain: this.EB.DOMAIN.FORMS }
                 );
                 this.EB?.toast?.(e, { level: "warn", console: true });
             }
 
-            if(!template) {
+            if (!template) {
                 const e = this.EB?.err?.(this.EB.TYPE.IO, "TEMPLATE_NOT_FOUND",
                     { where: "fileTypeHandler.makeHandler", templateFile: String(template || "(unset)") },
                     { domain: this.EB.DOMAIN.OBSIDIAN }
                 );
                 this.EB?.toast?.(e, { level: "warn", console: true });
-                //Do not throw; allow reading maps without IO targets in dev
+                // Do not throw; allow reading maps without IO targets in dev
             }
 
-            return Object.freeze({ fileClass: key, folder, template, naming, formType: mode, modalFormMap, groupTypeFilter, ...extra });
+            return Object.freeze({
+                fileClass: key, folder, template, naming,
+                formType: mode,
+                fieldMapSet,            // ✅ standardized shape
+                modalFormMap,           // 🧯 legacy wrapper (still available)
+                groupTypeFilter,
+                ...extra
+            });
         };
 
         // ---- Registry definition (enable types as you go) ----------------------
@@ -105,6 +120,19 @@ class fileTypeHandler {
 
             return this; // fluent
         }
+
+         getAll() { return this.registry; }
+        getHandler(FILE_CLASS) { return this.registry[FILE_CLASS] || null; }
+        has(FILE_CLASS){ return !!this.registry[FILE_CLASS]; }
+
+        //Reserved for future: e.g., surface from name directly from maps
+        getFormName(FILE_CLASS){
+            const h = this.getHandler(FILE_CLASS);
+            return h?.modalFormMap?.mdlFormName || null;
+    }
+
+ }
+
 
 /*ADD 'COUNTTRACKING: TRUE TO THE OBJECTS THAT NEED TO LOOP THROUGH THE FOLDER AND GET A COUNT VALUE WHICH IS INCLUDED IN THE OBJECT'S TITLE, PRACTICE SESSION, LIVE REHEARSAL, COACHING. EXAMPLE IN PRACTICE SESSION*****************************************************************************************************************************************************************************************
         this.registry = {
@@ -176,17 +204,7 @@ class fileTypeHandler {
     };
     */
 
-    getAll() { return this.registry; }
-    getHandler(FILE_CLASS) { return this.registry[FILE_CLASS] || null; }
-    has(FILE_CLASS){ return !!this.registry[FILE_CLASS]; }
 
-    //Reserved for future: e.g., surface from name directly from maps
-    getFormName(FILE_CLASS){
-        const h = this.getHandler(FILE_CLASS);
-        return h?.modalFormMap?.mdlFormName || null;
-    }
-
- }
         /*[FILE_CLASS.PRACTICE_SESSION]: {
             folder: "ME/🧪 Practice Lab/🎬 Practice Logs",
             template: "Meta/Templates/me/Practice Lab/Practice Session Template.md",

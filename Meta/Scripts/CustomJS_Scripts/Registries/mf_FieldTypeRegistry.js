@@ -25,7 +25,7 @@ class FIELD_TYPE_REGISTRY {
     });
 
     // Immutable tables
-    this.registry = Object.freeze({ ...REG });
+    this.registry = REG;
     this._keys    = Object.freeze(Object.keys(this.registry));                // ["TEXT","NUMBER",...]
     this._labels  = Object.freeze(Object.values(this.registry));              // ["Text","Number",...]
     // Reverse: label → KEY  (e.g., "Text" → "TEXT")
@@ -50,6 +50,7 @@ class FIELD_TYPE_REGISTRY {
     const s = String(input ?? "").trim();
     if (this.registry[s]) return s;               // already a key
     const k = this._byLabel[s] || null;            // maybe a value
+    return k;
   }
 
   /**

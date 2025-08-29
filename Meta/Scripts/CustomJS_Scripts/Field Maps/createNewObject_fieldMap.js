@@ -18,12 +18,12 @@ class createNewObject_fieldMap {
                         resolver: (data, ctx /*, fmt*/) => {
                             const regFn = ctx?.handler?.groupTypeFilter;
                             const reg = (typeof regFn === "function" ? regFn() : regFn) || {};
-                            const spec = reg["tradeoff_type]"];
+                            const spec = reg["tradeoff_type"];
                             if(!spec) return ""; //no config -> empty
                             const gf = spec.groupField;
                             const groupV = data?.[gf];
                             const subKey = spec.subFieldsByGroup?.[groupV];
-                            const cal = subKey ? data?.[subKey] : undefined;
+                            const val = subKey ? data?.[subKey] : undefined;
                             return Array.isArray(val) ? (val[0] ?? "") : (val ?? "");
                             },
                         fieldType: this.type.SINGLESELECT
@@ -41,7 +41,7 @@ class createNewObject_fieldMap {
                             if(!spec) return "";
                             const gf = spec.groupField;
                             const groupV = data?.[gf];
-                            subKey = spec.subFieldsByGroup?.[groupV];
+                            const subKey = spec.subFieldsByGroup?.[groupV];
                             const val = subKey ? data?.[subKey] : undefined;
                             return Array.isArray(val) ? (val[0] ?? "") : (val ?? "");
                         },
@@ -52,7 +52,7 @@ class createNewObject_fieldMap {
                         key: "resolved_by",
                         groupFilter: "resolved_by_type",
                         resolver: (data, ctx/*, fmt*/) => {
-                            const regFn = ctx?.handler?.groupFilter;
+                            const regFn = ctx?.handler?.groupTypeFilter;
                             const reg = (typeof regFn === "function" ? regFn() : regFn) || {};
                             const spec = reg["resolved_by_type"];
                             if(!spec) return [];
@@ -77,40 +77,121 @@ class createNewObject_fieldMap {
         };
     }
 
-    getTypes() {
-    if (this.type) return this.type;
-    // one authoritative source, published by bootstrap
-    this.type = window.customJS.FIELD_TYPE || window.customJS.FIELD_TYPE_ENUM || {
-        // ultra-safe fallback (shouldn’t happen with the bootstrap in place)
-        TEXT:"Text", NUMBER:"Number", TAGS:"Tags", EMAIL:"Email", PHONE:"Phone",
-        DATE:"Date", TIME:"Time", DATETIME:"DateTime", TEXTAREA:"TextArea",
-        TOGGLE:"Toggle", NOTE:"Note", FOLDER:"Folder", SLIDER:"Slider",
-        SINGLESELECT:"SingleSelect", MULTISELECT:"MultiSelect", DATAVIEW:"Dataview",
-        DOCUMENTBLOCK:"DocumentBlock", MARKDOWNBLOCK:"MarkdownBlock", IMAGE:"Image", FILE:"File"
-    };
-    this.types = this.type; // back-compat alias
-    return this.type;
-    }
+    //#region ENUMS
+        getTypes() {
+        if (this.type) return this.type;
+        // one authoritative source, published by bootstrap
+        this.type = window.customJS.FIELD_TYPE || window.customJS.FIELD_TYPE_ENUM || {
+            // ultra-safe fallback (shouldn’t happen with the bootstrap in place)
+            TEXT:"Text", NUMBER:"Number", TAGS:"Tags", EMAIL:"Email", PHONE:"Phone",
+            DATE:"Date", TIME:"Time", DATETIME:"DateTime", TEXTAREA:"TextArea",
+            TOGGLE:"Toggle", NOTE:"Note", FOLDER:"Folder", SLIDER:"Slider",
+            SINGLESELECT:"SingleSelect", MULTISELECT:"MultiSelect", DATAVIEW:"Dataview",
+            DOCUMENTBLOCK:"DocumentBlock", MARKDOWNBLOCK:"MarkdownBlock", IMAGE:"Image", FILE:"File"
+        };
+        this.types = this.type; // back-compat alias
+        return this.type;
+        }
 
-    getIntents() {
-        if(this.intent) return this.intent;
-        //authoritative source (bootstrap sets this)
-        this.intent = window.customJS.INTENT || { TITLE:"title", FILENAME:"filename", SLUG:"slug", DEADLINE:"deadline" };
-        this.intents = this.intent; //optional alias for  symmetry
-        return this.intent;
-    }
+        getIntents() {
+            if(this.intent) return this.intent;
+            //authoritative source (bootstrap sets this)
+            this.intent = window.customJS.INTENT || { TITLE:"title", FILENAME:"filename", SLUG:"slug", DEADLINE:"deadline" };
+            this.intents = this.intent; //optional alias for  symmetry
+            return this.intent;
+        }
 
-    getAll() {
-        return this.fieldMap;
-    }
+    //#endregion
 
-    getFieldMap(FILE_CLASS) {
-        return this.fieldMap[FILE_CLASS] || null;
-    }
+    //#region API
+        getAll() {
+            return this.fieldMap;
+        }
 
-    has(FILE_CLASS) {
-        return !!this.fieldMap[FILE_CLASS];
-    }
+        getFieldMap(FILE_CLASS) {
+            return this.fieldMap[FILE_CLASS] || null;
+        }
+
+        has(FILE_CLASS) {
+            return !!this.fieldMap[FILE_CLASS];
+        }
+
+    //#endregion
+
+    //#region fieldMap Contract Conformance
+         /**
+         * Expose a standardized FieldMapSet for the given fileClass.
+         * Consumers (ModalFormAdapter / pipelines) can use this directly.
+         */
+        getFieldMapSet(FILE_CLASS) {
+            const legacy = this.getFieldMap(FILE_CLASS);
+            if (!legacy) return null;
+            return this.#fromLegacyModalMap(legacy);
+        }
+
+        /** Build all standardized sets at once (optional helper). */
+        getAllFieldMapSets() {
+            const out = {};
+            for (const [cls, legacy] of Object.entries(this.fieldMap || {})) {
+            out[cls] = this.#fromLegacyModalMap(legacy);
+            }
+            return out;
+        }
+
+        // ===== Internal: converter from legacy → standardized =======================
+        /**
+         * Normalize `{ mdlForm_fieldMap }` into a FieldMapSet.
+         * Preserves resolver/intent/isLink and best-effort UI/IO hints.
+         * No top-level side effects.
+         */
+        #fromLegacyModalMap(legacy) {
+            const map = (legacy && legacy.mdlForm_fieldMap) || {};
+            const out = {};
+
+            for (const [fmKey, mappingRaw] of Object.entries(map)) {
+            const m = (mappingRaw && typeof mappingRaw === "object")
+                ? { ...mappingRaw }
+                : (typeof mappingRaw === "string")
+                ? { key: fmKey, modalKey: mappingRaw }
+                : null;
+            if (!m) continue;
+
+            const fieldId = m.modalKey || fmKey;           // modal field id
+            const location = (m.from === "file") ? "frontmatter" : (m.location || "frontmatter");
+            const key = m.key || fmKey;                    // YAML key
+            const uiType = m.fieldType || m.type || this.type.TEXT;
+
+            // Map group-filter behavior into pipe hooks if provided
+            const pipe = { preValidate: [], validate: [], postValidate: [], prePersist: [], preRender: [] };
+            // Keep simple validators/transforms if they exist on legacy entries
+            if (Array.isArray(m.preValidate)) pipe.preValidate = m.preValidate.slice();
+            if (Array.isArray(m.validate)) pipe.validate = m.validate.slice();
+            if (Array.isArray(m.postValidate)) pipe.postValidate = m.postValidate.slice();
+            if (Array.isArray(m.prePersist)) pipe.prePersist = m.prePersist.slice();
+            if (Array.isArray(m.preRender)) pipe.preRender = m.preRender.slice();
+
+            out[fieldId] = {
+                fieldId,
+                ui: { type: uiType, label: m.label || fieldId, required: !!m.required, options: m.options, placeholder: m.placeholder, extra: m.extra },
+                io: { location, key, fromNote: m.fromNote, toNote: m.toNote },
+                pipe,
+                intent: m.intent,
+                isLink: m.isLink === true,
+                index: m.index,
+                defaults: m.defaults,
+                // Keep legacy-only hints so adapters can access them when needed
+                _legacy: {
+                groupFilter: m.groupFilter,
+                resolver: m.resolver
+                }
+            };
+            }
+
+            return out;
+        }
+
+    //#endregion
+
 }
 
 

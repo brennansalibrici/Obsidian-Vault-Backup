@@ -29,23 +29,33 @@ class INTENT_REGISTRY {
 
         const filename = Object.freeze({
             ...pass,
-            transform: ({value, cts }) => {
+            transform: ({ value, ctx }) => {
                 const s = firstOrStr(value);
                 const out = orID(F.sanitizeForFilename)(s);
-                return { value: out, cts };
+                return { value: out, ctx }; // filename is downstream of title/slug
             },
-        });
+            });
 
-        const title = Object.freeze({
+            const title = Object.freeze({
             ...pass,
-            transform: ({ value, cts }) => {
+            transform: ({ value, ctx }) => {
                 const s = firstOrStr(value);
                 const out = orID(F.formatTitleCase)(s);
-                return { value: out, cts };
-            },
-        });
 
-        const slug = Object.freeze({
+                // propose dependent fields
+                const slugFromTitle = out
+                .toLowerCase()
+                .replace(/[^\w\s-]/g, "")
+                .replace(/\s+/g, "-")
+                .replace(/-+/g, "-");
+
+                const fname = orID(F.sanitizeForFilename)(slugFromTitle);
+
+                return { value: out, ctx, set: { slug: slugFromTitle, filename: fname } };
+            },
+            });
+
+            const slug = Object.freeze({
             ...pass,
             transform: ({ value, ctx }) => {
                 const s = firstOrStr(value)
@@ -53,15 +63,15 @@ class INTENT_REGISTRY {
                 .replace(/[^\w\s-]/g, "")
                 .replace(/\s+/g, "-")
                 .replace(/-+/g, "-");
-                return { value: s, ctx };
+                const fname = orID(F.sanitizeForFilename)(s);
+                return { value: s, ctx, set: { filename: fname } };
             },
-        });
+            });
 
-        const deadline = Object.freeze({
+            const deadline = Object.freeze({
             ...pass,
-            // Types already normalized the string (Date/DateTime handler). Keep this semantic step tiny for now.
-            transform: ({ value, ctx }) => ({ value, ctx }), //reservced for later semantic rules
-        });
+            transform: ({ value, ctx }) => ({ value, ctx }),
+            });
 
         // Electrical domain will grow (examples you can add later):
         // - lockout_tagout, arc_flash_category, conductor_id, panel_schedule_slot, etc.
@@ -115,4 +125,160 @@ class INTENT_REGISTRY {
         }
         return cursor;
     }
+
+
+// Diff shape (kept lightweight and serializable)
+/// IntentDiff = {
+///   intent: string,               // e.g., "title"
+///   field: string,                // ctx.fieldKey of the *primary* field when applicable
+///   before: any,                  // primary field value before this intent (if applicable)
+///   after: any,                   // primary field value after this intent
+///   updates: { [fmKey]: { before:any, after:any } } // cross-field mutations
+/// }
+
+  // Deterministic default order. You can override by passing an array into runAll().
+  static DEFAULT_ORDER = Object.freeze([
+    INTENT_REGISTRY.INTENT.TITLE,
+    INTENT_REGISTRY.INTENT.SLUG,
+    INTENT_REGISTRY.INTENT.FILENAME,
+    INTENT_REGISTRY.INTENT.DEADLINE,
+  ]);
+
+  /**
+   * Normalizes handler return into { value, ctx, set?, meta? }.
+   * Handlers may return:
+   *  - { value, ctx }                        -> no cross-field updates
+   *  - { value, ctx, set: {fmKey: newVal} }  -> cross-field updates (dependent fields)
+   */
+  static _normalizeHandlerResult(out, fallback) {
+    const base = (out && typeof out === "object") ? out : {};
+    const value = (base.hasOwnProperty("value") ? base.value : fallback.value);
+    const ctx   = (base.hasOwnProperty("ctx")   ? base.ctx   : fallback.ctx);
+    const set   = (base && typeof base.set === "object") ? base.set : undefined;
+    const meta  = (base && typeof base.meta === "object") ? base.meta : undefined;
+    return { value, ctx, set, meta };
+  }
+
+  /**
+   * Apply a single intent WITH state & diff support.
+   * payload: { value, ctx, state } where state is a mutable map of fmKey->value
+   * returns: { value, ctx, state, diff: IntentDiff }
+   */
+  async applyWithState(label, payload) {
+    const h = this.get(label);
+    const state = payload?.state || {};
+    const field = payload?.ctx?.fieldKey || payload?.ctx?.key || null;
+
+    if (!h) return { ...payload, diff: null }; // preserve current behavior on missing
+
+    const stages = ["preprocess", "validate", "transform", "serialize", "postprocess"];
+    let cursor = { value: payload.value, ctx: payload.ctx };
+
+    // Track primary before/after for diff
+    const primaryBefore = cursor.value;
+    let primaryAfter = cursor.value;
+
+    for (const s of stages) {
+      const fn = h[s];
+      if (typeof fn !== "function") continue;
+      try {
+        const next = await fn(cursor);
+        const norm = INTENT_REGISTRY._normalizeHandlerResult(next ?? {}, cursor);
+        cursor = { value: norm.value, ctx: norm.ctx };
+
+        // If a stage proposes cross-field updates, apply to state immediately
+        if (norm.set && typeof norm.set === "object") {
+          for (const [k, v] of Object.entries(norm.set)) {
+            state[k] = v; // mutate shared state so downstream intents see the change
+          }
+        }
+      } catch (err) {
+        this.EB?.toast?.(
+          this.EB.err?.(this.EB.TYPE.RUNTIME, "UNEXPECTED_STATE",
+            { where: `INTENT.${s}`, cause: err?.message },
+            { domain: this.EB.DOMAIN.PIPELINE }) || err,
+          { ui: true, console: true }
+        );
+        throw err;
+      }
+    }
+
+    primaryAfter = cursor.value;
+
+    // Build a diff by comparing any state keys the handler changed.
+    // Convention: handlers place proposed updates in stage returns via { set: { fmKey: val } }.
+    const updates = {};
+    // To collect stage-driven updates, we rely on a transient snapshot technique:
+    // The caller provides a "before snapshot" and we diff after each intent. See runAll().
+    // For single-call applyWithState, we include at least the primary field change:
+    if (field) {
+      updates[field] = { before: primaryBefore, after: primaryAfter };
+    }
+
+    return { value: primaryAfter, ctx: payload.ctx, state, diff: {
+      intent: label,
+      field,
+      before: primaryBefore,
+      after: primaryAfter,
+      updates
+    }};
+  }
+
+  /**
+   * Run multiple intents in a deterministic order over a shared state.
+   * @param {object} params
+   *   - state: { [fmKey]: any }  // complete, type-normalized form state (mutable)
+   *   - order?: string[]         // intent labels; defaults to DEFAULT_ORDER
+   *   - focus?: string[]         // optional subset: only run intents whose labels are in this list
+   *   - fieldMap?: { [intentLabel]: fmKey } // optional mapping intent->primary field for nicer diffs
+   * @returns {{ state: object, diffs: IntentDiff[] }}
+   */
+  async runAll({ state = {}, order, focus, fieldMap } = {}) {
+    const seq = Array.isArray(order) && order.length ? order : INTENT_REGISTRY.DEFAULT_ORDER;
+    const want = focus && Array.isArray(focus) && focus.length ? new Set(focus) : null;
+
+    const diffs = [];
+    // Snapshot helper for cross-field diffs by intent
+    const snapshot = () => JSON.parse(JSON.stringify(state));
+
+    for (const label of seq) {
+      if (want && !want.has(label)) continue;
+      if (!this.has(label)) continue;
+
+      const before = snapshot();
+
+      // Build a minimal ctx allowing the intent to know its primary field (optional)
+      const ctx = { fieldKey: fieldMap?.[label] || fieldMap?.[label?.toLowerCase?.()] || null, meta: { intent: label } };
+
+      const res = await this.applyWithState(label, { value: state[ctx.fieldKey], ctx, state });
+
+      const after = state; // mutated in-place
+      // Build cross-field updates diff by comparing before vs after
+      const updates = {};
+      for (const k of Object.keys(after)) {
+        const b = before[k];
+        const a = after[k];
+        const changed = (Array.isArray(b) || Array.isArray(a)) ? JSON.stringify(b) !== JSON.stringify(a) : b !== a;
+        if (changed) updates[k] = { before: b, after: a };
+      }
+
+      // Merge a richer diff: prefer computed cross-field updates, ensure primary field captured
+      const merged = {
+        intent: label,
+        field: res.diff?.field || ctx.fieldKey || null,
+        before: res.diff?.before,
+        after: res.diff?.after,
+        updates
+      };
+      diffs.push(merged);
+    }
+
+    return { state, diffs };
+  }
+
 }
+
+
+
+
+

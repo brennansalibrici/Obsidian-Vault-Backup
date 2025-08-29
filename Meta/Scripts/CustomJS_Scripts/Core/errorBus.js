@@ -184,7 +184,7 @@ class errorBus {
               : (level === "info") ? globalThis.console.info
               : (level === "log")  ? globalThis.console.log
               : globalThis.console?.error;
-      try { fn?.(`[$tag}]`, e); } catch {}
+      try { fn?.(`[${tag}]`, e); } catch {}
     }
     try { this.sinks?.custom?.(this.toLog(e)); } catch {}
   }
@@ -254,6 +254,26 @@ class errorBus {
 
     return message;
   }
+
+  // ErrorBus domain extensions (optional, improves specificity)
+   static {
+    // Base FIELD_MAP codes (apply across domains unless overridden)
+    this.register("FIELD_MAP", {
+      INVALID_INTENT:      "Unknown intent '{intent}' (field '{field}').",
+      INVALID_FIELD_TYPE:  "Unknown fieldType '{fieldType}' (field '{field}').",
+      BAD_GROUP_FILTER:    "Unknown or malformed groupFilter '{groupFilter}' (field '{field}').",
+      CONTRACT_FAIL:       "Field map contract failed at '{where}': {detail}.",
+    });
+
+    //Domain-specific overrides for PIPELINE
+    this.registerDomain("PIPELINE", "FIELD_MAP", {
+      CONTRACT_FAIL: "Field map contract failed in pipeline at '{where}': {detail}.",
+    });
+  }
+
+
+
+
 
   // Sugar helpers
   static success(t, c = {}, o = {}) { return this.msg(t, c, { ...o, level: "success" }); }

@@ -24,6 +24,7 @@ class ModalFormsBootstrap {
         const CreateMapCtor       = ctor(c.createNewObject_fieldMap);
         const UpdateMapCtor       = ctor(c.updateObject_fieldMap);
         const GroupMapCtor        = ctor(c.groupTypeFilter_fieldMap);
+        const FieldMapShaperCtor  = ctor(c.FieldMapShaper) || (typeof FieldMapShaper === "function" ? FieldMapShaper : null);
 
         // Prefer new name; fall back to legacy symbol if still loaded
         const FieldTypeCtor     = ctor(c.FIELD_TYPE_REGISTRY) || ctor(c.FieldType);
@@ -39,8 +40,6 @@ class ModalFormsBootstrap {
             const make = (preset) => ErrorBusCtor.with?.(preset) ?? ErrorBusCtor; // prefer .with
             window.customJS.createErrorBusInstance  = (preset) => make(preset);
         }
-        console.log("✅ ModalForms bootstrap complete.");
-        new Notice("✅ ModalForms bootstrap complete.");
 
         //Logger. Publish factory & a root singleton
         const LoggerCtor = ctor(c.Logger) || globalThis.Logger;
@@ -48,8 +47,8 @@ class ModalFormsBootstrap {
             console.warn("[Bootstrap] Logger class not found; skipping logger setup.");
         } else {
             //Factories
-            window.custJS.createLoggerInstance = (opts={}) => new LoggerCtor(opts);
-            window.customJS.getRootLogger = () => { const st = (window.custJS.state ||= {}); return (st._rootLogger ||= new LoggerCtor({ source: "root" }).addSink("console", LoggerCtor.consoleSink())); }
+            window.customJS.createLoggerInstance = (opts={}) => new LoggerCtor(opts);
+            window.customJS.getRootLogger = () => { const st = (window.customJS.state ||= {}); return (st._rootLogger ||= new LoggerCtor({ source: "root" }).addSink("console", LoggerCtor.consoleSink())); }
         }
 
         window.customJS.createLoggerInstance = (opts={}) => new LoggerCtor(opts);
@@ -58,7 +57,7 @@ class ModalFormsBootstrap {
         // Install ErrorBus → Logger bridge (structured)
         const EBctor = ctor(c.errorBus) || ctor(c.ErrorBus);
         if (EBctor && LoggerCtor) {
-            const rootLog = window.custJS.getRootLogger?.() || new LoggerCtor({ source: "root" }).addSink("console", LoggerCtor.consoleSink());
+            const rootLog = window.customJS.getRootLogger?.() || new LoggerCtor({ source: "root" }).addSink("console", LoggerCtor.consoleSink());
             EBctor.setCustomSink((obj) => rootLog.errorObj(obj, "error"));
             window.customJS.loggerFor = (source, ctx={}) => rootLog.child({ source, context: ctx });
         }
@@ -70,6 +69,9 @@ class ModalFormsBootstrap {
         window.customJS.createcreateNewObject_fieldMapInstance = () => new CreateMapCtor();
         window.customJS.createupdateObject_fieldMapInstance    = () => new UpdateMapCtor();
         window.customJS.creategroupTypeFilter_fieldMapInstance = () => new GroupMapCtor();
+
+        if (!window.customJS.FieldMapShaper && typeof FieldMapShaper === "function") { window.customJS.FieldMapShaper = FieldMapShaper; }
+        if (!window.customJS.ModalFormAdapter && typeof ModalFormAdapter === "function") { window.customJS.ModalFormAdapter = ModalFormAdapter; }
 
         // Singletons stored in customJS.state (so hot reloads don't duplicate)
         const appRef = (window && window.app) ? window.app : (typeof app !== "undefined" ? app : null); // Obsidian 'app' is global; window.app for safety
@@ -154,6 +156,94 @@ class ModalFormsBootstrap {
             }
         })();
 
+        const EB  = window.customJS.createErrorBusInstance?.({ module: "bootstrap" });
+        const CFR = CrossFieldRules.createInstance();
+
+        // publish factory for back-compat
+        (window.customJS ||= {}).createCrossFieldRulesInstance = () => CFR;
+
+        // extend error codes
+        EB.register(EB.TYPE.VALIDATION, {
+        CROSS_FIELD_FAILED: "Cross-field validation failed ({count}).",
+        FIELDS_MUTUALLY_EXCLUSIVE: "'{a}' and '{b}' cannot both be provided.",
+        AT_LEAST_ONE_REQUIRED: "Provide at least one of the required fields.",
+        IMPLIES_MISSING: "Field implied by another is missing.",
+        });
+
+        // register defaults
+        CFR.register(CrossFieldRules.helpers.implies({ a: "winner", b: "loser" }));
+        CFR.register(CrossFieldRules.helpers.mutuallyExclusive("deadline", "no_deadline"));
+        CFR.register(CrossFieldRules.helpers.oneOf(["summary", "notes", "decision"], { atLeast: 1 }));
+
+        // === Field-map validation pass (contract + cross-checks) =====================
+        (() => {
+        try {
+            const EB = window.customJS.createErrorBusInstance?.({ module: "bootstrap:mapValidation" })
+                || window.customJS.createerrorBusInstance?.({ module: "bootstrap:mapValidation" });
+
+            const vb = window.customJS.createValidationBusInstance?.();
+            const contractsLoaded = typeof window.customJS.getRegistryContracts === "function";
+            if (!vb) { console.warn("[Bootstrap] ValidationBus not available; skipping map validation."); return; }
+            if (!contractsLoaded) { console.warn("[Bootstrap] registryContracts not loaded; skipping strict validation."); return; }
+
+            // Build instances via your canonical factories
+            const createMap = window.customJS.createcreateNewObject_fieldMapInstance?.();
+            const updateMap = window.customJS.createupdateObject_fieldMapInstance?.();
+            const groupMap  = window.customJS.creategroupTypeFilter_fieldMapInstance?.();
+
+            // If any are missing, we can't do much
+            if (!createMap || !updateMap || !groupMap) {
+            console.warn("[Bootstrap] Map instances missing; skipping validation.");
+            return;
+            }
+
+            // Determine which file-classes actually have map containers
+            const createAll = createMap.getAll?.() || {};
+            const updateAll = updateMap.getAll?.() || {};
+            const fileClasses = new Set([
+            ...Object.keys(createAll),
+            ...Object.keys(updateAll)
+            ]);
+
+            const results = [];
+            for (const fc of fileClasses) {
+            const cContainer = createMap.getFieldMap?.(fc);
+            const uContainer = updateMap.getFieldMap?.(fc);
+            const gContainer = groupMap.getFieldMap?.(fc) || {};
+
+            if (cContainer) results.push({ fc, type: "create", res: vb.validateFieldMapContainer(cContainer, { name: `create.${fc}`, groupFilterMap: gContainer }) });
+            if (uContainer) results.push({ fc, type: "update", res: vb.validateFieldMapContainer(uContainer, { name: `update.${fc}`, groupFilterMap: gContainer }) });
+            }
+
+            const failures = results.filter(r => r.res && r.res.ok === false);
+            const warns    = results.flatMap(r => r.res?.warnings || []);
+
+            // Console summary (nice to have)
+            try {
+            console.table(results.map(r => ({ map: r.type + "." + r.fc, ok: r.res.ok, errors: (r.res.errors||[]).length, warnings: (r.res.warnings||[]).length })));
+            } catch {}
+
+            if (warns.length) {
+            EB?.toast?.(EB.info?.("Field map validation produced warnings ({count})", { count: String(warns.length) }, { domain: EB.DOMAIN.PIPELINE }) || "Map validation warnings", { level: "warn", console: true });
+            }
+
+            if (failures.length) {
+            const first = failures[0];
+            const msg = `Invalid field map(s): ${failures.map(f => `${f.type}.${f.fc}`).join(", ")}`;
+            const e = EB?.err?.(EB.TYPE.FIELD_MAP, "BAD_ENTRY", { where: "Bootstrap.mapValidation", detail: msg }, { domain: EB.DOMAIN.PIPELINE });
+            EB?.toast?.(e || msg, { console: true, ui: true });
+            // Fail fast: throw so consumers don't run with broken maps
+            throw (e || new Error(msg));
+            }
+
+            // If we reach here, everything is valid
+            EB?.success?.("All field maps passed validation.", {}, { domain: EB.DOMAIN.PIPELINE, console: true, ui: true });
+
+        } catch (err) {
+            // Re-throw so the bootstrap caller can decide what to do (usually abort)
+            throw err;
+        }
+        })();
 
 
         // Single clean sanity check
@@ -170,6 +260,100 @@ class ModalFormsBootstrap {
                 FILE_CLASS_enum: !!window.customJS.FILE_CLASS
             });
         })();
+
+        // === Handler-backed map validation (mirrors real runtime) ====================
+        (() => {
+        try {
+            const EB = window.customJS.createErrorBusInstance?.({ module: "bootstrap:handlerValidation" })
+                || window.customJS.createerrorBusInstance?.({ module: "bootstrap:handlerValidation" });
+            const vb = window.customJS.createValidationBusInstance?.();
+            if (!vb) { console.warn("[Bootstrap] ValidationBus not available; skipping handler validation."); return; }
+
+            // Try to obtain handlers from your fileTypeHandler / pipeline
+            const fh = window.customJS.createFieldHandlerInstance?.();
+            const fp = window.customJS.createFieldPipelineInstance?.();
+
+            // Collect potential sources of handlers (different shapes supported)
+            const candidates = [
+            fh?.handlers,                 // e.g. { TRADE_OFF: handler, ... }
+            fh?.getAll?.(),               // if your class exposes a getter
+            fp?.handlers,                 // if pipeline holds them
+            fp?.getAll?.(),
+            ].filter(Boolean);
+
+            if (!candidates.length) {
+            console.warn("[Bootstrap] No handler collection found; skipped handler-backed validation.");
+            return;
+            }
+
+            // Validate the first non-empty collection found
+            const first = candidates.find(c => (Array.isArray(c) ? c.length : Object.keys(c).length));
+            if (!first) {
+            console.warn("[Bootstrap] Handler collection empty; skipped handler-backed validation.");
+            return;
+            }
+
+            const summary = vb.validateHandlersCollection(first);
+
+            // Log a neat console table
+            try {
+            console.table(summary.map(r => ({
+                handler: r.fc, ok: r.ok, errors: r.errors, warnings: r.warnings
+            })));
+            } catch {}
+
+            const bad = summary.filter(s => !s.ok);
+            const warns = summary.filter(s => s.warnings > 0);
+
+            if (warns.length) {
+            EB?.toast?.(EB.info?.("Handler validation warnings ({count})", { count: String(warns.length) }, { domain: EB.DOMAIN.PIPELINE }) || "Handler map warnings", { level: "warn", console: true });
+            }
+            if (bad.length) {
+            const msg = `Invalid handler map(s): ${bad.map(b => b.fc).join(", ")}`;
+            const e = EB?.err?.(EB.TYPE.FIELD_MAP, "BAD_ENTRY", { where: "Bootstrap.handlerValidation", detail: msg }, { domain: EB.DOMAIN.PIPELINE });
+            EB?.toast?.(e || msg, { console: true, ui: true });
+            throw (e || new Error(msg));
+            }
+        } catch (err) {
+            throw err;
+        }
+        })();
+
+
+        // === I/O layer factories (FileWriter, FrontmatterIO) =====================
+        // Requires: FileWriter and FrontmatterIO classes already loaded in the workspace
+        // (e.g., via a JS file you include with your other CustomJS modules).
+        // No top-level side effects: only factory definitions.
+
+        (function bootstrapIOLayerFactories(){
+        // Ensure customJS namespace
+        if (!window.customJS) window.customJS = {};
+        const reg = window.customJS;
+
+        // Normalize the error-bus factory name (prefer createErrorBusInstance)
+        if (!reg.createErrorBusInstance && reg.createerrorBusInstance) {
+            reg.createErrorBusInstance = reg.createerrorBusInstance;
+        }
+
+        // Publish factories (defer instantiation to call time)
+        reg.createFileWriterInstance = reg.createFileWriterInstance || function () {
+            try { return new FileWriter(app); }
+            catch (e) { console.error("FileWriter factory failed", e); return null; }
+        };
+
+        reg.createFrontmatterIOInstance = reg.createFrontmatterIOInstance || function () {
+            try { return new FrontmatterIO(app); }
+            catch (e) { console.error("FrontmatterIO factory failed", e); return null; }
+        };
+
+        // Optional: expose constructors for testing/DI
+        reg.FileWriter = reg.FileWriter || FileWriter;
+        reg.FrontmatterIO = reg.FrontmatterIO || FrontmatterIO;
+        })();
+
+        console.log("✅ ModalForms bootstrap complete.");
+        new Notice("✅ ModalForms bootstrap complete.");
+
     }
 
     //Optional: Clean up if you attach events elsewhere
